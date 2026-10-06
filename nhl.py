@@ -23,6 +23,7 @@ from xg import DATA, WEB, get_json
 STATS = "https://api.nhle.com/stats/rest/en"
 FIRST_SEASON = 2015         # 2015-16 sert de rodage aux ratings, jamais évaluée
 HALFLIFE = 20               # demi-vie (en matchs) des moyennes d'équipe, à calibrer
+OFFSEASON_GAMES = 5         # matchs fictifs « moyens » à chaque intersaison ; testé 0-80 : 5-10 optimal, gain minime
 GOALIE_PRIOR_SHOTS = 1500   # tirs non bloqués « fictifs » à GSAx nul : rétrécit la note des gardiens peu vus
 SHOTS_PER_GAME = 40         # tirs non bloqués par match, pour exprimer la note gardien en buts par match
 FEATURES = ["d_xg", "d_sat", "d_gd", "d_goalie", "home_b2b", "away_b2b"]
@@ -66,16 +67,22 @@ def load():
 def team_features(team):
     """Features pré-match par (match, équipe), calculées uniquement sur les matchs précédents.
     Les lignes sans stats (matchs à venir) reçoivent l'état après le dernier match joué."""
-    # ponytail: moyennes continues d'une saison à l'autre, ajouter une régression vers la moyenne à l'intersaison si besoin
     t = team.sort_values(["gameDate", "gameId"]).reset_index(drop=True)
     t["sat_share"] = t["satFor"] / (t["satFor"] + t["satAgainst"])
     t["xg_share"] = t["xgf"] / (t["xgf"] + t["xga"])
     t["gd"] = t["goalsFor"] - t["goalsAgainst"]
-    by = t.groupby("teamId")
+    t["rest"] = t.groupby("teamId")["gameDate"].diff().dt.days.clip(upper=4).fillna(4)
+    # Intersaison : OFFSEASON_GAMES matchs fictifs « moyens » avant le 1er match de chaque nouvelle saison,
+    # pour ramener les forces vers la moyenne (transferts, vieillissement... que le modèle ne voit pas).
+    first = t[t.groupby("teamId")["season"].diff() > 0]
+    pseudo = first.loc[first.index.repeat(OFFSEASON_GAMES), ["teamId", "gameDate", "season"]].assign(
+        sat_share=0.5, xg_share=0.5, gd=0.0, pseudo=True)
+    u = pd.concat([pseudo, t.assign(pseudo=False)]).sort_values(["gameDate", "pseudo", "gameId"],
+                                                                 ascending=[True, False, True], kind="stable")
+    by = u.groupby("teamId")
     for col in ["sat_share", "xg_share", "gd"]:
-        t[f"ew_{col}"] = by[col].transform(lambda s: s.ewm(halflife=HALFLIFE).mean().shift())
-    t["rest"] = by["gameDate"].diff().dt.days.clip(upper=4).fillna(4)
-    return t
+        u[f"ew_{col}"] = by[col].transform(lambda s: s.ewm(halflife=HALFLIFE).mean().shift())
+    return u[~u["pseudo"]].drop(columns="pseudo").sort_values(["gameDate", "gameId"]).reset_index(drop=True)
 
 
 def goalie_ratings(goalies):

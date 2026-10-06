@@ -1,6 +1,7 @@
 """Garde-fou anti-fuite : une feature pré-match ne doit dépendre que des matchs précédents.  uv run python test_nhl.py"""
 import pandas as pd
 
+import nhl
 from nhl import goalie_ratings, team_features
 
 team = pd.DataFrame({
@@ -13,6 +14,7 @@ team = pd.DataFrame({
     "satAgainst": [40, 60, 50, 50, 30, 70],
     "xgf": [3.0, 1.0, 2.0, 2.0, 2.5, 1.5],
     "xga": [1.0, 3.0, 2.0, 2.0, 1.5, 2.5],
+    "season": 2024,
 })
 t = team_features(team).set_index(["gameId", "teamId"])
 assert t["ew_gd"].loc[(1, 10)] != t["ew_gd"].loc[(1, 10)], "1er match : aucune info -> NaN"
@@ -22,6 +24,13 @@ assert t.loc[(2, 10), "ew_xg_share"] == 0.75
 assert -2 < t.loc[(3, 10), "ew_gd"] < 1, "3e match : moyenne de +4 (ancien) et -2 (récent), récent plus lourd"
 assert t.loc[(2, 10), "rest"] == 1 and t.loc[(3, 10), "rest"] == 3 and t.loc[(1, 10), "rest"] == 4
 
+nxt = team[team["gameId"] == 1].assign(gameId=4, gameDate=pd.Timestamp("2025-10-01"), season=2025)
+two_seasons = pd.concat([team, nxt])
+before = team_features(two_seasons).set_index(["gameId", "teamId"]).loc[(4, 10), "ew_gd"]
+nhl.OFFSEASON_GAMES = 10
+after = team_features(two_seasons).set_index(["gameId", "teamId"]).loc[(4, 10), "ew_gd"]
+nhl.OFFSEASON_GAMES = 0
+assert 0 < after < before, "intersaison : la forme de la saison passée est ramenée vers la moyenne (0)"
 goalies = pd.DataFrame({
     "gameId": [1, 2, 3], "gameDate": pd.to_datetime(["2024-10-01", "2024-10-02", "2024-10-05"]),
     "season": 2024, "playerId": 7,
