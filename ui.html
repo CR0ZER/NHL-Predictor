@@ -5,224 +5,330 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NHL Edge</title>
 <style>
+/* ============ Tokens : « Arène » (sombre, défaut) et « Glace » (clair) ============ */
 :root {
-  color-scheme: light;
-  --page: #f4f4f1; --surface-1: #fcfcfb; --surface-2: #f0efec; --border: rgba(11,11,11,.10);
-  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #898781;
-  --grid: #e1e0d9; --axis: #c3c2b7;
-  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
-  --good: #0ca30c; --good-text: #006300; --critical: #d03b3b; --warning: #fab219;
-  --accent: #2a78d6; --accent-ink: #ffffff;
-  --glow-1: rgba(42,120,214,.10); --glow-2: rgba(235,104,52,.08);
-  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
-}
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) {
-    color-scheme: dark;
-    --page: #0d0d0d; --surface-1: #1a1a19; --surface-2: #232321; --border: rgba(255,255,255,.10);
-    --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
-    --grid: #2c2c2a; --axis: #383835;
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
-    --good-text: #0ca30c; --accent: #3987e5;
-    --glow-1: rgba(57,135,229,.16); --glow-2: rgba(217,89,38,.10);
-    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
-  }
-}
-:root[data-theme="dark"] {
   color-scheme: dark;
-  --page: #0d0d0d; --surface-1: #1a1a19; --surface-2: #232321; --border: rgba(255,255,255,.10);
-  --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
-  --grid: #2c2c2a; --axis: #383835;
-  --s1: #3987e5; --s2: #d95926; --s3: #199e70;
-  --good-text: #0ca30c; --accent: #3987e5;
-  --glow-1: rgba(57,135,229,.16); --glow-2: rgba(217,89,38,.10);
-  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+  --page: #060a11; --surface-1: #0f1622; --surface-2: #16202f; --surface-3: #1d2a3d;
+  --glass: rgba(15, 22, 34, .72); --border: rgba(148, 180, 220, .12); --border-strong: rgba(148, 180, 220, .24);
+  --text-primary: #f3f7fc; --text-secondary: #a9b6c8; --text-muted: #6f7d90;
+  --grid: #1c2636; --axis: #2c3a50;
+  --ice: #7fdcff; --ice-soft: rgba(127, 220, 255, .14); --ice-glow: rgba(127, 220, 255, .35);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --neg: #e66767;
+  --good: #0ca30c; --good-text: #2fbf2f; --critical: #d03b3b; --critical-text: #ff7a7a; --warning: #fab219;
+  --rink: rgba(127, 220, 255, .06); --rink-red: rgba(230, 103, 103, .10); --rink-blue: rgba(57, 135, 229, .10);
+  --light-a: rgba(57, 135, 229, .22); --light-b: rgba(127, 220, 255, .10); --light-c: rgba(217, 89, 38, .10);
+  --shadow: 0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px rgba(0,0,0,.45);
+  --logo: "_dark";
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --page: #e8eef5; --surface-1: #ffffff; --surface-2: #f2f6fa; --surface-3: #e6edf5;
+  --glass: rgba(255, 255, 255, .78); --border: rgba(15, 30, 55, .10); --border-strong: rgba(15, 30, 55, .20);
+  --text-primary: #0b1220; --text-secondary: #475569; --text-muted: #7b8798;
+  --grid: #e3e9f0; --axis: #c5cfdb;
+  --ice: #0a84c6; --ice-soft: rgba(10, 132, 198, .10); --ice-glow: rgba(10, 132, 198, .25);
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --neg: #e34948;
+  --good-text: #006300; --critical-text: #b42323;
+  --rink: rgba(10, 60, 120, .07); --rink-red: rgba(227, 73, 72, .12); --rink-blue: rgba(42, 120, 214, .12);
+  --light-a: rgba(42, 120, 214, .14); --light-b: rgba(10, 132, 198, .10); --light-c: rgba(235, 104, 52, .08);
+  --shadow: 0 1px 2px rgba(15,30,55,.05), 0 14px 34px rgba(15,30,55,.08);
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
   font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
-  color: var(--text-primary);
-  background:
-    radial-gradient(900px 500px at 10% -10%, var(--glow-1), transparent 60%),
-    radial-gradient(800px 500px at 100% 0%, var(--glow-2), transparent 60%),
-    var(--page);
-  background-attachment: fixed;
-  min-height: 100vh;
+  color: var(--text-primary); background: var(--page); min-height: 100vh; overflow-x: hidden;
 }
-.wrap { max-width: 1280px; margin: 0 auto; padding: 0 20px 64px; }
-header {
-  position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px);
-  background: color-mix(in srgb, var(--page) 78%, transparent);
-  border-bottom: 1px solid var(--border);
-}
-.bar { max-width: 1280px; margin: 0 auto; padding: 14px 20px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
-.brand { display: flex; align-items: center; gap: 10px; margin-right: auto; }
-.logo {
-  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
-  background: linear-gradient(135deg, var(--s1), var(--s3)); color: #fff; font-weight: 800; letter-spacing: -.5px;
-  box-shadow: 0 0 24px var(--glow-1);
-}
-.brand h1 { font-size: 17px; margin: 0; letter-spacing: .2px; }
-.brand small { display: block; color: var(--text-muted); font-size: 12px; font-weight: 500; }
+::selection { background: var(--ice-soft); }
+
+/* ============ Décor : patinoire + lumières de salle ============ */
+.rink { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+.lights { position: fixed; inset: -20%; z-index: -1; pointer-events: none; filter: blur(60px); }
+.lights i { position: absolute; border-radius: 50%; animation: drift 26s ease-in-out infinite alternate; }
+.lights i:nth-child(1) { width: 46vw; height: 46vw; left: 2%; top: -6%; background: var(--light-a); }
+.lights i:nth-child(2) { width: 38vw; height: 38vw; right: 4%; top: 4%; background: var(--light-b); animation-duration: 32s; animation-delay: -8s; }
+.lights i:nth-child(3) { width: 30vw; height: 30vw; left: 40%; bottom: -10%; background: var(--light-c); animation-duration: 38s; animation-delay: -14s; }
+@keyframes drift { to { transform: translate(6vw, 4vh) scale(1.12); } }
+
+/* ============ En-tête ============ */
+header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px) saturate(140%); background: var(--glass); border-bottom: 1px solid var(--border); }
+.bar { max-width: 1320px; margin: 0 auto; padding: 12px 24px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 12px; margin-right: auto; }
+.puck { width: 38px; height: 38px; flex: none; filter: drop-shadow(0 6px 14px var(--ice-glow)); }
+.brand .word { font-weight: 850; font-size: 18px; letter-spacing: 3px; }
+.brand .word em { font-style: normal; color: var(--ice); }
+.brand small { display: block; color: var(--text-muted); font-size: 11.5px; font-weight: 500; letter-spacing: .2px; }
+.clock { display: flex; gap: 10px; font-size: 12px; color: var(--text-secondary); font-variant-numeric: tabular-nums; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-1); }
+.clock b { color: var(--text-primary); }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--critical); align-self: center; animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(208,59,59,.55); } 50% { box-shadow: 0 0 0 6px rgba(208,59,59,0); } }
 .controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.field { display: flex; align-items: center; gap: 6px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 0 10px; height: 36px; }
+.field { display: flex; align-items: center; gap: 6px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 0 10px; height: 38px; transition: border-color .2s; }
+.field:focus-within { border-color: var(--ice); box-shadow: 0 0 0 3px var(--ice-soft); }
 .field label { color: var(--text-muted); font-size: 12px; }
-.field input { border: 0; background: transparent; color: var(--text-primary); font: inherit; outline: none; width: auto; }
-.field input[type=number] { width: 54px; text-align: right; }
-.toggle { cursor: pointer; user-select: none; }
-.toggle input { accent-color: var(--accent); }
-button {
-  font: inherit; font-weight: 600; height: 36px; padding: 0 14px; border-radius: 10px; cursor: pointer;
-  border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary);
-  transition: transform .08s ease, background .15s ease, opacity .15s;
-}
-button:hover { background: var(--surface-2); }
-button:active { transform: translateY(1px); }
-button.primary { background: var(--accent); border-color: transparent; color: var(--accent-ink); box-shadow: 0 4px 18px var(--glow-1); }
-button.primary:hover { filter: brightness(1.08); }
-button:disabled { opacity: .45; cursor: progress; }
-button.icon { width: 36px; padding: 0; }
-.job {
-  display: none; align-items: center; gap: 10px; margin: 14px auto 0; max-width: 1280px; padding: 10px 14px;
-  border-radius: 12px; background: var(--surface-1); border: 1px solid var(--border); box-shadow: var(--shadow);
-}
-.job.show { display: flex; }
-.job.err { border-color: var(--critical); }
-.spinner { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--grid); border-top-color: var(--accent); animation: spin .8s linear infinite; flex: none; }
-@keyframes spin { to { transform: rotate(360deg); } }
-nav.tabs { display: flex; gap: 4px; margin: 22px 0 18px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 4px; width: fit-content; }
-nav.tabs button { border: 0; background: transparent; height: 32px; color: var(--text-secondary); }
-nav.tabs button.on { background: var(--surface-2); color: var(--text-primary); box-shadow: inset 0 0 0 1px var(--border); }
+.field input { border: 0; background: transparent; color: var(--text-primary); font: inherit; outline: none; }
+.field input[type=number] { width: 48px; text-align: right; }
+.switch { cursor: pointer; user-select: none; }
+.switch input { display: none; }
+.switch .knob { width: 30px; height: 18px; border-radius: 999px; background: var(--surface-3); position: relative; transition: background .2s; }
+.switch .knob::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--text-muted); transition: transform .25s cubic-bezier(.3,1.4,.6,1), background .2s; }
+.switch input:checked + .knob { background: var(--ice-soft); box-shadow: inset 0 0 0 1px var(--ice); }
+.switch input:checked + .knob::after { transform: translateX(12px); background: var(--ice); }
+button { font: inherit; font-weight: 650; height: 38px; padding: 0 16px; border-radius: 12px; cursor: pointer; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); transition: transform .12s ease, background .2s, border-color .2s, box-shadow .2s, opacity .2s; }
+button:hover { border-color: var(--border-strong); background: var(--surface-2); }
+button:active { transform: translateY(1px) scale(.98); }
+button:disabled { opacity: .4; cursor: progress; }
+button.cta { position: relative; overflow: hidden; border: 0; color: #04121c; background: linear-gradient(135deg, #9be7ff, #3987e5); box-shadow: 0 8px 24px var(--ice-glow); }
+:root[data-theme="light"] button.cta { color: #fff; background: linear-gradient(135deg, #2aa6e8, #2a78d6); }
+button.cta::after { content: ""; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.55) 50%, transparent 70%); transform: translateX(-120%); animation: sheen 4.5s ease-in-out infinite 1s; }
+@keyframes sheen { 0%, 70% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+button.icon { width: 38px; padding: 0; display: grid; place-items: center; }
+.zamboni { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; overflow: hidden; opacity: 0; transition: opacity .3s; }
+.zamboni.on { opacity: 1; }
+.zamboni::before { content: ""; position: absolute; top: 0; height: 100%; width: 30%; background: linear-gradient(90deg, transparent, var(--ice), transparent); animation: sweep 1.3s ease-in-out infinite; }
+@keyframes sweep { from { left: -30%; } to { left: 100%; } }
+
+/* ============ Ticker ============ */
+.ticker { border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--surface-1) 60%, transparent); overflow: hidden; white-space: nowrap; font-size: 12px; color: var(--text-secondary); height: 32px; display: flex; align-items: center; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.ticker .track { display: inline-flex; gap: 34px; padding-left: 34px; animation: tick 60s linear infinite; }
+.ticker:hover .track { animation-play-state: paused; }
+.ticker span b { color: var(--text-primary); }
+.ticker .edge { color: var(--ice); font-weight: 700; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* ============ Mise en page ============ */
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 24px 80px; }
+.tabs { position: relative; display: inline-flex; gap: 2px; margin: 26px 0 22px; padding: 4px; border-radius: 14px; background: var(--surface-1); border: 1px solid var(--border); }
+.tabs button { position: relative; z-index: 1; border: 0; background: transparent; height: 34px; color: var(--text-secondary); }
+.tabs button.on { color: var(--text-primary); }
+.tabs .ind { position: absolute; top: 4px; height: 34px; border-radius: 10px; background: var(--surface-3); box-shadow: inset 0 0 0 1px var(--border-strong), 0 0 18px var(--ice-soft); transition: left .35s cubic-bezier(.3,1.2,.5,1), width .35s cubic-bezier(.3,1.2,.5,1); }
 section.tab { display: none; }
-section.tab.on { display: block; animation: fade .25s ease; }
-@keyframes fade { from { opacity: 0; transform: translateY(4px); } }
-h2 { font-size: 15px; margin: 28px 0 12px; display: flex; align-items: baseline; gap: 10px; }
-h2 .sub { color: var(--text-muted); font-weight: 500; font-size: 13px; }
-.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); }
-.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
-.kpi { padding: 16px 18px; }
-.kpi .label { color: var(--text-secondary); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .6px; }
-.kpi .value { font-size: 30px; font-weight: 750; margin-top: 4px; letter-spacing: -.5px; }
-.kpi .hint { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+section.tab.on { display: block; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); }
+.rise { opacity: 0; transform: translateY(14px); animation: rise .6s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i, 0) * 60ms); }
+@keyframes rise { to { opacity: 1; transform: none; } }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1.6px; color: var(--text-secondary); margin: 34px 0 14px; display: flex; align-items: baseline; gap: 12px; }
+h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); font-weight: 500; font-size: 12.5px; }
 .pos { color: var(--good-text); }
-.neg { color: var(--critical); }
-.strats { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 12px; }
-.strat { padding: 14px 16px; position: relative; overflow: hidden; }
-.strat .name { display: flex; align-items: center; gap: 8px; font-weight: 650; }
-.swatch { width: 10px; height: 10px; border-radius: 3px; flex: none; }
-.strat .nums { display: flex; gap: 18px; margin-top: 10px; font-variant-numeric: tabular-nums; }
+.neg { color: var(--critical-text); }
+.muted { color: var(--text-muted); }
+.empty { padding: 40px; text-align: center; color: var(--text-muted); }
+
+/* ============ Hero soirée ============ */
+.hero { display: grid; grid-template-columns: 1fr 1.15fr; gap: 16px; }
+.hero-main { padding: 26px 28px; position: relative; overflow: hidden; }
+.hero-main::after { content: ""; position: absolute; right: -60px; top: -60px; width: 240px; height: 240px; border-radius: 50%; border: 2px solid var(--rink-red); box-shadow: 0 0 0 26px var(--rink), 0 0 0 28px var(--rink-red); opacity: .8; }
+.eyebrow { color: var(--ice); font-size: 11.5px; font-weight: 750; letter-spacing: 2.4px; text-transform: uppercase; }
+.hero-main h1 { font-size: 40px; line-height: 1.05; margin: 8px 0 6px; letter-spacing: -1px; text-transform: capitalize; }
+.hero-main p { color: var(--text-secondary); margin: 0; max-width: 46ch; }
+.chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; position: relative; z-index: 1; }
+.chip { padding: 10px 14px; border-radius: 14px; background: var(--surface-2); border: 1px solid var(--border); min-width: 110px; }
+.chip .k { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .8px; font-weight: 650; }
+.chip .v { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.5px; }
+.chip.glow { border-color: var(--ice); box-shadow: 0 0 22px var(--ice-soft); }
+.edge-card { padding: 18px 20px 10px; }
+.edge-card .head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+.edge-card .head b { font-size: 14px; }
+.edge-card .head span { color: var(--text-muted); font-size: 12px; }
+
+/* ============ Cartes de match ============ */
+.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px; }
+.game { position: relative; padding: 18px; display: flex; flex-direction: column; gap: 14px; transform-style: preserve-3d; transition: transform .25s ease, border-color .25s, box-shadow .25s; will-change: transform; }
+.game:hover { border-color: var(--border-strong); box-shadow: var(--shadow), 0 0 0 1px var(--ice-soft), 0 20px 50px rgba(0,0,0,.25); }
+.game.value::before { content: ""; position: absolute; inset: -1px; border-radius: 19px; padding: 1px; background: conic-gradient(from var(--a, 0deg), transparent 0 70%, var(--ice) 85%, transparent 100%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: orbit 5s linear infinite; pointer-events: none; }
+@property --a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+@keyframes orbit { to { --a: 360deg; } }
+.game .top { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); font-weight: 650; }
+.pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; border: 1px solid var(--border); background: var(--surface-2); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.pill.final { color: var(--text-primary); border-color: var(--border-strong); }
+.pill.soon { color: var(--ice); border-color: var(--ice); box-shadow: 0 0 14px var(--ice-soft); }
+.faceoff { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; }
+.team { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; text-align: center; }
+.logo { width: 54px; height: 54px; flex: none; display: grid; place-items: center; border-radius: 14px; background: var(--surface-2); border: 1px solid var(--border); overflow: hidden; }
+.logo img { width: 46px; height: 46px; object-fit: contain; transition: transform .3s; }
+.game:hover .logo img { transform: scale(1.08) rotate(-3deg); }
+.logo .mono { font-weight: 800; font-size: 13px; color: var(--text-secondary); }
+.tname { min-width: 0; max-width: 100%; }
+.tname b { display: block; font-size: 16px; line-height: 1.2; letter-spacing: .3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tname b .nick { display: block; font-weight: 550; color: var(--text-secondary); font-size: 12.5px; letter-spacing: 0; }
+.tname small { display: block; color: var(--text-muted); font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.jev { color: var(--ice); font-weight: 750; text-shadow: 0 0 10px var(--ice-glow); }
+.gauge { width: 84px; height: 84px; position: relative; }
+.gauge svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.gauge .num { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; line-height: 1; }
+.gauge .num b { font-size: 17px; font-variant-numeric: tabular-nums; }
+.gauge .num small { display: block; font-size: 9.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .6px; margin-top: 2px; }
+.gauge .arc { transition: stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1); }
+.probs { display: flex; flex-direction: column; gap: 7px; }
+.prob { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: 10px; font-size: 11.5px; }
+.prob .src { color: var(--text-secondary); font-weight: 650; }
+.tug { position: relative; height: 22px; border-radius: 6px; background: var(--surface-2); overflow: hidden; display: flex; gap: 2px; font-variant-numeric: tabular-nums; font-weight: 750; font-size: 11px; }
+.tug div { display: flex; align-items: center; padding: 0 8px; width: 0; transition: width 1s cubic-bezier(.2,.8,.2,1); white-space: nowrap; overflow: hidden; }
+.tug .a { background: color-mix(in srgb, var(--text-muted) 45%, var(--surface-3)); color: var(--text-primary); border-radius: 6px 0 0 6px; }
+.tug .h { margin-left: auto; justify-content: flex-end; background: var(--s1); color: #fff; border-radius: 0 6px 6px 0; }
+.tug.na { color: var(--text-muted); justify-content: center; align-items: center; font-weight: 500; }
+.odds { display: flex; gap: 6px; flex-wrap: wrap; font-size: 11.5px; }
+.odd { padding: 5px 9px; border-radius: 9px; background: var(--surface-2); color: var(--text-secondary); font-variant-numeric: tabular-nums; border: 1px solid transparent; }
+.odd b { color: var(--text-primary); }
+.bets { display: flex; flex-direction: column; gap: 7px; border-top: 1px dashed var(--border-strong); padding-top: 12px; }
+.bet { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.bet .what { flex: 1; color: var(--text-secondary); min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bet .what b { color: var(--text-primary); }
+.swatch { width: 10px; height: 10px; border-radius: 3px; flex: none; display: inline-block; }
+.edgebadge { font-weight: 800; font-size: 11px; padding: 2px 7px; border-radius: 7px; font-variant-numeric: tabular-nums; }
+.edgebadge.pos { background: color-mix(in srgb, var(--good) 16%, transparent); }
+.edgebadge.neg { background: color-mix(in srgb, var(--critical) 14%, transparent); }
+.status { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 750; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
+.status.won { color: var(--good-text); border-color: color-mix(in srgb, var(--good) 50%, transparent); }
+.status.lost { color: var(--critical-text); border-color: color-mix(in srgb, var(--critical) 50%, transparent); }
+.status.wait { color: var(--text-muted); }
+
+/* ============ Simulation ============ */
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.kpi { padding: 18px 20px; position: relative; overflow: hidden; }
+.kpi .label { color: var(--text-muted); font-size: 11px; font-weight: 750; text-transform: uppercase; letter-spacing: 1.2px; }
+.kpi .value { font-size: 34px; font-weight: 850; margin-top: 6px; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
+.kpi .hint { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+.kpi.big { grid-column: span 2; background: radial-gradient(120% 140% at 0% 0%, var(--ice-soft), transparent 55%), var(--surface-1); }
+.kpi.big .value { font-size: 52px; }
+@media (max-width: 700px) { .kpi.big { grid-column: auto; } }
+.strats { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; margin-top: 14px; }
+.strat { padding: 16px 18px; display: grid; grid-template-columns: 1fr auto; gap: 8px 14px; align-items: center; }
+.strat .name { display: flex; align-items: center; gap: 8px; font-weight: 700; grid-column: 1 / -1; }
+.strat .nums { display: flex; gap: 18px; font-variant-numeric: tabular-nums; }
 .strat .nums div { display: flex; flex-direction: column; }
-.strat .nums b { font-size: 18px; }
-.strat .nums span { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .5px; }
-.chart-card { padding: 16px 16px 8px; margin-top: 12px; }
-.chart-card .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text-secondary); padding: 0 4px 6px; }
-.chart-card .legend span { display: inline-flex; align-items: center; gap: 6px; }
+.strat .nums b { font-size: 19px; }
+.strat .nums span { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .6px; }
+.ring { width: 58px; height: 58px; position: relative; }
+.ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring b { position: absolute; inset: 0; display: grid; place-items: center; font-size: 12px; font-variant-numeric: tabular-nums; }
+.chart-card { padding: 18px 18px 10px; margin-top: 14px; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text-secondary); padding: 0 4px 8px; align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend .title { color: var(--text-primary); font-weight: 700; margin-right: auto; }
 .chart { position: relative; width: 100%; }
 .chart svg { display: block; width: 100%; overflow: visible; }
 .chart text { fill: var(--text-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
-.tip {
-  position: absolute; pointer-events: none; z-index: 5; min-width: 160px; padding: 10px 12px; border-radius: 10px;
-  background: var(--surface-2); border: 1px solid var(--border); box-shadow: var(--shadow); font-size: 12px;
-  opacity: 0; transition: opacity .1s; white-space: nowrap;
-}
-.tip .t { color: var(--text-secondary); margin-bottom: 6px; font-weight: 600; }
-.tip .row { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+.tip { position: absolute; pointer-events: none; z-index: 5; min-width: 170px; padding: 10px 12px; border-radius: 12px; background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--border-strong); box-shadow: var(--shadow); font-size: 12px; opacity: 0; transform: translateY(4px); transition: opacity .12s, transform .12s; white-space: nowrap; }
+.tip.on { opacity: 1; transform: none; }
+.tip .t { color: var(--text-secondary); margin-bottom: 6px; font-weight: 650; }
+.tip .row { display: flex; align-items: center; gap: 14px; justify-content: space-between; }
 .tip .row span:first-child { display: inline-flex; align-items: center; gap: 6px; color: var(--text-secondary); }
 .tip b { font-variant-numeric: tabular-nums; color: var(--text-primary); }
-.empty { padding: 36px; text-align: center; color: var(--text-muted); }
-.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
-.game { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
-.game .top { display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 12px; font-weight: 600; }
-.badge { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 650; border: 1px solid var(--border); background: var(--surface-2); color: var(--text-secondary); }
-.badge.good { color: var(--good-text); border-color: color-mix(in srgb, var(--good) 45%, transparent); }
-.badge.bad { color: var(--critical); border-color: color-mix(in srgb, var(--critical) 45%, transparent); }
-.teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; }
-.team { display: flex; flex-direction: column; }
-.team.home { text-align: right; }
-.team b { font-size: 15px; line-height: 1.2; }
-.team small { color: var(--text-muted); font-size: 12px; }
-.team small .jev { color: var(--accent); font-weight: 700; }
-.at { color: var(--text-muted); font-weight: 700; font-size: 12px; }
-.probs { display: flex; flex-direction: column; gap: 7px; }
-.prob { display: grid; grid-template-columns: 74px 1fr; align-items: center; gap: 10px; font-size: 12px; }
-.prob .src { color: var(--text-secondary); font-weight: 600; }
-.split { display: flex; height: 22px; gap: 2px; font-variant-numeric: tabular-nums; font-weight: 700; font-size: 11px; }
-.split div { display: flex; align-items: center; padding: 0 8px; min-width: 34px; color: #fff; }
-.split .a { border-radius: 4px 0 0 4px; background: color-mix(in srgb, var(--text-muted) 55%, var(--surface-2)); }
-.split .h { border-radius: 0 4px 4px 0; justify-content: flex-end; background: var(--s1); }
-.split.na div { background: var(--surface-2); color: var(--text-muted); }
-.odds { display: flex; gap: 6px; flex-wrap: wrap; font-size: 12px; }
-.odd { padding: 4px 8px; border-radius: 8px; background: var(--surface-2); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
-.odd b { color: var(--text-primary); }
-.bets { display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--border); padding-top: 10px; }
-.bet { display: flex; align-items: center; gap: 8px; font-size: 12px; }
-.bet .what { flex: 1; color: var(--text-secondary); }
-.bet .what b { color: var(--text-primary); }
-.ev { font-weight: 700; font-variant-numeric: tabular-nums; }
+.draw { transition: stroke-dashoffset 1.6s cubic-bezier(.3,.7,.2,1); }
+.endpulse { animation: endpulse 2.2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes endpulse { 0% { opacity: .55; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
+.filters { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+select { font: inherit; height: 36px; border-radius: 11px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); padding: 0 10px; }
 .tbl-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
-th { text-align: left; color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; padding: 10px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
-td { padding: 9px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; font-variant-numeric: tabular-nums; }
+th { text-align: left; color: var(--text-muted); font-weight: 700; font-size: 10.5px; text-transform: uppercase; letter-spacing: .8px; padding: 12px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; font-variant-numeric: tabular-nums; }
+tbody tr { transition: background .15s; }
+tbody tr:hover { background: var(--surface-2); }
 tr:last-child td { border-bottom: 0; }
 td.r, th.r { text-align: right; }
-.filters { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
-select { font: inherit; height: 34px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); padding: 0 10px; }
-.grid2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; }
-@media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } .games { grid-template-columns: 1fr; } }
+.skill { display: inline-block; height: 6px; border-radius: 3px; background: var(--s1); vertical-align: middle; margin-right: 8px; }
+
+/* ============ Modèle ============ */
+.grid2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
 .note { color: var(--text-muted); font-size: 12px; margin-top: 10px; }
-.guide { padding: 16px 18px; margin-top: 14px; color: var(--text-secondary); font-size: 13px; }
-.guide ol { margin: 6px 0 0; padding-left: 18px; }
-.guide b { color: var(--text-primary); }
+
+/* ============ Toast de tâche ============ */
+.toast { position: fixed; right: 22px; bottom: 22px; z-index: 30; display: flex; align-items: center; gap: 12px; max-width: 440px; padding: 14px 16px; border-radius: 16px; background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--border-strong); box-shadow: var(--shadow); transform: translateY(140%); opacity: 0; transition: transform .45s cubic-bezier(.2,1.2,.4,1), opacity .3s; }
+.toast.on { transform: none; opacity: 1; }
+.toast.err { border-color: var(--critical); }
+.toast .msg { font-size: 13px; }
+.toast .msg small { display: block; color: var(--text-muted); font-size: 11.5px; }
+.spin-puck { width: 26px; height: 26px; flex: none; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.toast .ok { width: 26px; height: 26px; flex: none; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--good) 22%, transparent); color: var(--good-text); font-weight: 900; }
+
+/* ============ Guide ============ */
+.guide { padding: 20px 22px; margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.guide .step { display: flex; gap: 12px; }
+.guide .n { width: 30px; height: 30px; border-radius: 10px; flex: none; display: grid; place-items: center; font-weight: 800; background: var(--ice-soft); color: var(--ice); }
+.guide b { display: block; margin-bottom: 2px; }
+.guide p { margin: 0; color: var(--text-secondary); font-size: 12.5px; }
+@media (max-width: 1000px) { .hero, .grid2 { grid-template-columns: 1fr; } .guide { grid-template-columns: 1fr; } .games { grid-template-columns: 1fr; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .rise { opacity: 1; transform: none; }
+}
 </style>
 </head>
 <body>
+<!-- Patinoire en filigrane -->
+<svg class="rink" viewBox="0 0 2000 850" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <g fill="none" stroke-width="3">
+    <rect x="40" y="40" width="1920" height="770" rx="250" stroke="var(--rink)" stroke-width="5"/>
+    <line x1="1000" y1="40" x2="1000" y2="810" stroke="var(--rink-red)" stroke-width="10"/>
+    <line x1="700" y1="40" x2="700" y2="810" stroke="var(--rink-blue)" stroke-width="10"/>
+    <line x1="1300" y1="40" x2="1300" y2="810" stroke="var(--rink-blue)" stroke-width="10"/>
+    <line x1="150" y1="60" x2="150" y2="790" stroke="var(--rink-red)"/>
+    <line x1="1850" y1="60" x2="1850" y2="790" stroke="var(--rink-red)"/>
+    <circle cx="1000" cy="425" r="150" stroke="var(--rink-blue)"/>
+    <circle cx="1000" cy="425" r="8" fill="var(--rink-blue)"/>
+    <circle cx="380" cy="225" r="150" stroke="var(--rink-red)"/><circle cx="380" cy="625" r="150" stroke="var(--rink-red)"/>
+    <circle cx="1620" cy="225" r="150" stroke="var(--rink-red)"/><circle cx="1620" cy="625" r="150" stroke="var(--rink-red)"/>
+    <path d="M150 365 a60 60 0 0 1 0 120" stroke="var(--rink-blue)"/><path d="M1850 365 a60 60 0 0 0 0 120" stroke="var(--rink-blue)"/>
+  </g>
+</svg>
+<div class="lights" aria-hidden="true"><i></i><i></i><i></i></div>
+
 <header>
   <div class="bar">
     <div class="brand">
-      <div class="logo">E</div>
-      <div><h1>NHL Edge</h1><small>Modèle xG · Jev · simulation à mise fixe (paris fictifs)</small></div>
+      <svg class="puck" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="pk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b3445"/><stop offset="1" stop-color="#05070b"/></linearGradient></defs>
+        <ellipse cx="20" cy="26" rx="16" ry="6" fill="#05070b"/><rect x="4" y="16" width="32" height="10" fill="url(#pk)"/><ellipse cx="20" cy="16" rx="16" ry="6" fill="#2f3a4d"/><ellipse cx="20" cy="16" rx="10" ry="3.4" fill="none" stroke="#7fdcff" stroke-width="1.4" opacity=".9"/></svg>
+      <div><div class="word">NHL<em>·</em>EDGE</div><small>Modèle xG · Jev · paris fictifs à mise fixe</small></div>
     </div>
+    <div class="clock" title="Heure de Paris et de New York"><span class="live-dot"></span><span>Paris <b id="clk-paris"></b></span><span>New York <b id="clk-ny"></b></span></div>
     <div class="controls">
       <div class="field"><label for="date">Soirée</label><input id="date" type="date"></div>
       <div class="field"><label for="stake">Mise</label><input id="stake" type="number" min="1" step="1" value="10"><label>€</label></div>
-      <label class="field toggle"><input id="jev" type="checkbox" checked> Jev</label>
-      <button class="primary" id="btn-predict" title="Prédit les matchs de la soirée et enregistre les paris fictifs aux cotes actuelles">Prédire</button>
-      <button id="btn-settle" title="Récupère les résultats officiels et règle les paris">Régler</button>
+      <label class="field switch" title="Lire la presse avec Jev pour trouver les gardiens titulaires"><input id="jev" type="checkbox" checked><span class="knob"></span><span>Jev</span></label>
+      <button class="cta" id="btn-predict" title="Prédit la soirée et enregistre les paris fictifs aux cotes actuelles">Prédire</button>
+      <button id="btn-settle" title="Résultats officiels et règlement des paris">Régler</button>
       <button id="btn-odds" title="Historique des cotes de la saison (≈ 6 s par nouveau match terminé)">MAJ cotes</button>
-      <button class="icon" id="btn-theme" title="Thème clair / sombre" aria-label="Changer de thème">◐</button>
+      <button class="icon" id="btn-theme" title="Arène / Glace" aria-label="Changer de thème">◐</button>
     </div>
   </div>
+  <div class="zamboni" id="zamboni"></div>
 </header>
+<div class="ticker" id="ticker" aria-label="Pronostics du soir"><div class="track" id="track"></div></div>
+
 <div class="wrap">
-  <div class="job" id="job"><div class="spinner" id="spin"></div><span id="job-msg"></span></div>
-  <nav class="tabs" role="tablist">
-    <button class="on" data-tab="tonight">Soirée</button>
-    <button data-tab="sim">Simulation</button>
-    <button data-tab="model">Modèle</button>
+  <nav class="tabs" role="tablist"><span class="ind" id="ind"></span>
+    <button class="on" data-tab="tonight">Soirée</button><button data-tab="sim">Simulation</button><button data-tab="model">Modèle</button>
   </nav>
 
   <section class="tab on" id="tab-tonight">
+    <div class="hero">
+      <div class="card hero-main rise" id="hero"></div>
+      <div class="card edge-card rise" style="--i:1">
+        <div class="head"><b>Modèle vs marché</b><span>P(domicile) modèle − Pinnacle sans marge · bleu : modèle plus haut sur le domicile</span></div>
+        <div class="chart" id="edge"></div>
+      </div>
+    </div>
     <h2>Matchs <span class="sub" id="games-sub"></span></h2>
     <div class="games" id="games"></div>
-    <div class="card guide">
-      <b>Routine de la semaine</b>
-      <ol>
-        <li><b>Vers 18 h–19 h</b> (après les entraînements du matin en Amérique du Nord, gardiens annoncés) : <b>Prédire</b>. Les paris fictifs sont pris aux cotes du moment. Le week-end, les matchs de l'après-midi commencent dès 18 h–21 h : prédire vers 16 h.</li>
-        <li>Relancer <b>Prédire</b> plus tard est sans risque : seuls les matchs pas encore commencés sont mis à jour.</li>
-        <li><b>Le lendemain matin</b> : <b>Régler</b> pour les résultats. <b>MAJ cotes</b> une fois par semaine pour l'évaluation face au marché.</li>
-      </ol>
+    <div class="card guide rise" style="--i:2">
+      <div class="step"><div class="n">1</div><div><b>18 h – 19 h : Prédire</b><p>Gardiens annoncés après les entraînements du matin. Paris pris aux cotes du moment. Week-end : vers 16 h.</p></div></div>
+      <div class="step"><div class="n">2</div><div><b>Relancer sans risque</b><p>Seuls les matchs pas encore commencés sont mis à jour ; un pari est figé au coup d'envoi.</p></div></div>
+      <div class="step"><div class="n">3</div><div><b>Le matin : Régler</b><p>Résultats officiels NHL. « MAJ cotes » une fois par semaine pour l'évaluation face au marché.</p></div></div>
     </div>
   </section>
 
   <section class="tab" id="tab-sim">
     <div class="kpis" id="kpis"></div>
     <div class="strats" id="strats"></div>
-    <div class="card chart-card">
+    <div class="card chart-card rise" style="--i:3">
       <div class="legend" id="pnl-legend"></div>
       <div class="chart" id="pnl"></div>
     </div>
-    <h2>Paris fictifs <span class="sub">cote prise au moment de la prédiction</span></h2>
+    <h2>Paris fictifs <span class="sub">cote prise au moment de la prédiction · le tableau sert aussi de vue texte du graphique</span></h2>
     <div class="filters">
       <select id="f-strat"><option value="">Toutes les stratégies</option></select>
       <select id="f-status"><option value="">Tous les statuts</option><option>en attente</option><option>gagné</option><option>perdu</option></select>
@@ -232,182 +338,308 @@ select { font: inherit; height: 34px; border-radius: 10px; border: 1px solid var
 
   <section class="tab" id="tab-model">
     <div class="kpis" id="m-kpis"></div>
-    <div class="grid2" style="margin-top:14px">
-      <div class="card chart-card"><h2 style="margin:4px 4px 8px">Calibration <span class="sub">prédit vs observé, hors échantillon</span></h2><div class="chart" id="calib"></div></div>
-      <div class="card chart-card"><h2 style="margin:4px 4px 8px">Poids du modèle <span class="sub">régression logistique, variables domicile − extérieur</span></h2><div class="chart" id="coefs"></div></div>
+    <div class="grid2">
+      <div class="card chart-card"><div class="legend"><span class="title">Calibration</span><span>prédit vs observé, hors échantillon</span></div><div class="chart" id="calib"></div></div>
+      <div class="card chart-card"><div class="legend"><span class="title">Poids du modèle</span><span>régression logistique, écarts domicile − extérieur</span></div><div class="chart" id="coefs"></div></div>
     </div>
-    <h2>Par saison <span class="sub">log-loss : plus bas = mieux · Pinnacle = cote de clôture sans marge</span></h2>
+    <h2>Par saison <span class="sub">log-loss : plus bas = mieux (0.693 = pile ou face) · Pinnacle = clôture sans marge, mêmes matchs</span></h2>
     <div class="card tbl-wrap"><table id="seasons"></table></div>
     <p class="note">Chaque saison est prédite par un modèle appris uniquement sur les saisons précédentes ; les variables d'un match n'utilisent que les matchs joués avant lui.</p>
   </section>
 </div>
 
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg class="spin-puck" id="t-spin" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" fill="none" stroke="var(--grid)" stroke-width="3"/><path d="M13 3 a10 10 0 0 1 10 10" fill="none" stroke="var(--ice)" stroke-width="3" stroke-linecap="round"/></svg>
+  <div class="ok" id="t-ok">✓</div>
+  <div class="msg"><span id="t-msg"></span><small id="t-sub"></small></div>
+</div>
+
 <script>
 const $ = s => document.querySelector(s);
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const COLORS = { favori: "var(--s1)", valeur_unibet: "var(--s2)", valeur_winamax: "var(--s3)" };
 const SHORT = { favori: "Favori", valeur_unibet: "Valeur Unibet", valeur_winamax: "Valeur Winamax" };
+const ABBR = {"anaheim ducks":"ANA","boston bruins":"BOS","buffalo sabres":"BUF","calgary flames":"CGY","carolina hurricanes":"CAR","chicago blackhawks":"CHI","colorado avalanche":"COL","columbus blue jackets":"CBJ","dallas stars":"DAL","detroit red wings":"DET","edmonton oilers":"EDM","florida panthers":"FLA","los angeles kings":"LAK","minnesota wild":"MIN","montreal canadiens":"MTL","nashville predators":"NSH","new jersey devils":"NJD","new york islanders":"NYI","new york rangers":"NYR","ottawa senators":"OTT","philadelphia flyers":"PHI","pittsburgh penguins":"PIT","san jose sharks":"SJS","seattle kraken":"SEA","st. louis blues":"STL","tampa bay lightning":"TBL","toronto maple leafs":"TOR","utah mammoth":"UTA","vancouver canucks":"VAN","vegas golden knights":"VGK","washington capitals":"WSH","winnipeg jets":"WPG"};
+const nick = n => { const w = (n || "").split(" "); return ["Maple", "Red", "Blue", "Golden"].includes(w[w.length - 2]) ? w.slice(-2).join(" ") : w[w.length - 1]; };
+const abbr = n => ABBR[(n || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()] || (n || "?").split(" ").map(w => w[0]).join("").slice(0, 3).toUpperCase();
 const eur = v => v == null ? "–" : (v > 0 ? "+" : "") + v.toLocaleString("fr-FR", { maximumFractionDigits: 2, minimumFractionDigits: 2 }) + " €";
 const pct = (v, d = 1) => v == null ? "–" : (v * 100).toLocaleString("fr-FR", { maximumFractionDigits: d, minimumFractionDigits: d }) + " %";
-const signPct = v => v == null ? "–" : (v > 0 ? "+" : "") + pct(v);
+const signPct = (v, d = 1) => v == null ? "–" : (v > 0 ? "+" : "") + pct(v, d);
 const cls = v => v > 0 ? "pos" : v < 0 ? "neg" : "";
-const paris = iso => new Date(iso).toLocaleString("fr-FR", { timeZone: "Europe/Paris", weekday: "short", hour: "2-digit", minute: "2-digit" });
-const short = name => name ? name.split(" ").slice(-1)[0] : "";
+const tz = (iso, zone, opts) => new Date(iso).toLocaleString("fr-FR", { timeZone: zone, ...opts });
+const paris = iso => tz(iso, "Europe/Paris", { weekday: "short", hour: "2-digit", minute: "2-digit" });
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-let STATE = null, MODEL = null;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v.replace(/var\((.*)\)/, "$1")).trim() || v;
+let STATE = null, MODEL = null, SEEN = {};
+
+// ---------- horloges & comptes à rebours ----------
+function tickClocks() {
+  const now = new Date().toISOString();
+  $("#clk-paris").textContent = tz(now, "Europe/Paris", { hour: "2-digit", minute: "2-digit" });
+  $("#clk-ny").textContent = tz(now, "America/New_York", { hour: "2-digit", minute: "2-digit" });
+  document.querySelectorAll("[data-kick]").forEach(el => el.textContent = countdown(el.dataset.kick));
+}
+function countdown(iso) {
+  const s = Math.round((new Date(iso) - Date.now()) / 1000);
+  if (s <= 0) return "en cours / terminé";
+  const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), sec = s % 60;
+  return h ? `dans ${h} h ${String(m).padStart(2, "0")}` : `dans ${m} min ${String(sec).padStart(2, "0")}`;
+}
+setInterval(tickClocks, 1000);
 
 // ---------- thème ----------
 try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
 $("#btn-theme").onclick = () => {
-  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
-  const cur = document.documentElement.dataset.theme || (dark ? "dark" : "light");
-  const next = cur === "dark" ? "light" : "dark";
+  const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
   document.documentElement.dataset.theme = next;
   try { localStorage.setItem("theme", next); } catch (e) {}
-  render();
+  SEEN = {}; render();
 };
 
-// ---------- onglets ----------
-document.querySelectorAll("nav.tabs button").forEach(b => b.onclick = () => {
-  document.querySelectorAll("nav.tabs button").forEach(x => x.classList.toggle("on", x === b));
+// ---------- onglets (indicateur glissant) ----------
+function moveInd() { const b = $(".tabs button.on"); $("#ind").style.left = b.offsetLeft + "px"; $("#ind").style.width = b.offsetWidth + "px"; }
+document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".tabs button").forEach(x => x.classList.toggle("on", x === b));
   document.querySelectorAll("section.tab").forEach(s => s.classList.toggle("on", s.id === "tab-" + b.dataset.tab));
-  if (b.dataset.tab === "model") loadModel();
-  render();
+  moveInd(); SEEN = {};
+  if (b.dataset.tab === "model") loadModel(); else render();
 });
 
-// ---------- API ----------
+// ---------- API & tâches ----------
 async function api(path, body) {
   const r = await fetch(path, body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {});
   return r.json();
 }
-async function refresh() { STATE = await api("/api/state"); if (!$("#date").value) $("#date").value = STATE.today; render(); showJob(STATE.job); }
-function showJob(j) {
-  const box = $("#job");
-  box.classList.toggle("show", !!(j.busy || j.error || j.msg));
-  box.classList.toggle("err", !!j.error);
-  $("#spin").style.display = j.busy ? "" : "none";
-  $("#job-msg").textContent = j.error ? "Erreur : " + j.error : j.msg;
+async function refresh() { STATE = await api("/api/state"); if (!$("#date").value) $("#date").value = STATE.today; render(); }
+let toastTimer;
+function showJob(j, sub = "") {
+  const t = $("#toast"); clearTimeout(toastTimer);
+  const visible = j.busy || j.error || j.msg;
+  t.classList.toggle("on", !!visible); t.classList.toggle("err", !!j.error);
+  $("#t-spin").style.display = j.busy ? "" : "none"; $("#t-ok").style.display = j.busy || j.error ? "none" : "";
+  $("#t-msg").textContent = j.error ? "Erreur : " + j.error : j.msg; $("#t-sub").textContent = sub;
+  $("#zamboni").classList.toggle("on", !!j.busy);
   document.querySelectorAll(".controls button:not(.icon)").forEach(b => b.disabled = j.busy);
+  if (!j.busy && !j.error) toastTimer = setTimeout(() => t.classList.remove("on"), 7000);
 }
-async function run(path, body) {
+async function run(path, body, sub) {
   const r = await api(path, body);
-  if (!r.started) { showJob({ ...r.job, msg: "Une tâche est déjà en cours : " + r.job.msg }); }
+  if (!r.started) return showJob({ ...r.job, msg: "Déjà en cours : " + r.job.msg });
+  const t0 = Date.now();
   const poll = async () => {
-    const j = await api("/api/job"); showJob(j);
+    const j = await api("/api/job");
+    showJob(j, j.busy ? `${sub} · ${Math.round((Date.now() - t0) / 1000)} s` : "");
     if (j.busy) return setTimeout(poll, 1000);
-    MODEL = null; await refresh();
+    MODEL = null; SEEN = {}; await refresh();
     if ($("#tab-model").classList.contains("on")) loadModel();
   };
   poll();
 }
-$("#btn-predict").onclick = () => run("/api/predict", { date: $("#date").value, stake: +$("#stake").value, jev: $("#jev").checked });
-$("#btn-settle").onclick = () => run("/api/settle", {});
-$("#btn-odds").onclick = () => { if (confirm("Récupère l'historique des cotes des matchs terminés de la saison : ≈ 6 s par nouveau match (≈ 5 min pour une semaine). Lancer ?")) run("/api/odds-update", {}); };
+$("#btn-predict").onclick = () => run("/api/predict", { date: $("#date").value, stake: +$("#stake").value, jev: $("#jev").checked }, "≈ 2-3 min");
+$("#btn-settle").onclick = () => run("/api/settle", {}, "quelques secondes");
+$("#btn-odds").onclick = () => { if (confirm("Historique des cotes des matchs terminés de la saison : ≈ 6 s par nouveau match (≈ 5 min pour une semaine). Lancer ?")) run("/api/odds-update", {}, "≈ 6 s par match"); };
+$("#date").onchange = () => { SEEN = {}; render(); };
+
+// ---------- utilitaires d'animation ----------
+function countUp(el, to, fmt, key) {
+  if (to == null || REDUCED || SEEN[key] === to) { el.textContent = fmt(to); SEEN[key] = to; return; }
+  const from = SEEN[key] ?? 0, t0 = performance.now(), d = 900; SEEN[key] = to;
+  const step = t => { const k = Math.min(1, (t - t0) / d), e = 1 - Math.pow(1 - k, 3); el.textContent = fmt(from + (to - from) * e); if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+const nextFrame = f => requestAnimationFrame(() => requestAnimationFrame(f));
+function tooltip(el) { let t = el.querySelector(".tip"); if (!t) { t = document.createElement("div"); t.className = "tip"; el.appendChild(t); } return t; }
+function placeTip(tip, el, x, y) { const w = el.clientWidth; tip.style.left = Math.max(4, Math.min(x + 14, w - tip.offsetWidth - 4)) + "px"; tip.style.top = Math.max(0, y - 10) + "px"; tip.classList.add("on"); }
+function niceTicks(min, max, n = 5) {
+  const span = max - min || 1, step0 = span / n, mag = 10 ** Math.floor(Math.log10(step0));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => span / s <= n) || mag * 10;
+  const out = []; for (let v = Math.floor(min / step) * step; v <= max + 1e-9; v += step) out.push(+v.toFixed(10));
+  return out;
+}
 
 // ---------- rendu ----------
-function render() { if (!STATE) return; renderGames(); renderSim(); if (MODEL) renderModel(); }
-
-function splitBar(pHome, label) {
-  if (pHome == null) return `<div class="prob"><span class="src">${label}</span><div class="split na"><div style="flex:1">pas de cote</div></div></div>`;
-  const a = 1 - pHome;
-  return `<div class="prob"><span class="src">${label}</span><div class="split">
-    <div class="a" style="flex:${a}">${Math.round(a * 100)}%</div><div class="h" style="flex:${pHome}">${Math.round(pHome * 100)}%</div></div></div>`;
-}
-function statusBadge(b) {
-  if (b.status === "gagné") return `<span class="badge good">✓ Gagné ${eur(b.profit)}</span>`;
-  if (b.status === "perdu") return `<span class="badge bad">✕ Perdu ${eur(b.profit)}</span>`;
-  return `<span class="badge">⏳ En attente</span>`;
-}
-function renderGames() {
-  const preds = STATE.preds;
+function render() {
+  if (!STATE) return;
   const day = $("#date").value;
-  let list = preds.filter(p => p.date === day);
-  const shownDay = list.length ? day : (preds[0] && preds[0].date);
-  if (!list.length && shownDay) list = preds.filter(p => p.date === shownDay);
-  $("#games-sub").textContent = list.length ? `soirée du ${new Date(shownDay + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" })} · probabilité de victoire (extérieur | domicile), prolongation incluse` : "";
-  if (!list.length) { $("#games").innerHTML = `<div class="card empty" style="grid-column:1/-1">Aucune prédiction enregistrée. Choisissez la soirée, puis <b>Prédire</b>.</div>`; return; }
-  list.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
-  $("#games").innerHTML = list.map(g => {
+  let games = STATE.preds.filter(p => p.date === day);
+  const shown = games.length ? day : STATE.preds[0]?.date;
+  if (!games.length && shown) games = STATE.preds.filter(p => p.date === shown);
+  games.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+  renderTicker(games);
+  if ($("#tab-tonight").classList.contains("on")) { renderHero(games, shown); renderEdge(games); renderGames(games, shown); }
+  if ($("#tab-sim").classList.contains("on")) renderSim();
+  if ($("#tab-model").classList.contains("on") && MODEL) renderModel();
+}
+
+function renderTicker(games) {
+  const items = games.map(g => {
+    const edge = g.pin_fair != null ? g.p_home - g.pin_fair : null;
+    return `<span><b>${abbr(g.away)}</b> ${Math.round((1 - g.p_home) * 100)}% · <b>${abbr(g.home)}</b> ${Math.round(g.p_home * 100)}%${edge != null ? ` <span class="edge">Δ ${signPct(edge, 0)}</span>` : ""}${g.score ? ` · <b>${esc(g.score)}</b>` : ""}</span>`;
+  });
+  const html = items.length ? items.join("") : `<span>Aucune prédiction — choisissez la soirée puis <b>Prédire</b></span>`;
+  $("#track").innerHTML = html + html;
+}
+
+function renderHero(games, day) {
+  const bets = STATE.bets.filter(b => games.some(g => g.gameId === b.gameId));
+  const value = bets.filter(b => b.strategy !== "favori").length;
+  const next = games.map(g => g.kickoff).filter(k => new Date(k) > Date.now()).sort()[0];
+  const title = day ? new Date(day + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }) : "Aucune soirée";
+  $("#hero").innerHTML = `<div class="eyebrow">Soirée NHL</div><h1>${title}</h1>
+    <p>${games.length ? "Probabilités de victoire prolongation incluse, comparées au marché. Les paris fictifs sont pris aux cotes du moment de la prédiction." : "Choisissez la soirée en haut à droite, puis lancez <b>Prédire</b>."}</p>
+    <div class="chips">
+      <div class="chip"><div class="k">Matchs</div><div class="v" id="c-games"></div></div>
+      <div class="chip"><div class="k">Paris valeur</div><div class="v" id="c-value"></div></div>
+      <div class="chip ${next ? "glow" : ""}"><div class="k">Prochain coup d'envoi</div><div class="v" style="font-size:16px;margin-top:4px" ${next ? `data-kick="${next}"` : ""}>${next ? countdown(next) : "–"}</div></div>
+    </div>`;
+  countUp($("#c-games"), games.length, v => Math.round(v), "games");
+  countUp($("#c-value"), value, v => Math.round(v), "value");
+}
+
+function renderEdge(games) {
+  const el = $("#edge");
+  const rows = games.map(g => ({ g, e: g.pin_fair != null ? g.p_home - g.pin_fair : null })).sort((a, b) => Math.abs(b.e ?? 0) - Math.abs(a.e ?? 0));
+  if (!rows.length) { el.innerHTML = `<div class="empty">L'écart avec le marché apparaîtra après la première prédiction.</div>`; return; }
+  const W = el.clientWidth || 600, rowH = 26, H = rows.length * rowH + 24, lab = 92, val = 56, half = (W - lab - 2 * val) / 2, mid = lab + val + half;
+  const max = Math.max(0.1, ...rows.map(r => Math.abs(r.e ?? 0)));
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Écart modèle moins marché par match">`;
+  [-1, 1].forEach(k => s += `<text x="${mid + k * (half + val)}" y="${H - 4}" text-anchor="${k < 0 ? "start" : "end"}">${k < 0 ? "← extérieur" : "domicile →"}</text>`);
+  rows.forEach((r, i) => {
+    const y = i * rowH + 4, w = r.e == null ? 0 : Math.abs(r.e) / max * half, x = (r.e ?? 0) >= 0 ? mid : mid - w;
+    s += `<g class="erow" data-i="${i}"><rect x="0" y="${y}" width="${W}" height="${rowH}" fill="transparent"/>
+      <text x="0" y="${y + 16}" style="fill:${css("--text-secondary")};font-weight:650">${abbr(r.g.away)} @ ${abbr(r.g.home)}</text>
+      ${r.e == null ? `<text x="${mid + 8}" y="${y + 16}">pas de cote Pinnacle</text>` :
+      `<rect class="ebar" x="${(r.e >= 0) ? mid : mid}" y="${y + 6}" width="0" height="12" rx="4" fill="${css(r.e >= 0 ? "--s1" : "--neg")}" data-x="${x}" data-w="${Math.max(w, 2)}"/>
+       <text x="${r.e >= 0 ? mid + w + 6 : mid - w - 6}" y="${y + 16}" text-anchor="${r.e >= 0 ? "start" : "end"}" style="fill:${css("--text-primary")};font-weight:700">${signPct(r.e)}</text>`}</g>`;
+  });
+  s += `<line x1="${mid}" x2="${mid}" y1="0" y2="${H - 18}" stroke="${css("--axis")}" stroke-width="1.5"/></svg>`;
+  el.innerHTML = s;
+  nextFrame(() => el.querySelectorAll(".ebar").forEach((b, i) => { b.style.transition = REDUCED ? "" : `x .9s cubic-bezier(.2,.8,.2,1) ${i * 50}ms, width .9s cubic-bezier(.2,.8,.2,1) ${i * 50}ms`; b.style.x = b.dataset.x + "px"; b.style.width = b.dataset.w + "px"; }));
+  const tip = tooltip(el);
+  el.querySelectorAll(".erow").forEach(g => {
+    g.onmousemove = ev => { const r = rows[g.dataset.i], b = el.getBoundingClientRect();
+      tip.innerHTML = `<div class="t">${esc(r.g.away)} @ ${esc(r.g.home)}</div>
+        <div class="row"><span>Modèle P(dom.)</span><b>${pct(r.g.p_home)}</b></div><div class="row"><span>Pinnacle sans marge</span><b>${pct(r.g.pin_fair)}</b></div><div class="row"><span>Écart</span><b>${signPct(r.e)}</b></div>`;
+      placeTip(tip, el, ev.clientX - b.left, ev.clientY - b.top); };
+    g.onmouseleave = () => tip.classList.remove("on");
+  });
+}
+
+function logo(name) {
+  const a = abbr(name);
+  return `<div class="logo"><img src="https://assets.nhle.com/logos/nhl/svg/${a}${css("--logo").replace(/"/g, "")}.svg" alt="${a}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'mono',textContent:'${a}'}))"></div>`;
+}
+function gauge(p) {
+  const r = 30, c = 2 * Math.PI * r;
+  return `<div class="gauge" title="Modèle : probabilité de victoire à domicile"><svg viewBox="0 0 74 74"><circle cx="37" cy="37" r="${r}" fill="none" stroke="${css("--surface-3")}" stroke-width="7"/>
+    <circle class="arc" cx="37" cy="37" r="${r}" fill="none" stroke="${css("--s1")}" stroke-width="7" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c}" data-off="${c * (1 - p)}"/></svg>
+    <div class="num"><div><b>${Math.round(p * 100)}%</b><small>dom.</small></div></div></div>`;
+}
+function tug(p, label) {
+  if (p == null) return `<div class="prob"><span class="src">${label}</span><div class="tug na">pas de cote</div></div>`;
+  return `<div class="prob"><span class="src">${label}</span><div class="tug"><div class="a" data-w="${(1 - p) * 100}">${Math.round((1 - p) * 100)}%</div><div class="h" data-w="${p * 100}">${Math.round(p * 100)}%</div></div></div>`;
+}
+function status(b) {
+  if (b.status === "gagné") return `<span class="status won">✓ ${eur(b.profit)}</span>`;
+  if (b.status === "perdu") return `<span class="status lost">✕ ${eur(b.profit)}</span>`;
+  return `<span class="status wait">⏳ en attente</span>`;
+}
+function renderGames(list, day) {
+  $("#games-sub").textContent = list.length ? "probabilité de victoire (extérieur | domicile), prolongation incluse · survolez une carte" : "";
+  if (!list.length) { $("#games").innerHTML = `<div class="card empty" style="grid-column:1/-1">Aucune prédiction enregistrée pour l'instant.</div>`; return; }
+  $("#games").innerHTML = list.map((g, i) => {
     const bets = STATE.bets.filter(b => b.gameId === g.gameId);
     const uni = g.uni_H && g.uni_A ? (1 / g.uni_H) / (1 / g.uni_H + 1 / g.uni_A) : null;
-    const goalie = n => n ? (n.endsWith("*") ? `${esc(n.slice(0, -2))} <span class="jev" title="Titulaire annoncé dans la presse (Jev)">● Jev</span>` : `${esc(n)} <span title="Heuristique : gardien le plus titularisé récemment">(probable)</span>`) : "";
-    const result = g.score ? `<span class="badge">${esc(g.score)}</span>` : `<span>${paris(g.kickoff)}</span>`;
-    return `<div class="card game">
-      <div class="top">${result}<span>${g.pin_fair != null ? "Écart modèle − Pinnacle " + signPct(g.p_home - g.pin_fair) : ""}</span></div>
-      <div class="teams">
-        <div class="team"><b>${esc(g.away)}</b><small>${goalie(g.away_goalie)}</small></div>
-        <div class="at">@</div>
-        <div class="team home"><b>${esc(g.home)}</b><small>${goalie(g.home_goalie)}</small></div>
+    const gk = n => !n ? "" : n.endsWith("*") ? `${esc(n.slice(0, -2))} <span class="jev" title="Titulaire annoncé dans la presse, lu par Jev">● Jev</span>` : `${esc(n)} <span class="muted" title="Heuristique : le plus titularisé récemment">· probable</span>`;
+    const started = new Date(g.kickoff) <= Date.now();
+    const top = g.score ? `<span class="pill final">FINAL ${esc(g.score)}</span>` : `<span>${paris(g.kickoff)}</span><span class="pill ${started ? "" : "soon"}" ${started ? "" : `data-kick="${g.kickoff}"`}>${started ? "en cours" : countdown(g.kickoff)}</span>`;
+    const hasValue = bets.some(b => b.strategy !== "favori");
+    return `<div class="card game rise ${hasValue ? "value" : ""}" style="--i:${i}">
+      <div class="top">${top}</div>
+      <div class="faceoff">
+        <div class="team" title="${esc(g.away)}">${logo(g.away)}<div class="tname"><b>${abbr(g.away)} <span class="nick">${esc(nick(g.away))}</span></b><small>${gk(g.away_goalie)}</small></div></div>
+        ${gauge(g.p_home)}
+        <div class="team home" title="${esc(g.home)}">${logo(g.home)}<div class="tname"><b>${abbr(g.home)} <span class="nick">${esc(nick(g.home))}</span></b><small>${gk(g.home_goalie)}</small></div></div>
       </div>
-      <div class="probs">${splitBar(g.p_home, "Modèle")}${splitBar(g.pin_fair, "Pinnacle")}${splitBar(uni, "Unibet")}</div>
+      <div class="probs">${tug(g.p_home, "Modèle")}${tug(g.pin_fair, "Pinnacle")}${tug(uni, "Unibet")}</div>
       <div class="odds">
         <span class="odd">Unibet <b>${g.uni_A ?? "–"}</b> | <b>${g.uni_H ?? "–"}</b></span>
         <span class="odd">Winamax 1N2 <b>${g.wmx_H ?? "–"}</b> · <b>${g.wmx_X ?? "–"}</b> · <b>${g.wmx_A ?? "–"}</b></span>
         <span class="odd">Nul 60 min <b>${pct(g.pX, 0)}</b></span>
       </div>
-      ${bets.length ? `<div class="bets">${bets.map(b => `<div class="bet"><span class="swatch" style="background:${COLORS[b.strategy]}"></span>
-        <span class="what">${SHORT[b.strategy]} · <b>${esc(b.pick === "X" ? "Nul 60 min" : short(b.pick_label))}</b> @ ${b.price} <span class="ev ${cls(b.ev)}">(${signPct(b.ev)})</span></span>${statusBadge(b)}</div>`).join("")}</div>`
-        : `<div class="bets"><div class="bet"><span class="what">Aucun pari : pas de cote disponible ou pas de valeur.</span></div></div>`}
+      <div class="bets">${bets.length ? bets.map(b => `<div class="bet"><span class="swatch" style="background:${COLORS[b.strategy]}"></span>
+        <span class="what">${SHORT[b.strategy]} · <b>${esc(b.pick === "X" ? "Nul 60 min" : abbr(b.pick_label))}</b> @ ${b.price}</span>
+        <span class="edgebadge ${cls(b.ev)}">${signPct(b.ev)}</span>${status(b)}</div>`).join("")
+        : `<div class="bet"><span class="what">Aucun pari : pas de cote ou pas de valeur.</span></div>`}</div>
     </div>`;
   }).join("");
+  nextFrame(() => {
+    document.querySelectorAll("#games .arc").forEach(a => a.style.strokeDashoffset = a.dataset.off);
+    document.querySelectorAll("#games .tug div[data-w]").forEach(d => d.style.width = `calc(${d.dataset.w}% - 1px)`);
+  });
+  if (!REDUCED) document.querySelectorAll("#games .game").forEach(card => {
+    card.onmousemove = e => { const r = card.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      card.style.transform = `perspective(900px) rotateX(${-y * 4}deg) rotateY(${x * 5}deg) translateY(-3px)`; };
+    card.onmouseleave = () => card.style.transform = "";
+  });
 }
 
+function ring(p, color) {
+  const r = 24, c = 2 * Math.PI * r;
+  return `<div class="ring" title="Taux de réussite"><svg viewBox="0 0 58 58"><circle cx="29" cy="29" r="${r}" fill="none" stroke="${css("--surface-3")}" stroke-width="6"/>
+    <circle class="arc" cx="29" cy="29" r="${r}" fill="none" stroke="${css(color)}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c}" data-off="${c * (1 - (p ?? 0))}" style="transition:stroke-dashoffset 1.2s cubic-bezier(.2,.8,.2,1)"/></svg><b>${p == null ? "–" : Math.round(p * 100) + "%"}</b></div>`;
+}
 function renderSim() {
   const S = STATE.summary;
   const tot = S.reduce((a, s) => ({ settled: a.settled + s.settled, pending: a.pending + s.pending, won: a.won + s.won, staked: a.staked + s.staked, profit: a.profit + s.profit }), { settled: 0, pending: 0, won: 0, staked: 0, profit: 0 });
-  $("#kpis").innerHTML = [
-    ["Profit total", `<span class="${cls(tot.profit)}">${eur(tot.profit)}</span>`, `${tot.staked.toLocaleString("fr-FR")} € misés`],
-    ["ROI global", `<span class="${cls(tot.profit)}">${tot.staked ? signPct(tot.profit / tot.staked) : "–"}</span>`, "profit / mises réglées"],
-    ["Paris réglés", tot.settled, `${tot.won} gagnés · ${tot.settled - tot.won} perdus`],
-    ["En attente", tot.pending, "à régler après les matchs"],
-  ].map(([l, v, h]) => `<div class="card kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="hint">${h}</div></div>`).join("");
-  $("#strats").innerHTML = S.map(s => `<div class="card strat">
+  const roi = tot.staked ? tot.profit / tot.staked : null;
+  $("#kpis").innerHTML = `
+    <div class="card kpi big rise"><div class="label">Profit total · toutes stratégies</div><div class="value ${cls(tot.profit)}" id="k-profit"></div><div class="hint">${tot.staked.toLocaleString("fr-FR")} € misés (fictifs)</div></div>
+    <div class="card kpi rise" style="--i:1"><div class="label">ROI global</div><div class="value ${cls(roi)}" id="k-roi"></div><div class="hint">profit / mises réglées</div></div>
+    <div class="card kpi rise" style="--i:2"><div class="label">Réglés · en attente</div><div class="value"><span id="k-set"></span> <span class="muted" style="font-size:22px">· <span id="k-pend"></span></span></div><div class="hint">${tot.won} gagnés · ${tot.settled - tot.won} perdus</div></div>`;
+  countUp($("#k-profit"), tot.profit, eur, "profit");
+  countUp($("#k-roi"), roi, v => v == null ? "–" : signPct(v), "roi");
+  countUp($("#k-set"), tot.settled, v => Math.round(v), "set");
+  countUp($("#k-pend"), tot.pending, v => Math.round(v), "pend");
+  $("#strats").innerHTML = S.map((s, i) => `<div class="card strat rise" style="--i:${i + 3}">
     <div class="name"><span class="swatch" style="background:${COLORS[s.key]}"></span>${esc(s.name)}</div>
     <div class="nums"><div><b class="${cls(s.profit)}">${eur(s.profit)}</b><span>profit</span></div>
-    <div><b class="${cls(s.profit)}">${s.roi == null ? "–" : signPct(s.roi)}</b><span>ROI</span></div>
-    <div><b>${s.won}/${s.settled}</b><span>gagnés</span></div><div><b>${s.pending}</b><span>en attente</span></div></div></div>`).join("");
+      <div><b class="${cls(s.roi)}">${s.roi == null ? "–" : signPct(s.roi)}</b><span>ROI</span></div>
+      <div><b>${s.won}/${s.settled}</b><span>gagnés</span></div><div><b>${s.pending}</b><span>attente</span></div></div>
+    ${ring(s.settled ? s.won / s.settled : null, COLORS[s.key])}</div>`).join("");
+  nextFrame(() => document.querySelectorAll("#strats .arc").forEach(a => a.style.strokeDashoffset = a.dataset.off));
   const series = Object.keys(STATE.strategies).map(k => ({ key: k, name: SHORT[k], color: COLORS[k],
     points: STATE.curve.filter(c => c.strategy === k).map(c => ({ x: new Date(c.kickoff), y: c.cum, info: c })) }));
-  $("#pnl-legend").innerHTML = `<span style="color:var(--text-primary);font-weight:650">Profit cumulé (€)</span>` + series.map(s => `<span><span class="swatch" style="background:${s.color}"></span>${s.name}</span>`).join("");
-  if ($("#tab-sim").classList.contains("on")) lineChart($("#pnl"), series);
-  const sel = $("#f-strat");
-  if (sel.options.length === 1) Object.entries(STATE.strategies).forEach(([k, v]) => sel.add(new Option(v, k)));
+  $("#pnl-legend").innerHTML = `<span class="title">Profit cumulé (€)</span>` + series.map(s => `<span><span class="swatch" style="background:${s.color}"></span>${s.name}</span>`).join("");
+  lineChart($("#pnl"), series);
+  const sel = $("#f-strat"); if (sel.options.length === 1) Object.entries(STATE.strategies).forEach(([k, v]) => sel.add(new Option(v, k)));
   renderBets();
 }
 function renderBets() {
   const fs = $("#f-strat").value, st = $("#f-status").value;
   const rows = STATE.bets.filter(b => (!fs || b.strategy === fs) && (!st || b.status === st));
-  $("#bets").innerHTML = `<thead><tr><th>Match</th><th>Coup d'envoi</th><th>Stratégie</th><th>Pari</th><th class="r">Cote</th><th class="r">P modèle</th><th class="r">Valeur</th><th class="r">Mise</th><th>Statut</th><th>Score (ext - dom)</th></tr></thead><tbody>` +
-    (rows.length ? rows.map(b => `<tr><td>${esc(short(b.away))} @ ${esc(short(b.home))}</td><td>${paris(b.kickoff)}</td>
-      <td><span class="swatch" style="display:inline-block;margin-right:6px;background:${COLORS[b.strategy]}"></span>${SHORT[b.strategy]}</td>
-      <td>${esc(b.market)} · <b>${esc(b.pick_label)}</b></td><td class="r">${b.price}</td><td class="r">${pct(b.p_model)}</td>
-      <td class="r ${cls(b.ev)}">${signPct(b.ev)}</td><td class="r">${b.stake} €</td><td>${statusBadge(b)}</td><td>${esc(b.score ?? "")}</td></tr>`).join("")
+  $("#bets").innerHTML = `<thead><tr><th>Match</th><th>Coup d'envoi (Paris)</th><th>Stratégie</th><th>Pari</th><th class="r">Cote</th><th class="r">P modèle</th><th class="r">Valeur</th><th class="r">Mise</th><th>Statut</th><th>Score (ext. - dom.)</th></tr></thead><tbody>` +
+    (rows.length ? rows.map(b => `<tr><td><b>${abbr(b.away)}</b> @ <b>${abbr(b.home)}</b></td><td>${paris(b.kickoff)}</td>
+      <td><span class="swatch" style="margin-right:6px;background:${COLORS[b.strategy]}"></span>${SHORT[b.strategy]}</td>
+      <td>${esc(b.market)} · <b>${esc(b.pick === "X" ? "Nul 60 min" : b.pick_label)}</b></td><td class="r">${b.price}</td><td class="r">${pct(b.p_model)}</td>
+      <td class="r"><span class="edgebadge ${cls(b.ev)}">${signPct(b.ev)}</span></td><td class="r">${b.stake} €</td><td>${status(b)}</td><td>${esc(b.score ?? "")}</td></tr>`).join("")
       : `<tr><td colspan="10" class="empty">Aucun pari pour l'instant.</td></tr>`) + `</tbody>`;
 }
 $("#f-strat").onchange = renderBets; $("#f-status").onchange = renderBets;
 
-// ---------- graphiques (SVG) ----------
-function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v.replace(/var\((.*)\)/, "$1")).trim() || v; }
-function niceTicks(min, max, n = 5) {
-  const span = max - min || 1, step0 = span / n, mag = 10 ** Math.floor(Math.log10(step0));
-  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => span / s <= n) || mag * 10;
-  const ticks = []; for (let v = Math.floor(min / step) * step; v <= max + 1e-9; v += step) ticks.push(+v.toFixed(10));
-  return ticks;
-}
-function tooltip(el) { let t = el.querySelector(".tip"); if (!t) { t = document.createElement("div"); t.className = "tip"; el.appendChild(t); } return t; }
-
+// ---------- courbe de profit (SVG) ----------
 function lineChart(el, series) {
-  // un point par coup d'envoi (plusieurs matchs à la même heure -> cumul après le dernier), dans l'ordre du temps
   series.forEach(se => se.points = [...new Map(se.points.sort((a, b) => a.x - b.x).map(p => [+p.x, p])).values()]);
   const pts = series.flatMap(s => s.points);
-  if (!pts.length) { el.innerHTML = `<div class="empty">La courbe apparaîtra après les premiers paris réglés.</div>`; return; }
-  const W = el.clientWidth || 900, H = 300, m = { l: 56, r: 110, t: 12, b: 28 };
+  if (!pts.length) { el.innerHTML = `<div class="empty">La courbe se dessinera après les premiers paris réglés.</div>`; return; }
+  const W = el.clientWidth || 900, H = 320, m = { l: 58, r: 132, t: 14, b: 30 };
   const xs = pts.map(p => +p.x), x0 = Math.min(...xs), x1 = Math.max(...xs) === x0 ? x0 + 864e5 : Math.max(...xs);
-  const ys = pts.map(p => p.y).concat(0), ticks = niceTicks(Math.min(...ys), Math.max(...ys));
+  const ticks = niceTicks(Math.min(0, ...pts.map(p => p.y)), Math.max(0, ...pts.map(p => p.y)));
   const y0 = ticks[0], y1 = ticks[ticks.length - 1];
   const X = v => m.l + (v - x0) / (x1 - x0) * (W - m.l - m.r), Y = v => m.t + (y1 - v) / (y1 - y0 || 1) * (H - m.t - m.b);
   let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Profit cumulé par stratégie">`;
-  ticks.forEach(t => s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="${t === 0 ? css("--axis") : css("--grid")}" stroke-width="1"/>
-    <text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${t.toLocaleString("fr-FR")} €</text>`);
+  ticks.forEach(t => s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="${css(t === 0 ? "--axis" : "--grid")}" stroke-width="${t === 0 ? 1.5 : 1}"/>
+    <text x="${m.l - 10}" y="${Y(t) + 4}" text-anchor="end">${t.toLocaleString("fr-FR")} €</text>`);
   const days = []; for (let d = new Date(x0); +d <= x1; d = new Date(+d + 864e5)) days.push(d);
   const every = Math.ceil(days.length / 8);
   days.forEach((d, i) => { if (i % every === 0) s += `<text x="${X(+d)}" y="${H - 8}" text-anchor="middle">${d.toLocaleDateString("fr-FR", { day: "2-digit", month: "2-digit" })}</text>`; });
@@ -415,101 +647,109 @@ function lineChart(el, series) {
   series.forEach(se => {
     if (!se.points.length) return;
     const path = se.points.map((p, i) => `${i ? "L" : "M"}${X(+p.x).toFixed(1)},${Y(p.y).toFixed(1)}`).join("");
-    s += `<path d="${path}" fill="none" stroke="${css(se.color)}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    s += `<path class="line" d="${path}" fill="none" stroke="${css(se.color)}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
     const last = se.points[se.points.length - 1];
     ends.push({ y: Y(last.y), x: X(+last.x), se, last });
   });
-  ends.sort((a, b) => a.y - b.y); for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 14) ends[i].y = ends[i - 1].y + 14;
-  ends.forEach(e => s += `<circle cx="${e.x}" cy="${Y(e.last.y)}" r="4" fill="${css(e.se.color)}" stroke="${css("--surface-1")}" stroke-width="2"/>
-    <text x="${W - m.r + 10}" y="${e.y + 4}" style="fill:${css("--text-secondary")};font-weight:600">${e.se.name} ${e.last.y >= 0 ? "+" : ""}${e.last.y.toFixed(0)} €</text>`);
-  s += `<line id="xh" y1="${m.t}" y2="${H - m.b}" stroke="${css("--axis")}" stroke-dasharray="3 3" opacity="0"/><g id="dots"></g>
-    <rect x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent" id="hit"/></svg>`;
+  ends.sort((a, b) => a.y - b.y); for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
+  ends.forEach(e => s += `<circle class="endpulse" cx="${e.x}" cy="${Y(e.last.y)}" r="4" fill="${css(e.se.color)}"/>
+    <circle cx="${e.x}" cy="${Y(e.last.y)}" r="4.5" fill="${css(e.se.color)}" stroke="${css("--surface-1")}" stroke-width="2"/>
+    <text x="${W - m.r + 12}" y="${e.y + 4}" style="fill:${css("--text-secondary")};font-weight:650">${e.se.name} <tspan style="fill:${css("--text-primary")}">${e.last.y >= 0 ? "+" : ""}${e.last.y.toFixed(0)} €</tspan></text>`);
+  s += `<line class="xh" y1="${m.t}" y2="${H - m.b}" stroke="${css("--axis")}" stroke-dasharray="3 3" opacity="0"/><g class="dots"></g>
+    <rect class="hit" x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent"/></svg>`;
   el.innerHTML = s;
-  const tip = tooltip(el), svg = el.querySelector("svg"), xh = el.querySelector("#xh"), dots = el.querySelector("#dots");
+  const sig = JSON.stringify(pts.map(p => [+p.x, p.y]));
+  if (!REDUCED && el.dataset.sig !== sig) el.querySelectorAll("path.line").forEach(p => {
+    const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L; p.classList.add("draw");
+    nextFrame(() => p.style.strokeDashoffset = 0);
+  });
+  el.dataset.sig = sig;
+  const tip = tooltip(el), svg = el.querySelector("svg"), xh = el.querySelector(".xh"), dots = el.querySelector(".dots");
   const stamps = [...new Set(xs)].sort((a, b) => a - b);
-  el.querySelector("#hit").onmousemove = ev => {
+  el.querySelector(".hit").onmousemove = ev => {
     const r = svg.getBoundingClientRect(), mx = (ev.clientX - r.left) * W / r.width;
     const xv = x0 + (mx - m.l) / (W - m.l - m.r) * (x1 - x0);
     const near = stamps.reduce((a, b) => Math.abs(b - xv) < Math.abs(a - xv) ? b : a);
     xh.setAttribute("x1", X(near)); xh.setAttribute("x2", X(near)); xh.setAttribute("opacity", 1);
     let rows = "", d = "";
     series.forEach(se => {
-      const p = [...se.points].reverse().find(p => +p.x <= near);
-      if (!p) return;
+      const p = [...se.points].reverse().find(p => +p.x <= near); if (!p) return;
       if (+p.x === near) d += `<circle cx="${X(near)}" cy="${Y(p.y)}" r="5" fill="${css(se.color)}" stroke="${css("--surface-1")}" stroke-width="2"/>`;
       rows += `<div class="row"><span><span class="swatch" style="background:${se.color}"></span>${se.name}</span><b>${eur(p.y)}</b></div>`;
     });
     dots.innerHTML = d;
-    const hit = pts.filter(p => +p.x === near).map(p => `${short(p.info.match.split(" @ ")[0])} @ ${short(p.info.match.split(" @ ")[1])}`);
-    tip.innerHTML = `<div class="t">${new Date(near).toLocaleString("fr-FR", { timeZone: "Europe/Paris", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })} · ${[...new Set(hit)].join(", ")}</div>${rows}`;
-    tip.style.opacity = 1;
-    const px = X(near) * r.width / W; tip.style.left = Math.min(px + 14, r.width - tip.offsetWidth - 4) + "px"; tip.style.top = "10px";
+    const games = [...new Set(pts.filter(p => +p.x === near).map(p => p.info.match.split(" @ ").map(abbr).join(" @ ")))];
+    tip.innerHTML = `<div class="t">${tz(new Date(near).toISOString(), "Europe/Paris", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })} · ${games.join(", ")}</div>${rows}`;
+    placeTip(tip, el, X(near) * r.width / W, 12);
   };
-  el.querySelector("#hit").onmouseleave = () => { tip.style.opacity = 0; xh.setAttribute("opacity", 0); dots.innerHTML = ""; };
+  el.querySelector(".hit").onmouseleave = () => { tip.classList.remove("on"); xh.setAttribute("opacity", 0); dots.innerHTML = ""; };
 }
 
-function calibChart(el, pts) {
-  const W = el.clientWidth || 500, H = 300, m = { l: 44, r: 16, t: 10, b: 34 };
-  const lo = 0.1, hi = 0.9, X = v => m.l + (v - lo) / (hi - lo) * (W - m.l - m.r), Y = v => m.t + (hi - v) / (hi - lo) * (H - m.t - m.b);
-  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Calibration du modèle">`;
-  [0.2, 0.4, 0.6, 0.8].forEach(t => s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="${css("--grid")}"/><text x="${m.l - 6}" y="${Y(t) + 4}" text-anchor="end">${t * 100}%</text>
-    <text x="${X(t)}" y="${H - 14}" text-anchor="middle">${t * 100}%</text>`);
-  s += `<line x1="${X(lo)}" y1="${Y(lo)}" x2="${X(hi)}" y2="${Y(hi)}" stroke="${css("--axis")}" stroke-dasharray="4 4"/>
-    <text x="${W - m.r}" y="${Y(0.14)}" text-anchor="end">pointillés = calibration parfaite</text>
-    <text x="${m.l}" y="${m.t + 4}" text-anchor="start" dx="6">observé</text>
-    <text x="${(W + m.l) / 2}" y="${H - 1}" text-anchor="middle">probabilité prédite (domicile)</text>`;
-  pts.forEach((p, i) => s += `<circle data-i="${i}" cx="${X(p.p)}" cy="${Y(p.obs)}" r="6" fill="${css("--s1")}" stroke="${css("--surface-1")}" stroke-width="2"/>
-    <circle data-i="${i}" cx="${X(p.p)}" cy="${Y(p.obs)}" r="16" fill="transparent"/>`);
-  el.innerHTML = s + `</svg>`;
-  const tip = tooltip(el), svg = el.querySelector("svg");
-  el.querySelectorAll("circle[data-i]").forEach(c => {
-    c.onmouseenter = () => { const p = pts[c.dataset.i], r = svg.getBoundingClientRect();
-      tip.innerHTML = `<div class="t">${p.n.toLocaleString("fr-FR")} matchs</div><div class="row"><span>Prédit</span><b>${pct(p.p)}</b></div><div class="row"><span>Observé</span><b>${pct(p.obs)}</b></div>`;
-      tip.style.opacity = 1; tip.style.left = (X(p.p) * r.width / W + 12) + "px"; tip.style.top = (Y(p.obs) * r.height / H - 20) + "px"; };
-    c.onmouseleave = () => tip.style.opacity = 0;
-  });
-}
-
-function coefChart(el, coefs) {
-  const names = { d_xg: "Part d'xG (forme)", d_sat: "Part des tirs (Corsi)", d_gd: "Différence de buts", d_goalie: "Gardien (GSAx)", home_b2b: "Domicile en back-to-back", away_b2b: "Extérieur en back-to-back" };
-  const ent = Object.entries(coefs), max = Math.max(...ent.map(([, v]) => Math.abs(v)));
-  const W = el.clientWidth || 500, rowH = 40, H = ent.length * rowH + 10, lab = 170, mid = lab + (W - lab - 60) / 2, half = (W - lab - 60) / 2;
-  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Poids du modèle"><line x1="${mid}" x2="${mid}" y1="0" y2="${H}" stroke="${css("--axis")}"/>`;
-  ent.forEach(([k, v], i) => {
-    const y = i * rowH + 10, w = Math.abs(v) / max * half, x = v >= 0 ? mid : mid - w;
-    s += `<text x="0" y="${y + 15}" style="fill:${css("--text-secondary")}">${names[k] || k}</text>
-      <rect x="${x}" y="${y + 3}" width="${Math.max(w, 2)}" height="16" rx="4" fill="${css(v >= 0 ? "--s1" : "--critical")}"/>
-      <text x="${v >= 0 ? mid + w + 6 : mid - w - 6}" y="${y + 15}" text-anchor="${v >= 0 ? "start" : "end"}" style="fill:${css("--text-primary")};font-weight:600">${v.toFixed(2)}</text>`;
-  });
-  el.innerHTML = s + `</svg><p class="note">Bleu : favorise l'équipe à domicile quand l'écart est en sa faveur. Rouge : la défavorise.</p>`;
-}
-
+// ---------- Modèle ----------
 async function loadModel() {
   if (MODEL) return renderModel();
-  $("#m-kpis").innerHTML = `<div class="card kpi"><div class="label">Calcul…</div><div class="value"><div class="spinner"></div></div><div class="hint">prédictions hors échantillon de toutes les saisons (~20 s)</div></div>`;
+  $("#m-kpis").innerHTML = `<div class="card kpi"><div class="label">Calcul en cours</div><div class="value"><svg class="spin-puck" viewBox="0 0 26 26"><circle cx="13" cy="13" r="10" fill="none" stroke="var(--grid)" stroke-width="3"/><path d="M13 3 a10 10 0 0 1 10 10" fill="none" stroke="var(--ice)" stroke-width="3" stroke-linecap="round"/></svg></div><div class="hint">prédictions hors échantillon de toutes les saisons (~20 s)</div></div>`;
   MODEL = await api("/api/model");
   renderModel();
 }
 function renderModel() {
   if (!MODEL || MODEL.error) { $("#m-kpis").innerHTML = `<div class="card kpi">${esc(MODEL && MODEL.error)}</div>`; return; }
   const withPin = MODEL.seasons.filter(s => s.n_pin);
-  $("#m-kpis").innerHTML = [
-    ["Matchs hors échantillon", MODEL.n_games.toLocaleString("fr-FR"), "depuis 2018-19"],
-    ["Log-loss", MODEL.logloss.toFixed(4), "0.693 = pile ou face"],
-    ["Favori gagnant", pct(MODEL.accuracy), "toutes saisons"],
-    ["vs Pinnacle", withPin.length ? withPin.map(s => `${(s.ll_model_pin - s.ll_pin >= 0 ? "+" : "") + (s.ll_model_pin - s.ll_pin).toFixed(4)}`).join(" / ") : "–",
-      withPin.length ? "écart de log-loss, négatif = modèle meilleur (" + withPin.map(s => s.season + ", " + s.n_pin + " m.").join(" / ") + ")" : "pas encore de cotes"],
-  ].map(([l, v, h]) => `<div class="card kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="hint">${h}</div></div>`).join("");
+  $("#m-kpis").innerHTML = `
+    <div class="card kpi rise"><div class="label">Matchs hors échantillon</div><div class="value" id="m-n"></div><div class="hint">depuis 2018-19</div></div>
+    <div class="card kpi rise" style="--i:1"><div class="label">Log-loss</div><div class="value" id="m-ll"></div><div class="hint">0.693 = pile ou face</div></div>
+    <div class="card kpi rise" style="--i:2"><div class="label">Favori gagnant</div><div class="value" id="m-acc"></div><div class="hint">toutes saisons</div></div>
+    <div class="card kpi rise" style="--i:3"><div class="label">vs Pinnacle (clôture)</div><div class="value" style="font-size:26px">${withPin.map(s => `<span class="${cls(s.ll_pin - s.ll_model_pin)}">${(s.ll_model_pin - s.ll_pin >= 0 ? "+" : "") + (s.ll_model_pin - s.ll_pin).toFixed(4)}</span>`).join(" <span class='muted'>/</span> ") || "–"}</div>
+      <div class="hint">écart de log-loss, négatif = modèle meilleur · ${withPin.map(s => s.season + " (" + s.n_pin + " m.)").join(" / ")}</div></div>`;
+  countUp($("#m-n"), MODEL.n_games, v => Math.round(v).toLocaleString("fr-FR"), "mn");
+  countUp($("#m-ll"), MODEL.logloss, v => v.toFixed(4), "mll");
+  countUp($("#m-acc"), MODEL.accuracy, v => pct(v), "macc");
   calibChart($("#calib"), MODEL.calibration);
   coefChart($("#coefs"), MODEL.coefs);
-  $("#seasons").innerHTML = `<thead><tr><th>Saison</th><th class="r">Matchs</th><th class="r">Log-loss modèle</th><th class="r">Favori gagnant</th><th class="r">Matchs avec cotes</th><th class="r">Modèle (mêmes matchs)</th><th class="r">Pinnacle clôture</th></tr></thead><tbody>` +
-    MODEL.seasons.map(s => `<tr><td>${s.season}</td><td class="r">${s.n}</td><td class="r">${s.logloss.toFixed(4)}</td><td class="r">${pct(s.accuracy)}</td>
+  $("#seasons").innerHTML = `<thead><tr><th>Saison</th><th class="r">Matchs</th><th>Log-loss modèle</th><th class="r">Favori gagnant</th><th class="r">Matchs avec cotes</th><th class="r">Modèle (mêmes matchs)</th><th class="r">Pinnacle clôture</th></tr></thead><tbody>` +
+    MODEL.seasons.map(s => `<tr><td><b>${s.season}</b></td><td class="r">${s.n}</td>
+      <td><span class="skill" style="width:${Math.max(2, (0.6931 - s.logloss) / 0.06 * 120)}px" title="gain sur pile ou face"></span>${s.logloss.toFixed(4)}</td><td class="r">${pct(s.accuracy)}</td>
       <td class="r">${s.n_pin || "–"}</td><td class="r">${s.ll_model_pin?.toFixed(4) ?? "–"}</td><td class="r">${s.ll_pin?.toFixed(4) ?? "–"}</td></tr>`).join("") + `</tbody>`;
 }
+function calibChart(el, pts) {
+  const W = el.clientWidth || 500, H = 300, m = { l: 46, r: 16, t: 14, b: 36 };
+  const lo = 0.1, hi = 0.9, X = v => m.l + (v - lo) / (hi - lo) * (W - m.l - m.r), Y = v => m.t + (hi - v) / (hi - lo) * (H - m.t - m.b);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Calibration du modèle">`;
+  [0.2, 0.4, 0.6, 0.8].forEach(t => s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="${css("--grid")}"/><text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${t * 100}%</text>
+    <text x="${X(t)}" y="${H - 16}" text-anchor="middle">${t * 100}%</text>`);
+  s += `<line x1="${X(lo)}" y1="${Y(lo)}" x2="${X(hi)}" y2="${Y(hi)}" stroke="${css("--axis")}" stroke-dasharray="4 4" stroke-width="1.5"/>
+    <text x="${W - m.r}" y="${Y(0.14)}" text-anchor="end">pointillés = calibration parfaite</text>
+    <text x="${m.l + 6}" y="${m.t + 4}">observé</text><text x="${(W + m.l) / 2}" y="${H - 1}" text-anchor="middle">prédit (victoire à domicile)</text>`;
+  pts.forEach((p, i) => s += `<circle class="cdot" data-i="${i}" cx="${X(p.p)}" cy="${Y(p.obs)}" r="0" fill="${css("--s1")}" stroke="${css("--surface-1")}" stroke-width="2"/>
+    <circle class="chit" data-i="${i}" cx="${X(p.p)}" cy="${Y(p.obs)}" r="16" fill="transparent"/>`);
+  el.innerHTML = s + `</svg>`;
+  nextFrame(() => el.querySelectorAll(".cdot").forEach((c, i) => { c.style.transition = REDUCED ? "" : `r .5s cubic-bezier(.3,1.6,.5,1) ${i * 70}ms`; c.style.r = "6.5px"; }));
+  const tip = tooltip(el), svg = el.querySelector("svg");
+  el.querySelectorAll(".chit").forEach(c => {
+    c.onmouseenter = () => { const p = pts[c.dataset.i], r = svg.getBoundingClientRect();
+      tip.innerHTML = `<div class="t">${p.n.toLocaleString("fr-FR")} matchs</div><div class="row"><span>Prédit</span><b>${pct(p.p)}</b></div><div class="row"><span>Observé</span><b>${pct(p.obs)}</b></div>`;
+      placeTip(tip, el, X(p.p) * r.width / W, Y(p.obs) * r.height / H - 30); };
+    c.onmouseleave = () => tip.classList.remove("on");
+  });
+}
+function coefChart(el, coefs) {
+  const names = { d_xg: "Part d'xG (forme)", d_sat: "Part des tirs (Corsi)", d_gd: "Différence de buts", d_goalie: "Gardien (GSAx)", home_b2b: "Domicile en back-to-back", away_b2b: "Extérieur en back-to-back" };
+  const ent = Object.entries(coefs), max = Math.max(...ent.map(([, v]) => Math.abs(v)));
+  const W = el.clientWidth || 500, rowH = 40, H = ent.length * rowH + 10, lab = 176, half = (W - lab - 56) / 2, mid = lab + half;
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Poids du modèle"><line x1="${mid}" x2="${mid}" y1="0" y2="${H}" stroke="${css("--axis")}" stroke-width="1.5"/>`;
+  ent.forEach(([k, v], i) => {
+    const y = i * rowH + 8, w = Math.max(Math.abs(v) / max * half, 2), x = v >= 0 ? mid : mid - w;
+    s += `<text x="0" y="${y + 16}" style="fill:${css("--text-secondary")}">${names[k] || k}</text>
+      <rect class="cbar" x="${mid}" y="${y + 4}" width="0" height="16" rx="4" fill="${css(v >= 0 ? "--s1" : "--neg")}" data-x="${x}" data-w="${w}"/>
+      <text x="${v >= 0 ? mid + w + 7 : mid - w - 7}" y="${y + 16}" text-anchor="${v >= 0 ? "start" : "end"}" style="fill:${css("--text-primary")};font-weight:700">${v.toFixed(2)}</text>`;
+  });
+  el.innerHTML = s + `</svg><p class="note">Bleu : un écart en faveur du domicile augmente sa probabilité de victoire. Rouge : la diminue.</p>`;
+  nextFrame(() => el.querySelectorAll(".cbar").forEach((b, i) => { b.style.transition = REDUCED ? "" : `x .9s cubic-bezier(.2,.8,.2,1) ${i * 70}ms, width .9s cubic-bezier(.2,.8,.2,1) ${i * 70}ms`; b.style.x = b.dataset.x + "px"; b.style.width = b.dataset.w + "px"; }));
+}
 
-addEventListener("resize", () => { clearTimeout(window._rz); window._rz = setTimeout(render, 150); });
-$("#date").onchange = renderGames;
-refresh();
+addEventListener("resize", () => { clearTimeout(window._rz); window._rz = setTimeout(() => { moveInd(); render(); }, 150); });
+moveInd(); tickClocks(); refresh();
+api("/api/job").then(j => j.busy && showJob(j));
 </script>
 </body>
 </html>
