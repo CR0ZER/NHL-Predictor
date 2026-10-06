@@ -57,7 +57,7 @@ def load():
     for df in (team, goalies):
         df["gameDate"] = pd.to_datetime(df["gameDate"])
         df["season"] = df["gameId"] // 1_000_000
-    team_xg, goalie_xg = xg.aggregates(team)
+    team_xg, goalie_xg = xg.aggregates(team, current_season())
     team = team.merge(team_xg, on=["gameId", "teamId"], how="left")
     goalies = goalies.merge(goalie_xg, on=["gameId", "playerId"], how="left")
     goalies[["xg_faced", "goals_allowed", "fenwick"]] = goalies[["xg_faced", "goals_allowed", "fenwick"]].fillna(0)
@@ -82,7 +82,8 @@ def team_features(team):
     by = u.groupby("teamId")
     for col in ["sat_share", "xg_share", "gd"]:
         u[f"ew_{col}"] = by[col].transform(lambda s: s.ewm(halflife=HALFLIFE).mean().shift())
-    return u[~u["pseudo"]].drop(columns="pseudo").sort_values(["gameDate", "gameId"]).reset_index(drop=True)
+    u = u[~u["pseudo"]].drop(columns="pseudo").astype({"gameId": "int64"})  # les lignes fictives n'ont pas de gameId
+    return u.sort_values(["gameDate", "gameId"]).reset_index(drop=True)
 
 
 def goalie_ratings(goalies):
@@ -130,6 +131,14 @@ def fit_predict(train, test, cols):
     return m.predict_proba(test[cols])[:, 1]
 
 
+def walk_forward(cols=FEATURES):
+    """Prédiction hors échantillon de chaque match (saison S prédite par un modèle appris sur les saisons < S)."""
+    w, _ = history(*load())
+    w = w[w["season"] > FIRST_SEASON].dropna(subset=cols + ["home_win"])
+    return pd.concat([w[w["season"] == s].assign(p=fit_predict(w[w["season"] < s], w[w["season"] == s], cols))
+                      for s in sorted(w["season"].unique())[2:]]).reset_index()
+
+
 def backtest():
     w, _ = history(*load())
     w = w[(w["season"] > FIRST_SEASON) & (w["season"] < current_season())].dropna(subset=FEATURES + ["home_win"])
@@ -171,18 +180,19 @@ def probable_starter(goalies, abbrev, before):
     return pid, starts.loc[starts["playerId"] == pid, "goalieFullName"].iloc[-1]
 
 
-def predict(day):
+def predictions(day, use_jev=True):
+    """Matchs du jour non encore joués : probabilités (vainqueur et 1N2 temps réglementaire), gardiens retenus."""
     team, goalies = load()
     w, current = history(team, goalies)
     w = w.dropna(subset=FEATURES + ["home_win"])
     model = LogisticRegression().fit(w[FEATURES], w["home_win"])
 
     week = get_json(f"{WEB}/schedule/{day}")["gameWeek"]
-    games = [x for d in week if d["date"] == day for x in d["games"] if x["gameType"] == 2]
+    played = set(team["gameId"])
+    games = [x for d in week if d["date"] == day for x in d["games"] if x["gameType"] == 2 and x["id"] not in played]
     if not games:
-        print(f"Aucun match de saison régulière le {day}.")
-        return
-    client = TypeSafeClient() if os.environ.get("TYPESAFE_API_KEY") else None
+        return pd.DataFrame()
+    client = TypeSafeClient() if use_jev and os.environ.get("TYPESAFE_API_KEY") else None
     full = lambda tm: f"{tm['placeName']['default']} {tm['commonName']['default']}"
     rows = []
     for x in games:
@@ -201,6 +211,17 @@ def predict(day):
     t = t[t["gameId"].isin(up["gameId"])].merge(up[["gameId", "homeRoad", *goalie_cols]], on=["gameId", "homeRoad"])
     u = wide(t)
     u["p_home"] = model.predict_proba(u[FEATURES])[:, 1]
+    # ponytail: P(prolongation) constante, prolongation à pile ou face (même hypothèse que odds.model_probs)
+    tie = w["reg_tie"].mean()
+    u["pH"], u["pX"], u["pA"] = (u["p_home"] - tie / 2).clip(0.01), tie, (1 - u["p_home"] - tie / 2).clip(0.01)
+    u["kickoff"] = u.index.map({x["id"]: x["startTimeUTC"] for x in games})
+    return u.reset_index()
+
+
+def predict(day):
+    u = predictions(day)
+    if u.empty:
+        return print(f"Aucun match de saison régulière à venir le {day}.")
     u["cote_juste_dom"] = 1 / u["p_home"]
     u["cote_juste_ext"] = 1 / (1 - u["p_home"])
     print(f"Matchs du {day} — gardien suivi de * = annoncé dans la presse (Jev), sinon heuristique :\n")

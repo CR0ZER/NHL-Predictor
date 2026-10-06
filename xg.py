@@ -3,6 +3,7 @@
 Le modèle de tir est entraîné en walk-forward : les tirs de la saison S sont notés par un modèle appris sur les saisons < S.
 """
 import json
+import pickle
 import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -31,6 +32,8 @@ def get_json(url, tries=3):
 SHOT_EVENTS = {"shot-on-goal", "goal", "missed-shot"}  # tirs non bloqués (Fenwick)
 ANY_SHOT = SHOT_EVENTS | {"blocked-shot"}
 XG_FEATURES = ["dist", "angle", "shot_type", "rebound", "rush", "skater_diff", "empty_net", "dt_prev"]
+SHOT_TYPES = ["backhand", "bat", "between-legs", "cradle", "deflected", "poke", "slap", "snap", "tip-in",
+              "wrap-around", "wrist"]  # codes fixes (inconnu -> -1, traité comme manquant)
 
 
 def clock(p):
@@ -77,7 +80,7 @@ def features(s):
     # ponytail: filet supposé du côté du tir pour les zones O/N ; homeTeamDefendingSide absent avant ~2019
     s["dist"] = np.where(s["zone"] == "D", np.hypot(89 + ax, s["y"]), np.hypot(89 - ax, s["y"]))
     s["angle"] = np.degrees(np.arctan2(s["y"].abs(), (89 - ax).clip(lower=1)))
-    s["shot_type"] = s["shot_type"].astype("category").cat.codes
+    s["shot_type"] = s["shot_type"].map({t: i for i, t in enumerate(SHOT_TYPES)}).fillna(-1).astype(int)
     s["rebound"] = (s["prev_shot_same_team"].astype(bool) & (s["dt_prev"] <= 3)).astype(int)
     s["rush"] = (s["prev_zone"].isin(["N", "D"]) & (s["dt_prev"] <= 4)).astype(int)
     sit = s["situation"].fillna(1551).astype(int).astype(str).str.zfill(4)
@@ -87,26 +90,26 @@ def features(s):
     return s
 
 
-def score_shots(shots):
-    """Ajoute la colonne xg, saison par saison, avec un modèle appris sur les saisons précédentes."""
-    s = features(shots)
-    s["season"] = s["gameId"] // 1_000_000
-    s["xg"] = np.nan
-    seasons = sorted(s["season"].unique())
-    for i, season in enumerate(seasons):
-        train = s[s["season"] < season] if i else s[s["season"] == season]  # 1re saison : rodage, notée sur elle-même
-        m = HistGradientBoostingClassifier(max_iter=200, learning_rate=0.1, categorical_features=[2])
-        m.fit(train[XG_FEATURES], train["goal"].astype(int))
-        cur = s["season"] == season
-        s.loc[cur, "xg"] = m.predict_proba(s.loc[cur, XG_FEATURES])[:, 1]
-    return s
+def shot_model(season, first_season):
+    """Modèle de tir pour noter la saison `season` : appris sur les saisons précédentes (cache disque)."""
+    path = DATA / f"xg_model_{season}.pkl"
+    if path.exists():
+        return pickle.loads(path.read_bytes())
+    years = range(first_season, season) if season > first_season else [season]  # 1re saison : rodage, sur elle-même
+    train = features(pd.concat([pd.read_csv(DATA / f"shots_{y}.csv.gz") for y in years], ignore_index=True))
+    m = HistGradientBoostingClassifier(max_iter=200, learning_rate=0.1, categorical_features=[2])
+    m.fit(train[XG_FEATURES], train["goal"].astype(int))
+    path.write_bytes(pickle.dumps(m))
+    return m
 
 
-def aggregates(team):
-    """(xG par équipe-match, xG subis par gardien-match), à partir de la table équipe-match de nhl.load()."""
-    shots = pd.concat([season_shots(season, grp["gameId"].unique()) for season, grp in team.groupby("season")],
-                      ignore_index=True)
-    s = score_shots(shots)
+def season_aggregates(season, team, first_season, final):
+    """(xG par équipe-match, xG subis par gardien-match) d'une saison ; mis en cache si la saison est terminée."""
+    path = DATA / f"xg_agg_{season}.pkl"
+    if final and path.exists():
+        return pickle.loads(path.read_bytes())
+    s = features(season_shots(season, team["gameId"].unique()))
+    s["xg"] = shot_model(season, first_season).predict_proba(s[XG_FEATURES])[:, 1]
     xgf = s.groupby(["gameId", "teamId"])["xg"].sum().rename("xgf").reset_index()
     opp = team[["gameId", "teamId"]].merge(team[["gameId", "teamId"]], on="gameId", suffixes=("", "_opp"))
     opp = opp[opp["teamId"] != opp["teamId_opp"]]
@@ -114,4 +117,14 @@ def aggregates(team):
         xgf.rename(columns={"teamId": "teamId_opp", "xgf": "xga"}), on=["gameId", "teamId_opp"], how="left")
     faced = s[s["empty_net"] == 0].groupby(["gameId", "goalieId"]).agg(
         xg_faced=("xg", "sum"), goals_allowed=("goal", "sum"), fenwick=("xg", "size")).reset_index()
-    return tm[["gameId", "teamId", "xgf", "xga"]].fillna(0), faced.rename(columns={"goalieId": "playerId"})
+    out = tm[["gameId", "teamId", "xgf", "xga"]].fillna(0), faced.rename(columns={"goalieId": "playerId"})
+    if final:
+        path.write_bytes(pickle.dumps(out))
+    return out
+
+
+def aggregates(team, current_season):
+    """xG par équipe-match et par gardien-match pour toutes les saisons de la table équipe-match de nhl.load()."""
+    first = team["season"].min()
+    parts = [season_aggregates(season, grp, first, season != current_season) for season, grp in team.groupby("season")]
+    return pd.concat([p[0] for p in parts], ignore_index=True), pd.concat([p[1] for p in parts], ignore_index=True)

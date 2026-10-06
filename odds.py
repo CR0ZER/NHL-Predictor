@@ -77,6 +77,23 @@ def norm(name):
     return unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
 
 
+def last_prices(hist, before):
+    """{(bookmaker, marché, issue): dernière cote publiée avant `before`} à partir d'une réponse historical-odds."""
+    out = {}
+    for book, b in hist.get("bookmakers", {}).items():
+        for market, outcomes in OUTCOMES.items():
+            for oid, side in outcomes.items():
+                prices = b.get("markets", {}).get(market, {}).get("outcomes", {}).get(oid, {}).get("players", {})
+                pre = [o for o in next(iter(prices.values()), []) if pd.Timestamp(o["createdAt"]) < before]
+                if pre:
+                    out[(book, market, side)] = max(pre, key=lambda o: o["createdAt"])["price"]
+    return out
+
+
+def local_date(ts):
+    return (pd.Timestamp(ts) - pd.Timedelta(hours=8)).date()  # date locale nord-américaine
+
+
 def closing_odds():
     """Dernière cote publiée avant le coup d'envoi réel, par (match, bookmaker, marché, issue)."""
     rows = []
@@ -86,17 +103,23 @@ def closing_odds():
             if not hist.exists():
                 continue
             kickoff = pd.Timestamp(f["trueStartTime"] or f["startTime"])
-            for book, b in json.loads(hist.read_text()).get("bookmakers", {}).items():
-                for market, outcomes in OUTCOMES.items():
-                    for oid, side in outcomes.items():
-                        prices = b.get("markets", {}).get(market, {}).get("outcomes", {}).get(oid, {}).get("players", {})
-                        pre = [o for o in next(iter(prices.values()), []) if pd.Timestamp(o["createdAt"]) < kickoff]
-                        if pre:
-                            rows.append({"fixtureId": f["fixtureId"], "home": norm(f["participant1Name"]),
-                                         "date": (kickoff - pd.Timedelta(hours=8)).date(),  # date locale nord-américaine
-                                         "book": book, "market": market, "side": side,
-                                         "price": max(pre, key=lambda o: o["createdAt"])["price"]})
+            for (book, market, side), price in last_prices(json.loads(hist.read_text()), kickoff).items():
+                rows.append({"fixtureId": f["fixtureId"], "home": norm(f["participant1Name"]),
+                             "date": local_date(kickoff), "book": book, "market": market, "side": side, "price": price})
     return pd.DataFrame(rows)
+
+
+def current_odds(home, kickoff):
+    """Cotes actuelles d'un match à venir (endpoint historique : gratuit, ~5 s d'attente entre deux appels)."""
+    t = date.today()
+    season = t.year if t.month >= 9 else t.year - 1
+    ids = {(norm(f["participant1Name"]), local_date(f["startTime"])): f["fixtureId"]
+           for f in fixtures(f"{season}-09-01", f"{season + 1}-07-01")}
+    fid = ids.get((norm(home), local_date(kickoff)))
+    if fid is None:
+        return {}
+    time.sleep(5.5)  # cooldown de l'endpoint
+    return last_prices(api("historical-odds", fixtureId=fid, bookmakers=BOOKS), pd.Timestamp(kickoff))
 
 
 def model_probs(season):

@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NHL Edge</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f4f4f1; --surface-1: #fcfcfb; --surface-2: #f0efec; --border: rgba(11,11,11,.10);
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
+  --good: #0ca30c; --good-text: #006300; --critical: #d03b3b; --warning: #fab219;
+  --accent: #2a78d6; --accent-ink: #ffffff;
+  --glow-1: rgba(42,120,214,.10); --glow-2: rgba(235,104,52,.08);
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface-1: #1a1a19; --surface-2: #232321; --border: rgba(255,255,255,.10);
+    --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
+    --grid: #2c2c2a; --axis: #383835;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+    --good-text: #0ca30c; --accent: #3987e5;
+    --glow-1: rgba(57,135,229,.16); --glow-2: rgba(217,89,38,.10);
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface-1: #1a1a19; --surface-2: #232321; --border: rgba(255,255,255,.10);
+  --text-primary: #ffffff; --text-secondary: #c3c2b7; --text-muted: #898781;
+  --grid: #2c2c2a; --axis: #383835;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+  --good-text: #0ca30c; --accent: #3987e5;
+  --glow-1: rgba(57,135,229,.16); --glow-2: rgba(217,89,38,.10);
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text-primary);
+  background:
+    radial-gradient(900px 500px at 10% -10%, var(--glow-1), transparent 60%),
+    radial-gradient(800px 500px at 100% 0%, var(--glow-2), transparent 60%),
+    var(--page);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 20px 64px; }
+header {
+  position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--page) 78%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+.bar { max-width: 1280px; margin: 0 auto; padding: 14px 20px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; margin-right: auto; }
+.logo {
+  width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--s1), var(--s3)); color: #fff; font-weight: 800; letter-spacing: -.5px;
+  box-shadow: 0 0 24px var(--glow-1);
+}
+.brand h1 { font-size: 17px; margin: 0; letter-spacing: .2px; }
+.brand small { display: block; color: var(--text-muted); font-size: 12px; font-weight: 500; }
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.field { display: flex; align-items: center; gap: 6px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 0 10px; height: 36px; }
+.field label { color: var(--text-muted); font-size: 12px; }
+.field input { border: 0; background: transparent; color: var(--text-primary); font: inherit; outline: none; width: auto; }
+.field input[type=number] { width: 54px; text-align: right; }
+.toggle { cursor: pointer; user-select: none; }
+.toggle input { accent-color: var(--accent); }
+button {
+  font: inherit; font-weight: 600; height: 36px; padding: 0 14px; border-radius: 10px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary);
+  transition: transform .08s ease, background .15s ease, opacity .15s;
+}
+button:hover { background: var(--surface-2); }
+button:active { transform: translateY(1px); }
+button.primary { background: var(--accent); border-color: transparent; color: var(--accent-ink); box-shadow: 0 4px 18px var(--glow-1); }
+button.primary:hover { filter: brightness(1.08); }
+button:disabled { opacity: .45; cursor: progress; }
+button.icon { width: 36px; padding: 0; }
+.job {
+  display: none; align-items: center; gap: 10px; margin: 14px auto 0; max-width: 1280px; padding: 10px 14px;
+  border-radius: 12px; background: var(--surface-1); border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.job.show { display: flex; }
+.job.err { border-color: var(--critical); }
+.spinner { width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--grid); border-top-color: var(--accent); animation: spin .8s linear infinite; flex: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+nav.tabs { display: flex; gap: 4px; margin: 22px 0 18px; background: var(--surface-1); border: 1px solid var(--border); border-radius: 12px; padding: 4px; width: fit-content; }
+nav.tabs button { border: 0; background: transparent; height: 32px; color: var(--text-secondary); }
+nav.tabs button.on { background: var(--surface-2); color: var(--text-primary); box-shadow: inset 0 0 0 1px var(--border); }
+section.tab { display: none; }
+section.tab.on { display: block; animation: fade .25s ease; }
+@keyframes fade { from { opacity: 0; transform: translateY(4px); } }
+h2 { font-size: 15px; margin: 28px 0 12px; display: flex; align-items: baseline; gap: 10px; }
+h2 .sub { color: var(--text-muted); font-weight: 500; font-size: 13px; }
+.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.kpi { padding: 16px 18px; }
+.kpi .label { color: var(--text-secondary); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .6px; }
+.kpi .value { font-size: 30px; font-weight: 750; margin-top: 4px; letter-spacing: -.5px; }
+.kpi .hint { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
+.pos { color: var(--good-text); }
+.neg { color: var(--critical); }
+.strats { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; margin-top: 12px; }
+.strat { padding: 14px 16px; position: relative; overflow: hidden; }
+.strat .name { display: flex; align-items: center; gap: 8px; font-weight: 650; }
+.swatch { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.strat .nums { display: flex; gap: 18px; margin-top: 10px; font-variant-numeric: tabular-nums; }
+.strat .nums div { display: flex; flex-direction: column; }
+.strat .nums b { font-size: 18px; }
+.strat .nums span { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .5px; }
+.chart-card { padding: 16px 16px 8px; margin-top: 12px; }
+.chart-card .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--text-secondary); padding: 0 4px 6px; }
+.chart-card .legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chart { position: relative; width: 100%; }
+.chart svg { display: block; width: 100%; overflow: visible; }
+.chart text { fill: var(--text-muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.tip {
+  position: absolute; pointer-events: none; z-index: 5; min-width: 160px; padding: 10px 12px; border-radius: 10px;
+  background: var(--surface-2); border: 1px solid var(--border); box-shadow: var(--shadow); font-size: 12px;
+  opacity: 0; transition: opacity .1s; white-space: nowrap;
+}
+.tip .t { color: var(--text-secondary); margin-bottom: 6px; font-weight: 600; }
+.tip .row { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+.tip .row span:first-child { display: inline-flex; align-items: center; gap: 6px; color: var(--text-secondary); }
+.tip b { font-variant-numeric: tabular-nums; color: var(--text-primary); }
+.empty { padding: 36px; text-align: center; color: var(--text-muted); }
+.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+.game { padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.game .top { display: flex; justify-content: space-between; align-items: center; color: var(--text-muted); font-size: 12px; font-weight: 600; }
+.badge { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 650; border: 1px solid var(--border); background: var(--surface-2); color: var(--text-secondary); }
+.badge.good { color: var(--good-text); border-color: color-mix(in srgb, var(--good) 45%, transparent); }
+.badge.bad { color: var(--critical); border-color: color-mix(in srgb, var(--critical) 45%, transparent); }
+.teams { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px; }
+.team { display: flex; flex-direction: column; }
+.team.home { text-align: right; }
+.team b { font-size: 15px; line-height: 1.2; }
+.team small { color: var(--text-muted); font-size: 12px; }
+.team small .jev { color: var(--accent); font-weight: 700; }
+.at { color: var(--text-muted); font-weight: 700; font-size: 12px; }
+.probs { display: flex; flex-direction: column; gap: 7px; }
+.prob { display: grid; grid-template-columns: 74px 1fr; align-items: center; gap: 10px; font-size: 12px; }
+.prob .src { color: var(--text-secondary); font-weight: 600; }
+.split { display: flex; height: 22px; gap: 2px; font-variant-numeric: tabular-nums; font-weight: 700; font-size: 11px; }
+.split div { display: flex; align-items: center; padding: 0 8px; min-width: 34px; color: #fff; }
+.split .a { border-radius: 4px 0 0 4px; background: color-mix(in srgb, var(--text-muted) 55%, var(--surface-2)); }
+.split .h { border-radius: 0 4px 4px 0; justify-content: flex-end; background: var(--s1); }
+.split.na div { background: var(--surface-2); color: var(--text-muted); }
+.odds { display: flex; gap: 6px; flex-wrap: wrap; font-size: 12px; }
+.odd { padding: 4px 8px; border-radius: 8px; background: var(--surface-2); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+.odd b { color: var(--text-primary); }
+.bets { display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--border); padding-top: 10px; }
+.bet { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+.bet .what { flex: 1; color: var(--text-secondary); }
+.bet .what b { color: var(--text-primary); }
+.ev { font-weight: 700; font-variant-numeric: tabular-nums; }
+.tbl-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; color: var(--text-muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; padding: 10px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+td { padding: 9px 12px; border-bottom: 1px solid var(--border); white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; }
+.filters { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+select { font: inherit; height: 34px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); padding: 0 10px; }
+.grid2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 14px; }
+@media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } .games { grid-template-columns: 1fr; } }
+.note { color: var(--text-muted); font-size: 12px; margin-top: 10px; }
+.guide { padding: 16px 18px; margin-top: 14px; color: var(--text-secondary); font-size: 13px; }
+.guide ol { margin: 6px 0 0; padding-left: 18px; }
+.guide b { color: var(--text-primary); }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">
+      <div class="logo">E</div>
+      <div><h1>NHL Edge</h1><small>Modèle xG · Jev · simulation à mise fixe (paris fictifs)</small></div>
+    </div>
+    <div class="controls">
+      <div class="field"><label for="date">Soirée</label><input id="date" type="date"></div>
+      <div class="field"><label for="stake">Mise</label><input id="stake" type="number" min="1" step="1" value="10"><label>€</label></div>
+      <label class="field toggle"><input id="jev" type="checkbox" checked> Jev</label>
+      <button class="primary" id="btn-predict" title="Prédit les matchs de la soirée et enregistre les paris fictifs aux cotes actuelles">Prédire</button>
+      <button id="btn-settle" title="Récupère les résultats officiels et règle les paris">Régler</button>
+      <button id="btn-odds" title="Historique des cotes de la saison (≈ 6 s par nouveau match terminé)">MAJ cotes</button>
+      <button class="icon" id="btn-theme" title="Thème clair / sombre" aria-label="Changer de thème">◐</button>
+    </div>
+  </div>
+</header>
+<div class="wrap">
+  <div class="job" id="job"><div class="spinner" id="spin"></div><span id="job-msg"></span></div>
+  <nav class="tabs" role="tablist">
+    <button class="on" data-tab="tonight">Soirée</button>
+    <button data-tab="sim">Simulation</button>
+    <button data-tab="model">Modèle</button>
+  </nav>
+
+  <section class="tab on" id="tab-tonight">
+    <h2>Matchs <span class="sub" id="games-sub"></span></h2>
+    <div class="games" id="games"></div>
+    <div class="card guide">
+      <b>Routine de la semaine</b>
+      <ol>
+        <li><b>Vers 18 h–19 h</b> (après les entraînements du matin en Amérique du Nord, gardiens annoncés) : <b>Prédire</b>. Les paris fictifs sont pris aux cotes du moment. Le week-end, les matchs de l'après-midi commencent dès 18 h–21 h : prédire vers 16 h.</li>
+        <li>Relancer <b>Prédire</b> plus tard est sans risque : seuls les matchs pas encore commencés sont mis à jour.</li>
+        <li><b>Le lendemain matin</b> : <b>Régler</b> pour les résultats. <b>MAJ cotes</b> une fois par semaine pour l'évaluation face au marché.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="tab" id="tab-sim">
+    <div class="kpis" id="kpis"></div>
+    <div class="strats" id="strats"></div>
+    <div class="card chart-card">
+      <div class="legend" id="pnl-legend"></div>
+      <div class="chart" id="pnl"></div>
+    </div>
+    <h2>Paris fictifs <span class="sub">cote prise au moment de la prédiction</span></h2>
+    <div class="filters">
+      <select id="f-strat"><option value="">Toutes les stratégies</option></select>
+      <select id="f-status"><option value="">Tous les statuts</option><option>en attente</option><option>gagné</option><option>perdu</option></select>
+    </div>
+    <div class="card tbl-wrap"><table id="bets"></table></div>
+  </section>
+
+  <section class="tab" id="tab-model">
+    <div class="kpis" id="m-kpis"></div>
+    <div class="grid2" style="margin-top:14px">
+      <div class="card chart-card"><h2 style="margin:4px 4px 8px">Calibration <span class="sub">prédit vs observé, hors échantillon</span></h2><div class="chart" id="calib"></div></div>
+      <div class="card chart-card"><h2 style="margin:4px 4px 8px">Poids du modèle <span class="sub">régression logistique, variables domicile − extérieur</span></h2><div class="chart" id="coefs"></div></div>
+    </div>
+    <h2>Par saison <span class="sub">log-loss : plus bas = mieux · Pinnacle = cote de clôture sans marge</span></h2>
+    <div class="card tbl-wrap"><table id="seasons"></table></div>
+    <p class="note">Chaque saison est prédite par un modèle appris uniquement sur les saisons précédentes ; les variables d'un match n'utilisent que les matchs joués avant lui.</p>
+  </section>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const COLORS = { favori: "var(--s1)", valeur_unibet: "var(--s2)", valeur_winamax: "var(--s3)" };
+const SHORT = { favori: "Favori", valeur_unibet: "Valeur Unibet", valeur_winamax: "Valeur Winamax" };
+const eur = v => v == null ? "–" : (v > 0 ? "+" : "") + v.toLocaleString("fr-FR", { maximumFractionDigits: 2, minimumFractionDigits: 2 }) + " €";
+const pct = (v, d = 1) => v == null ? "–" : (v * 100).toLocaleString("fr-FR", { maximumFractionDigits: d, minimumFractionDigits: d }) + " %";
+const signPct = v => v == null ? "–" : (v > 0 ? "+" : "") + pct(v);
+const cls = v => v > 0 ? "pos" : v < 0 ? "neg" : "";
+const paris = iso => new Date(iso).toLocaleString("fr-FR", { timeZone: "Europe/Paris", weekday: "short", hour: "2-digit", minute: "2-digit" });
+const short = name => name ? name.split(" ").slice(-1)[0] : "";
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let STATE = null, MODEL = null;
+
+// ---------- thème ----------
+try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+$("#btn-theme").onclick = () => {
+  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const cur = document.documentElement.dataset.theme || (dark ? "dark" : "light");
+  const next = cur === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch (e) {}
+  render();
+};
+
+// ---------- onglets ----------
+document.querySelectorAll("nav.tabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav.tabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll("section.tab").forEach(s => s.classList.toggle("on", s.id === "tab-" + b.dataset.tab));
+  if (b.dataset.tab === "model") loadModel();
+  render();
+});
+
+// ---------- API ----------
+async function api(path, body) {
+  const r = await fetch(path, body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {});
+  return r.json();
+}
+async function refresh() { STATE = await api("/api/state"); if (!$("#date").value) $("#date").value = STATE.today; render(); showJob(STATE.job); }
+function showJob(j) {
+  const box = $("#job");
+  box.classList.toggle("show", !!(j.busy || j.error || j.msg));
+  box.classList.toggle("err", !!j.error);
+  $("#spin").style.display = j.busy ? "" : "none";
+  $("#job-msg").textContent = j.error ? "Erreur : " + j.error : j.msg;
+  document.querySelectorAll(".controls button:not(.icon)").forEach(b => b.disabled = j.busy);
+}
+async function run(path, body) {
+  const r = await api(path, body);
+  if (!r.started) { showJob({ ...r.job, msg: "Une tâche est déjà en cours : " + r.job.msg }); }
+  const poll = async () => {
+    const j = await api("/api/job"); showJob(j);
+    if (j.busy) return setTimeout(poll, 1000);
+    MODEL = null; await refresh();
+    if ($("#tab-model").classList.contains("on")) loadModel();
+  };
+  poll();
+}
+$("#btn-predict").onclick = () => run("/api/predict", { date: $("#date").value, stake: +$("#stake").value, jev: $("#jev").checked });
+$("#btn-settle").onclick = () => run("/api/settle", {});
+$("#btn-odds").onclick = () => { if (confirm("Récupère l'historique des cotes des matchs terminés de la saison : ≈ 6 s par nouveau match (≈ 5 min pour une semaine). Lancer ?")) run("/api/odds-update", {}); };
+
+// ---------- rendu ----------
+function render() { if (!STATE) return; renderGames(); renderSim(); if (MODEL) renderModel(); }
+
+function splitBar(pHome, label) {
+  if (pHome == null) return `<div class="prob"><span class="src">${label}</span><div class="split na"><div style="flex:1">pas de cote</div></div></div>`;
+  const a = 1 - pHome;
+  return `<div class="prob"><span class="src">${label}</span><div class="split">
+    <div class="a" style="flex:${a}">${Math.round(a * 100)}%</div><div class="h" style="flex:${pHome}">${Math.round(pHome * 100)}%</div></div></div>`;
+}
+function statusBadge(b) {
+  if (b.status === "gagné") return `<span class="badge good">✓ Gagné ${eur(b.profit)}</span>`;
+  if (b.status === "perdu") return `<span class="badge bad">✕ Perdu ${eur(b.profit)}</span>`;
+  return `<span class="badge">⏳ En attente</span>`;
+}
+function renderGames() {
+  const preds = STATE.preds;
+  const day = $("#date").value;
+  let list = preds.filter(p => p.date === day);
+  const shownDay = list.length ? day : (preds[0] && preds[0].date);
+  if (!list.length && shownDay) list = preds.filter(p => p.date === shownDay);
+  $("#games-sub").textContent = list.length ? `soirée du ${new Date(shownDay + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" })} · probabilité de victoire (extérieur | domicile), prolongation incluse` : "";
+  if (!list.length) { $("#games").innerHTML = `<div class="card empty" style="grid-column:1/-1">Aucune prédiction enregistrée. Choisissez la soirée, puis <b>Prédire</b>.</div>`; return; }
+  list.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+  $("#games").innerHTML = list.map(g => {
+    const bets = STATE.bets.filter(b => b.gameId === g.gameId);
+    const uni = g.uni_H && g.uni_A ? (1 / g.uni_H) / (1 / g.uni_H + 1 / g.uni_A) : null;
+    const goalie = n => n ? (n.endsWith("*") ? `${esc(n.slice(0, -2))} <span class="jev" title="Titulaire annoncé dans la presse (Jev)">● Jev</span>` : `${esc(n)} <span title="Heuristique : gardien le plus titularisé récemment">(probable)</span>`) : "";
+    const result = g.score ? `<span class="badge">${esc(g.score)}</span>` : `<span>${paris(g.kickoff)}</span>`;
+    return `<div class="card game">
+      <div class="top">${result}<span>${g.pin_fair != null ? "Écart modèle − Pinnacle " + signPct(g.p_home - g.pin_fair) : ""}</span></div>
+      <div class="teams">
+        <div class="team"><b>${esc(g.away)}</b><small>${goalie(g.away_goalie)}</small></div>
+        <div class="at">@</div>
+        <div class="team home"><b>${esc(g.home)}</b><small>${goalie(g.home_goalie)}</small></div>
+      </div>
+      <div class="probs">${splitBar(g.p_home, "Modèle")}${splitBar(g.pin_fair, "Pinnacle")}${splitBar(uni, "Unibet")}</div>
+      <div class="odds">
+        <span class="odd">Unibet <b>${g.uni_A ?? "–"}</b> | <b>${g.uni_H ?? "–"}</b></span>
+        <span class="odd">Winamax 1N2 <b>${g.wmx_H ?? "–"}</b> · <b>${g.wmx_X ?? "–"}</b> · <b>${g.wmx_A ?? "–"}</b></span>
+        <span class="odd">Nul 60 min <b>${pct(g.pX, 0)}</b></span>
+      </div>
+      ${bets.length ? `<div class="bets">${bets.map(b => `<div class="bet"><span class="swatch" style="background:${COLORS[b.strategy]}"></span>
+        <span class="what">${SHORT[b.strategy]} · <b>${esc(b.pick === "X" ? "Nul 60 min" : short(b.pick_label))}</b> @ ${b.price} <span class="ev ${cls(b.ev)}">(${signPct(b.ev)})</span></span>${statusBadge(b)}</div>`).join("")}</div>`
+        : `<div class="bets"><div class="bet"><span class="what">Aucun pari : pas de cote disponible ou pas de valeur.</span></div></div>`}
+    </div>`;
+  }).join("");
+}
+
+function renderSim() {
+  const S = STATE.summary;
+  const tot = S.reduce((a, s) => ({ settled: a.settled + s.settled, pending: a.pending + s.pending, won: a.won + s.won, staked: a.staked + s.staked, profit: a.profit + s.profit }), { settled: 0, pending: 0, won: 0, staked: 0, profit: 0 });
+  $("#kpis").innerHTML = [
+    ["Profit total", `<span class="${cls(tot.profit)}">${eur(tot.profit)}</span>`, `${tot.staked.toLocaleString("fr-FR")} € misés`],
+    ["ROI global", `<span class="${cls(tot.profit)}">${tot.staked ? signPct(tot.profit / tot.staked) : "–"}</span>`, "profit / mises réglées"],
+    ["Paris réglés", tot.settled, `${tot.won} gagnés · ${tot.settled - tot.won} perdus`],
+    ["En attente", tot.pending, "à régler après les matchs"],
+  ].map(([l, v, h]) => `<div class="card kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="hint">${h}</div></div>`).join("");
+  $("#strats").innerHTML = S.map(s => `<div class="card strat">
+    <div class="name"><span class="swatch" style="background:${COLORS[s.key]}"></span>${esc(s.name)}</div>
+    <div class="nums"><div><b class="${cls(s.profit)}">${eur(s.profit)}</b><span>profit</span></div>
+    <div><b class="${cls(s.profit)}">${s.roi == null ? "–" : signPct(s.roi)}</b><span>ROI</span></div>
+    <div><b>${s.won}/${s.settled}</b><span>gagnés</span></div><div><b>${s.pending}</b><span>en attente</span></div></div></div>`).join("");
+  const series = Object.keys(STATE.strategies).map(k => ({ key: k, name: SHORT[k], color: COLORS[k],
+    points: STATE.curve.filter(c => c.strategy === k).map(c => ({ x: new Date(c.kickoff), y: c.cum, info: c })) }));
+  $("#pnl-legend").innerHTML = `<span style="color:var(--text-primary);font-weight:650">Profit cumulé (€)</span>` + series.map(s => `<span><span class="swatch" style="background:${s.color}"></span>${s.name}</span>`).join("");
+  if ($("#tab-sim").classList.contains("on")) lineChart($("#pnl"), series);
+  const sel = $("#f-strat");
+  if (sel.options.length === 1) Object.entries(STATE.strategies).forEach(([k, v]) => sel.add(new Option(v, k)));
+  renderBets();
+}
+function renderBets() {
+  const fs = $("#f-strat").value, st = $("#f-status").value;
+  const rows = STATE.bets.filter(b => (!fs || b.strategy === fs) && (!st || b.status === st));
+  $("#bets").innerHTML = `<thead><tr><th>Match</th><th>Coup d'envoi</th><th>Stratégie</th><th>Pari</th><th class="r">Cote</th><th class="r">P modèle</th><th class="r">Valeur</th><th class="r">Mise</th><th>Statut</th><th>Score (ext - dom)</th></tr></thead><tbody>` +
+    (rows.length ? rows.map(b => `<tr><td>${esc(short(b.away))} @ ${esc(short(b.home))}</td><td>${paris(b.kickoff)}</td>
+      <td><span class="swatch" style="display:inline-block;margin-right:6px;background:${COLORS[b.strategy]}"></span>${SHORT[b.strategy]}</td>
+      <td>${esc(b.market)} · <b>${esc(b.pick_label)}</b></td><td class="r">${b.price}</td><td class="r">${pct(b.p_model)}</td>
+      <td class="r ${cls(b.ev)}">${signPct(b.ev)}</td><td class="r">${b.stake} €</td><td>${statusBadge(b)}</td><td>${esc(b.score ?? "")}</td></tr>`).join("")
+      : `<tr><td colspan="10" class="empty">Aucun pari pour l'instant.</td></tr>`) + `</tbody>`;
+}
+$("#f-strat").onchange = renderBets; $("#f-status").onchange = renderBets;
+
+// ---------- graphiques (SVG) ----------
+function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v.replace(/var\((.*)\)/, "$1")).trim() || v; }
+function niceTicks(min, max, n = 5) {
+  const span = max - min || 1, step0 = span / n, mag = 10 ** Math.floor(Math.log10(step0));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => span / s <= n) || mag * 10;
+  const ticks = []; for (let v = Math.floor(min / step) * step; v <= max + 1e-9; v += step) ticks.push(+v.toFixed(10));
+  return ticks;
+}
+function tooltip(el) { let t = el.querySelector(".tip"); if (!t) { t = document.createElement("div"); t.className = "tip"; el.appendChild(t); } return t; }
+
+function lineChart(el, series) {
+  // un point par coup d'envoi (plusieurs matchs à la même heure -> cumul après le dernier), dans l'ordre du temps
+  series.forEach(se => se.points = [...new Map(se.points.sort((a, b) => a.x - b.x).map(p => [+p.x, p])).values()]);
+  const pts = series.flatMap(s => s.points);
+  if (!pts.length) { el.innerHTML = `<div class="empty">La courbe apparaîtra après les premiers paris réglés.</div>`; return; }
+  const W = el.clientWidth || 900, H = 300, m = { l: 56, r: 110, t: 12, b: 28 };
+  const xs = pts.map(p => +p.x), x0 = Math.min(...xs), x1 = Math.max(...xs) === x0 ? x0 + 864e5 : Math.max(...xs);
+  const ys = pts.map(p => p.y).concat(0), ticks = niceTicks(Math.min(...ys), Math.max(...ys));
+  const y0 = ticks[0], y1 = ticks[ticks.length - 1];
+  const X = v => m.l + (v - x0) / (x1 - x0) * (W - m.l - m.r), Y = v => m.t + (y1 - v) / (y1 - y0 || 1) * (H - m.t - m.b);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Profit cumulé par stratégie">`;
+  ticks.forEach(t => s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="${t === 0 ? css("--axis") : css("--grid")}" stroke-width="1"/>
+    <text x="${m.l - 8}" y="${Y(t) + 4}" text-anchor="end">${t.toLocaleString("fr-FR")} €</text>`);
+  const days = []; for (let d = new Date(x0); +d <= x1; d = new Date(+d + 864e5)) days.push(d);
+  const every = Math.ceil(days.length / 8);
+  days.forEach((d, i) => { if (i % every === 0) s += `<text x="${X(+d)}" y="${H - 8}" text-anchor="middle">${d.toLocaleDateString("fr-FR", { day: "2-digit", month: "2-digit" })}</text>`; });
+  const ends = [];
+  series.forEach(se => {
+    if (!se.points.length) return;
+    const path = se.points.map((p, i) => `${i ? "L" : "M"}${X(+p.x).toFixed(1)},${Y(p.y).toFixed(1)}`).join("");
+    s += `<path d="${path}" fill="none" stroke="${css(se.color)}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    const last = se.points[se.points.length - 1];
+    ends.push({ y: Y(last.y), x: X(+last.x), se, last });
+  });
+  ends.sort((a, b) => a.y - b.y); for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 14) ends[i].y = ends[i - 1].y + 14;
+  ends.forEach(e => s += `<circle cx="${e.x}" cy="${Y(e.last.y)}" r="4" fill="${css(e.se.color)}" stroke="${css("--surface-1")}" stroke-width="2"/>
+    <text x="${W - m.r + 10}" y="${e.y + 4}" style="fill:${css("--text-secondary")};font-weight:600">${e.se.name} ${e.last.y >= 0 ? "+" : ""}${e.last.y.toFixed(0)} €</text>`);
+  s += `<line id="xh" y1="${m.t}" y2="${H - m.b}" stroke="${css("--axis")}" stroke-dasharray="3 3" opacity="0"/><g id="dots"></g>
+    <rect x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent" id="hit"/></svg>`;
+  el.innerHTML = s;
+  const tip = tooltip(el), svg = el.querySelector("svg"), xh = el.querySelector("#xh"), dots = el.querySelector("#dots");
+  const stamps = [...new Set(xs)].sort((a, b) => a - b);
+  el.querySelector("#hit").onmousemove = ev => {
+    const r = svg.getBoundingClientRect(), mx = (ev.clientX - r.left) * W / r.width;
+    const xv = x0 + (mx - m.l) / (W - m.l - m.r) * (x1 - x0);
+    const near = stamps.reduce((a, b) => Math.abs(b - xv) < Math.abs(a - xv) ? b : a);
+    xh.setAttribute("x1", X(near)); xh.setAttribute("x2", X(near)); xh.setAttribute("opacity", 1);
+    let rows = "", d = "";
+    series.forEach(se => {
+      const p = [...se.points].reverse().find(p => +p.x <= near);
+      if (!p) return;
+      if (+p.x === near) d += `<circle cx="${X(near)}" cy="${Y(p.y)}" r="5" fill="${css(se.color)}" stroke="${css("--surface-1")}" stroke-width="2"/>`;
+      rows += `<div class="row"><span><span class="swatch" style="background:${se.color}"></span>${se.name}</span><b>${eur(p.y)}</b></div>`;
+    });
+    dots.innerHTML = d;
+    const hit = pts.filter(p => +p.x === near).map(p => `${short(p.info.match.split(" @ ")[0])} @ ${short(p.info.match.split(" @ ")[1])}`);
+    tip.innerHTML = `<div class="t">${new Date(near).toLocaleString("fr-FR", { timeZone: "Europe/Paris", day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })} · ${[...new Set(hit)].join(", ")}</div>${rows}`;
+    tip.style.opacity = 1;
+    const px = X(near) * r.width / W; tip.style.left = Math.min(px + 14, r.width - tip.offsetWidth - 4) + "px"; tip.style.top = "10px";
+  };
+  el.querySelector("#hit").onmouseleave = () => { tip.style.opacity = 0; xh.setAttribute("opacity", 0); dots.innerHTML = ""; };
+}
+
+function calibChart(el, pts) {
+  const W = el.clientWidth || 500, H = 300, m = { l: 44, r: 16, t: 10, b: 34 };
+  const lo = 0.1, hi = 0.9, X = v => m.l + (v - lo) / (hi - lo) * (W - m.l - m.r), Y = v => m.t + (hi - v) / (hi - lo) * (H - m.t - m.b);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Calibration du modèle">`;
+  [0.2, 0.4, 0.6, 0.8].forEach(t => s += `<line x1="${m.l}" x2="${W - m.r}" y1="${Y(t)}" y2="${Y(t)}" stroke="${css("--grid")}"/><text x="${m.l - 6}" y="${Y(t) + 4}" text-anchor="end">${t * 100}%</text>
+    <text x="${X(t)}" y="${H - 14}" text-anchor="middle">${t * 100}%</text>`);
+  s += `<line x1="${X(lo)}" y1="${Y(lo)}" x2="${X(hi)}" y2="${Y(hi)}" stroke="${css("--axis")}" stroke-dasharray="4 4"/>
+    <text x="${W - m.r}" y="${Y(0.14)}" text-anchor="end">pointillés = calibration parfaite</text>
+    <text x="${m.l}" y="${m.t + 4}" text-anchor="start" dx="6">observé</text>
+    <text x="${(W + m.l) / 2}" y="${H - 1}" text-anchor="middle">probabilité prédite (domicile)</text>`;
+  pts.forEach((p, i) => s += `<circle data-i="${i}" cx="${X(p.p)}" cy="${Y(p.obs)}" r="6" fill="${css("--s1")}" stroke="${css("--surface-1")}" stroke-width="2"/>
+    <circle data-i="${i}" cx="${X(p.p)}" cy="${Y(p.obs)}" r="16" fill="transparent"/>`);
+  el.innerHTML = s + `</svg>`;
+  const tip = tooltip(el), svg = el.querySelector("svg");
+  el.querySelectorAll("circle[data-i]").forEach(c => {
+    c.onmouseenter = () => { const p = pts[c.dataset.i], r = svg.getBoundingClientRect();
+      tip.innerHTML = `<div class="t">${p.n.toLocaleString("fr-FR")} matchs</div><div class="row"><span>Prédit</span><b>${pct(p.p)}</b></div><div class="row"><span>Observé</span><b>${pct(p.obs)}</b></div>`;
+      tip.style.opacity = 1; tip.style.left = (X(p.p) * r.width / W + 12) + "px"; tip.style.top = (Y(p.obs) * r.height / H - 20) + "px"; };
+    c.onmouseleave = () => tip.style.opacity = 0;
+  });
+}
+
+function coefChart(el, coefs) {
+  const names = { d_xg: "Part d'xG (forme)", d_sat: "Part des tirs (Corsi)", d_gd: "Différence de buts", d_goalie: "Gardien (GSAx)", home_b2b: "Domicile en back-to-back", away_b2b: "Extérieur en back-to-back" };
+  const ent = Object.entries(coefs), max = Math.max(...ent.map(([, v]) => Math.abs(v)));
+  const W = el.clientWidth || 500, rowH = 40, H = ent.length * rowH + 10, lab = 170, mid = lab + (W - lab - 60) / 2, half = (W - lab - 60) / 2;
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Poids du modèle"><line x1="${mid}" x2="${mid}" y1="0" y2="${H}" stroke="${css("--axis")}"/>`;
+  ent.forEach(([k, v], i) => {
+    const y = i * rowH + 10, w = Math.abs(v) / max * half, x = v >= 0 ? mid : mid - w;
+    s += `<text x="0" y="${y + 15}" style="fill:${css("--text-secondary")}">${names[k] || k}</text>
+      <rect x="${x}" y="${y + 3}" width="${Math.max(w, 2)}" height="16" rx="4" fill="${css(v >= 0 ? "--s1" : "--critical")}"/>
+      <text x="${v >= 0 ? mid + w + 6 : mid - w - 6}" y="${y + 15}" text-anchor="${v >= 0 ? "start" : "end"}" style="fill:${css("--text-primary")};font-weight:600">${v.toFixed(2)}</text>`;
+  });
+  el.innerHTML = s + `</svg><p class="note">Bleu : favorise l'équipe à domicile quand l'écart est en sa faveur. Rouge : la défavorise.</p>`;
+}
+
+async function loadModel() {
+  if (MODEL) return renderModel();
+  $("#m-kpis").innerHTML = `<div class="card kpi"><div class="label">Calcul…</div><div class="value"><div class="spinner"></div></div><div class="hint">prédictions hors échantillon de toutes les saisons (~20 s)</div></div>`;
+  MODEL = await api("/api/model");
+  renderModel();
+}
+function renderModel() {
+  if (!MODEL || MODEL.error) { $("#m-kpis").innerHTML = `<div class="card kpi">${esc(MODEL && MODEL.error)}</div>`; return; }
+  const withPin = MODEL.seasons.filter(s => s.n_pin);
+  $("#m-kpis").innerHTML = [
+    ["Matchs hors échantillon", MODEL.n_games.toLocaleString("fr-FR"), "depuis 2018-19"],
+    ["Log-loss", MODEL.logloss.toFixed(4), "0.693 = pile ou face"],
+    ["Favori gagnant", pct(MODEL.accuracy), "toutes saisons"],
+    ["vs Pinnacle", withPin.length ? withPin.map(s => `${(s.ll_model_pin - s.ll_pin >= 0 ? "+" : "") + (s.ll_model_pin - s.ll_pin).toFixed(4)}`).join(" / ") : "–",
+      withPin.length ? "écart de log-loss, négatif = modèle meilleur (" + withPin.map(s => s.season + ", " + s.n_pin + " m.").join(" / ") + ")" : "pas encore de cotes"],
+  ].map(([l, v, h]) => `<div class="card kpi"><div class="label">${l}</div><div class="value">${v}</div><div class="hint">${h}</div></div>`).join("");
+  calibChart($("#calib"), MODEL.calibration);
+  coefChart($("#coefs"), MODEL.coefs);
+  $("#seasons").innerHTML = `<thead><tr><th>Saison</th><th class="r">Matchs</th><th class="r">Log-loss modèle</th><th class="r">Favori gagnant</th><th class="r">Matchs avec cotes</th><th class="r">Modèle (mêmes matchs)</th><th class="r">Pinnacle clôture</th></tr></thead><tbody>` +
+    MODEL.seasons.map(s => `<tr><td>${s.season}</td><td class="r">${s.n}</td><td class="r">${s.logloss.toFixed(4)}</td><td class="r">${pct(s.accuracy)}</td>
+      <td class="r">${s.n_pin || "–"}</td><td class="r">${s.ll_model_pin?.toFixed(4) ?? "–"}</td><td class="r">${s.ll_pin?.toFixed(4) ?? "–"}</td></tr>`).join("") + `</tbody>`;
+}
+
+addEventListener("resize", () => { clearTimeout(window._rz); window._rz = setTimeout(render, 150); });
+$("#date").onchange = renderGames;
+refresh();
+</script>
+</body>
+</html>
