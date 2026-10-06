@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NHL Edge</title>
+<title>NHL Predictor</title>
 <style>
 /* ============ Tokens : « Arène » (sombre, défaut) et « Glace » (clair) ============ */
 :root {
@@ -19,6 +19,8 @@
   --light-a: rgba(57, 135, 229, .22); --light-b: rgba(127, 220, 255, .10); --light-c: rgba(217, 89, 38, .10);
   --shadow: 0 1px 0 rgba(255,255,255,.03) inset, 0 18px 40px rgba(0,0,0,.45);
   --logo: "_dark";
+  --glass-tint: rgba(255, 255, 255, .15); --glass-border: rgba(255, 255, 255, .10);
+  --trail: rgba(200, 235, 255, .22); --trail-head: rgba(225, 245, 255, .55);
 }
 :root[data-theme="light"] {
   color-scheme: light;
@@ -32,6 +34,8 @@
   --rink: rgba(10, 60, 120, .07); --rink-red: rgba(227, 73, 72, .12); --rink-blue: rgba(42, 120, 214, .12);
   --light-a: rgba(42, 120, 214, .14); --light-b: rgba(10, 132, 198, .10); --light-c: rgba(235, 104, 52, .08);
   --shadow: 0 1px 2px rgba(15,30,55,.05), 0 14px 34px rgba(15,30,55,.08);
+  --glass-tint: rgba(255, 255, 255, .25); --glass-border: rgba(255, 255, 255, .45);
+  --trail: rgba(90, 140, 190, .22); --trail-head: rgba(70, 120, 175, .45);
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
@@ -104,7 +108,11 @@ button.icon { width: 38px; padding: 0; display: grid; place-items: center; }
 .tabs .ind { position: absolute; top: 4px; height: 34px; border-radius: 10px; background: var(--surface-3); box-shadow: inset 0 0 0 1px var(--border-strong), 0 0 18px var(--ice-soft); transition: left .35s cubic-bezier(.3,1.2,.5,1), width .35s cubic-bezier(.3,1.2,.5,1); }
 section.tab { display: none; }
 section.tab.on { display: block; }
-.card { background: var(--surface-1); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); }
+.card { position: relative; border-radius: 18px; background: var(--glass-tint);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); }
+.chip { background: var(--glass-tint); }
+/* Fond : surface de glace en WebGL (une seule toile, demi-résolution) */
+.ice { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -3; display: block; }
 .rise { opacity: 0; transform: translateY(14px); animation: rise .6s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i, 0) * 60ms); }
 @keyframes rise { to { opacity: 1; transform: none; } }
 h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1.6px; color: var(--text-secondary); margin: 34px 0 14px; display: flex; align-items: baseline; gap: 12px; }
@@ -135,7 +143,8 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .games { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px; }
 .game { position: relative; padding: 18px; display: flex; flex-direction: column; gap: 14px; transform-style: preserve-3d; transition: transform .25s ease, border-color .25s, box-shadow .25s; will-change: transform; }
 .game:hover { border-color: var(--border-strong); box-shadow: var(--shadow), 0 0 0 1px var(--ice-soft), 0 20px 50px rgba(0,0,0,.25); }
-.game.value::before { content: ""; position: absolute; inset: -1px; border-radius: 19px; padding: 1px; background: conic-gradient(from var(--a, 0deg), transparent 0 70%, var(--ice) 85%, transparent 100%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: orbit 5s linear infinite; pointer-events: none; }
+.game.value { border-color: rgba(255, 59, 71, .45); box-shadow: 0 0 0 1px rgba(255, 59, 71, .25), 0 0 26px rgba(255, 59, 71, .28); }
+.game.value::before { content: ""; position: absolute; inset: -2px; border-radius: 20px; padding: 2.5px; background: conic-gradient(from var(--a, 0deg), transparent 0 55%, #ff3b47 78%, #ff8a92 86%, transparent 100%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: orbit 5s linear infinite; pointer-events: none; }
 @property --a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
 @keyframes orbit { to { --a: 360deg; } }
 .game .top { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); font-weight: 650; }
@@ -247,6 +256,11 @@ td.r, th.r { text-align: right; }
 .grid2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
 .note { color: var(--text-muted); font-size: 12px; margin-top: 10px; }
 
+/* ============ Palet vu de dessus, qui glisse sur la glace SOUS les cartes ============ */
+.puck-fly { position: fixed; left: 0; top: 0; z-index: -1; pointer-events: none; opacity: 0; will-change: transform, opacity; }
+.puck-fly .disc { width: 40px; height: 40px; display: block; filter: drop-shadow(0 3px 4px rgba(0,0,0,.55)); }
+.puck-fly .trail { position: absolute; right: 20px; top: 50%; width: 0; height: 2px; transform: translateY(-50%);
+  border-radius: 2px; background: linear-gradient(90deg, transparent, var(--trail) 70%, var(--trail-head)); }
 /* ============ Toast de tâche ============ */
 .toast { position: fixed; right: 22px; bottom: 22px; z-index: 30; display: flex; align-items: center; gap: 12px; max-width: 440px; padding: 14px 16px; border-radius: 16px; background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--border-strong); box-shadow: var(--shadow); transform: translateY(140%); opacity: 0; transition: transform .45s cubic-bezier(.2,1.2,.4,1), opacity .3s; }
 .toast.on { transform: none; opacity: 1; }
@@ -273,6 +287,7 @@ td.r, th.r { text-align: right; }
 </head>
 <body>
 <!-- Patinoire en filigrane -->
+<canvas class="ice" id="ice" aria-hidden="true"></canvas>
 <svg class="rink" viewBox="0 0 2000 850" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
   <g fill="none" stroke-width="3">
     <rect x="40" y="40" width="1920" height="770" rx="250" stroke="var(--rink)" stroke-width="5"/>
@@ -295,7 +310,7 @@ td.r, th.r { text-align: right; }
     <div class="brand">
       <svg class="puck" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="pk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b3445"/><stop offset="1" stop-color="#05070b"/></linearGradient></defs>
         <ellipse cx="20" cy="26" rx="16" ry="6" fill="#05070b"/><rect x="4" y="16" width="32" height="10" fill="url(#pk)"/><ellipse cx="20" cy="16" rx="16" ry="6" fill="#2f3a4d"/><ellipse cx="20" cy="16" rx="10" ry="3.4" fill="none" stroke="#7fdcff" stroke-width="1.4" opacity=".9"/></svg>
-      <div><div class="word">NHL<em>·</em>EDGE</div><small>Modèle xG · Jev · paris fictifs à mise fixe</small></div>
+      <div><div class="word">NHL<em>·</em>PREDICTOR</div><small>Modèle xG · Jev · paris fictifs à mise fixe</small></div>
     </div>
     <div class="clock" title="Heure de Paris et de New York"><span class="live-dot"></span><span>Paris <b id="clk-paris"></b></span><span>New York <b id="clk-ny"></b></span></div>
     <div class="controls">
@@ -361,6 +376,14 @@ td.r, th.r { text-align: right; }
   </section>
 </div>
 
+<div class="puck-fly" id="puckfly" aria-hidden="true"><span class="trail"></span>
+  <svg class="disc" viewBox="0 0 34 34"><defs><radialGradient id="pf" cx=".38" cy=".32" r=".75">
+    <stop offset="0" stop-color="#3a4558"/><stop offset=".55" stop-color="#151b25"/><stop offset="1" stop-color="#05070b"/></radialGradient></defs>
+    <circle cx="17" cy="17" r="16" fill="url(#pf)"/><circle cx="17" cy="17" r="15.2" fill="none" stroke="#000" stroke-width="1.2" opacity=".7"/>
+    <circle cx="17" cy="17" r="13.6" fill="none" stroke="rgba(255,255,255,.07)" stroke-width=".8" stroke-dasharray="1.2 1.6"/>
+    <circle cx="17" cy="17" r="7" fill="none" stroke="#7fdcff" stroke-width="1" opacity=".55"/>
+    <path d="M13.2 19.5v-5l3.8 5v-5M18.5 19.5v-5h2.6" fill="none" stroke="#7fdcff" stroke-width="1" opacity=".65"/>
+    <ellipse cx="12.5" cy="10.5" rx="5" ry="2.2" fill="rgba(255,255,255,.10)" transform="rotate(-30 12.5 10.5)"/></svg></div>
 <div class="toast" id="toast" role="status" aria-live="polite">
   <svg class="spin-puck" id="t-spin" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="10" fill="none" stroke="var(--grid)" stroke-width="3"/><path d="M13 3 a10 10 0 0 1 10 10" fill="none" stroke="var(--ice)" stroke-width="3" stroke-linecap="round"/></svg>
   <div class="ok" id="t-ok">✓</div>
@@ -406,7 +429,7 @@ $("#btn-theme").onclick = () => {
   const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
   document.documentElement.dataset.theme = next;
   try { localStorage.setItem("theme", next); } catch (e) {}
-  SEEN = {}; render();
+  SEEN = {}; render(); window.redrawIce && window.redrawIce();
 };
 
 // ---------- onglets (indicateur glissant) ----------
@@ -772,6 +795,80 @@ function coefChart(el, coefs) {
   el.innerHTML = s + `</svg><p class="note">Bleu : un écart en faveur du domicile augmente sa probabilité de victoire. Rouge : la diminue.</p>`;
   nextFrame(() => el.querySelectorAll(".cbar").forEach((b, i) => { b.style.transition = REDUCED ? "" : `x .9s cubic-bezier(.2,.8,.2,1) ${i * 70}ms, width .9s cubic-bezier(.2,.8,.2,1) ${i * 70}ms`; b.style.x = b.dataset.x + "px"; b.style.width = b.dataset.w + "px"; }));
 }
+
+// ---------- glace en WebGL : profondeur, reflets des projecteurs, cristaux ----------
+(function ice() {
+  const cv = $("#ice"), gl = cv.getContext("webgl", { antialias: false, alpha: false, powerPreference: "low-power" });
+  if (!gl) return;
+  const VS = "attribute vec2 a; void main(){ gl_Position = vec4(a, 0., 1.); }";
+  const FS = `precision mediump float;
+  uniform vec2 r; uniform float t, light; uniform vec2 m;
+  float h(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+  float n(vec2 p){ vec2 i = floor(p), f = fract(p), u = f*f*(3.-2.*f);
+    return mix(mix(h(i), h(i+vec2(1,0)), u.x), mix(h(i+vec2(0,1)), h(i+vec2(1,1)), u.x), u.y); }
+  float fbm(vec2 p){ float v = 0., a = .5; for (int i = 0; i < 5; i++){ v += a*n(p); p *= 2.03; a *= .5; } return v; }
+  void main(){
+    vec2 p = (gl_FragCoord.xy - .5*r) / r.y;
+    float cloud = fbm(p*2.1 + vec2(t*.006, t*.004)), deep = fbm(p*7. - t*.003);
+    vec3 dark = mix(vec3(.018,.035,.06), vec3(.05,.10,.155), cloud) + vec3(0.,.015,.03)*deep;
+    vec3 lite = mix(vec3(.84,.90,.955), vec3(.95,.975,1.), cloud) - vec3(.05,.035,.02)*deep;
+    vec3 col = mix(dark, lite, light);
+    for (int i = 0; i < 4; i++){                                     // projecteurs de l'arène qui se reflètent
+      float fi = float(i);
+      vec2 c = vec2(sin(t*.035 + fi*1.9)*.75, .18*cos(t*.028 + fi*1.3) + (fi - 1.5)*.22);
+      float d = length((p - c)*vec2(1., 2.6));
+      col += mix(vec3(.09, .16, .25), vec3(.05, .055, .05), light) * exp(-d*d*7.);
+    }
+    vec2 mp = (m - .5*r) / r.y; float md = length(p - mp);           // reflet qui suit la souris
+    col += mix(vec3(.06, .11, .16), vec3(.035), light) * exp(-md*md*9.);
+    vec2 g = floor(gl_FragCoord.xy / 2.); float sp = h(g);           // cristaux qui scintillent
+    col += step(.9982, sp) * (sin(t*2.3 + sp*60.)*.5 + .5) * mix(.75, .3, light);
+    col *= mix(1., .5, smoothstep(.35, 1.3, length(p*vec2(.9, 1.2))) * (1. - light*.75));
+    gl_FragColor = vec4(col, 1.);
+  }`;
+  const sh = (type, src) => { const o = gl.createShader(type); gl.shaderSource(o, src); gl.compileShader(o);
+    if (!gl.getShaderParameter(o, gl.COMPILE_STATUS)) console.warn(gl.getShaderInfoLog(o)); return o; };
+  const pr = gl.createProgram();
+  gl.attachShader(pr, sh(gl.VERTEX_SHADER, VS)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(pr); gl.useProgram(pr);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(pr, "a"); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  const U = k => gl.getUniformLocation(pr, k), SCALE = .5;
+  let mouse = [innerWidth * SCALE * .5, innerHeight * SCALE * .6], last = 0;
+  const size = () => { cv.width = Math.round(innerWidth * SCALE); cv.height = Math.round(innerHeight * SCALE); gl.viewport(0, 0, cv.width, cv.height); };
+  const draw = ms => {
+    gl.uniform2f(U("r"), cv.width, cv.height); gl.uniform1f(U("t"), ms / 1000);
+    gl.uniform1f(U("light"), document.documentElement.dataset.theme === "light" ? 1 : 0);
+    gl.uniform2f(U("m"), mouse[0], mouse[1]); gl.drawArrays(gl.TRIANGLES, 0, 3);
+  };
+  addEventListener("resize", () => { size(); draw(performance.now()); });
+  addEventListener("mousemove", e => { mouse = [e.clientX * SCALE, (innerHeight - e.clientY) * SCALE]; }, { passive: true });
+  size(); draw(0);
+  if (REDUCED) return;                                               // image fixe si « réduire les animations »
+  const loop = ms => { if (!document.hidden && ms - last > 40) { last = ms; draw(ms); } requestAnimationFrame(loop); };  // ~25 i/s
+  requestAnimationFrame(loop);
+  window.redrawIce = () => draw(performance.now());
+})();
+
+function puckPass() {
+  const el = $("#puckfly"), trail = el.querySelector(".trail"), disc = el.querySelector(".disc");
+  if (!REDUCED && !document.hidden) {
+    const W = innerWidth, H = innerHeight, ltr = Math.random() < .6;
+    const y0 = H * (.2 + Math.random() * .6), y1 = Math.min(H * .9, Math.max(H * .1, y0 + (Math.random() - .5) * H * .5));
+    const x0 = ltr ? -60 : W + 60, x1 = ltr ? W + 60 : -60;
+    const ang = Math.atan2(y1 - y0, x1 - x0), dur = 4200 + Math.random() * 1800;
+    const at = (x, y) => `translate(${x}px, ${y}px) rotate(${ang}rad)`;
+    const ease = "cubic-bezier(.16, .62, .32, 1)";  // départ vif puis freinage progressif sur la glace
+    el.animate([{ transform: at(x0, y0), opacity: 0 }, { opacity: 1, offset: .05 }, { opacity: 1, offset: .88 },
+                { transform: at(x1, y1), opacity: 0 }], { duration: dur, easing: ease, fill: "forwards" });
+    disc.animate([{ rotate: "0deg" }, { rotate: (Math.random() < .5 ? -1 : 1) * (240 + Math.random() * 200) + "deg" }],
+                 { duration: dur, easing: ease, fill: "forwards" });
+    trail.animate([{ width: "0px", opacity: .9 }, { width: "260px", opacity: .9, offset: .25 }, { width: "180px", opacity: .6, offset: .8 },
+                   { width: "60px", opacity: 0 }], { duration: dur, easing: "linear", fill: "forwards" });
+  }
+  setTimeout(puckPass, 60000 + Math.random() * 90000);  // toutes les 1 à 2,5 minutes
+}
+setTimeout(puckPass, 15000 + Math.random() * 25000);    // premier passage après 15 à 40 s
 
 addEventListener("resize", () => { clearTimeout(window._rz); window._rz = setTimeout(() => { moveInd(); render(); }, 150); });
 moveInd(); tickClocks(); refresh();

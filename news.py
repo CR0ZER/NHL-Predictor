@@ -1,4 +1,4 @@
-"""Actualité d'avant-match : NHL.com -> extraction qwen3:8b (Ollama, local) -> jugement Jev -> variables du modèle.
+"""Actualité d'avant-match : NHL.com -> extraction par modèle de langage (Ollama local ou OpenRouter) -> Jev -> modèle.
 
     uv run --env-file .env python news.py eval [SAISON]   # chaîne complète sur une saison, log-loss par variante
 
@@ -23,10 +23,16 @@ import nhl
 from xg import DATA, WEB, get_json
 
 CONTENT = "https://forge-dapi.d3.nhle.com/v2/content/en-us/stories"
-OLLAMA, LLM = "http://127.0.0.1:11434", "qwen3:8b"
-NUM_CTX = 10240  # tient entièrement dans les 8 Go de la carte graphique avec qwen3:8b (16k débordait sur le CPU)
+OLLAMA, OPENROUTER = "http://127.0.0.1:11434", "https://openrouter.ai/api/v1/chat/completions"
+# Modèle(s) : un nom Ollama (« qwen3:8b ») ou une liste OpenRouter séparée par des virgules, essayée dans l'ordre
+# (« google/gemma-4-31b-it:free,nvidia/nemotron-3-super-120b-a12b:free ») : le suivant prend le relais si l'un échoue.
+LLM = os.environ.get("NHL_LLM", "qwen3:8b")
+MODELS = [m.strip() for m in LLM.split(",") if m.strip()]
+REMOTE = "/" in MODELS[0]  # un identifiant « fournisseur/modèle » = OpenRouter
+NUM_CTX = 10240  # Ollama : tient entièrement dans les 8 Go de la carte graphique avec qwen3:8b (16k débordait sur le CPU)
 WINDOW_H, MAX_ARTICLES, MAX_CHARS = 72, 6, 3500
-RUNS = DATA / "news_runs"
+MAX_OUT = 1024  # tokens par réponse (une réponse normale en fait ~400)
+RUNS = DATA / "news_runs" / re.sub(r"[^\w.-]", "_", MODELS[0])  # un dossier par modèle : les passages ne se mélangent pas
 UNKNOWN = "unknown"
 
 PLAYER = {"type": "object", "properties": {"player": {"type": "string"}, "detail": {"type": "string"}},
@@ -61,13 +67,16 @@ def clean(md):
 
 
 def ready():
-    """La chaîne est utilisable : Ollama répond avec qwen3:8b, et une clé Jev est configurée."""
+    """La chaîne est utilisable : le modèle répond (clé OpenRouter, ou Ollama avec le modèle installé) et Jev est configuré."""
+    if not os.environ.get("TYPESAFE_API_KEY"):
+        return False
+    if REMOTE:
+        return bool(os.environ.get("OPENROUTER_API_KEY"))
     try:
         with urllib.request.urlopen(f"{OLLAMA}/api/tags", timeout=3) as r:
-            models = {m["name"] for m in json.load(r)["models"]}
+            return MODELS[0] in {m["name"] for m in json.load(r)["models"]}
     except OSError:
         return False
-    return LLM in models and bool(os.environ.get("TYPESAFE_API_KEY"))
 
 
 # ---------------------------------------------------------------- récupération (NHL.com)
@@ -125,19 +134,67 @@ def roster_goalies(abbrev, season=None):
 
 
 # ---------------------------------------------------------------- qwen (extraction) et Jev (jugement)
-def extract(game, articles):
-    """qwen3:8b en local : informations d'avant-match structurées pour les deux équipes (JSON imposé)."""
-    body = {"model": LLM, "stream": False, "think": False, "format": SCHEMA,
-            "options": {"temperature": 0, "num_ctx": NUM_CTX},
-            "messages": [{"role": "system", "content": PROMPT},
-                         {"role": "user", "content": json.dumps({"game": game, "articles": articles}, ensure_ascii=False)}]}
+def valid(info):
+    """Réponse conforme au schéma (les deux équipes, champs requis, listes de joueurs nommés)."""
+    try:
+        return all(isinstance(info[s][k], list) and all(isinstance(p.get("player"), str) for p in info[s][k])
+                   for s in ("away", "home") for k in ("out", "doubtful")) and all(
+            isinstance(info[s]["summary"], str) and info[s]["goalie_status"] in ("confirmed", "projected", "unknown")
+            for s in ("away", "home"))
+    except (KeyError, TypeError, AttributeError):
+        return False
+
+
+def complete(model, msgs, schema, temperature):
+    """Texte de la réponse d'un modèle : Ollama en local, ou OpenRouter (API compatible OpenAI)."""
+    if REMOTE:
+        body = {"model": model, "messages": msgs, "temperature": temperature, "max_tokens": MAX_OUT,
+                "response_format": {"type": "json_schema", "json_schema": {"name": "pregame", "schema": schema}}}
+        headers = {"Content-Type": "application/json", "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}",
+                   "X-Title": "NHL Predictor"}
+        req = urllib.request.Request(OPENROUTER, data=json.dumps(body).encode(), headers=headers)
+        with urllib.request.urlopen(req, timeout=180) as r:
+            return json.load(r)["choices"][0]["message"]["content"] or ""
+    body = {"model": model, "stream": False, "think": False, "format": schema, "messages": msgs,
+            "options": {"temperature": temperature, "num_ctx": NUM_CTX, "num_predict": MAX_OUT}}
     req = urllib.request.Request(f"{OLLAMA}/api/chat", data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=600) as r:
+    with urllib.request.urlopen(req, timeout=180) as r:
         resp = json.load(r)
     if resp.get("prompt_eval_count", 0) >= NUM_CTX - 1024:  # Ollama tronque sans prévenir
         print(f"  ATTENTION : {resp['prompt_eval_count']} tokens en entrée, proche de la limite de contexte", flush=True)
-    return json.loads(resp["message"]["content"])
+    return resp["message"]["content"]
+
+
+def chat(system, payload, schema, check, tries=2):
+    """Réponse JSON validée. Par tentative, les modèles de MODELS sont essayés dans l'ordre (le suivant prend le relais
+    sur erreur réseau, quota 429 ou indisponibilité) ; nouvelle tentative si la réponse est invalide (la sortie JSON
+    n'est pas garantie). Borne MAX_OUT : un petit modèle peut boucler sans fin en JSON imposé.
+    Retourne (réponse ou None, nombre de réponses invalides)."""
+    msgs = [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}]
+    for attempt in range(tries):
+        for model in MODELS:
+            try:
+                text = complete(model, msgs, schema, 0.3 * attempt)  # 2e essai un peu moins déterministe
+            except (OSError, KeyError, IndexError, json.JSONDecodeError) as e:
+                print(f"  {model} indisponible ({e}), modèle suivant", flush=True)
+                if "429" in str(e):
+                    time.sleep(15)  # quota par minute des modèles gratuits
+                continue
+            try:
+                out = json.loads(re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip()))
+            except json.JSONDecodeError:
+                out = None
+            if check(out):
+                return out, attempt
+            break  # réponse obtenue mais invalide : on retente (pas besoin de changer de modèle)
+    return None, tries
+
+
+def extract(game, articles):
+    """Informations d'avant-match structurées pour les deux équipes, en un appel. Retourne (infos, réponses invalides)."""
+    info, bad = chat(PROMPT, {"game": game, "articles": articles}, SCHEMA, valid)
+    return info or {"away": EMPTY, "home": EMPTY}, bad
 
 
 def judge(client, game, side, articles, info, goalies):
@@ -174,10 +231,10 @@ def run_game(client, g, goalies_by_team, refresh=False):
     t0 = time.time()
     arts = pregame_articles(g["gameId"], g["home_id"], g["away_id"], g["kickoff"])
     game = {k: g[k] for k in ("away", "home", "kickoff")}
-    info = extract(game, arts) if arts else {"away": EMPTY, "home": EMPTY}
+    info, invalid = extract(game, arts) if arts else ({"away": EMPTY, "home": EMPTY}, 0)
     t1 = time.time()
     jev = {s: judge(client, game, s, arts, info[s], goalies_by_team[g[f"{s}_abbr"]]) for s in ("away", "home")}
-    out = {"game": g, "run_at": pd.Timestamp.now(tz="UTC").isoformat(),
+    out = {"game": g, "llm": LLM, "invalid_json": invalid, "run_at": pd.Timestamp.now(tz="UTC").isoformat(),
            "articles": [{k: a[k] for k in ("title", "published", "lineups")} for a in arts],
            "qwen": info, "jev": jev, "seconds": {"qwen": round(t1 - t0, 1), "jev": round(time.time() - t1, 1)}}
     RUNS.mkdir(parents=True, exist_ok=True)
@@ -225,7 +282,10 @@ def evaluate(season=None):
         r = g_rat[(g_rat["playerId"] == pid) & (g_rat["gameDate"] < d)]
         return r["post"].iloc[-1] if len(r) else 0.0
 
-    client, rows = TypeSafeClient(), []
+    played = (set(zip(sk["gameId"], sk["skaterFullName"].map(norm)))
+              | set(zip(goalies["gameId"], goalies["goalieFullName"].map(norm))))
+    known = set(sk["skaterFullName"].map(norm)) | set(goalies["goalieFullName"].map(norm))
+    client, rows, flagged, invalid, secs = TypeSafeClient(), [], [], 0, []
     for i, (gid, row) in enumerate(test.iterrows()):
         x = sched[gid]
         g = {"gameId": int(gid), "kickoff": x["startTimeUTC"], "away": row["away"], "home": row["home"],
@@ -233,7 +293,15 @@ def evaluate(season=None):
              **{f"{s}_abbr": x[f"{s}Team"]["abbrev"] for s in ("away", "home")}}
         res = run_game(client, g, {g[f"{s}_abbr"]: roster_goalies(g[f"{s}_abbr"], season) for s in ("away", "home")})
         print(f"{i + 1}/{len(test)} {g['away_abbr']}@{g['home_abbr']} : {len(res['articles'])} articles, "
-              f"qwen {res['seconds']['qwen']} s, Jev {res['seconds']['jev']} s", flush=True)
+              f"{LLM} {res['seconds']['qwen']} s, Jev {res['seconds']['jev']} s", flush=True)
+        invalid += res.get("invalid_json", 0) > 0
+        secs.append(res["seconds"]["qwen"])
+        for side in ("away", "home"):
+            for kind in ("out", "doubtful"):
+                for p in res["qwen"][side][kind]:
+                    n = norm(p["player"])
+                    flagged.append({"kind": kind, "known": n in known, "played": (gid, n) in played,
+                                    "p_jev": res["jev"][side]["p_out"].get(p["player"])})
         day = pd.Timestamp(row["date"])
         ppg_now = sk[sk["gameDate"] < day].groupby("playerId")["ppg"].last()
         feat = {}
@@ -272,7 +340,17 @@ def evaluate(season=None):
     ll = lambda pr: -(y * np.log(pr) + (1 - y) * np.log(1 - pr))
     print(f"\n{len(t)} matchs de la saison {season}-{season + 1 - 2000} (du {t['date'].min().date()} au {t['date'].max().date()})")
     print(f"Gardien titulaire trouvé : heuristique {np.mean([t.h_goalie_ok_heur.mean(), t.a_goalie_ok_heur.mean()]):.0%}"
-          f" | Jev {np.mean([t.h_goalie_ok_jev.mean(), t.a_goalie_ok_jev.mean()]):.0%}\n")
+          f" | Jev {np.mean([t.h_goalie_ok_jev.mean(), t.a_goalie_ok_jev.mean()]):.0%}")
+    fl = pd.DataFrame(flagged)
+    k_ = fl[fl["known"]] if len(fl) else fl
+    print(f"Extraction ({LLM}) : {len(fl)} joueurs signalés ({len(fl) / len(t) / 2:.1f} par équipe), "
+          f"noms reconnus {fl['known'].mean():.0%} ; temps moyen {np.mean(secs):.1f} s par match ; "
+          f"JSON invalide sur {invalid} match(s)")
+    for kind, label in (("out", "certains"), ("doubtful", "incertains")):
+        s_ = k_[k_["kind"] == kind]
+        print(f"  absents {label:10s}: {len(s_):3d}, ont réellement manqué le match : {(~s_['played']).mean():.0%}")
+    print(f"  P(absence) Jev : vrais absents {k_.loc[~k_['played'], 'p_jev'].mean():.2f}"
+          f" | ont finalement joué {k_.loc[k_['played'], 'p_jev'].mean():.2f}\n")
     ref = ll(p["A. modèle seul (gardien deviné)"])
     for name, pr in p.items():
         d = ll(pr) - ref

@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "nhl-edge",
+      "name": "nhl-predictor",
       "runtimeExecutable": "uv",
       "runtimeArgs": ["run", "--env-file", ".env", "python", "app.py"],
       "port": 8765
