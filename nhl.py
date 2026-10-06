@@ -105,6 +105,7 @@ def wide(t):
         "home_b2b": (h["rest"] <= 1).astype(int),
         "away_b2b": (a["rest"] <= 1).astype(int),
         "home_win": h["wins"],
+        "reg_tie": 1 - h["winsInRegulation"] - a["winsInRegulation"],  # match décidé en prolongation / tirs au but
     })
 
 
