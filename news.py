@@ -12,6 +12,7 @@ import re
 import sys
 import time
 import unicodedata
+import urllib.error
 import urllib.request
 from datetime import timedelta
 
@@ -25,10 +26,12 @@ from xg import DATA, WEB, get_json
 CONTENT = "https://forge-dapi.d3.nhle.com/v2/content/en-us/stories"
 OLLAMA, OPENROUTER = "http://127.0.0.1:11434", "https://openrouter.ai/api/v1/chat/completions"
 # Modèle(s) : un nom Ollama (« qwen3:8b ») ou une liste OpenRouter séparée par des virgules, essayée dans l'ordre
-# (« google/gemma-4-31b-it:free,nvidia/nemotron-3-super-120b-a12b:free ») : le suivant prend le relais si l'un échoue.
+# (« nvidia/nemotron-3-super-120b-a12b:free,google/gemma-4-31b-it:free ») : le suivant prend le relais si l'un échoue.
 LLM = os.environ.get("NHL_LLM", "qwen3:8b")
 MODELS = [m.strip() for m in LLM.split(",") if m.strip()]
 REMOTE = "/" in MODELS[0]  # un identifiant « fournisseur/modèle » = OpenRouter
+DAY_QUOTA_HIT = False  # quota quotidien OpenRouter atteint pendant ce passage
+USED = []  # modèles ayant réellement répondu, dans l'ordre des appels
 NUM_CTX = 10240  # Ollama : tient entièrement dans les 8 Go de la carte graphique avec qwen3:8b (16k débordait sur le CPU)
 WINDOW_H, MAX_ARTICLES, MAX_CHARS = 72, 6, 3500
 MAX_OUT = 1024  # tokens par réponse (une réponse normale en fait ~400)
@@ -149,12 +152,16 @@ def complete(model, msgs, schema, temperature):
     """Texte de la réponse d'un modèle : Ollama en local, ou OpenRouter (API compatible OpenAI)."""
     if REMOTE:
         body = {"model": model, "messages": msgs, "temperature": temperature, "max_tokens": MAX_OUT,
+                "reasoning": {"enabled": False},  # modèles « qui réfléchissent » : sinon tout le budget part en raisonnement
                 "response_format": {"type": "json_schema", "json_schema": {"name": "pregame", "schema": schema}}}
         headers = {"Content-Type": "application/json", "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}",
                    "X-Title": "NHL Predictor"}
         req = urllib.request.Request(OPENROUTER, data=json.dumps(body).encode(), headers=headers)
-        with urllib.request.urlopen(req, timeout=180) as r:
-            return json.load(r)["choices"][0]["message"]["content"] or ""
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                return json.load(r)["choices"][0]["message"]["content"] or ""
+        except urllib.error.HTTPError as e:  # on garde le message : il dit si c'est le quota du jour ou une saturation
+            raise OSError(f"HTTP {e.code} {e.read()[:300].decode(errors='ignore')}") from None
     body = {"model": model, "stream": False, "think": False, "format": schema, "messages": msgs,
             "options": {"temperature": temperature, "num_ctx": NUM_CTX, "num_predict": MAX_OUT}}
     req = urllib.request.Request(f"{OLLAMA}/api/chat", data=json.dumps(body).encode(),
@@ -171,21 +178,28 @@ def chat(system, payload, schema, check, tries=2):
     sur erreur réseau, quota 429 ou indisponibilité) ; nouvelle tentative si la réponse est invalide (la sortie JSON
     n'est pas garantie). Borne MAX_OUT : un petit modèle peut boucler sans fin en JSON imposé.
     Retourne (réponse ou None, nombre de réponses invalides)."""
+    global DAY_QUOTA_HIT
     msgs = [{"role": "system", "content": system}, {"role": "user", "content": json.dumps(payload, ensure_ascii=False)}]
     for attempt in range(tries):
         for model in MODELS:
+            if DAY_QUOTA_HIT:
+                return None, tries
             try:
                 text = complete(model, msgs, schema, 0.3 * attempt)  # 2e essai un peu moins déterministe
             except (OSError, KeyError, IndexError, json.JSONDecodeError) as e:
-                print(f"  {model} indisponible ({e}), modèle suivant", flush=True)
-                if "429" in str(e):
-                    time.sleep(15)  # quota par minute des modèles gratuits
+                print(f"  {model} indisponible ({str(e)[:160]}), modèle suivant", flush=True)
+                if "per-day" in str(e):  # quota quotidien des modèles gratuits atteint : inutile d'insister aujourd'hui
+                    DAY_QUOTA_HIT = True
+                    print("  Quota OpenRouter du jour atteint : plus d'appel distant jusqu'à demain.", flush=True)
+                elif "429" in str(e):
+                    time.sleep(15)  # saturation passagère ou quota par minute
                 continue
             try:
                 out = json.loads(re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip()))
             except json.JSONDecodeError:
                 out = None
             if check(out):
+                USED.append(model)  # modèle qui a réellement répondu (journal et fichier du passage)
                 return out, attempt
             break  # réponse obtenue mais invalide : on retente (pas besoin de changer de modèle)
     return None, tries
@@ -228,17 +242,18 @@ def run_game(client, g, goalies_by_team, refresh=False):
     path = RUNS / f"{g['gameId']}.json"
     if path.exists() and not refresh:
         return json.loads(path.read_text(encoding="utf-8"))
-    t0 = time.time()
+    t0, n_used = time.time(), len(USED)
     arts = pregame_articles(g["gameId"], g["home_id"], g["away_id"], g["kickoff"])
     game = {k: g[k] for k in ("away", "home", "kickoff")}
     info, invalid = extract(game, arts) if arts else ({"away": EMPTY, "home": EMPTY}, 0)
     t1 = time.time()
     jev = {s: judge(client, game, s, arts, info[s], goalies_by_team[g[f"{s}_abbr"]]) for s in ("away", "home")}
-    out = {"game": g, "llm": LLM, "invalid_json": invalid, "run_at": pd.Timestamp.now(tz="UTC").isoformat(),
+    out = {"game": g, "llm": USED[-1] if len(USED) > n_used else None, "invalid_json": invalid, "run_at": pd.Timestamp.now(tz="UTC").isoformat(),
            "articles": [{k: a[k] for k in ("title", "published", "lineups")} for a in arts],
            "qwen": info, "jev": jev, "seconds": {"qwen": round(t1 - t0, 1), "jev": round(time.time() - t1, 1)}}
-    RUNS.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    if not (arts and invalid >= 2):  # extraction ratée (quota, modèle indisponible) : pas de cache, on retentera
+        RUNS.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     return out
 
 
@@ -293,7 +308,7 @@ def evaluate(season=None):
              **{f"{s}_abbr": x[f"{s}Team"]["abbrev"] for s in ("away", "home")}}
         res = run_game(client, g, {g[f"{s}_abbr"]: roster_goalies(g[f"{s}_abbr"], season) for s in ("away", "home")})
         print(f"{i + 1}/{len(test)} {g['away_abbr']}@{g['home_abbr']} : {len(res['articles'])} articles, "
-              f"{LLM} {res['seconds']['qwen']} s, Jev {res['seconds']['jev']} s", flush=True)
+              f"{res.get('llm') or '-'} {res['seconds']['qwen']} s, Jev {res['seconds']['jev']} s", flush=True)
         invalid += res.get("invalid_json", 0) > 0
         secs.append(res["seconds"]["qwen"])
         for side in ("away", "home"):

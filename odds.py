@@ -28,6 +28,7 @@ from xg import DATA
 
 API = "https://api.oddspapi.io/v4"
 DIR = DATA / "oddspapi"
+CLOSING = DIR / "closing.csv"  # cotes de clôture résumées (versionné) ; les historiques bruts restent en local
 BOOKS = "pinnacle,winamax.fr,unibet.fr"  # 3 max par appel ; fdj et zebet.fr sont des clones d'unibet.fr
 MONEYLINE, REGULATION = "151", "153"     # vainqueur prolongation incluse (1, 2) ; 1N2 temps réglementaire (1, X, 2)
 OUTCOMES = {MONEYLINE: {"151": "H", "152": "A"}, REGULATION: {"153": "H", "154": "X", "155": "A"}}
@@ -71,6 +72,7 @@ def update():
     t = date.today()
     season = t.year if t.month >= 9 else t.year - 1
     fetch(f"{season}-09-01", f"{season + 1}-07-01", refresh=True)
+    closing_odds()  # résume les nouveaux matchs dans closing.csv
 
 
 def norm(name):
@@ -95,18 +97,25 @@ def local_date(ts):
 
 
 def closing_odds():
-    """Dernière cote publiée avant le coup d'envoi réel, par (match, bookmaker, marché, issue)."""
-    rows = []
+    """Dernière cote publiée avant le coup d'envoi réel, par (match, bookmaker, marché, issue).
+    Les historiques bruts (~2,5 Mo par match, data/oddspapi/hist) sont résumés dans closing.csv, seul fichier conservé
+    dans le dépôt : un match déjà résumé n'a plus besoin de son historique brut."""
+    cols = ["fixtureId", "home", "date", "book", "market", "side", "price"]
+    old = pd.read_csv(CLOSING, dtype={"market": str}) if CLOSING.exists() else pd.DataFrame(columns=cols)
+    done, rows = set(old["fixtureId"]), []
     for path in DIR.glob("fixtures_*.json"):
         for f in json.loads(path.read_text()):
             hist = DIR / "hist" / f"{f['fixtureId']}.json"
-            if not hist.exists():
+            if f["fixtureId"] in done or not hist.exists():
                 continue
             kickoff = pd.Timestamp(f["trueStartTime"] or f["startTime"])
             for (book, market, side), price in last_prices(json.loads(hist.read_text()), kickoff).items():
                 rows.append({"fixtureId": f["fixtureId"], "home": norm(f["participant1Name"]),
                              "date": local_date(kickoff), "book": book, "market": market, "side": side, "price": price})
-    return pd.DataFrame(rows)
+    out = pd.concat([old, pd.DataFrame(rows, columns=cols)], ignore_index=True) if rows else old
+    if rows:
+        out.to_csv(CLOSING, index=False)
+    return out.assign(date=pd.to_datetime(out["date"]).dt.date)
 
 
 def current_odds(home, kickoff):
