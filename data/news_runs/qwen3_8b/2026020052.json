@@ -9,7 +9,9 @@
   "away_abbr": "FLA",
   "home_abbr": "LAK"
  },
- "run_at": "2026-10-06T12:24:15.369374+00:00",
+ "llm": "qwen3:8b",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T18:57:33.827540+00:00",
  "articles": [
   {
    "title": "FINAL - LAK 4, SJS 5 (OT)",
@@ -96,28 +98,28 @@
  "jev": {
   "away": {
    "starter": "Akira Schmid",
-   "p_starter": 0.39,
-   "announced": 0.73,
+   "p_starter": 0.43,
+   "announced": 0.74,
    "p_out": {
     "Aleksander Barkov": 0.96,
-    "Jonah Gadjovich": 0.95,
-    "Brad Marchand": 0.53,
-    "Gustav Forsling": 0.29
+    "Jonah Gadjovich": 0.94,
+    "Brad Marchand": 0.52,
+    "Gustav Forsling": 0.3
    }
   },
   "home": {
    "starter": "unknown",
-   "p_starter": 0.96,
-   "announced": 0.13,
+   "p_starter": 0.95,
+   "announced": 0.16,
    "p_out": {
     "Drew Helleson": 0.3,
-    "Ian Moore": 0.51,
-    "Troy Terry": 0.3
+    "Ian Moore": 0.46,
+    "Troy Terry": 0.31
    }
   }
  },
  "seconds": {
-  "qwen": 22.3,
-  "jev": 0.7
+  "qwen": 20.2,
+  "jev": 0.6
  }
 }

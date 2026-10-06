@@ -9,8 +9,15 @@
   "away_abbr": "UTA",
   "home_abbr": "NJD"
  },
- "run_at": "2026-10-06T12:22:30.212932+00:00",
+ "llm": "qwen3:8b",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T18:55:34.835081+00:00",
  "articles": [
+  {
+   "title": "Mammoth at Devils projected lineups",
+   "published": "2026-10-06T17:04:43.251Z",
+   "lineups": true
+  },
   {
    "title": "RECAP: Utah 4, Columbus 1",
    "published": "2026-10-03T23:07:00Z",
@@ -35,72 +42,81 @@
    "title": "Utah Wraps Back-to-Back against New York Rangers",
    "published": "2026-10-04T14:00:00Z",
    "lineups": false
-  },
-  {
-   "title": "RECAP: New York 4, Utah 2",
-   "published": "2026-10-04T22:07:44.833Z",
-   "lineups": false
   }
  ],
  "qwen": {
   "away": {
-   "starting_goalie": "Sebastian Cossa",
-   "goalie_status": "confirmed",
-   "out": [],
-   "doubtful": [],
-   "returning": [
-    "Clayton Keller",
-    "Nick Schmaltz",
-    "Mikhail Sergachev",
-    "Logan Cooley",
-    "Dylan Guenther",
-    "Jack McBain",
-    "Barrett Hayton",
-    "Lawson Crouse",
-    "Michael Carcone",
-    "Kevin Stenlund",
-    "Daniil But",
-    "Nate Schmidt",
-    "John Marino",
-    "Dmitri Simashev",
-    "Andrew Peeke",
-    "Karel Vejmelka"
-   ],
-   "summary": "The Utah Mammoth are in great form, having won their first two games of the season. They have a strong lineup with key players returning, including captain Clayton Keller and center Nick Schmaltz, who both reached career milestones in their recent game. Sebastian Cossa, the team's new goaltender, made his NHL debut and earned a win, showing promise."
-  },
-  "home": {
-   "starting_goalie": "Igor Shesterkin",
+   "starting_goalie": "Karel Vejmelka",
    "goalie_status": "confirmed",
    "out": [
     {
-     "player": "Joonas Korpisalo",
-     "detail": "injured (lower body)"
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder"
+    },
+    {
+     "player": "Liam O'Brien",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kailer Yamamoto",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nick DeSimone",
+     "detail": "scratched"
     }
    ],
    "doubtful": [],
-   "returning": [
-    "Marcus Pettersson",
-    "Sean Durzi",
-    "Matthew Robertson",
-    "Matt Rempe",
-    "Scott Morrow"
+   "returning": [],
+   "summary": "The Utah Mammoth are coming off a strong 4-1 win over the Columbus Blue Jackets, with multiple milestone performances. Sebastian Cossa made his NHL debut and earned a win, while Clayton Keller and Nick Schmaltz reached career milestone points. The team is in good form and has a solid lineup with some key players returning from injury."
+  },
+  "home": {
+   "starting_goalie": "Jake Allen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Brown",
+     "detail": "lower body"
+    },
+    {
+     "player": "Stefen Noesen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Remi Poirier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "scratched"
+    }
    ],
-   "summary": "The New Jersey Devils are coming off a 4-2 loss to the Utah Mammoth, but they have a solid lineup with Igor Shesterkin expected to start in goal. Joonas Korpisalo is out due to a lower body injury, but other players are returning from previous games. The Devils will look to bounce back and maintain their strong start to the season."
+   "doubtful": [],
+   "returning": [],
+   "summary": "The New Jersey Devils are coming off a 1-1-0 record, with a recent loss to the New York Rangers. They have a projected lineup with Jake Allen expected to start. Connor Brown is out for the next two games due to a lower body injury. The team is in a rebuilding phase and has some key players missing due to injury or scratches."
   }
  },
  "jev": {
   "away": {
-   "starter": "unknown",
-   "p_starter": 0.64,
-   "announced": 0.97,
-   "p_out": {}
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Maveric Lamoureux": 0.97,
+    "Liam O'Brien": 0.97,
+    "Kailer Yamamoto": 0.96,
+    "Nick DeSimone": 0.97
+   }
   },
   "home": {
-   "starter": "unknown",
-   "p_starter": 1.0,
-   "announced": 0.06,
+   "starter": "Jake Allen",
+   "p_starter": 0.99,
+   "announced": 0.97,
    "p_out": {
-    "Joonas Korpisalo": 0.15
+    "Connor Brown": 0.98,
+    "Stefen Noesen": 0.97,
+    "Remi Poirier": 0.97,
+    "Johnathan Kovacevic": 0.96
    }
   }
  },

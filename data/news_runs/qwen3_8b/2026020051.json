@@ -9,8 +9,15 @@
   "away_abbr": "VGK",
   "home_abbr": "SEA"
  },
- "run_at": "2026-10-06T12:23:51.923999+00:00",
+ "llm": "qwen3:8b",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T18:57:12.627439+00:00",
  "articles": [
+  {
+   "title": "Golden Knights at Kraken projected lineups",
+   "published": "2026-10-06T17:36:49.919Z",
+   "lineups": true
+  },
   {
    "title": "Kraken Hang Tough But Lose Late",
    "published": "2026-10-04T01:59:49.615Z",
@@ -35,20 +42,17 @@
    "title": "Morning Skate Report: Oct. 4, 2026",
    "published": "2026-10-04T15:35:46.126Z",
    "lineups": false
-  },
-  {
-   "title": "Golden Knights at Canucks projected lineups",
-   "published": "2026-10-04T18:40:00Z",
-   "lineups": false
   }
  ],
  "qwen": {
   "away": {
-   "starting_goalie": "Adin Hill",
+   "starting_goalie": "Carter Hart",
    "goalie_status": "confirmed",
    "out": [],
    "doubtful": [],
    "returning": [
+    "Jack Eichel",
+    "Mark Stone",
     "Brett Howden",
     "William Karlsson",
     "Mitch Marner",
@@ -65,14 +69,31 @@
     "Jeremy Lauzon",
     "Noah Hanifin"
    ],
-   "summary": "The Vegas Golden Knights are coming off a split in their first two games, with a win against the Anaheim Ducks and a loss to the Vancouver Canucks. They are expected to have Adin Hill in net for this game, with no major injuries or scratches reported. The team is looking to build on their recent performance and avoid a third consecutive loss."
+   "summary": "The Vegas Golden Knights are coming off a 2-1-0 start to the season, with strong performances from key players like Jack Eichel and Mark Stone. Their projected lineup includes several returning players, and they have no injured players listed. Carter Hart is confirmed to start in goal."
   },
   "home": {
-   "starting_goalie": "Philipp Grubauer",
-   "goalie_status": "confirmed",
-   "out": [],
-   "doubtful": [],
+   "starting_goalie": "Joey Daccord",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jacob Melanson",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Josh Mahura",
+     "detail": "scratched"
+    },
+    {
+     "player": "Curtis Douglas",
+     "detail": "scratched"
+    }
+   ],
    "returning": [
+    "Jared McCann",
+    "Matty Beniers",
+    "Kaapo Kakko",
     "Bobby McMann",
     "Chandler Stephenson",
     "Jordan Eberle",
@@ -86,29 +107,31 @@
     "Adam Larsson",
     "Ryker Evans",
     "Brandon Montour",
-    "Ryan Lindgren",
-    "Josh Mahura",
-    "Joey Daccord"
+    "Ryan Lindgren"
    ],
-   "summary": "The Seattle Kraken are coming off a tough loss to the Edmonton Oilers, falling 3-1 in a game where they outplayed their opponents for much of the contest. Philipp Grubauer is expected to start in net, and the team is looking to build on their recent performance. Mackie Samoskevich is returning from injured reserve and is expected to contribute to the team's speed and offensive balance."
+   "summary": "The Seattle Kraken are also at 2-1-0, with a mix of returning players and some key scratches. Joey Daccord is projected to start in goal, while Philipp Grubauer is also in the lineup. Jacob Melanson is listed as injured, and Josh Mahura and Curtis Douglas are scratched. The team has shown resilience in recent games, despite some challenges."
   }
  },
  "jev": {
   "away": {
-   "starter": "unknown",
-   "p_starter": 0.96,
-   "announced": 0.09,
+   "starter": "Carter Hart",
+   "p_starter": 0.99,
+   "announced": 0.57,
    "p_out": {}
   },
   "home": {
-   "starter": "Philipp Grubauer",
-   "p_starter": 0.74,
-   "announced": 0.86,
-   "p_out": {}
+   "starter": "Joey Daccord",
+   "p_starter": 0.98,
+   "announced": 0.79,
+   "p_out": {
+    "Jacob Melanson": 0.96,
+    "Josh Mahura": 0.91,
+    "Curtis Douglas": 0.86
+   }
   }
  },
  "seconds": {
-  "qwen": 23.3,
-  "jev": 0.5
+  "qwen": 24.4,
+  "jev": 0.6
  }
 }

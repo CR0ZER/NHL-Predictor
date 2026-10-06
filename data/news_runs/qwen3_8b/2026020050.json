@@ -9,8 +9,15 @@
   "away_abbr": "STL",
   "home_abbr": "CHI"
  },
- "run_at": "2026-10-06T12:23:27.705935+00:00",
+ "llm": "qwen3:8b",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T18:56:47.092423+00:00",
  "articles": [
+  {
+   "title": "Blues at Blackhawks projected lineups",
+   "published": "2026-10-06T17:02:30.712Z",
+   "lineups": true
+  },
   {
    "title": "Toropchenko sidelined with upper-body injury",
    "published": "2026-10-04T19:00:00Z",
@@ -32,24 +39,35 @@
    "lineups": false
   },
   {
-   "title": "Kane's Blackhawks homecoming sparks memories of other NHL second acts",
-   "published": "2026-10-06T16:00:00Z",
+   "title": "Get Blues tickets with NO FEES for ONE DAY ONLY",
+   "published": "2026-10-06T14:00:00Z",
    "lineups": false
   }
  ],
  "qwen": {
   "away": {
-   "starting_goalie": null,
-   "goalie_status": "unknown",
+   "starting_goalie": "Jordan Binnington",
+   "goalie_status": "confirmed",
    "out": [
     {
+     "player": "Logan Mailloux",
+     "detail": "injured (hand)"
+    },
+    {
+     "player": "Tyler Tucker",
+     "detail": "injured (knee)"
+    },
+    {
      "player": "Alexey Toropchenko",
-     "detail": "sidelined with upper-body injury"
+     "detail": "injured (upper body)"
     }
    ],
    "doubtful": [],
-   "returning": [],
-   "summary": "The St. Louis Blues are looking to rebound after splitting their first two games of the season. They will face the Chicago Blackhawks at United Center, where they have a strong historical record. The team is still finding consistency, especially offensively, with the Robert Thomas line needing more production."
+   "returning": [
+    "Byram",
+    "Rinzel"
+   ],
+   "summary": "The St. Louis Blues are looking to rebound after a split start to the season, with a 4-0 win over the Stars and a 6-1 loss to the Avalanche. They will need more offensive production, especially from the Robert Thomas line, and will be missing several key players due to injury."
   },
   "home": {
    "starting_goalie": "Spencer Knight",
@@ -57,36 +75,44 @@
    "out": [
     {
      "player": "Connor Bedard",
-     "detail": "sidelined with left shoulder surgery"
+     "detail": "injured (shoulder)"
+    },
+    {
+     "player": "Andrew Mangiapane",
+     "detail": "injured (lower body)"
     }
    ],
    "doubtful": [],
    "returning": [
-    "Patrick Kane"
+    "Byram",
+    "Rinzel"
    ],
-   "summary": "The Chicago Blackhawks are looking for their first win of the season as they host the St. Louis Blues. Patrick Kane is returning to United Center for the first time since 2023 and is expected to play a key role. The team has made several roster additions and is in a rebuilding phase, but Kane's return adds significant veteran leadership."
+   "summary": "The Chicago Blackhawks are looking for their first win of the season after three straight losses. They have acquired several players to aid their rebuilding phase, including Bowen Byram and Jordan Greenway, and will be welcoming back Patrick Kane for his first game at United Center since February 2023."
   }
  },
  "jev": {
   "away": {
-   "starter": "unknown",
-   "p_starter": 0.93,
-   "announced": 0.1,
+   "starter": "Jordan Binnington",
+   "p_starter": 0.92,
+   "announced": 0.98,
    "p_out": {
-    "Alexey Toropchenko": 0.92
+    "Logan Mailloux": 0.97,
+    "Tyler Tucker": 0.97,
+    "Alexey Toropchenko": 0.98
    }
   },
   "home": {
    "starter": "Spencer Knight",
-   "p_starter": 0.84,
-   "announced": 0.31,
+   "p_starter": 0.99,
+   "announced": 0.97,
    "p_out": {
-    "Connor Bedard": 0.97
+    "Connor Bedard": 0.98,
+    "Andrew Mangiapane": 0.97
    }
   }
  },
  "seconds": {
-  "qwen": 15.6,
-  "jev": 0.7
+  "qwen": 18.5,
+  "jev": 0.5
  }
 }

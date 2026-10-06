@@ -9,8 +9,15 @@
   "away_abbr": "CAR",
   "home_abbr": "MTL"
  },
- "run_at": "2026-10-06T12:21:40.697693+00:00",
+ "llm": "qwen3:8b",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T18:54:40.210894+00:00",
  "articles": [
+  {
+   "title": "Hurricanes at Canadiens projected lineups",
+   "published": "2026-10-06T17:11:38.065Z",
+   "lineups": true
+  },
   {
    "title": "Odelein dies at 58, was first Blue Jackets captain",
    "published": "2026-10-03T23:33:00Z",
@@ -40,42 +47,58 @@
  "qwen": {
   "away": {
    "starting_goalie": "Pyotr Kochetkov",
-   "goalie_status": "projected",
-   "out": [],
-   "doubtful": [],
-   "returning": [
-    "Sebastian Aho",
-    "Shayne Gostisbehere"
-   ],
-   "summary": "The Carolina Hurricanes are coming off a 3-2 overtime win over the Flyers, with Pyotr Kochetkov starting in net. They have struggled with scoring but have been effective on the power play. Seth Jarvis is returning to practice after shoulder surgery."
-  },
-  "home": {
-   "starting_goalie": "Jakub Dobes",
    "goalie_status": "confirmed",
    "out": [],
    "doubtful": [],
    "returning": [
-    "Nick Suzuki"
+    "Seth Jarvis"
    ],
-   "summary": "The Montreal Canadiens are coming off a 6-5 overtime loss to the Penguins but have shown resilience with a comeback effort. Jakub Dobes is confirmed to start in net, and captain Nick Suzuki is leading the team's scoring efforts."
+   "summary": "The Carolina Hurricanes are coming off a 3-2 overtime win over the Philadelphia Flyers, with Pyotr Kochetkov starting in net. They have a strong power play, scoring three of their five goals on the man advantage. Seth Jarvis is returning to the lineup after missing time due to shoulder surgery."
+  },
+  "home": {
+   "starting_goalie": "Jakub Dobes",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body injury, expected out 2-4 weeks"
+    },
+    {
+     "player": "Kaiden Guhle",
+     "detail": "adductor injury"
+    },
+    {
+     "player": "Oliver Kapanen",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Florian Xhekaj"
+   ],
+   "summary": "The Montreal Canadiens are coming off a 6-5 overtime loss to the Pittsburgh Penguins, with Jakub Dobes starting in net. They have a strong team with captain Nick Suzuki leading the charge, and Florian Xhekaj is making his season debut. Several key players are sidelined due to injuries."
   }
  },
  "jev": {
   "away": {
-   "starter": "unknown",
-   "p_starter": 0.61,
-   "announced": 0.05,
+   "starter": "Pyotr Kochetkov",
+   "p_starter": 0.66,
+   "announced": 0.91,
    "p_out": {}
   },
   "home": {
-   "starter": "unknown",
-   "p_starter": 0.84,
-   "announced": 0.05,
-   "p_out": {}
+   "starter": "Jakub Dobes",
+   "p_starter": 0.88,
+   "announced": 0.95,
+   "p_out": {
+    "Ivan Demidov": 0.97,
+    "Kaiden Guhle": 0.96,
+    "Oliver Kapanen": 0.95
+   }
   }
  },
  "seconds": {
-  "qwen": 11.2,
-  "jev": 0.5
+  "qwen": 32.2,
+  "jev": 0.6
  }
 }

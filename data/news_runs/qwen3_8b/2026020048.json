@@ -9,11 +9,18 @@
   "away_abbr": "NYI",
   "home_abbr": "NYR"
  },
- "run_at": "2026-10-06T12:23:11.014544+00:00",
+ "llm": "qwen3:8b",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T18:56:27.688614+00:00",
  "articles": [
   {
    "title": "Game Preview: Islanders at Rangers ",
    "published": "2026-10-06T04:00:31.558Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders at Rangers projected lineups",
+   "published": "2026-10-06T18:25:00Z",
    "lineups": true
   },
   {
@@ -35,64 +42,111 @@
    "title": "Schaefer ‘in good hands’ living with former Islanders forward Martin, family",
    "published": "2026-10-04T04:00:00Z",
    "lineups": false
-  },
-  {
-   "title": "Takeaways: Eklund, Sorokin Lead Isles to 6-0 Shutout Over Devils",
-   "published": "2026-10-04T04:20:07.689Z",
-   "lineups": false
   }
  ],
  "qwen": {
   "away": {
-   "starting_goalie": "Ilya Sorokin",
+   "starting_goalie": "Semyon Varlamov",
    "goalie_status": "confirmed",
    "out": [
     {
-     "player": "Kyle MacLean",
-     "detail": "scratched"
-    },
-    {
-     "player": "Matt Kessel",
+     "player": "Matthew Kessel",
      "detail": "scratched"
     },
     {
      "player": "Scott Mayfield",
      "detail": "scratched"
+    },
+    {
+     "player": "Kyle MacLean",
+     "detail": "scratched"
     }
    ],
    "doubtful": [],
-   "returning": [],
-   "summary": "The New York Islanders are coming off a 6-0 victory over the New Jersey Devils, with Victor Eklund scoring his first NHL goal on his 20th birthday. The team is projected to have a new-look lineup, with several players stepping up offensively. Ilya Sorokin is confirmed to start in goal."
+   "returning": [
+    "Victor Eklund",
+    "Anthony Duclair",
+    "Simon Holmström",
+    "Ondřej Palát",
+    "Adam Pelech",
+    "Alexander Romanov",
+    "Ryan Pulock",
+    "Logan Stanley",
+    "Tony DeAngelo"
+   ],
+   "summary": "The New York Islanders are coming off a 6-0 victory over the New Jersey Devils, with six different goal scorers contributing. Victor Eklund scored his first NHL goal on his 20th birthday. Semyon Varlamov is set to start for the first time since November 2024, following a 676-day rehab period."
   },
   "home": {
-   "starting_goalie": "Nico Daws",
-   "goalie_status": "projected",
-   "out": [],
-   "doubtful": [],
-   "returning": [],
-   "summary": "The New York Rangers are riding a three-game winning streak, including a 4-2 victory over the Utah Mammoth. They are undefeated at home this season and have a strong offensive presence. The team is projected to have a solid lineup, with Vladislav Gavrikov, Eeli Tolvanen, Gabe Perreault, and J.T. Miller all contributing offensively. Nico Daws is expected to start in goal."
+   "starting_goalie": "Igor Shesterkin",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Scott Morrow",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matt Rempe",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    }
+   ],
+   "returning": [
+    "Gabe Perreault",
+    "Mika Zibanejad",
+    "Alexis Lafreniere",
+    "Tye Kartye",
+    "J.T. Miller",
+    "Pavel Dorofeyev",
+    "Will Cuylle",
+    "Noah Laba",
+    "Eeli Tolvanen",
+    "Oliver Bjorkstrand",
+    "Cole Beaudoin",
+    "Jaroslav Chmelar",
+    "Vladislav Gavrikov",
+    "Adam Fox",
+    "Marcus Pettersson",
+    "Sean Durzi",
+    "Alberts Smits",
+    "Braden Schneider"
+   ],
+   "summary": "The New York Rangers are on a three-game winning streak, including a 4-2 victory over the Utah Mammoth. Igor Shesterkin is expected to start, facing off against Semyon Varlamov. The Rangers are undefeated at home this season and have a strong lineup with several goal scorers."
   }
  },
  "jev": {
   "away": {
-   "starter": "unknown",
-   "p_starter": 0.91,
-   "announced": 0.09,
+   "starter": "Semyon Varlamov",
+   "p_starter": 1.0,
+   "announced": 0.99,
    "p_out": {
-    "Kyle MacLean": 0.93,
-    "Matt Kessel": 0.91,
-    "Scott Mayfield": 0.92
+    "Matthew Kessel": 0.97,
+    "Scott Mayfield": 0.97,
+    "Kyle MacLean": 0.97
    }
   },
   "home": {
-   "starter": "unknown",
-   "p_starter": 0.95,
-   "announced": 0.27,
-   "p_out": {}
+   "starter": "Igor Shesterkin",
+   "p_starter": 0.97,
+   "announced": 0.96,
+   "p_out": {
+    "Scott Morrow": 0.97,
+    "Matt Rempe": 0.97,
+    "Joonas Korpisalo": 0.92,
+    "Joseph Veleno": 0.97
+   }
   }
  },
  "seconds": {
-  "qwen": 22.5,
-  "jev": 1.1
+  "qwen": 27.0,
+  "jev": 0.5
  }
 }

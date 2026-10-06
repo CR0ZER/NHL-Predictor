@@ -9,8 +9,15 @@
   "away_abbr": "OTT",
   "home_abbr": "DET"
  },
- "run_at": "2026-10-06T12:22:07.228205+00:00",
+ "llm": "qwen3:8b",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T18:55:12.040282+00:00",
  "articles": [
+  {
+   "title": "Senators at Red Wings projected lineups",
+   "published": "2026-10-06T16:14:47.201Z",
+   "lineups": true
+  },
   {
    "title": "PREVIEW: Detroit, Winnipeg set to square off in Sunday matinee",
    "published": "2026-10-04T14:06:00Z",
@@ -35,33 +42,32 @@
    "title": "Senators at Bruins projected lineups",
    "published": "2026-10-05T17:02:22.439Z",
    "lineups": false
-  },
-  {
-   "title": "Senators look to win two straight to begin a season for first time in 10 years",
-   "published": "2026-10-05T17:47:08.313Z",
-   "lineups": false
   }
  ],
  "qwen": {
   "away": {
-   "starting_goalie": "Linus Ullmark",
+   "starting_goalie": "Samuel Ersson",
    "goalie_status": "confirmed",
    "out": [
     {
+     "player": "Linus Ullmark",
+     "detail": "injured (undisclosed)"
+    },
+    {
      "player": "Artem Zub",
-     "detail": "knee"
+     "detail": "injured (knee)"
     },
     {
      "player": "Kurtis MacDermid",
-     "detail": "upper body"
+     "detail": "injured (upper body)"
     },
     {
      "player": "Andre Burakovsky",
-     "detail": "upper body"
+     "detail": "injured (upper body)"
     },
     {
      "player": "Jake Sanderson",
-     "detail": "undisclosed"
+     "detail": "injured (undisclosed)"
     },
     {
      "player": "Ridly Greig",
@@ -70,70 +76,87 @@
    ],
    "doubtful": [],
    "returning": [
-    "Cam Crotty",
-    "Thomas Chabot",
-    "Claude Giroux",
-    "Stephen Halliday"
+    "Stephen Halliday",
+    "Cameron Crotty"
    ],
-   "summary": "The Ottawa Senators are looking to start the season with two straight wins for the first time in 10 years. They have a strong lineup with returning players like Thomas Chabot and Claude Giroux, and Cam Crotty is set to replace the injured Jake Sanderson on the blueline. Linus Ullmark is confirmed to start in goal, and the team is focused on building off their strong performance in their season opener against the Toronto Maple Leafs."
+   "summary": "The Ottawa Senators enter the game with a strong record of 2-0-0, having won their first two games. Key players like Stephen Halliday and Cameron Crotty are returning to the lineup, while several key players are injured or suspended. Samuel Ersson is confirmed to start in goal."
   },
   "home": {
-   "starting_goalie": "Jeremy Swayman",
+   "starting_goalie": "John Gibson",
    "goalie_status": "confirmed",
    "out": [
     {
-     "player": "Charlie McAvoy",
-     "detail": "suspended"
+     "player": "Jacob Bernard-Docker",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "J.T. Compher",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Mason Appleton",
+     "detail": "injured (undisclosed)"
     }
    ],
-   "doubtful": [],
-   "returning": [
-    "JJ Peterka",
-    "Elias Lindholm",
-    "David Pastrnak",
-    "Casey Mittelstadt",
-    "Pavel Zacha",
-    "Morgan Geekie",
-    "James Hagens",
-    "Fraser Minten",
-    "Marat Khusnutdinov",
-    "Tanner Jeannot",
-    "Matthew Poitras",
-    "Mark Kastelic",
-    "Hampus Lindholm",
-    "Will Borgen",
-    "Nikita Zadorov",
-    "Connor Clifton",
-    "Frederic Brunet",
-    "Mason Lohrei"
+   "doubtful": [
+    {
+     "player": "Emmitt Finnie",
+     "detail": "day to day"
+    }
    ],
-   "summary": "The Detroit Red Wings are looking to build on their defensive performance from their season opener while converting more scoring chances. They are missing key players like Charlie McAvoy, who is suspended, and Marco Kasper, who is out due to an upper body injury. The team is expected to rely on their returning players and new additions to find more offense, with Lucas Raymond emphasizing the importance of sustained pressure and creating more scoring chances."
+   "returning": [
+    "Viktor Arvidsson",
+    "Dylan Larkin",
+    "Lucas Raymond",
+    "Michael Brandsegg-Nygard",
+    "Andrew Copp",
+    "Keegan Kolesar",
+    "Nate Danielson",
+    "Carter Mazur",
+    "Albert Johansson",
+    "Moritz Seider",
+    "Anton Johansson",
+    "Justin Faulk",
+    "Ben Chiarot",
+    "Axel Sandin-Pellikka",
+    "Andreas Englund"
+   ],
+   "summary": "The Detroit Red Wings are coming off a 0-2-0 start to the season, having lost their first two games. Despite several injuries and suspensions, the team has a strong roster with key players returning to the lineup. John Gibson is confirmed to start in goal, and the team is looking to build on their defensive performance from the season opener."
   }
  },
  "jev": {
   "away": {
-   "starter": "unknown",
-   "p_starter": 0.54,
-   "announced": 0.12,
+   "starter": "Samuel Ersson",
+   "p_starter": 0.99,
+   "announced": 0.85,
    "p_out": {
-    "Artem Zub": 0.24,
-    "Kurtis MacDermid": 0.3,
-    "Andre Burakovsky": 0.3,
-    "Jake Sanderson": 0.3,
-    "Ridly Greig": 0.34
+    "Linus Ullmark": 0.94,
+    "Artem Zub": 0.97,
+    "Kurtis MacDermid": 0.97,
+    "Andre Burakovsky": 0.97,
+    "Jake Sanderson": 0.95,
+    "Ridly Greig": 0.93
    }
   },
   "home": {
-   "starter": "unknown",
+   "starter": "John Gibson",
    "p_starter": 0.97,
-   "announced": 0.06,
+   "announced": 0.92,
    "p_out": {
-    "Charlie McAvoy": 0.14
+    "Jacob Bernard-Docker": 0.96,
+    "Marco Kasper": 0.95,
+    "J.T. Compher": 0.5,
+    "Mason Appleton": 0.94,
+    "Emmitt Finnie": 0.06
    }
   }
  },
  "seconds": {
-  "qwen": 25.6,
-  "jev": 0.6
+  "qwen": 30.8,
+  "jev": 0.5
  }
 }

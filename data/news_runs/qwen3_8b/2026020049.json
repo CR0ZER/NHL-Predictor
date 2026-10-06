@@ -9,8 +9,15 @@
   "away_abbr": "MIN",
   "home_abbr": "BUF"
  },
- "run_at": "2026-10-06T12:22:46.908778+00:00",
+ "llm": "qwen3:8b",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T18:55:59.260998+00:00",
  "articles": [
+  {
+   "title": "Wild at Sabres projected lineups",
+   "published": "2026-10-06T16:26:32.793Z",
+   "lineups": true
+  },
   {
    "title": "Kaprizov fools everyone, fires puck into safety guard behind goal",
    "published": "2026-10-04T02:08:00Z",
@@ -27,11 +34,6 @@
    "lineups": false
   },
   {
-   "title": "Injuries and transactions | Zucker, Timmins close to practicing",
-   "published": "2026-10-05T17:08:00Z",
-   "lineups": false
-  },
-  {
    "title": "A year after joining Sabres, Ellis prepares for sophomore season debut",
    "published": "2026-10-05T18:28:29.934Z",
    "lineups": false
@@ -44,12 +46,34 @@
  ],
  "qwen": {
   "away": {
-   "starting_goalie": "Filip Gustavsson",
+   "starting_goalie": "Calvin Pickard",
    "goalie_status": "confirmed",
-   "out": [],
-   "doubtful": [],
-   "returning": [],
-   "summary": "The Minnesota Wild are preparing for their home opener against the Buffalo Sabres. Filip Gustavsson is confirmed to start in goal. The team is looking to build on their strong fan support and positive momentum from the previous season."
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Danila Yurov",
+     "detail": "questionable to play"
+    }
+   ],
+   "returning": [
+    "Kirill Kaprizov",
+    "Jared Spurgeon",
+    "Quinn Hughes",
+    "Olli Maatta",
+    "Daemon Hunt",
+    "Zach Bogosian",
+    "Jesper Wallstedt"
+   ],
+   "summary": "The Minnesota Wild enter the game with a 2-0-0 record, looking to build on their strong start. Key forward Danila Yurov is questionable, and captain Kirill Kaprizov is back in the lineup after a recent incident. Goalie Calvin Pickard is confirmed to start, with Filip Gustavsson and Brock Faber out due to injuries."
   },
   "home": {
    "starting_goalie": "Colten Ellis",
@@ -57,47 +81,64 @@
    "out": [
     {
      "player": "Alex Lyon",
-     "detail": "upper body injury, on injured reserve"
+     "detail": "upper body"
     },
     {
      "player": "Conor Timmins",
-     "detail": "lower body injury, on injured reserve"
+     "detail": "lower body"
     },
     {
      "player": "Jason Zucker",
-     "detail": "sports hernia, on injured reserve"
+     "detail": "sports hernia"
     }
    ],
    "doubtful": [],
    "returning": [
-    "Jiri Kulich",
-    "Rasmus Dahlin",
+    "Josh Norris",
     "Tage Thompson",
-    "Noah Östlund"
+    "Josh Doan",
+    "Zach Benson",
+    "Peyton Krebs",
+    "Jiri Kulich",
+    "Konsta Helenius",
+    "Beck Malenstyn",
+    "Ryan McLeod",
+    "Justin Danforth",
+    "Mattias Samuelsson",
+    "Rasmus Dahlin",
+    "Olen Zellweger",
+    "Owen Power",
+    "Zach Metsa",
+    "Louis Crevier",
+    "Colten Ellis"
    ],
-   "summary": "The Buffalo Sabres are returning to their home ice for the 2026-27 season, with Colten Ellis confirmed to start in goal. Key players like Jiri Kulich, Rasmus Dahlin, Tage Thompson, and Noah Östlund are returning to the lineup. The team is looking to build on their strong fan support and positive momentum from the previous season."
+   "summary": "The Buffalo Sabres are coming off a thrilling 4-3 home opener win against the Chicago Blackhawks, with a sellout crowd and strong fan support. Goalie Colten Ellis is confirmed to start, and the team is looking to build on their momentum. Key players like Jason Zucker and Conor Timmins are expected to return soon, while the team continues to adjust their power-play unit."
   }
  },
  "jev": {
   "away": {
-   "starter": "unknown",
-   "p_starter": 0.94,
-   "announced": 0.07,
-   "p_out": {}
+   "starter": "Jesper Wallstedt",
+   "p_starter": 0.97,
+   "announced": 0.95,
+   "p_out": {
+    "Brock Faber": 0.98,
+    "Filip Gustavsson": 0.97,
+    "Danila Yurov": 0.22
+   }
   },
   "home": {
-   "starter": "unknown",
-   "p_starter": 0.8,
-   "announced": 0.09,
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 0.82,
+   "announced": 0.88,
    "p_out": {
-    "Alex Lyon": 0.42,
-    "Conor Timmins": 0.35,
-    "Jason Zucker": 0.27
+    "Alex Lyon": 0.95,
+    "Conor Timmins": 0.94,
+    "Jason Zucker": 0.94
    }
   }
  },
  "seconds": {
-  "qwen": 15.7,
-  "jev": 0.5
+  "qwen": 23.5,
+  "jev": 0.6
  }
 }
