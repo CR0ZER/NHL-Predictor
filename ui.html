@@ -160,6 +160,19 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .gauge .num small { display: block; font-size: 9.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .6px; margin-top: 2px; }
 .gauge .arc { transition: stroke-dashoffset 1.1s cubic-bezier(.2,.8,.2,1); }
 .probs { display: flex; flex-direction: column; gap: 7px; }
+.news { display: flex; flex-direction: column; gap: 6px; font-size: 12px; padding: 10px 12px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--border); }
+.news .line { display: flex; gap: 8px; align-items: baseline; min-width: 0; }
+.news .who { font-weight: 800; flex: none; width: 34px; }
+.news .abs { color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.news .abs b { color: var(--text-primary); font-weight: 650; }
+.news .imp { margin-left: auto; flex: none; font-weight: 750; font-variant-numeric: tabular-nums; color: var(--critical-text); }
+.news .none { color: var(--text-muted); }
+.news details summary { cursor: pointer; color: var(--ice); font-weight: 650; list-style: none; }
+.news details summary::-webkit-details-marker { display: none; }
+.news details summary::before { content: "▸ "; display: inline-block; transition: transform .2s; }
+.news details[open] summary::before { transform: rotate(90deg); }
+.news details p { margin: 6px 0 0; color: var(--text-secondary); line-height: 1.5; }
+.news details p b { color: var(--text-primary); }
 .prob { display: grid; grid-template-columns: 70px 1fr; align-items: center; gap: 10px; font-size: 11.5px; }
 .prob .src { color: var(--text-secondary); font-weight: 650; }
 .tug { position: relative; height: 22px; border-radius: 6px; background: var(--surface-2); overflow: hidden; display: flex; gap: 2px; font-variant-numeric: tabular-nums; font-weight: 750; font-size: 11px; }
@@ -288,7 +301,7 @@ td.r, th.r { text-align: right; }
     <div class="controls">
       <div class="field"><label for="date">Soirée</label><input id="date" type="date"></div>
       <div class="field"><label for="stake">Mise</label><input id="stake" type="number" min="1" step="1" value="10"><label>€</label></div>
-      <label class="field switch" title="Lire la presse avec Jev pour trouver les gardiens titulaires"><input id="jev" type="checkbox" checked><span class="knob"></span><span>Jev</span></label>
+      <label class="field switch" title="Chaîne d'actualité : articles NHL.com lus par qwen3 (local), puis gardiens et absences tranchés par Jev"><input id="jev" type="checkbox" checked><span class="knob"></span><span>Actu + Jev</span></label>
       <button class="cta" id="btn-predict" title="Prédit la soirée et enregistre les paris fictifs aux cotes actuelles">Prédire</button>
       <button id="btn-settle" title="Résultats officiels et règlement des paris">Régler</button>
       <button id="btn-odds" title="Historique des cotes de la saison (≈ 6 s par nouveau match terminé)">MAJ cotes</button>
@@ -544,6 +557,18 @@ function status(b) {
   if (b.status === "perdu") return `<span class="status lost">✕ ${eur(b.profit)}</span>`;
   return `<span class="status wait">⏳ en attente</span>`;
 }
+function newsBlock(g) {
+  if (!g.news) return `<div class="news"><span class="none">Actualité non lue (match commencé, Ollama ou Jev indisponible) : gardien deviné, absences ignorées.</span></div>`;
+  const line = side => {
+    let abs = []; try { abs = JSON.parse(g[side + "_absents"] || "[]"); } catch (e) {}
+    const sure = abs.filter(a => a.p >= 0.15);  // même seuil que l'impact affiché (les plus faibles pèsent peu)
+    const txt = sure.length ? sure.slice(0, 4).map(a => `<b>${esc(a.name.split(" ").slice(-1)[0])}</b> ${Math.round(a.p * 100)} %`).join(" · ") + (sure.length > 4 ? ` · +${sure.length - 4}` : "") : `<span class="none">aucun absent signalé</span>`;
+    const imp = g[side + "_miss"] > 0.05 ? `<span class="imp" title="Points par match habituels des absents, pondérés par la probabilité d'absence (Jev)">−${g[side + "_miss"].toFixed(1)} pt/m</span>` : "";
+    return `<div class="line"><span class="who">${abbr(g[side])}</span><span class="abs">${txt}</span>${imp}</div>`;
+  };
+  const sum = ["away", "home"].filter(s => g[s + "_summary"]).map(s => `<p><b>${abbr(g[s])}</b> · ${esc(g[s + "_summary"])}</p>`).join("");
+  return `<div class="news">${line("away")}${line("home")}${sum ? `<details><summary>Résumé de l'actualité (qwen3)</summary>${sum}</details>` : ""}</div>`;
+}
 function renderGames(list, day) {
   $("#games-sub").textContent = list.length ? "probabilité de victoire (extérieur | domicile), prolongation incluse · survolez une carte" : "";
   if (!list.length) { $("#games").innerHTML = `<div class="card empty" style="grid-column:1/-1">Aucune prédiction enregistrée pour l'instant.</div>`; return; }
@@ -561,10 +586,11 @@ function renderGames(list, day) {
         ${gauge(g.p_home)}
         <div class="team home" title="${esc(g.home)}">${logo(g.home)}<div class="tname"><b>${abbr(g.home)} <span class="nick">${esc(nick(g.home))}</span></b><small>${gk(g.home_goalie)}</small></div></div>
       </div>
+      ${newsBlock(g)}
       <div class="probs">${tug(g.p_home, "Modèle")}${tug(g.pin_fair, "Pinnacle")}${tug(uni, "Unibet")}</div>
       <div class="odds">
         <span class="odd">Unibet <b>${g.uni_A ?? "–"}</b> | <b>${g.uni_H ?? "–"}</b></span>
-        <span class="odd">Winamax 1N2 <b>${g.wmx_H ?? "–"}</b> · <b>${g.wmx_X ?? "–"}</b> · <b>${g.wmx_A ?? "–"}</b></span>
+        <span class="odd">Winamax 1N2 <b>${g.wmx_A ?? "–"}</b> · <b>${g.wmx_X ?? "–"}</b> · <b>${g.wmx_H ?? "–"}</b></span>
         <span class="odd">Nul 60 min <b>${pct(g.pX, 0)}</b></span>
       </div>
       <div class="bets">${bets.length ? bets.map(b => `<div class="bet"><span class="swatch" style="background:${COLORS[b.strategy]}"></span>
@@ -733,7 +759,7 @@ function calibChart(el, pts) {
   });
 }
 function coefChart(el, coefs) {
-  const names = { d_xg: "Part d'xG (forme)", d_sat: "Part des tirs (Corsi)", d_gd: "Différence de buts", d_goalie: "Gardien (GSAx)", home_b2b: "Domicile en back-to-back", away_b2b: "Extérieur en back-to-back" };
+  const names = { d_xg: "Part d'xG (forme)", d_sat: "Part des tirs (Corsi)", d_gd: "Différence de buts", d_goalie: "Gardien (GSAx)", home_b2b: "Domicile en back-to-back", away_b2b: "Extérieur en back-to-back", d_miss: "Absences (pts/match manquants)" };
   const ent = Object.entries(coefs), max = Math.max(...ent.map(([, v]) => Math.abs(v)));
   const W = el.clientWidth || 500, rowH = 40, H = ent.length * rowH + 10, lab = 176, half = (W - lab - 56) / 2, mid = lab + half;
   let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Poids du modèle"><line x1="${mid}" x2="${mid}" y1="0" y2="${H}" stroke="${css("--axis")}" stroke-width="1.5"/>`;

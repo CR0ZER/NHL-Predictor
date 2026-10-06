@@ -55,9 +55,9 @@ def clean(x):
     return int(x) if isinstance(x, np.integer) else x
 
 
-def run_predict(day, stake, use_jev):
-    JOB["msg"] = "Chargement du modèle" + (" et lecture de la presse par Jev (gardiens)…" if use_jev else "…")
-    u = nhl.predictions(day, use_jev=use_jev)
+def run_predict(day, stake, use_news):
+    JOB["msg"] = "Chargement du modèle…"
+    u = nhl.predictions(day, use_news=use_news, progress=lambda m: JOB.update(msg=m))
     if u.empty:
         JOB["msg"] = f"Aucun match à venir le {day}."
         return
@@ -70,7 +70,10 @@ def run_predict(day, stake, use_jev):
         pin_h, pin_a = c("pinnacle", "151", "H"), c("pinnacle", "151", "A")
         base = {"gameId": int(g.gameId), "date": day, "kickoff": g.kickoff, "away": g.away, "home": g.home}
         preds.append({**base, "placed_at": now, "away_goalie": g.away_goalie, "home_goalie": g.home_goalie,
-                      "p_home": g.p_home, "pH": g.pH, "pX": g.pX, "pA": g.pA,
+                      "p_home": g.p_home, "pH": g.pH, "pX": g.pX, "pA": g.pA, "news": bool(g.news),
+                      "away_absents": g.away_absents, "home_absents": g.home_absents,
+                      "away_summary": g.away_summary, "home_summary": g.home_summary,
+                      "away_miss": g.away_miss, "home_miss": g.home_miss,
                       "pin_fair": (1 / pin_h) / (1 / pin_h + 1 / pin_a) if pin_h and pin_a else None,
                       "pin_H": pin_h, "pin_A": pin_a,
                       "uni_H": c("unibet.fr", "151", "H"), "uni_A": c("unibet.fr", "151", "A"),
