@@ -1,0 +1,156 @@
+{
+ "game": {
+  "gameId": 2026020031,
+  "kickoff": "2026-10-04T00:00:00Z",
+  "away": "Boston Bruins",
+  "home": "Minnesota Wild",
+  "away_id": 6,
+  "home_id": 30,
+  "away_abbr": "BOS",
+  "home_abbr": "MIN"
+ },
+ "articles": [
+  {
+   "title": "Bruins at Wild projected lineups",
+   "published": "2026-10-03T17:04:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Wild on West 7th Is Back: Season Premiere",
+   "published": "2026-10-01T01:59:32.597Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Wild at Predators",
+   "published": "2026-10-01T02:01:25.283Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Wrap Up: Minnesota vs. Nashville",
+   "published": "2026-10-01T16:49:25.127Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Predators projected lineups",
+   "published": "2026-10-01T17:15:48.09Z",
+   "lineups": false
+  },
+  {
+   "title": "‘It’s Just a Dream Come True’ for Jeannot to Join Boston’s Leadership Group",
+   "published": "2026-10-01T19:01:57.573Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Michael Eyssimont",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frederic Brunet",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matthew Poitras",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Charlie McAvoy",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Jonathan Aspirot",
+    "Mason Lohrei",
+    "James Hagens",
+    "Fraser Minten",
+    "Marat Khusnutdinov",
+    "Tanner Jeannot",
+    "Sean Kuraly",
+    "Mark Kastelic",
+    "Hampus Lindholm",
+    "Will Borgen",
+    "Nikita Zadorov",
+    "Connor Clifton"
+   ],
+   "summary": "The Boston Bruins are coming off a 4-3 overtime win against the Winnipeg Jets, with Jeremy Swayman expected to start in goal. The team has a few scratches and an injured player, but overall, they are in good form. Tanner Jeannot has been named an alternate captain, adding leadership to the team."
+  },
+  "home": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Nico Sturm",
+     "detail": "scratched"
+    },
+    {
+     "player": "David Spacek",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brock Faber",
+     "detail": "injured (skull fracture), out indefinitely"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Kirill Kaprizov",
+    "Danila Yurov",
+    "Maxim Shabanov",
+    "Blake Coleman",
+    "Joel Eriksson Ek",
+    "Matt Boldy",
+    "Yakov Trenin",
+    "Ryan Hartman",
+    "Bobby Brink",
+    "Nick Foligno",
+    "Michael McCarron",
+    "Marcus Foligno",
+    "Quinn Hughes",
+    "Jared Spurgeon",
+    "Olli Maatta",
+    "Jonas Brodin",
+    "Daemon Hunt",
+    "Zach Bogosian"
+   ],
+   "summary": "The Minnesota Wild are looking to start their season strong, with Jesper Wallstedt expected to start in goal. The team has several scratches and key injuries, but they are optimistic about their lineup. Kirill Kaprizov is expected to lead the top line, and the Wild are hoping to build on their strong performance against the Nashville Predators."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Michael DiPietro",
+   "p_starter": 0.51,
+   "announced": 0.88,
+   "p_out": {
+    "Michael Eyssimont": 0.97,
+    "Frederic Brunet": 0.97,
+    "Matthew Poitras": 0.97,
+    "Charlie McAvoy": 0.99
+   }
+  },
+  "home": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Nico Sturm": 0.94,
+    "David Spacek": 0.96,
+    "Brock Faber": 0.98,
+    "Filip Gustavsson": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 26.9,
+  "jev": 0.5
+ }
+}

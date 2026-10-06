@@ -6,6 +6,12 @@
       "runtimeExecutable": "uv",
       "runtimeArgs": ["run", "--env-file", ".env", "python", "app.py"],
       "port": 8765
+    },
+    {
+      "name": "site-statique",
+      "runtimeExecutable": "uv",
+      "runtimeArgs": ["run", "python", "-m", "http.server", "8766", "--directory", "site"],
+      "port": 8766
     }
   ]
 }

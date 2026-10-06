@@ -1,0 +1,94 @@
+{
+ "game": {
+  "gameId": 2026020036,
+  "kickoff": "2026-10-04T22:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "New York Rangers",
+  "away_id": 68,
+  "home_id": 3,
+  "away_abbr": "UTA",
+  "home_abbr": "NYR"
+ },
+ "articles": [
+  {
+   "title": "Mammoth at Rangers projected lineups",
+   "published": "2026-10-04T13:24:00Z",
+   "lineups": true
+  },
+  {
+   "title": "RECAP: Utah 6, Chicago 0",
+   "published": "2026-10-02T01:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "FDNY, NYPD hockey teams join Rangers on ice for 9/11 memorial tribute",
+   "published": "2026-10-02T02:07:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Knicks coach Mike Brown, Gretzky cheer on Rangers at home opener ",
+   "published": "2026-10-02T02:35:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers vs. Lightning: Postgame Notes",
+   "published": "2026-10-02T03:05:02.923Z",
+   "lineups": false
+  },
+  {
+   "title": "Shesterkin's goalie goal at Garden lights up social media",
+   "published": "2026-10-02T03:27:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "injured (shoulder)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Utah Mammoth enter this game with a strong 2-0-0 record, having defeated the Chicago Blackhawks 6-0 in their season opener. Key players like Nick Schmaltz, Anders Lee, and Dylan Guenther are expected to play significant roles. Mikhail Sergachev and MacKenzie Weegar are also key contributors. The team will be without injured forward Maveric Lamoureux."
+  },
+  "home": {
+   "starting_goalie": "Igor Shesterkin",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The New York Rangers are coming off a strong home opener against the Tampa Bay Lightning, winning 5-1. Igor Shesterkin made history by scoring a goal, becoming the first Rangers goalie to do so. The team is 2-1-0 to start the season and has several key players returning, including Pavel Dorofeyev and Eeli Tolvanen, who both scored their first goals as Rangers. Joonas Korpisalo is out due to an injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Maveric Lamoureux": 0.98
+   }
+  },
+  "home": {
+   "starter": "Igor Shesterkin",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Joonas Korpisalo": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 15.2,
+  "jev": 0.5
+ }
+}

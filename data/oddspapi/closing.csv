@@ -1,0 +1,2350 @@
+fixtureId,home,date,book,market,side,price
+id1500023462075580,columbus blue jackets,2026-01-13,pinnacle,151,H,1.719
+id1500023462075580,columbus blue jackets,2026-01-13,pinnacle,151,A,2.25
+id1500023462075580,columbus blue jackets,2026-01-13,pinnacle,153,H,2.11
+id1500023462075580,columbus blue jackets,2026-01-13,pinnacle,153,X,4.38
+id1500023462075580,columbus blue jackets,2026-01-13,pinnacle,153,A,2.87
+id1500023462075582,ottawa senators,2026-01-13,pinnacle,151,H,1.45
+id1500023462075582,ottawa senators,2026-01-13,pinnacle,151,A,2.97
+id1500023462075582,ottawa senators,2026-01-13,pinnacle,153,H,1.729
+id1500023462075582,ottawa senators,2026-01-13,pinnacle,153,X,4.71
+id1500023462075582,ottawa senators,2026-01-13,pinnacle,153,A,3.86
+id1500023462075584,washington capitals,2026-01-13,pinnacle,151,H,1.781
+id1500023462075584,washington capitals,2026-01-13,pinnacle,151,A,2.16
+id1500023462075584,washington capitals,2026-01-13,pinnacle,153,H,2.21
+id1500023462075584,washington capitals,2026-01-13,pinnacle,153,X,4.21
+id1500023462075584,washington capitals,2026-01-13,pinnacle,153,A,2.77
+id1500023462075586,pittsburgh penguins,2026-01-13,pinnacle,151,H,2.26
+id1500023462075586,pittsburgh penguins,2026-01-13,pinnacle,151,A,1.719
+id1500023462075586,pittsburgh penguins,2026-01-13,pinnacle,153,H,2.88
+id1500023462075586,pittsburgh penguins,2026-01-13,pinnacle,153,X,4.3
+id1500023462075586,pittsburgh penguins,2026-01-13,pinnacle,153,A,2.12
+id1500023462075588,boston bruins,2026-01-13,pinnacle,151,H,1.8
+id1500023462075588,boston bruins,2026-01-13,pinnacle,151,A,2.14
+id1500023462075588,boston bruins,2026-01-13,pinnacle,153,H,2.23
+id1500023462075588,boston bruins,2026-01-13,pinnacle,153,X,4.27
+id1500023462075588,boston bruins,2026-01-13,pinnacle,153,A,2.72
+id1500023462075592,st. louis blues,2026-01-13,pinnacle,151,H,2.53
+id1500023462075592,st. louis blues,2026-01-13,pinnacle,151,A,1.584
+id1500023462075592,st. louis blues,2026-01-13,pinnacle,153,H,3.27
+id1500023462075592,st. louis blues,2026-01-13,pinnacle,153,X,4.4
+id1500023462075592,st. louis blues,2026-01-13,pinnacle,153,A,1.934
+id1500023462075590,winnipeg jets,2026-01-13,pinnacle,151,H,1.819
+id1500023462075590,winnipeg jets,2026-01-13,pinnacle,151,A,2.11
+id1500023462075590,winnipeg jets,2026-01-13,pinnacle,153,H,2.28
+id1500023462075590,winnipeg jets,2026-01-13,pinnacle,153,X,4.14
+id1500023462075590,winnipeg jets,2026-01-13,pinnacle,153,A,2.7
+id1500023462075594,nashville predators,2026-01-13,pinnacle,151,H,2.19
+id1500023462075594,nashville predators,2026-01-13,pinnacle,151,A,1.757
+id1500023462075594,nashville predators,2026-01-13,pinnacle,153,H,2.8
+id1500023462075594,nashville predators,2026-01-13,pinnacle,153,X,4.21
+id1500023462075594,nashville predators,2026-01-13,pinnacle,153,A,2.19
+id1500023462075596,utah mammoth,2026-01-13,pinnacle,151,H,1.724
+id1500023462075596,utah mammoth,2026-01-13,pinnacle,151,A,2.25
+id1500023462075596,utah mammoth,2026-01-13,pinnacle,153,H,2.11
+id1500023462075596,utah mammoth,2026-01-13,pinnacle,153,X,4.33
+id1500023462075596,utah mammoth,2026-01-13,pinnacle,153,A,2.89
+id1500023462075598,anaheim ducks,2026-01-13,pinnacle,151,H,2.05
+id1500023462075598,anaheim ducks,2026-01-13,pinnacle,151,A,1.862
+id1500023462075598,anaheim ducks,2026-01-13,pinnacle,153,H,2.59
+id1500023462075598,anaheim ducks,2026-01-13,pinnacle,153,X,4.29
+id1500023462075598,anaheim ducks,2026-01-13,pinnacle,153,A,2.32
+id1500023462075600,new jersey devils,2026-01-14,pinnacle,151,H,1.628
+id1500023462075600,new jersey devils,2026-01-14,pinnacle,151,A,2.4
+id1500023462075600,new jersey devils,2026-01-14,pinnacle,153,H,2.0
+id1500023462075600,new jersey devils,2026-01-14,pinnacle,153,X,4.21
+id1500023462075600,new jersey devils,2026-01-14,pinnacle,153,A,3.12
+id1500023462075606,los angeles kings,2026-01-14,pinnacle,151,H,1.943
+id1500023462075606,los angeles kings,2026-01-14,pinnacle,151,A,1.943
+id1500023462075606,los angeles kings,2026-01-14,pinnacle,153,H,2.47
+id1500023462075606,los angeles kings,2026-01-14,pinnacle,153,X,4.08
+id1500023462075606,los angeles kings,2026-01-14,pinnacle,153,A,2.46
+id1500023462075634,colorado avalanche,2026-01-16,pinnacle,151,H,1.362
+id1500023462075634,colorado avalanche,2026-01-16,pinnacle,151,A,3.4
+id1500023462075634,colorado avalanche,2026-01-16,pinnacle,153,H,1.598
+id1500023462075634,colorado avalanche,2026-01-16,pinnacle,153,X,4.96
+id1500023462075634,colorado avalanche,2026-01-16,pinnacle,153,A,4.47
+id1500023462075636,los angeles kings,2026-01-16,pinnacle,151,H,1.675
+id1500023462075636,los angeles kings,2026-01-16,pinnacle,151,A,2.33
+id1500023462075636,los angeles kings,2026-01-16,pinnacle,153,H,2.06
+id1500023462075636,los angeles kings,2026-01-16,pinnacle,153,X,4.29
+id1500023462075636,los angeles kings,2026-01-16,pinnacle,153,A,3.0
+id1500023462075638,buffalo sabres,2026-01-17,pinnacle,151,H,1.819
+id1500023462075638,buffalo sabres,2026-01-17,pinnacle,151,A,2.1
+id1500023462075638,buffalo sabres,2026-01-17,pinnacle,153,H,2.27
+id1500023462075638,buffalo sabres,2026-01-17,pinnacle,153,X,4.23
+id1500023462075638,buffalo sabres,2026-01-17,pinnacle,153,A,2.67
+id1500023462075640,philadelphia flyers,2026-01-17,pinnacle,151,H,1.724
+id1500023462075640,philadelphia flyers,2026-01-17,pinnacle,151,A,2.24
+id1500023462075640,philadelphia flyers,2026-01-17,pinnacle,153,H,2.14
+id1500023462075640,philadelphia flyers,2026-01-17,pinnacle,153,X,4.21
+id1500023462075640,philadelphia flyers,2026-01-17,pinnacle,153,A,2.89
+id1500023462075642,calgary flames,2026-01-17,pinnacle,151,H,1.925
+id1500023462075642,calgary flames,2026-01-17,pinnacle,151,A,1.98
+id1500023462075642,calgary flames,2026-01-17,pinnacle,153,H,2.42
+id1500023462075642,calgary flames,2026-01-17,pinnacle,153,X,4.17
+id1500023462075642,calgary flames,2026-01-17,pinnacle,153,A,2.51
+id1500023462075644,utah mammoth,2026-01-17,pinnacle,151,H,1.529
+id1500023462075644,utah mammoth,2026-01-17,pinnacle,151,A,2.68
+id1500023462075644,utah mammoth,2026-01-17,pinnacle,153,H,1.869
+id1500023462075644,utah mammoth,2026-01-17,pinnacle,153,X,4.31
+id1500023462075644,utah mammoth,2026-01-17,pinnacle,153,A,3.53
+id1500023462075646,ottawa senators,2026-01-17,pinnacle,151,H,1.84
+id1500023462075646,ottawa senators,2026-01-17,pinnacle,151,A,2.08
+id1500023462075646,ottawa senators,2026-01-17,pinnacle,153,H,2.3
+id1500023462075646,ottawa senators,2026-01-17,pinnacle,153,X,4.24
+id1500023462075646,ottawa senators,2026-01-17,pinnacle,153,A,2.64
+id1500023462075648,pittsburgh penguins,2026-01-17,pinnacle,151,H,1.806
+id1500023462075648,pittsburgh penguins,2026-01-17,pinnacle,151,A,2.12
+id1500023462075648,pittsburgh penguins,2026-01-17,pinnacle,153,H,2.24
+id1500023462075648,pittsburgh penguins,2026-01-17,pinnacle,153,X,4.33
+id1500023462075648,pittsburgh penguins,2026-01-17,pinnacle,153,A,2.68
+id1500023462075650,winnipeg jets,2026-01-17,pinnacle,151,H,1.813
+id1500023462075650,winnipeg jets,2026-01-17,pinnacle,151,A,2.12
+id1500023462075650,winnipeg jets,2026-01-17,pinnacle,153,H,2.27
+id1500023462075650,winnipeg jets,2026-01-17,pinnacle,153,X,4.17
+id1500023462075650,winnipeg jets,2026-01-17,pinnacle,153,A,2.71
+id1500023462075652,washington capitals,2026-01-17,pinnacle,151,H,1.699
+id1500023462075652,washington capitals,2026-01-17,pinnacle,151,A,2.29
+id1500023462075652,washington capitals,2026-01-17,pinnacle,153,H,2.12
+id1500023462075652,washington capitals,2026-01-17,pinnacle,153,X,4.18
+id1500023462075652,washington capitals,2026-01-17,pinnacle,153,A,2.95
+id1500023462075654,new jersey devils,2026-01-17,pinnacle,151,H,2.02
+id1500023462075654,new jersey devils,2026-01-17,pinnacle,151,A,1.892
+id1500023462075654,new jersey devils,2026-01-17,pinnacle,153,H,2.56
+id1500023462075654,new jersey devils,2026-01-17,pinnacle,153,X,4.19
+id1500023462075654,new jersey devils,2026-01-17,pinnacle,153,A,2.38
+id1500023462075656,chicago blackhawks,2026-01-17,pinnacle,151,H,2.02
+id1500023462075656,chicago blackhawks,2026-01-17,pinnacle,151,A,1.892
+id1500023462075656,chicago blackhawks,2026-01-17,pinnacle,153,H,2.56
+id1500023462075656,chicago blackhawks,2026-01-17,pinnacle,153,X,4.2
+id1500023462075656,chicago blackhawks,2026-01-17,pinnacle,153,A,2.38
+id1500023462075658,vancouver canucks,2026-01-17,pinnacle,151,H,2.58
+id1500023462075658,vancouver canucks,2026-01-17,pinnacle,151,A,1.568
+id1500023462075658,vancouver canucks,2026-01-17,pinnacle,153,H,3.32
+id1500023462075658,vancouver canucks,2026-01-17,pinnacle,153,X,4.47
+id1500023462075658,vancouver canucks,2026-01-17,pinnacle,153,A,1.9
+id1500023462075660,anaheim ducks,2026-01-17,pinnacle,151,H,1.99
+id1500023462075660,anaheim ducks,2026-01-17,pinnacle,151,A,1.917
+id1500023462075660,anaheim ducks,2026-01-17,pinnacle,153,H,2.51
+id1500023462075660,anaheim ducks,2026-01-17,pinnacle,153,X,4.24
+id1500023462075660,anaheim ducks,2026-01-17,pinnacle,153,A,2.41
+id1500023462075662,vegas golden knights,2026-01-17,pinnacle,151,H,1.411
+id1500023462075662,vegas golden knights,2026-01-17,pinnacle,151,A,3.14
+id1500023462075662,vegas golden knights,2026-01-17,pinnacle,153,H,1.684
+id1500023462075662,vegas golden knights,2026-01-17,pinnacle,153,X,4.58
+id1500023462075662,vegas golden knights,2026-01-17,pinnacle,153,A,4.18
+id1500023462075710,calgary flames,2026-01-21,pinnacle,151,H,2.08
+id1500023462075710,calgary flames,2026-01-21,pinnacle,151,A,1.769
+id1500023462075724,montreal canadiens,2026-01-22,pinnacle,151,H,1.763
+id1500023462075724,montreal canadiens,2026-01-22,pinnacle,151,A,2.09
+id1500023462075762,st. louis blues,2026-01-24,pinnacle,151,H,2.24
+id1500023462075762,st. louis blues,2026-01-24,pinnacle,151,A,1.666
+id1500023462075790,detroit red wings,2026-01-27,pinnacle,151,H,1.826
+id1500023462075790,detroit red wings,2026-01-27,pinnacle,151,A,2.09
+id1500023462075792,montreal canadiens,2026-01-27,pinnacle,151,H,2.04
+id1500023462075792,montreal canadiens,2026-01-27,pinnacle,151,A,1.877
+id1500023462075794,florida panthers,2026-01-27,pinnacle,151,H,1.653
+id1500023462075794,florida panthers,2026-01-27,pinnacle,151,A,2.38
+id1500023462075796,toronto maple leafs,2026-01-27,pinnacle,151,H,1.869
+id1500023462075796,toronto maple leafs,2026-01-27,pinnacle,151,A,2.04
+id1500023462075798,boston bruins,2026-01-27,pinnacle,151,H,1.98
+id1500023462075798,boston bruins,2026-01-27,pinnacle,151,A,1.917
+id1500023462075800,new jersey devils,2026-01-27,pinnacle,151,H,1.8
+id1500023462075800,new jersey devils,2026-01-27,pinnacle,151,A,2.13
+id1500023462075802,minnesota wild,2026-01-27,pinnacle,151,H,1.51
+id1500023462075802,minnesota wild,2026-01-27,pinnacle,151,A,2.75
+id1500023462075804,st. louis blues,2026-01-27,pinnacle,151,H,2.39
+id1500023462075804,st. louis blues,2026-01-27,pinnacle,151,A,1.649
+id1500023462075806,vancouver canucks,2026-01-27,pinnacle,151,H,2.16
+id1500023462075806,vancouver canucks,2026-01-27,pinnacle,151,A,1.775
+id1500023462075808,seattle kraken,2026-01-27,pinnacle,151,H,2.17
+id1500023462075808,seattle kraken,2026-01-27,pinnacle,151,A,1.775
+id1500023462075814,new york islanders,2026-01-28,pinnacle,151,H,1.714
+id1500023462075814,new york islanders,2026-01-28,pinnacle,151,A,2.26
+id1500023462075810,columbus blue jackets,2026-01-28,pinnacle,151,H,1.884
+id1500023462075810,columbus blue jackets,2026-01-28,pinnacle,151,A,2.02
+id1500023462075812,ottawa senators,2026-01-28,pinnacle,151,H,2.26
+id1500023462075812,ottawa senators,2026-01-28,pinnacle,151,A,1.719
+id1500023462075816,montreal canadiens,2026-01-29,pinnacle,151,H,2.15
+id1500023462075816,montreal canadiens,2026-01-29,pinnacle,151,A,1.787
+id1500023462075818,new york rangers,2026-01-29,pinnacle,151,H,2.24
+id1500023462075818,new york rangers,2026-01-29,pinnacle,151,A,1.724
+id1500023462075820,new jersey devils,2026-01-29,pinnacle,151,H,1.8
+id1500023462075820,new jersey devils,2026-01-29,pinnacle,151,A,2.13
+id1500023462075824,carolina hurricanes,2026-01-29,pinnacle,151,H,1.574
+id1500023462075824,carolina hurricanes,2026-01-29,pinnacle,151,A,2.56
+id1500023462075826,pittsburgh penguins,2026-01-29,pinnacle,151,H,1.595
+id1500023462075826,pittsburgh penguins,2026-01-29,pinnacle,151,A,2.51
+id1500023462075828,boston bruins,2026-01-29,pinnacle,151,H,1.657
+id1500023462075828,boston bruins,2026-01-29,pinnacle,151,A,2.37
+id1500023462075830,tampa bay lightning,2026-01-29,pinnacle,151,H,1.549
+id1500023462075830,tampa bay lightning,2026-01-29,pinnacle,151,A,2.63
+id1500023462075832,buffalo sabres,2026-01-29,pinnacle,151,H,1.869
+id1500023462075832,buffalo sabres,2026-01-29,pinnacle,151,A,2.04
+id1500023462075822,detroit red wings,2026-01-29,pinnacle,151,H,1.813
+id1500023462075822,detroit red wings,2026-01-29,pinnacle,151,A,2.12
+id1500023462075834,minnesota wild,2026-01-29,pinnacle,151,H,1.568
+id1500023462075834,minnesota wild,2026-01-29,pinnacle,151,A,2.57
+id1500023462075836,st. louis blues,2026-01-29,pinnacle,151,H,2.32
+id1500023462075836,st. louis blues,2026-01-29,pinnacle,151,A,1.684
+id1500023462075838,edmonton oilers,2026-01-29,pinnacle,151,H,1.558
+id1500023462075838,edmonton oilers,2026-01-29,pinnacle,151,A,2.61
+id1500023462075840,seattle kraken,2026-01-29,pinnacle,151,H,1.98
+id1500023462075840,seattle kraken,2026-01-29,pinnacle,151,A,1.925
+id1500023462075842,vancouver canucks,2026-01-29,pinnacle,151,H,2.36
+id1500023462075842,vancouver canucks,2026-01-29,pinnacle,151,A,1.662
+id1500023462075844,vegas golden knights,2026-01-29,pinnacle,151,H,1.847
+id1500023462075844,vegas golden knights,2026-01-29,pinnacle,151,A,2.07
+id1500023462075846,chicago blackhawks,2026-01-30,pinnacle,151,H,2.44
+id1500023462075846,chicago blackhawks,2026-01-30,pinnacle,151,A,1.625
+id1500023462075848,philadelphia flyers,2026-01-31,pinnacle,151,H,2.0
+id1500023462075848,philadelphia flyers,2026-01-31,pinnacle,151,A,1.909
+id1500023462075850,detroit red wings,2026-01-31,pinnacle,151,H,2.28
+id1500023462075850,detroit red wings,2026-01-31,pinnacle,151,A,1.709
+id1500023462075852,pittsburgh penguins,2026-01-31,pinnacle,151,H,1.487
+id1500023462075852,pittsburgh penguins,2026-01-31,pinnacle,151,A,2.82
+id1500023462075854,florida panthers,2026-01-31,pinnacle,151,H,1.719
+id1500023462075854,florida panthers,2026-01-31,pinnacle,151,A,2.26
+id1500023462075856,calgary flames,2026-01-31,pinnacle,151,H,2.05
+id1500023462075856,calgary flames,2026-01-31,pinnacle,151,A,1.869
+id1500023462075858,washington capitals,2026-01-31,pinnacle,151,H,2.67
+id1500023462075858,washington capitals,2026-01-31,pinnacle,151,A,1.534
+id1500023462075860,st. louis blues,2026-01-31,pinnacle,151,H,1.97
+id1500023462075860,st. louis blues,2026-01-31,pinnacle,151,A,1.934
+id1500023462075862,ottawa senators,2026-01-31,pinnacle,151,H,1.613
+id1500023462075862,ottawa senators,2026-01-31,pinnacle,151,A,2.46
+id1500023462075864,vancouver canucks,2026-01-31,pinnacle,151,H,2.38
+id1500023462075864,vancouver canucks,2026-01-31,pinnacle,151,A,1.653
+id1500023462075866,new york islanders,2026-01-31,pinnacle,151,H,1.819
+id1500023462075866,new york islanders,2026-01-31,pinnacle,151,A,2.11
+id1500023462075868,buffalo sabres,2026-01-31,pinnacle,151,H,1.84
+id1500023462075868,buffalo sabres,2026-01-31,pinnacle,151,A,2.08
+id1500023462075870,utah mammoth,2026-01-31,pinnacle,151,H,1.854
+id1500023462075870,utah mammoth,2026-01-31,pinnacle,151,A,2.06
+id1500023462075872,vegas golden knights,2026-01-31,pinnacle,151,H,1.546
+id1500023462075872,vegas golden knights,2026-01-31,pinnacle,151,A,2.64
+id1500023462075874,edmonton oilers,2026-01-31,pinnacle,151,H,1.8
+id1500023462075874,edmonton oilers,2026-01-31,pinnacle,151,A,2.14
+id1500023462075878,carolina hurricanes,2026-02-01,pinnacle,151,H,1.558
+id1500023462075878,carolina hurricanes,2026-02-01,pinnacle,151,A,2.46
+id1500023462075876,tampa bay lightning,2026-02-01,pinnacle,151,H,1.465
+id1500023462075876,tampa bay lightning,2026-02-01,pinnacle,151,A,2.74
+id1500023462075880,anaheim ducks,2026-02-01,pinnacle,151,H,1.9
+id1500023462075880,anaheim ducks,2026-02-01,pinnacle,151,A,2.009
+id1500023462075882,washington capitals,2026-02-02,pinnacle,151,H,1.819
+id1500023462075882,washington capitals,2026-02-02,pinnacle,151,A,2.11
+id1500023462075884,florida panthers,2026-02-02,pinnacle,151,H,1.925
+id1500023462075884,florida panthers,2026-02-02,pinnacle,151,A,1.97
+id1500023462075886,pittsburgh penguins,2026-02-02,pinnacle,151,H,2.12
+id1500023462075886,pittsburgh penguins,2026-02-02,pinnacle,151,A,1.813
+id1500023462075888,minnesota wild,2026-02-02,pinnacle,151,H,1.813
+id1500023462075888,minnesota wild,2026-02-02,pinnacle,151,A,2.11
+id1500023462075890,nashville predators,2026-02-02,pinnacle,151,H,1.719
+id1500023462075890,nashville predators,2026-02-02,pinnacle,151,A,2.26
+id1500023462075892,dallas stars,2026-02-02,pinnacle,151,H,1.714
+id1500023462075892,dallas stars,2026-02-02,pinnacle,151,A,2.26
+id1500023462075894,chicago blackhawks,2026-02-02,pinnacle,151,H,2.0
+id1500023462075894,chicago blackhawks,2026-02-02,pinnacle,151,A,1.909
+id1500023462075896,colorado avalanche,2026-02-02,pinnacle,151,H,1.526
+id1500023462075896,colorado avalanche,2026-02-02,pinnacle,151,A,2.7
+id1500023462075898,utah mammoth,2026-02-02,pinnacle,151,H,1.359
+id1500023462075898,utah mammoth,2026-02-02,pinnacle,151,A,3.42
+id1500023462075900,calgary flames,2026-02-02,pinnacle,151,H,2.1
+id1500023462075900,calgary flames,2026-02-02,pinnacle,151,A,1.826
+id1500023462075902,carolina hurricanes,2026-02-03,pinnacle,151,H,1.591
+id1500023462075902,carolina hurricanes,2026-02-03,pinnacle,151,A,2.52
+id1500023462075906,philadelphia flyers,2026-02-03,pinnacle,151,H,1.735
+id1500023462075906,philadelphia flyers,2026-02-03,pinnacle,151,A,2.23
+id1500023462075908,new jersey devils,2026-02-03,pinnacle,151,H,1.961
+id1500023462075908,new jersey devils,2026-02-03,pinnacle,151,A,1.943
+id1500023462075904,new york islanders,2026-02-03,pinnacle,151,H,2.029
+id1500023462075904,new york islanders,2026-02-03,pinnacle,151,A,1.877
+id1500023462075910,tampa bay lightning,2026-02-03,pinnacle,151,H,1.49
+id1500023462075910,tampa bay lightning,2026-02-03,pinnacle,151,A,2.81
+id1500023462075912,edmonton oilers,2026-02-03,pinnacle,151,H,1.564
+id1500023462075912,edmonton oilers,2026-02-03,pinnacle,151,A,2.58
+id1500023462075914,anaheim ducks,2026-02-03,pinnacle,151,H,1.724
+id1500023462075914,anaheim ducks,2026-02-03,pinnacle,151,A,2.25
+id1500023462075916,florida panthers,2026-02-04,pinnacle,151,H,1.625
+id1500023462075916,florida panthers,2026-02-04,pinnacle,151,A,2.44
+id1500023462075918,columbus blue jackets,2026-02-04,pinnacle,151,H,1.671
+id1500023462075918,columbus blue jackets,2026-02-04,pinnacle,151,A,2.35
+id1500023462075920,winnipeg jets,2026-02-04,pinnacle,151,H,1.787
+id1500023462075920,winnipeg jets,2026-02-04,pinnacle,151,A,2.15
+id1500023462075922,nashville predators,2026-02-04,pinnacle,151,H,2.06
+id1500023462075922,nashville predators,2026-02-04,pinnacle,151,A,1.854
+id1500023462075924,colorado avalanche,2026-02-04,pinnacle,151,H,1.353
+id1500023462075924,colorado avalanche,2026-02-04,pinnacle,151,A,3.46
+id1500023462075926,utah mammoth,2026-02-04,pinnacle,151,H,1.775
+id1500023462075926,utah mammoth,2026-02-04,pinnacle,151,A,2.17
+id1500023462075928,dallas stars,2026-02-04,pinnacle,151,H,1.476
+id1500023462075928,dallas stars,2026-02-04,pinnacle,151,A,2.87
+id1500023462075930,calgary flames,2026-02-04,pinnacle,151,H,2.27
+id1500023462075930,calgary flames,2026-02-04,pinnacle,151,A,1.714
+id1500023462075932,vegas golden knights,2026-02-04,pinnacle,151,H,1.337
+id1500023462075932,vegas golden knights,2026-02-04,pinnacle,151,A,3.57
+id1500023462075934,los angeles kings,2026-02-04,pinnacle,151,H,1.617
+id1500023462075934,los angeles kings,2026-02-04,pinnacle,151,A,2.46
+id1500023462075936,new york rangers,2026-02-05,pinnacle,151,H,2.87
+id1500023462075936,new york rangers,2026-02-05,pinnacle,151,A,1.476
+id1500023462075938,philadelphia flyers,2026-02-05,pinnacle,151,H,2.18
+id1500023462075938,philadelphia flyers,2026-02-05,pinnacle,151,A,1.763
+id1500023462075940,buffalo sabres,2026-02-05,pinnacle,151,H,1.806
+id1500023462075940,buffalo sabres,2026-02-05,pinnacle,151,A,2.12
+id1500023462075942,washington capitals,2026-02-05,pinnacle,151,H,1.602
+id1500023462075942,washington capitals,2026-02-05,pinnacle,151,A,2.49
+id1500023462075946,new jersey devils,2026-02-05,pinnacle,151,H,1.925
+id1500023462075946,new jersey devils,2026-02-05,pinnacle,151,A,1.98
+id1500023462075944,tampa bay lightning,2026-02-05,pinnacle,151,H,1.505
+id1500023462075944,tampa bay lightning,2026-02-05,pinnacle,151,A,2.77
+id1500023462075948,vegas golden knights,2026-02-05,pinnacle,151,H,1.735
+id1500023462075948,vegas golden knights,2026-02-05,pinnacle,151,A,2.23
+id1500023462075950,new jersey devils,2026-02-25,pinnacle,151,H,1.934
+id1500023462075950,new jersey devils,2026-02-25,pinnacle,151,A,1.97
+id1500023462075952,washington capitals,2026-02-25,pinnacle,151,H,1.714
+id1500023462075952,washington capitals,2026-02-25,pinnacle,151,A,2.26
+id1500023462075954,tampa bay lightning,2026-02-25,pinnacle,151,H,1.469
+id1500023462075954,tampa bay lightning,2026-02-25,pinnacle,151,A,2.89
+id1500023462075956,dallas stars,2026-02-25,pinnacle,151,H,1.636
+id1500023462075956,dallas stars,2026-02-25,pinnacle,151,A,2.42
+id1500023462075958,utah mammoth,2026-02-25,pinnacle,151,H,1.99
+id1500023462075958,utah mammoth,2026-02-25,pinnacle,151,A,1.909
+id1500023462075960,vancouver canucks,2026-02-25,pinnacle,151,H,2.22
+id1500023462075960,vancouver canucks,2026-02-25,pinnacle,151,A,1.74
+id1500023462075962,los angeles kings,2026-02-25,pinnacle,151,H,1.568
+id1500023462075962,los angeles kings,2026-02-25,pinnacle,151,A,2.58
+id1500023462075964,anaheim ducks,2026-02-25,pinnacle,151,H,2.16
+id1500023462075964,anaheim ducks,2026-02-25,pinnacle,151,A,1.781
+id1500023462075966,florida panthers,2026-02-26,pinnacle,151,H,1.625
+id1500023462075966,florida panthers,2026-02-26,pinnacle,151,A,2.44
+id1500023462075968,boston bruins,2026-02-26,pinnacle,151,H,1.934
+id1500023462075968,boston bruins,2026-02-26,pinnacle,151,A,1.97
+id1500023462075970,carolina hurricanes,2026-02-26,pinnacle,151,H,1.68
+id1500023462075970,carolina hurricanes,2026-02-26,pinnacle,151,A,2.33
+id1500023462075972,ottawa senators,2026-02-26,pinnacle,151,H,1.666
+id1500023462075972,ottawa senators,2026-02-26,pinnacle,151,A,2.35
+id1500023462075974,montreal canadiens,2026-02-26,pinnacle,151,H,1.757
+id1500023462075974,montreal canadiens,2026-02-26,pinnacle,151,A,2.19
+id1500023462075976,pittsburgh penguins,2026-02-26,pinnacle,151,H,1.662
+id1500023462075976,pittsburgh penguins,2026-02-26,pinnacle,151,A,2.36
+id1500023462075978,new york rangers,2026-02-26,pinnacle,151,H,1.724
+id1500023462075978,new york rangers,2026-02-26,pinnacle,151,A,2.24
+id1500023462075980,nashville predators,2026-02-26,pinnacle,151,H,1.598
+id1500023462075980,nashville predators,2026-02-26,pinnacle,151,A,2.5
+id1500023462075982,st. louis blues,2026-02-26,pinnacle,151,H,1.763
+id1500023462075982,st. louis blues,2026-02-26,pinnacle,151,A,2.19
+id1500023462075984,colorado avalanche,2026-02-26,pinnacle,151,H,1.709
+id1500023462075984,colorado avalanche,2026-02-26,pinnacle,151,A,2.28
+id1500023462075986,san jose sharks,2026-02-26,pinnacle,151,H,1.847
+id1500023462075986,san jose sharks,2026-02-26,pinnacle,151,A,2.07
+id1500023462075988,los angeles kings,2026-02-26,pinnacle,151,H,2.06
+id1500023462075988,los angeles kings,2026-02-26,pinnacle,151,A,1.854
+id1500023462075990,washington capitals,2026-02-27,pinnacle,151,H,1.9
+id1500023462075990,washington capitals,2026-02-27,pinnacle,151,A,2.009
+id1500023462075992,florida panthers,2026-02-27,pinnacle,151,H,1.892
+id1500023462075992,florida panthers,2026-02-27,pinnacle,151,A,2.02
+id1500023462075994,utah mammoth,2026-02-27,pinnacle,151,H,1.735
+id1500023462075994,utah mammoth,2026-02-27,pinnacle,151,A,2.23
+id1500023462075996,anaheim ducks,2026-02-27,pinnacle,151,H,1.757
+id1500023462075996,anaheim ducks,2026-02-27,pinnacle,151,A,2.19
+id1500023462075998,new york rangers,2026-02-28,pinnacle,151,H,2.07
+id1500023462075998,new york rangers,2026-02-28,pinnacle,151,A,1.84
+id1500023462076000,philadelphia flyers,2026-02-28,pinnacle,151,H,1.952
+id1500023462076000,philadelphia flyers,2026-02-28,pinnacle,151,A,1.952
+id1500023462076002,san jose sharks,2026-02-28,pinnacle,151,H,2.43
+id1500023462076002,san jose sharks,2026-02-28,pinnacle,151,A,1.628
+id1500023462076016,st. louis blues,2026-02-28,pinnacle,151,H,2.0
+id1500023462076016,st. louis blues,2026-02-28,pinnacle,151,A,1.909
+id1500023462076004,colorado avalanche,2026-02-28,pinnacle,151,H,1.292
+id1500023462076004,colorado avalanche,2026-02-28,pinnacle,151,A,3.93
+id1500023462076006,columbus blue jackets,2026-02-28,pinnacle,151,H,1.74
+id1500023462076006,columbus blue jackets,2026-02-28,pinnacle,151,A,2.22
+id1500023462076008,tampa bay lightning,2026-02-28,pinnacle,151,H,1.427
+id1500023462076008,tampa bay lightning,2026-02-28,pinnacle,151,A,3.07
+id1500023462076010,toronto maple leafs,2026-02-28,pinnacle,151,H,2.16
+id1500023462076010,toronto maple leafs,2026-02-28,pinnacle,151,A,1.781
+id1500023462076012,los angeles kings,2026-02-28,pinnacle,151,H,1.714
+id1500023462076012,los angeles kings,2026-02-28,pinnacle,151,A,2.26
+id1500023462076014,carolina hurricanes,2026-02-28,pinnacle,151,H,1.523
+id1500023462076014,carolina hurricanes,2026-02-28,pinnacle,151,A,2.7
+id1500023462076018,montreal canadiens,2026-02-28,pinnacle,151,H,1.645
+id1500023462076018,montreal canadiens,2026-02-28,pinnacle,151,A,2.4
+id1500023462076020,dallas stars,2026-02-28,pinnacle,151,H,1.699
+id1500023462076020,dallas stars,2026-02-28,pinnacle,151,A,2.29
+id1500023462076022,seattle kraken,2026-02-28,pinnacle,151,H,1.671
+id1500023462076022,seattle kraken,2026-02-28,pinnacle,151,A,2.34
+id1500023462076024,pittsburgh penguins,2026-03-01,pinnacle,151,H,2.38
+id1500023462076024,pittsburgh penguins,2026-03-01,pinnacle,151,A,1.653
+id1500023462076026,utah mammoth,2026-03-01,pinnacle,151,H,1.31
+id1500023462076026,utah mammoth,2026-03-01,pinnacle,151,A,3.77
+id1500023462076030,san jose sharks,2026-03-01,pinnacle,151,H,2.05
+id1500023462076030,san jose sharks,2026-03-01,pinnacle,151,A,1.862
+id1500023462076032,minnesota wild,2026-03-01,pinnacle,151,H,1.421
+id1500023462076032,minnesota wild,2026-03-01,pinnacle,151,A,3.09
+id1500023462076028,new york islanders,2026-03-01,pinnacle,151,H,2.25
+id1500023462076028,new york islanders,2026-03-01,pinnacle,151,A,1.724
+id1500023462076034,anaheim ducks,2026-03-01,pinnacle,151,H,1.591
+id1500023462076034,anaheim ducks,2026-03-01,pinnacle,151,A,2.51
+id1500023462076040,nashville predators,2026-03-02,pinnacle,151,H,1.97
+id1500023462076040,nashville predators,2026-03-02,pinnacle,151,A,1.934
+id1500023462076036,new york rangers,2026-03-02,pinnacle,151,H,2.02
+id1500023462076036,new york rangers,2026-03-02,pinnacle,151,A,1.884
+id1500023462076038,toronto maple leafs,2026-03-02,pinnacle,151,H,1.735
+id1500023462076038,toronto maple leafs,2026-03-02,pinnacle,151,A,2.13
+id1500023462076042,vancouver canucks,2026-03-02,pinnacle,151,H,2.72
+id1500023462076042,vancouver canucks,2026-03-02,pinnacle,151,A,1.518
+id1500023462076044,seattle kraken,2026-03-02,pinnacle,151,H,2.6
+id1500023462076044,seattle kraken,2026-03-02,pinnacle,151,A,1.558
+id1500023462076046,los angeles kings,2026-03-02,pinnacle,151,H,2.66
+id1500023462076046,los angeles kings,2026-03-02,pinnacle,151,A,1.537
+id1500023462076048,boston bruins,2026-03-03,pinnacle,151,H,1.763
+id1500023462076048,boston bruins,2026-03-03,pinnacle,151,A,2.08
+id1500023462076050,washington capitals,2026-03-03,pinnacle,151,H,1.943
+id1500023462076050,washington capitals,2026-03-03,pinnacle,151,A,1.961
+id1500023462076052,new jersey devils,2026-03-03,pinnacle,151,H,1.98
+id1500023462076052,new jersey devils,2026-03-03,pinnacle,151,A,1.84
+id1500023462076054,columbus blue jackets,2026-03-03,pinnacle,151,H,1.74
+id1500023462076054,columbus blue jackets,2026-03-03,pinnacle,151,A,2.11
+id1500023462076056,buffalo sabres,2026-03-03,pinnacle,151,H,1.74
+id1500023462076056,buffalo sabres,2026-03-03,pinnacle,151,A,2.11
+id1500023462076058,winnipeg jets,2026-03-03,pinnacle,151,H,1.657
+id1500023462076058,winnipeg jets,2026-03-03,pinnacle,151,A,2.25
+id1500023462076060,edmonton oilers,2026-03-03,pinnacle,151,H,1.884
+id1500023462076060,edmonton oilers,2026-03-03,pinnacle,151,A,1.934
+id1500023462076062,calgary flames,2026-03-03,pinnacle,151,H,2.06
+id1500023462076062,calgary flames,2026-03-03,pinnacle,151,A,1.775
+id1500023462076064,minnesota wild,2026-03-03,pinnacle,151,H,2.17
+id1500023462076064,minnesota wild,2026-03-03,pinnacle,151,A,1.709
+id1500023462076066,san jose sharks,2026-03-03,pinnacle,151,H,2.16
+id1500023462076066,san jose sharks,2026-03-03,pinnacle,151,A,1.775
+id1500023462076068,anaheim ducks,2026-03-03,pinnacle,151,H,2.28
+id1500023462076068,anaheim ducks,2026-03-03,pinnacle,151,A,1.709
+id1500023462076070,new jersey devils,2026-03-04,pinnacle,151,H,1.84
+id1500023462076070,new jersey devils,2026-03-04,pinnacle,151,A,2.08
+id1500023462076072,detroit red wings,2026-03-04,pinnacle,151,H,1.74
+id1500023462076072,detroit red wings,2026-03-04,pinnacle,151,A,2.22
+id1500023462076074,vancouver canucks,2026-03-04,pinnacle,151,H,3.76
+id1500023462076074,vancouver canucks,2026-03-04,pinnacle,151,A,1.311
+id1500023462076076,seattle kraken,2026-03-04,pinnacle,151,H,1.729
+id1500023462076076,seattle kraken,2026-03-04,pinnacle,151,A,2.24
+id1500023462076078,anaheim ducks,2026-03-04,pinnacle,151,H,2.04
+id1500023462076078,anaheim ducks,2026-03-04,pinnacle,151,A,1.869
+id1500023462076080,pittsburgh penguins,2026-03-05,pinnacle,151,H,2.04
+id1500023462076080,pittsburgh penguins,2026-03-05,pinnacle,151,A,1.869
+id1500023462076082,columbus blue jackets,2026-03-05,pinnacle,151,H,1.97
+id1500023462076082,columbus blue jackets,2026-03-05,pinnacle,151,A,1.934
+id1500023462076084,philadelphia flyers,2026-03-05,pinnacle,151,H,2.08
+id1500023462076084,philadelphia flyers,2026-03-05,pinnacle,151,A,1.84
+id1500023462076086,new york rangers,2026-03-05,pinnacle,151,H,1.769
+id1500023462076086,new york rangers,2026-03-05,pinnacle,151,A,2.17
+id1500023462076088,nashville predators,2026-03-05,pinnacle,151,H,1.99
+id1500023462076088,nashville predators,2026-03-05,pinnacle,151,A,1.917
+id1500023462076090,winnipeg jets,2026-03-05,pinnacle,151,H,2.74
+id1500023462076090,winnipeg jets,2026-03-05,pinnacle,151,A,1.512
+id1500023462076092,calgary flames,2026-03-05,pinnacle,151,H,2.55
+id1500023462076092,calgary flames,2026-03-05,pinnacle,151,A,1.578
+id1500023462076094,los angeles kings,2026-03-05,pinnacle,151,H,1.854
+id1500023462076094,los angeles kings,2026-03-05,pinnacle,151,A,2.06
+id1500023462076096,detroit red wings,2026-03-06,pinnacle,151,H,1.714
+id1500023462076096,detroit red wings,2026-03-06,pinnacle,151,A,2.26
+id1500023462076098,dallas stars,2026-03-06,pinnacle,151,H,2.05
+id1500023462076098,dallas stars,2026-03-06,pinnacle,151,A,1.862
+id1500023462076100,chicago blackhawks,2026-03-06,pinnacle,151,H,1.689
+id1500023462076100,chicago blackhawks,2026-03-06,pinnacle,151,A,2.3
+id1500023462076102,anaheim ducks,2026-03-06,pinnacle,151,H,2.07
+id1500023462076102,anaheim ducks,2026-03-06,pinnacle,151,A,1.847
+id1500023462076104,edmonton oilers,2026-03-06,pinnacle,151,H,2.04
+id1500023462076104,edmonton oilers,2026-03-06,pinnacle,151,A,1.869
+id1500023462076106,vegas golden knights,2026-03-06,pinnacle,151,H,2.0
+id1500023462076106,vegas golden knights,2026-03-06,pinnacle,151,A,1.909
+id1500023462076108,san jose sharks,2026-03-06,pinnacle,151,H,1.694
+id1500023462076108,san jose sharks,2026-03-06,pinnacle,151,A,2.3
+id1500023462076110,boston bruins,2026-03-07,pinnacle,151,H,1.8
+id1500023462076110,boston bruins,2026-03-07,pinnacle,151,A,2.13
+id1500023462076112,new jersey devils,2026-03-07,pinnacle,151,H,1.598
+id1500023462076112,new jersey devils,2026-03-07,pinnacle,151,A,2.5
+id1500023462076114,buffalo sabres,2026-03-07,pinnacle,151,H,1.578
+id1500023462076114,buffalo sabres,2026-03-07,pinnacle,151,A,2.55
+id1500023462076116,pittsburgh penguins,2026-03-07,pinnacle,151,H,1.724
+id1500023462076116,pittsburgh penguins,2026-03-07,pinnacle,151,A,2.25
+id1500023462078576,columbus blue jackets,2026-03-07,pinnacle,151,H,2.009
+id1500023462078576,columbus blue jackets,2026-03-07,pinnacle,151,A,1.9
+id1500023462078578,toronto maple leafs,2026-03-07,pinnacle,151,H,2.9
+id1500023462078578,toronto maple leafs,2026-03-07,pinnacle,151,A,1.465
+id1500023462078580,los angeles kings,2026-03-07,pinnacle,151,H,1.884
+id1500023462078580,los angeles kings,2026-03-07,pinnacle,151,A,2.029
+id1500023462078582,winnipeg jets,2026-03-07,pinnacle,151,H,1.342
+id1500023462078582,winnipeg jets,2026-03-07,pinnacle,151,A,3.53
+id1500023462078588,calgary flames,2026-03-07,pinnacle,151,H,2.7
+id1500023462078588,calgary flames,2026-03-07,pinnacle,151,A,1.526
+id1500023462078590,san jose sharks,2026-03-07,pinnacle,151,H,2.28
+id1500023462078590,san jose sharks,2026-03-07,pinnacle,151,A,1.704
+id1500023462078592,seattle kraken,2026-03-07,pinnacle,151,H,2.44
+id1500023462078592,seattle kraken,2026-03-07,pinnacle,151,A,1.625
+id1500023462078594,colorado avalanche,2026-03-08,pinnacle,151,H,1.588
+id1500023462078594,colorado avalanche,2026-03-08,pinnacle,151,A,2.53
+id1500023462078596,pittsburgh penguins,2026-03-08,pinnacle,151,H,1.833
+id1500023462078596,pittsburgh penguins,2026-03-08,pinnacle,151,A,1.99
+id1500023462078598,dallas stars,2026-03-08,pinnacle,151,H,1.317
+id1500023462078598,dallas stars,2026-03-08,pinnacle,151,A,3.46
+id1500023462078600,buffalo sabres,2026-03-08,pinnacle,151,H,2.009
+id1500023462078600,buffalo sabres,2026-03-08,pinnacle,151,A,1.9
+id1500023462078602,new jersey devils,2026-03-08,pinnacle,151,H,2.009
+id1500023462078602,new jersey devils,2026-03-08,pinnacle,151,A,1.9
+id1500023462078584,anaheim ducks,2026-03-08,pinnacle,151,H,1.606
+id1500023462078584,anaheim ducks,2026-03-08,pinnacle,151,A,2.36
+id1500023462078586,vegas golden knights,2026-03-08,pinnacle,151,H,1.925
+id1500023462078586,vegas golden knights,2026-03-08,pinnacle,151,A,1.892
+id1500023468274870,columbus blue jackets,2026-03-09,pinnacle,151,H,1.617
+id1500023468274870,columbus blue jackets,2026-03-09,pinnacle,151,A,2.33
+id1500023462078604,washington capitals,2026-03-09,pinnacle,151,H,1.564
+id1500023462078604,washington capitals,2026-03-09,pinnacle,151,A,2.58
+id1500023462078606,philadelphia flyers,2026-03-09,pinnacle,151,H,1.751
+id1500023462078606,philadelphia flyers,2026-03-09,pinnacle,151,A,2.09
+id1500023462078608,chicago blackhawks,2026-03-09,pinnacle,151,H,2.98
+id1500023462078608,chicago blackhawks,2026-03-09,pinnacle,151,A,1.446
+id1500023462078610,vancouver canucks,2026-03-09,pinnacle,151,H,3.0
+id1500023462078610,vancouver canucks,2026-03-09,pinnacle,151,A,1.44
+id1500023462078612,buffalo sabres,2026-03-10,pinnacle,151,H,1.518
+id1500023462078612,buffalo sabres,2026-03-10,pinnacle,151,A,2.72
+id1500023462078614,new york rangers,2026-03-10,pinnacle,151,H,1.84
+id1500023462078614,new york rangers,2026-03-10,pinnacle,151,A,2.08
+id1500023462078616,boston bruins,2026-03-10,pinnacle,151,H,1.671
+id1500023462078616,boston bruins,2026-03-10,pinnacle,151,A,2.34
+id1500023462078618,montreal canadiens,2026-03-10,pinnacle,151,H,1.645
+id1500023462078618,montreal canadiens,2026-03-10,pinnacle,151,A,2.39
+id1500023462078620,carolina hurricanes,2026-03-10,pinnacle,151,H,1.518
+id1500023462078620,carolina hurricanes,2026-03-10,pinnacle,151,A,2.72
+id1500023462078622,florida panthers,2026-03-10,pinnacle,151,H,2.06
+id1500023462078622,florida panthers,2026-03-10,pinnacle,151,A,1.854
+id1500023462078624,tampa bay lightning,2026-03-10,pinnacle,151,H,1.431
+id1500023462078624,tampa bay lightning,2026-03-10,pinnacle,151,A,3.04
+id1500023462078626,st. louis blues,2026-03-10,pinnacle,151,H,2.08
+id1500023462078626,st. louis blues,2026-03-10,pinnacle,151,A,1.84
+id1500023462078628,dallas stars,2026-03-10,pinnacle,151,H,1.719
+id1500023462078628,dallas stars,2026-03-10,pinnacle,151,A,2.26
+id1500023462078630,minnesota wild,2026-03-10,pinnacle,151,H,1.645
+id1500023462078630,minnesota wild,2026-03-10,pinnacle,151,A,2.39
+id1500023462078632,winnipeg jets,2026-03-10,pinnacle,151,H,1.74
+id1500023462078632,winnipeg jets,2026-03-10,pinnacle,151,A,2.22
+id1500023462078634,colorado avalanche,2026-03-10,pinnacle,151,H,1.595
+id1500023462078634,colorado avalanche,2026-03-10,pinnacle,151,A,2.51
+id1500023462078636,seattle kraken,2026-03-10,pinnacle,151,H,1.961
+id1500023462078636,seattle kraken,2026-03-10,pinnacle,151,A,1.943
+id1500023462078638,ottawa senators,2026-03-11,pinnacle,151,H,1.518
+id1500023462078638,ottawa senators,2026-03-11,pinnacle,151,A,2.72
+id1500023462078640,philadelphia flyers,2026-03-11,pinnacle,151,H,2.18
+id1500023462078640,philadelphia flyers,2026-03-11,pinnacle,151,A,1.763
+id1500023462078642,toronto maple leafs,2026-03-12,pinnacle,151,H,1.917
+id1500023462078642,toronto maple leafs,2026-03-12,pinnacle,151,A,1.99
+id1500023462078644,new jersey devils,2026-03-12,pinnacle,151,H,1.54
+id1500023462078644,new jersey devils,2026-03-12,pinnacle,151,A,2.65
+id1500023462078646,carolina hurricanes,2026-03-12,pinnacle,151,H,1.373
+id1500023462078646,carolina hurricanes,2026-03-12,pinnacle,151,A,3.34
+id1500023462078648,tampa bay lightning,2026-03-12,pinnacle,151,H,1.48
+id1500023462078648,tampa bay lightning,2026-03-12,pinnacle,151,A,2.85
+id1500023462078650,buffalo sabres,2026-03-12,pinnacle,151,H,1.497
+id1500023462078650,buffalo sabres,2026-03-12,pinnacle,151,A,2.79
+id1500023462078652,florida panthers,2026-03-12,pinnacle,151,H,2.09
+id1500023462078652,florida panthers,2026-03-12,pinnacle,151,A,1.826
+id1500023462078654,boston bruins,2026-03-12,pinnacle,151,H,1.662
+id1500023462078654,boston bruins,2026-03-12,pinnacle,151,A,2.36
+id1500023462078656,winnipeg jets,2026-03-12,pinnacle,151,H,1.729
+id1500023462078656,winnipeg jets,2026-03-12,pinnacle,151,A,2.24
+id1500023462078658,minnesota wild,2026-03-12,pinnacle,151,H,1.456
+id1500023462078658,minnesota wild,2026-03-12,pinnacle,151,A,2.94
+id1500023462078660,dallas stars,2026-03-12,pinnacle,151,H,1.819
+id1500023462078660,dallas stars,2026-03-12,pinnacle,151,A,2.1
+id1500023462078662,utah mammoth,2026-03-12,pinnacle,151,H,1.454
+id1500023462078662,utah mammoth,2026-03-12,pinnacle,151,A,2.95
+id1500023462078664,vegas golden knights,2026-03-12,pinnacle,151,H,1.591
+id1500023462078664,vegas golden knights,2026-03-12,pinnacle,151,A,2.39
+id1500023462078666,seattle kraken,2026-03-12,pinnacle,151,H,2.7
+id1500023462078666,seattle kraken,2026-03-12,pinnacle,151,A,1.526
+id1500023462078668,vancouver canucks,2026-03-12,pinnacle,151,H,2.49
+id1500023462078668,vancouver canucks,2026-03-12,pinnacle,151,A,1.606
+id1500023462078670,new york islanders,2026-03-13,pinnacle,151,H,1.757
+id1500023462078670,new york islanders,2026-03-13,pinnacle,151,A,2.19
+id1500023462078672,st. louis blues,2026-03-13,pinnacle,151,H,2.23
+id1500023462078672,st. louis blues,2026-03-13,pinnacle,151,A,1.735
+id1500023462078674,ottawa senators,2026-03-14,pinnacle,151,H,1.555
+id1500023462078674,ottawa senators,2026-03-14,pinnacle,151,A,2.61
+id1500023462078676,washington capitals,2026-03-14,pinnacle,151,H,1.854
+id1500023462078676,washington capitals,2026-03-14,pinnacle,151,A,2.06
+id1500023462078678,winnipeg jets,2026-03-14,pinnacle,151,H,2.54
+id1500023462078678,winnipeg jets,2026-03-14,pinnacle,151,A,1.581
+id1500023462078680,minnesota wild,2026-03-14,pinnacle,151,H,1.529
+id1500023462078680,minnesota wild,2026-03-14,pinnacle,151,A,2.69
+id1500023462078682,new york islanders,2026-03-14,pinnacle,151,H,1.684
+id1500023462078682,new york islanders,2026-03-14,pinnacle,151,A,2.32
+id1500023462078686,buffalo sabres,2026-03-14,pinnacle,151,H,1.409
+id1500023462078686,buffalo sabres,2026-03-14,pinnacle,151,A,3.14
+id1500023462078688,new jersey devils,2026-03-14,pinnacle,151,H,1.675
+id1500023462078688,new jersey devils,2026-03-14,pinnacle,151,A,2.33
+id1500023462078690,montreal canadiens,2026-03-14,pinnacle,151,H,1.653
+id1500023462078690,montreal canadiens,2026-03-14,pinnacle,151,A,2.37
+id1500023462078692,tampa bay lightning,2026-03-14,pinnacle,151,H,1.806
+id1500023462078692,tampa bay lightning,2026-03-14,pinnacle,151,A,2.12
+id1500023462078684,philadelphia flyers,2026-03-14,pinnacle,151,H,2.18
+id1500023462078684,philadelphia flyers,2026-03-14,pinnacle,151,A,1.769
+id1500023462078694,dallas stars,2026-03-14,pinnacle,151,H,1.561
+id1500023462078694,dallas stars,2026-03-14,pinnacle,151,A,2.59
+id1500023462078696,utah mammoth,2026-03-14,pinnacle,151,H,1.68
+id1500023462078696,utah mammoth,2026-03-14,pinnacle,151,A,2.33
+id1500023462078698,vegas golden knights,2026-03-14,pinnacle,151,H,1.465
+id1500023462078698,vegas golden knights,2026-03-14,pinnacle,151,A,2.9
+id1500023462078700,vancouver canucks,2026-03-14,pinnacle,151,H,2.27
+id1500023462078700,vancouver canucks,2026-03-14,pinnacle,151,A,1.709
+id1500023462078702,winnipeg jets,2026-03-15,pinnacle,151,H,2.029
+id1500023462078702,winnipeg jets,2026-03-15,pinnacle,151,A,1.877
+id1500023462078704,ottawa senators,2026-03-15,pinnacle,151,H,1.52
+id1500023462078704,ottawa senators,2026-03-15,pinnacle,151,A,2.72
+id1500023462078706,montreal canadiens,2026-03-15,pinnacle,151,H,1.746
+id1500023462078706,montreal canadiens,2026-03-15,pinnacle,151,A,2.21
+id1500023462078708,minnesota wild,2026-03-15,pinnacle,151,H,1.398
+id1500023462078708,minnesota wild,2026-03-15,pinnacle,151,A,3.2
+id1500023462078710,edmonton oilers,2026-03-15,pinnacle,151,H,1.531
+id1500023462078710,edmonton oilers,2026-03-15,pinnacle,151,A,2.68
+id1500023462078712,seattle kraken,2026-03-15,pinnacle,151,H,2.08
+id1500023462078712,seattle kraken,2026-03-15,pinnacle,151,A,1.84
+id1500023462078714,detroit red wings,2026-03-16,pinnacle,151,H,1.561
+id1500023462078714,detroit red wings,2026-03-16,pinnacle,151,A,2.6
+id1500023462078716,new jersey devils,2026-03-16,pinnacle,151,H,1.819
+id1500023462078716,new jersey devils,2026-03-16,pinnacle,151,A,2.11
+id1500023462078718,new york rangers,2026-03-16,pinnacle,151,H,1.99
+id1500023462078718,new york rangers,2026-03-16,pinnacle,151,A,1.917
+id1500023462078720,dallas stars,2026-03-16,pinnacle,151,H,1.641
+id1500023462078720,dallas stars,2026-03-16,pinnacle,151,A,2.4
+id1500023462078722,colorado avalanche,2026-03-16,pinnacle,151,H,1.5
+id1500023462078722,colorado avalanche,2026-03-16,pinnacle,151,A,2.78
+id1500023462078724,montreal canadiens,2026-03-17,pinnacle,151,H,1.641
+id1500023462078724,montreal canadiens,2026-03-17,pinnacle,151,A,2.4
+id1500023462078726,toronto maple leafs,2026-03-17,pinnacle,151,H,2.41
+id1500023462078726,toronto maple leafs,2026-03-17,pinnacle,151,A,1.641
+id1500023462078728,columbus blue jackets,2026-03-17,pinnacle,151,H,2.06
+id1500023462078728,columbus blue jackets,2026-03-17,pinnacle,151,A,1.854
+id1500023462078732,chicago blackhawks,2026-03-17,pinnacle,151,H,2.49
+id1500023462078732,chicago blackhawks,2026-03-17,pinnacle,151,A,1.606
+id1500023462078730,winnipeg jets,2026-03-17,pinnacle,151,H,1.781
+id1500023462078730,winnipeg jets,2026-03-17,pinnacle,151,A,2.15
+id1500023462078734,edmonton oilers,2026-03-17,pinnacle,151,H,1.645
+id1500023462078734,edmonton oilers,2026-03-17,pinnacle,151,A,2.39
+id1500023462078736,vegas golden knights,2026-03-17,pinnacle,151,H,1.781
+id1500023462078736,vegas golden knights,2026-03-17,pinnacle,151,A,2.16
+id1500023462078738,vancouver canucks,2026-03-17,pinnacle,151,H,2.36
+id1500023462078738,vancouver canucks,2026-03-17,pinnacle,151,A,1.662
+id1500023462078740,seattle kraken,2026-03-17,pinnacle,151,H,2.59
+id1500023462078740,seattle kraken,2026-03-17,pinnacle,151,A,1.564
+id1500023462078742,new york rangers,2026-03-18,pinnacle,151,H,2.1
+id1500023462078742,new york rangers,2026-03-18,pinnacle,151,A,1.826
+id1500023462078744,carolina hurricanes,2026-03-18,pinnacle,151,H,1.775
+id1500023462078744,carolina hurricanes,2026-03-18,pinnacle,151,A,2.17
+id1500023462078746,washington capitals,2026-03-18,pinnacle,151,H,2.18
+id1500023462078746,washington capitals,2026-03-18,pinnacle,151,A,1.769
+id1500023462078748,colorado avalanche,2026-03-18,pinnacle,151,H,1.751
+id1500023462078748,colorado avalanche,2026-03-18,pinnacle,151,A,2.21
+id1500023462078748,colorado avalanche,2026-03-18,winamax.fr,153,H,1.98
+id1500023462078748,colorado avalanche,2026-03-18,winamax.fr,153,X,4.1
+id1500023462078748,colorado avalanche,2026-03-18,winamax.fr,153,A,2.55
+id1500023462078750,calgary flames,2026-03-18,pinnacle,151,H,2.14
+id1500023462078750,calgary flames,2026-03-18,pinnacle,151,A,1.793
+id1500023462078750,calgary flames,2026-03-18,winamax.fr,153,H,2.4
+id1500023462078750,calgary flames,2026-03-18,winamax.fr,153,X,4.0
+id1500023462078750,calgary flames,2026-03-18,winamax.fr,153,A,2.1
+id1500023462078752,anaheim ducks,2026-03-18,pinnacle,151,H,1.689
+id1500023462078752,anaheim ducks,2026-03-18,pinnacle,151,A,2.31
+id1500023462078752,anaheim ducks,2026-03-18,winamax.fr,153,H,1.94
+id1500023462078752,anaheim ducks,2026-03-18,winamax.fr,153,X,4.2
+id1500023462078752,anaheim ducks,2026-03-18,winamax.fr,153,A,2.65
+id1500023462078754,ottawa senators,2026-03-19,pinnacle,151,H,1.84
+id1500023462078754,ottawa senators,2026-03-19,pinnacle,151,A,2.02
+id1500023462078754,ottawa senators,2026-03-19,winamax.fr,153,H,2.1
+id1500023462078754,ottawa senators,2026-03-19,winamax.fr,153,X,3.85
+id1500023462078754,ottawa senators,2026-03-19,winamax.fr,153,A,2.5
+id1500023462078756,columbus blue jackets,2026-03-19,pinnacle,151,H,1.45
+id1500023462078756,columbus blue jackets,2026-03-19,pinnacle,151,A,2.84
+id1500023462078756,columbus blue jackets,2026-03-19,winamax.fr,153,H,1.66
+id1500023462078756,columbus blue jackets,2026-03-19,winamax.fr,153,X,4.2
+id1500023462078756,columbus blue jackets,2026-03-19,winamax.fr,153,A,3.4
+id1500023462078758,boston bruins,2026-03-19,pinnacle,151,H,1.689
+id1500023462078758,boston bruins,2026-03-19,pinnacle,151,A,2.24
+id1500023462078758,boston bruins,2026-03-19,winamax.fr,153,H,2.0
+id1500023462078758,boston bruins,2026-03-19,winamax.fr,153,X,3.9
+id1500023462078758,boston bruins,2026-03-19,winamax.fr,153,A,2.6
+id1500023462078760,detroit red wings,2026-03-19,pinnacle,151,H,1.98
+id1500023462078760,detroit red wings,2026-03-19,pinnacle,151,A,1.869
+id1500023462078760,detroit red wings,2026-03-19,winamax.fr,153,H,2.2
+id1500023462078760,detroit red wings,2026-03-19,winamax.fr,153,X,3.7
+id1500023462078760,detroit red wings,2026-03-19,winamax.fr,153,A,2.2
+id1500023462078762,minnesota wild,2026-03-19,pinnacle,151,H,1.526
+id1500023462078762,minnesota wild,2026-03-19,pinnacle,151,A,2.6
+id1500023462078762,minnesota wild,2026-03-19,winamax.fr,153,H,1.64
+id1500023462078762,minnesota wild,2026-03-19,winamax.fr,153,X,4.2
+id1500023462078762,minnesota wild,2026-03-19,winamax.fr,153,A,3.5
+id1500023462078764,nashville predators,2026-03-19,pinnacle,151,H,1.854
+id1500023462078764,nashville predators,2026-03-19,pinnacle,151,A,2.0
+id1500023462078764,nashville predators,2026-03-19,winamax.fr,153,H,2.15
+id1500023462078764,nashville predators,2026-03-19,winamax.fr,153,X,4.2
+id1500023462078764,nashville predators,2026-03-19,winamax.fr,153,A,2.3
+id1500023462078766,edmonton oilers,2026-03-19,pinnacle,151,H,1.636
+id1500023462078766,edmonton oilers,2026-03-19,pinnacle,151,A,2.33
+id1500023462078766,edmonton oilers,2026-03-19,winamax.fr,153,H,1.9
+id1500023462078766,edmonton oilers,2026-03-19,winamax.fr,153,X,4.0
+id1500023462078766,edmonton oilers,2026-03-19,winamax.fr,153,A,2.75
+id1500023462078768,san jose sharks,2026-03-19,pinnacle,151,H,2.23
+id1500023462078768,san jose sharks,2026-03-19,pinnacle,151,A,1.694
+id1500023462078768,san jose sharks,2026-03-19,winamax.fr,153,H,2.65
+id1500023462078768,san jose sharks,2026-03-19,winamax.fr,153,X,4.0
+id1500023462078768,san jose sharks,2026-03-19,winamax.fr,153,A,1.96
+id1500023462078770,vancouver canucks,2026-03-19,pinnacle,151,H,3.61
+id1500023462078770,vancouver canucks,2026-03-19,pinnacle,151,A,1.303
+id1500023462078770,vancouver canucks,2026-03-19,winamax.fr,153,H,4.2
+id1500023462078770,vancouver canucks,2026-03-19,winamax.fr,153,X,4.9
+id1500023462078770,vancouver canucks,2026-03-19,winamax.fr,153,A,1.43
+id1500023462078772,vegas golden knights,2026-03-19,pinnacle,151,H,1.751
+id1500023462078772,vegas golden knights,2026-03-19,pinnacle,151,A,2.14
+id1500023462078772,vegas golden knights,2026-03-19,winamax.fr,153,H,2.1
+id1500023462078772,vegas golden knights,2026-03-19,winamax.fr,153,X,4.0
+id1500023462078772,vegas golden knights,2026-03-19,winamax.fr,153,A,2.4
+id1500023462078774,los angeles kings,2026-03-19,pinnacle,151,H,1.561
+id1500023462078774,los angeles kings,2026-03-19,pinnacle,151,A,2.5
+id1500023462078774,los angeles kings,2026-03-19,winamax.fr,153,H,1.82
+id1500023462078774,los angeles kings,2026-03-19,winamax.fr,153,X,3.8
+id1500023462078774,los angeles kings,2026-03-19,winamax.fr,153,A,2.8
+id1500023462078776,toronto maple leafs,2026-03-20,pinnacle,151,H,2.77
+id1500023462078776,toronto maple leafs,2026-03-20,pinnacle,151,A,1.505
+id1500023462078776,toronto maple leafs,2026-03-20,winamax.fr,153,H,3.15
+id1500023462078776,toronto maple leafs,2026-03-20,winamax.fr,153,X,3.95
+id1500023462078776,toronto maple leafs,2026-03-20,winamax.fr,153,A,1.64
+id1500023462078778,washington capitals,2026-03-20,pinnacle,151,H,1.869
+id1500023462078778,washington capitals,2026-03-20,pinnacle,151,A,2.04
+id1500023462078778,washington capitals,2026-03-20,winamax.fr,153,H,2.15
+id1500023462078778,washington capitals,2026-03-20,winamax.fr,153,X,4.1
+id1500023462078778,washington capitals,2026-03-20,winamax.fr,153,A,2.45
+id1500023462078780,chicago blackhawks,2026-03-20,pinnacle,151,H,3.76
+id1500023462078780,chicago blackhawks,2026-03-20,pinnacle,151,A,1.311
+id1500023462078780,chicago blackhawks,2026-03-20,winamax.fr,153,H,4.6
+id1500023462078780,chicago blackhawks,2026-03-20,winamax.fr,153,X,4.5
+id1500023462078780,chicago blackhawks,2026-03-20,winamax.fr,153,A,1.5
+id1500023462078782,calgary flames,2026-03-20,pinnacle,151,H,1.9
+id1500023462078782,calgary flames,2026-03-20,pinnacle,151,A,2.0
+id1500023462078782,calgary flames,2026-03-20,winamax.fr,153,H,2.35
+id1500023462078782,calgary flames,2026-03-20,winamax.fr,153,X,3.85
+id1500023462078782,calgary flames,2026-03-20,winamax.fr,153,A,2.35
+id1500023462078784,utah mammoth,2026-03-20,pinnacle,151,H,1.775
+id1500023462078784,utah mammoth,2026-03-20,pinnacle,151,A,2.17
+id1500023462078784,utah mammoth,2026-03-20,winamax.fr,153,H,2.15
+id1500023462078784,utah mammoth,2026-03-20,winamax.fr,153,X,4.2
+id1500023462078784,utah mammoth,2026-03-20,winamax.fr,153,A,2.45
+id1500023462078786,pittsburgh penguins,2026-03-21,pinnacle,151,H,1.662
+id1500023462078786,pittsburgh penguins,2026-03-21,pinnacle,151,A,2.36
+id1500023462078788,nashville predators,2026-03-21,pinnacle,151,H,2.32
+id1500023462078788,nashville predators,2026-03-21,pinnacle,151,A,1.684
+id1500023462078788,nashville predators,2026-03-21,winamax.fr,153,H,2.7
+id1500023462078788,nashville predators,2026-03-21,winamax.fr,153,X,4.1
+id1500023462078788,nashville predators,2026-03-21,winamax.fr,153,A,1.9
+id1500023462078790,los angeles kings,2026-03-21,pinnacle,151,H,2.12
+id1500023462078790,los angeles kings,2026-03-21,pinnacle,151,A,1.813
+id1500023462078792,minnesota wild,2026-03-21,pinnacle,151,H,2.13
+id1500023462078792,minnesota wild,2026-03-21,pinnacle,151,A,1.8
+id1500023462078794,san jose sharks,2026-03-21,pinnacle,151,H,1.854
+id1500023462078794,san jose sharks,2026-03-21,pinnacle,151,A,2.06
+id1500023462078794,san jose sharks,2026-03-21,winamax.fr,153,H,2.2
+id1500023462078794,san jose sharks,2026-03-21,winamax.fr,153,X,3.85
+id1500023462078794,san jose sharks,2026-03-21,winamax.fr,153,A,2.35
+id1500023462078796,columbus blue jackets,2026-03-21,pinnacle,151,H,1.555
+id1500023462078796,columbus blue jackets,2026-03-21,pinnacle,151,A,2.61
+id1500023462078796,columbus blue jackets,2026-03-21,winamax.fr,153,H,1.78
+id1500023462078796,columbus blue jackets,2026-03-21,winamax.fr,153,X,3.9
+id1500023462078796,columbus blue jackets,2026-03-21,winamax.fr,153,A,2.8
+id1500023462078798,vancouver canucks,2026-03-21,pinnacle,151,H,2.28
+id1500023462078798,vancouver canucks,2026-03-21,pinnacle,151,A,1.704
+id1500023462078800,montreal canadiens,2026-03-21,pinnacle,151,H,1.847
+id1500023462078800,montreal canadiens,2026-03-21,pinnacle,151,A,2.07
+id1500023462078800,montreal canadiens,2026-03-21,winamax.fr,153,H,2.1
+id1500023462078800,montreal canadiens,2026-03-21,winamax.fr,153,X,3.9
+id1500023462078800,montreal canadiens,2026-03-21,winamax.fr,153,A,2.45
+id1500023462078802,ottawa senators,2026-03-21,pinnacle,151,H,1.313
+id1500023462078802,ottawa senators,2026-03-21,pinnacle,151,A,3.75
+id1500023462078804,detroit red wings,2026-03-21,pinnacle,151,H,1.84
+id1500023462078804,detroit red wings,2026-03-21,pinnacle,151,A,2.08
+id1500023462078804,detroit red wings,2026-03-21,winamax.fr,153,H,2.1
+id1500023462078804,detroit red wings,2026-03-21,winamax.fr,153,X,3.75
+id1500023462078804,detroit red wings,2026-03-21,winamax.fr,153,A,2.3
+id1500023462078806,edmonton oilers,2026-03-21,pinnacle,151,H,2.18
+id1500023462078806,edmonton oilers,2026-03-21,pinnacle,151,A,1.763
+id1500023462078808,new york rangers,2026-03-22,pinnacle,151,H,1.847
+id1500023462078808,new york rangers,2026-03-22,pinnacle,151,A,1.98
+id1500023462078808,new york rangers,2026-03-22,winamax.fr,153,H,2.1
+id1500023462078808,new york rangers,2026-03-22,winamax.fr,153,X,4.0
+id1500023462078808,new york rangers,2026-03-22,winamax.fr,153,A,2.35
+id1500023462078810,washington capitals,2026-03-22,pinnacle,151,H,2.4
+id1500023462078810,washington capitals,2026-03-22,pinnacle,151,A,1.645
+id1500023462078810,washington capitals,2026-03-22,winamax.fr,153,H,2.85
+id1500023462078810,washington capitals,2026-03-22,winamax.fr,153,X,4.2
+id1500023462078810,washington capitals,2026-03-22,winamax.fr,153,A,1.82
+id1500023462078812,pittsburgh penguins,2026-03-22,pinnacle,151,H,2.2
+id1500023462078812,pittsburgh penguins,2026-03-22,pinnacle,151,A,1.689
+id1500023462078812,pittsburgh penguins,2026-03-22,winamax.fr,153,H,2.55
+id1500023462078812,pittsburgh penguins,2026-03-22,winamax.fr,153,X,4.1
+id1500023462078812,pittsburgh penguins,2026-03-22,winamax.fr,153,A,1.98
+id1500023462078814,chicago blackhawks,2026-03-22,pinnacle,151,H,1.98
+id1500023462078814,chicago blackhawks,2026-03-22,pinnacle,151,A,1.925
+id1500023462078814,chicago blackhawks,2026-03-22,winamax.fr,153,H,2.25
+id1500023462078814,chicago blackhawks,2026-03-22,winamax.fr,153,X,4.1
+id1500023462078814,chicago blackhawks,2026-03-22,winamax.fr,153,A,2.2
+id1500023462078816,new york islanders,2026-03-22,pinnacle,151,H,2.0
+id1500023462078816,new york islanders,2026-03-22,pinnacle,151,A,1.826
+id1500023462078816,new york islanders,2026-03-22,winamax.fr,153,H,2.3
+id1500023462078816,new york islanders,2026-03-22,winamax.fr,153,X,4.2
+id1500023462078816,new york islanders,2026-03-22,winamax.fr,153,A,2.15
+id1500023462078818,dallas stars,2026-03-22,pinnacle,151,H,1.751
+id1500023462078818,dallas stars,2026-03-22,pinnacle,151,A,2.09
+id1500023462078818,dallas stars,2026-03-22,winamax.fr,153,H,2.0
+id1500023462078818,dallas stars,2026-03-22,winamax.fr,153,X,3.9
+id1500023462078818,dallas stars,2026-03-22,winamax.fr,153,A,2.65
+id1500023462078820,anaheim ducks,2026-03-22,pinnacle,151,H,2.029
+id1500023462078820,anaheim ducks,2026-03-22,pinnacle,151,A,1.884
+id1500023462078820,anaheim ducks,2026-03-22,winamax.fr,153,H,2.3
+id1500023462078820,anaheim ducks,2026-03-22,winamax.fr,153,X,3.95
+id1500023462078820,anaheim ducks,2026-03-22,winamax.fr,153,A,2.2
+id1500023462078822,calgary flames,2026-03-22,pinnacle,151,H,2.38
+id1500023462078822,calgary flames,2026-03-22,pinnacle,151,A,1.653
+id1500023462078822,calgary flames,2026-03-22,winamax.fr,153,H,2.9
+id1500023462078822,calgary flames,2026-03-22,winamax.fr,153,X,4.3
+id1500023462078822,calgary flames,2026-03-22,winamax.fr,153,A,1.8
+id1500023462078824,utah mammoth,2026-03-22,pinnacle,151,H,1.581
+id1500023462078824,utah mammoth,2026-03-22,pinnacle,151,A,2.55
+id1500023462078824,utah mammoth,2026-03-22,winamax.fr,153,H,1.78
+id1500023462078824,utah mammoth,2026-03-22,winamax.fr,153,X,4.2
+id1500023462078824,utah mammoth,2026-03-22,winamax.fr,153,A,2.95
+id1500023462078826,new york rangers,2026-03-23,pinnacle,151,H,2.62
+id1500023462078826,new york rangers,2026-03-23,pinnacle,151,A,1.552
+id1500023462078826,new york rangers,2026-03-23,winamax.fr,153,H,2.95
+id1500023462078826,new york rangers,2026-03-23,winamax.fr,153,X,3.95
+id1500023462078826,new york rangers,2026-03-23,winamax.fr,153,A,1.7
+id1500023462078828,detroit red wings,2026-03-24,pinnacle,151,H,1.833
+id1500023462078828,detroit red wings,2026-03-24,pinnacle,151,A,2.07
+id1500023462078828,detroit red wings,2026-03-24,winamax.fr,153,H,2.15
+id1500023462078828,detroit red wings,2026-03-24,winamax.fr,153,X,3.7
+id1500023462078828,detroit red wings,2026-03-24,winamax.fr,153,A,2.3
+id1500023462078830,boston bruins,2026-03-24,pinnacle,151,H,1.529
+id1500023462078830,boston bruins,2026-03-24,pinnacle,151,A,2.65
+id1500023462078830,boston bruins,2026-03-24,winamax.fr,153,H,1.72
+id1500023462078830,boston bruins,2026-03-24,winamax.fr,153,X,3.85
+id1500023462078830,boston bruins,2026-03-24,winamax.fr,153,A,2.95
+id1500023462078832,new york islanders,2026-03-24,pinnacle,151,H,1.523
+id1500023462078832,new york islanders,2026-03-24,pinnacle,151,A,2.67
+id1500023462078832,new york islanders,2026-03-24,winamax.fr,153,H,1.74
+id1500023462078832,new york islanders,2026-03-24,winamax.fr,153,X,3.9
+id1500023462078832,new york islanders,2026-03-24,winamax.fr,153,A,3.0
+id1500023462078834,pittsburgh penguins,2026-03-24,pinnacle,151,H,2.37
+id1500023462078834,pittsburgh penguins,2026-03-24,pinnacle,151,A,1.645
+id1500023462078834,pittsburgh penguins,2026-03-24,winamax.fr,153,H,2.65
+id1500023462078834,pittsburgh penguins,2026-03-24,winamax.fr,153,X,3.9
+id1500023462078834,pittsburgh penguins,2026-03-24,winamax.fr,153,A,1.88
+id1500023462078836,florida panthers,2026-03-24,pinnacle,151,H,1.757
+id1500023462078836,florida panthers,2026-03-24,pinnacle,151,A,2.17
+id1500023462078836,florida panthers,2026-03-24,winamax.fr,153,H,2.0
+id1500023462078836,florida panthers,2026-03-24,winamax.fr,153,X,3.75
+id1500023462078836,florida panthers,2026-03-24,winamax.fr,153,A,2.45
+id1500023462078838,philadelphia flyers,2026-03-24,pinnacle,151,H,2.2
+id1500023462078838,philadelphia flyers,2026-03-24,pinnacle,151,A,1.74
+id1500023462078838,philadelphia flyers,2026-03-24,winamax.fr,153,H,2.5
+id1500023462078838,philadelphia flyers,2026-03-24,winamax.fr,153,X,3.7
+id1500023462078838,philadelphia flyers,2026-03-24,winamax.fr,153,A,2.0
+id1500023462078840,montreal canadiens,2026-03-24,pinnacle,151,H,2.18
+id1500023462078840,montreal canadiens,2026-03-24,pinnacle,151,A,1.751
+id1500023462078840,montreal canadiens,2026-03-24,winamax.fr,153,H,2.45
+id1500023462078840,montreal canadiens,2026-03-24,winamax.fr,153,X,3.85
+id1500023462078840,montreal canadiens,2026-03-24,winamax.fr,153,A,1.98
+id1500023462078842,tampa bay lightning,2026-03-24,pinnacle,151,H,1.609
+id1500023462078842,tampa bay lightning,2026-03-24,pinnacle,151,A,2.44
+id1500023462078842,tampa bay lightning,2026-03-24,winamax.fr,153,H,1.8
+id1500023462078842,tampa bay lightning,2026-03-24,winamax.fr,153,X,3.9
+id1500023462078842,tampa bay lightning,2026-03-24,winamax.fr,153,A,2.8
+id1500023462078844,winnipeg jets,2026-03-24,pinnacle,151,H,2.15
+id1500023462078844,winnipeg jets,2026-03-24,pinnacle,151,A,1.769
+id1500023462078844,winnipeg jets,2026-03-24,winamax.fr,153,H,2.4
+id1500023462078844,winnipeg jets,2026-03-24,winamax.fr,153,X,3.7
+id1500023462078844,winnipeg jets,2026-03-24,winamax.fr,153,A,2.05
+id1500023462078846,st. louis blues,2026-03-24,pinnacle,151,H,1.961
+id1500023462078846,st. louis blues,2026-03-24,pinnacle,151,A,1.925
+id1500023462078846,st. louis blues,2026-03-24,winamax.fr,153,H,2.3
+id1500023462078846,st. louis blues,2026-03-24,winamax.fr,153,X,3.7
+id1500023462078846,st. louis blues,2026-03-24,winamax.fr,153,A,2.15
+id1500023462078848,dallas stars,2026-03-24,pinnacle,151,H,1.609
+id1500023462078848,dallas stars,2026-03-24,pinnacle,151,A,2.44
+id1500023462078848,dallas stars,2026-03-24,winamax.fr,153,H,1.84
+id1500023462078848,dallas stars,2026-03-24,winamax.fr,153,X,3.75
+id1500023462078848,dallas stars,2026-03-24,winamax.fr,153,A,2.8
+id1500023462078850,nashville predators,2026-03-24,pinnacle,151,H,1.714
+id1500023462078850,nashville predators,2026-03-24,pinnacle,151,A,2.24
+id1500023462078850,nashville predators,2026-03-24,winamax.fr,153,H,1.94
+id1500023462078850,nashville predators,2026-03-24,winamax.fr,153,X,3.85
+id1500023462078850,nashville predators,2026-03-24,winamax.fr,153,A,2.55
+id1500023462078854,calgary flames,2026-03-24,pinnacle,151,H,2.26
+id1500023462078854,calgary flames,2026-03-24,pinnacle,151,A,1.704
+id1500023462078854,calgary flames,2026-03-24,winamax.fr,153,H,2.55
+id1500023462078854,calgary flames,2026-03-24,winamax.fr,153,X,3.7
+id1500023462078854,calgary flames,2026-03-24,winamax.fr,153,A,1.96
+id1500023462078852,utah mammoth,2026-03-24,pinnacle,151,H,1.769
+id1500023462078852,utah mammoth,2026-03-24,pinnacle,151,A,2.16
+id1500023462078852,utah mammoth,2026-03-24,winamax.fr,153,H,2.0
+id1500023462078852,utah mammoth,2026-03-24,winamax.fr,153,X,3.8
+id1500023462078852,utah mammoth,2026-03-24,winamax.fr,153,A,2.5
+id1500023462078856,vancouver canucks,2026-03-24,pinnacle,151,H,2.54
+id1500023462078856,vancouver canucks,2026-03-24,pinnacle,151,A,1.568
+id1500023462078856,vancouver canucks,2026-03-24,winamax.fr,153,H,2.85
+id1500023462078856,vancouver canucks,2026-03-24,winamax.fr,153,X,4.0
+id1500023462078856,vancouver canucks,2026-03-24,winamax.fr,153,A,1.76
+id1500023462078862,philadelphia flyers,2026-03-26,pinnacle,151,H,1.68
+id1500023462078862,philadelphia flyers,2026-03-26,pinnacle,151,A,2.32
+id1500023462078862,philadelphia flyers,2026-03-26,winamax.fr,153,H,1.96
+id1500023462078862,philadelphia flyers,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078862,philadelphia flyers,2026-03-26,winamax.fr,153,A,3.05
+id1500023462078864,new york islanders,2026-03-26,pinnacle,151,H,2.1
+id1500023462078864,new york islanders,2026-03-26,pinnacle,151,A,1.826
+id1500023462078864,new york islanders,2026-03-26,winamax.fr,153,H,2.6
+id1500023462078864,new york islanders,2026-03-26,winamax.fr,153,X,3.9
+id1500023462078864,new york islanders,2026-03-26,winamax.fr,153,A,2.2
+id1500023462078866,tampa bay lightning,2026-03-26,pinnacle,151,H,1.343
+id1500023462078866,tampa bay lightning,2026-03-26,pinnacle,151,A,3.52
+id1500023462078866,tampa bay lightning,2026-03-26,winamax.fr,153,H,1.5
+id1500023462078866,tampa bay lightning,2026-03-26,winamax.fr,153,X,4.5
+id1500023462078866,tampa bay lightning,2026-03-26,winamax.fr,153,A,4.9
+id1500023462078868,florida panthers,2026-03-26,pinnacle,151,H,2.4
+id1500023462078868,florida panthers,2026-03-26,pinnacle,151,A,1.641
+id1500023462078868,florida panthers,2026-03-26,winamax.fr,153,H,2.95
+id1500023462078868,florida panthers,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078868,florida panthers,2026-03-26,winamax.fr,153,A,2.0
+id1500023462078870,montreal canadiens,2026-03-26,pinnacle,151,H,1.877
+id1500023462078870,montreal canadiens,2026-03-26,pinnacle,151,A,2.029
+id1500023462078870,montreal canadiens,2026-03-26,winamax.fr,153,H,2.3
+id1500023462078870,montreal canadiens,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078870,montreal canadiens,2026-03-26,winamax.fr,153,A,2.5
+id1500023462078872,ottawa senators,2026-03-26,pinnacle,151,H,1.694
+id1500023462078872,ottawa senators,2026-03-26,pinnacle,151,A,2.3
+id1500023462078872,ottawa senators,2026-03-26,winamax.fr,153,H,2.05
+id1500023462078872,ottawa senators,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078872,ottawa senators,2026-03-26,winamax.fr,153,A,2.8
+id1500023462078874,st. louis blues,2026-03-26,pinnacle,151,H,1.781
+id1500023462078874,st. louis blues,2026-03-26,pinnacle,151,A,2.16
+id1500023462078874,st. louis blues,2026-03-26,winamax.fr,153,H,2.15
+id1500023462078874,st. louis blues,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078874,st. louis blues,2026-03-26,winamax.fr,153,A,2.7
+id1500023462078876,nashville predators,2026-03-26,pinnacle,151,H,1.952
+id1500023462078876,nashville predators,2026-03-26,pinnacle,151,A,1.952
+id1500023462078876,nashville predators,2026-03-26,winamax.fr,153,H,2.4
+id1500023462078876,nashville predators,2026-03-26,winamax.fr,153,X,3.95
+id1500023462078876,nashville predators,2026-03-26,winamax.fr,153,A,2.4
+id1500023462078878,winnipeg jets,2026-03-26,pinnacle,151,H,2.57
+id1500023462078878,winnipeg jets,2026-03-26,pinnacle,151,A,1.568
+id1500023462078878,winnipeg jets,2026-03-26,winamax.fr,153,H,3.25
+id1500023462078878,winnipeg jets,2026-03-26,winamax.fr,153,X,4.1
+id1500023462078878,winnipeg jets,2026-03-26,winamax.fr,153,A,1.88
+id1500023462078880,utah mammoth,2026-03-26,pinnacle,151,H,1.746
+id1500023462078880,utah mammoth,2026-03-26,pinnacle,151,A,2.22
+id1500023462078880,utah mammoth,2026-03-26,winamax.fr,153,H,2.1
+id1500023462078880,utah mammoth,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078880,utah mammoth,2026-03-26,winamax.fr,153,A,2.75
+id1500023462078882,calgary flames,2026-03-26,pinnacle,151,H,2.15
+id1500023462078882,calgary flames,2026-03-26,pinnacle,151,A,1.787
+id1500023462078882,calgary flames,2026-03-26,winamax.fr,153,H,2.75
+id1500023462078882,calgary flames,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078882,calgary flames,2026-03-26,winamax.fr,153,A,2.1
+id1500023462078884,vegas golden knights,2026-03-26,pinnacle,151,H,1.757
+id1500023462078884,vegas golden knights,2026-03-26,pinnacle,151,A,2.2
+id1500023462078884,vegas golden knights,2026-03-26,winamax.fr,153,H,2.1
+id1500023462078884,vegas golden knights,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078884,vegas golden knights,2026-03-26,winamax.fr,153,A,2.7
+id1500023462078886,vancouver canucks,2026-03-26,pinnacle,151,H,2.61
+id1500023462078886,vancouver canucks,2026-03-26,pinnacle,151,A,1.555
+id1500023462078886,vancouver canucks,2026-03-26,winamax.fr,153,H,3.15
+id1500023462078886,vancouver canucks,2026-03-26,winamax.fr,153,X,4.0
+id1500023462078886,vancouver canucks,2026-03-26,winamax.fr,153,A,1.92
+id1500023462078888,buffalo sabres,2026-03-27,pinnacle,151,H,1.751
+id1500023462078888,buffalo sabres,2026-03-27,pinnacle,151,A,2.2
+id1500023462078888,buffalo sabres,2026-03-27,winamax.fr,153,H,1.86
+id1500023462078888,buffalo sabres,2026-03-27,winamax.fr,153,X,3.75
+id1500023462078888,buffalo sabres,2026-03-27,winamax.fr,153,A,2.65
+id1500023462078890,new york rangers,2026-03-27,pinnacle,151,H,1.632
+id1500023462078890,new york rangers,2026-03-27,pinnacle,151,A,2.42
+id1500023462078890,new york rangers,2026-03-27,winamax.fr,153,H,1.9
+id1500023462078890,new york rangers,2026-03-27,winamax.fr,153,X,3.7
+id1500023462078890,new york rangers,2026-03-27,winamax.fr,153,A,2.65
+id1500023462078892,new york islanders,2026-03-28,pinnacle,151,H,1.591
+id1500023462078892,new york islanders,2026-03-28,pinnacle,151,A,2.48
+id1500023462078892,new york islanders,2026-03-28,winamax.fr,153,H,1.8
+id1500023462078892,new york islanders,2026-03-28,winamax.fr,153,X,3.7
+id1500023462078892,new york islanders,2026-03-28,winamax.fr,153,A,2.95
+id1500023462078894,tampa bay lightning,2026-03-28,pinnacle,151,H,1.617
+id1500023462078894,tampa bay lightning,2026-03-28,pinnacle,151,A,2.43
+id1500023462078894,tampa bay lightning,2026-03-28,winamax.fr,153,H,1.82
+id1500023462078894,tampa bay lightning,2026-03-28,winamax.fr,153,X,3.75
+id1500023462078894,tampa bay lightning,2026-03-28,winamax.fr,153,A,2.85
+id1500023462078896,edmonton oilers,2026-03-28,pinnacle,151,H,1.694
+id1500023462078896,edmonton oilers,2026-03-28,pinnacle,151,A,2.27
+id1500023462078896,edmonton oilers,2026-03-28,winamax.fr,153,H,1.96
+id1500023462078896,edmonton oilers,2026-03-28,winamax.fr,153,X,3.8
+id1500023462078896,edmonton oilers,2026-03-28,winamax.fr,153,A,2.55
+id1500023462078898,carolina hurricanes,2026-03-28,pinnacle,151,H,1.5
+id1500023462078898,carolina hurricanes,2026-03-28,pinnacle,151,A,2.74
+id1500023462078898,carolina hurricanes,2026-03-28,winamax.fr,153,H,1.66
+id1500023462078898,carolina hurricanes,2026-03-28,winamax.fr,153,X,3.85
+id1500023462078898,carolina hurricanes,2026-03-28,winamax.fr,153,A,3.2
+id1500023462078900,pittsburgh penguins,2026-03-28,pinnacle,151,H,2.06
+id1500023462078900,pittsburgh penguins,2026-03-28,pinnacle,151,A,1.833
+id1500023462078900,pittsburgh penguins,2026-03-28,winamax.fr,153,H,2.35
+id1500023462078900,pittsburgh penguins,2026-03-28,winamax.fr,153,X,3.6
+id1500023462078900,pittsburgh penguins,2026-03-28,winamax.fr,153,A,2.1
+id1500023462078902,boston bruins,2026-03-28,pinnacle,151,H,2.13
+id1500023462078902,boston bruins,2026-03-28,pinnacle,151,A,1.787
+id1500023462078902,boston bruins,2026-03-28,winamax.fr,153,H,2.3
+id1500023462078902,boston bruins,2026-03-28,winamax.fr,153,X,3.6
+id1500023462078902,boston bruins,2026-03-28,winamax.fr,153,A,2.1
+id1500023462078904,columbus blue jackets,2026-03-28,pinnacle,151,H,1.495
+id1500023462078904,columbus blue jackets,2026-03-28,pinnacle,151,A,2.76
+id1500023462078904,columbus blue jackets,2026-03-28,winamax.fr,153,H,1.64
+id1500023462078904,columbus blue jackets,2026-03-28,winamax.fr,153,X,3.9
+id1500023462078904,columbus blue jackets,2026-03-28,winamax.fr,153,A,3.2
+id1500023462078906,buffalo sabres,2026-03-28,winamax.fr,153,H,1.68
+id1500023462078906,buffalo sabres,2026-03-28,winamax.fr,153,X,3.8
+id1500023462078906,buffalo sabres,2026-03-28,winamax.fr,153,A,3.15
+id1500023462078908,colorado avalanche,2026-03-28,pinnacle,151,H,1.387
+id1500023462078908,colorado avalanche,2026-03-28,pinnacle,151,A,3.05
+id1500023462078908,colorado avalanche,2026-03-28,winamax.fr,153,H,1.52
+id1500023462078908,colorado avalanche,2026-03-28,winamax.fr,153,X,4.0
+id1500023462078908,colorado avalanche,2026-03-28,winamax.fr,153,A,3.7
+id1500023462078910,nashville predators,2026-03-28,pinnacle,151,H,1.97
+id1500023462078910,nashville predators,2026-03-28,pinnacle,151,A,1.854
+id1500023462078910,nashville predators,2026-03-28,winamax.fr,153,H,2.3
+id1500023462078910,nashville predators,2026-03-28,winamax.fr,153,X,3.65
+id1500023462078910,nashville predators,2026-03-28,winamax.fr,153,A,2.1
+id1500023462078912,st. louis blues,2026-03-28,pinnacle,151,H,1.714
+id1500023462078912,st. louis blues,2026-03-28,pinnacle,151,A,2.24
+id1500023462078912,st. louis blues,2026-03-28,winamax.fr,153,H,1.98
+id1500023462078912,st. louis blues,2026-03-28,winamax.fr,153,X,3.55
+id1500023462078912,st. louis blues,2026-03-28,winamax.fr,153,A,2.55
+id1500023462078914,detroit red wings,2026-03-28,pinnacle,151,H,1.8
+id1500023462078914,detroit red wings,2026-03-28,pinnacle,151,A,2.13
+id1500023462078914,detroit red wings,2026-03-28,winamax.fr,153,H,1.96
+id1500023462078914,detroit red wings,2026-03-28,winamax.fr,153,X,3.65
+id1500023462078914,detroit red wings,2026-03-28,winamax.fr,153,A,2.55
+id1500023462078916,los angeles kings,2026-03-28,pinnacle,151,H,1.909
+id1500023462078916,los angeles kings,2026-03-28,pinnacle,151,A,2.0
+id1500023462078916,los angeles kings,2026-03-28,winamax.fr,153,H,2.2
+id1500023462078916,los angeles kings,2026-03-28,winamax.fr,153,X,3.55
+id1500023462078916,los angeles kings,2026-03-28,winamax.fr,153,A,2.25
+id1500023462078918,calgary flames,2026-03-28,pinnacle,151,H,1.609
+id1500023462078918,calgary flames,2026-03-28,pinnacle,151,A,2.45
+id1500023462078918,calgary flames,2026-03-28,winamax.fr,153,H,1.84
+id1500023462078918,calgary flames,2026-03-28,winamax.fr,153,X,3.7
+id1500023462078918,calgary flames,2026-03-28,winamax.fr,153,A,2.75
+id1500023462078920,vegas golden knights,2026-03-28,pinnacle,151,H,1.645
+id1500023462078920,vegas golden knights,2026-03-28,pinnacle,151,A,2.37
+id1500023462078920,vegas golden knights,2026-03-28,winamax.fr,153,H,1.88
+id1500023462078920,vegas golden knights,2026-03-28,winamax.fr,153,X,3.65
+id1500023462078920,vegas golden knights,2026-03-28,winamax.fr,153,A,2.7
+id1500023462078922,new york rangers,2026-03-29,pinnacle,151,H,1.552
+id1500023462078922,new york rangers,2026-03-29,pinnacle,151,A,2.48
+id1500023462078924,columbus blue jackets,2026-03-29,pinnacle,151,H,1.636
+id1500023462078924,columbus blue jackets,2026-03-29,pinnacle,151,A,2.29
+id1500023462078926,tampa bay lightning,2026-03-29,pinnacle,151,H,1.588
+id1500023462078926,tampa bay lightning,2026-03-29,pinnacle,151,A,2.4
+id1500023462078928,carolina hurricanes,2026-03-29,pinnacle,151,H,1.609
+id1500023462078928,carolina hurricanes,2026-03-29,pinnacle,151,A,2.35
+id1500023462078930,philadelphia flyers,2026-03-29,pinnacle,151,H,2.57
+id1500023462078930,philadelphia flyers,2026-03-29,pinnacle,151,A,1.571
+id1500023462078932,new jersey devils,2026-03-29,pinnacle,151,H,1.591
+id1500023462078932,new jersey devils,2026-03-29,pinnacle,151,A,2.39
+id1500023462078934,new york islanders,2026-03-30,pinnacle,151,H,1.763
+id1500023462078934,new york islanders,2026-03-30,pinnacle,151,A,2.19
+id1500023462078934,new york islanders,2026-03-30,winamax.fr,153,H,2.2
+id1500023462078934,new york islanders,2026-03-30,winamax.fr,153,X,4.3
+id1500023462078934,new york islanders,2026-03-30,winamax.fr,153,A,2.5
+id1500023462078936,colorado avalanche,2026-03-30,pinnacle,151,H,1.274
+id1500023462078936,colorado avalanche,2026-03-30,pinnacle,151,A,4.09
+id1500023462078936,colorado avalanche,2026-03-30,winamax.fr,153,H,1.42
+id1500023462078936,colorado avalanche,2026-03-30,winamax.fr,153,X,5.3
+id1500023462078936,colorado avalanche,2026-03-30,winamax.fr,153,A,5.2
+id1500023462078938,vegas golden knights,2026-03-30,pinnacle,151,H,1.295
+id1500023462078938,vegas golden knights,2026-03-30,pinnacle,151,A,3.89
+id1500023462078938,vegas golden knights,2026-03-30,winamax.fr,153,H,1.44
+id1500023462078938,vegas golden knights,2026-03-30,winamax.fr,153,X,5.2
+id1500023462078938,vegas golden knights,2026-03-30,winamax.fr,153,A,5.0
+id1500023462078940,anaheim ducks,2026-03-30,pinnacle,151,H,1.581
+id1500023462078940,anaheim ducks,2026-03-30,pinnacle,151,A,2.54
+id1500023462078940,anaheim ducks,2026-03-30,winamax.fr,153,H,1.82
+id1500023462078940,anaheim ducks,2026-03-30,winamax.fr,153,X,4.4
+id1500023462078940,anaheim ducks,2026-03-30,winamax.fr,153,A,3.2
+id1500023462078942,san jose sharks,2026-03-30,pinnacle,151,H,1.952
+id1500023462078942,san jose sharks,2026-03-30,pinnacle,151,A,1.952
+id1500023462078942,san jose sharks,2026-03-30,winamax.fr,153,H,2.35
+id1500023462078942,san jose sharks,2026-03-30,winamax.fr,153,X,4.1
+id1500023462078942,san jose sharks,2026-03-30,winamax.fr,153,A,2.35
+id1500023462078946,new york rangers,2026-03-31,pinnacle,151,H,2.1
+id1500023462078946,new york rangers,2026-03-31,pinnacle,151,A,1.819
+id1500023462078946,new york rangers,2026-03-31,winamax.fr,153,H,2.3
+id1500023462078946,new york rangers,2026-03-31,winamax.fr,153,X,3.65
+id1500023462078946,new york rangers,2026-03-31,winamax.fr,153,A,2.1
+id1500023462078948,buffalo sabres,2026-03-31,pinnacle,151,H,1.609
+id1500023462078948,buffalo sabres,2026-03-31,pinnacle,151,A,2.47
+id1500023462078948,buffalo sabres,2026-03-31,winamax.fr,153,H,1.7
+id1500023462078948,buffalo sabres,2026-03-31,winamax.fr,153,X,3.85
+id1500023462078948,buffalo sabres,2026-03-31,winamax.fr,153,A,3.0
+id1500023462078950,boston bruins,2026-03-31,pinnacle,151,H,2.17
+id1500023462078950,boston bruins,2026-03-31,pinnacle,151,A,1.775
+id1500023462078950,boston bruins,2026-03-31,winamax.fr,153,H,2.3
+id1500023462078950,boston bruins,2026-03-31,winamax.fr,153,X,3.7
+id1500023462078950,boston bruins,2026-03-31,winamax.fr,153,A,2.1
+id1500023462078952,pittsburgh penguins,2026-03-31,pinnacle,151,H,1.925
+id1500023462078952,pittsburgh penguins,2026-03-31,pinnacle,151,A,1.98
+id1500023462078952,pittsburgh penguins,2026-03-31,winamax.fr,153,H,2.25
+id1500023462078952,pittsburgh penguins,2026-03-31,winamax.fr,153,X,3.65
+id1500023462078952,pittsburgh penguins,2026-03-31,winamax.fr,153,A,2.15
+id1500023462078954,tampa bay lightning,2026-03-31,pinnacle,151,H,1.588
+id1500023462078954,tampa bay lightning,2026-03-31,pinnacle,151,A,2.52
+id1500023462078954,tampa bay lightning,2026-03-31,winamax.fr,153,H,1.8
+id1500023462078954,tampa bay lightning,2026-03-31,winamax.fr,153,X,3.85
+id1500023462078954,tampa bay lightning,2026-03-31,winamax.fr,153,A,2.75
+id1500023462078956,washington capitals,2026-03-31,pinnacle,151,H,1.84
+id1500023462078956,washington capitals,2026-03-31,pinnacle,151,A,2.08
+id1500023462078956,washington capitals,2026-03-31,winamax.fr,153,H,2.0
+id1500023462078956,washington capitals,2026-03-31,winamax.fr,153,X,3.7
+id1500023462078956,washington capitals,2026-03-31,winamax.fr,153,A,2.45
+id1500023462078958,florida panthers,2026-03-31,pinnacle,151,H,2.57
+id1500023462078958,florida panthers,2026-03-31,pinnacle,151,A,1.568
+id1500023462078958,florida panthers,2026-03-31,winamax.fr,153,H,2.75
+id1500023462078958,florida panthers,2026-03-31,winamax.fr,153,X,3.8
+id1500023462078958,florida panthers,2026-03-31,winamax.fr,153,A,1.82
+id1500023462078944,columbus blue jackets,2026-03-31,pinnacle,151,H,2.11
+id1500023462078944,columbus blue jackets,2026-03-31,pinnacle,151,A,1.813
+id1500023462078944,columbus blue jackets,2026-03-31,winamax.fr,153,H,2.4
+id1500023462078944,columbus blue jackets,2026-03-31,winamax.fr,153,X,3.75
+id1500023462078944,columbus blue jackets,2026-03-31,winamax.fr,153,A,2.0
+id1500023462078960,chicago blackhawks,2026-03-31,pinnacle,151,H,2.36
+id1500023462078960,chicago blackhawks,2026-03-31,pinnacle,151,A,1.662
+id1500023462078960,chicago blackhawks,2026-03-31,winamax.fr,153,H,2.45
+id1500023462078960,chicago blackhawks,2026-03-31,winamax.fr,153,X,3.65
+id1500023462078960,chicago blackhawks,2026-03-31,winamax.fr,153,A,2.0
+id1500023462078962,edmonton oilers,2026-03-31,pinnacle,151,H,1.561
+id1500023462078962,edmonton oilers,2026-03-31,pinnacle,151,A,2.6
+id1500023462078962,edmonton oilers,2026-03-31,winamax.fr,153,H,1.74
+id1500023462078962,edmonton oilers,2026-03-31,winamax.fr,153,X,3.85
+id1500023462078962,edmonton oilers,2026-03-31,winamax.fr,153,A,2.9
+id1500023462078964,colorado avalanche,2026-04-01,pinnacle,151,H,1.22
+id1500023462078964,colorado avalanche,2026-04-01,pinnacle,151,A,4.77
+id1500023462078964,colorado avalanche,2026-04-01,winamax.fr,153,H,1.3
+id1500023462078964,colorado avalanche,2026-04-01,winamax.fr,153,X,4.5
+id1500023462078964,colorado avalanche,2026-04-01,winamax.fr,153,A,5.4
+id1500023462078966,los angeles kings,2026-04-01,pinnacle,151,H,1.704
+id1500023462078966,los angeles kings,2026-04-01,pinnacle,151,A,2.28
+id1500023462078966,los angeles kings,2026-04-01,winamax.fr,153,H,2.1
+id1500023462078966,los angeles kings,2026-04-01,winamax.fr,153,X,3.9
+id1500023462078966,los angeles kings,2026-04-01,winamax.fr,153,A,2.8
+id1500023462078968,san jose sharks,2026-04-01,pinnacle,151,H,1.934
+id1500023462078968,san jose sharks,2026-04-01,pinnacle,151,A,1.97
+id1500023462078968,san jose sharks,2026-04-01,winamax.fr,153,H,2.25
+id1500023462078968,san jose sharks,2026-04-01,winamax.fr,153,X,3.8
+id1500023462078968,san jose sharks,2026-04-01,winamax.fr,153,A,2.1
+id1500023462078970,tampa bay lightning,2026-04-02,pinnacle,151,H,1.636
+id1500023462078970,tampa bay lightning,2026-04-02,pinnacle,151,A,2.41
+id1500023462078970,tampa bay lightning,2026-04-02,winamax.fr,153,H,1.78
+id1500023462078970,tampa bay lightning,2026-04-02,winamax.fr,153,X,3.9
+id1500023462078970,tampa bay lightning,2026-04-02,winamax.fr,153,A,2.8
+id1500023462078972,carolina hurricanes,2026-04-02,pinnacle,151,H,1.546
+id1500023462078972,carolina hurricanes,2026-04-02,pinnacle,151,A,2.63
+id1500023462078972,carolina hurricanes,2026-04-02,winamax.fr,153,H,1.72
+id1500023462078972,carolina hurricanes,2026-04-02,winamax.fr,153,X,3.95
+id1500023462078972,carolina hurricanes,2026-04-02,winamax.fr,153,A,2.9
+id1500023462078974,ottawa senators,2026-04-02,pinnacle,151,H,1.892
+id1500023462078974,ottawa senators,2026-04-02,pinnacle,151,A,2.009
+id1500023462078974,ottawa senators,2026-04-02,winamax.fr,153,H,2.15
+id1500023462078974,ottawa senators,2026-04-02,winamax.fr,153,X,3.7
+id1500023462078974,ottawa senators,2026-04-02,winamax.fr,153,A,2.25
+id1500023462078976,new york rangers,2026-04-02,pinnacle,151,H,2.12
+id1500023462078976,new york rangers,2026-04-02,pinnacle,151,A,1.813
+id1500023462078976,new york rangers,2026-04-02,winamax.fr,153,H,2.5
+id1500023462078976,new york rangers,2026-04-02,winamax.fr,153,X,3.75
+id1500023462078976,new york rangers,2026-04-02,winamax.fr,153,A,1.96
+id1500023462078978,florida panthers,2026-04-02,pinnacle,151,H,2.45
+id1500023462078978,florida panthers,2026-04-02,pinnacle,151,A,1.621
+id1500023462078978,florida panthers,2026-04-02,winamax.fr,153,H,2.5
+id1500023462078978,florida panthers,2026-04-02,winamax.fr,153,X,3.75
+id1500023462078978,florida panthers,2026-04-02,winamax.fr,153,A,1.94
+id1500023462078980,philadelphia flyers,2026-04-02,pinnacle,151,H,2.0
+id1500023462078980,philadelphia flyers,2026-04-02,pinnacle,151,A,1.909
+id1500023462078980,philadelphia flyers,2026-04-02,winamax.fr,153,H,2.2
+id1500023462078980,philadelphia flyers,2026-04-02,winamax.fr,153,X,3.65
+id1500023462078980,philadelphia flyers,2026-04-02,winamax.fr,153,A,2.25
+id1500023462078982,new jersey devils,2026-04-02,pinnacle,151,H,1.952
+id1500023462078982,new jersey devils,2026-04-02,pinnacle,151,A,1.952
+id1500023462078982,new jersey devils,2026-04-02,winamax.fr,153,H,2.1
+id1500023462078982,new jersey devils,2026-04-02,winamax.fr,153,X,3.65
+id1500023462078982,new jersey devils,2026-04-02,winamax.fr,153,A,2.3
+id1500023462078984,minnesota wild,2026-04-02,pinnacle,151,H,1.236
+id1500023462078984,minnesota wild,2026-04-02,pinnacle,151,A,4.53
+id1500023462078984,minnesota wild,2026-04-02,winamax.fr,153,H,1.35
+id1500023462078984,minnesota wild,2026-04-02,winamax.fr,153,X,4.4
+id1500023462078984,minnesota wild,2026-04-02,winamax.fr,153,A,4.8
+id1500023462078986,dallas stars,2026-04-02,pinnacle,151,H,1.694
+id1500023462078986,dallas stars,2026-04-02,pinnacle,151,A,2.3
+id1500023462078986,dallas stars,2026-04-02,winamax.fr,153,H,1.76
+id1500023462078986,dallas stars,2026-04-02,winamax.fr,153,X,3.8
+id1500023462078986,dallas stars,2026-04-02,winamax.fr,153,A,2.85
+id1500023462078988,edmonton oilers,2026-04-02,pinnacle,151,H,1.476
+id1500023462078988,edmonton oilers,2026-04-02,pinnacle,151,A,2.87
+id1500023462078988,edmonton oilers,2026-04-02,winamax.fr,153,H,1.56
+id1500023462078988,edmonton oilers,2026-04-02,winamax.fr,153,X,4.0
+id1500023462078988,edmonton oilers,2026-04-02,winamax.fr,153,A,3.45
+id1500023462078990,san jose sharks,2026-04-02,pinnacle,151,H,1.757
+id1500023462078990,san jose sharks,2026-04-02,pinnacle,151,A,2.19
+id1500023462078990,san jose sharks,2026-04-02,winamax.fr,153,H,2.1
+id1500023462078990,san jose sharks,2026-04-02,winamax.fr,153,X,3.75
+id1500023462078990,san jose sharks,2026-04-02,winamax.fr,153,A,2.3
+id1500023462078992,vegas golden knights,2026-04-02,pinnacle,151,H,1.467
+id1500023462078992,vegas golden knights,2026-04-02,pinnacle,151,A,2.9
+id1500023462078992,vegas golden knights,2026-04-02,winamax.fr,153,H,1.56
+id1500023462078992,vegas golden knights,2026-04-02,winamax.fr,153,X,4.0
+id1500023462078992,vegas golden knights,2026-04-02,winamax.fr,153,A,3.45
+id1500023462078994,seattle kraken,2026-04-02,pinnacle,151,H,2.35
+id1500023462078994,seattle kraken,2026-04-02,pinnacle,151,A,1.666
+id1500023462078994,seattle kraken,2026-04-02,winamax.fr,153,H,2.4
+id1500023462078994,seattle kraken,2026-04-02,winamax.fr,153,X,3.7
+id1500023462078994,seattle kraken,2026-04-02,winamax.fr,153,A,2.05
+id1500023462078996,los angeles kings,2026-04-02,pinnacle,151,H,1.833
+id1500023462078996,los angeles kings,2026-04-02,pinnacle,151,A,2.09
+id1500023462078996,los angeles kings,2026-04-02,winamax.fr,153,H,2.05
+id1500023462078996,los angeles kings,2026-04-02,winamax.fr,153,X,3.7
+id1500023462078996,los angeles kings,2026-04-02,winamax.fr,153,A,2.35
+id1500023462078998,new york islanders,2026-04-03,pinnacle,151,H,1.684
+id1500023462078998,new york islanders,2026-04-03,pinnacle,151,A,2.31
+id1500023462078998,new york islanders,2026-04-03,winamax.fr,153,H,1.92
+id1500023462078998,new york islanders,2026-04-03,winamax.fr,153,X,3.75
+id1500023462078998,new york islanders,2026-04-03,winamax.fr,153,A,2.55
+id1500023462079000,anaheim ducks,2026-04-03,pinnacle,151,H,1.769
+id1500023462079000,anaheim ducks,2026-04-03,pinnacle,151,A,2.17
+id1500023462079000,anaheim ducks,2026-04-03,winamax.fr,153,H,1.98
+id1500023462079000,anaheim ducks,2026-04-03,winamax.fr,153,X,3.75
+id1500023462079000,anaheim ducks,2026-04-03,winamax.fr,153,A,2.45
+id1500023462079002,new york rangers,2026-04-04,pinnacle,151,H,2.18
+id1500023462079002,new york rangers,2026-04-04,pinnacle,151,A,1.699
+id1500023462079002,new york rangers,2026-04-04,winamax.fr,153,H,2.5
+id1500023462079002,new york rangers,2026-04-04,winamax.fr,153,X,3.75
+id1500023462079002,new york rangers,2026-04-04,winamax.fr,153,A,1.98
+id1500023462079004,ottawa senators,2026-04-04,pinnacle,151,H,1.714
+id1500023462079004,ottawa senators,2026-04-04,pinnacle,151,A,2.16
+id1500023462079004,ottawa senators,2026-04-04,winamax.fr,153,H,2.15
+id1500023462079004,ottawa senators,2026-04-04,winamax.fr,153,X,3.7
+id1500023462079004,ottawa senators,2026-04-04,winamax.fr,153,A,2.3
+id1500023462079006,dallas stars,2026-04-04,pinnacle,151,H,2.029
+id1500023462079006,dallas stars,2026-04-04,pinnacle,151,A,1.877
+id1500023462079006,dallas stars,2026-04-04,winamax.fr,153,H,2.2
+id1500023462079006,dallas stars,2026-04-04,winamax.fr,153,X,3.75
+id1500023462079006,dallas stars,2026-04-04,winamax.fr,153,A,2.2
+id1500023462079008,pittsburgh penguins,2026-04-04,pinnacle,151,H,1.427
+id1500023462079008,pittsburgh penguins,2026-04-04,pinnacle,151,A,2.88
+id1500023462079008,pittsburgh penguins,2026-04-04,winamax.fr,153,H,1.62
+id1500023462079008,pittsburgh penguins,2026-04-04,winamax.fr,153,X,3.95
+id1500023462079008,pittsburgh penguins,2026-04-04,winamax.fr,153,A,3.25
+id1500023462079010,tampa bay lightning,2026-04-04,pinnacle,151,H,1.574
+id1500023462079010,tampa bay lightning,2026-04-04,pinnacle,151,A,2.42
+id1500023462079010,tampa bay lightning,2026-04-04,winamax.fr,153,H,1.76
+id1500023462079010,tampa bay lightning,2026-04-04,winamax.fr,153,X,3.9
+id1500023462079010,tampa bay lightning,2026-04-04,winamax.fr,153,A,2.9
+id1500023462079012,columbus blue jackets,2026-04-04,pinnacle,151,H,1.689
+id1500023462079012,columbus blue jackets,2026-04-04,pinnacle,151,A,2.31
+id1500023462079012,columbus blue jackets,2026-04-04,winamax.fr,153,H,1.96
+id1500023462079012,columbus blue jackets,2026-04-04,winamax.fr,153,X,3.8
+id1500023462079012,columbus blue jackets,2026-04-04,winamax.fr,153,A,2.45
+id1500023462079014,carolina hurricanes,2026-04-04,pinnacle,151,H,1.427
+id1500023462079014,carolina hurricanes,2026-04-04,pinnacle,151,A,3.06
+id1500023462079014,carolina hurricanes,2026-04-04,winamax.fr,153,H,1.56
+id1500023462079014,carolina hurricanes,2026-04-04,winamax.fr,153,X,4.0
+id1500023462079014,carolina hurricanes,2026-04-04,winamax.fr,153,A,3.45
+id1500023462079016,los angeles kings,2026-04-04,pinnacle,151,H,1.505
+id1500023462079016,los angeles kings,2026-04-04,pinnacle,151,A,2.77
+id1500023462079016,los angeles kings,2026-04-04,winamax.fr,153,H,1.76
+id1500023462079016,los angeles kings,2026-04-04,winamax.fr,153,X,3.8
+id1500023462079016,los angeles kings,2026-04-04,winamax.fr,153,A,2.9
+id1500023462079018,washington capitals,2026-04-04,pinnacle,151,H,2.029
+id1500023462079018,washington capitals,2026-04-04,pinnacle,151,A,1.884
+id1500023462079018,washington capitals,2026-04-04,winamax.fr,153,H,2.2
+id1500023462079018,washington capitals,2026-04-04,winamax.fr,153,X,3.75
+id1500023462079018,washington capitals,2026-04-04,winamax.fr,153,A,2.15
+id1500023462079020,new jersey devils,2026-04-04,pinnacle,151,H,2.06
+id1500023462079020,new jersey devils,2026-04-04,pinnacle,151,A,1.854
+id1500023462079020,new jersey devils,2026-04-04,winamax.fr,153,H,2.25
+id1500023462079020,new jersey devils,2026-04-04,winamax.fr,153,X,3.75
+id1500023462079020,new jersey devils,2026-04-04,winamax.fr,153,A,2.1
+id1500023462079022,vancouver canucks,2026-04-04,pinnacle,151,H,2.9
+id1500023462079022,vancouver canucks,2026-04-04,pinnacle,151,A,1.467
+id1500023462079022,vancouver canucks,2026-04-04,winamax.fr,153,H,3.15
+id1500023462079022,vancouver canucks,2026-04-04,winamax.fr,153,X,3.9
+id1500023462079022,vancouver canucks,2026-04-04,winamax.fr,153,A,1.66
+id1500023462079024,seattle kraken,2026-04-04,pinnacle,151,H,1.632
+id1500023462079024,seattle kraken,2026-04-04,pinnacle,151,A,2.42
+id1500023462079024,seattle kraken,2026-04-04,winamax.fr,153,H,1.8
+id1500023462079024,seattle kraken,2026-04-04,winamax.fr,153,X,3.75
+id1500023462079024,seattle kraken,2026-04-04,winamax.fr,153,A,2.8
+id1500023462079026,san jose sharks,2026-04-04,pinnacle,151,H,1.884
+id1500023462079026,san jose sharks,2026-04-04,pinnacle,151,A,2.029
+id1500023462079026,san jose sharks,2026-04-04,winamax.fr,153,H,2.15
+id1500023462079026,san jose sharks,2026-04-04,winamax.fr,153,X,3.75
+id1500023462079026,san jose sharks,2026-04-04,winamax.fr,153,A,2.2
+id1500023462079028,anaheim ducks,2026-04-04,pinnacle,151,H,1.689
+id1500023462079028,anaheim ducks,2026-04-04,pinnacle,151,A,2.31
+id1500023462079028,anaheim ducks,2026-04-04,winamax.fr,153,H,1.86
+id1500023462079028,anaheim ducks,2026-04-04,winamax.fr,153,X,3.85
+id1500023462079028,anaheim ducks,2026-04-04,winamax.fr,153,A,2.65
+id1500023462079030,edmonton oilers,2026-04-04,pinnacle,151,H,2.029
+id1500023462079030,edmonton oilers,2026-04-04,pinnacle,151,A,1.877
+id1500023462079030,edmonton oilers,2026-04-04,winamax.fr,153,H,2.15
+id1500023462079030,edmonton oilers,2026-04-04,winamax.fr,153,X,3.75
+id1500023462079030,edmonton oilers,2026-04-04,winamax.fr,153,A,2.25
+id1500023462079032,detroit red wings,2026-04-05,pinnacle,151,H,2.14
+id1500023462079032,detroit red wings,2026-04-05,pinnacle,151,A,1.793
+id1500023462079032,detroit red wings,2026-04-05,winamax.fr,153,H,2.25
+id1500023462079032,detroit red wings,2026-04-05,winamax.fr,153,X,3.75
+id1500023462079032,detroit red wings,2026-04-05,winamax.fr,153,A,2.1
+id1500023462079034,pittsburgh penguins,2026-04-05,pinnacle,151,H,1.45
+id1500023462079034,pittsburgh penguins,2026-04-05,pinnacle,151,A,2.96
+id1500023462079034,pittsburgh penguins,2026-04-05,winamax.fr,153,H,1.62
+id1500023462079034,pittsburgh penguins,2026-04-05,winamax.fr,153,X,4.0
+id1500023462079034,pittsburgh penguins,2026-04-05,winamax.fr,153,A,3.2
+id1500023462079036,philadelphia flyers,2026-04-05,pinnacle,151,H,1.641
+id1500023462079036,philadelphia flyers,2026-04-05,pinnacle,151,A,2.41
+id1500023462079036,philadelphia flyers,2026-04-05,winamax.fr,153,H,1.94
+id1500023462079036,philadelphia flyers,2026-04-05,winamax.fr,153,X,3.8
+id1500023462079036,philadelphia flyers,2026-04-05,winamax.fr,153,A,2.5
+id1500023462079038,ottawa senators,2026-04-05,pinnacle,151,H,2.029
+id1500023462079038,ottawa senators,2026-04-05,pinnacle,151,A,1.877
+id1500023462079038,ottawa senators,2026-04-05,winamax.fr,153,H,2.2
+id1500023462079038,ottawa senators,2026-04-05,winamax.fr,153,X,3.9
+id1500023462079038,ottawa senators,2026-04-05,winamax.fr,153,A,2.15
+id1500023462079040,montreal canadiens,2026-04-05,pinnacle,151,H,1.729
+id1500023462079040,montreal canadiens,2026-04-05,pinnacle,151,A,2.24
+id1500023462079040,montreal canadiens,2026-04-05,winamax.fr,153,H,1.9
+id1500023462079040,montreal canadiens,2026-04-05,winamax.fr,153,X,3.95
+id1500023462079040,montreal canadiens,2026-04-05,winamax.fr,153,A,2.5
+id1500023462079042,new york rangers,2026-04-05,pinnacle,151,H,2.02
+id1500023462079042,new york rangers,2026-04-05,pinnacle,151,A,1.892
+id1500023462079042,new york rangers,2026-04-05,winamax.fr,153,H,2.25
+id1500023462079042,new york rangers,2026-04-05,winamax.fr,153,X,3.65
+id1500023462079042,new york rangers,2026-04-05,winamax.fr,153,A,2.15
+id1500023462079044,colorado avalanche,2026-04-05,pinnacle,151,H,1.584
+id1500023462079044,colorado avalanche,2026-04-05,pinnacle,151,A,2.53
+id1500023462079044,colorado avalanche,2026-04-05,winamax.fr,153,H,1.64
+id1500023462079044,colorado avalanche,2026-04-05,winamax.fr,153,X,3.95
+id1500023462079044,colorado avalanche,2026-04-05,winamax.fr,153,A,3.3
+id1500023462079046,buffalo sabres,2026-04-06,pinnacle,151,H,1.97
+id1500023462079046,buffalo sabres,2026-04-06,pinnacle,151,A,1.854
+id1500023462079046,buffalo sabres,2026-04-06,winamax.fr,153,H,2.25
+id1500023462079046,buffalo sabres,2026-04-06,winamax.fr,153,X,3.8
+id1500023462079046,buffalo sabres,2026-04-06,winamax.fr,153,A,2.15
+id1500023462079048,winnipeg jets,2026-04-06,pinnacle,151,H,1.578
+id1500023462079048,winnipeg jets,2026-04-06,pinnacle,151,A,2.41
+id1500023462079048,winnipeg jets,2026-04-06,winamax.fr,153,H,1.82
+id1500023462079048,winnipeg jets,2026-04-06,winamax.fr,153,X,3.8
+id1500023462079048,winnipeg jets,2026-04-06,winamax.fr,153,A,2.8
+id1500023462079050,san jose sharks,2026-04-06,pinnacle,151,H,1.653
+id1500023462079050,san jose sharks,2026-04-06,pinnacle,151,A,2.38
+id1500023462079050,san jose sharks,2026-04-06,winamax.fr,153,H,1.86
+id1500023462079050,san jose sharks,2026-04-06,winamax.fr,153,X,4.0
+id1500023462079050,san jose sharks,2026-04-06,winamax.fr,153,A,2.85
+id1500023462079052,los angeles kings,2026-04-06,pinnacle,151,H,1.724
+id1500023462079052,los angeles kings,2026-04-06,pinnacle,151,A,2.14
+id1500023462079052,los angeles kings,2026-04-06,winamax.fr,153,H,2.05
+id1500023462079052,los angeles kings,2026-04-06,winamax.fr,153,X,3.85
+id1500023462079052,los angeles kings,2026-04-06,winamax.fr,153,A,2.55
+id1500023462079054,detroit red wings,2026-04-07,pinnacle,151,H,1.97
+id1500023462079054,detroit red wings,2026-04-07,pinnacle,151,A,1.934
+id1500023462079054,detroit red wings,2026-04-07,winamax.fr,153,H,2.1
+id1500023462079054,detroit red wings,2026-04-07,winamax.fr,153,X,3.65
+id1500023462079054,detroit red wings,2026-04-07,winamax.fr,153,A,2.3
+id1500023462079056,carolina hurricanes,2026-04-07,pinnacle,151,H,1.568
+id1500023462079056,carolina hurricanes,2026-04-07,pinnacle,151,A,2.58
+id1500023462079056,carolina hurricanes,2026-04-07,winamax.fr,153,H,1.72
+id1500023462079056,carolina hurricanes,2026-04-07,winamax.fr,153,X,3.85
+id1500023462079056,carolina hurricanes,2026-04-07,winamax.fr,153,A,2.95
+id1500023462079058,ottawa senators,2026-04-07,pinnacle,151,H,1.719
+id1500023462079058,ottawa senators,2026-04-07,pinnacle,151,A,2.26
+id1500023462079058,ottawa senators,2026-04-07,winamax.fr,153,H,2.05
+id1500023462079058,ottawa senators,2026-04-07,winamax.fr,153,X,3.7
+id1500023462079058,ottawa senators,2026-04-07,winamax.fr,153,A,2.35
+id1500023462079060,montreal canadiens,2026-04-07,pinnacle,151,H,1.361
+id1500023462079060,montreal canadiens,2026-04-07,pinnacle,151,A,3.41
+id1500023462079060,montreal canadiens,2026-04-07,winamax.fr,153,H,1.64
+id1500023462079060,montreal canadiens,2026-04-07,winamax.fr,153,X,3.95
+id1500023462079060,montreal canadiens,2026-04-07,winamax.fr,153,A,3.2
+id1500023462079062,new jersey devils,2026-04-07,pinnacle,151,H,1.84
+id1500023462079062,new jersey devils,2026-04-07,pinnacle,151,A,2.08
+id1500023462079062,new jersey devils,2026-04-07,winamax.fr,153,H,2.1
+id1500023462079062,new jersey devils,2026-04-07,winamax.fr,153,X,3.6
+id1500023462079062,new jersey devils,2026-04-07,winamax.fr,153,A,2.3
+id1500023462079064,dallas stars,2026-04-07,pinnacle,151,H,1.414
+id1500023462079064,dallas stars,2026-04-07,pinnacle,151,A,3.12
+id1500023462079064,dallas stars,2026-04-07,winamax.fr,153,H,1.58
+id1500023462079064,dallas stars,2026-04-07,winamax.fr,153,X,3.9
+id1500023462079064,dallas stars,2026-04-07,winamax.fr,153,A,3.45
+id1500023462079066,st. louis blues,2026-04-07,pinnacle,151,H,2.37
+id1500023462079066,st. louis blues,2026-04-07,pinnacle,151,A,1.657
+id1500023462079066,st. louis blues,2026-04-07,winamax.fr,153,H,2.65
+id1500023462079066,st. louis blues,2026-04-07,winamax.fr,153,X,3.75
+id1500023462079066,st. louis blues,2026-04-07,winamax.fr,153,A,1.86
+id1500023462079068,minnesota wild,2026-04-07,pinnacle,151,H,1.401
+id1500023462079068,minnesota wild,2026-04-07,pinnacle,151,A,3.19
+id1500023462079068,minnesota wild,2026-04-07,winamax.fr,153,H,1.56
+id1500023462079068,minnesota wild,2026-04-07,winamax.fr,153,X,4.0
+id1500023462079068,minnesota wild,2026-04-07,winamax.fr,153,A,3.5
+id1500023462079070,utah mammoth,2026-04-07,pinnacle,151,H,1.775
+id1500023462079070,utah mammoth,2026-04-07,pinnacle,151,A,2.17
+id1500023462079070,utah mammoth,2026-04-07,winamax.fr,153,H,1.98
+id1500023462079070,utah mammoth,2026-04-07,winamax.fr,153,X,3.75
+id1500023462079070,utah mammoth,2026-04-07,winamax.fr,153,A,2.45
+id1500023462079072,anaheim ducks,2026-04-07,pinnacle,151,H,1.666
+id1500023462079072,anaheim ducks,2026-04-07,pinnacle,151,A,2.35
+id1500023462079072,anaheim ducks,2026-04-07,winamax.fr,153,H,1.92
+id1500023462079072,anaheim ducks,2026-04-07,winamax.fr,153,X,3.8
+id1500023462079072,anaheim ducks,2026-04-07,winamax.fr,153,A,2.55
+id1500023462079074,vancouver canucks,2026-04-07,pinnacle,151,H,3.17
+id1500023462079074,vancouver canucks,2026-04-07,pinnacle,151,A,1.404
+id1500023462079074,vancouver canucks,2026-04-07,winamax.fr,153,H,3.25
+id1500023462079074,vancouver canucks,2026-04-07,winamax.fr,153,X,4.0
+id1500023462079074,vancouver canucks,2026-04-07,winamax.fr,153,A,1.6
+id1500023462079076,new york rangers,2026-04-08,pinnacle,151,H,2.1
+id1500023462079076,new york rangers,2026-04-08,pinnacle,151,A,1.746
+id1500023462079076,new york rangers,2026-04-08,winamax.fr,153,H,2.55
+id1500023462079076,new york rangers,2026-04-08,winamax.fr,153,X,3.75
+id1500023462079076,new york rangers,2026-04-08,winamax.fr,153,A,1.9
+id1500023462079078,toronto maple leafs,2026-04-08,pinnacle,151,H,2.29
+id1500023462079078,toronto maple leafs,2026-04-08,pinnacle,151,A,1.636
+id1500023462079078,toronto maple leafs,2026-04-08,winamax.fr,153,H,2.5
+id1500023462079078,toronto maple leafs,2026-04-08,winamax.fr,153,X,3.8
+id1500023462079078,toronto maple leafs,2026-04-08,winamax.fr,153,A,1.94
+id1500023462079080,san jose sharks,2026-04-08,pinnacle,151,H,1.9
+id1500023462079080,san jose sharks,2026-04-08,pinnacle,151,A,1.917
+id1500023462079080,san jose sharks,2026-04-08,winamax.fr,153,H,2.3
+id1500023462079080,san jose sharks,2026-04-08,winamax.fr,153,X,3.75
+id1500023462079080,san jose sharks,2026-04-08,winamax.fr,153,A,2.1
+id1500023462079082,new york islanders,2026-04-09,pinnacle,151,H,1.323
+id1500023462079082,new york islanders,2026-04-09,pinnacle,151,A,3.67
+id1500023462079082,new york islanders,2026-04-09,winamax.fr,153,H,1.64
+id1500023462079082,new york islanders,2026-04-09,winamax.fr,153,X,3.9
+id1500023462079082,new york islanders,2026-04-09,winamax.fr,153,A,3.2
+id1500023462079084,buffalo sabres,2026-04-09,pinnacle,151,H,2.0
+id1500023462079084,buffalo sabres,2026-04-09,pinnacle,151,A,1.909
+id1500023462079084,buffalo sabres,2026-04-09,winamax.fr,153,H,2.0
+id1500023462079084,buffalo sabres,2026-04-09,winamax.fr,153,X,3.7
+id1500023462079084,buffalo sabres,2026-04-09,winamax.fr,153,A,2.4
+id1500023462079086,new jersey devils,2026-04-09,pinnacle,151,H,1.97
+id1500023462079086,new jersey devils,2026-04-09,pinnacle,151,A,1.934
+id1500023462079086,new jersey devils,2026-04-09,winamax.fr,153,H,2.15
+id1500023462079086,new jersey devils,2026-04-09,winamax.fr,153,X,3.75
+id1500023462079086,new jersey devils,2026-04-09,winamax.fr,153,A,2.2
+id1500023462079088,montreal canadiens,2026-04-09,pinnacle,151,H,2.04
+id1500023462079088,montreal canadiens,2026-04-09,pinnacle,151,A,1.869
+id1500023462079088,montreal canadiens,2026-04-09,winamax.fr,153,H,2.25
+id1500023462079088,montreal canadiens,2026-04-09,winamax.fr,153,X,3.75
+id1500023462079088,montreal canadiens,2026-04-09,winamax.fr,153,A,2.15
+id1500023462079090,ottawa senators,2026-04-09,pinnacle,151,H,1.27
+id1500023462079090,ottawa senators,2026-04-09,pinnacle,151,A,4.14
+id1500023462079090,ottawa senators,2026-04-09,winamax.fr,153,H,1.52
+id1500023462079090,ottawa senators,2026-04-09,winamax.fr,153,X,4.0
+id1500023462079090,ottawa senators,2026-04-09,winamax.fr,153,A,3.6
+id1500023462079092,detroit red wings,2026-04-09,pinnacle,151,H,1.869
+id1500023462079092,detroit red wings,2026-04-09,pinnacle,151,A,2.04
+id1500023462079092,detroit red wings,2026-04-09,winamax.fr,153,H,2.1
+id1500023462079092,detroit red wings,2026-04-09,winamax.fr,153,X,3.65
+id1500023462079092,detroit red wings,2026-04-09,winamax.fr,153,A,2.35
+id1500023462079096,st. louis blues,2026-04-09,pinnacle,151,H,1.952
+id1500023462079096,st. louis blues,2026-04-09,pinnacle,151,A,1.952
+id1500023462079096,st. louis blues,2026-04-09,winamax.fr,153,H,2.25
+id1500023462079096,st. louis blues,2026-04-09,winamax.fr,153,X,3.6
+id1500023462079096,st. louis blues,2026-04-09,winamax.fr,153,A,2.2
+id1500023462079098,chicago blackhawks,2026-04-09,pinnacle,151,H,2.56
+id1500023462079098,chicago blackhawks,2026-04-09,pinnacle,151,A,1.574
+id1500023462079098,chicago blackhawks,2026-04-09,winamax.fr,153,H,3.3
+id1500023462079098,chicago blackhawks,2026-04-09,winamax.fr,153,X,4.0
+id1500023462079098,chicago blackhawks,2026-04-09,winamax.fr,153,A,1.6
+id1500023462079094,dallas stars,2026-04-09,pinnacle,151,H,1.84
+id1500023462079094,dallas stars,2026-04-09,pinnacle,151,A,2.08
+id1500023462079094,dallas stars,2026-04-09,winamax.fr,153,H,2.1
+id1500023462079094,dallas stars,2026-04-09,winamax.fr,153,X,3.65
+id1500023462079094,dallas stars,2026-04-09,winamax.fr,153,A,2.35
+id1500023462079100,colorado avalanche,2026-04-09,pinnacle,151,H,1.303
+id1500023462079100,colorado avalanche,2026-04-09,pinnacle,151,A,3.82
+id1500023462079100,colorado avalanche,2026-04-09,winamax.fr,153,H,1.42
+id1500023462079100,colorado avalanche,2026-04-09,winamax.fr,153,X,4.2
+id1500023462079100,colorado avalanche,2026-04-09,winamax.fr,153,A,4.3
+id1500023462079102,utah mammoth,2026-04-09,pinnacle,151,H,1.609
+id1500023462079102,utah mammoth,2026-04-09,pinnacle,151,A,2.47
+id1500023462079102,utah mammoth,2026-04-09,winamax.fr,153,H,1.84
+id1500023462079102,utah mammoth,2026-04-09,winamax.fr,153,X,3.8
+id1500023462079102,utah mammoth,2026-04-09,winamax.fr,153,A,2.7
+id1500023462079104,anaheim ducks,2026-04-09,pinnacle,151,H,1.591
+id1500023462079104,anaheim ducks,2026-04-09,pinnacle,151,A,2.51
+id1500023462079104,anaheim ducks,2026-04-09,winamax.fr,153,H,1.78
+id1500023462079104,anaheim ducks,2026-04-09,winamax.fr,153,X,3.9
+id1500023462079104,anaheim ducks,2026-04-09,winamax.fr,153,A,2.75
+id1500023462079106,seattle kraken,2026-04-09,pinnacle,151,H,2.61
+id1500023462079106,seattle kraken,2026-04-09,pinnacle,151,A,1.555
+id1500023462079106,seattle kraken,2026-04-09,winamax.fr,153,H,2.8
+id1500023462079106,seattle kraken,2026-04-09,winamax.fr,153,X,3.8
+id1500023462079106,seattle kraken,2026-04-09,winamax.fr,153,A,1.8
+id1500023462079108,los angeles kings,2026-04-09,pinnacle,151,H,1.384
+id1500023462079108,los angeles kings,2026-04-09,pinnacle,151,A,3.28
+id1500023462079108,los angeles kings,2026-04-09,winamax.fr,153,H,1.5
+id1500023462079108,los angeles kings,2026-04-09,winamax.fr,153,X,4.0
+id1500023462079108,los angeles kings,2026-04-09,winamax.fr,153,A,3.75
+id1500023462079110,boston bruins,2026-04-11,pinnacle,151,H,2.0
+id1500023462079110,boston bruins,2026-04-11,pinnacle,151,A,1.909
+id1500023462079110,boston bruins,2026-04-11,winamax.fr,153,H,2.35
+id1500023462079110,boston bruins,2026-04-11,winamax.fr,153,X,3.75
+id1500023462079110,boston bruins,2026-04-11,winamax.fr,153,A,2.1
+id1500023462079112,new york islanders,2026-04-11,pinnacle,151,H,2.17
+id1500023462079112,new york islanders,2026-04-11,pinnacle,151,A,1.775
+id1500023462079112,new york islanders,2026-04-11,winamax.fr,153,H,2.3
+id1500023462079112,new york islanders,2026-04-11,winamax.fr,153,X,3.7
+id1500023462079112,new york islanders,2026-04-11,winamax.fr,153,A,2.1
+id1500023462079114,pittsburgh penguins,2026-04-11,pinnacle,151,H,2.27
+id1500023462079114,pittsburgh penguins,2026-04-11,pinnacle,151,A,1.649
+id1500023462079114,pittsburgh penguins,2026-04-11,winamax.fr,153,H,2.0
+id1500023462079114,pittsburgh penguins,2026-04-11,winamax.fr,153,X,3.75
+id1500023462079114,pittsburgh penguins,2026-04-11,winamax.fr,153,A,2.4
+id1500023462079116,los angeles kings,2026-04-11,pinnacle,151,H,1.84
+id1500023462079116,los angeles kings,2026-04-11,pinnacle,151,A,2.08
+id1500023462079116,los angeles kings,2026-04-11,winamax.fr,153,H,2.2
+id1500023462079116,los angeles kings,2026-04-11,winamax.fr,153,X,3.7
+id1500023462079116,los angeles kings,2026-04-11,winamax.fr,153,A,2.2
+id1500023462079118,chicago blackhawks,2026-04-11,pinnacle,151,H,2.23
+id1500023462079118,chicago blackhawks,2026-04-11,pinnacle,151,A,1.735
+id1500023462079118,chicago blackhawks,2026-04-11,winamax.fr,153,H,2.4
+id1500023462079118,chicago blackhawks,2026-04-11,winamax.fr,153,X,3.7
+id1500023462079118,chicago blackhawks,2026-04-11,winamax.fr,153,A,2.0
+id1500023462079120,nashville predators,2026-04-11,pinnacle,151,H,1.961
+id1500023462079120,nashville predators,2026-04-11,pinnacle,151,A,1.943
+id1500023462079120,nashville predators,2026-04-11,winamax.fr,153,H,2.5
+id1500023462079120,nashville predators,2026-04-11,winamax.fr,153,X,3.7
+id1500023462079120,nashville predators,2026-04-11,winamax.fr,153,A,1.98
+id1500023462079122,utah mammoth,2026-04-11,pinnacle,151,H,1.84
+id1500023462079122,utah mammoth,2026-04-11,pinnacle,151,A,2.08
+id1500023462079122,utah mammoth,2026-04-11,winamax.fr,153,H,2.15
+id1500023462079122,utah mammoth,2026-04-11,winamax.fr,153,X,3.75
+id1500023462079122,utah mammoth,2026-04-11,winamax.fr,153,A,2.2
+id1500023462079124,detroit red wings,2026-04-11,pinnacle,151,H,1.787
+id1500023462079124,detroit red wings,2026-04-11,pinnacle,151,A,2.15
+id1500023462079124,detroit red wings,2026-04-11,winamax.fr,153,H,1.94
+id1500023462079124,detroit red wings,2026-04-11,winamax.fr,153,X,3.75
+id1500023462079124,detroit red wings,2026-04-11,winamax.fr,153,A,2.55
+id1500023462079126,dallas stars,2026-04-11,pinnacle,151,H,1.598
+id1500023462079126,dallas stars,2026-04-11,pinnacle,151,A,2.5
+id1500023462079126,dallas stars,2026-04-11,winamax.fr,153,H,1.66
+id1500023462079126,dallas stars,2026-04-11,winamax.fr,153,X,3.85
+id1500023462079126,dallas stars,2026-04-11,winamax.fr,153,A,3.2
+id1500023462079128,toronto maple leafs,2026-04-11,pinnacle,151,H,1.675
+id1500023462079128,toronto maple leafs,2026-04-11,pinnacle,151,A,2.33
+id1500023462079128,toronto maple leafs,2026-04-11,winamax.fr,153,H,2.1
+id1500023462079128,toronto maple leafs,2026-04-11,winamax.fr,153,X,3.75
+id1500023462079128,toronto maple leafs,2026-04-11,winamax.fr,153,A,2.3
+id1500023462079130,winnipeg jets,2026-04-11,pinnacle,151,H,1.854
+id1500023462079130,winnipeg jets,2026-04-11,pinnacle,151,A,2.06
+id1500023462079130,winnipeg jets,2026-04-11,winamax.fr,153,H,2.0
+id1500023462079130,winnipeg jets,2026-04-11,winamax.fr,153,X,3.65
+id1500023462079130,winnipeg jets,2026-04-11,winamax.fr,153,A,2.45
+id1500023462079132,seattle kraken,2026-04-11,pinnacle,151,H,1.813
+id1500023462079132,seattle kraken,2026-04-11,pinnacle,151,A,2.11
+id1500023462079132,seattle kraken,2026-04-11,winamax.fr,153,H,1.94
+id1500023462079132,seattle kraken,2026-04-11,winamax.fr,153,X,3.7
+id1500023462079132,seattle kraken,2026-04-11,winamax.fr,153,A,2.55
+id1500023462079134,montreal canadiens,2026-04-11,pinnacle,151,H,1.775
+id1500023462079134,montreal canadiens,2026-04-11,pinnacle,151,A,2.17
+id1500023462079134,montreal canadiens,2026-04-11,winamax.fr,153,H,1.96
+id1500023462079134,montreal canadiens,2026-04-11,winamax.fr,153,X,3.7
+id1500023462079134,montreal canadiens,2026-04-11,winamax.fr,153,A,2.5
+id1500023462079136,colorado avalanche,2026-04-11,pinnacle,151,H,1.769
+id1500023462079136,colorado avalanche,2026-04-11,pinnacle,151,A,2.18
+id1500023462079136,colorado avalanche,2026-04-11,winamax.fr,153,H,1.92
+id1500023462079136,colorado avalanche,2026-04-11,winamax.fr,153,X,3.75
+id1500023462079136,colorado avalanche,2026-04-11,winamax.fr,153,A,2.55
+id1500023462079138,san jose sharks,2026-04-11,pinnacle,151,H,1.531
+id1500023462079138,san jose sharks,2026-04-11,pinnacle,151,A,2.68
+id1500023462079138,san jose sharks,2026-04-11,winamax.fr,153,H,1.62
+id1500023462079138,san jose sharks,2026-04-11,winamax.fr,153,X,3.95
+id1500023462079138,san jose sharks,2026-04-11,winamax.fr,153,A,3.25
+id1500023462079140,washington capitals,2026-04-12,pinnacle,151,H,1.675
+id1500023462079140,washington capitals,2026-04-12,pinnacle,151,A,2.33
+id1500023462079140,washington capitals,2026-04-12,winamax.fr,153,H,1.94
+id1500023462079140,washington capitals,2026-04-12,winamax.fr,153,X,3.8
+id1500023462079140,washington capitals,2026-04-12,winamax.fr,153,A,2.55
+id1500023462079142,columbus blue jackets,2026-04-12,pinnacle,151,H,1.487
+id1500023462079142,columbus blue jackets,2026-04-12,pinnacle,151,A,2.66
+id1500023462079142,columbus blue jackets,2026-04-12,winamax.fr,153,H,2.0
+id1500023462079142,columbus blue jackets,2026-04-12,winamax.fr,153,X,3.8
+id1500023462079142,columbus blue jackets,2026-04-12,winamax.fr,153,A,2.5
+id1500023462079144,new york islanders,2026-04-12,pinnacle,151,H,1.787
+id1500023462079144,new york islanders,2026-04-12,pinnacle,151,A,2.05
+id1500023462079144,new york islanders,2026-04-12,winamax.fr,153,H,2.2
+id1500023462079144,new york islanders,2026-04-12,winamax.fr,153,X,3.8
+id1500023462079144,new york islanders,2026-04-12,winamax.fr,153,A,2.2
+id1500023462079146,new jersey devils,2026-04-12,pinnacle,151,H,1.769
+id1500023462079146,new jersey devils,2026-04-12,pinnacle,151,A,2.18
+id1500023462079146,new jersey devils,2026-04-12,winamax.fr,153,H,2.5
+id1500023462079146,new jersey devils,2026-04-12,winamax.fr,153,X,3.8
+id1500023462079146,new jersey devils,2026-04-12,winamax.fr,153,A,2.0
+id1500023462079148,anaheim ducks,2026-04-12,pinnacle,151,H,1.35
+id1500023462079148,anaheim ducks,2026-04-12,pinnacle,151,A,3.48
+id1500023462079148,anaheim ducks,2026-04-12,winamax.fr,153,H,1.46
+id1500023462079148,anaheim ducks,2026-04-12,winamax.fr,153,X,4.6
+id1500023462079148,anaheim ducks,2026-04-12,winamax.fr,153,A,4.2
+id1500023462079150,calgary flames,2026-04-12,pinnacle,151,H,2.43
+id1500023462079150,calgary flames,2026-04-12,pinnacle,151,A,1.628
+id1500023462079150,calgary flames,2026-04-12,winamax.fr,153,H,2.75
+id1500023462079150,calgary flames,2026-04-12,winamax.fr,153,X,3.7
+id1500023462079150,calgary flames,2026-04-12,winamax.fr,153,A,1.84
+id1500023462079152,tampa bay lightning,2026-04-13,pinnacle,151,H,1.526
+id1500023462079152,tampa bay lightning,2026-04-13,pinnacle,151,A,2.55
+id1500023462079152,tampa bay lightning,2026-04-13,winamax.fr,153,H,1.7
+id1500023462079152,tampa bay lightning,2026-04-13,winamax.fr,153,X,3.85
+id1500023462079152,tampa bay lightning,2026-04-13,winamax.fr,153,A,3.0
+id1500023462079154,florida panthers,2026-04-13,pinnacle,151,H,2.4
+id1500023462079154,florida panthers,2026-04-13,pinnacle,151,A,1.641
+id1500023462079154,florida panthers,2026-04-13,winamax.fr,153,H,2.2
+id1500023462079154,florida panthers,2026-04-13,winamax.fr,153,X,3.65
+id1500023462079154,florida panthers,2026-04-13,winamax.fr,153,A,2.2
+id1500023462079156,philadelphia flyers,2026-04-13,pinnacle,151,H,1.653
+id1500023462079156,philadelphia flyers,2026-04-13,pinnacle,151,A,2.38
+id1500023462079156,philadelphia flyers,2026-04-13,winamax.fr,153,H,2.35
+id1500023462079156,philadelphia flyers,2026-04-13,winamax.fr,153,X,3.75
+id1500023462079156,philadelphia flyers,2026-04-13,winamax.fr,153,A,2.05
+id1500023462079158,toronto maple leafs,2026-04-13,pinnacle,151,H,2.65
+id1500023462079158,toronto maple leafs,2026-04-13,pinnacle,151,A,1.54
+id1500023462079158,toronto maple leafs,2026-04-13,winamax.fr,153,H,2.75
+id1500023462079158,toronto maple leafs,2026-04-13,winamax.fr,153,X,3.75
+id1500023462079158,toronto maple leafs,2026-04-13,winamax.fr,153,A,1.82
+id1500023462079160,st. louis blues,2026-04-13,pinnacle,151,H,1.598
+id1500023462079160,st. louis blues,2026-04-13,pinnacle,151,A,2.5
+id1500023462079160,st. louis blues,2026-04-13,winamax.fr,153,H,2.4
+id1500023462079160,st. louis blues,2026-04-13,winamax.fr,153,X,3.7
+id1500023462079160,st. louis blues,2026-04-13,winamax.fr,153,A,2.0
+id1500023462079162,nashville predators,2026-04-13,pinnacle,151,H,1.704
+id1500023462079162,nashville predators,2026-04-13,pinnacle,151,A,2.28
+id1500023462079162,nashville predators,2026-04-13,winamax.fr,153,H,1.88
+id1500023462079162,nashville predators,2026-04-13,winamax.fr,153,X,3.85
+id1500023462079162,nashville predators,2026-04-13,winamax.fr,153,A,2.6
+id1500023462079164,chicago blackhawks,2026-04-13,pinnacle,151,H,2.69
+id1500023462079164,chicago blackhawks,2026-04-13,pinnacle,151,A,1.526
+id1500023462079164,chicago blackhawks,2026-04-13,winamax.fr,153,H,3.0
+id1500023462079164,chicago blackhawks,2026-04-13,winamax.fr,153,X,3.9
+id1500023462079164,chicago blackhawks,2026-04-13,winamax.fr,153,A,1.7
+id1500023462079166,edmonton oilers,2026-04-13,pinnacle,151,H,2.09
+id1500023462079166,edmonton oilers,2026-04-13,pinnacle,151,A,1.833
+id1500023462079166,edmonton oilers,2026-04-13,winamax.fr,153,H,2.2
+id1500023462079166,edmonton oilers,2026-04-13,winamax.fr,153,X,3.9
+id1500023462079166,edmonton oilers,2026-04-13,winamax.fr,153,A,2.15
+id1500023462079168,seattle kraken,2026-04-13,pinnacle,151,H,2.53
+id1500023462079168,seattle kraken,2026-04-13,pinnacle,151,A,1.588
+id1500023462079168,seattle kraken,2026-04-13,winamax.fr,153,H,2.55
+id1500023462079168,seattle kraken,2026-04-13,winamax.fr,153,X,3.7
+id1500023462079168,seattle kraken,2026-04-13,winamax.fr,153,A,1.96
+id1500023462079170,vegas golden knights,2026-04-13,pinnacle,151,H,1.561
+id1500023462079170,vegas golden knights,2026-04-13,pinnacle,151,A,2.59
+id1500023462079170,vegas golden knights,2026-04-13,winamax.fr,153,H,1.76
+id1500023462079170,vegas golden knights,2026-04-13,winamax.fr,153,X,4.0
+id1500023462079170,vegas golden knights,2026-04-13,winamax.fr,153,A,2.75
+id1500023462079172,columbus blue jackets,2026-04-14,pinnacle,151,H,1.653
+id1500023462079172,columbus blue jackets,2026-04-14,pinnacle,151,A,2.26
+id1500023462079172,columbus blue jackets,2026-04-14,winamax.fr,153,H,2.05
+id1500023462079172,columbus blue jackets,2026-04-14,winamax.fr,153,X,3.7
+id1500023462079172,columbus blue jackets,2026-04-14,winamax.fr,153,A,2.35
+id1500023462079174,boston bruins,2026-04-14,pinnacle,151,H,1.645
+id1500023462079174,boston bruins,2026-04-14,pinnacle,151,A,2.28
+id1500023462079174,boston bruins,2026-04-14,winamax.fr,153,H,1.98
+id1500023462079174,boston bruins,2026-04-14,winamax.fr,153,X,3.8
+id1500023462079174,boston bruins,2026-04-14,winamax.fr,153,A,2.45
+id1500023462079176,philadelphia flyers,2026-04-14,pinnacle,151,H,3.28
+id1500023462079176,philadelphia flyers,2026-04-14,pinnacle,151,A,1.346
+id1500023462079176,philadelphia flyers,2026-04-14,winamax.fr,153,H,2.4
+id1500023462079176,philadelphia flyers,2026-04-14,winamax.fr,153,X,3.7
+id1500023462079176,philadelphia flyers,2026-04-14,winamax.fr,153,A,2.05
+id1500023462079178,new york islanders,2026-04-14,pinnacle,151,H,1.609
+id1500023462079178,new york islanders,2026-04-14,pinnacle,151,A,2.47
+id1500023462079178,new york islanders,2026-04-14,winamax.fr,153,H,2.2
+id1500023462079178,new york islanders,2026-04-14,winamax.fr,153,X,3.75
+id1500023462079178,new york islanders,2026-04-14,winamax.fr,153,A,2.15
+id1500023462079180,minnesota wild,2026-04-14,pinnacle,151,H,2.45
+id1500023462079180,minnesota wild,2026-04-14,pinnacle,151,A,1.564
+id1500023462079180,minnesota wild,2026-04-14,winamax.fr,153,H,2.05
+id1500023462079180,minnesota wild,2026-04-14,winamax.fr,153,X,3.8
+id1500023462079180,minnesota wild,2026-04-14,winamax.fr,153,A,2.3
+id1500023462079182,utah mammoth,2026-04-14,pinnacle,151,H,1.442
+id1500023462079182,utah mammoth,2026-04-14,pinnacle,151,A,2.82
+id1500023462079182,utah mammoth,2026-04-14,winamax.fr,153,H,1.8
+id1500023462079182,utah mammoth,2026-04-14,winamax.fr,153,X,3.85
+id1500023462079182,utah mammoth,2026-04-14,winamax.fr,153,A,2.75
+id1500023462079184,calgary flames,2026-04-14,pinnacle,151,H,2.31
+id1500023462079184,calgary flames,2026-04-14,pinnacle,151,A,1.628
+id1500023462079184,calgary flames,2026-04-14,winamax.fr,153,H,2.9
+id1500023462079184,calgary flames,2026-04-14,winamax.fr,153,X,4.1
+id1500023462079184,calgary flames,2026-04-14,winamax.fr,153,A,2.0
+id1500023462079186,st. louis blues,2026-04-14,pinnacle,151,H,1.5
+id1500023462079186,st. louis blues,2026-04-14,pinnacle,151,A,2.78
+id1500023462079186,st. louis blues,2026-04-14,winamax.fr,153,H,1.78
+id1500023462079186,st. louis blues,2026-04-14,winamax.fr,153,X,4.2
+id1500023462079186,st. louis blues,2026-04-14,winamax.fr,153,A,3.45
+id1500023462079188,vancouver canucks,2026-04-14,pinnacle,151,H,2.37
+id1500023462079188,vancouver canucks,2026-04-14,pinnacle,151,A,1.657
+id1500023462079188,vancouver canucks,2026-04-14,winamax.fr,153,H,2.95
+id1500023462079188,vancouver canucks,2026-04-14,winamax.fr,153,X,4.0
+id1500023462079188,vancouver canucks,2026-04-14,winamax.fr,153,A,1.7
+id1500023462079190,florida panthers,2026-04-15,pinnacle,151,H,2.52
+id1500023462079190,florida panthers,2026-04-15,pinnacle,151,A,1.591
+id1500023462079190,florida panthers,2026-04-15,winamax.fr,153,H,2.75
+id1500023462079190,florida panthers,2026-04-15,winamax.fr,153,X,4.0
+id1500023462079190,florida panthers,2026-04-15,winamax.fr,153,A,2.1
+id1500023462079192,buffalo sabres,2026-04-15,pinnacle,151,H,2.26
+id1500023462079192,buffalo sabres,2026-04-15,pinnacle,151,A,1.714
+id1500023462079192,buffalo sabres,2026-04-15,winamax.fr,153,H,2.45
+id1500023462079192,buffalo sabres,2026-04-15,winamax.fr,153,X,3.9
+id1500023462079192,buffalo sabres,2026-04-15,winamax.fr,153,A,2.35
+id1500023462079194,tampa bay lightning,2026-04-15,pinnacle,151,H,1.735
+id1500023462079194,tampa bay lightning,2026-04-15,pinnacle,151,A,2.22
+id1500023462079194,tampa bay lightning,2026-04-15,winamax.fr,153,H,1.68
+id1500023462079194,tampa bay lightning,2026-04-15,winamax.fr,153,X,3.9
+id1500023462079194,tampa bay lightning,2026-04-15,winamax.fr,153,A,3.15
+id1500023462079196,ottawa senators,2026-04-15,pinnacle,151,H,1.54
+id1500023462079196,ottawa senators,2026-04-15,pinnacle,151,A,2.65
+id1500023462079196,ottawa senators,2026-04-15,winamax.fr,153,H,1.88
+id1500023462079196,ottawa senators,2026-04-15,winamax.fr,153,X,4.2
+id1500023462079196,ottawa senators,2026-04-15,winamax.fr,153,A,3.2
+id1500023462079198,chicago blackhawks,2026-04-15,pinnacle,151,H,2.029
+id1500023462079198,chicago blackhawks,2026-04-15,pinnacle,151,A,1.877
+id1500023462079198,chicago blackhawks,2026-04-15,winamax.fr,153,H,2.3
+id1500023462079198,chicago blackhawks,2026-04-15,winamax.fr,153,X,3.8
+id1500023462079198,chicago blackhawks,2026-04-15,winamax.fr,153,A,2.05
+id1500023462079200,vegas golden knights,2026-04-15,pinnacle,151,H,1.326
+id1500023462079200,vegas golden knights,2026-04-15,pinnacle,151,A,3.64
+id1500023462079200,vegas golden knights,2026-04-15,winamax.fr,153,H,1.4
+id1500023462079200,vegas golden knights,2026-04-15,winamax.fr,153,X,4.9
+id1500023462079200,vegas golden knights,2026-04-15,winamax.fr,153,A,3.9
+id1500023462079204,utah mammoth,2026-04-16,pinnacle,151,H,1.847
+id1500023462079204,utah mammoth,2026-04-16,pinnacle,151,A,2.07
+id1500023462079204,utah mammoth,2026-04-16,winamax.fr,153,H,2.05
+id1500023462079204,utah mammoth,2026-04-16,winamax.fr,153,X,3.75
+id1500023462079204,utah mammoth,2026-04-16,winamax.fr,153,A,2.35
+id1500023462079202,winnipeg jets,2026-04-16,pinnacle,151,H,1.636
+id1500023462079202,winnipeg jets,2026-04-16,pinnacle,151,A,2.42
+id1500023462079202,winnipeg jets,2026-04-16,winamax.fr,153,H,1.82
+id1500023462079202,winnipeg jets,2026-04-16,winamax.fr,153,X,3.9
+id1500023462079202,winnipeg jets,2026-04-16,winamax.fr,153,A,2.7
+id1500023462079206,nashville predators,2026-04-16,pinnacle,151,H,2.06
+id1500023462079206,nashville predators,2026-04-16,pinnacle,151,A,1.854
+id1500023462079206,nashville predators,2026-04-16,winamax.fr,153,H,2.2
+id1500023462079206,nashville predators,2026-04-16,winamax.fr,153,X,3.8
+id1500023462079206,nashville predators,2026-04-16,winamax.fr,153,A,2.15
+id1500023462079208,calgary flames,2026-04-16,pinnacle,151,H,2.5
+id1500023462079208,calgary flames,2026-04-16,pinnacle,151,A,1.598
+id1500023462079208,calgary flames,2026-04-16,winamax.fr,153,H,2.4
+id1500023462079208,calgary flames,2026-04-16,winamax.fr,153,X,3.7
+id1500023462079208,calgary flames,2026-04-16,winamax.fr,153,A,2.05
+id1500023462079210,edmonton oilers,2026-04-16,pinnacle,151,H,1.307
+id1500023462079210,edmonton oilers,2026-04-16,pinnacle,151,A,3.8
+id1500023462079210,edmonton oilers,2026-04-16,winamax.fr,153,H,1.45
+id1500023462079210,edmonton oilers,2026-04-16,winamax.fr,153,X,4.1
+id1500023462079210,edmonton oilers,2026-04-16,winamax.fr,153,A,4.1
+id1500023462079212,colorado avalanche,2026-04-16,pinnacle,151,H,1.467
+id1500023462079212,colorado avalanche,2026-04-16,pinnacle,151,A,2.9
+id1500023462079212,colorado avalanche,2026-04-16,winamax.fr,153,H,1.74
+id1500023462079212,colorado avalanche,2026-04-16,winamax.fr,153,X,3.95
+id1500023462079212,colorado avalanche,2026-04-16,winamax.fr,153,A,2.85
+id1500023470558148,carolina hurricanes,2026-04-18,pinnacle,151,H,1.699
+id1500023470558148,carolina hurricanes,2026-04-18,pinnacle,151,A,2.3
+id1500023470558148,carolina hurricanes,2026-04-18,winamax.fr,153,H,1.84
+id1500023470558148,carolina hurricanes,2026-04-18,winamax.fr,153,X,3.95
+id1500023470558148,carolina hurricanes,2026-04-18,winamax.fr,153,A,2.6
+id1500023470558100,dallas stars,2026-04-18,pinnacle,151,H,1.84
+id1500023470558100,dallas stars,2026-04-18,pinnacle,151,A,2.08
+id1500023470558100,dallas stars,2026-04-18,winamax.fr,153,H,2.1
+id1500023470558100,dallas stars,2026-04-18,winamax.fr,153,X,3.75
+id1500023470558100,dallas stars,2026-04-18,winamax.fr,153,A,2.3
+id1500023470558132,pittsburgh penguins,2026-04-18,pinnacle,151,H,1.724
+id1500023470558132,pittsburgh penguins,2026-04-18,pinnacle,151,A,2.25
+id1500023470558132,pittsburgh penguins,2026-04-18,winamax.fr,153,H,1.9
+id1500023470558132,pittsburgh penguins,2026-04-18,winamax.fr,153,X,3.85
+id1500023470558132,pittsburgh penguins,2026-04-18,winamax.fr,153,A,2.55
+id1500023470558116,colorado avalanche,2026-04-19,pinnacle,151,H,1.375
+id1500023470558116,colorado avalanche,2026-04-19,pinnacle,151,A,3.33
+id1500023470558116,colorado avalanche,2026-04-19,winamax.fr,153,H,1.58
+id1500023470558116,colorado avalanche,2026-04-19,winamax.fr,153,X,4.0
+id1500023470558116,colorado avalanche,2026-04-19,winamax.fr,153,A,3.4
+id1500023470558052,tampa bay lightning,2026-04-19,pinnacle,151,H,1.602
+id1500023470558052,tampa bay lightning,2026-04-19,pinnacle,151,A,2.49
+id1500023470558052,tampa bay lightning,2026-04-19,winamax.fr,153,H,1.68
+id1500023470558052,tampa bay lightning,2026-04-19,winamax.fr,153,X,4.0
+id1500023470558052,tampa bay lightning,2026-04-19,winamax.fr,153,A,3.0
+id1500023470558068,buffalo sabres,2026-04-19,pinnacle,151,H,1.617
+id1500023470558068,buffalo sabres,2026-04-19,pinnacle,151,A,2.45
+id1500023470558068,buffalo sabres,2026-04-19,winamax.fr,153,H,1.82
+id1500023470558068,buffalo sabres,2026-04-19,winamax.fr,153,X,3.95
+id1500023470558068,buffalo sabres,2026-04-19,winamax.fr,153,A,2.65
+id1500023472886402,carolina hurricanes,2026-09-29,pinnacle,151,H,1.813
+id1500023472886402,carolina hurricanes,2026-09-29,pinnacle,151,A,2.12
+id1500023472886402,carolina hurricanes,2026-09-29,pinnacle,153,H,2.27
+id1500023472886402,carolina hurricanes,2026-09-29,pinnacle,153,X,4.18
+id1500023472886402,carolina hurricanes,2026-09-29,pinnacle,153,A,2.69
+id1500023472886402,carolina hurricanes,2026-09-29,unibet.fr,151,H,1.75
+id1500023472886402,carolina hurricanes,2026-09-29,unibet.fr,151,A,1.95
+id1500023472886402,carolina hurricanes,2026-09-29,unibet.fr,153,H,2.3
+id1500023472886402,carolina hurricanes,2026-09-29,unibet.fr,153,X,4.05
+id1500023472886402,carolina hurricanes,2026-09-29,unibet.fr,153,A,2.6
+id1500023472886402,carolina hurricanes,2026-09-29,winamax.fr,153,H,2.25
+id1500023472886402,carolina hurricanes,2026-09-29,winamax.fr,153,X,4.0
+id1500023472886402,carolina hurricanes,2026-09-29,winamax.fr,153,A,2.55
+id1500023472886404,toronto maple leafs,2026-09-29,pinnacle,151,H,1.869
+id1500023472886404,toronto maple leafs,2026-09-29,pinnacle,151,A,2.04
+id1500023472886404,toronto maple leafs,2026-09-29,pinnacle,153,H,2.35
+id1500023472886404,toronto maple leafs,2026-09-29,pinnacle,153,X,4.19
+id1500023472886404,toronto maple leafs,2026-09-29,pinnacle,153,A,2.58
+id1500023472886404,toronto maple leafs,2026-09-29,unibet.fr,151,H,1.83
+id1500023472886404,toronto maple leafs,2026-09-29,unibet.fr,151,A,1.78
+id1500023472886404,toronto maple leafs,2026-09-29,unibet.fr,153,H,2.35
+id1500023472886404,toronto maple leafs,2026-09-29,unibet.fr,153,X,3.9
+id1500023472886404,toronto maple leafs,2026-09-29,unibet.fr,153,A,2.25
+id1500023472886404,toronto maple leafs,2026-09-29,winamax.fr,153,H,2.35
+id1500023472886404,toronto maple leafs,2026-09-29,winamax.fr,153,X,4.0
+id1500023472886404,toronto maple leafs,2026-09-29,winamax.fr,153,A,2.45
+id1500023472886406,boston bruins,2026-09-29,pinnacle,151,H,1.98
+id1500023472886406,boston bruins,2026-09-29,pinnacle,151,A,1.925
+id1500023472886406,boston bruins,2026-09-29,pinnacle,153,H,2.51
+id1500023472886406,boston bruins,2026-09-29,pinnacle,153,X,4.18
+id1500023472886406,boston bruins,2026-09-29,pinnacle,153,A,2.43
+id1500023472886406,boston bruins,2026-09-29,unibet.fr,151,H,1.81
+id1500023472886406,boston bruins,2026-09-29,unibet.fr,151,A,1.79
+id1500023472886406,boston bruins,2026-09-29,unibet.fr,153,H,2.35
+id1500023472886406,boston bruins,2026-09-29,unibet.fr,153,X,3.8
+id1500023472886406,boston bruins,2026-09-29,unibet.fr,153,A,2.3
+id1500023472886406,boston bruins,2026-09-29,winamax.fr,153,H,2.4
+id1500023472886406,boston bruins,2026-09-29,winamax.fr,153,X,3.9
+id1500023472886406,boston bruins,2026-09-29,winamax.fr,153,A,2.35
+id1500023472886408,edmonton oilers,2026-09-29,pinnacle,151,H,1.327
+id1500023472886408,edmonton oilers,2026-09-29,pinnacle,151,A,3.63
+id1500023472886408,edmonton oilers,2026-09-29,pinnacle,153,H,1.558
+id1500023472886408,edmonton oilers,2026-09-29,pinnacle,153,X,5.14
+id1500023472886408,edmonton oilers,2026-09-29,pinnacle,153,A,4.67
+id1500023472886408,edmonton oilers,2026-09-29,unibet.fr,151,H,1.28
+id1500023472886408,edmonton oilers,2026-09-29,unibet.fr,151,A,3.05
+id1500023472886408,edmonton oilers,2026-09-29,unibet.fr,153,H,1.48
+id1500023472886408,edmonton oilers,2026-09-29,unibet.fr,153,X,4.3
+id1500023472886408,edmonton oilers,2026-09-29,unibet.fr,153,A,4.45
+id1500023472886408,edmonton oilers,2026-09-29,winamax.fr,153,H,1.54
+id1500023472886408,edmonton oilers,2026-09-29,winamax.fr,153,X,4.6
+id1500023472886408,edmonton oilers,2026-09-29,winamax.fr,153,A,4.5
+id1500023472886410,vegas golden knights,2026-09-29,pinnacle,151,H,1.404
+id1500023472886410,vegas golden knights,2026-09-29,pinnacle,151,A,3.17
+id1500023472886410,vegas golden knights,2026-09-29,pinnacle,153,H,1.689
+id1500023472886410,vegas golden knights,2026-09-29,pinnacle,153,X,4.61
+id1500023472886410,vegas golden knights,2026-09-29,pinnacle,153,A,4.13
+id1500023472886410,vegas golden knights,2026-09-29,unibet.fr,151,H,1.35
+id1500023472886410,vegas golden knights,2026-09-29,unibet.fr,151,A,2.7
+id1500023472886410,vegas golden knights,2026-09-29,unibet.fr,153,H,1.59
+id1500023472886410,vegas golden knights,2026-09-29,unibet.fr,153,X,4.15
+id1500023472886410,vegas golden knights,2026-09-29,unibet.fr,153,A,3.8
+id1500023472886410,vegas golden knights,2026-09-29,winamax.fr,153,H,1.64
+id1500023472886410,vegas golden knights,2026-09-29,winamax.fr,153,X,4.4
+id1500023472886410,vegas golden knights,2026-09-29,winamax.fr,153,A,4.0
+id1500023472886412,philadelphia flyers,2026-09-30,pinnacle,151,H,1.709
+id1500023472886412,philadelphia flyers,2026-09-30,pinnacle,151,A,2.27
+id1500023472886412,philadelphia flyers,2026-09-30,pinnacle,153,H,2.13
+id1500023472886412,philadelphia flyers,2026-09-30,pinnacle,153,X,4.2
+id1500023472886412,philadelphia flyers,2026-09-30,pinnacle,153,A,2.92
+id1500023472886412,philadelphia flyers,2026-09-30,unibet.fr,151,H,1.62
+id1500023472886412,philadelphia flyers,2026-09-30,unibet.fr,151,A,2.05
+id1500023472886412,philadelphia flyers,2026-09-30,unibet.fr,153,H,1.98
+id1500023472886412,philadelphia flyers,2026-09-30,unibet.fr,153,X,3.75
+id1500023472886412,philadelphia flyers,2026-09-30,unibet.fr,153,A,2.65
+id1500023472886412,philadelphia flyers,2026-09-30,winamax.fr,153,H,2.05
+id1500023472886412,philadelphia flyers,2026-09-30,winamax.fr,153,X,4.1
+id1500023472886412,philadelphia flyers,2026-09-30,winamax.fr,153,A,2.8
+id1500023472908908,toronto maple leafs,2026-09-30,pinnacle,151,H,1.671
+id1500023472908908,toronto maple leafs,2026-09-30,pinnacle,151,A,2.34
+id1500023472908908,toronto maple leafs,2026-09-30,pinnacle,153,H,2.07
+id1500023472908908,toronto maple leafs,2026-09-30,pinnacle,153,X,4.26
+id1500023472908908,toronto maple leafs,2026-09-30,pinnacle,153,A,3.01
+id1500023472908908,toronto maple leafs,2026-09-30,unibet.fr,151,H,1.63
+id1500023472908908,toronto maple leafs,2026-09-30,unibet.fr,151,A,2.0
+id1500023472908908,toronto maple leafs,2026-09-30,unibet.fr,153,H,2.0
+id1500023472908908,toronto maple leafs,2026-09-30,unibet.fr,153,X,3.8
+id1500023472908908,toronto maple leafs,2026-09-30,unibet.fr,153,A,2.6
+id1500023472908908,toronto maple leafs,2026-09-30,winamax.fr,153,H,2.05
+id1500023472908908,toronto maple leafs,2026-09-30,winamax.fr,153,X,4.1
+id1500023472908908,toronto maple leafs,2026-09-30,winamax.fr,153,A,2.75
+id1500023472886414,colorado avalanche,2026-09-30,pinnacle,151,H,1.492
+id1500023472886414,colorado avalanche,2026-09-30,pinnacle,151,A,2.8
+id1500023472886414,colorado avalanche,2026-09-30,pinnacle,153,H,1.813
+id1500023472886414,colorado avalanche,2026-09-30,pinnacle,153,X,4.47
+id1500023472886414,colorado avalanche,2026-09-30,pinnacle,153,A,3.62
+id1500023472886414,colorado avalanche,2026-09-30,unibet.fr,151,H,1.45
+id1500023472886414,colorado avalanche,2026-09-30,unibet.fr,151,A,2.4
+id1500023472886414,colorado avalanche,2026-09-30,unibet.fr,153,H,1.74
+id1500023472886414,colorado avalanche,2026-09-30,unibet.fr,153,X,3.95
+id1500023472886414,colorado avalanche,2026-09-30,unibet.fr,153,A,3.2
+id1500023472886414,colorado avalanche,2026-09-30,winamax.fr,153,H,1.8
+id1500023472886414,colorado avalanche,2026-09-30,winamax.fr,153,X,4.1
+id1500023472886414,colorado avalanche,2026-09-30,winamax.fr,153,A,3.45
+id1500023472886418,columbus blue jackets,2026-10-01,pinnacle,151,H,2.02
+id1500023472886418,columbus blue jackets,2026-10-01,pinnacle,151,A,1.892
+id1500023472886418,columbus blue jackets,2026-10-01,pinnacle,153,H,2.56
+id1500023472886418,columbus blue jackets,2026-10-01,pinnacle,153,X,4.18
+id1500023472886418,columbus blue jackets,2026-10-01,pinnacle,153,A,2.38
+id1500023472886418,columbus blue jackets,2026-10-01,unibet.fr,151,H,1.83
+id1500023472886418,columbus blue jackets,2026-10-01,unibet.fr,151,A,1.77
+id1500023472886418,columbus blue jackets,2026-10-01,unibet.fr,153,H,2.35
+id1500023472886418,columbus blue jackets,2026-10-01,unibet.fr,153,X,3.75
+id1500023472886418,columbus blue jackets,2026-10-01,unibet.fr,153,A,2.25
+id1500023472886418,columbus blue jackets,2026-10-01,winamax.fr,153,H,2.45
+id1500023472886418,columbus blue jackets,2026-10-01,winamax.fr,153,X,3.95
+id1500023472886418,columbus blue jackets,2026-10-01,winamax.fr,153,A,2.3
+id1500023472886422,new jersey devils,2026-10-01,pinnacle,151,H,1.574
+id1500023472886422,new jersey devils,2026-10-01,pinnacle,151,A,2.56
+id1500023472886422,new jersey devils,2026-10-01,pinnacle,153,H,1.934
+id1500023472886422,new jersey devils,2026-10-01,pinnacle,153,X,4.37
+id1500023472886422,new jersey devils,2026-10-01,pinnacle,153,A,3.28
+id1500023472886422,new jersey devils,2026-10-01,unibet.fr,151,H,1.49
+id1500023472886422,new jersey devils,2026-10-01,unibet.fr,151,A,2.25
+id1500023472886422,new jersey devils,2026-10-01,unibet.fr,153,H,1.81
+id1500023472886422,new jersey devils,2026-10-01,unibet.fr,153,X,3.85
+id1500023472886422,new jersey devils,2026-10-01,unibet.fr,153,A,3.05
+id1500023472886422,new jersey devils,2026-10-01,winamax.fr,153,H,1.9
+id1500023472886422,new jersey devils,2026-10-01,winamax.fr,153,X,4.0
+id1500023472886422,new jersey devils,2026-10-01,winamax.fr,153,A,3.2
+id1500023472886424,new york rangers,2026-10-01,pinnacle,151,H,2.31
+id1500023472886424,new york rangers,2026-10-01,pinnacle,151,A,1.689
+id1500023472886424,new york rangers,2026-10-01,pinnacle,153,H,2.96
+id1500023472886424,new york rangers,2026-10-01,pinnacle,153,X,4.22
+id1500023472886424,new york rangers,2026-10-01,pinnacle,153,A,2.1
+id1500023472886424,new york rangers,2026-10-01,unibet.fr,151,H,2.05
+id1500023472886424,new york rangers,2026-10-01,unibet.fr,151,A,1.6
+id1500023472886424,new york rangers,2026-10-01,unibet.fr,153,H,2.7
+id1500023472886424,new york rangers,2026-10-01,unibet.fr,153,X,3.75
+id1500023472886424,new york rangers,2026-10-01,unibet.fr,153,A,1.97
+id1500023472886424,new york rangers,2026-10-01,winamax.fr,153,H,2.8
+id1500023472886424,new york rangers,2026-10-01,winamax.fr,153,X,4.1
+id1500023472886424,new york rangers,2026-10-01,winamax.fr,153,A,2.05
+id1500023472886420,nashville predators,2026-10-01,pinnacle,151,H,2.34
+id1500023472886420,nashville predators,2026-10-01,pinnacle,151,A,1.671
+id1500023472886420,nashville predators,2026-10-01,pinnacle,153,H,3.0
+id1500023472886420,nashville predators,2026-10-01,pinnacle,153,X,4.25
+id1500023472886420,nashville predators,2026-10-01,pinnacle,153,A,2.07
+id1500023472886420,nashville predators,2026-10-01,unibet.fr,151,H,2.05
+id1500023472886420,nashville predators,2026-10-01,unibet.fr,151,A,1.6
+id1500023472886420,nashville predators,2026-10-01,unibet.fr,153,H,2.7
+id1500023472886420,nashville predators,2026-10-01,unibet.fr,153,X,3.8
+id1500023472886420,nashville predators,2026-10-01,unibet.fr,153,A,1.97
+id1500023472886420,nashville predators,2026-10-01,winamax.fr,153,H,2.75
+id1500023472886420,nashville predators,2026-10-01,winamax.fr,153,X,4.2
+id1500023472886420,nashville predators,2026-10-01,winamax.fr,153,A,2.05
+id1500023472886416,calgary flames,2026-10-01,pinnacle,151,H,1.934
+id1500023472886416,calgary flames,2026-10-01,pinnacle,151,A,1.97
+id1500023472886416,calgary flames,2026-10-01,pinnacle,153,H,2.44
+id1500023472886416,calgary flames,2026-10-01,pinnacle,153,X,4.16
+id1500023472886416,calgary flames,2026-10-01,pinnacle,153,A,2.5
+id1500023472886416,calgary flames,2026-10-01,unibet.fr,151,H,1.8
+id1500023472886416,calgary flames,2026-10-01,unibet.fr,151,A,1.81
+id1500023472886416,calgary flames,2026-10-01,unibet.fr,153,H,2.3
+id1500023472886416,calgary flames,2026-10-01,unibet.fr,153,X,3.7
+id1500023472886416,calgary flames,2026-10-01,unibet.fr,153,A,2.3
+id1500023472886416,calgary flames,2026-10-01,winamax.fr,153,H,2.35
+id1500023472886416,calgary flames,2026-10-01,winamax.fr,153,X,3.95
+id1500023472886416,calgary flames,2026-10-01,winamax.fr,153,A,2.45
+id1500023472886428,utah mammoth,2026-10-01,pinnacle,151,H,1.425
+id1500023472886428,utah mammoth,2026-10-01,pinnacle,151,A,3.07
+id1500023472886428,utah mammoth,2026-10-01,pinnacle,153,H,1.714
+id1500023472886428,utah mammoth,2026-10-01,pinnacle,153,X,4.62
+id1500023472886428,utah mammoth,2026-10-01,pinnacle,153,A,3.98
+id1500023472886428,utah mammoth,2026-10-01,unibet.fr,151,H,1.39
+id1500023472886428,utah mammoth,2026-10-01,unibet.fr,151,A,2.6
+id1500023472886428,utah mammoth,2026-10-01,unibet.fr,153,H,1.64
+id1500023472886428,utah mammoth,2026-10-01,unibet.fr,153,X,4.0
+id1500023472886428,utah mammoth,2026-10-01,unibet.fr,153,A,3.55
+id1500023472886428,utah mammoth,2026-10-01,winamax.fr,153,H,1.7
+id1500023472886428,utah mammoth,2026-10-01,winamax.fr,153,X,4.4
+id1500023472886428,utah mammoth,2026-10-01,winamax.fr,153,A,3.7
+id1500023472886426,san jose sharks,2026-10-01,pinnacle,151,H,2.29
+id1500023472886426,san jose sharks,2026-10-01,pinnacle,151,A,1.699
+id1500023472886426,san jose sharks,2026-10-01,pinnacle,153,H,2.91
+id1500023472886426,san jose sharks,2026-10-01,pinnacle,153,X,4.38
+id1500023472886426,san jose sharks,2026-10-01,pinnacle,153,A,2.09
+id1500023472886426,san jose sharks,2026-10-01,unibet.fr,151,H,2.1
+id1500023472886426,san jose sharks,2026-10-01,unibet.fr,151,A,1.59
+id1500023472886426,san jose sharks,2026-10-01,unibet.fr,153,H,2.7
+id1500023472886426,san jose sharks,2026-10-01,unibet.fr,153,X,3.9
+id1500023472886426,san jose sharks,2026-10-01,unibet.fr,153,A,1.95
+id1500023472886426,san jose sharks,2026-10-01,winamax.fr,153,H,2.85
+id1500023472886426,san jose sharks,2026-10-01,winamax.fr,153,X,4.2
+id1500023472886426,san jose sharks,2026-10-01,winamax.fr,153,A,2.0
+id1500023472886430,vancouver canucks,2026-10-01,pinnacle,151,H,2.93
+id1500023472886430,vancouver canucks,2026-10-01,pinnacle,151,A,1.46
+id1500023472886430,vancouver canucks,2026-10-01,pinnacle,153,H,3.71
+id1500023472886430,vancouver canucks,2026-10-01,pinnacle,153,X,4.84
+id1500023472886430,vancouver canucks,2026-10-01,pinnacle,153,A,1.74
+id1500023472886430,vancouver canucks,2026-10-01,unibet.fr,151,H,2.55
+id1500023472886430,vancouver canucks,2026-10-01,unibet.fr,151,A,1.39
+id1500023472886430,vancouver canucks,2026-10-01,unibet.fr,153,H,3.45
+id1500023472886430,vancouver canucks,2026-10-01,unibet.fr,153,X,4.15
+id1500023472886430,vancouver canucks,2026-10-01,unibet.fr,153,A,1.64
+id1500023472886430,vancouver canucks,2026-10-01,winamax.fr,153,H,3.8
+id1500023472886430,vancouver canucks,2026-10-01,winamax.fr,153,X,4.6
+id1500023472886430,vancouver canucks,2026-10-01,winamax.fr,153,A,1.64
+id1500023472886434,detroit red wings,2026-10-02,pinnacle,151,H,1.854
+id1500023472886434,detroit red wings,2026-10-02,pinnacle,151,A,2.06
+id1500023472886434,detroit red wings,2026-10-02,pinnacle,153,H,2.33
+id1500023472886434,detroit red wings,2026-10-02,pinnacle,153,X,4.19
+id1500023472886434,detroit red wings,2026-10-02,pinnacle,153,A,2.62
+id1500023472886434,detroit red wings,2026-10-02,unibet.fr,151,H,1.68
+id1500023472886434,detroit red wings,2026-10-02,unibet.fr,151,A,1.95
+id1500023472886434,detroit red wings,2026-10-02,unibet.fr,153,H,2.1
+id1500023472886434,detroit red wings,2026-10-02,unibet.fr,153,X,3.75
+id1500023472886434,detroit red wings,2026-10-02,unibet.fr,153,A,2.5
+id1500023472886434,detroit red wings,2026-10-02,winamax.fr,153,H,2.25
+id1500023472886434,detroit red wings,2026-10-02,winamax.fr,153,X,3.95
+id1500023472886434,detroit red wings,2026-10-02,winamax.fr,153,A,2.6
+id1500023472908912,carolina hurricanes,2026-10-02,pinnacle,151,H,1.675
+id1500023472908912,carolina hurricanes,2026-10-02,pinnacle,151,A,2.34
+id1500023472908912,carolina hurricanes,2026-10-02,pinnacle,153,H,2.07
+id1500023472908912,carolina hurricanes,2026-10-02,pinnacle,153,X,4.28
+id1500023472908912,carolina hurricanes,2026-10-02,pinnacle,153,A,2.99
+id1500023472908912,carolina hurricanes,2026-10-02,unibet.fr,151,H,1.6
+id1500023472908912,carolina hurricanes,2026-10-02,unibet.fr,151,A,2.05
+id1500023472908912,carolina hurricanes,2026-10-02,unibet.fr,153,H,1.97
+id1500023472908912,carolina hurricanes,2026-10-02,unibet.fr,153,X,3.85
+id1500023472908912,carolina hurricanes,2026-10-02,unibet.fr,153,A,2.7
+id1500023472908912,carolina hurricanes,2026-10-02,winamax.fr,153,H,2.05
+id1500023472908912,carolina hurricanes,2026-10-02,winamax.fr,153,X,4.1
+id1500023472908912,carolina hurricanes,2026-10-02,winamax.fr,153,A,2.75
+id1500023472886432,winnipeg jets,2026-10-02,pinnacle,151,H,1.869
+id1500023472886432,winnipeg jets,2026-10-02,pinnacle,151,A,2.04
+id1500023472886432,winnipeg jets,2026-10-02,pinnacle,153,H,2.36
+id1500023472886432,winnipeg jets,2026-10-02,pinnacle,153,X,4.16
+id1500023472886432,winnipeg jets,2026-10-02,pinnacle,153,A,2.58
+id1500023472886432,winnipeg jets,2026-10-02,unibet.fr,151,H,1.73
+id1500023472886432,winnipeg jets,2026-10-02,unibet.fr,151,A,1.88
+id1500023472886432,winnipeg jets,2026-10-02,unibet.fr,153,H,2.2
+id1500023472886432,winnipeg jets,2026-10-02,unibet.fr,153,X,3.7
+id1500023472886432,winnipeg jets,2026-10-02,unibet.fr,153,A,2.4
+id1500023472886432,winnipeg jets,2026-10-02,winamax.fr,153,H,2.1
+id1500023472886432,winnipeg jets,2026-10-02,winamax.fr,153,X,3.75
+id1500023472886432,winnipeg jets,2026-10-02,winamax.fr,153,A,2.3
+id1500023472886436,dallas stars,2026-10-02,pinnacle,151,H,1.552
+id1500023472886436,dallas stars,2026-10-02,pinnacle,151,A,2.62
+id1500023472886436,dallas stars,2026-10-02,pinnacle,153,H,1.909
+id1500023472886436,dallas stars,2026-10-02,pinnacle,153,X,4.35
+id1500023472886436,dallas stars,2026-10-02,pinnacle,153,A,3.38
+id1500023472886436,dallas stars,2026-10-02,unibet.fr,151,H,1.49
+id1500023472886436,dallas stars,2026-10-02,unibet.fr,151,A,2.3
+id1500023472886436,dallas stars,2026-10-02,unibet.fr,153,H,1.8
+id1500023472886436,dallas stars,2026-10-02,unibet.fr,153,X,3.85
+id1500023472886436,dallas stars,2026-10-02,unibet.fr,153,A,3.05
+id1500023472886436,dallas stars,2026-10-02,winamax.fr,153,H,1.84
+id1500023472886436,dallas stars,2026-10-02,winamax.fr,153,X,4.3
+id1500023472886436,dallas stars,2026-10-02,winamax.fr,153,A,3.2
+id1500023472908910,vegas golden knights,2026-10-02,pinnacle,151,H,1.48
+id1500023472908910,vegas golden knights,2026-10-02,pinnacle,151,A,2.85
+id1500023472908910,vegas golden knights,2026-10-02,pinnacle,153,H,1.787
+id1500023472908910,vegas golden knights,2026-10-02,pinnacle,153,X,4.61
+id1500023472908910,vegas golden knights,2026-10-02,pinnacle,153,A,3.66
+id1500023472908910,vegas golden knights,2026-10-02,unibet.fr,151,H,1.43
+id1500023472908910,vegas golden knights,2026-10-02,unibet.fr,151,A,2.45
+id1500023472908910,vegas golden knights,2026-10-02,unibet.fr,153,H,1.7
+id1500023472908910,vegas golden knights,2026-10-02,unibet.fr,153,X,4.05
+id1500023472908910,vegas golden knights,2026-10-02,unibet.fr,153,A,3.3
+id1500023472908910,vegas golden knights,2026-10-02,winamax.fr,153,H,1.74
+id1500023472908910,vegas golden knights,2026-10-02,winamax.fr,153,X,4.5
+id1500023472908910,vegas golden knights,2026-10-02,winamax.fr,153,A,3.5
+id1500023472886438,buffalo sabres,2026-10-03,pinnacle,151,H,1.425
+id1500023472886438,buffalo sabres,2026-10-03,pinnacle,151,A,3.07
+id1500023472886438,buffalo sabres,2026-10-03,pinnacle,153,H,1.714
+id1500023472886438,buffalo sabres,2026-10-03,pinnacle,153,X,4.63
+id1500023472886438,buffalo sabres,2026-10-03,pinnacle,153,A,3.97
+id1500023472886438,buffalo sabres,2026-10-03,unibet.fr,151,H,1.38
+id1500023472886438,buffalo sabres,2026-10-03,unibet.fr,151,A,2.6
+id1500023472886438,buffalo sabres,2026-10-03,unibet.fr,153,H,1.63
+id1500023472886438,buffalo sabres,2026-10-03,unibet.fr,153,X,4.0
+id1500023472886438,buffalo sabres,2026-10-03,unibet.fr,153,A,3.6
+id1500023472886438,buffalo sabres,2026-10-03,winamax.fr,153,H,1.6
+id1500023472886438,buffalo sabres,2026-10-03,winamax.fr,153,X,4.3
+id1500023472886438,buffalo sabres,2026-10-03,winamax.fr,153,A,3.6
+id1500023472886444,pittsburgh penguins,2026-10-03,pinnacle,151,H,1.961
+id1500023472886444,pittsburgh penguins,2026-10-03,pinnacle,151,A,1.943
+id1500023472886444,pittsburgh penguins,2026-10-03,pinnacle,153,H,2.48
+id1500023472886444,pittsburgh penguins,2026-10-03,pinnacle,153,X,4.13
+id1500023472886444,pittsburgh penguins,2026-10-03,pinnacle,153,A,2.46
+id1500023472886444,pittsburgh penguins,2026-10-03,unibet.fr,151,H,1.82
+id1500023472886444,pittsburgh penguins,2026-10-03,unibet.fr,151,A,1.79
+id1500023472886444,pittsburgh penguins,2026-10-03,unibet.fr,153,H,2.3
+id1500023472886444,pittsburgh penguins,2026-10-03,unibet.fr,153,X,3.8
+id1500023472886444,pittsburgh penguins,2026-10-03,unibet.fr,153,A,2.25
+id1500023472886444,pittsburgh penguins,2026-10-03,winamax.fr,153,H,2.25
+id1500023472886444,pittsburgh penguins,2026-10-03,winamax.fr,153,X,3.6
+id1500023472886444,pittsburgh penguins,2026-10-03,winamax.fr,153,A,2.2
+id1500023472886446,tampa bay lightning,2026-10-03,pinnacle,151,H,1.518
+id1500023472886446,tampa bay lightning,2026-10-03,pinnacle,151,A,2.72
+id1500023472886446,tampa bay lightning,2026-10-03,pinnacle,153,H,1.854
+id1500023472886446,tampa bay lightning,2026-10-03,pinnacle,153,X,4.44
+id1500023472886446,tampa bay lightning,2026-10-03,pinnacle,153,A,3.5
+id1500023472886446,tampa bay lightning,2026-10-03,unibet.fr,151,H,1.46
+id1500023472886446,tampa bay lightning,2026-10-03,unibet.fr,151,A,2.35
+id1500023472886446,tampa bay lightning,2026-10-03,unibet.fr,153,H,1.75
+id1500023472886446,tampa bay lightning,2026-10-03,unibet.fr,153,X,3.95
+id1500023472886446,tampa bay lightning,2026-10-03,unibet.fr,153,A,3.2
+id1500023472886446,tampa bay lightning,2026-10-03,winamax.fr,153,H,1.7
+id1500023472886446,tampa bay lightning,2026-10-03,winamax.fr,153,X,3.95
+id1500023472886446,tampa bay lightning,2026-10-03,winamax.fr,153,A,3.05
+id1500023472908922,toronto maple leafs,2026-10-03,pinnacle,151,H,1.925
+id1500023472908922,toronto maple leafs,2026-10-03,pinnacle,151,A,1.98
+id1500023472908922,toronto maple leafs,2026-10-03,pinnacle,153,H,2.42
+id1500023472908922,toronto maple leafs,2026-10-03,pinnacle,153,X,4.18
+id1500023472908922,toronto maple leafs,2026-10-03,pinnacle,153,A,2.52
+id1500023472908922,toronto maple leafs,2026-10-03,unibet.fr,151,H,1.79
+id1500023472908922,toronto maple leafs,2026-10-03,unibet.fr,151,A,1.82
+id1500023472908922,toronto maple leafs,2026-10-03,unibet.fr,153,H,2.25
+id1500023472908922,toronto maple leafs,2026-10-03,unibet.fr,153,X,3.8
+id1500023472908922,toronto maple leafs,2026-10-03,unibet.fr,153,A,2.3
+id1500023472908922,toronto maple leafs,2026-10-03,winamax.fr,153,H,2.2
+id1500023472908922,toronto maple leafs,2026-10-03,winamax.fr,153,X,3.7
+id1500023472908922,toronto maple leafs,2026-10-03,winamax.fr,153,A,2.2
+id1500023472908924,philadelphia flyers,2026-10-03,pinnacle,151,H,2.2
+id1500023472908924,philadelphia flyers,2026-10-03,pinnacle,151,A,1.757
+id1500023472908924,philadelphia flyers,2026-10-03,pinnacle,153,H,2.8
+id1500023472908924,philadelphia flyers,2026-10-03,pinnacle,153,X,4.22
+id1500023472908924,philadelphia flyers,2026-10-03,pinnacle,153,A,2.19
+id1500023472908924,philadelphia flyers,2026-10-03,unibet.fr,151,H,1.96
+id1500023472908924,philadelphia flyers,2026-10-03,unibet.fr,151,A,1.66
+id1500023472908924,philadelphia flyers,2026-10-03,unibet.fr,153,H,2.55
+id1500023472908924,philadelphia flyers,2026-10-03,unibet.fr,153,X,3.75
+id1500023472908924,philadelphia flyers,2026-10-03,unibet.fr,153,A,2.1
+id1500023472908924,philadelphia flyers,2026-10-03,winamax.fr,153,H,2.5
+id1500023472908924,philadelphia flyers,2026-10-03,winamax.fr,153,X,3.6
+id1500023472908924,philadelphia flyers,2026-10-03,winamax.fr,153,A,2.0
+id1500023472908926,columbus blue jackets,2026-10-03,pinnacle,151,H,1.99
+id1500023472908926,columbus blue jackets,2026-10-03,pinnacle,151,A,1.917
+id1500023472908926,columbus blue jackets,2026-10-03,pinnacle,153,H,2.51
+id1500023472908926,columbus blue jackets,2026-10-03,pinnacle,153,X,4.19
+id1500023472908926,columbus blue jackets,2026-10-03,pinnacle,153,A,2.42
+id1500023472908926,columbus blue jackets,2026-10-03,unibet.fr,151,H,1.83
+id1500023472908926,columbus blue jackets,2026-10-03,unibet.fr,151,A,1.78
+id1500023472908926,columbus blue jackets,2026-10-03,unibet.fr,153,H,2.35
+id1500023472908926,columbus blue jackets,2026-10-03,unibet.fr,153,X,3.75
+id1500023472908926,columbus blue jackets,2026-10-03,unibet.fr,153,A,2.25
+id1500023472908926,columbus blue jackets,2026-10-03,winamax.fr,153,H,2.3
+id1500023472908926,columbus blue jackets,2026-10-03,winamax.fr,153,X,4.0
+id1500023472908926,columbus blue jackets,2026-10-03,winamax.fr,153,A,2.2
+id1500023472908928,edmonton oilers,2026-10-03,pinnacle,151,H,1.534
+id1500023472908928,edmonton oilers,2026-10-03,pinnacle,151,A,2.67
+id1500023472908928,edmonton oilers,2026-10-03,pinnacle,153,H,1.862
+id1500023472908928,edmonton oilers,2026-10-03,pinnacle,153,X,4.51
+id1500023472908928,edmonton oilers,2026-10-03,pinnacle,153,A,3.42
+id1500023472908928,edmonton oilers,2026-10-03,unibet.fr,151,H,1.44
+id1500023472908928,edmonton oilers,2026-10-03,unibet.fr,151,A,2.4
+id1500023472908928,edmonton oilers,2026-10-03,unibet.fr,153,H,1.72
+id1500023472908928,edmonton oilers,2026-10-03,unibet.fr,153,X,4.0
+id1500023472908928,edmonton oilers,2026-10-03,unibet.fr,153,A,3.2
+id1500023472908928,edmonton oilers,2026-10-03,winamax.fr,153,H,1.72
+id1500023472908928,edmonton oilers,2026-10-03,winamax.fr,153,X,4.3
+id1500023472908928,edmonton oilers,2026-10-03,winamax.fr,153,A,3.1
+id1500023472886442,new york islanders,2026-10-03,pinnacle,151,H,2.18
+id1500023472886442,new york islanders,2026-10-03,pinnacle,151,A,1.769
+id1500023472886442,new york islanders,2026-10-03,pinnacle,153,H,2.78
+id1500023472886442,new york islanders,2026-10-03,pinnacle,153,X,4.18
+id1500023472886442,new york islanders,2026-10-03,pinnacle,153,A,2.21
+id1500023472886442,new york islanders,2026-10-03,unibet.fr,151,H,1.99
+id1500023472886442,new york islanders,2026-10-03,unibet.fr,151,A,1.65
+id1500023472886442,new york islanders,2026-10-03,unibet.fr,153,H,2.6
+id1500023472886442,new york islanders,2026-10-03,unibet.fr,153,X,3.75
+id1500023472886442,new york islanders,2026-10-03,unibet.fr,153,A,2.05
+id1500023472886442,new york islanders,2026-10-03,winamax.fr,153,H,2.45
+id1500023472886442,new york islanders,2026-10-03,winamax.fr,153,X,3.6
+id1500023472886442,new york islanders,2026-10-03,winamax.fr,153,A,2.0
+id1500023472886440,minnesota wild,2026-10-03,pinnacle,151,H,1.487
+id1500023472886440,minnesota wild,2026-10-03,pinnacle,151,A,2.83
+id1500023472886440,minnesota wild,2026-10-03,pinnacle,153,H,1.8
+id1500023472886440,minnesota wild,2026-10-03,pinnacle,153,X,4.52
+id1500023472886440,minnesota wild,2026-10-03,pinnacle,153,A,3.64
+id1500023472886440,minnesota wild,2026-10-03,unibet.fr,151,H,1.42
+id1500023472886440,minnesota wild,2026-10-03,unibet.fr,151,A,2.45
+id1500023472886440,minnesota wild,2026-10-03,unibet.fr,153,H,1.7
+id1500023472886440,minnesota wild,2026-10-03,unibet.fr,153,X,3.95
+id1500023472886440,minnesota wild,2026-10-03,unibet.fr,153,A,3.35
+id1500023472886440,minnesota wild,2026-10-03,winamax.fr,153,H,1.66
+id1500023472886440,minnesota wild,2026-10-03,winamax.fr,153,X,3.9
+id1500023472886440,minnesota wild,2026-10-03,winamax.fr,153,A,3.25
+id1500023472908914,nashville predators,2026-10-03,pinnacle,151,H,2.27
+id1500023472908914,nashville predators,2026-10-03,pinnacle,151,A,1.714
+id1500023472908914,nashville predators,2026-10-03,pinnacle,153,H,2.89
+id1500023472908914,nashville predators,2026-10-03,pinnacle,153,X,4.21
+id1500023472908914,nashville predators,2026-10-03,pinnacle,153,A,2.14
+id1500023472908914,nashville predators,2026-10-03,unibet.fr,151,H,2.0
+id1500023472908914,nashville predators,2026-10-03,unibet.fr,151,A,1.63
+id1500023472908914,nashville predators,2026-10-03,unibet.fr,153,H,2.6
+id1500023472908914,nashville predators,2026-10-03,unibet.fr,153,X,3.8
+id1500023472908914,nashville predators,2026-10-03,unibet.fr,153,A,2.0
+id1500023472908914,nashville predators,2026-10-03,winamax.fr,153,H,2.55
+id1500023472908914,nashville predators,2026-10-03,winamax.fr,153,X,3.75
+id1500023472908914,nashville predators,2026-10-03,winamax.fr,153,A,1.94
+id1500023472908916,colorado avalanche,2026-10-03,pinnacle,151,H,1.347
+id1500023472908916,colorado avalanche,2026-10-03,pinnacle,151,A,3.5
+id1500023472908916,colorado avalanche,2026-10-03,pinnacle,153,H,1.595
+id1500023472908916,colorado avalanche,2026-10-03,pinnacle,153,X,4.92
+id1500023472908916,colorado avalanche,2026-10-03,pinnacle,153,A,4.53
+id1500023472908916,colorado avalanche,2026-10-03,unibet.fr,151,H,1.3
+id1500023472908916,colorado avalanche,2026-10-03,unibet.fr,151,A,2.9
+id1500023472908916,colorado avalanche,2026-10-03,unibet.fr,153,H,1.52
+id1500023472908916,colorado avalanche,2026-10-03,unibet.fr,153,X,4.15
+id1500023472908916,colorado avalanche,2026-10-03,unibet.fr,153,A,4.15
+id1500023472908916,colorado avalanche,2026-10-03,winamax.fr,153,H,1.49
+id1500023472908916,colorado avalanche,2026-10-03,winamax.fr,153,X,4.5
+id1500023472908916,colorado avalanche,2026-10-03,winamax.fr,153,A,4.1
+id1500023472908918,vancouver canucks,2026-10-03,pinnacle,151,H,1.917
+id1500023472908918,vancouver canucks,2026-10-03,pinnacle,151,A,1.99
+id1500023472908918,vancouver canucks,2026-10-03,pinnacle,153,H,2.41
+id1500023472908918,vancouver canucks,2026-10-03,pinnacle,153,X,4.23
+id1500023472908918,vancouver canucks,2026-10-03,pinnacle,153,A,2.5
+id1500023472908918,vancouver canucks,2026-10-03,unibet.fr,151,H,1.79
+id1500023472908918,vancouver canucks,2026-10-03,unibet.fr,151,A,1.81
+id1500023472908918,vancouver canucks,2026-10-03,unibet.fr,153,H,2.25
+id1500023472908918,vancouver canucks,2026-10-03,unibet.fr,153,X,3.8
+id1500023472908918,vancouver canucks,2026-10-03,unibet.fr,153,A,2.3
+id1500023472908918,vancouver canucks,2026-10-03,winamax.fr,153,H,2.2
+id1500023472908918,vancouver canucks,2026-10-03,winamax.fr,153,X,3.85
+id1500023472908918,vancouver canucks,2026-10-03,winamax.fr,153,A,2.3
+id1500023472908920,san jose sharks,2026-10-03,pinnacle,151,H,1.98
+id1500023472908920,san jose sharks,2026-10-03,pinnacle,151,A,1.925
+id1500023472908920,san jose sharks,2026-10-03,pinnacle,153,H,2.5
+id1500023472908920,san jose sharks,2026-10-03,pinnacle,153,X,4.21
+id1500023472908920,san jose sharks,2026-10-03,pinnacle,153,A,2.42
+id1500023472908920,san jose sharks,2026-10-03,unibet.fr,151,H,1.81
+id1500023472908920,san jose sharks,2026-10-03,unibet.fr,151,A,1.8
+id1500023472908920,san jose sharks,2026-10-03,unibet.fr,153,H,2.3
+id1500023472908920,san jose sharks,2026-10-03,unibet.fr,153,X,3.8
+id1500023472908920,san jose sharks,2026-10-03,unibet.fr,153,A,2.25
+id1500023472908920,san jose sharks,2026-10-03,winamax.fr,153,H,2.3
+id1500023472908920,san jose sharks,2026-10-03,winamax.fr,153,X,3.9
+id1500023472908920,san jose sharks,2026-10-03,winamax.fr,153,A,2.25
+id1500023472908932,detroit red wings,2026-10-04,pinnacle,151,H,2.02
+id1500023472908932,detroit red wings,2026-10-04,pinnacle,151,A,1.884
+id1500023472908932,detroit red wings,2026-10-04,pinnacle,153,H,2.58
+id1500023472908932,detroit red wings,2026-10-04,pinnacle,153,X,4.16
+id1500023472908932,detroit red wings,2026-10-04,pinnacle,153,A,2.37
+id1500023472908932,detroit red wings,2026-10-04,unibet.fr,151,H,1.85
+id1500023472908932,detroit red wings,2026-10-04,unibet.fr,151,A,1.76
+id1500023472908932,detroit red wings,2026-10-04,unibet.fr,153,H,2.35
+id1500023472908932,detroit red wings,2026-10-04,unibet.fr,153,X,3.75
+id1500023472908932,detroit red wings,2026-10-04,unibet.fr,153,A,2.2
+id1500023472908932,detroit red wings,2026-10-04,winamax.fr,153,H,2.4
+id1500023472908932,detroit red wings,2026-10-04,winamax.fr,153,X,3.8
+id1500023472908932,detroit red wings,2026-10-04,winamax.fr,153,A,2.15
+id1500023472908934,new york rangers,2026-10-04,pinnacle,151,H,1.943
+id1500023472908934,new york rangers,2026-10-04,pinnacle,151,A,1.961
+id1500023472908934,new york rangers,2026-10-04,pinnacle,153,H,2.46
+id1500023472908934,new york rangers,2026-10-04,pinnacle,153,X,4.16
+id1500023472908934,new york rangers,2026-10-04,pinnacle,153,A,2.48
+id1500023472908934,new york rangers,2026-10-04,unibet.fr,151,H,1.67
+id1500023472908934,new york rangers,2026-10-04,unibet.fr,151,A,1.81
+id1500023472908934,new york rangers,2026-10-04,unibet.fr,153,H,2.15
+id1500023472908934,new york rangers,2026-10-04,unibet.fr,153,X,3.65
+id1500023472908934,new york rangers,2026-10-04,unibet.fr,153,A,2.4
+id1500023472908934,new york rangers,2026-10-04,winamax.fr,153,H,2.25
+id1500023472908934,new york rangers,2026-10-04,winamax.fr,153,X,3.8
+id1500023472908934,new york rangers,2026-10-04,winamax.fr,153,A,2.3
+id1500023472886448,anaheim ducks,2026-10-04,pinnacle,151,H,2.15
+id1500023472886448,anaheim ducks,2026-10-04,pinnacle,151,A,1.787
+id1500023472886448,anaheim ducks,2026-10-04,pinnacle,153,H,2.76
+id1500023472886448,anaheim ducks,2026-10-04,pinnacle,153,X,4.1
+id1500023472886448,anaheim ducks,2026-10-04,pinnacle,153,A,2.25
+id1500023472886448,anaheim ducks,2026-10-04,unibet.fr,151,H,1.95
+id1500023472886448,anaheim ducks,2026-10-04,unibet.fr,151,A,1.57
+id1500023472886448,anaheim ducks,2026-10-04,unibet.fr,153,H,2.6
+id1500023472886448,anaheim ducks,2026-10-04,unibet.fr,153,X,3.75
+id1500023472886448,anaheim ducks,2026-10-04,unibet.fr,153,A,1.97
+id1500023472886448,anaheim ducks,2026-10-04,winamax.fr,153,H,2.55
+id1500023472886448,anaheim ducks,2026-10-04,winamax.fr,153,X,4.1
+id1500023472886448,anaheim ducks,2026-10-04,winamax.fr,153,A,2.0
+id1500023472886450,seattle kraken,2026-10-04,pinnacle,151,H,1.591
+id1500023472886450,seattle kraken,2026-10-04,pinnacle,151,A,2.52
+id1500023472886450,seattle kraken,2026-10-04,pinnacle,153,H,1.97
+id1500023472886450,seattle kraken,2026-10-04,pinnacle,153,X,4.24
+id1500023472886450,seattle kraken,2026-10-04,pinnacle,153,A,3.26
+id1500023472886450,seattle kraken,2026-10-04,unibet.fr,151,H,1.51
+id1500023472886450,seattle kraken,2026-10-04,unibet.fr,151,A,2.05
+id1500023472886450,seattle kraken,2026-10-04,unibet.fr,153,H,1.89
+id1500023472886450,seattle kraken,2026-10-04,unibet.fr,153,X,3.7
+id1500023472886450,seattle kraken,2026-10-04,unibet.fr,153,A,2.75
+id1500023472886450,seattle kraken,2026-10-04,winamax.fr,153,H,1.84
+id1500023472886450,seattle kraken,2026-10-04,winamax.fr,153,X,3.7
+id1500023472886450,seattle kraken,2026-10-04,winamax.fr,153,A,2.75
+id1500023472908930,vancouver canucks,2026-10-04,pinnacle,151,H,3.44
+id1500023472908930,vancouver canucks,2026-10-04,pinnacle,151,A,1.357
+id1500023472908930,vancouver canucks,2026-10-04,pinnacle,153,H,4.46
+id1500023472908930,vancouver canucks,2026-10-04,pinnacle,153,X,4.87
+id1500023472908930,vancouver canucks,2026-10-04,pinnacle,153,A,1.609
+id1500023472908930,vancouver canucks,2026-10-04,unibet.fr,151,H,2.85
+id1500023472908930,vancouver canucks,2026-10-04,unibet.fr,151,A,1.25
+id1500023472908930,vancouver canucks,2026-10-04,unibet.fr,153,H,4.2
+id1500023472908930,vancouver canucks,2026-10-04,unibet.fr,153,X,4.15
+id1500023472908930,vancouver canucks,2026-10-04,unibet.fr,153,A,1.47
+id1500023472908930,vancouver canucks,2026-10-04,winamax.fr,153,H,4.2
+id1500023472908930,vancouver canucks,2026-10-04,winamax.fr,153,X,4.6
+id1500023472908930,vancouver canucks,2026-10-04,winamax.fr,153,A,1.47
+id1500023472908938,tampa bay lightning,2026-10-05,pinnacle,151,H,1.46
+id1500023472908938,tampa bay lightning,2026-10-05,pinnacle,151,A,2.92
+id1500023472908938,tampa bay lightning,2026-10-05,pinnacle,153,H,1.757
+id1500023472908938,tampa bay lightning,2026-10-05,pinnacle,153,X,4.64
+id1500023472908938,tampa bay lightning,2026-10-05,pinnacle,153,A,3.75
+id1500023472908938,tampa bay lightning,2026-10-05,unibet.fr,151,H,1.35
+id1500023472908938,tampa bay lightning,2026-10-05,unibet.fr,151,A,2.45
+id1500023472908938,tampa bay lightning,2026-10-05,unibet.fr,153,H,1.63
+id1500023472908938,tampa bay lightning,2026-10-05,unibet.fr,153,X,3.9
+id1500023472908938,tampa bay lightning,2026-10-05,unibet.fr,153,A,3.45
+id1500023472908938,tampa bay lightning,2026-10-05,winamax.fr,153,H,1.66
+id1500023472908938,tampa bay lightning,2026-10-05,winamax.fr,153,X,4.4
+id1500023472908938,tampa bay lightning,2026-10-05,winamax.fr,153,A,3.9
+id1500023472908940,boston bruins,2026-10-05,pinnacle,151,H,2.14
+id1500023472908940,boston bruins,2026-10-05,pinnacle,151,A,1.793
+id1500023472908940,boston bruins,2026-10-05,pinnacle,153,H,2.74
+id1500023472908940,boston bruins,2026-10-05,pinnacle,153,X,4.17
+id1500023472908940,boston bruins,2026-10-05,pinnacle,153,A,2.25
+id1500023472908940,boston bruins,2026-10-05,unibet.fr,151,H,1.77
+id1500023472908940,boston bruins,2026-10-05,unibet.fr,151,A,1.71
+id1500023472908940,boston bruins,2026-10-05,unibet.fr,153,H,2.3
+id1500023472908940,boston bruins,2026-10-05,unibet.fr,153,X,3.7
+id1500023472908940,boston bruins,2026-10-05,unibet.fr,153,A,2.2
+id1500023472908940,boston bruins,2026-10-05,winamax.fr,153,H,2.4
+id1500023472908940,boston bruins,2026-10-05,winamax.fr,153,X,4.1
+id1500023472908940,boston bruins,2026-10-05,winamax.fr,153,A,2.3
+id1500023472908942,pittsburgh penguins,2026-10-05,pinnacle,151,H,1.52
+id1500023472908942,pittsburgh penguins,2026-10-05,pinnacle,151,A,2.71
+id1500023472908942,pittsburgh penguins,2026-10-05,pinnacle,153,H,1.854
+id1500023472908942,pittsburgh penguins,2026-10-05,pinnacle,153,X,4.45
+id1500023472908942,pittsburgh penguins,2026-10-05,pinnacle,153,A,3.48
+id1500023472908942,pittsburgh penguins,2026-10-05,unibet.fr,151,H,1.45
+id1500023472908942,pittsburgh penguins,2026-10-05,unibet.fr,151,A,2.15
+id1500023472908942,pittsburgh penguins,2026-10-05,unibet.fr,153,H,1.78
+id1500023472908942,pittsburgh penguins,2026-10-05,unibet.fr,153,X,3.85
+id1500023472908942,pittsburgh penguins,2026-10-05,unibet.fr,153,A,2.95
+id1500023472908942,pittsburgh penguins,2026-10-05,winamax.fr,153,H,1.84
+id1500023472908942,pittsburgh penguins,2026-10-05,winamax.fr,153,X,4.3
+id1500023472908942,pittsburgh penguins,2026-10-05,winamax.fr,153,A,3.15
+id1500023472908936,dallas stars,2026-10-05,pinnacle,151,H,1.454
+id1500023472908936,dallas stars,2026-10-05,pinnacle,151,A,2.95
+id1500023472908936,dallas stars,2026-10-05,pinnacle,153,H,1.751
+id1500023472908936,dallas stars,2026-10-05,pinnacle,153,X,4.59
+id1500023472908936,dallas stars,2026-10-05,pinnacle,153,A,3.81
+id1500023472908936,dallas stars,2026-10-05,unibet.fr,151,H,1.41
+id1500023472908936,dallas stars,2026-10-05,unibet.fr,151,A,2.25
+id1500023472908936,dallas stars,2026-10-05,unibet.fr,153,H,1.72
+id1500023472908936,dallas stars,2026-10-05,unibet.fr,153,X,3.9
+id1500023472908936,dallas stars,2026-10-05,unibet.fr,153,A,3.1
+id1500023472908936,dallas stars,2026-10-05,winamax.fr,153,H,1.72
+id1500023472908936,dallas stars,2026-10-05,winamax.fr,153,X,4.3
+id1500023472908936,dallas stars,2026-10-05,winamax.fr,153,A,3.7

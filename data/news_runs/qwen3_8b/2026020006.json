@@ -1,0 +1,138 @@
+{
+ "game": {
+  "gameId": 2026020006,
+  "kickoff": "2026-09-30T23:30:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Philadelphia Flyers",
+  "away_id": 5,
+  "home_id": 4,
+  "away_abbr": "PIT",
+  "home_abbr": "PHI"
+ },
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers vs. Penguins",
+   "published": "2026-09-30T13:40:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Penguins at Flyers projected lineups",
+   "published": "2026-09-30T16:50:22.488Z",
+   "lineups": true
+  },
+  {
+   "title": "IBX and Philadelphia Flyers launch IBX Caring MVPs to Celebrate Community Volunteers",
+   "published": "2026-09-28T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins Finalize Roster for the 2026.27 Season\n",
+   "published": "2026-09-28T18:09:20.769Z",
+   "lineups": false
+  },
+  {
+   "title": "Preview: Flyers Gear Up for 2026-27",
+   "published": "2026-09-28T19:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers Announce 2026-27 Opening Night Active Roster",
+   "published": "2026-09-28T20:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Denver Barkey",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Helge Grans",
+     "detail": "lower body injury (Injured Non-Roster)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Dan Vladar",
+    "Noel Acciari",
+    "Simon Benoit",
+    "Joseph Woll"
+   ],
+   "summary": "The Flyers are returning to the ice with a young, deep roster that includes several new additions like Joseph Woll, Simon Benoit, and Noel Acciari. Dan Vladar is confirmed to start after missing the final two preseason games due to an injury. The team is looking to build on their playoff success from last season and improve their power play, which was among the worst in the league."
+  },
+  "home": {
+   "starting_goalie": "Sergei Murashov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ben Kindel",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Blake Lizotte",
+     "detail": "upper-body injury (expected to play)"
+    }
+   ],
+   "returning": [
+    "Egor Chinakhov",
+    "Connor Dewar",
+    "Filip Hallander",
+    "Ville Koivunen",
+    "Hendrix Lapierre",
+    "Evgeni Malkin",
+    "Tommy Novak",
+    "Rickard Rakell",
+    "Nick Robertson",
+    "Declan Carlile",
+    "Kris Letang",
+    "Trevor van Riemsdyk"
+   ],
+   "summary": "The Penguins are entering the season with a mix of returning stars and new additions, including Nick Robertson, David Gustafsson, and Hendrix Lapierre. Sergei Murashov is projected to start in goal, though the team has a number of injured players, including Bryan Rust and Ben Kindel. The Penguins will look to build on their playoff performance against the Flyers last season."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Arturs Silovs",
+   "p_starter": 1.0,
+   "announced": 0.91,
+   "p_out": {
+    "Denver Barkey": 0.52,
+    "Helge Grans": 0.11
+   }
+  },
+  "home": {
+   "starter": "Dan Vladar",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Justin Brazeau": 0.6,
+    "Ben Kindel": 0.48,
+    "Ryan Graves": 0.71,
+    "Bryan Rust": 0.83,
+    "Blake Lizotte": 0.08
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 28.3,
+  "jev": 0.5
+ }
+}

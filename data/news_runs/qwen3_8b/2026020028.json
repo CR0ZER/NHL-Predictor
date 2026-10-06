@@ -1,0 +1,119 @@
+{
+ "game": {
+  "gameId": 2026020028,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Seattle Kraken",
+  "home": "Edmonton Oilers",
+  "away_id": 55,
+  "home_id": 22,
+  "away_abbr": "SEA",
+  "home_abbr": "EDM"
+ },
+ "articles": [
+  {
+   "title": "Kraken at Oilers projected lineups",
+   "published": "2026-10-03T16:31:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Kraken (0-0-0) at Flames (0-0-0) | 6:00 p.m.",
+   "published": "2026-10-01T04:26:56.949Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Oilers at Canucks",
+   "published": "2026-10-01T06:52:40.233Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Oilers place Nugent-Hopkins on IR",
+   "published": "2026-10-01T13:55:51.931Z",
+   "lineups": false
+  },
+  {
+   "title": "Oilers say Bouchard deserves more recognition as 'elite' defenseman",
+   "published": "2026-10-01T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Coors Light® x Seattle Kraken Silver Seats ‘26",
+   "published": "2026-10-01T15:48:50.82Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Philipp Grubauer",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [
+    "Mackie Samoskevich"
+   ],
+   "summary": "The Seattle Kraken are coming off a 1-0-0 start to their season, with Philipp Grubauer confirmed as the starting goalie. Mackie Samoskevich is returning to the lineup after being activated off injured reserve, having missed their season opener due to an upper-body injury."
+  },
+  "home": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Frederik Andersen",
+     "detail": "undisclosed"
+    },
+    {
+     "player": "Jason Dickinson",
+     "detail": "undisclosed"
+    },
+    {
+     "player": "Zach Hyman",
+     "detail": "undisclosed"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed"
+    },
+    {
+     "player": "Ryan Nugent-Hopkins",
+     "detail": "lower body"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed"
+    },
+    {
+     "player": "Matthew Savoie",
+     "detail": "undisclosed"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Edmonton Oilers are coming off a 1-0-1 start to their season, with Tristan Jarry confirmed as the starting goalie. Several key players are out due to injury, including Ryan Nugent-Hopkins (lower body) and Frederik Andersen (undisclosed). The Oilers are expected to dress the same 18 skaters they used in a 9-7 win at the Vancouver Canucks."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joey Daccord",
+   "p_starter": 0.87,
+   "announced": 0.92,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "Tristan Jarry",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Frederik Andersen": 0.96,
+    "Jason Dickinson": 0.96,
+    "Zach Hyman": 0.95,
+    "Mattias Janmark": 0.96,
+    "Ryan Nugent-Hopkins": 0.97,
+    "Alec Regula": 0.92,
+    "Matthew Savoie": 0.93
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 19.3,
+  "jev": 0.5
+ }
+}

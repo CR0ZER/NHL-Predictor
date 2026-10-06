@@ -1,0 +1,143 @@
+{
+ "game": {
+  "gameId": 2026020022,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "Buffalo Sabres",
+  "away_id": 16,
+  "home_id": 7,
+  "away_abbr": "CHI",
+  "home_abbr": "BUF"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:05:09.208091+00:00",
+ "articles": [
+  {
+   "title": "Blackhawks at Sabres projected lineups",
+   "published": "2026-10-03T16:50:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Frondell aiming ‘to be even better’ for Blackhawks in second season",
+   "published": "2026-10-01T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Blue Jackets | How to watch, lineup notes, and storylines",
+   "published": "2026-10-01T12:32:36.682Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Blackhawks Continue Season-Opening Road Trip Against Mammoth",
+   "published": "2026-10-01T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘He’s just getting started’ | The making of Noah Östlund",
+   "published": "2026-10-01T15:01:57.752Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres sign Crevier to 4-year extension",
+   "published": "2026-10-01T15:10:24.49Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Bowen Byram",
+     "detail": "Scratched (family matter)"
+    },
+    {
+     "player": "Sam Rinzel",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Connor Bedard",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Andrew Mangiapane",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/8482176",
+    "/player/8483450"
+   ],
+   "summary": "The Blackhawks (0-2-0) are projected to start Spencer Knight in net with Arvid Soderblom as backup. They will be without Connor Bedard (shoulder) and Andrew Mangiapane (lower body) due to injury, while Bowen Byram is scratched for a family matter and Sam Rinzel is also scratched. Wyatt Kaiser and Ryan Greene are returning to the lineup after recording assists in the season opener against Vegas."
+  },
+  "home": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyson Kozak",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Zach Metsa",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Jason Zucker",
+     "detail": "Injured (sports hernia)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/8481568",
+    "/player/8476882"
+   ],
+   "summary": "The Sabres (0-1-0) are projected to start Ukko-Pekka Luukkonen in net with Colten Ellis as backup. They will be without Tyson Kozak, Justin Danforth, and Zach Metsa (all scratched), while Alex Lyon (upper body), Conor Timmins (lower body), and Jason Zucker (sports hernia) are injured. Mattias Samuelsson and Teuvo Teravainen are returning to the lineup after recovering from injuries, with Samuelsson having practiced following a Sept. 22 lower-body injury and Teravainen on a four-game road point streak against Utah."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Spencer Knight",
+   "p_starter": 1.0,
+   "announced": 0.93,
+   "p_out": {
+    "Bowen Byram": 0.98,
+    "Sam Rinzel": 0.97,
+    "Connor Bedard": 0.98,
+    "Andrew Mangiapane": 0.97
+   }
+  },
+  "home": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 0.99,
+   "announced": 0.88,
+   "p_out": {
+    "Tyson Kozak": 0.97,
+    "Justin Danforth": 0.96,
+    "Zach Metsa": 0.96,
+    "Alex Lyon": 0.96,
+    "Conor Timmins": 0.96,
+    "Jason Zucker": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.7,
+  "jev": 0.6
+ }
+}

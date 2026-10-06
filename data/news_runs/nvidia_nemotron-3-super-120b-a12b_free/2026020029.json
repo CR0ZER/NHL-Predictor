@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020029,
+  "kickoff": "2026-10-03T23:30:00Z",
+  "away": "New Jersey Devils",
+  "home": "New York Islanders",
+  "away_id": 1,
+  "home_id": 2,
+  "away_abbr": "NJD",
+  "home_abbr": "NYI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:01.296735+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders vs Devils",
+   "published": "2026-10-03T04:00:49.822Z",
+   "lineups": true
+  },
+  {
+   "title": "Devils at Islanders projected lineups",
+   "published": "2026-10-03T16:10:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Takeaways: Islanders Drop Season Opener to Maple Leafs 2-1",
+   "published": "2026-10-01T03:22:15.694Z",
+   "lineups": false
+  },
+  {
+   "title": "With Allen's help, Daws 'ready to go' in crease for Devils",
+   "published": "2026-10-01T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "The Decade Men ",
+   "published": "2026-10-01T10:46:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers at Devils projected lineups",
+   "published": "2026-10-01T15:58:54.897Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Nico Daws",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Connor Brown",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Jesper Boqvist",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Remi Poirier",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Devils (1-0-0) are coming off a 3-2 overtime win in their season opener, with Jack Hughes scoring the game-winner and Luke Hughes and Dougie Hamilton also contributing. They project to start Nico Daws in goal, with Jake Allen as backup. The Devils will be without injured defenseman Johnathan Kovacevic (knee) and forward Connor Brown (lower body), and have scratched Jesper Boqvist and Remi Poirier."
+  },
+  "home": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Kyle MacLean",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Scott Mayfield",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Matt Kessel",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Islanders (0-1-0) are playing their home opener after a 2-1 season-opening loss to Toronto, where Emil Heineman scored their only goal. They have confirmed Ilya Sorokin as the starting goalie, who made 24 saves in the opener. The team will be without injured center Mathew Barzal (knee) and has scratched Kyle MacLean, Scott Mayfield, and Matt Kessel."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Nico Daws",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Johnathan Kovacevic": 0.98,
+    "Connor Brown": 0.98,
+    "Jesper Boqvist": 0.96,
+    "Remi Poirier": 0.96
+   }
+  },
+  "home": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 1.0,
+   "announced": 0.99,
+   "p_out": {
+    "Mathew Barzal": 0.98,
+    "Kyle MacLean": 0.96,
+    "Scott Mayfield": 0.96,
+    "Matt Kessel": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.1,
+  "jev": 0.5
+ }
+}

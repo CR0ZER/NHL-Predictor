@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020038,
+  "kickoff": "2026-10-05T00:00:00Z",
+  "away": "Calgary Flames",
+  "home": "Seattle Kraken",
+  "away_id": 20,
+  "home_id": 55,
+  "away_abbr": "CGY",
+  "home_abbr": "SEA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:56.535919+00:00",
+ "articles": [
+  {
+   "title": "Flames at Kraken projected lineups",
+   "published": "2026-10-04T14:45:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Kraken Score Early, Often In Opening Rout",
+   "published": "2026-10-02T04:04:57.012Z",
+   "lineups": false
+  },
+  {
+   "title": "Post-Game Instant Analysis: Seattle at Calgary",
+   "published": "2026-10-02T04:06:05.421Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Fall to Kraken In Home Opener",
+   "published": "2026-10-02T04:20:35.022Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken Will Do ‘What You have To’ To Stay Competitive",
+   "published": "2026-10-02T20:00:34.515Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken (1-0-0) at Oilers (1-0-1) | 4:00 p.m.",
+   "published": "2026-10-03T03:44:03.563Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Connor Zary",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Brayden Pachal",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Yan Kuznetsov",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames (0-2-0) are coming off a 4-1 loss at Vancouver and a 6-1 home opener loss to Seattle. They project to start Dustin Wolf in goal with Devin Cooley as backup. Key absences include injured Jonathan Huberdeau (hip) and scratched Connor Zary, Brayden Pachal, and Yan Kuznetsov. The team is adjusting to a new lineup with several recent acquisitions and debutants."
+  },
+  "home": {
+   "starting_goalie": "Joey Daccord",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Cale Fleury",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Ville Ottavainen",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Curtis Douglas",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Jacob Melanson",
+     "detail": "Injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Kraken (1-1-0) are coming off a 6-1 win over Calgary and a 3-1 loss at Edmonton. They project to start Joey Daccord in goal with Philipp Grubauer as backup. Scratched players include Cale Fleury, Ville Ottavainen, and Curtis Douglas, while Jacob Melanson is on injured reserve with an upper-body injury. The team remains energetic and competitive, relying on a balanced mix of veterans and young core players."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Jonathan Huberdeau": 0.94,
+    "Connor Zary": 0.87,
+    "Brayden Pachal": 0.91,
+    "Yan Kuznetsov": 0.9
+   }
+  },
+  "home": {
+   "starter": "Joey Daccord",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "Cale Fleury": 0.9,
+    "Ville Ottavainen": 0.92,
+    "Curtis Douglas": 0.91,
+    "Jacob Melanson": 0.92
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.6,
+  "jev": 0.5
+ }
+}

@@ -1,0 +1,133 @@
+{
+ "game": {
+  "gameId": 2026020002,
+  "kickoff": "2026-09-29T23:00:00Z",
+  "away": "Montréal Canadiens",
+  "home": "Toronto Maple Leafs",
+  "away_id": 8,
+  "home_id": 10,
+  "away_abbr": "MTL",
+  "home_abbr": "TOR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:02:28.178440+00:00",
+ "articles": [
+  {
+   "title": "Canadiens at Maple Leafs projected lineups",
+   "published": "2026-09-29T15:49:50.569Z",
+   "lineups": true
+  },
+  {
+   "title": "Maple Leafs visit Mayich family in Arizona, wear special T-shirts, hats",
+   "published": "2026-09-27T00:31:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Matheson fined maximum for roughing in Canadiens game",
+   "published": "2026-09-27T15:49:15.502Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs Sign Defenceman Nick Blankenburg",
+   "published": "2026-09-27T18:04:53.226Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens make roster moves following preseason finale",
+   "published": "2026-09-27T19:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes' bid for Stanley Cup repeat among top NHL storylines this season",
+   "published": "2026-09-28T04:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jakub Dobes",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Florian Xhekaj",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Adam Engstrom",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Kaiden Guhle",
+     "detail": "Injured (adductor)"
+    },
+    {
+     "player": "Oliver Kapanen",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canadiens open the season with a 0-0-0 record, relying on a projected lineup that includes Jakub Dobes as the starting goaltender. Key absences include injured defenseman Kaiden Guhle (adductor) and forward Oliver Kapanen (lower body), along with scratched players Florian Xhekaj and Adam Engstrom. The team recently assigned ten players to the Laval Rocket and placed nine others on waivers for AHL loan."
+  },
+  "home": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Bo Groulx",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nick Blankenburg",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Dakota Joshua",
+     "detail": "Injured (core)"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "Injured (undisclosed)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Kirill Marchenko",
+     "detail": "Participation uncertain pending immigration status resolution"
+    }
+   ],
+   "returning": [],
+   "summary": "The Maple Leafs also begin the season at 0-0-0, with Sergei Bobrovsky projected to start in goal. The lineup features rookie Gavin McKenna on his NHL debut, while Max Domi and Dakota Joshua are injured. Kirill Marchenko's status is uncertain due to immigration processing. The team recently signed Nick Blankenburg, though he is scratched for this game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jakub Dobes",
+   "p_starter": 0.85,
+   "announced": 0.97,
+   "p_out": {
+    "Florian Xhekaj": 0.95,
+    "Adam Engstrom": 0.95,
+    "Kaiden Guhle": 0.96,
+    "Oliver Kapanen": 0.52
+   }
+  },
+  "home": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Bo Groulx": 0.97,
+    "Nick Blankenburg": 0.97,
+    "Dakota Joshua": 0.95,
+    "Max Domi": 0.93,
+    "Kirill Marchenko": 0.25
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.4,
+  "jev": 0.6
+ }
+}

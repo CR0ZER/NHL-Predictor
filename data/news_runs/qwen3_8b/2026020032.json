@@ -1,0 +1,120 @@
+{
+ "game": {
+  "gameId": 2026020032,
+  "kickoff": "2026-10-04T01:00:00Z",
+  "away": "St. Louis Blues",
+  "home": "Colorado Avalanche",
+  "away_id": 19,
+  "home_id": 21,
+  "away_abbr": "STL",
+  "home_abbr": "COL"
+ },
+ "articles": [
+  {
+   "title": "Blues at Avalanche projected lineups",
+   "published": "2026-10-03T21:38:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Bednar signs four-year contract with Avalanche, runs through 2030-31",
+   "published": "2026-10-01T05:24:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Meet McTavish: the Blues new second-line center",
+   "published": "2026-10-01T16:05:49.758Z",
+   "lineups": false
+  },
+  {
+   "title": "Blues support fundraising effort to send 2014 AAA Blues to Quebec PeeWee tournament",
+   "published": "2026-10-01T16:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Enter to win a signed McTavish jersey and game-used stick!",
+   "published": "2026-10-01T17:12:55.65Z",
+   "lineups": false
+  },
+  {
+   "title": "Preview: Blues at Stars",
+   "published": "2026-10-02T14:37:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jordan Binnington",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Logan Mailloux",
+     "detail": "hand injury"
+    },
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Alexey Toropchenko",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Zach Dean",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Barron",
+     "detail": "scratched"
+    }
+   ],
+   "returning": [],
+   "summary": "The St. Louis Blues are coming off a 4-0 win against the Dallas Stars. They have several injured players, including Logan Mailloux, Tyler Tucker, and Alexey Toropchenko, and have scratched Zach Dean and Justin Barron. Mason McTavish has been added to the lineup as the new second-line center, and the team is looking to build on their strong start."
+  },
+  "home": {
+   "starting_goalie": "Noah Juulsen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Logan O’Connor",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Zachary L’Heureux",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Colorado Avalanche have confirmed their projected lineup, with Noah Juulsen as the starting goalie. They have two injured players, Logan O’Connor and Zachary L’Heureux, who are day-to-day. The team is led by coach Jared Bednar, who has signed a four-year contract through the 2030-31 season. The Avalanche are looking to continue their strong start with a 1-0-0 record."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jordan Binnington",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Logan Mailloux": 0.97,
+    "Tyler Tucker": 0.97,
+    "Alexey Toropchenko": 0.98,
+    "Zach Dean": 0.97,
+    "Justin Barron": 0.96
+   }
+  },
+  "home": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.99,
+   "announced": 0.89,
+   "p_out": {
+    "Logan O’Connor": 0.46,
+    "Zachary L’Heureux": 0.75
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 21.3,
+  "jev": 0.6
+ }
+}

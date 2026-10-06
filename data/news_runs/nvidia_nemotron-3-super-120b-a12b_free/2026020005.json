@@ -1,0 +1,117 @@
+{
+ "game": {
+  "gameId": 2026020005,
+  "kickoff": "2026-09-30T02:30:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "Vegas Golden Knights",
+  "away_id": 16,
+  "home_id": 54,
+  "away_abbr": "CHI",
+  "home_abbr": "VGK"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:02:58.845296+00:00",
+ "articles": [
+  {
+   "title": "Blackhawks at Golden Knights projected lineups",
+   "published": "2026-09-29T18:37:20.805Z",
+   "lineups": true
+  },
+  {
+   "title": "Golden Knights entering 10th season having made massive impact on city, NHL",
+   "published": "2026-09-27T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights Enter 10th Season Having Made Massive Impact",
+   "published": "2026-09-27T13:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Blackhawks Announce Training Camp Roster Moves",
+   "published": "2026-09-27T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Nazar hungry to help 'in-your-face' Blackhawks end six-year playoff drought",
+   "published": "2026-09-28T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Beasley Media Group Named Official Audio Partner of Vegas Golden Knights",
+   "published": "2026-09-28T18:09:03.887Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Ethan Del Mastro",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Kevin Korchinski",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Teuvo Teravainen",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blackhawks open the season without captain Connor Bedard, who is out with a shoulder injury expected to last until November. Frank Nazar is penciled in as the No. 1 center between Roman Kantserov and Patrick Kane. The team has also loaned Dillon Boucher and Drew Commesso to the AHL, reducing the training camp roster to 26 players."
+  },
+  "home": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Raphael Lavoie",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Dylan Coghlan",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights begin their 10th season with a projected lineup featuring Ivan Barbashev, Jack Eichel, and Mark Stone on the top line. Raphael Lavoie remains injured (undisclosed) and Dylan Coghlan is scratched. Trevor Connelly, the 2024 first-round pick, is expected to make his NHL debut."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Spencer Knight",
+   "p_starter": 1.0,
+   "announced": 0.95,
+   "p_out": {
+    "Connor Bedard": 0.98,
+    "Ethan Del Mastro": 0.97,
+    "Kevin Korchinski": 0.97,
+    "Teuvo Teravainen": 0.96
+   }
+  },
+  "home": {
+   "starter": "Carter Hart",
+   "p_starter": 1.0,
+   "announced": 0.93,
+   "p_out": {
+    "Raphael Lavoie": 0.92,
+    "Dylan Coghlan": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.7,
+  "jev": 0.5
+ }
+}

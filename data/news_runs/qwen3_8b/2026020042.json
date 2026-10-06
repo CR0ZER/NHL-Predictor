@@ -1,0 +1,139 @@
+{
+ "game": {
+  "gameId": 2026020042,
+  "kickoff": "2026-10-05T23:30:00Z",
+  "away": "Winnipeg Jets",
+  "home": "Pittsburgh Penguins",
+  "away_id": 52,
+  "home_id": 5,
+  "away_abbr": "WPG",
+  "home_abbr": "PIT"
+ },
+ "articles": [
+  {
+   "title": "GAMEDAY: Jets at Penguins",
+   "published": "2026-10-05T05:12:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Jets at Penguins projected lineups",
+   "published": "2026-10-05T16:17:21.064Z",
+   "lineups": true
+  },
+  {
+   "title": "Jets fall in OT to Bruins in home opener",
+   "published": "2026-10-03T02:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: 10.03.26 vs. Montreal Canadiens",
+   "published": "2026-10-03T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Penguins projected lineups",
+   "published": "2026-10-03T16:21:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Jets at Red Wings projected lineups",
+   "published": "2026-10-03T19:36:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Clay Stevenson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Elias Salomonsson",
+     "detail": "shoulder"
+    },
+    {
+     "player": "Walker Duehr",
+     "detail": "lower body"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "lower body"
+    },
+    {
+     "player": "Connor Hellebuyck",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Winnipeg Jets are coming off a 3-2 win over the Detroit Red Wings, with Clay Stevenson potentially making his NHL debut in net. The team has a strong power play, converting four of seven opportunities. Coach Scott Arniel hinted at possible lineup adjustments due to the busy schedule."
+  },
+  "home": {
+   "starting_goalie": "Sergei Murashov",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "lower body"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "upper body"
+    },
+    {
+     "player": "Blake Lizotte",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Kaiden Guhle",
+     "detail": "adductor"
+    },
+    {
+     "player": "Oliver Kapanen",
+     "detail": "lower body"
+    }
+   ],
+   "returning": [
+    "Filip Hallander",
+    "Ville Koivunen",
+    "Andrei Kuzmenko"
+   ],
+   "summary": "The Pittsburgh Penguins are off to a strong start with a 2-0-0 record. They are a deep team with strong transition play and veteran leadership. Sergei Murashov is set to start in goal, and Andrei Kuzmenko is making his debut after a leave of absence. The team is looking to continue its strong start against the Jets."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Clay Stevenson",
+   "p_starter": 0.95,
+   "announced": 0.86,
+   "p_out": {
+    "Elias Salomonsson": 0.97,
+    "Walker Duehr": 0.96,
+    "Garrett Brown": 0.97,
+    "Connor Hellebuyck": 0.98
+   }
+  },
+  "home": {
+   "starter": "Sergei Murashov",
+   "p_starter": 0.96,
+   "announced": 0.9,
+   "p_out": {
+    "Justin Brazeau": 0.96,
+    "Ryan Graves": 0.95,
+    "Bryan Rust": 0.95,
+    "Blake Lizotte": 0.68,
+    "Kaiden Guhle": 0.1,
+    "Oliver Kapanen": 0.09
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 19.6,
+  "jev": 0.6
+ }
+}

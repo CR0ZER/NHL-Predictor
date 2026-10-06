@@ -1,0 +1,173 @@
+{
+ "game": {
+  "gameId": 2026020026,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Montréal Canadiens",
+  "home": "Pittsburgh Penguins",
+  "away_id": 8,
+  "home_id": 5,
+  "away_abbr": "MTL",
+  "home_abbr": "PIT"
+ },
+ "articles": [
+  {
+   "title": "Canadiens at Penguins projected lineups",
+   "published": "2026-10-03T16:21:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Penguins get push from young depth in season-opening win against Flyers",
+   "published": "2026-10-01T04:40:22.279Z",
+   "lineups": false
+  },
+  {
+   "title": "Musings: Penguins Dominate Flyers in Season Opener",
+   "published": "2026-10-01T05:45:31.37Z",
+   "lineups": false
+  },
+  {
+   "title": "Ice Meets Fire",
+   "published": "2026-10-01T17:50:37.223Z",
+   "lineups": false
+  },
+  {
+   "title": "Lines and defense pairings at practice – Oct. 1",
+   "published": "2026-10-01T20:25:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Lines and defense pairings at practice – Oct. 2",
+   "published": "2026-10-02T18:06:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Samuel Montembeault",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Florian Xhekaj",
+     "detail": "scratched"
+    },
+    {
+     "player": "Adam Engstrom",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kaiden Guhle",
+     "detail": "injured (adductor)"
+    },
+    {
+     "player": "Oliver Kapanen",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Chris Kreider",
+    "Nick Suzuki",
+    "Cole Caufield",
+    "Alexandre Texier",
+    "Phillip Danault",
+    "Kirby Dach",
+    "Zachary Bolduc",
+    "Jake Evans",
+    "Josh Anderson",
+    "Mike Matheson",
+    "Noah Dobson",
+    "Lane Hutson",
+    "Alexandre Carrier",
+    "Jayden Struble",
+    "Arber Xhekaj",
+    "Jakub Dobes"
+   ],
+   "summary": "The Canadiens are returning to the ice with a lineup largely unchanged from their season opener against the Toronto Maple Leafs, where they secured a 3-2 victory. Key players like Chris Kreider and Nick Suzuki are back in the lineup, while several scratches and injuries are noted, including Kaiden Guhle and Oliver Kapanen."
+  },
+  "home": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Ilya Solovyov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Brazeau",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "injured (knee)"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Blake Lizotte",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Blake Lizotte",
+     "detail": "status uncertain, no decision made"
+    }
+   ],
+   "returning": [
+    "Sidney Crosby",
+    "Evgeni Malkin",
+    "Kris Letang",
+    "Erik Karlsson",
+    "Nick Robertson",
+    "Hendrix Lapierre",
+    "Filip Hallander",
+    "Connor Dewar",
+    "Ben Kindel",
+    "Andrei Kuzmenko",
+    "Declan Carlile",
+    "Trevor van Riemsdyk",
+    "Samuel Girard",
+    "Kaedan Korczak",
+    "Egor Chinakhov",
+    "Ville Koivunen"
+   ],
+   "summary": "The Penguins are entering the game with a strong lineup that includes key players like Sidney Crosby and Evgeni Malkin, as well as new additions such as Nick Robertson and Hendrix Lapierre. Several players are returning from injuries, including Ben Kindel, while Blake Lizotte's status remains uncertain. The team showed strong form in their season opener with a 7-0 win against the Flyers."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Samuel Montembeault",
+   "p_starter": 0.78,
+   "announced": 0.97,
+   "p_out": {
+    "Florian Xhekaj": 0.97,
+    "Adam Engstrom": 0.97,
+    "Kaiden Guhle": 0.98,
+    "Oliver Kapanen": 0.98
+   }
+  },
+  "home": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Ilya Solovyov": 0.97,
+    "Elmer Soderblom": 0.97,
+    "Justin Brazeau": 0.95,
+    "Ryan Graves": 0.97,
+    "Bryan Rust": 0.78,
+    "Blake Lizotte": 0.37
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 30.5,
+  "jev": 0.6
+ }
+}

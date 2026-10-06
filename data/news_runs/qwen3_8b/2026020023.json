@@ -1,0 +1,116 @@
+{
+ "game": {
+  "gameId": 2026020023,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Ottawa Senators",
+  "home": "Toronto Maple Leafs",
+  "away_id": 9,
+  "home_id": 10,
+  "away_abbr": "OTT",
+  "home_abbr": "TOR"
+ },
+ "articles": [
+  {
+   "title": "Senators at Maple Leafs projected lineups",
+   "published": "2026-10-03T16:14:00Z",
+   "lineups": true
+  },
+  {
+   "title": "McKenna, Maple Leafs, show support on National Day for Truth and Reconciliation",
+   "published": "2026-10-01T00:14:47.584Z",
+   "lineups": false
+  },
+  {
+   "title": "How Brad Mitchell’s role with the Sens “snowballed” into travelling EBUG",
+   "published": "2026-10-01T19:00:00.573Z",
+   "lineups": false
+  },
+  {
+   "title": "Marchenko wasting no time 'getting comfortable' with Maple Leafs",
+   "published": "2026-10-02T19:58:15.929Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: October 2 ",
+   "published": "2026-10-02T20:23:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs assist community in Thanksgiving visit to Covenant House Toronto",
+   "published": "2026-10-03T00:27:08.846Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Artem Zub",
+     "detail": "knee"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "upper body"
+    },
+    {
+     "player": "Ridly Greig",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Jake Sanderson"
+   ],
+   "summary": "The Ottawa Senators are looking to start their season with a win against the Toronto Maple Leafs. Linus Ullmark is confirmed to start in goal, while several key players are out due to injury or suspension. Jake Sanderson is returning to the lineup after missing part of training camp due to an undisclosed injury."
+  },
+  "home": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Dakota Joshua",
+     "detail": "core"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "undisclosed"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Toronto Maple Leafs are coming off a 2-1 win against the New York Islanders. Sergei Bobrovsky is confirmed to start in goal, and the team will dress the same 18 skaters they used in the previous game. Several players are out due to injury, but there are no notable doubtful players."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Linus Ullmark",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Artem Zub": 0.98,
+    "Kurtis MacDermid": 0.98,
+    "Andre Burakovsky": 0.98,
+    "Ridly Greig": 0.98
+   }
+  },
+  "home": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Dakota Joshua": 0.97,
+    "Max Domi": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 16.2,
+  "jev": 0.5
+ }
+}

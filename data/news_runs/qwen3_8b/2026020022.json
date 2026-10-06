@@ -1,0 +1,139 @@
+{
+ "game": {
+  "gameId": 2026020022,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "Buffalo Sabres",
+  "away_id": 16,
+  "home_id": 7,
+  "away_abbr": "CHI",
+  "home_abbr": "BUF"
+ },
+ "articles": [
+  {
+   "title": "Blackhawks at Sabres projected lineups",
+   "published": "2026-10-03T16:50:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Frondell aiming ‘to be even better’ for Blackhawks in second season",
+   "published": "2026-10-01T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Blue Jackets | How to watch, lineup notes, and storylines",
+   "published": "2026-10-01T12:32:36.682Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Blackhawks Continue Season-Opening Road Trip Against Mammoth",
+   "published": "2026-10-01T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘He’s just getting started’ | The making of Noah Östlund",
+   "published": "2026-10-01T15:01:57.752Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres sign Crevier to 4-year extension",
+   "published": "2026-10-01T15:10:24.49Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "shoulder"
+    },
+    {
+     "player": "Andrew Mangiapane",
+     "detail": "lower body"
+    },
+    {
+     "player": "Bowen Byram",
+     "detail": "tending to a family matter"
+    },
+    {
+     "player": "Sam Rinzel",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Kevin Korchinski",
+    "Ethan Del Mastro"
+   ],
+   "summary": "The Chicago Blackhawks are coming off a 0-2-0 start to the season, with key players like Connor Bedard and Andrew Mangiapane sidelined. Anton Frondell, a rookie, is expected to continue his development, and the team is relying on young talent and depth. The lineup includes several returning players, including Kevin Korchinski and Ethan Del Mastro, who are making their season debuts."
+  },
+  "home": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body"
+    },
+    {
+     "player": "Jason Zucker",
+     "detail": "sports hernia"
+    },
+    {
+     "player": "Tyson Kozak",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "scratched"
+    },
+    {
+     "player": "Zach Metsa",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Olen Zellweger"
+   ],
+   "summary": "The Buffalo Sabres are also starting the season with a 0-1-0 record, and several key players are out due to injury or scratches. Olen Zellweger is returning after recovering from a concussion. The team is looking to build on their playoff success from last season and is relying on young talent like Jiri Kulich, Konsta Helenius, and Noah Ostlund. The lineup includes several new additions, including Louis Crevier, who is making his season debut."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Spencer Knight",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Connor Bedard": 0.98,
+    "Andrew Mangiapane": 0.98,
+    "Bowen Byram": 0.98,
+    "Sam Rinzel": 0.97
+   }
+  },
+  "home": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "Alex Lyon": 0.97,
+    "Conor Timmins": 0.97,
+    "Jason Zucker": 0.97,
+    "Tyson Kozak": 0.97,
+    "Justin Danforth": 0.96,
+    "Zach Metsa": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 24.9,
+  "jev": 0.5
+ }
+}

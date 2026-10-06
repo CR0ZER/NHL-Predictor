@@ -1,0 +1,107 @@
+{
+ "game": {
+  "gameId": 2026020031,
+  "kickoff": "2026-10-04T00:00:00Z",
+  "away": "Boston Bruins",
+  "home": "Minnesota Wild",
+  "away_id": 6,
+  "home_id": 30,
+  "away_abbr": "BOS",
+  "home_abbr": "MIN"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:09.044526+00:00",
+ "articles": [
+  {
+   "title": "Bruins at Wild projected lineups",
+   "published": "2026-10-03T17:04:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Wild on West 7th Is Back: Season Premiere",
+   "published": "2026-10-01T01:59:32.597Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Wild at Predators",
+   "published": "2026-10-01T02:01:25.283Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Wrap Up: Minnesota vs. Nashville",
+   "published": "2026-10-01T16:49:25.127Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Predators projected lineups",
+   "published": "2026-10-01T17:15:48.09Z",
+   "lineups": false
+  },
+  {
+   "title": "‘It’s Just a Dream Come True’ for Jeannot to Join Boston’s Leadership Group",
+   "published": "2026-10-01T19:01:57.573Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Michael DiPietro",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Matthew Poitras",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Charlie McAvoy",
+     "detail": "Suspended (serving third of six-game suspension for slashing)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins (2-0-0) are coming off a 4-3 overtime win at the Winnipeg Jets and did not hold a morning skate. Jeremy Swayman made 30 saves in that game, but Michael DiPietro is projected to start in net. Charlie McAvoy remains suspended, and Matthew Poitras is injured. Tanner Jeannot was named an alternate captain ahead of the season."
+  },
+  "home": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "Injured (skull fracture, out indefinitely after surgery)"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "Injured (lower body, rehabbing offseason hip surgery)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Wild (1-0-0) opened the season with a 3-1 win at the Nashville Predators and are expected to dress the same lineup. Jesper Wallstedt is projected to start in net while Filip Gustavsson continues rehab. Brock Faber is out indefinitely after skull fracture surgery. The team is counting on young Russians Danila Yurov and Maxim Shabanov to support Kirill Kaprizov on the top line."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Michael DiPietro",
+   "p_starter": 0.98,
+   "announced": 0.81,
+   "p_out": {
+    "Matthew Poitras": 0.97,
+    "Charlie McAvoy": 0.99
+   }
+  },
+  "home": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.95,
+   "p_out": {
+    "Brock Faber": 0.98,
+    "Filip Gustavsson": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.2,
+  "jev": 0.5
+ }
+}

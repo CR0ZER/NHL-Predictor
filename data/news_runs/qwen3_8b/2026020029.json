@@ -1,0 +1,162 @@
+{
+ "game": {
+  "gameId": 2026020029,
+  "kickoff": "2026-10-03T23:30:00Z",
+  "away": "New Jersey Devils",
+  "home": "New York Islanders",
+  "away_id": 1,
+  "home_id": 2,
+  "away_abbr": "NJD",
+  "home_abbr": "NYI"
+ },
+ "articles": [
+  {
+   "title": "Game Preview: Islanders vs Devils",
+   "published": "2026-10-03T04:00:49.822Z",
+   "lineups": true
+  },
+  {
+   "title": "Devils at Islanders projected lineups",
+   "published": "2026-10-03T16:10:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Takeaways: Islanders Drop Season Opener to Maple Leafs 2-1",
+   "published": "2026-10-01T03:22:15.694Z",
+   "lineups": false
+  },
+  {
+   "title": "With Allen's help, Daws 'ready to go' in crease for Devils",
+   "published": "2026-10-01T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "The Decade Men ",
+   "published": "2026-10-01T10:46:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers at Devils projected lineups",
+   "published": "2026-10-01T15:58:54.897Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "injured (knee)"
+    },
+    {
+     "player": "Kyle MacLean",
+     "detail": "scratched"
+    },
+    {
+     "player": "Scott Mayfield",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matt Kessel",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Emil Heineman",
+    "Bo Horvat",
+    "Kyle Palmieri",
+    "Simon Holmström",
+    "JG Pageau",
+    "Anthony Duclair",
+    "Victor Eklund",
+    "Cal Ritchie",
+    "Brayden Schenn",
+    "Ondřej Palát",
+    "Casey Cizikas",
+    "Matias Maccelli",
+    "Adam Pelech",
+    "Matthew Schaefer",
+    "Alexander Romanov",
+    "Ryan Pulock",
+    "Logan Stanley",
+    "Tony DeAngelo"
+   ],
+   "summary": "The New York Islanders are coming off a 2-1 loss to the Toronto Maple Leafs in their season opener. They are looking to build on their strong performance against the Devils last season, where they swept the series and went 7-0-1 in their last eight games against New Jersey. Head Coach Pete DeBoer is experimenting with line combinations to find chemistry, and Ilya Sorokin is confirmed to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Nico Daws",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Jesper Boqvist",
+     "detail": "scratched"
+    },
+    {
+     "player": "Remi Poirier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "injured (knee)"
+    },
+    {
+     "player": "Connor Brown",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Timo Meier",
+    "Nico Hischier",
+    "Luke Evangelista",
+    "Jesper Bratt",
+    "Jack Hughes",
+    "Anthony Mantha",
+    "Arseny Gritsyuk",
+    "Evan Rodrigues",
+    "Dawson Mercer",
+    "Amadeus Lombardi",
+    "Cody Glass",
+    "Stefan Noesen",
+    "Luke Hughes",
+    "Brett Pesce",
+    "Jonas Siegenthaler",
+    "Dougie Hamilton",
+    "Brenden Dillon",
+    "Declan Chisholm"
+   ],
+   "summary": "The New Jersey Devils are coming off a 3-2 overtime win against the Philadelphia Flyers in their season opener. Nico Daws is confirmed to start in goal, having received support from veteran Jake Allen, who will serve as his backup. The Devils are looking to build on their strong relationship between forwards Jesper Bratt and Nico Hischier, who are entering their 10th NHL season together. They are also looking to improve on their performance against the Islanders, who swept the series last season."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Nico Daws",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Mathew Barzal": 0.81,
+    "Kyle MacLean": 0.65,
+    "Scott Mayfield": 0.61,
+    "Matt Kessel": 0.59
+   }
+  },
+  "home": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Jesper Boqvist": 0.62,
+    "Remi Poirier": 0.61,
+    "Johnathan Kovacevic": 0.71,
+    "Connor Brown": 0.63
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 33.7,
+  "jev": 0.6
+ }
+}

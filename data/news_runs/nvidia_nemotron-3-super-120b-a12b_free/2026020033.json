@@ -1,0 +1,109 @@
+{
+ "game": {
+  "gameId": 2026020033,
+  "kickoff": "2026-10-04T02:00:00Z",
+  "away": "Calgary Flames",
+  "home": "Vancouver Canucks",
+  "away_id": 20,
+  "home_id": 23,
+  "away_abbr": "CGY",
+  "home_abbr": "VAN"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:26.850528+00:00",
+ "articles": [
+  {
+   "title": "Flames at Canucks projected lineups",
+   "published": "2026-10-03T19:45:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Notes: Canucks vs. Oilers",
+   "published": "2026-10-01T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames vs. Kraken",
+   "published": "2026-10-01T13:30:43.331Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup - Flames vs. Kraken",
+   "published": "2026-10-01T17:31:45.588Z",
+   "lineups": false
+  },
+  {
+   "title": "'Everyone In This Room Is Excited'",
+   "published": "2026-10-01T17:39:05.645Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken at Flames projected lineups",
+   "published": "2026-10-01T18:39:47.733Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Devin Cooley",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "Injured (hip)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames are projected to start Devin Cooley in goal for this game, with Dustin Wolf as backup. Jonathan Huberdeau is out with a hip injury, and Connor Zary, Brayden Pachal, and Yan Kuznetsov are healthy scratches. The team is beginning its 84-game regular season and Farewell Season in the Saddledome, with excitement building around the home opener."
+  },
+  "home": {
+   "starting_goalie": "Leevi Merilainen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jake DeBrusk",
+     "detail": "Injured (illness)"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "Injured (shoulder)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Aatu Raty\", \"detail\": \"Returns to lineup after two games as a healthy scratch\"}, {\"player\": \"Paul Cotter\", \"detail\": \"Moves up from fourth line to replace Rossi on first line\"}], "
+   ],
+   "summary": "The Canucks are projected to start Leevi Merilainen in goal, with Kevin Lankinen as backup. Jake DeBrusk is out due to illness, while Thatcher Demko (hip) and Filip Chytil (shoulder) are injured. Aatu Raty returns to the lineup after two games as a healthy scratch, and Paul Cotter moves up to the first line to replace Marco Rossi, who shifts to left wing. Merilainen is set for his first start since being claimed off waivers from Ottawa on Oct. 25."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.61,
+   "announced": 0.84,
+   "p_out": {
+    "Jonathan Huberdeau": 0.97
+   }
+  },
+  "home": {
+   "starter": "Leevi Meriläinen",
+   "p_starter": 0.9,
+   "announced": 0.98,
+   "p_out": {
+    "Jake DeBrusk": 0.98,
+    "Thatcher Demko": 0.98,
+    "Filip Chytil": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.2,
+  "jev": 0.4
+ }
+}

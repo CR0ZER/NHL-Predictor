@@ -1,0 +1,149 @@
+{
+ "game": {
+  "gameId": 2026020020,
+  "kickoff": "2026-10-03T01:00:00Z",
+  "away": "St. Louis Blues",
+  "home": "Dallas Stars",
+  "away_id": 19,
+  "home_id": 25,
+  "away_abbr": "STL",
+  "home_abbr": "DAL"
+ },
+ "articles": [
+  {
+   "title": "Blues at Stars projected lineups",
+   "published": "2026-10-02T17:36:12.634Z",
+   "lineups": true
+  },
+  {
+   "title": "Dallas Stars sign Casey DeSmith to a two-year, $5 million contract extension",
+   "published": "2026-09-30T01:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blues Home Opener video 'mirrors' St. Louis’ grit ",
+   "published": "2026-09-30T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Charles Wesley Godwin to headline Dallas Stars Hall of Fame Induction Gala",
+   "published": "2026-09-30T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "DeSmith signs two-year, $5 million contract with Stars",
+   "published": "2026-09-30T17:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Tucker undergoes surgery on right knee",
+   "published": "2026-09-30T19:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jordan Binnington",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Logan Mailloux",
+     "detail": "injured (hand)"
+    },
+    {
+     "player": "Tyler Tucker",
+     "detail": "injured (knee)"
+    },
+    {
+     "player": "Zach Dean",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Barron",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Philip Broberg",
+    "Adam Jiricek",
+    "Cam Fowler",
+    "Brandon Carlo",
+    "Joel Hofer"
+   ],
+   "summary": "The St. Louis Blues are starting Jordan Binnington in net for their first game of the season. The team has several scratches and injuries, including Tyler Tucker undergoing knee surgery. Adam Jiricek is making his NHL debut, and the team is looking to build on their recent offseason additions."
+  },
+  "home": {
+   "starting_goalie": "Jake Oettinger",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Matt Duchene",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Colin Blackwell",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kyle Capobianco",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Jason Robertson",
+    "Roope Hintz",
+    "Tyler Seguin",
+    "Justin Hryckowian",
+    "Wyatt Johnston",
+    "Mikko Rantanen",
+    "Sam Steel",
+    "Arttu Hyry",
+    "Jamie Benn",
+    "Oskar Bäck",
+    "Radek Faksa",
+    "Joel Kiviranta",
+    "Thomas Harley",
+    "Miro Heiskanen",
+    "Esa Lindell",
+    "Nils Lundkvist",
+    "Lian Bichsel",
+    "Tyler Myers"
+   ],
+   "summary": "The Dallas Stars are starting Jake Oettinger in net for their season opener. Matt Duchene is out due to a lower-body injury, and there are a few scratches. The team is looking to build on their recent signings and continue their strong performance from the previous season."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jordan Binnington",
+   "p_starter": 0.56,
+   "announced": 0.98,
+   "p_out": {
+    "Logan Mailloux": 0.97,
+    "Tyler Tucker": 0.97,
+    "Zach Dean": 0.97,
+    "Dillon Dube": 0.97,
+    "Justin Barron": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jake Oettinger",
+   "p_starter": 0.97,
+   "announced": 0.96,
+   "p_out": {
+    "Matt Duchene": 0.98,
+    "Colin Blackwell": 0.97,
+    "Kyle Capobianco": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 27.0,
+  "jev": 0.6
+ }
+}

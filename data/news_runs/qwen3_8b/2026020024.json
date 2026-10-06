@@ -1,0 +1,158 @@
+{
+ "game": {
+  "gameId": 2026020024,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Washington Capitals",
+  "home": "Tampa Bay Lightning",
+  "away_id": 15,
+  "home_id": 14,
+  "away_abbr": "WSH",
+  "home_abbr": "TBL"
+ },
+ "articles": [
+  {
+   "title": "Capitals at Lightning projected lineups",
+   "published": "2026-10-03T16:41:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Capitals Announce Fan Initiatives Surrounding Capitals Opening Night Presented by Vanda Pharmaceuticals",
+   "published": "2026-10-01T14:56:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘Strikes of Kindness’ delivers $300,000 to Tampa Bay non-profits",
+   "published": "2026-10-01T15:50:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Lightning at Rangers projected lineups",
+   "published": "2026-10-01T16:43:43.134Z",
+   "lineups": false
+  },
+  {
+   "title": "Excitable Boys",
+   "published": "2026-10-01T20:38:55.285Z",
+   "lineups": false
+  },
+  {
+   "title": "Caps Kick Off '26-27 Campaign in Carolina",
+   "published": "2026-10-01T22:53:55.582Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Charlie Lindgren",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Charle-Edouard D'Astous",
+     "detail": "scratched"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Timothy Liljegren",
+    "Jordan Kyrou",
+    "Alex Tuch",
+    "Boone Jenner",
+    "Vincent Desharnais",
+    "Dylan Strome",
+    "Justin Sourdif",
+    "Cole Hutson",
+    "Ilya Protas"
+   ],
+   "summary": "The Washington Capitals are looking to start their 2026-27 season on a strong note with a deep and versatile roster. They have added several new players, including Jordan Kyrou and Alex Tuch, and have retained key veterans like Alex Ovechkin. Charlie Lindgren is expected to start in goal after a strong performance in a recent game."
+  },
+  "home": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Dominic James",
+     "detail": "hand"
+    },
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Emil Lilleberg",
+     "detail": "scratched"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Ilya Mikheyev",
+    "Brayden Point",
+    "Nikita Kucherov",
+    "Jake Guentzel",
+    "Anthony Cirelli",
+    "Brandon Hagel",
+    "Jeffrey Viel",
+    "Zemgus Girgensons",
+    "Pontus Holmberg",
+    "Gage Goncalves",
+    "Jansen Harkins",
+    "Conor Geekie",
+    "J.J. Moser",
+    "John Carlson",
+    "Ryan McDonagh",
+    "Erik Cernak",
+    "Victor Hedman",
+    "Dennis Hildeby"
+   ],
+   "summary": "The Tampa Bay Lightning are preparing for their 2026-27 season with a strong lineup and a focus on community engagement. Andrei Vasilevskiy is expected to start in goal, and Victor Hedman is returning to the lineup after a leave of absence for mental health reasons. The team has also made significant community contributions through their 'Strikes of Kindness' initiative."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Charlie Lindgren",
+   "p_starter": 0.97,
+   "announced": 0.97,
+   "p_out": {
+    "Rasmus Sandin": 0.95,
+    "Scott Sabourin": 0.56,
+    "Charle-Edouard D'Astous": 0.56,
+    "Max Crozier": 0.58
+   }
+  },
+  "home": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.98,
+   "announced": 0.95,
+   "p_out": {
+    "Dominic James": 0.94,
+    "Yanni Gourde": 0.8,
+    "Scott Sabourin": 0.96,
+    "Emil Lilleberg": 0.11,
+    "Max Crozier": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 28.9,
+  "jev": 0.5
+ }
+}

@@ -57,7 +57,9 @@ def fixtures(start, end, refresh=False):
 
 def fetch(start, end, refresh=False):
     (DIR / "hist").mkdir(parents=True, exist_ok=True)
-    todo = [f for f in fixtures(start, end, refresh) if f["statusId"] == 2 and not (DIR / "hist" / f"{f['fixtureId']}.json").exists()]
+    done = set(pd.read_csv(CLOSING, usecols=["fixtureId"])["fixtureId"]) if CLOSING.exists() else set()  # déjà résumés
+    todo = [f for f in fixtures(start, end, refresh) if f["statusId"] == 2 and f["fixtureId"] not in done
+            and not (DIR / "hist" / f"{f['fixtureId']}.json").exists()]
     for i, f in enumerate(todo):
         (DIR / "hist" / f"{f['fixtureId']}.json").write_text(json.dumps(api("historical-odds", fixtureId=f["fixtureId"],
                                                                             bookmakers=BOOKS)))

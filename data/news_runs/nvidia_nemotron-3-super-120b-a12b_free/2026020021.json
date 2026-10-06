@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020021,
+  "kickoff": "2026-10-03T02:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "Vegas Golden Knights",
+  "away_id": 24,
+  "home_id": 54,
+  "away_abbr": "ANA",
+  "home_abbr": "VGK"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:05:02.796475+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Golden Knights projected lineups",
+   "published": "2026-10-02T19:13:55.226Z",
+   "lineups": true
+  },
+  {
+   "title": "Ducks Announce Roster Moves",
+   "published": "2026-09-30T15:31:47.811Z",
+   "lineups": false
+  },
+  {
+   "title": "Lawless: Area Code Game",
+   "published": "2026-09-30T18:55:36.943Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights Launch OneRealm Initiative to Connect with AANHPI Communities",
+   "published": "2026-09-30T19:54:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Lawless: Karlsson Contract Hits All The Right Notes",
+   "published": "2026-09-30T19:57:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights Sign William Karlsson to Two-Year Contract Extension",
+   "published": "2026-09-30T19:58:19.777Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Drew Helleson",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Sam Colangelo",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nikita Klepov",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nick Jensen",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks begin their 2026-27 season on the road against Vegas with a 0-0-0 record. They will rely on Lukas Dostal as their projected starting goaltender, with Ville Husso as backup. Key absences include injured defenders Drew Helleson and Ian Moore, plus forward Troy Terry on long-term IR, while several players are scratched from the lineup."
+  },
+  "home": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Coghlan",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Raphael Lavoie",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights open their season with a 1-0-0 record after a 5-2 win over Chicago. Carter Hart is projected to start in goal, backed up by Adin Hill. The team has no injured players and will likely dress the same 18 skaters from their season opener, with only minor scratches on defense."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Lukas Dostal",
+   "p_starter": 1.0,
+   "announced": 0.89,
+   "p_out": {
+    "Drew Helleson": 0.98,
+    "Ian Moore": 0.97,
+    "Troy Terry": 0.97,
+    "Sam Colangelo": 0.96,
+    "Nikita Klepov": 0.96,
+    "Nick Jensen": 0.96
+   }
+  },
+  "home": {
+   "starter": "Carter Hart",
+   "p_starter": 0.97,
+   "announced": 0.89,
+   "p_out": {
+    "Dylan Coghlan": 0.96,
+    "Raphael Lavoie": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.6,
+  "jev": 0.5
+ }
+}

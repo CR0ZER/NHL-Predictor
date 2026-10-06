@@ -1,0 +1,162 @@
+{
+ "game": {
+  "gameId": 2026020011,
+  "kickoff": "2026-10-01T23:00:00Z",
+  "away": "Buffalo Sabres",
+  "home": "Columbus Blue Jackets",
+  "away_id": 7,
+  "home_id": 29,
+  "away_abbr": "BUF",
+  "home_abbr": "CBJ"
+ },
+ "articles": [
+  {
+   "title": "Sabres at Blue Jackets projected lineups",
+   "published": "2026-10-01T16:47:54.39Z",
+   "lineups": true
+  },
+  {
+   "title": "Blue Jackets announce 2026-27 season-opening roster",
+   "published": "2026-09-28T23:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Marchenko traded to Maple Leafs from Blue Jackets, signs six-year deal",
+   "published": "2026-09-29T16:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Home Opener presented by KeyBank | Party in the Plaza, Blue and Gold Carpet details and more ",
+   "published": "2026-09-29T16:50:11.7Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres’ forward lines take shape as Krebs, Norris swap places",
+   "published": "2026-09-29T17:41:40.332Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets sign defenseman Carson Soucy to new contract",
+   "published": "2026-09-29T18:25:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Olen Zellweger",
+     "detail": "concussion"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body"
+    },
+    {
+     "player": "Jason Zucker",
+     "detail": "sports hernia"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Peyton Krebs",
+    "Josh Norris",
+    "Zach Benson",
+    "Noah Ostlund",
+    "Jack Quinn",
+    "Ryan McLeod",
+    "Konsta Helenius",
+    "Jiri Kulich",
+    "Sam Carrick",
+    "Beck Malenstyn",
+    "Mattias Samuelsson",
+    "Rasmus Dahlin",
+    "Owen Power",
+    "Louis Crevier",
+    "Matt Grzelcyk",
+    "Zach Metsa",
+    "Colton Ellis"
+   ],
+   "summary": "The Buffalo Sabres are entering their first game of the 2026-27 season with a mix of returning players and some lineup changes. Peyton Krebs and Josh Norris have swapped lines, with Krebs likely to start in a middle-six role. Several key players are out due to injuries, including Olen Zellweger and Conor Timmins, while others like Alex Lyon are expected to return soon."
+  },
+  "home": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Dante Fabbro",
+     "detail": "broken hand"
+    },
+    {
+     "player": "Ivan Provorov",
+     "detail": "lower body"
+    },
+    {
+     "player": "Damon Severson",
+     "detail": "shoulder"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Emil Andrae",
+     "detail": "week to week"
+    }
+   ],
+   "returning": [
+    "Matthew Knies",
+    "Adam Fantilli",
+    "Valeri Nichushkin",
+    "Sean Monahan",
+    "Mathieu Olivier",
+    "Cole Sillinger",
+    "Charlie Coyle",
+    "Danton Heinen",
+    "Conor Garland",
+    "Ryan Lomberg",
+    "Zach Werenski",
+    "Jake Christianen",
+    "Erik Gudbranson"
+   ],
+   "summary": "The Columbus Blue Jackets are starting their 2026-27 season with Cam Talbot in net. Several key players are out due to injuries, including Dante Fabbro and Ivan Provorov, who are expected to be week to week. The team has also made some roster changes, including the trade of Kirill Marchenko to the Maple Leafs and the return of Matthew Knies from the Maple Leafs."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Olen Zellweger": 0.87,
+    "Conor Timmins": 0.95,
+    "Alex Lyon": 0.95,
+    "Jason Zucker": 0.96
+   }
+  },
+  "home": {
+   "starter": "Cam Talbot",
+   "p_starter": 0.48,
+   "announced": 0.76,
+   "p_out": {
+    "Dante Fabbro": 0.95,
+    "Ivan Provorov": 0.93,
+    "Damon Severson": 0.9,
+    "Isac Lundestrom": 0.94,
+    "Emil Andrae": 0.14
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 31.7,
+  "jev": 0.5
+ }
+}

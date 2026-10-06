@@ -249,7 +249,7 @@ def predictions(day, use_news=True, progress=print):
         return pd.DataFrame()
     chain = use_news and news.ready()
     if use_news and not chain:
-        progress("Ollama (qwen3:8b) ou Jev indisponible : gardien deviné, sans absences.")
+        progress("Modèle de langage (Ollama ou OpenRouter) ou Jev indisponible : gardien deviné, sans absences.")
     client, news_ok = (TypeSafeClient() if chain else None), {}
     sk = players()
     ppg_now = sk[sk["gameDate"] < pd.Timestamp(day)].groupby("playerId")["ppg"].last()

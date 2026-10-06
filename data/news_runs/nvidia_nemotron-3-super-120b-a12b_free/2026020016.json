@@ -1,0 +1,133 @@
+{
+ "game": {
+  "gameId": 2026020016,
+  "kickoff": "2026-10-02T02:00:00Z",
+  "away": "Florida Panthers",
+  "home": "San Jose Sharks",
+  "away_id": 13,
+  "home_id": 28,
+  "away_abbr": "FLA",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:04:30.472403+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Sharks projected lineups",
+   "published": "2026-10-01T19:54:30.518Z",
+   "lineups": true
+  },
+  {
+   "title": "Preview: Panthers battle defending champion Hurricanes in season opener",
+   "published": "2026-09-29T16:27:50.679Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers look like contenders again in impressive opening win",
+   "published": "2026-09-30T02:34:39.648Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers look like contenders again in impressive opening win",
+   "published": "2026-09-30T02:34:39.648Z",
+   "lineups": false
+  },
+  {
+   "title": "Markstrom blanks Hurricanes in first start for Panthers since 2014",
+   "published": "2026-09-30T03:24:18.989Z",
+   "lineups": false
+  },
+  {
+   "title": "Celebrini, Bedard not too young to captain Sharks, Blackhawks",
+   "published": "2026-09-30T04:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Brad Marchand",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Uvis Balinskis",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Aleksander Barkov (returned from knee injury, played in season opener)",
+    ": Brady Tkachuk (debuted as Panther in season opener)",
+    ": Jacob Markstrom (returned to Panthers, started season opener)",
+    ": Radko Gudas (returned to Panthers, played in season opener)",
+    ": Lars Eller (signed as free agent, debuted as Panther in season opener)",
+    ": Garnet Hathaway (signed as free agent, debuted as Panther in season opener)",
+    ": Bokondji Imama (signed as free agent, debuted as Panther in season opener)"
+   ],
+   "summary": "The Florida Panthers are coming off a 1-0 overtime win over the Carolina Hurricanes in their season opener, where Jacob Markstrom recorded a shutout and Aleksander Barkov returned from a major knee injury. Brady Tkachuk made his Panthers debut alongside his brother Matthew. The team will be without injured forwards Brad Marchand (lower body) and Jonah Gadjovich (upper body), and scratched defenseman Uvis Balinskis. Marchand participated in practice and is expected to return closer to the end of the month."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ty Dellandrea",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Brett Leason",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Sam Dickinson",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "Injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Macklin Celebrini (named Sharks captain, youngest in franchise history)",
+    ": Stenberg (expected to make NHL debut)"
+   ],
+   "summary": "The San Jose Sharks are projected to start Yaroslav Askarov in goal for their season opener against the Panthers. The Sharks will be without scratched forwards Ty Dellandrea, Brett Leason, and Sam Dickinson, along with injured forward Adam Gaudette (upper body). Rookie Igor Chernyshov is expected to play, and Ivar Stenberg is anticipated to make his NHL debut. Macklin Celebrini was recently named Sharks captain at age 20, the youngest in franchise history."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Akira Schmid",
+   "p_starter": 0.93,
+   "announced": 0.93,
+   "p_out": {
+    "Brad Marchand": 0.93,
+    "Jonah Gadjovich": 0.97,
+    "Uvis Balinskis": 0.96
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.94,
+   "p_out": {
+    "Ty Dellandrea": 0.96,
+    "Brett Leason": 0.96,
+    "Sam Dickinson": 0.96,
+    "Adam Gaudette": 0.87
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 15.8,
+  "jev": 0.6
+ }
+}

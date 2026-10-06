@@ -1,0 +1,95 @@
+{
+ "game": {
+  "gameId": 2026020012,
+  "kickoff": "2026-10-02T00:00:00Z",
+  "away": "Minnesota Wild",
+  "home": "Nashville Predators",
+  "away_id": 30,
+  "home_id": 18,
+  "away_abbr": "MIN",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:03:55.683713+00:00",
+ "articles": [
+  {
+   "title": "Wild at Predators projected lineups",
+   "published": "2026-10-01T17:15:48.09Z",
+   "lineups": true
+  },
+  {
+   "title": "Bill Guerin, provided an injury update on defenseman Brock Faber",
+   "published": "2026-09-29T19:02:09.798Z",
+   "lineups": false
+  },
+  {
+   "title": "Faber out indefinitely for Wild after having surgery for fractured skull",
+   "published": "2026-09-29T19:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Nashville Predators Offer Limited-Edition Hatch Show Print Poster to Celebrate 2026-27 Season",
+   "published": "2026-09-29T19:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators Assign Tyson Jost to Milwaukee (AHL)",
+   "published": "2026-09-29T20:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Not Weird. Wild.",
+   "published": "2026-09-30T14:55:08.622Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "Injured: skull fracture (surgery, out indefinitely)"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "Injured: lower body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Wild open the season with a projected lineup missing key defenseman Brock Faber (skull fracture surgery, out indefinitely) and Filip Gustavsson (lower body injury). Jesper Wallstedt is projected to start in goal, with Calvin Pickard as backup. Scratches include Nico Sturm and David Spacek."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators project a full healthy roster for the season opener, with Juuse Saros expected to start in goal and Justus Annunen as backup. No injuries are reported, though Tyson Jost has been assigned to the AHL. Scratches include Ilya Lyubushkin, Jack Ahcan, and William Trudeau. Ross Colton and Mavrik Bourque are set to debut."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Brock Faber": 0.99,
+    "Filip Gustavsson": 0.95
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 4.4,
+  "jev": 0.5
+ }
+}

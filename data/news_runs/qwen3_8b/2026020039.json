@@ -1,0 +1,97 @@
+{
+ "game": {
+  "gameId": 2026020039,
+  "kickoff": "2026-10-05T01:00:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Vancouver Canucks",
+  "away_id": 54,
+  "home_id": 23,
+  "away_abbr": "VGK",
+  "home_abbr": "VAN"
+ },
+ "articles": [
+  {
+   "title": "Golden Knights at Canucks projected lineups",
+   "published": "2026-10-04T18:40:00Z",
+   "lineups": true
+  },
+  {
+   "title": "A Bond Forged Between Us: Golden Knights Honor 1 October on Ninth Remembrance of Tragedy",
+   "published": "2026-10-02T02:18:39.471Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights Announce 2026-27 Television Broadcast Team",
+   "published": "2026-10-02T14:50:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Oct. 2, 2026",
+   "published": "2026-10-02T15:00:22.351Z",
+   "lineups": false
+  },
+  {
+   "title": "Daren Hermiston Joins Canucks Insider Podcast to Discuss Helping Prospects Grow Their Games ",
+   "published": "2026-10-02T17:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Golden Knights projected lineups",
+   "published": "2026-10-02T19:13:55.226Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Adin Hill",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vegas Golden Knights are coming off a 5-2 win against the Chicago Blackhawks in their season opener. Adin Hill is confirmed to start in goal, with no injured players listed. The lineup is expected to remain largely unchanged from the opener, with Trevor Connelly making his NHL debut and Jack Eichel continuing his strong point production."
+  },
+  "home": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Jake DeBrusk",
+     "detail": "illness"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "shoulder"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vancouver Canucks are coming off a 4-1 win against the Calgary Flames. Kevin Lankinen is confirmed to start in goal after Merilainen made 23 saves in his first start. Jake DeBrusk is expected to miss a second straight game with illness and is day to day, while Thatcher Demko and Filip Chytil are listed as injured."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Adin Hill",
+   "p_starter": 1.0,
+   "announced": 0.99,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.98,
+   "announced": 0.99,
+   "p_out": {
+    "Jake DeBrusk": 0.98,
+    "Thatcher Demko": 0.98,
+    "Filip Chytil": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 17.2,
+  "jev": 0.5
+ }
+}

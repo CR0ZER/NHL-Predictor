@@ -1,0 +1,124 @@
+{
+ "game": {
+  "gameId": 2026020002,
+  "kickoff": "2026-09-29T23:00:00Z",
+  "away": "Montréal Canadiens",
+  "home": "Toronto Maple Leafs",
+  "away_id": 8,
+  "home_id": 10,
+  "away_abbr": "MTL",
+  "home_abbr": "TOR"
+ },
+ "articles": [
+  {
+   "title": "Canadiens at Maple Leafs projected lineups",
+   "published": "2026-09-29T15:49:50.569Z",
+   "lineups": true
+  },
+  {
+   "title": "Maple Leafs visit Mayich family in Arizona, wear special T-shirts, hats",
+   "published": "2026-09-27T00:31:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Matheson fined maximum for roughing in Canadiens game",
+   "published": "2026-09-27T15:49:15.502Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs Sign Defenceman Nick Blankenburg",
+   "published": "2026-09-27T18:04:53.226Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens make roster moves following preseason finale",
+   "published": "2026-09-27T19:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes' bid for Stanley Cup repeat among top NHL storylines this season",
+   "published": "2026-09-28T04:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Samuel Montembeault",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Kaiden Guhle",
+     "detail": "Injured (adductor), expected to miss the first 7-10 games"
+    },
+    {
+     "player": "Oliver Kapanen",
+     "detail": "Injured (lower body), day to day"
+    },
+    {
+     "player": "Florian Xhekaj",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Adam Engstrom",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canadiens are starting with Samuel Montembeault in goal. Key players Kaiden Guhle and Oliver Kapanen are injured, with Guhle expected to miss several games. Florian Xhekaj and Adam Engstrom are scratched for this game."
+  },
+  "home": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Dakota Joshua",
+     "detail": "Injured (core), out week-to-week"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Bo Groulx",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nick Blankenburg",
+     "detail": "Signed to a one-year contract, but not listed as scratched or injured"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Maple Leafs are starting with Sergei Bobrovsky in goal. Dakota Joshua is out week-to-week, and Max Domi is injured. Bo Groulx is scratched, while Nick Blankenburg has been signed but is not listed as playing in this game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Samuel Montembeault",
+   "p_starter": 0.86,
+   "announced": 0.98,
+   "p_out": {
+    "Kaiden Guhle": 0.98,
+    "Oliver Kapanen": 0.31,
+    "Florian Xhekaj": 0.97,
+    "Adam Engstrom": 0.97
+   }
+  },
+  "home": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Dakota Joshua": 0.95,
+    "Max Domi": 0.85,
+    "Bo Groulx": 0.97,
+    "Nick Blankenburg": 0.84
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 16.0,
+  "jev": 0.5
+ }
+}

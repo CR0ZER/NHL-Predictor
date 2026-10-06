@@ -1,0 +1,114 @@
+{
+ "game": {
+  "gameId": 2026020007,
+  "kickoff": "2026-10-01T02:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "Colorado Avalanche",
+  "away_id": 26,
+  "home_id": 21,
+  "away_abbr": "LAK",
+  "home_abbr": "COL"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:03:10.331298+00:00",
+ "articles": [
+  {
+   "title": "Kings at Avalanche projected lineups",
+   "published": "2026-09-30T18:35:35.805Z",
+   "lineups": true
+  },
+  {
+   "title": "LA Kings Announce Training Camp Roster Moves",
+   "published": "2026-09-28T16:07:22.962Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche Hosts 2026 Battle of the Badges",
+   "published": "2026-09-28T16:45:10.368Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL, Norwegian Cruise Line team up with Force Blue on clean-up project",
+   "published": "2026-09-28T18:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "INSIDER: 5 Observations as Kings Training Camp Ends",
+   "published": "2026-09-28T22:13:05.033Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche Set Active Roster at 20",
+   "published": "2026-09-28T22:17:16.878Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Corey Perry",
+     "detail": "scratched (personal reasons)"
+    },
+    {
+     "player": "Erik Gustafsson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "injured (leg surgery)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/Edmundson"
+   ],
+   "summary": "The Kings are projected to start Darcy Kuemper in goal for their season opener against the Avalanche, with Anton Forsberg as the backup. Key absences include Kevin Fiala (leg surgery) and scratched players Corey Perry (personal reasons) and Erik Gustafsson. Defenseman Joel Edmundson, who was day-to-day with an undisclosed injury, is expected to play after participating in the morning skate."
+  },
+  "home": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Logan O’Connor",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Zachary L’Heureux",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche are set to start Mackenzie Blackwood in goal for their home opener, with Scott Wedgewood as the backup. They will be without Logan O’Connor and Zachary L’Heureux, both day-to-day with lower-body injuries and placed on Injured Reserve. The team plans to dress 11 forwards and seven defensemen, with no players currently scratched from the lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Corey Perry": 0.97,
+    "Erik Gustafsson": 0.96,
+    "Kevin Fiala": 0.98
+   }
+  },
+  "home": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Logan O’Connor": 0.46,
+    "Zachary L’Heureux": 0.58
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.9,
+  "jev": 0.5
+ }
+}

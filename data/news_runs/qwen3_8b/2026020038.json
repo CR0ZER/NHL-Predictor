@@ -1,0 +1,161 @@
+{
+ "game": {
+  "gameId": 2026020038,
+  "kickoff": "2026-10-05T00:00:00Z",
+  "away": "Calgary Flames",
+  "home": "Seattle Kraken",
+  "away_id": 20,
+  "home_id": 55,
+  "away_abbr": "CGY",
+  "home_abbr": "SEA"
+ },
+ "articles": [
+  {
+   "title": "Flames at Kraken projected lineups",
+   "published": "2026-10-04T14:45:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Kraken Score Early, Often In Opening Rout",
+   "published": "2026-10-02T04:04:57.012Z",
+   "lineups": false
+  },
+  {
+   "title": "Post-Game Instant Analysis: Seattle at Calgary",
+   "published": "2026-10-02T04:06:05.421Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Fall to Kraken In Home Opener",
+   "published": "2026-10-02T04:20:35.022Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken Will Do ‘What You have To’ To Stay Competitive",
+   "published": "2026-10-02T20:00:34.515Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken (1-0-0) at Oilers (1-0-1) | 4:00 p.m.",
+   "published": "2026-10-03T03:44:03.563Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "injured (hip)"
+    },
+    {
+     "player": "Connor Zary",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brayden Pachal",
+     "detail": "scratched"
+    },
+    {
+     "player": "Yan Kuznetsov",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Morgan Frost",
+    "Matt Coronato",
+    "Samuel Honzek",
+    "Mikael Backlund",
+    "Joel Farabee",
+    "Brennan Othmann",
+    "Ryan Strome",
+    "Yegor Sharangovich",
+    "Maksim Tsyplakov",
+    "Martin Pospisil",
+    "Adam Klapka",
+    "Joel Hanley",
+    "Simon Nemec",
+    "Kevin Bahl",
+    "Zach Whitecloud",
+    "Jake Middleton",
+    "Zayne Parekh",
+    "Devin Cooley"
+   ],
+   "summary": "The Calgary Flames are coming off a 4-1 loss to the Vancouver Canucks, starting with Dustin Wolf in net. They have several scratches, including key players like Jonathan Huberdeau, who is injured. The team is looking to bounce back after a slow start to the season."
+  },
+  "home": {
+   "starting_goalie": "Joey Daccord",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Jacob Melanson",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Cale Fleury",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ville Ottavainen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Curtis Douglas",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Jared McCann",
+    "Matty Beniers",
+    "Kaapo Kakko",
+    "Bobby McMann",
+    "Chandler Stephenson",
+    "Jordan Eberle",
+    "Ryan Winterton",
+    "Berkly Catton",
+    "Shane Wright",
+    "Mackie Samoskevich",
+    "Vince Dunn",
+    "Adam Larsson",
+    "Ryker Evans",
+    "Brandon Montour",
+    "Ryan Lindgren",
+    "Josh Mahura",
+    "Philipp Grubauer"
+   ],
+   "summary": "The Seattle Kraken are coming off a strong 6-1 win over the Calgary Flames, with Joey Daccord in net. They have several scratches, including Jacob Melanson, who is injured. The team is showing strong offensive play and has a young core performing well."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Jonathan Huberdeau": 0.94,
+    "Connor Zary": 0.91,
+    "Brayden Pachal": 0.94,
+    "Yan Kuznetsov": 0.94
+   }
+  },
+  "home": {
+   "starter": "Joey Daccord",
+   "p_starter": 0.97,
+   "announced": 0.96,
+   "p_out": {
+    "Jacob Melanson": 0.92,
+    "Cale Fleury": 0.89,
+    "Ville Ottavainen": 0.89,
+    "Curtis Douglas": 0.87
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 28.6,
+  "jev": 0.9
+ }
+}

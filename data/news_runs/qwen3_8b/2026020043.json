@@ -1,0 +1,126 @@
+{
+ "game": {
+  "gameId": 2026020043,
+  "kickoff": "2026-10-06T00:00:00Z",
+  "away": "San Jose Sharks",
+  "home": "Dallas Stars",
+  "away_id": 28,
+  "home_id": 25,
+  "away_abbr": "SJS",
+  "home_abbr": "DAL"
+ },
+ "articles": [
+  {
+   "title": "Sharks at Stars projected lineups",
+   "published": "2026-10-05T18:00:53.456Z",
+   "lineups": true
+  },
+  {
+   "title": "Heika’s Take: Clunky start, miscues doom Stars in season opener against Blues",
+   "published": "2026-10-03T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Day Guide: Stars at Predators",
+   "published": "2026-10-03T14:00:01.015Z",
+   "lineups": false
+  },
+  {
+   "title": "Stars at Predators projected lineups",
+   "published": "2026-10-03T17:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks Director of Hockey Operations Charlie Townsend promoted to Assistant General Manager, San Jose Barracuda",
+   "published": "2026-10-03T17:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Sharks projected lineups",
+   "published": "2026-10-03T18:53:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Adam Gaudette",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ty Dellandrea",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brett Leason",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Sam Dickinson",
+    "Nolan Allan",
+    "Jacob Trouba",
+    "Dmitry Orlov",
+    "Luca Cagnoni"
+   ],
+   "summary": "The Sharks are off to a strong start with a 2-0-0 record. They have a solid projected lineup with Askarov in net. Sam Dickinson is set to make his season debut, while Adam Gaudette is expected to return soon after missing the first two games."
+  },
+  "home": {
+   "starting_goalie": "Jake Oettinger",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Matt Duchene",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Colin Blackwell",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kyle Capobianco",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Miro Heiskanen",
+    "Esa Lindell",
+    "Nils Lundkvist",
+    "Lian Bichsel",
+    "Tyler Myers"
+   ],
+   "summary": "The Stars are struggling after a 4-0 loss to the Blues in their season opener. Despite a strong performance in the first game, they had several miscues and issues with their power play. Jake Oettinger is expected to start in net, and the team is looking to improve their game flow and execution."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Adam Gaudette": 0.95,
+    "Ty Dellandrea": 0.96,
+    "Brett Leason": 0.96
+   }
+  },
+  "home": {
+   "starter": "Jake Oettinger",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Matt Duchene": 0.97,
+    "Colin Blackwell": 0.9,
+    "Kyle Capobianco": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 19.5,
+  "jev": 0.5
+ }
+}

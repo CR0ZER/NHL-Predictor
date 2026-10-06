@@ -1,0 +1,136 @@
+{
+ "game": {
+  "gameId": 2026020010,
+  "kickoff": "2026-10-01T23:00:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "New York Rangers",
+  "away_id": 14,
+  "home_id": 3,
+  "away_abbr": "TBL",
+  "home_abbr": "NYR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:03:44.170371+00:00",
+ "articles": [
+  {
+   "title": "Lightning at Rangers projected lineups",
+   "published": "2026-10-01T16:43:43.134Z",
+   "lineups": true
+  },
+  {
+   "title": "Rangers at Bruins: Pregame Notes",
+   "published": "2026-09-29T12:20:25.945Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Bruins projected lineups",
+   "published": "2026-09-29T17:38:35.834Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Bruins: Postgame Notes",
+   "published": "2026-09-30T03:05:17.068Z",
+   "lineups": false
+  },
+  {
+   "title": "How Syracuse helped Conor Geekie earn his opening-night NHL spot",
+   "published": "2026-09-30T14:29:39.089Z",
+   "lineups": false
+  },
+  {
+   "title": "The 2026 Lightning Home Opener Pregame Guide",
+   "published": "2026-09-30T19:37:39.255Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Dominic James",
+     "detail": "hand injury"
+    },
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Emil Lilleberg",
+     "detail": "scratched"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Victor Hedman will be in the Lightning lineup for the first time since March 19; he missed Tampa Bay's last 15 games during the 2025-26 regular season and seven during the Stanley Cup Playoffs on a leave of absence to prioritize his mental health."
+   ],
+   "summary": "The Lightning are set to open their season with Andrei Vasilevskiy in goal and Victor Hedman returning to the lineup after a leave of absence for mental health. Key absences include Dominic James (hand) and Yanni Gourde (hip) on injured reserve, along with several scratched players. Conor Geekie has earned an opening-night spot after developing in Syracuse, adding depth to the forward group."
+  },
+  "home": {
+   "starting_goalie": "Igor Shesterkin",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "lower body injury, placed on injured reserve, week to week"
+    },
+    {
+     "player": "Matthew Robertson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jaroslav Chmelar",
+     "detail": "scratched"
+    },
+    {
+     "player": "Scott Morrow",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Alberts Smits is set to make his NHL debut and become the first Rangers defenseman in franchise history to debut at age 18 or younger on opening night."
+   ],
+   "summary": "The Rangers open the 2026-27 season with Igor Shesterkin as their starting goaltender and Joonas Korpisalo sidelined with a lower-body injury. The team has undergone significant offseason changes, adding new forwards and defensemen, with Alberts Smits poised to make his NHL debut. Head coach Mike Sullivan will coach his 1,000th NHL game in this matchup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Dominic James": 0.97,
+    "Yanni Gourde": 0.98,
+    "Scott Sabourin": 0.98,
+    "Emil Lilleberg": 0.97,
+    "Max Crozier": 0.97
+   }
+  },
+  "home": {
+   "starter": "Igor Shesterkin",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Joonas Korpisalo": 0.8,
+    "Matthew Robertson": 0.94,
+    "Jaroslav Chmelar": 0.93,
+    "Scott Morrow": 0.88
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 20.1,
+  "jev": 0.6
+ }
+}

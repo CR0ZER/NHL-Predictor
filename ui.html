@@ -261,6 +261,12 @@ td.r, th.r { text-align: right; }
 .puck-fly .disc { width: 40px; height: 40px; display: block; filter: drop-shadow(0 3px 4px rgba(0,0,0,.55)); }
 .puck-fly .trail { position: absolute; right: 20px; top: 50%; width: 0; height: 2px; transform: translateY(-50%);
   border-radius: 2px; background: linear-gradient(90deg, transparent, var(--trail) 70%, var(--trail-head)); }
+/* ============ Mode lecture seule (GitHub Pages) ============ */
+body.static #btn-predict, body.static #btn-settle, body.static #btn-odds,
+body.static .field.stake, body.static .field.switch { display: none; }
+.updated { display: none; }
+body.static .updated { display: flex; }
+
 /* ============ Toast de tâche ============ */
 .toast { position: fixed; right: 22px; bottom: 22px; z-index: 30; display: flex; align-items: center; gap: 12px; max-width: 440px; padding: 14px 16px; border-radius: 16px; background: var(--glass); backdrop-filter: blur(16px); border: 1px solid var(--border-strong); box-shadow: var(--shadow); transform: translateY(140%); opacity: 0; transition: transform .45s cubic-bezier(.2,1.2,.4,1), opacity .3s; }
 .toast.on { transform: none; opacity: 1; }
@@ -312,11 +318,12 @@ td.r, th.r { text-align: right; }
         <ellipse cx="20" cy="26" rx="16" ry="6" fill="#05070b"/><rect x="4" y="16" width="32" height="10" fill="url(#pk)"/><ellipse cx="20" cy="16" rx="16" ry="6" fill="#2f3a4d"/><ellipse cx="20" cy="16" rx="10" ry="3.4" fill="none" stroke="#7fdcff" stroke-width="1.4" opacity=".9"/></svg>
       <div><div class="word">NHL<em>·</em>PREDICTOR</div><small>Modèle xG · Jev · paris fictifs à mise fixe</small></div>
     </div>
+    <div class="clock updated" title="Données mises à jour automatiquement par GitHub Actions"><span>Mis à jour <b id="upd"></b></span></div>
     <div class="clock" title="Heure de Paris et de New York"><span class="live-dot"></span><span>Paris <b id="clk-paris"></b></span><span>New York <b id="clk-ny"></b></span></div>
     <div class="controls">
       <div class="field"><label for="date">Soirée</label><input id="date" type="date"></div>
-      <div class="field"><label for="stake">Mise</label><input id="stake" type="number" min="1" step="1" value="10"><label>€</label></div>
-      <label class="field switch" title="Chaîne d'actualité : articles NHL.com lus par qwen3 (local), puis gardiens et absences tranchés par Jev"><input id="jev" type="checkbox" checked><span class="knob"></span><span>Actu + Jev</span></label>
+      <div class="field stake"><label for="stake">Mise</label><input id="stake" type="number" min="1" step="1" value="10"><label>€</label></div>
+      <label class="field switch" title="Chaîne d'actualité : articles NHL.com lus par un modèle de langage (Ollama en local ou OpenRouter), puis gardiens et absences tranchés par Jev"><input id="jev" type="checkbox" checked><span class="knob"></span><span>Actu + Jev</span></label>
       <button class="cta" id="btn-predict" title="Prédit la soirée et enregistre les paris fictifs aux cotes actuelles">Prédire</button>
       <button id="btn-settle" title="Résultats officiels et règlement des paris">Régler</button>
       <button id="btn-odds" title="Historique des cotes de la saison (≈ 6 s par nouveau match terminé)">MAJ cotes</button>
@@ -342,7 +349,12 @@ td.r, th.r { text-align: right; }
     </div>
     <h2>Matchs <span class="sub" id="games-sub"></span></h2>
     <div class="games" id="games"></div>
-    <div class="card guide rise" style="--i:2">
+    <div class="card guide rise auto-guide" style="--i:2" hidden>
+      <div class="step"><div class="n">1</div><div><b>18 h 30 et minuit : prédictions</b><p>GitHub Actions lit l'actualité (Nemotron + Jev), prédit les matchs et prend les paris fictifs aux cotes du moment. Le passage de minuit (heure de Paris) met à jour les matchs de la côte Ouest.</p></div></div>
+      <div class="step"><div class="n">2</div><div><b>9 h 30 : résultats</b><p>Résultats officiels NHL et règlement des paris. Les cotes de clôture sont récupérées chaque lundi pour l'évaluation face au marché.</p></div></div>
+      <div class="step"><div class="n">3</div><div><b>Lecture seule</b><p>Cette page affiche les résultats publiés ; les heures sont celles de Paris.</p></div></div>
+    </div>
+    <div class="card guide rise manual-guide" style="--i:2">
       <div class="step"><div class="n">1</div><div><b>18 h – 19 h : Prédire</b><p>Gardiens annoncés après les entraînements du matin. Paris pris aux cotes du moment. Week-end : vers 16 h.</p></div></div>
       <div class="step"><div class="n">2</div><div><b>Relancer sans risque</b><p>Seuls les matchs pas encore commencés sont mis à jour ; un pari est figé au coup d'envoi.</p></div></div>
       <div class="step"><div class="n">3</div><div><b>Le matin : Régler</b><p>Résultats officiels NHL. « MAJ cotes » une fois par semaine pour l'évaluation face au marché.</p></div></div>
@@ -442,11 +454,25 @@ document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
 });
 
 // ---------- API & tâches ----------
+const STATIC = !!window.STATIC_MODE;  // page publiée (GitHub Pages) : lecture des fichiers JSON, pas d'actions
+if (STATIC) {
+  document.body.classList.add("static");
+  $(".auto-guide").hidden = false; $(".manual-guide").hidden = true;
+}
 async function api(path, body) {
+  if (STATIC) {
+    const file = { "/api/state": "state.json", "/api/model": "model.json" }[path];
+    return file ? (await fetch(`${file}?v=${Date.now()}`, { cache: "no-store" })).json() : { busy: false, msg: "" };
+  }
   const r = await fetch(path, body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {});
   return r.json();
 }
-async function refresh() { STATE = await api("/api/state"); if (!$("#date").value) $("#date").value = STATE.today; render(); }
+async function refresh() {
+  STATE = await api("/api/state");
+  if (!$("#date").value) $("#date").value = STATE.today;
+  if (STATE.generated_at) $("#upd").textContent = tz(STATE.generated_at, "Europe/Paris", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
+  render();
+}
 let toastTimer;
 function showJob(j, sub = "") {
   const t = $("#toast"); clearTimeout(toastTimer);
@@ -590,7 +616,7 @@ function newsBlock(g) {
     return `<div class="line"><span class="who">${abbr(g[side])}</span><span class="abs">${txt}</span>${imp}</div>`;
   };
   const sum = ["away", "home"].filter(s => g[s + "_summary"]).map(s => `<p><b>${abbr(g[s])}</b> · ${esc(g[s + "_summary"])}</p>`).join("");
-  return `<div class="news">${line("away")}${line("home")}${sum ? `<details><summary>Résumé de l'actualité (qwen3)</summary>${sum}</details>` : ""}</div>`;
+  return `<div class="news">${line("away")}${line("home")}${sum ? `<details><summary>Résumé de l'actualité</summary>${sum}</details>` : ""}</div>`;
 }
 function renderGames(list, day) {
   $("#games-sub").textContent = list.length ? "probabilité de victoire (extérieur | domicile), prolongation incluse · survolez une carte" : "";

@@ -1,0 +1,132 @@
+{
+ "game": {
+  "gameId": 2026020015,
+  "kickoff": "2026-10-02T02:00:00Z",
+  "away": "Edmonton Oilers",
+  "home": "Vancouver Canucks",
+  "away_id": 22,
+  "home_id": 23,
+  "away_abbr": "EDM",
+  "home_abbr": "VAN"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:04:13.747699+00:00",
+ "articles": [
+  {
+   "title": "Oilers at Canucks projected lineups",
+   "published": "2026-10-01T19:57:44.591Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks Begin Regular Season on the Road in Edmonton on Tuesday Night",
+   "published": "2026-09-29T02:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Oilers vs. Canucks",
+   "published": "2026-09-29T03:19:53.19Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Notes: Canucks at Oilers",
+   "published": "2026-09-29T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Oilers announce 2026-27 opening night roster",
+   "published": "2026-09-29T15:52:29.706Z",
+   "lineups": false
+  },
+  {
+   "title": "PROJECTED LINEUP: Nugent-Hopkins out for Tuesday's home opener vs. Canucks",
+   "published": "2026-09-29T18:23:01.998Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Zach Hyman",
+     "detail": "upper body injury, day to day but expected two weeks per coach Babcock"
+    },
+    {
+     "player": "Frederik Andersen",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Jason Dickinson",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Ryan Nugent-Hopkins",
+     "detail": "lower body injury, out for potentially up to two weeks"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matt Savoie",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Oilers open the 2026-27 season with Tristan Jarry confirmed as the starting goalie. They will be without several key players including Zach Hyman (upper body, day-to-day but expected two weeks), Frederik Andersen, Jason Dickinson, Mattias Janmark, Ryan Nugent-Hopkins (lower body, out up to two weeks), Alec Regula, and Matt Savoie. Owen Michaels is set to make his NHL debut, and Vasily Podkolzin is expected to see increased responsibility on the top power play in Nugent-Hopkins' absence."
+  },
+  "home": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "shoulder injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks begin the season on the road in Edmonton, with Kevin Lankinen projected to start in goal alongside newcomer Leevi Merilainen. They will be without Thatcher Demko (hip) and Filip Chytil (shoulder). The team is expected to dress the same lineup used in their season-opening win over the Oilers, bringing positive momentum from a strong preseason finish."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Devon Levi",
+   "p_starter": 0.76,
+   "announced": 0.98,
+   "p_out": {
+    "Zach Hyman": 0.64,
+    "Frederik Andersen": 0.94,
+    "Jason Dickinson": 0.94,
+    "Mattias Janmark": 0.96,
+    "Ryan Nugent-Hopkins": 0.92,
+    "Alec Regula": 0.95,
+    "Matt Savoie": 0.95
+   }
+  },
+  "home": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.98,
+   "announced": 0.79,
+   "p_out": {
+    "Thatcher Demko": 0.96,
+    "Filip Chytil": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.3,
+  "jev": 0.6
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "game": {
+  "gameId": 2026020007,
+  "kickoff": "2026-10-01T02:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "Colorado Avalanche",
+  "away_id": 26,
+  "home_id": 21,
+  "away_abbr": "LAK",
+  "home_abbr": "COL"
+ },
+ "articles": [
+  {
+   "title": "Kings at Avalanche projected lineups",
+   "published": "2026-09-30T18:35:35.805Z",
+   "lineups": true
+  },
+  {
+   "title": "LA Kings Announce Training Camp Roster Moves",
+   "published": "2026-09-28T16:07:22.962Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche Hosts 2026 Battle of the Badges",
+   "published": "2026-09-28T16:45:10.368Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL, Norwegian Cruise Line team up with Force Blue on clean-up project",
+   "published": "2026-09-28T18:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "INSIDER: 5 Observations as Kings Training Camp Ends",
+   "published": "2026-09-28T22:13:05.033Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche Set Active Roster at 20",
+   "published": "2026-09-28T22:17:16.878Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Corey Perry",
+     "detail": "scratched for personal reasons"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "injured (leg surgery)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Los Angeles Kings have a projected lineup with Darcy Kuemper expected to start in goal. Corey Perry is scratched for personal reasons, and Kevin Fiala is out due to leg surgery. The team is starting the season with a clean slate, having not yet played any games."
+  },
+  "home": {
+   "starting_goalie": "Noah Juulsen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Logan O’Connor",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Zachary L’Heureux",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Taylor Makar",
+     "detail": "injured non-roster"
+    },
+    {
+     "player": "Georgii Merkulov",
+     "detail": "injured non-roster"
+    },
+    {
+     "player": "Trent Miner",
+     "detail": "injured non-roster"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Colorado Avalanche have projected Noah Juulsen as the starting goalie. Several players are out due to injuries, including Logan O’Connor and Zachary L’Heureux. The team is set to play its first game of the season, with a projected lineup that includes key players like Nathan MacKinnon and Cale Makar."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Corey Perry": 0.97,
+    "Kevin Fiala": 0.98
+   }
+  },
+  "home": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 1.0,
+   "announced": 0.88,
+   "p_out": {
+    "Logan O’Connor": 0.42,
+    "Zachary L’Heureux": 0.51,
+    "Taylor Makar": 0.06,
+    "Georgii Merkulov": 0.07,
+    "Trent Miner": 0.07
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 18.8,
+  "jev": 0.6
+ }
+}

@@ -1,0 +1,124 @@
+{
+ "game": {
+  "gameId": 2026020043,
+  "kickoff": "2026-10-06T00:00:00Z",
+  "away": "San Jose Sharks",
+  "home": "Dallas Stars",
+  "away_id": 28,
+  "home_id": 25,
+  "away_abbr": "SJS",
+  "home_abbr": "DAL"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:07:38.221374+00:00",
+ "articles": [
+  {
+   "title": "Sharks at Stars projected lineups",
+   "published": "2026-10-05T18:00:53.456Z",
+   "lineups": true
+  },
+  {
+   "title": "Heika’s Take: Clunky start, miscues doom Stars in season opener against Blues",
+   "published": "2026-10-03T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Day Guide: Stars at Predators",
+   "published": "2026-10-03T14:00:01.015Z",
+   "lineups": false
+  },
+  {
+   "title": "Stars at Predators projected lineups",
+   "published": "2026-10-03T17:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks Director of Hockey Operations Charlie Townsend promoted to Assistant General Manager, San Jose Barracuda",
+   "published": "2026-10-03T17:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Sharks projected lineups",
+   "published": "2026-10-03T18:53:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ty Dellandrea",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Brett Leason",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nolan Allan",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "Injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sharks are 2-0-0 to start the season and project Yaroslav Askarov as the starting goalie. They will have a scratched lineup of Ty Dellandrea, Brett Leason, and Nolan Allan, with Adam Gaudette out due to an upper-body injury. Sam Dickinson is expected to make his season debut on defense after Allan played the first two games."
+  },
+  "home": {
+   "starting_goalie": "Jake Oettinger",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Colin Blackwell",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Kyle Capobianco",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Matt Duchene",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Joel Kiviranta (replacing Blackwell in the lineup)"
+   ],
+   "summary": "The Stars are 0-2-0 to start the season and project Jake Oettinger as the starting goalie. They will have a scratched lineup of Colin Blackwell and Kyle Capobianco, with Matt Duchene out due to a lower-body injury. Joel Kiviranta is returning to the lineup after Blackwell was a healthy scratch, and Mikko Rantanen is expected to play despite not taking part in the morning skate for maintenance."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Ty Dellandrea": 0.97,
+    "Brett Leason": 0.96,
+    "Nolan Allan": 0.94,
+    "Adam Gaudette": 0.96
+   }
+  },
+  "home": {
+   "starter": "Jake Oettinger",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Colin Blackwell": 0.96,
+    "Kyle Capobianco": 0.97,
+    "Matt Duchene": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.7,
+  "jev": 0.5
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "game": {
+  "gameId": 2026020025,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Carolina Hurricanes",
+  "home": "Philadelphia Flyers",
+  "away_id": 12,
+  "home_id": 4,
+  "away_abbr": "CAR",
+  "home_abbr": "PHI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:05:38.436374+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers vs. Hurricanes",
+   "published": "2026-10-03T13:35:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Hurricanes at Flyers projected lineups",
+   "published": "2026-10-03T16:32:32.667Z",
+   "lineups": true
+  },
+  {
+   "title": "Postgame RAV4: Flyers Blanked by Pens in Opener",
+   "published": "2026-10-01T02:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RAV4 Things: Flyers at Devils",
+   "published": "2026-10-01T13:40:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers at Devils projected lineups",
+   "published": "2026-10-01T15:58:54.897Z",
+   "lineups": false
+  },
+  {
+   "title": "Canes Announce Additional Affiliates For 'Saturday Night Hockey' Package",
+   "published": "2026-10-01T16:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Seth Jarvis",
+     "detail": "Injured (shoulder)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes are 0-1-1, coming off a 5-2 loss to Washington and a 1-0 OT loss to Florida. They are on the back end of consecutive game days. Pyotr Kochetkov is projected to start after Brandon Bussi played the first two games, marking Kochetkov's first start since Dec. 20 following lower-body injury surgery. Jesperi Kotkaniemi is scratched, and Seth Jarvis is out with a shoulder injury."
+  },
+  "home": {
+   "starting_goalie": "Joseph Woll",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Denver Barkey",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "Injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers are 0-1-1, coming off a 7-0 loss to Pittsburgh and a 3-2 OT loss to New Jersey. Joseph Woll is projected to start after a strong performance in net against the Devils. The Flyers are dealing with injuries to Denver Barkey (lower body) and Nikita Grebenkin (upper body), and have scratched Garrett Wilson and Simon Benoit. They need to improve puck possession and pace to compete with the Hurricanes."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Pyotr Kochetkov",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Seth Jarvis": 0.98
+   }
+  },
+  "home": {
+   "starter": "Joseph Woll",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Denver Barkey": 0.93,
+    "Nikita Grebenkin": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 13.3,
+  "jev": 0.9
+ }
+}

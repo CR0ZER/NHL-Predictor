@@ -1,0 +1,152 @@
+{
+ "game": {
+  "gameId": 2026020004,
+  "kickoff": "2026-09-30T02:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "Edmonton Oilers",
+  "away_id": 23,
+  "home_id": 22,
+  "away_abbr": "VAN",
+  "home_abbr": "EDM"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:02:52.098298+00:00",
+ "articles": [
+  {
+   "title": "Canucks at Oilers projected lineups",
+   "published": "2026-09-29T18:52:14.009Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks Top Kraken 4-3 in Preseason Finale",
+   "published": "2026-09-27T03:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Oilers loan Samanski to Condors",
+   "published": "2026-09-28T16:46:06.084Z",
+   "lineups": false
+  },
+  {
+   "title": "VANCOUVER CANUCKS ANNOUNCE 2026.27 OPENING NIGHT ROSTER",
+   "published": "2026-09-28T21:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Oilers announce 2026-27 jersey schedule",
+   "published": "2026-09-28T21:20:47.061Z",
+   "lineups": false
+  },
+  {
+   "title": "EA Sports releases 2026-27 simulated season ahead of Opening Night",
+   "published": "2026-09-28T21:46:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Thatcher Demko",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Aatu Raty",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Victor Mancini",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks are projected to start Kevin Lankinen in goal for their season opener against the Oilers. Key absences include Thatcher Demko (hip) and Filip Chytil (shoulder), with Aatu Raty, Guillaume Brisebois, and Victor Mancini scratched. Jake DeBrusk is expected to play after missing practice due to a lower-body injury sustained in preseason, and the team is coming off a 4-3 preseason win over the Kraken where Boeser, Pettersson, and DeBrusk each contributed offensively."
+  },
+  "home": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Frederik Andersen",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Jason Dickinson",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Ryan Nugent-Hopkins",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Matt Savoie",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Ty Emberson",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Spencer Stastney",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Oilers are projected to start Tristan Jarry in goal for their season opener against the Canucks. They will be without Frederik Andersen, Jason Dickinson, Mattias Janmark, Ryan Nugent-Hopkins (lower body), Alec Regula, and Matt Savoie due to injury, while Ty Emberson and Spencer Stastney are scratched. Ryan Nugent-Hopkins was injured at the end of practice Monday and will not play, with Leon Draisaitl moving to second-line center and Max Jones expected to take his spot in the lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Thatcher Demko": 0.98,
+    "Filip Chytil": 0.97,
+    "Aatu Raty": 0.96,
+    "Guillaume Brisebois": 0.96,
+    "Victor Mancini": 0.96
+   }
+  },
+  "home": {
+   "starter": "Tristan Jarry",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Frederik Andersen": 0.95,
+    "Jason Dickinson": 0.95,
+    "Mattias Janmark": 0.95,
+    "Ryan Nugent-Hopkins": 0.98,
+    "Alec Regula": 0.94,
+    "Matt Savoie": 0.94,
+    "Ty Emberson": 0.95,
+    "Spencer Stastney": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 16.5,
+  "jev": 0.6
+ }
+}

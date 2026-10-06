@@ -1,0 +1,122 @@
+{
+ "game": {
+  "gameId": 2026020018,
+  "kickoff": "2026-10-02T23:00:00Z",
+  "away": "Washington Capitals",
+  "home": "Carolina Hurricanes",
+  "away_id": 15,
+  "home_id": 12,
+  "away_abbr": "WSH",
+  "home_abbr": "CAR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:04:40.641063+00:00",
+ "articles": [
+  {
+   "title": "Capitals at Hurricanes projected lineups",
+   "published": "2026-10-02T16:37:42.846Z",
+   "lineups": true
+  },
+  {
+   "title": "Hurricanes raise Stanley Cup banner prior to season opener",
+   "published": "2026-09-30T01:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bussi laments allowing 'pretty bad goal' in Hurricanes' opening OT loss",
+   "published": "2026-09-30T03:08:25.934Z",
+   "lineups": false
+  },
+  {
+   "title": "Capitals Announce Screaming Eagle Third Jersey to Be Worn for 10 Home Dates During 2026-27 Season",
+   "published": "2026-09-30T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin says he’ll be ready for Capitals in season opener on Friday",
+   "published": "2026-09-30T17:27:09.11Z",
+   "lineups": false
+  },
+  {
+   "title": "Canes Place Primeau On Waivers",
+   "published": "2026-09-30T18:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Ivan Miroshnichenko",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Ethen Frank",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Dylan McIlrath",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals open the season 0-0-0 with Alex Ovechkin confirmed to play after missing the preseason with a lower-body injury. They project Logan Thompson to start in goal, with Charlie Lindgren as backup. Key scratches include Ivan Miroshnichenko, Ethen Frank, and Dylan McIlrath, while Rasmus Sandin is out with a knee injury."
+  },
+  "home": {
+   "starting_goalie": "Brandon Bussi",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Seth Jarvis",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Jesperi Kotkaniemi",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Mike Reilly",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes open 0-0-1 after a 1-0 overtime loss to the Florida Panthers in their season opener. They project Brandon Bussi to start in goal, with Pyotr Kochetkov as backup. The team will dress the same lineup used in the opener, with Seth Jarvis out (shoulder) and Jesperi Kotkaniemi and Mike Reilly scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Logan Thompson",
+   "p_starter": 1.0,
+   "announced": 0.93,
+   "p_out": {
+    "Rasmus Sandin": 0.97,
+    "Ivan Miroshnichenko": 0.96,
+    "Ethen Frank": 0.97,
+    "Dylan McIlrath": 0.97
+   }
+  },
+  "home": {
+   "starter": "Brandon Bussi",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Seth Jarvis": 0.98,
+    "Jesperi Kotkaniemi": 0.97,
+    "Mike Reilly": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.6,
+  "jev": 0.5
+ }
+}

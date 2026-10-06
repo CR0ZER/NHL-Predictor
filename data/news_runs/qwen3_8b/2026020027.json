@@ -1,0 +1,156 @@
+{
+ "game": {
+  "gameId": 2026020027,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Columbus Blue Jackets",
+  "away_id": 68,
+  "home_id": 29,
+  "away_abbr": "UTA",
+  "home_abbr": "CBJ"
+ },
+ "articles": [
+  {
+   "title": "Mammoth at Blue Jackets projected lineups",
+   "published": "2026-10-03T16:52:36.586Z",
+   "lineups": true
+  },
+  {
+   "title": "Utah Opens 2026-27 Season Against Chicago",
+   "published": "2026-10-01T14:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Blue Jackets projected lineups",
+   "published": "2026-10-01T16:47:54.39Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets place defenseman Ivan Provorov on Injured Reserve",
+   "published": "2026-10-01T17:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks at Mammoth projected lineups",
+   "published": "2026-10-01T18:04:30.327Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Utah 6, Chicago 0",
+   "published": "2026-10-02T01:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Dmitri Simashev",
+    "Daniil But",
+    "Mikhail Sergachev",
+    "Anders Lee",
+    "Clayton Keller",
+    "Nick Schmaltz",
+    "Vincent Trocheck",
+    "Logan Cooley",
+    "Dylan Guenther",
+    "Jack McBain",
+    "Barrett Hayton",
+    "Lawson Crouse",
+    "Michael Carcone",
+    "Kevin Stenlund",
+    "Andrew Peeke",
+    "Nate Schmidt",
+    "John Marino",
+    "Sebastian Cossa"
+   ],
+   "summary": "The Utah Mammoth start their 2026-27 season with a strong lineup, featuring several returning players from the preseason. Karel Vejmelka is confirmed to start in goal. The team has one injured player, Maveric Lamoureux, who is out for 4-6 months after shoulder surgery. The Mammoth showed strong performance in their season opener against the Chicago Blackhawks, winning 6-0."
+  },
+  "home": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dante Fabbro",
+     "detail": "broken hand"
+    },
+    {
+     "player": "Ivan Provorov",
+     "detail": "lower body"
+    },
+    {
+     "player": "Damon Severson",
+     "detail": "shoulder"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Danton Heinen",
+     "detail": "week-to-week"
+    },
+    {
+     "player": "Dmitri Voronkov",
+     "detail": "week-to-week"
+    }
+   ],
+   "returning": [
+    "Matthew Knies",
+    "Adam Fantilli",
+    "Kent Johnson",
+    "Valeri Nichushkin",
+    "Sean Monahan",
+    "Conor Garland",
+    "Cole Sillinger",
+    "Charlie Coyle",
+    "Mathieu Olivier",
+    "Ryan Lomberg",
+    "Zach Werenski",
+    "Denton Mateychuk",
+    "Carson Soucy",
+    "Emil Andrae",
+    "Jake Christianen",
+    "Erik Gudbranson"
+   ],
+   "summary": "The Columbus Blue Jackets are projected to use a similar lineup from their 6-3 win against the Buffalo Sabres. Sebastian Cossa is expected to start in goal, though his status is projected. The team has several injured players, including Dante Fabbro, Ivan Provorov, Damon Severson, and Isac Lundestrom, who are out for the game. Danton Heinen and Dmitri Voronkov are questionable for the game, with uncertain participation."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 0.95,
+   "announced": 0.97,
+   "p_out": {
+    "Maveric Lamoureux": 0.96
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.98,
+   "announced": 0.29,
+   "p_out": {
+    "Dante Fabbro": 0.97,
+    "Ivan Provorov": 0.97,
+    "Damon Severson": 0.96,
+    "Isac Lundestrom": 0.97,
+    "Danton Heinen": 0.06,
+    "Dmitri Voronkov": 0.07
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 28.8,
+  "jev": 0.5
+ }
+}

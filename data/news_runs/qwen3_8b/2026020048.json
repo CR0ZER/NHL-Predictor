@@ -1,0 +1,98 @@
+{
+ "game": {
+  "gameId": 2026020048,
+  "kickoff": "2026-10-06T23:30:00Z",
+  "away": "New York Islanders",
+  "home": "New York Rangers",
+  "away_id": 2,
+  "home_id": 3,
+  "away_abbr": "NYI",
+  "home_abbr": "NYR"
+ },
+ "run_at": "2026-10-06T12:23:11.014544+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Rangers ",
+   "published": "2026-10-06T04:00:31.558Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders have 105-year-old World War II veteran play national anthem on saxophone",
+   "published": "2026-10-04T00:37:00Z",
+   "lineups": false
+  },
+  {
+   "title": "WATCH: Isles Fans Sing “Happy Birthday” to Victor Eklund",
+   "published": "2026-10-04T03:19:01.301Z",
+   "lineups": false
+  },
+  {
+   "title": "Schaefer ‘in good hands’ living with former Islanders forward Martin, family",
+   "published": "2026-10-04T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Schaefer ‘in good hands’ living with former Islanders forward Martin, family",
+   "published": "2026-10-04T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Takeaways: Eklund, Sorokin Lead Isles to 6-0 Shutout Over Devils",
+   "published": "2026-10-04T04:20:07.689Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Kyle MacLean",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matt Kessel",
+     "detail": "scratched"
+    },
+    {
+     "player": "Scott Mayfield",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The New York Islanders are coming off a 6-0 victory over the New Jersey Devils, with Victor Eklund scoring his first NHL goal on his 20th birthday. The team is projected to have a new-look lineup, with several players stepping up offensively. Ilya Sorokin is confirmed to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Nico Daws",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The New York Rangers are riding a three-game winning streak, including a 4-2 victory over the Utah Mammoth. They are undefeated at home this season and have a strong offensive presence. The team is projected to have a solid lineup, with Vladislav Gavrikov, Eeli Tolvanen, Gabe Perreault, and J.T. Miller all contributing offensively. Nico Daws is expected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.91,
+   "announced": 0.09,
+   "p_out": {
+    "Kyle MacLean": 0.93,
+    "Matt Kessel": 0.91,
+    "Scott Mayfield": 0.92
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.95,
+   "announced": 0.27,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 22.5,
+  "jev": 1.1
+ }
+}

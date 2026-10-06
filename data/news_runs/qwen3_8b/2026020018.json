@@ -1,0 +1,80 @@
+{
+ "game": {
+  "gameId": 2026020018,
+  "kickoff": "2026-10-02T23:00:00Z",
+  "away": "Washington Capitals",
+  "home": "Carolina Hurricanes",
+  "away_id": 15,
+  "home_id": 12,
+  "away_abbr": "WSH",
+  "home_abbr": "CAR"
+ },
+ "articles": [
+  {
+   "title": "Capitals at Hurricanes projected lineups",
+   "published": "2026-10-02T16:37:42.846Z",
+   "lineups": true
+  },
+  {
+   "title": "Hurricanes raise Stanley Cup banner prior to season opener",
+   "published": "2026-09-30T01:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bussi laments allowing 'pretty bad goal' in Hurricanes' opening OT loss",
+   "published": "2026-09-30T03:08:25.934Z",
+   "lineups": false
+  },
+  {
+   "title": "Capitals Announce Screaming Eagle Third Jersey to Be Worn for 10 Home Dates During 2026-27 Season",
+   "published": "2026-09-30T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin says he’ll be ready for Capitals in season opener on Friday",
+   "published": "2026-09-30T17:27:09.11Z",
+   "lineups": false
+  },
+  {
+   "title": "Canes Place Primeau On Waivers",
+   "published": "2026-09-30T18:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Charlie Lindgren",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Washington Capitals have a clean slate with no injured players and a projected lineup that includes Alex Ovechkin. Ovechkin is expected to be ready for the season opener after missing the preseason due to a lower-body injury."
+  },
+  "home": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Carolina Hurricanes are returning to the ice after raising their Stanley Cup banner prior to their season opener. They are expected to dress the same lineup they used in their 1-0 overtime loss to the Florida Panthers. Brandon Bussi, the team's starting goalie, is expected to be the No. 1 goalie with Frederik Andersen having left for the Edmonton Oilers."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Logan Thompson",
+   "p_starter": 0.99,
+   "announced": 0.86,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "Brandon Bussi",
+   "p_starter": 0.9,
+   "announced": 0.93,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 15.3,
+  "jev": 0.6
+ }
+}

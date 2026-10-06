@@ -1,0 +1,151 @@
+{
+ "game": {
+  "gameId": 2026020026,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Montréal Canadiens",
+  "home": "Pittsburgh Penguins",
+  "away_id": 8,
+  "home_id": 5,
+  "away_abbr": "MTL",
+  "home_abbr": "PIT"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:05:44.848129+00:00",
+ "articles": [
+  {
+   "title": "Canadiens at Penguins projected lineups",
+   "published": "2026-10-03T16:21:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Penguins get push from young depth in season-opening win against Flyers",
+   "published": "2026-10-01T04:40:22.279Z",
+   "lineups": false
+  },
+  {
+   "title": "Musings: Penguins Dominate Flyers in Season Opener",
+   "published": "2026-10-01T05:45:31.37Z",
+   "lineups": false
+  },
+  {
+   "title": "Ice Meets Fire",
+   "published": "2026-10-01T17:50:37.223Z",
+   "lineups": false
+  },
+  {
+   "title": "Lines and defense pairings at practice – Oct. 1",
+   "published": "2026-10-01T20:25:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Lines and defense pairings at practice – Oct. 2",
+   "published": "2026-10-02T18:06:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jakub Dobes",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Florian Xhekaj",
+     "detail": "scratched"
+    },
+    {
+     "player": "Adam Engstrom",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kaiden Guhle",
+     "detail": "adductor injury"
+    },
+    {
+     "player": "Oliver Kapanen",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canadiens are projected to use the same lineup from their 3-2 season-opening win over the Toronto Maple Leafs. They will be without scratched players Florian Xhekaj and Adam Engstrom, plus injured Kaiden Guhle (adductor) and Oliver Kapanen (lower body). No players are listed as doubtful or returning for this game."
+  },
+  "home": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ilya Solovyov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Brazeau",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "upper body injury (week to week)"
+    },
+    {
+     "player": "Blake Lizotte",
+     "detail": "lower body injury (status undecided)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Blake Lizotte",
+     "detail": "Penguins coach Dan Muse said no decision has been made on his status; he participated in optional morning skate but availability uncertain"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "week to week; took part in morning skate but status uncertain for game"
+    }
+   ],
+   "returning": [
+    ":{",
+    "playerKindel",
+    "detailBen",
+    "returning from lower-body injury; took full contact in practice and was activated from injured reserve Saturday"
+   ],
+   "summary": "The Penguins are projected to start Arturs Silovs in goal. They will be without scratched Ilya Solovyov and Elmer Soderblom, plus injured Justin Brazeau (lower body), Ryan Graves (knee), Bryan Rust (upper body, week to week), and Blake Lizotte (lower body, status undecided). Ben Kindel is returning from a lower-body injury after being activated from injured reserve, while Lizotte and Rust are doubtful as game-time decisions."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jakub Dobes",
+   "p_starter": 0.92,
+   "announced": 0.97,
+   "p_out": {
+    "Florian Xhekaj": 0.97,
+    "Adam Engstrom": 0.96,
+    "Kaiden Guhle": 0.97,
+    "Oliver Kapanen": 0.97
+   }
+  },
+  "home": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.99,
+   "announced": 0.93,
+   "p_out": {
+    "Ilya Solovyov": 0.97,
+    "Elmer Soderblom": 0.97,
+    "Justin Brazeau": 0.95,
+    "Ryan Graves": 0.94,
+    "Bryan Rust": 0.54,
+    "Blake Lizotte": 0.36
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.7,
+  "jev": 0.5
+ }
+}

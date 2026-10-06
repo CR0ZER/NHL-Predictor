@@ -1,0 +1,155 @@
+{
+ "game": {
+  "gameId": 2026020037,
+  "kickoff": "2026-10-05T00:00:00Z",
+  "away": "Florida Panthers",
+  "home": "Anaheim Ducks",
+  "away_id": 13,
+  "home_id": 24,
+  "away_abbr": "FLA",
+  "home_abbr": "ANA"
+ },
+ "articles": [
+  {
+   "title": "Panthers at Ducks projected lineups",
+   "published": "2026-10-04T16:09:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Forsling (upper body) a late scratch vs. Sharks",
+   "published": "2026-10-02T02:38:00.211Z",
+   "lineups": false
+  },
+  {
+   "title": "Barkov leaves in second period for Panthers following awkward fall",
+   "published": "2026-10-02T06:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hispanic Excellence: Business",
+   "published": "2026-10-02T16:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Golden Knights projected lineups",
+   "published": "2026-10-02T19:13:55.226Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Ducks Begin Season with Playoff Rematch vs. Golden Knights",
+   "published": "2026-10-02T20:06:12.73Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "lower body injury, long-term injured reserve"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Gustav Forsling",
+     "detail": "upper body injury, late scratch vs. Sharks"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Matthew Tkachuk",
+    "Sam Bennett",
+    "Carter Verhaeghe",
+    "Eetu Luostarinen",
+    "Anton Lundell",
+    "Sandis Vilmanis",
+    "Bokondji Imama",
+    "Sam Lafferty",
+    "Garnet Hathaway",
+    "Uvis Balinskis",
+    "Aaron Ekblad",
+    "Niko Mikkola",
+    "Seth Jones",
+    "Dmitry Kulikov",
+    "Radko Gudas",
+    "Akira Schmid"
+   ],
+   "summary": "The Florida Panthers enter the game with a 1-0-1 record, showing strong early-season form. Key players like Aleksander Barkov are out for the season due to injury, while Gustav Forsling's status remains uncertain. The team has made lineup adjustments, with Dmitry Kulikov and Uvis Balinskis stepping into new roles."
+  },
+  "home": {
+   "starting_goalie": "Ville Husso",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Drew Helleson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "A.J. Greer",
+    "Leo Carlsson",
+    "Cutter Gauthier",
+    "Beckett Sennecke",
+    "Mikael Granlund",
+    "Alex Killorn",
+    "Nikita Nesterenko",
+    "Ryan Poehling",
+    "Jeff Malott",
+    "Tim Washe",
+    "Judd Caulfield",
+    "Jackson LaCombe",
+    "Tristan Luneau",
+    "Pavel Mintyukov",
+    "Travis Mitchell",
+    "Tyson Hinds",
+    "Noah Warren",
+    "Lukas Dostal"
+   ],
+   "summary": "The Anaheim Ducks start the season with a 1-0-0 record, showing strong early form. The team has made several roster additions and has a new-look roster under coach Joel Quenneville. Several players, including Judd Caulfield and Noah Warren, are making their NHL debuts."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Akira Schmid",
+   "p_starter": 0.92,
+   "announced": 0.95,
+   "p_out": {
+    "Aleksander Barkov": 0.98,
+    "Jonah Gadjovich": 0.96,
+    "Brad Marchand": 0.82,
+    "Gustav Forsling": 0.39
+   }
+  },
+  "home": {
+   "starter": "Lukas Dostal",
+   "p_starter": 0.91,
+   "announced": 0.91,
+   "p_out": {
+    "Drew Helleson": 0.97,
+    "Ian Moore": 0.96,
+    "Troy Terry": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 25.9,
+  "jev": 0.6
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "game": {
+  "gameId": 2026020035,
+  "kickoff": "2026-10-04T17:00:00Z",
+  "away": "Winnipeg Jets",
+  "home": "Detroit Red Wings",
+  "away_id": 52,
+  "home_id": 17,
+  "away_abbr": "WPG",
+  "home_abbr": "DET"
+ },
+ "articles": [
+  {
+   "title": "Jets at Red Wings projected lineups",
+   "published": "2026-10-03T19:36:00Z",
+   "lineups": true
+  },
+  {
+   "title": "GAMEDAY: Jets at Red Wings",
+   "published": "2026-10-04T10:43:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Morrissey sees faster Jets team taking shape",
+   "published": "2026-10-01T19:36:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings stress 'early urgency' ahead of season opener",
+   "published": "2026-10-01T20:55:01.953Z",
+   "lineups": false
+  },
+  {
+   "title": "Detroit Red Wings Reveal Fan Details for 2026-27 Opening Week, including Opening Night on Friday, Oct. 2 ",
+   "published": "2026-10-01T21:17:14.201Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings 'excited to get going' as their 2026-27 Opening Night nears",
+   "published": "2026-10-01T21:29:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Elias Salomonsson",
+     "detail": "shoulder"
+    },
+    {
+     "player": "Walker Duehr",
+     "detail": "lower body"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "lower body"
+    },
+    {
+     "player": "Connor Hellebuyck",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Winnipeg Jets are looking to build on their overtime loss to the Boston Bruins, with a focus on maintaining their fast-paced style of play. Gabriel Vilardi is expected to return to the lineup after missing practice for maintenance reasons. The Jets will use both Stuart Skinner and Clay Stevenson in the net due to the back-to-back schedule."
+  },
+  "home": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Dylan Larkin",
+     "detail": "upper body"
+    },
+    {
+     "player": "Jacob Bernard-Docker",
+     "detail": "upper body"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Kasper",
+     "detail": "will not play"
+    }
+   ],
+   "returning": [],
+   "summary": "The Detroit Red Wings are eager to start their 2026-27 season with a strong performance against the New York Rangers. Despite several injuries and a leadership search, the team is focused on 'early urgency' and has emphasized mental toughness and intensity. John Gibson is confirmed to start in goal, while Dylan Larkin remains sidelined."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.98,
+   "announced": 0.73,
+   "p_out": {
+    "Elias Salomonsson": 0.97,
+    "Walker Duehr": 0.95,
+    "Garrett Brown": 0.95,
+    "Connor Hellebuyck": 0.98
+   }
+  },
+  "home": {
+   "starter": "John Gibson",
+   "p_starter": 0.98,
+   "announced": 0.66,
+   "p_out": {
+    "Dylan Larkin": 0.73,
+    "Jacob Bernard-Docker": 0.85,
+    "Marco Kasper": 0.94,
+    "Kasper": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 19.7,
+  "jev": 0.6
+ }
+}

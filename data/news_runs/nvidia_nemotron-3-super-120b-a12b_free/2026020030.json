@@ -1,0 +1,90 @@
+{
+ "game": {
+  "gameId": 2026020030,
+  "kickoff": "2026-10-04T00:00:00Z",
+  "away": "Dallas Stars",
+  "home": "Nashville Predators",
+  "away_id": 25,
+  "home_id": 18,
+  "away_abbr": "DAL",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:05.146165+00:00",
+ "articles": [
+  {
+   "title": "Stars at Predators projected lineups",
+   "published": "2026-10-03T17:14:00Z",
+   "lineups": true
+  },
+  {
+   "title": "GAME DAY: Opening Night - Preds vs. Wild, Oct. 1",
+   "published": "2026-10-01T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Predators projected lineups",
+   "published": "2026-10-01T17:15:48.09Z",
+   "lineups": false
+  },
+  {
+   "title": "One shift at a time: Stars motivated to put offseason tweaks into action",
+   "published": "2026-10-01T20:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Day Guide: Stars vs Blues",
+   "published": "2026-10-02T14:03:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators Assign Ryan Ufko to Milwaukee (AHL)",
+   "published": "2026-10-02T16:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Casey DeSmith",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Matt Duchene",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Stars are coming off a 4-0 loss to the St. Louis Blues in their season opener. They are without Matt Duchene (lower body injury) and have Colin Blackwell and Kyle Capobianco scratched. Casey DeSmith is projected to start in net after Jake Oettinger played in the opener, with DeSmith potentially getting the start for this back-to-back."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators are also 0-1-0 after their season-opening loss to the Minnesota Wild. They have no injuries and are expected to start Juuse Saros in net, with Matt Murray as the backup. Ryan Ufko has been reassigned to Milwaukee (AHL), and Ilya Lyubushkin, Jack Ahcan, and William Trudeau are scratched, with one of them potentially making their debut."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Casey DeSmith",
+   "p_starter": 0.98,
+   "announced": 0.93,
+   "p_out": {
+    "Matt Duchene": 0.96
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.99,
+   "announced": 0.9,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 3.1,
+  "jev": 0.6
+ }
+}

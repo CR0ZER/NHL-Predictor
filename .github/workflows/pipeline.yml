@@ -1,0 +1,88 @@
+# Automatisation : prédictions du soir, règlement le matin, cotes de clôture le lundi, puis publication de la page.
+# Heures en UTC (heure de Paris = UTC+2 l'été, UTC+1 l'hiver). GitHub peut décaler un déclenchement de quelques minutes.
+name: NHL Predictor
+
+on:
+  schedule:
+    - cron: "30 16 * * *"  # prédictions : 18 h 30 à Paris (été), après les compositions probables
+    - cron: "0 22 * * *"   # prédictions, matchs de la côte Ouest : minuit à Paris (été)
+    - cron: "30 7 * * *"   # résultats et règlement des paris : 9 h 30 à Paris (été)
+    - cron: "0 8 * * 1"    # cotes de clôture de la semaine (évaluation face au marché), le lundi
+  workflow_dispatch:
+    inputs:
+      task:
+        description: "Tâche à lancer à la main"
+        type: choice
+        options: [predict, settle, odds, export]
+        default: export
+
+permissions:
+  contents: write  # enregistrer le registre de paris et les prédictions dans le dépôt
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nhl-predictor
+  cancel-in-progress: false
+
+env:
+  NHL_LLM: "nvidia/nemotron-3-super-120b-a12b:free,google/gemma-4-26b-a4b-it:free,google/gemma-4-31b-it:free"
+  PYTHONIOENCODING: utf-8
+  PYTHONWARNINGS: ignore
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Données reconstructibles (cache)
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/*.json
+            data/news
+          key: nhl-data-${{ github.run_id }}
+          restore-keys: nhl-data-
+
+      - name: Tâche
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ODDSPAPI_API_KEY: ${{ secrets.ODDSPAPI_API_KEY }}
+        run: |
+          case "${{ github.event.schedule }}" in
+            "30 16 * * *"|"0 22 * * *") TASK=predict ;;
+            "30 7 * * *") TASK=settle ;;
+            "0 8 * * 1") TASK=odds ;;
+            *) TASK="${{ inputs.task }}" ;;
+          esac
+          echo "Tâche : $TASK"
+          if [ "$TASK" != export ]; then uv run python app.py "$TASK"; fi
+          uv run python app.py export
+
+      - name: Enregistrer les données dans le dépôt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if ! git diff --cached --quiet; then
+            git commit -m "Données : $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git pull --rebase
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

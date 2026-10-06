@@ -1,0 +1,114 @@
+{
+ "game": {
+  "gameId": 2026020030,
+  "kickoff": "2026-10-04T00:00:00Z",
+  "away": "Dallas Stars",
+  "home": "Nashville Predators",
+  "away_id": 25,
+  "home_id": 18,
+  "away_abbr": "DAL",
+  "home_abbr": "NSH"
+ },
+ "articles": [
+  {
+   "title": "Stars at Predators projected lineups",
+   "published": "2026-10-03T17:14:00Z",
+   "lineups": true
+  },
+  {
+   "title": "GAME DAY: Opening Night - Preds vs. Wild, Oct. 1",
+   "published": "2026-10-01T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Predators projected lineups",
+   "published": "2026-10-01T17:15:48.09Z",
+   "lineups": false
+  },
+  {
+   "title": "One shift at a time: Stars motivated to put offseason tweaks into action",
+   "published": "2026-10-01T20:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Day Guide: Stars vs Blues",
+   "published": "2026-10-02T14:03:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators Assign Ryan Ufko to Milwaukee (AHL)",
+   "published": "2026-10-02T16:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jake Oettinger",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Matt Duchene",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Jason Robertson",
+    "Roope Hintz",
+    "Tyler Seguin",
+    "Miro Heiskanen",
+    "Esa Lindell",
+    "Jake Oettinger",
+    "Thomas Harley",
+    "Jamie Benn"
+   ],
+   "summary": "The Dallas Stars are looking to start the 2026-27 season on a positive note after a 4-0 loss to the St. Louis Blues. Jake Oettinger is confirmed to start in goal, with Casey DeSmith possibly joining him if needed. Matt Duchene is out due to a lower-body injury, while the team is relying on veteran players to execute their new tactical approach."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [
+    "Steven Stamkos",
+    "Ryan O’Reilly",
+    "Alexander Kerfoot",
+    "Filip Forsberg",
+    "Roman Josi",
+    "Matthew Wood",
+    "Nils Hoglander",
+    "Ross Colton",
+    "Mavrik Bourque",
+    "Jonathan Marchessault",
+    "Reid Schaefer",
+    "Jack Drury",
+    "Adam Edstrom",
+    "Brady Skjei",
+    "Nick Perbix",
+    "Nicolas Hague",
+    "Adam Wilsby"
+   ],
+   "summary": "The Nashville Predators are eager to start their 2026-27 season with a strong performance. Juuse Saros is confirmed to start in goal, with Matt Murray as his backup. The team is healthy and has a mix of returning core players and new additions, including Mavrik Bourque and Ross Colton, who are set to make their debuts. The Predators are looking to build on their strong regular-season opener history."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Casey DeSmith",
+   "p_starter": 0.94,
+   "announced": 0.66,
+   "p_out": {
+    "Matt Duchene": 0.96
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.99,
+   "announced": 0.92,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 22.4,
+  "jev": 0.5
+ }
+}

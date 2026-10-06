@@ -1,0 +1,138 @@
+{
+ "game": {
+  "gameId": 2026020011,
+  "kickoff": "2026-10-01T23:00:00Z",
+  "away": "Buffalo Sabres",
+  "home": "Columbus Blue Jackets",
+  "away_id": 7,
+  "home_id": 29,
+  "away_abbr": "BUF",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:03:50.282160+00:00",
+ "articles": [
+  {
+   "title": "Sabres at Blue Jackets projected lineups",
+   "published": "2026-10-01T16:47:54.39Z",
+   "lineups": true
+  },
+  {
+   "title": "Blue Jackets announce 2026-27 season-opening roster",
+   "published": "2026-09-28T23:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Marchenko traded to Maple Leafs from Blue Jackets, signs six-year deal",
+   "published": "2026-09-29T16:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Home Opener presented by KeyBank | Party in the Plaza, Blue and Gold Carpet details and more ",
+   "published": "2026-09-29T16:50:11.7Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres’ forward lines take shape as Krebs, Norris swap places",
+   "published": "2026-09-29T17:41:40.332Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets sign defenseman Carson Soucy to new contract",
+   "published": "2026-09-29T18:25:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Olen Zellweger",
+     "detail": "concussion"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body"
+    },
+    {
+     "player": "Jason Zucker",
+     "detail": "sports hernia"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Mattias Samuelsson",
+     "detail": "lower body, expected to rejoin Wednesday's practice, not ruled out for opener"
+    },
+    {
+     "player": "Jiri Kulich",
+     "detail": "lower body, back at practice taking reps on fourth line, felt good today"
+    }
+   ],
+   "returning": [],
+   "summary": "The Sabres are set for their season opener with a projected lineup featuring Josh Norris, Tage Thompson, and Josh Doan on the top line. Key defensive questions remain with Samuelsson and Zellweger day-to-day, while Luukkonen is projected to start in goal after full practice participation. The team plans to dress seven healthy defensemen, suggesting potential roster moves if Samuelsson or Zellweger aren't ready."
+  },
+  "home": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dante Fabbro",
+     "detail": "broken hand"
+    },
+    {
+     "player": "Ivan Provorov",
+     "detail": "lower body"
+    },
+    {
+     "player": "Damon Severson",
+     "detail": "shoulder"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blue Jackets announced their 21-man season-opening roster, which includes Cam Talbot and Jet Greaves as the two goaltenders, with Talbot projected to start. The roster reflects the recent trade that sent Kirill Marchenko to Toronto and brought Matthew Knies back to Columbus, along with Steven Lorentz and Emil Andrae. Key defensive absences include Fabbro, Provorov, Severson, and Lundestrom, all dealing with various injuries."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Olen Zellweger": 0.84,
+    "Conor Timmins": 0.94,
+    "Alex Lyon": 0.95,
+    "Jason Zucker": 0.96,
+    "Mattias Samuelsson": 0.11,
+    "Jiri Kulich": 0.07
+   }
+  },
+  "home": {
+   "starter": "Cam Talbot",
+   "p_starter": 0.71,
+   "announced": 0.66,
+   "p_out": {
+    "Dante Fabbro": 0.94,
+    "Ivan Provorov": 0.94,
+    "Damon Severson": 0.92,
+    "Isac Lundestrom": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.0,
+  "jev": 0.5
+ }
+}

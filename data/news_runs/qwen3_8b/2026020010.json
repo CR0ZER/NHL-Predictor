@@ -1,0 +1,101 @@
+{
+ "game": {
+  "gameId": 2026020010,
+  "kickoff": "2026-10-01T23:00:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "New York Rangers",
+  "away_id": 14,
+  "home_id": 3,
+  "away_abbr": "TBL",
+  "home_abbr": "NYR"
+ },
+ "articles": [
+  {
+   "title": "Lightning at Rangers projected lineups",
+   "published": "2026-10-01T16:43:43.134Z",
+   "lineups": true
+  },
+  {
+   "title": "Rangers at Bruins: Pregame Notes",
+   "published": "2026-09-29T12:20:25.945Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Bruins projected lineups",
+   "published": "2026-09-29T17:38:35.834Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Bruins: Postgame Notes",
+   "published": "2026-09-30T03:05:17.068Z",
+   "lineups": false
+  },
+  {
+   "title": "How Syracuse helped Conor Geekie earn his opening-night NHL spot",
+   "published": "2026-09-30T14:29:39.089Z",
+   "lineups": false
+  },
+  {
+   "title": "The 2026 Lightning Home Opener Pregame Guide",
+   "published": "2026-09-30T19:37:39.255Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Dominic James",
+     "detail": "hand"
+    },
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Victor Hedman"
+   ],
+   "summary": "The Tampa Bay Lightning will be missing Dominic James (hand) and Yanni Gourde (hip) for this game. Victor Hedman is returning to the lineup for the first time since March 19, after a leave of absence for mental health reasons. Andrei Vasilevskiy is confirmed to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Igor Shesterkin",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "lower body (injured reserve)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The New York Rangers will have Igor Shesterkin confirmed as the starting goalie. Joonas Korpisalo is on injured reserve with a lower body injury and will miss this game. The team has a new roster with several new additions, including Alberts Smits, who is set to make his NHL debut."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Dominic James": 0.98,
+    "Yanni Gourde": 0.98
+   }
+  },
+  "home": {
+   "starter": "Igor Shesterkin",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Joonas Korpisalo": 0.87
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 16.3,
+  "jev": 0.5
+ }
+}

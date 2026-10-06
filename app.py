@@ -1,11 +1,15 @@
-"""Interface locale : prédictions du soir, simulation de paris à mise fixe (fictifs), suivi du modèle.
+"""Interface : prédictions du soir, simulation de paris à mise fixe (fictifs), suivi du modèle.
 
-    uv run --env-file .env python app.py        # puis http://127.0.0.1:8765
+    uv run --env-file .env python app.py                  # serveur local avec boutons : http://127.0.0.1:8765
+    uv run --env-file .env python app.py predict [DATE]   # mêmes tâches en ligne de commande (GitHub Actions)
+    uv run --env-file .env python app.py settle | odds
+    uv run python app.py export                           # page statique en lecture seule dans site/ (GitHub Pages)
 
 Paris fictifs enregistrés dans data/paper_bets.csv à la cote disponible au moment de la prédiction,
 réglés ensuite avec les résultats officiels NHL. Rien n'est jamais misé réellement.
 """
 import json
+import sys
 import threading
 import traceback
 from datetime import datetime, timedelta, timezone
@@ -176,7 +180,8 @@ def state():
         preds = preds.sort_values("kickoff", ascending=False)
     return {"bets": records(bets.sort_values("kickoff", ascending=False) if len(bets) else bets),
             "preds": records(preds), "summary": summary, "curve": curve,
-            "strategies": STRATEGIES, "today": et_today(), "job": JOB}
+            "strategies": STRATEGIES, "today": et_today(), "job": JOB,
+            "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
 
 
 def model_stats():
@@ -269,6 +274,31 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
 
+def export(out=ROOT / "site"):
+    """Page statique en lecture seule : l'interface + state.json et model.json, publiés tels quels sur GitHub Pages."""
+    out.mkdir(exist_ok=True)
+    html = (ROOT / "ui.html").read_text(encoding="utf-8")
+    (out / "index.html").write_text(html.replace("<script>", "<script>window.STATIC_MODE = true;</script>\n<script>", 1),
+                                    encoding="utf-8")
+    for name, data in (("state.json", state()), ("model.json", model_stats())):
+        (out / name).write_text(json.dumps(clean(data), default=str, ensure_ascii=False), encoding="utf-8")
+    print(f"Page statique écrite dans {out}")
+
+
+def cli(cmd, *args):
+    """Tâches sans serveur (planifiées par GitHub Actions). Code de sortie 1 si la tâche a échoué."""
+    jobs = {"predict": lambda: run_predict(args[0] if args else et_today(), 10.0, True),
+            "settle": run_settle, "odds": run_odds_update, "export": export}
+    if cmd not in jobs:
+        sys.exit(__doc__)
+    jobs[cmd]()
+    if JOB["msg"]:
+        print(JOB["msg"])
+
+
 if __name__ == "__main__":
-    print(f"NHL Predictor : http://127.0.0.1:{PORT}")
-    ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()
+    if len(sys.argv) > 1:
+        cli(*sys.argv[1:])
+    else:
+        print(f"NHL Predictor : http://127.0.0.1:{PORT}")
+        ThreadingHTTPServer(("127.0.0.1", PORT), Handler).serve_forever()

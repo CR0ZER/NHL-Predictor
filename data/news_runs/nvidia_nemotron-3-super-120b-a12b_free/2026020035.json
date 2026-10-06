@@ -1,0 +1,150 @@
+{
+ "game": {
+  "gameId": 2026020035,
+  "kickoff": "2026-10-04T17:00:00Z",
+  "away": "Winnipeg Jets",
+  "home": "Detroit Red Wings",
+  "away_id": 52,
+  "home_id": 17,
+  "away_abbr": "WPG",
+  "home_abbr": "DET"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:40.253523+00:00",
+ "articles": [
+  {
+   "title": "Jets at Red Wings projected lineups",
+   "published": "2026-10-03T19:36:00Z",
+   "lineups": true
+  },
+  {
+   "title": "GAMEDAY: Jets at Red Wings",
+   "published": "2026-10-04T10:43:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Morrissey sees faster Jets team taking shape",
+   "published": "2026-10-01T19:36:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings stress 'early urgency' ahead of season opener",
+   "published": "2026-10-01T20:55:01.953Z",
+   "lineups": false
+  },
+  {
+   "title": "Detroit Red Wings Reveal Fan Details for 2026-27 Opening Week, including Opening Night on Friday, Oct. 2 ",
+   "published": "2026-10-01T21:17:14.201Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings 'excited to get going' as their 2026-27 Opening Night nears",
+   "published": "2026-10-01T21:29:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": null,
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Hellebuyck",
+     "detail": "Suspended"
+    },
+    {
+     "player": "Elias Salomonsson",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Walker Duehr",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Jack St. Ivany",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Cole Koepke",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Haydn Fleury",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": ",
+    "detail\": "
+   ],
+   "summary": "The Winnipeg Jets (0-0-1) are coming off a 4-3 overtime loss to the Boston Bruins and will dress the same lineup as that game, barring any changes. Gabriel Vilardi missed practice Saturday but is expected to play after coach Arniel confirmed it was for maintenance. The Jets will use both Stuart Skinner and Clay Stevenson in net over the back-to-back games, with the starter for this game not yet announced."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Larkin",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Jacob Bernard-Docker",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Andreas Englund",
+     "detail": "Scratched"
+    },
+    {
+     "player": "William Wallinder",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Detroit Red Wings (0-1-0) lost their season opener to the New York Rangers and are dealing with several upper-body injuries, including Dylan Larkin, Jacob Bernard-Docker, and Marco Kasper, all of whom will miss this game. Andreas Englund and William Wallinder are scratched. Goaltending is projected to feature John Gibson and Daniil Tarasov, with no starter confirmed for this matchup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.9400000000000001,
+   "announced": 0.12,
+   "p_out": {
+    "Connor Hellebuyck": 0.98,
+    "Elias Salomonsson": 0.97,
+    "Walker Duehr": 0.95,
+    "Garrett Brown": 0.96,
+    "Jack St. Ivany": 0.95,
+    "Cole Koepke": 0.95,
+    "Haydn Fleury": 0.96
+   }
+  },
+  "home": {
+   "starter": "John Gibson",
+   "p_starter": 0.98,
+   "announced": 0.22,
+   "p_out": {
+    "Dylan Larkin": 0.76,
+    "Jacob Bernard-Docker": 0.88,
+    "Marco Kasper": 0.96,
+    "Andreas Englund": 0.96,
+    "William Wallinder": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.9,
+  "jev": 0.5
+ }
+}

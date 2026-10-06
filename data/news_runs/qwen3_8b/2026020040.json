@@ -1,0 +1,112 @@
+{
+ "game": {
+  "gameId": 2026020040,
+  "kickoff": "2026-10-05T23:00:00Z",
+  "away": "Philadelphia Flyers",
+  "home": "Tampa Bay Lightning",
+  "away_id": 4,
+  "home_id": 14,
+  "away_abbr": "PHI",
+  "home_abbr": "TBL"
+ },
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers vs. Lightning",
+   "published": "2026-10-05T13:30:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers Activate Barkey Off IR; Place Grebenkin on IR",
+   "published": "2026-10-05T21:00:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers at Lightning projected lineups",
+   "published": "2026-10-05T21:15:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Nuts & Bolts: Lightning host Caps in home opener",
+   "published": "2026-10-03T00:53:51.849Z",
+   "lineups": false
+  },
+  {
+   "title": "RAV4 Things: Flyers vs. Hurricanes",
+   "published": "2026-10-03T13:35:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes at Flyers projected lineups",
+   "published": "2026-10-03T16:32:32.667Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joseph Woll",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Denver Barkey",
+     "detail": "lower-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Denver Barkey",
+    "Nikita Grebenkin"
+   ],
+   "summary": "The Philadelphia Flyers are coming off a 3-2 overtime loss to the New Jersey Devils, where Joseph Woll delivered an outstanding goaltending performance. The team is facing challenges with puck possession and shot quality, and they are playing their fourth game in six nights. They are also missing key players due to injuries, but Barkey is expected to return for the road trip starting with the Tampa Bay Lightning."
+  },
+  "home": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Emil Lilleberg",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Dominic James",
+     "detail": "hand injury"
+    },
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Tampa Bay Lightning are coming off a 3-1 home win against the Washington Capitals, with Andrei Vasilevskiy making 20 saves. The team is in good form, but they are missing several players due to injuries, including defenseman Emil Lilleberg. The Lightning are looking to maintain their strong start to the season against the Flyers."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dan Vladar",
+   "p_starter": 0.55,
+   "announced": 0.97,
+   "p_out": {
+    "Nikita Grebenkin": 0.97,
+    "Denver Barkey": 0.05
+   }
+  },
+  "home": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.87,
+   "announced": 0.96,
+   "p_out": {
+    "Emil Lilleberg": 0.96,
+    "Dominic James": 0.89,
+    "Yanni Gourde": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 18.6,
+  "jev": 0.6
+ }
+}

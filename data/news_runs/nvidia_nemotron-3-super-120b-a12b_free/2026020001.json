@@ -1,0 +1,122 @@
+{
+ "game": {
+  "gameId": 2026020001,
+  "kickoff": "2026-09-29T21:00:00Z",
+  "away": "Florida Panthers",
+  "home": "Carolina Hurricanes",
+  "away_id": 13,
+  "home_id": 12,
+  "away_abbr": "FLA",
+  "home_abbr": "CAR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free,google/gemma-4-26b-a4b-it:free,google/gemma-4-31b-it:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T13:59:54.252347+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Hurricanes projected lineups",
+   "published": "2026-09-28T20:26:57.283Z",
+   "lineups": true
+  },
+  {
+   "title": "Canes Trim Roster To 27 Players",
+   "published": "2026-09-26T23:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Takeaways From The 2026 Preseason",
+   "published": "2026-09-27T15:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canes To Assign Three Players To Chicago Wolves",
+   "published": "2026-09-27T17:46:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Florida Panthers Agree to Terms with Forward Nathan Bastian on a One-Year, Two-Way Contract ",
+   "published": "2026-09-27T21:00:50.527Z",
+   "lineups": false
+  },
+  {
+   "title": "Canes Unveil Stanley Cup Championship Ring Created By Jason of Beverly Hills",
+   "published": "2026-09-28T00:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brad Marchand",
+     "detail": "Injured: lower body (surgery in August, will miss first month of season)"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "Injured: upper body (surgery, out indefinitely)"
+    },
+    {
+     "player": "Uvis Balinskis",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Florida Panthers open the 2026-27 season as defending Stanley Cup champions, facing the Hurricanes in the season opener. They are projected to start Jacob Markstrom in goal, with Akira Schmid as backup. Key absences include forwards Brad Marchand (lower-body surgery) and Jonah Gadjovich (upper-body surgery), both out indefinitely, while defenseman Uvis Balinskis is scratched. The lineup features their core of Barkov, Tkachuk, Reinhart, and Ekblad, aiming to begin the title defense on the road."
+  },
+  "home": {
+   "starting_goalie": "Brandon Bussi",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Seth Jarvis",
+     "detail": "Injured: shoulder (surgery in June, not expected to return until late October at earliest)"
+    },
+    {
+     "player": "Jesperi Kotkaniemi",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Mike Reilly",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Cayden Primeau",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Carolina Hurricanes begin the 2026-27 season as defending Stanley Cup champions, hosting the Panthers in the opener. They are projected to start Brandon Bussi in goal, with Pyotr Kochetkov as backup. The team has trimmed its roster and assigned several prospects (Nadeau, Sorum, Valimaki, Fransen) to the AHL, with Jarvis placed on injured non-roster due to shoulder surgery. Key scratches for the opener include Kotkaniemi, Reilly, and Primeau. The Hurricanes aim to rely on their core of Aho, Svechnikov, and Staal, with recent preseason showing strong form from lines featuring Hall, Stankoven, and Blake."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Brad Marchand": 0.96,
+    "Jonah Gadjovich": 0.98,
+    "Uvis Balinskis": 0.96
+   }
+  },
+  "home": {
+   "starter": "Brandon Bussi",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Seth Jarvis": 0.98,
+    "Jesperi Kotkaniemi": 0.97,
+    "Mike Reilly": 0.96,
+    "Cayden Primeau": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.5,
+  "jev": 0.6
+ }
+}

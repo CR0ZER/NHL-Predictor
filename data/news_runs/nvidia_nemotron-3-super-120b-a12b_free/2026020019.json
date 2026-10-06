@@ -1,0 +1,142 @@
+{
+ "game": {
+  "gameId": 2026020019,
+  "kickoff": "2026-10-03T00:00:00Z",
+  "away": "Boston Bruins",
+  "home": "Winnipeg Jets",
+  "away_id": 6,
+  "home_id": 52,
+  "away_abbr": "BOS",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:04:47.401961+00:00",
+ "articles": [
+  {
+   "title": "Bruins at Jets projected lineups",
+   "published": "2026-10-02T17:50:27.67Z",
+   "lineups": true
+  },
+  {
+   "title": "Inside David Pastrnak’s First Game as Bruins Captain, ‘It Was a Great Day’",
+   "published": "2026-09-30T04:10:54.167Z",
+   "lineups": false
+  },
+  {
+   "title": "Peterka wastes little time making mark in Bruins debut",
+   "published": "2026-09-30T05:27:18.378Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: September 21 Winnipeg Jets vs. Colorado Avalanche",
+   "published": "2026-09-30T17:20:00.028Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: September 22 Winnipeg Jets vs. Edmonton Oilers",
+   "published": "2026-09-30T17:21:27.824Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: September 25 Winnipeg Jets at Colorado Avalanche",
+   "published": "2026-09-30T17:22:55.581Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Michael Eyssimont",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Frederic Brunet",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Matthew Poitras",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Charlie McAvoy",
+     "detail": "Suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins (1-0-0) are projected to dress the same lineup that secured a 3-0 win over the New York Rangers in their season opener. Jeremy Swayman is expected to start in goal, with Michael DiPietro as backup. Key absences include suspended defenseman Charlie McAvoy (serving a six-game suspension) and injured forward Matthew Poitras (lower body), while forwards Michael Eyssimont and Frederic Brunet are scratched."
+  },
+  "home": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jack St. Ivany",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Cole Koepke",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Haydn Fleury",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Elias Salomonsson",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Walker Duer",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Connor Hellebuyck",
+     "detail": "Suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Jets (0-0-0) are projected to start Stuart Skinner in goal, with Clay Stevenson as backup, for their season opener against Boston. The team will have several debuts, including Isak Rosén, Viggo Björck, and Tyrel Bauer making their NHL first appearances. Notable absences include suspended starting goaltender Connor Hellebuyck (for not reporting to training camp) and injured defenders Elias Salomonsson (shoulder, expected back mid-October), Walker Duer, and Garrett Brown (both lower body)."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Michael Eyssimont": 0.97,
+    "Frederic Brunet": 0.98,
+    "Matthew Poitras": 0.96,
+    "Charlie McAvoy": 0.99
+   }
+  },
+  "home": {
+   "starter": "Stuart Skinner",
+   "p_starter": 1.0,
+   "announced": 0.94,
+   "p_out": {
+    "Jack St. Ivany": 0.98,
+    "Cole Koepke": 0.98,
+    "Haydn Fleury": 0.97,
+    "Elias Salomonsson": 0.97,
+    "Walker Duer": 0.98,
+    "Garrett Brown": 0.98,
+    "Connor Hellebuyck": 0.99
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.8,
+  "jev": 0.6
+ }
+}

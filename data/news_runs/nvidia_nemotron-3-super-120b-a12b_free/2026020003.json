@@ -1,0 +1,117 @@
+{
+ "game": {
+  "gameId": 2026020003,
+  "kickoff": "2026-09-30T00:00:00Z",
+  "away": "New York Rangers",
+  "home": "Boston Bruins",
+  "away_id": 3,
+  "home_id": 6,
+  "away_abbr": "NYR",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:02:34.528019+00:00",
+ "articles": [
+  {
+   "title": "Rangers at Bruins projected lineups",
+   "published": "2026-09-29T17:38:35.834Z",
+   "lineups": true
+  },
+  {
+   "title": "The Sunday Read: How Michael DiPietro Fell Back in Love with Hockey ",
+   "published": "2026-09-27T10:00:16.54Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins Name David Pastrnak 28th Captain in Team History",
+   "published": "2026-09-27T14:50:40.672Z",
+   "lineups": false
+  },
+  {
+   "title": "Pastrnak named Bruins captain, first since Marchand ",
+   "published": "2026-09-27T17:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins Announce Training Camp Roster Transactions",
+   "published": "2026-09-27T18:05:41.952Z",
+   "lineups": false
+  },
+  {
+   "title": "Pastrnak Reacts to Being Named 28th Bruins Captain: 'Grateful, Humbled, and Honored'",
+   "published": "2026-09-27T18:24:05.605Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Igor Shesterkin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Vincent Iorio",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Jaroslav Chmelar",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Matthew Robertson",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Scott Morrow",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Rangers begin the season with a 0-0-0 record, relying on Igor Shesterkin as their projected starting goaltender. They will be without defenseman Vincent Iorio due to a lower-body injury, and have scratched Jaroslav Chmelar, Matthew Robertson, and Scott Morrow from the lineup. The team looks to build chemistry with a mix of veterans and young talent in their opening game against the Bruins."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Matt Poitras",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Charlie McAvoy",
+     "detail": "Suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins open the season 0-0-0 with Jeremy Swayman projected to start in goal. They will be without forward Matt Poitras due to a lower-body injury and defenseman Charlie McAvoy serving a six-game suspension. David Pastrnak has been named the new team captain, marking a leadership transition as Boston begins its campaign against the Rangers."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Igor Shesterkin",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Vincent Iorio": 0.98,
+    "Jaroslav Chmelar": 0.97,
+    "Matthew Robertson": 0.97,
+    "Scott Morrow": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Matt Poitras": 0.99,
+    "Charlie McAvoy": 0.99
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.1,
+  "jev": 0.6
+ }
+}

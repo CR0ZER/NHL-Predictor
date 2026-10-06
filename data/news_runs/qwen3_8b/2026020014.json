@@ -1,0 +1,94 @@
+{
+ "game": {
+  "gameId": 2026020014,
+  "kickoff": "2026-10-02T01:00:00Z",
+  "away": "Seattle Kraken",
+  "home": "Calgary Flames",
+  "away_id": 55,
+  "home_id": 20,
+  "away_abbr": "SEA",
+  "home_abbr": "CGY"
+ },
+ "articles": [
+  {
+   "title": "Kraken at Flames projected lineups",
+   "published": "2026-10-01T18:39:47.733Z",
+   "lineups": true
+  },
+  {
+   "title": "'Gotta Fight For A Role'",
+   "published": "2026-09-29T21:35:24.95Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken Feeling Connected As New Season Opens ",
+   "published": "2026-09-29T21:43:32.569Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Sign Chase Harrington",
+   "published": "2026-09-29T22:56:18.134Z",
+   "lineups": false
+  },
+  {
+   "title": "'Some Really Special Moments'",
+   "published": "2026-09-30T14:45:22.263Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Announce Leadership Group",
+   "published": "2026-09-30T17:42:46.009Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Philipp Grubauer",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Mackie Samoskevich",
+     "detail": "injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Seattle Kraken are starting their sixth season with a projected lineup that includes several young, emerging players. Despite the absence of injured forward Mackie Samoskevich, the team feels more united than ever, with a focus on consistency and teamwork."
+  },
+  "home": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "injured (hip), will start season on injured reserve"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Calgary Flames are entering their 2026-27 season with a mix of veterans and young talent, including a new leadership group led by Mikael Backlund. Despite the absence of injured forward Jonathan Huberdeau, the team is focused on building on their previous season's performance and adapting to the new arena environment."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joey Daccord",
+   "p_starter": 0.69,
+   "announced": 0.96,
+   "p_out": {
+    "Mackie Samoskevich": 0.79
+   }
+  },
+  "home": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Jonathan Huberdeau": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 16.3,
+  "jev": 0.5
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020039,
+  "kickoff": "2026-10-05T01:00:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Vancouver Canucks",
+  "away_id": 54,
+  "home_id": 23,
+  "away_abbr": "VGK",
+  "home_abbr": "VAN"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:07:02.322078+00:00",
+ "articles": [
+  {
+   "title": "Golden Knights at Canucks projected lineups",
+   "published": "2026-10-04T18:40:00Z",
+   "lineups": true
+  },
+  {
+   "title": "A Bond Forged Between Us: Golden Knights Honor 1 October on Ninth Remembrance of Tragedy",
+   "published": "2026-10-02T02:18:39.471Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights Announce 2026-27 Television Broadcast Team",
+   "published": "2026-10-02T14:50:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Oct. 2, 2026",
+   "published": "2026-10-02T15:00:22.351Z",
+   "lineups": false
+  },
+  {
+   "title": "Daren Hermiston Joins Canucks Insider Podcast to Discuss Helping Prospects Grow Their Games ",
+   "published": "2026-10-02T17:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Golden Knights projected lineups",
+   "published": "2026-10-02T19:13:55.226Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Adin Hill",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Coghlan",
+     "detail": "scratched"
+    },
+    {
+     "player": "Raphael Lavoie",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights are projected to start Adin Hill in goal, marking his first start of the season. The lineup is expected to be unchanged from their 4-3 loss to the Anaheim Ducks on Friday, with Hill replacing Carter Hart as the only change. Dylan Coghlan and Raphael Lavoie are scratched, and there are no reported injuries."
+  },
+  "home": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "scratched"
+    },
+    {
+     "player": "Victor Mancini",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jake DeBrusk",
+     "detail": "illness"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "shoulder injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jake DeBrusk",
+     "detail": "day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "The Canucks are projected to start Kevin Lankinen in goal after Leevi Merilainen's first start. Jake DeBrusk is day-to-day with illness and will miss a second straight game, while Thatcher Demko (hip) and Filip Chytil (shoulder) are injured. Guillaume Brisebois and Victor Mancini are scratched. The team did not hold a morning skate after their 4-1 win over the Calgary Flames on Saturday."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Adin Hill",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Dylan Coghlan": 0.98,
+    "Raphael Lavoie": 0.97
+   }
+  },
+  "home": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Guillaume Brisebois": 0.98,
+    "Victor Mancini": 0.97,
+    "Jake DeBrusk": 0.97,
+    "Thatcher Demko": 0.97,
+    "Filip Chytil": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.0,
+  "jev": 0.5
+ }
+}

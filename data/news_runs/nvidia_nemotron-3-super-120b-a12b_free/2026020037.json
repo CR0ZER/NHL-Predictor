@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020037,
+  "kickoff": "2026-10-05T00:00:00Z",
+  "away": "Florida Panthers",
+  "home": "Anaheim Ducks",
+  "away_id": 13,
+  "home_id": 24,
+  "away_abbr": "FLA",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:51.242006+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Ducks projected lineups",
+   "published": "2026-10-04T16:09:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Forsling (upper body) a late scratch vs. Sharks",
+   "published": "2026-10-02T02:38:00.211Z",
+   "lineups": false
+  },
+  {
+   "title": "Barkov leaves in second period for Panthers following awkward fall",
+   "published": "2026-10-02T06:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hispanic Excellence: Business",
+   "published": "2026-10-02T16:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Golden Knights projected lineups",
+   "published": "2026-10-02T19:13:55.226Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Ducks Begin Season with Playoff Rematch vs. Golden Knights",
+   "published": "2026-10-02T20:06:12.73Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "Injured: lower body (placed on long-term injured reserve, will miss at least 10 games and 24 days)"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "Injured: neck"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "Injured: lower body"
+    },
+    {
+     "player": "Gustav Forsling",
+     "detail": "Injured: upper body (game-time decision)"
+    },
+    {
+     "player": "Alexander Petrovic",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Gustav Forsling",
+     "detail": "Injured: upper body (game-time decision)"
+    }
+   ],
+   "returning": [],
+   "summary": "The Panthers (1-0-1) are dealing with significant injuries to key players Aleksander Barkov (lower body, LTIR), Jonah Gadjovich (neck), Brad Marchand (lower body), and Gustav Forsling (upper body, game-time decision). Forsling's status is uncertain as he is a game-time decision after being a late scratch versus the Sharks. The team will rely on Jacob Markstrom in goal and a projected lineup featuring Brady Tkachuk, Sam Reinhart, and Matthew Tkachuk on the top line."
+  },
+  "home": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Drew Helleson",
+     "detail": "Injured: lower body"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "Injured: lower body"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "Injured: hip"
+    },
+    {
+     "player": "Nikita Klepov",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nick Jensen",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (1-0-0) are missing defensemen Drew Helleson and Ian Moore (both lower body), forward Troy Terry (hip), and have scratched Nikita Klepov, Nick Jensen, and Frank Vatrano. Lukas Dostal is projected to start in goal. The team's projected lineup includes A.J. Greer, Leo Carlsson, and Cutter Gauthier on the top line, with rookie Judd Caulfield and Noah Warren in the mix."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Akira Schmid",
+   "p_starter": 0.83,
+   "announced": 0.97,
+   "p_out": {
+    "Aleksander Barkov": 0.98,
+    "Jonah Gadjovich": 0.97,
+    "Brad Marchand": 0.81,
+    "Gustav Forsling": 0.33,
+    "Alexander Petrovic": 0.97
+   }
+  },
+  "home": {
+   "starter": "Lukas Dostal",
+   "p_starter": 0.99,
+   "announced": 0.92,
+   "p_out": {
+    "Drew Helleson": 0.97,
+    "Ian Moore": 0.97,
+    "Troy Terry": 0.97,
+    "Nikita Klepov": 0.97,
+    "Nick Jensen": 0.97,
+    "Frank Vatrano": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.9,
+  "jev": 0.6
+ }
+}

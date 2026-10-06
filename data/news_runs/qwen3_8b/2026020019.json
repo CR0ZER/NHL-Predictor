@@ -1,0 +1,139 @@
+{
+ "game": {
+  "gameId": 2026020019,
+  "kickoff": "2026-10-03T00:00:00Z",
+  "away": "Boston Bruins",
+  "home": "Winnipeg Jets",
+  "away_id": 6,
+  "home_id": 52,
+  "away_abbr": "BOS",
+  "home_abbr": "WPG"
+ },
+ "articles": [
+  {
+   "title": "Bruins at Jets projected lineups",
+   "published": "2026-10-02T17:50:27.67Z",
+   "lineups": true
+  },
+  {
+   "title": "Inside David Pastrnak’s First Game as Bruins Captain, ‘It Was a Great Day’",
+   "published": "2026-09-30T04:10:54.167Z",
+   "lineups": false
+  },
+  {
+   "title": "Peterka wastes little time making mark in Bruins debut",
+   "published": "2026-09-30T05:27:18.378Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: September 21 Winnipeg Jets vs. Colorado Avalanche",
+   "published": "2026-09-30T17:20:00.028Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: September 22 Winnipeg Jets vs. Edmonton Oilers",
+   "published": "2026-09-30T17:21:27.824Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: September 25 Winnipeg Jets at Colorado Avalanche",
+   "published": "2026-09-30T17:22:55.581Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Michael Eyssimont",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frederic Brunet",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matthew Poitras",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Charlie McAvoy",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Boston Bruins are coming off a strong 3-0 win against the New York Rangers, with David Pastrnak making his debut as captain. The team is expected to maintain the same lineup, with Jeremy Swayman confirmed as the starting goalie. Key players like McAvoy are suspended, and Poitras is injured, but the team is in good form heading into the game."
+  },
+  "home": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Jack St. Ivany",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cole Koepke",
+     "detail": "scratched"
+    },
+    {
+     "player": "Haydn Fleury",
+     "detail": "scratched"
+    },
+    {
+     "player": "Elias Salomonsson",
+     "detail": "injured (shoulder)"
+    },
+    {
+     "player": "Walker Duer",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Connor Hellebuyck",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Winnipeg Jets are starting their season with a 0-0-0 record, and Stuart Skinner is confirmed as the starting goalie. Several key players are injured or suspended, including Hellebuyck, who was suspended after not reporting to training camp. The team is expected to rely on their projected lineup, with new players like Björck and Bauer making their NHL debuts."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Michael Eyssimont": 0.98,
+    "Frederic Brunet": 0.98,
+    "Matthew Poitras": 0.96,
+    "Charlie McAvoy": 0.99
+   }
+  },
+  "home": {
+   "starter": "Stuart Skinner",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Jack St. Ivany": 0.98,
+    "Cole Koepke": 0.97,
+    "Haydn Fleury": 0.97,
+    "Elias Salomonsson": 0.97,
+    "Walker Duer": 0.98,
+    "Garrett Brown": 0.98,
+    "Connor Hellebuyck": 0.99
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 22.4,
+  "jev": 0.6
+ }
+}

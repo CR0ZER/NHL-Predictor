@@ -1,0 +1,128 @@
+{
+ "game": {
+  "gameId": 2026020034,
+  "kickoff": "2026-10-04T02:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "San Jose Sharks",
+  "away_id": 26,
+  "home_id": 28,
+  "away_abbr": "LAK",
+  "home_abbr": "SJS"
+ },
+ "articles": [
+  {
+   "title": "Kings at Sharks projected lineups",
+   "published": "2026-10-03T18:53:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Top No. 1 NHL Draft picks of all-time, according to NHL.com’s Dan Rosen",
+   "published": "2026-10-01T05:31:00Z",
+   "lineups": false
+  },
+  {
+   "title": "FINAL - LAK 4, COL 8",
+   "published": "2026-10-01T06:05:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks unveil what's new at SAP Center for the 2026-27 season",
+   "published": "2026-10-01T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Sharks projected lineups",
+   "published": "2026-10-01T19:54:30.518Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks pull up to home opener in vintage cars ",
+   "published": "2026-10-02T02:44:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Kevin Fiala",
+     "detail": "leg surgery"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Erik Gustafsson",
+    "Brian Dumoulin",
+    "Corey Perry",
+    "Joel Armia",
+    "Alex Laferriere",
+    "Trevor Moore",
+    "Erik Haula",
+    "Scott Laughton",
+    "Anton Forsberg"
+   ],
+   "summary": "The Los Angeles Kings are coming off a 8-4 loss to the Colorado Avalanche in their season opener. They have several returning players, including forwards Joel Armia, Alex Laferriere, and Trevor Moore, as well as defensemen Brian Dumoulin and Erik Gustafsson. Anton Forsberg is set to make his season debut as the starting goalie, with Darcy Kuemper confirmed to start. Kevin Fiala is out due to leg surgery."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Adam Gaudette",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jacob Trouba",
+     "detail": "illness"
+    }
+   ],
+   "returning": [
+    "Mason Marchment",
+    "Macklin Celebrini",
+    "Will Smith",
+    "Ivar Stenberg",
+    "Alexander Wennberg",
+    "Collin Graf",
+    "Igor Chernyshov",
+    "Michael Misa",
+    "Tyler Toffoli",
+    "Barclay Goodrow",
+    "Zack Ostapchuk",
+    "Kiefer Sherwood",
+    "Darnell Nurse",
+    "Michael Kesselring",
+    "Nolan Allan",
+    "Dmitry Orlov",
+    "Luca Cagnoni"
+   ],
+   "summary": "The San Jose Sharks are coming off a 1-0 victory over the Florida Panthers in their season opener. They have several returning players, including forwards Mason Marchment, Macklin Celebrini, and Will Smith, as well as defensemen Darnell Nurse and Dmitry Orlov. Yaroslav Askarov is confirmed to start in goal, with Alex Nedeljkovic as his backup. Adam Gaudette is out due to an upper body injury, and Jacob Trouba is a game-time decision due to illness."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Anton Forsberg",
+   "p_starter": 0.97,
+   "announced": 0.95,
+   "p_out": {
+    "Kevin Fiala": 0.98
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.95,
+   "announced": 0.96,
+   "p_out": {
+    "Adam Gaudette": 0.81,
+    "Jacob Trouba": 0.25
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 25.2,
+  "jev": 0.5
+ }
+}

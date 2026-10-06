@@ -1,0 +1,129 @@
+{
+ "game": {
+  "gameId": 2026020041,
+  "kickoff": "2026-10-05T23:30:00Z",
+  "away": "Ottawa Senators",
+  "home": "Boston Bruins",
+  "away_id": 9,
+  "home_id": 6,
+  "away_abbr": "OTT",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:07:28.427123+00:00",
+ "articles": [
+  {
+   "title": "Senators at Bruins projected lineups",
+   "published": "2026-10-05T17:02:22.439Z",
+   "lineups": true
+  },
+  {
+   "title": "Hagens Scores First NHL Goal in Bruins’ 4-3 OT Win Against Jets ",
+   "published": "2026-10-03T04:20:29.323Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Maple Leafs projected lineups",
+   "published": "2026-10-03T16:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins at Wild projected lineups",
+   "published": "2026-10-03T17:04:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators open season with provincial clash",
+   "published": "2026-10-03T17:17:30.362Z",
+   "lineups": false
+  },
+  {
+   "title": "Alfredsson ‘emotional’ seeing Senators again as Maple Leafs associate coach",
+   "published": "2026-10-03T18:44:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Artem Zub",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jake Sanderson",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Ridly Greig",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Senators are 1-0-0 to start the season after a win over the Maple Leafs. They will be without several key players including Zub, MacDermid, Burakovsky, Sanderson, and suspended Greig. Linus Ullmark is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Sean Kuraly",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jonathan Aspirot",
+     "detail": "scratched"
+    },
+    {
+     "player": "Charlie McAvoy",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"James Hagens\", \"detail\": \"making season debut\"}, {\"player\": \"Fraser Minten\", \"detail\": \"making season debut\"}, {\"player\": \"Frederic Brunet\", \"detail\": \"making season debut\"], \"summary\": "
+   ],
+   "summary": "The Bruins are 2-1-0 and coming off a 4-3 overtime win over the Jets. They will be without scratched Kuraly and Aspirot, and suspended McAvoy. Jeremy Swayman is projected to start in goal, with several rookies making their season debuts."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Linus Ullmark",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Artem Zub": 0.97,
+    "Kurtis MacDermid": 0.96,
+    "Andre Burakovsky": 0.97,
+    "Jake Sanderson": 0.96,
+    "Ridly Greig": 0.98
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Sean Kuraly": 0.97,
+    "Jonathan Aspirot": 0.97,
+    "Charlie McAvoy": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.5,
+  "jev": 0.5
+ }
+}

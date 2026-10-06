@@ -1,0 +1,130 @@
+{
+ "game": {
+  "gameId": 2026020020,
+  "kickoff": "2026-10-03T01:00:00Z",
+  "away": "St. Louis Blues",
+  "home": "Dallas Stars",
+  "away_id": 19,
+  "home_id": 25,
+  "away_abbr": "STL",
+  "home_abbr": "DAL"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:04:55.309194+00:00",
+ "articles": [
+  {
+   "title": "Blues at Stars projected lineups",
+   "published": "2026-10-02T17:36:12.634Z",
+   "lineups": true
+  },
+  {
+   "title": "Dallas Stars sign Casey DeSmith to a two-year, $5 million contract extension",
+   "published": "2026-09-30T01:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blues Home Opener video 'mirrors' St. Louis’ grit ",
+   "published": "2026-09-30T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Charles Wesley Godwin to headline Dallas Stars Hall of Fame Induction Gala",
+   "published": "2026-09-30T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "DeSmith signs two-year, $5 million contract with Stars",
+   "published": "2026-09-30T17:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Tucker undergoes surgery on right knee",
+   "published": "2026-09-30T19:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joel Hofer",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zach Dean",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Barron",
+     "detail": "scratched"
+    },
+    {
+     "player": "Logan Mailloux",
+     "detail": "hand injury"
+    },
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blues are projected to start Joel Hofer in net for their season opener, with Jordan Binnington as backup. Key absences include scratched forwards Zach Dean, Dillon Dube, and Justin Barron, plus injured defensemen Logan Mailloux (hand) and Tyler Tucker (knee). The team is beginning the season 0-0-0 with several lineup changes, including NHL debuts for Adam Jiricek and Joel Hofer's first opening-night start."
+  },
+  "home": {
+   "starting_goalie": "Jake Oettinger",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Colin Blackwell",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kyle Capobianco",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matt Duchene",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/8479193",
+    "Tyler Seguin"
+   ],
+   "summary": "The Stars are projected to start Jake Oettinger in net, with Casey DeSmith as backup. They will be without scratched forwards Colin Blackwell and Kyle Capobianco, plus injured center Matt Duchene (lower body). Notable returns include Tyler Seguin playing his first regular-season game since Dec. 2, 2025 after ACL surgery, and defenseman Adam Jiricek making his NHL debut. The team opens the season 0-0-0."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joel Hofer",
+   "p_starter": 0.86,
+   "announced": 0.98,
+   "p_out": {
+    "Zach Dean": 0.97,
+    "Dillon Dube": 0.97,
+    "Justin Barron": 0.96,
+    "Logan Mailloux": 0.95,
+    "Tyler Tucker": 0.96
+   }
+  },
+  "home": {
+   "starter": "Jake Oettinger",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Colin Blackwell": 0.97,
+    "Kyle Capobianco": 0.97,
+    "Matt Duchene": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.8,
+  "jev": 0.5
+ }
+}

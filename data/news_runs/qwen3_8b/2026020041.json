@@ -1,0 +1,111 @@
+{
+ "game": {
+  "gameId": 2026020041,
+  "kickoff": "2026-10-05T23:30:00Z",
+  "away": "Ottawa Senators",
+  "home": "Boston Bruins",
+  "away_id": 9,
+  "home_id": 6,
+  "away_abbr": "OTT",
+  "home_abbr": "BOS"
+ },
+ "articles": [
+  {
+   "title": "Senators at Bruins projected lineups",
+   "published": "2026-10-05T17:02:22.439Z",
+   "lineups": true
+  },
+  {
+   "title": "Hagens Scores First NHL Goal in Bruins’ 4-3 OT Win Against Jets ",
+   "published": "2026-10-03T04:20:29.323Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Maple Leafs projected lineups",
+   "published": "2026-10-03T16:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins at Wild projected lineups",
+   "published": "2026-10-03T17:04:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators open season with provincial clash",
+   "published": "2026-10-03T17:17:30.362Z",
+   "lineups": false
+  },
+  {
+   "title": "Alfredsson ‘emotional’ seeing Senators again as Maple Leafs associate coach",
+   "published": "2026-10-03T18:44:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Artem Zub",
+     "detail": "knee"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "upper body"
+    },
+    {
+     "player": "Jake Sanderson",
+     "detail": "undisclosed"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Jake Sanderson"
+   ],
+   "summary": "The Ottawa Senators are coming off a 1-0-0 start to the season. Jake Sanderson is returning to the lineup after missing part of training camp due to an undisclosed injury. Linus Ullmark is confirmed to start in goal, while several key players are injured or out for the game."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Charlie McAvoy",
+     "detail": "suspended"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Boston Bruins are coming off a 2-1-0 start to the season. Jeremy Swayman is confirmed to start in goal, while Charlie McAvoy is serving the fourth of a six-game suspension for a slashing incident. The team is in good form, with recent wins and a strong showing in their latest game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Linus Ullmark",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Artem Zub": 0.96,
+    "Kurtis MacDermid": 0.96,
+    "Andre Burakovsky": 0.94,
+    "Jake Sanderson": 0.92
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Charlie McAvoy": 0.99
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 18.7,
+  "jev": 0.6
+ }
+}

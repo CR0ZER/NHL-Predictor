@@ -1,0 +1,94 @@
+{
+ "game": {
+  "gameId": 2026020005,
+  "kickoff": "2026-09-30T02:30:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "Vegas Golden Knights",
+  "away_id": 16,
+  "home_id": 54,
+  "away_abbr": "CHI",
+  "home_abbr": "VGK"
+ },
+ "articles": [
+  {
+   "title": "Blackhawks at Golden Knights projected lineups",
+   "published": "2026-09-29T18:37:20.805Z",
+   "lineups": true
+  },
+  {
+   "title": "Golden Knights entering 10th season having made massive impact on city, NHL",
+   "published": "2026-09-27T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights Enter 10th Season Having Made Massive Impact",
+   "published": "2026-09-27T13:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Blackhawks Announce Training Camp Roster Moves",
+   "published": "2026-09-27T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Nazar hungry to help 'in-your-face' Blackhawks end six-year playoff drought",
+   "published": "2026-09-28T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Beasley Media Group Named Official Audio Partner of Vegas Golden Knights",
+   "published": "2026-09-28T18:09:03.887Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "shoulder"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Chicago Blackhawks are entering their first season under new captain Connor Bedard, who is expected to miss the first month due to a shoulder injury. Frank Nazar is stepping into the No. 1 center role, playing with Patrick Kane and Roman Kantserov. The team is looking to end a six-year playoff drought with a young, energetic group."
+  },
+  "home": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Raphael Lavoie",
+     "detail": "undisclosed"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vegas Golden Knights are celebrating their 10th season in the NHL, having made a massive impact on Las Vegas and the NHL as a whole. They have made the playoffs eight times in nine seasons, including a Stanley Cup win in 2023. Connelly, the No. 19 pick in the 2024 NHL Draft, is expected to make his NHL debut."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Spencer Knight",
+   "p_starter": 1.0,
+   "announced": 0.95,
+   "p_out": {
+    "Connor Bedard": 0.98
+   }
+  },
+  "home": {
+   "starter": "Carter Hart",
+   "p_starter": 0.99,
+   "announced": 0.89,
+   "p_out": {
+    "Raphael Lavoie": 0.91
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 16.9,
+  "jev": 0.6
+ }
+}

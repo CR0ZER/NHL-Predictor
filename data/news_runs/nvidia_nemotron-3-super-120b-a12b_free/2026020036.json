@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020036,
+  "kickoff": "2026-10-04T22:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "New York Rangers",
+  "away_id": 68,
+  "home_id": 3,
+  "away_abbr": "UTA",
+  "home_abbr": "NYR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:45.504654+00:00",
+ "articles": [
+  {
+   "title": "Mammoth at Rangers projected lineups",
+   "published": "2026-10-04T13:24:00Z",
+   "lineups": true
+  },
+  {
+   "title": "RECAP: Utah 6, Chicago 0",
+   "published": "2026-10-02T01:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "FDNY, NYPD hockey teams join Rangers on ice for 9/11 memorial tribute",
+   "published": "2026-10-02T02:07:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Knicks coach Mike Brown, Gretzky cheer on Rangers at home opener ",
+   "published": "2026-10-02T02:35:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers vs. Lightning: Postgame Notes",
+   "published": "2026-10-02T03:05:02.923Z",
+   "lineups": false
+  },
+  {
+   "title": "Shesterkin's goalie goal at Garden lights up social media",
+   "published": "2026-10-02T03:27:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Liam O'Brien",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Kailer Yamamoto",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nick DeSimone",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "Injured (shoulder)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Utah Mammoth (2-0-0) are projected to start Karel Vejmelka in goal for their third straight game. They will be without scratched players Liam O'Brien, Kailer Yamamoto, and Nick DeSimone, plus injured Maveric Lamoureux (shoulder). The team comes off a 6-0 shutout win over Chicago to open the season."
+  },
+  "home": {
+   "starting_goalie": "Igor Shesterkin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Matthew Robertson",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Matt Rempe",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Scott Morrow",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The New York Rangers (2-1-0) are projected to start Igor Shesterkin in goal for their second game of the season. They will be without scratched players Matthew Robertson, Matt Rempe, and Scott Morrow, plus injured Joonas Korpisalo (lower body). The Rangers earned their first two points of the season in a 5-1 home opener win over Tampa Bay, where Shesterkin scored a goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Liam O'Brien": 0.97,
+    "Kailer Yamamoto": 0.97,
+    "Nick DeSimone": 0.97,
+    "Maveric Lamoureux": 0.97
+   }
+  },
+  "home": {
+   "starter": "Igor Shesterkin",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Matthew Robertson": 0.96,
+    "Matt Rempe": 0.97,
+    "Scott Morrow": 0.96,
+    "Joonas Korpisalo": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.6,
+  "jev": 0.4
+ }
+}

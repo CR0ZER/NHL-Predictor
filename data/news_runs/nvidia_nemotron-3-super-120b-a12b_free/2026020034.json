@@ -1,0 +1,132 @@
+{
+ "game": {
+  "gameId": 2026020034,
+  "kickoff": "2026-10-04T02:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "San Jose Sharks",
+  "away_id": 26,
+  "home_id": 28,
+  "away_abbr": "LAK",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:06:32.639859+00:00",
+ "articles": [
+  {
+   "title": "Kings at Sharks projected lineups",
+   "published": "2026-10-03T18:53:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Top No. 1 NHL Draft picks of all-time, according to NHL.com’s Dan Rosen",
+   "published": "2026-10-01T05:31:00Z",
+   "lineups": false
+  },
+  {
+   "title": "FINAL - LAK 4, COL 8",
+   "published": "2026-10-01T06:05:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks unveil what's new at SAP Center for the 2026-27 season",
+   "published": "2026-10-01T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Sharks projected lineups",
+   "published": "2026-10-01T19:54:30.518Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks pull up to home opener in vintage cars ",
+   "published": "2026-10-02T02:44:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Anton Forsberg",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Andre Lee",
+     "detail": "scratched"
+    },
+    {
+     "player": "Samuel Helenius",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "injured (leg surgery)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/",
+    "Corey Perry",
+    "detail: season debut after missing season-opener due to personal reasons"
+   ],
+   "summary": "The Kings (0-1-0) are projected to start Anton Forsberg in goal for his season debut, with Darcy Kuemper as backup. They will dress 11 forwards and seven defensemen, scratching Andre Lee and Samuel Helenius. Kevin Fiala remains out with leg surgery, while Corey Perry and Erik Gustafsson are set to make their season and Los Angeles debuts, respectively."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ty Dellandrea",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brett Leason",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sam Dickinson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "injured (upper body)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jacob Trouba",
+     "detail": "game-time decision due to illness"
+    }
+   ],
+   "returning": [],
+   "summary": "The Sharks (1-0-0) are projected to start Yaroslav Askarov in goal, with Alex Nedeljkovic as backup. They will scratch Ty Dellandrea, Brett Leason, and Sam Dickinson, while Adam Gaudette remains out with an upper-body injury. Jacob Trouba is a game-time decision due to illness; if he does not play, Sam Dickinson would enter the lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Anton Forsberg",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Andre Lee": 0.97,
+    "Samuel Helenius": 0.97,
+    "Kevin Fiala": 0.98
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.96,
+   "announced": 0.96,
+   "p_out": {
+    "Ty Dellandrea": 0.97,
+    "Brett Leason": 0.97,
+    "Sam Dickinson": 0.73,
+    "Adam Gaudette": 0.83,
+    "Jacob Trouba": 0.25
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.1,
+  "jev": 0.5
+ }
+}

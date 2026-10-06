@@ -1,0 +1,123 @@
+{
+ "game": {
+  "gameId": 2026020052,
+  "kickoff": "2026-10-07T02:00:00Z",
+  "away": "Florida Panthers",
+  "home": "Los Angeles Kings",
+  "away_id": 13,
+  "home_id": 26,
+  "away_abbr": "FLA",
+  "home_abbr": "LAK"
+ },
+ "run_at": "2026-10-06T12:24:15.369374+00:00",
+ "articles": [
+  {
+   "title": "FINAL - LAK 4, SJS 5 (OT)",
+   "published": "2026-10-04T05:05:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Panthers ready to face ‘great transition game’ in Anaheim ",
+   "published": "2026-10-04T06:53:38.847Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Ducks projected lineups",
+   "published": "2026-10-04T16:09:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘A great boost’: Marchand set to make season debut vs. Ducks",
+   "published": "2026-10-04T21:52:40.537Z",
+   "lineups": false
+  },
+  {
+   "title": "Gudas welcomed back with ovation during return to Anaheim",
+   "published": "2026-10-05T02:08:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Barkov placed on long-term injured reserve by Panthers, timeline unknown",
+   "published": "2026-10-05T03:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "lower-body injury, on long-term injured reserve (LTIR)"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "lower-body injury (missed final 19 games last season, returned for this game)"
+    },
+    {
+     "player": "Gustav Forsling",
+     "detail": "upper-body injury, game-time decision"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Brad Marchand",
+    "Gustav Forsling"
+   ],
+   "summary": "The Florida Panthers are missing their captain, Aleksander Barkov, who is on long-term injured reserve. They are relying on depth and returning players like Brad Marchand and Gustav Forsling. The team has a strong record against the Ducks and is looking to continue their strong start to the season."
+  },
+  "home": {
+   "starting_goalie": "Ville Husso",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Drew Helleson",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Los Angeles Kings are looking to build on their first point of the season after a close overtime loss to the Sharks. They have a strong offensive line with players like Adrian Kempe and Quinton Byfield, but they are missing key players like Drew Helleson and Ian Moore."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Akira Schmid",
+   "p_starter": 0.39,
+   "announced": 0.73,
+   "p_out": {
+    "Aleksander Barkov": 0.96,
+    "Jonah Gadjovich": 0.95,
+    "Brad Marchand": 0.53,
+    "Gustav Forsling": 0.29
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.96,
+   "announced": 0.13,
+   "p_out": {
+    "Drew Helleson": 0.3,
+    "Ian Moore": 0.51,
+    "Troy Terry": 0.3
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 22.3,
+  "jev": 0.7
+ }
+}

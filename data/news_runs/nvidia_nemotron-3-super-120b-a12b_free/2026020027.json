@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020027,
+  "kickoff": "2026-10-03T23:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Columbus Blue Jackets",
+  "away_id": 68,
+  "home_id": 29,
+  "away_abbr": "UTA",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:05:49.231627+00:00",
+ "articles": [
+  {
+   "title": "Mammoth at Blue Jackets projected lineups",
+   "published": "2026-10-03T16:52:36.586Z",
+   "lineups": true
+  },
+  {
+   "title": "Utah Opens 2026-27 Season Against Chicago",
+   "published": "2026-10-01T14:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Blue Jackets projected lineups",
+   "published": "2026-10-01T16:47:54.39Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets place defenseman Ivan Provorov on Injured Reserve",
+   "published": "2026-10-01T17:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks at Mammoth projected lineups",
+   "published": "2026-10-01T18:04:30.327Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Utah 6, Chicago 0",
+   "published": "2026-10-02T01:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Nick DeSimone",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Liam O'Brien",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Kailer Yamamoto",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Utah Mammoth are coming off a 6-0 shutout win over the Chicago Blackhawks in their season opener, with Sebastian Cossa earning the start and making his Mammoth debut. The team is projected to use the same lineup that defeated Chicago, with no additional injuries or scratches reported beyond Maveric Lamoureux (shoulder) and the previously scratched trio. Utah will look to build on their strong start as they face the Columbus Blue Jackets on the road."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [
+    {
+     "player": "Dante Fabbro",
+     "detail": "Injured (broken hand)"
+    },
+    {
+     "player": "Ivan Provorov",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Damon Severson",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Columbus Blue Jackets are set to use the same lineup from their 6-3 win over the Buffalo Sabres on Thursday, with no changes indicated in the projected lineup. The team remains without key defensemen Ivan Provorov (lower body, on IR), Damon Severson (shoulder), Dante Fabbro (broken hand), and Isac Lundestrom (lower body), all listed as week-to-week. Coach Rick Bowness noted that Dmitri Voronkov and Conor Garland may swap lines depending on in-game situations."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Maveric Lamoureux": 0.97,
+    "Nick DeSimone": 0.97,
+    "Liam O'Brien": 0.97,
+    "Kailer Yamamoto": 0.97
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.95,
+   "announced": 0.17,
+   "p_out": {
+    "Dante Fabbro": 0.97,
+    "Ivan Provorov": 0.97,
+    "Damon Severson": 0.97,
+    "Isac Lundestrom": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.7,
+  "jev": 0.5
+ }
+}

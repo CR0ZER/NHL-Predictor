@@ -1,0 +1,148 @@
+{
+ "game": {
+  "gameId": 2026020042,
+  "kickoff": "2026-10-05T23:30:00Z",
+  "away": "Winnipeg Jets",
+  "home": "Pittsburgh Penguins",
+  "away_id": 52,
+  "home_id": 5,
+  "away_abbr": "WPG",
+  "home_abbr": "PIT"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-06T14:07:33.929798+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Jets at Penguins",
+   "published": "2026-10-05T05:12:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Jets at Penguins projected lineups",
+   "published": "2026-10-05T16:17:21.064Z",
+   "lineups": true
+  },
+  {
+   "title": "Jets fall in OT to Bruins in home opener",
+   "published": "2026-10-03T02:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: 10.03.26 vs. Montreal Canadiens",
+   "published": "2026-10-03T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Penguins projected lineups",
+   "published": "2026-10-03T16:21:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Jets at Red Wings projected lineups",
+   "published": "2026-10-03T19:36:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Clay Stevenson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Hellebuyck",
+     "detail": "Suspended"
+    },
+    {
+     "player": "Elias Salomonsson",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Walker Duehr",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Jets (1-0-1) are coming off a 3-2 win over Detroit and are projected to use two goaltenders in this back-to-back, with Clay Stevenson likely to make his Jets debut after Stuart Skinner's strong performance. The team has been effective on the power play early in the season, converting 4 of 7 opportunities. Coach Arniel indicated possible skater adjustments due to a busy schedule, but the core lineup remains intact aside from the suspended Hellebuyck and three injured players."
+  },
+  "home": {
+   "starting_goalie": "Sergei Murashov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "Injured (upper body), week to week, missed third straight game"
+    },
+    {
+     "player": "Ilya Solovyov",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Filip Hallander",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Blake Lizotte",
+     "detail": "Available after lower-body injury, but no decision made on status"
+    }
+   ],
+   "returning": [
+    ":{",
+    "player: Ville Koivunen",
+    "detail: ",
+    "could return to lineup after being a healthy scratch vs. Montreal, would replace Hallander"
+   ],
+   "summary": "The Penguins (2-0-0) are off a 6-5 overtime win over Montreal and are projected to start Sergei Murashov in net after Arturs Silovs started the first two games. Bryan Rust remains week to week despite participating in morning skate, while Blake Lizotte's status is uncertain after a lower-body injury. Ville Koivunen may return to the lineup after being a healthy scratch, potentially replacing Filip Hallander. The team remains otherwise intact with key veterans in the lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Clay Stevenson",
+   "p_starter": 0.96,
+   "announced": 0.93,
+   "p_out": {
+    "Connor Hellebuyck": 0.98,
+    "Elias Salomonsson": 0.97,
+    "Walker Duehr": 0.97,
+    "Garrett Brown": 0.97
+   }
+  },
+  "home": {
+   "starter": "Sergei Murashov",
+   "p_starter": 0.99,
+   "announced": 0.92,
+   "p_out": {
+    "Justin Brazeau": 0.97,
+    "Ryan Graves": 0.97,
+    "Bryan Rust": 0.95,
+    "Ilya Solovyov": 0.97,
+    "Elmer Soderblom": 0.96,
+    "Filip Hallander": 0.87,
+    "Blake Lizotte": 0.15
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.8,
+  "jev": 0.5
+ }
+}

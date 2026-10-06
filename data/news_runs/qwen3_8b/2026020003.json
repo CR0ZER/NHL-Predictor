@@ -1,0 +1,99 @@
+{
+ "game": {
+  "gameId": 2026020003,
+  "kickoff": "2026-09-30T00:00:00Z",
+  "away": "New York Rangers",
+  "home": "Boston Bruins",
+  "away_id": 3,
+  "home_id": 6,
+  "away_abbr": "NYR",
+  "home_abbr": "BOS"
+ },
+ "articles": [
+  {
+   "title": "Rangers at Bruins projected lineups",
+   "published": "2026-09-29T17:38:35.834Z",
+   "lineups": true
+  },
+  {
+   "title": "The Sunday Read: How Michael DiPietro Fell Back in Love with Hockey ",
+   "published": "2026-09-27T10:00:16.54Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins Name David Pastrnak 28th Captain in Team History",
+   "published": "2026-09-27T14:50:40.672Z",
+   "lineups": false
+  },
+  {
+   "title": "Pastrnak named Bruins captain, first since Marchand ",
+   "published": "2026-09-27T17:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins Announce Training Camp Roster Transactions",
+   "published": "2026-09-27T18:05:41.952Z",
+   "lineups": false
+  },
+  {
+   "title": "Pastrnak Reacts to Being Named 28th Bruins Captain: 'Grateful, Humbled, and Honored'",
+   "published": "2026-09-27T18:24:05.605Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Igor Shesterkin",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Vincent Iorio",
+     "detail": "lower body injury, placed on injured reserve"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The New York Rangers are coming off a 0-0-0 start to the season. Igor Shesterkin is confirmed to start in goal. Vincent Iorio, a defenseman, is out for the game due to a lower body injury."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Matt Poitras",
+     "detail": "lower body injury, placed on injured reserve"
+    },
+    {
+     "player": "Charlie McAvoy",
+     "detail": "suspended for six games"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Boston Bruins are also starting their season with a 0-0-0 record. Jeremy Swayman is confirmed to start in goal. Matt Poitras, a forward, is out due to a lower body injury, and Charlie McAvoy is suspended for six games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Igor Shesterkin",
+   "p_starter": 0.95,
+   "announced": 0.98,
+   "p_out": {
+    "Vincent Iorio": 0.98
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Matt Poitras": 0.99,
+    "Charlie McAvoy": 0.99
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 14.7,
+  "jev": 0.6
+ }
+}

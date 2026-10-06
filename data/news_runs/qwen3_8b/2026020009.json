@@ -1,0 +1,141 @@
+{
+ "game": {
+  "gameId": 2026020009,
+  "kickoff": "2026-10-01T23:00:00Z",
+  "away": "Philadelphia Flyers",
+  "home": "New Jersey Devils",
+  "away_id": 4,
+  "home_id": 1,
+  "away_abbr": "PHI",
+  "home_abbr": "NJD"
+ },
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers at Devils",
+   "published": "2026-10-01T13:40:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers at Devils projected lineups",
+   "published": "2026-10-01T15:58:54.897Z",
+   "lineups": true
+  },
+  {
+   "title": "Evangelista Finding the Formula | FEATURE",
+   "published": "2026-09-28T23:01:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Travis Konecny Announces \"TK-O Cancer\" Initiative Fighting Pediatric Cancer",
+   "published": "2026-09-29T13:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers Announce Season 2 Of All-Access Show \"The Flyers Way\" Presented by Xfinity",
+   "published": "2026-09-29T18:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RAV4 Things: Flyers vs. Penguins",
+   "published": "2026-09-30T13:40:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joseph Woll",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Denver Barkey",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Garrett Wilson",
+     "detail": "scratched"
+    },
+    {
+     "player": "David Jiricek",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "knee injury, ramping up"
+    }
+   ],
+   "returning": [
+    "Travis Konecny",
+    "Noel Acciari",
+    "Simon Benoit"
+   ],
+   "summary": "The Philadelphia Flyers enter this game after a 7-0 loss to the Pittsburgh Penguins, with new goaltender Joseph Woll set to start. The team is expected to improve on special teams and defensive play, with key players like Travis Konecny and Noel Acciari returning to the lineup. Several players are injured or scratched, including Denver Barkey and Nikita Grebenkin."
+  },
+  "home": {
+   "starting_goalie": "Jake Allen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Connor Brown",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Jesper Boqvist",
+     "detail": "scratched"
+    },
+    {
+     "player": "Remi Poirier",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Luke Hughes",
+    "Brett Pesce",
+    "Jonas Siegenthaler",
+    "Dougie Hamilton",
+    "Brenden Dillon",
+    "Declan Chisholm"
+   ],
+   "summary": "The New Jersey Devils are playing their season opener, with Jake Allen projected to start in goal. The team has several players returning to the lineup, including key forwards and defensemen. Connor Brown is out with a lower body injury, and Johnathan Kovacevic is expected to return after missing the previous game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joseph Woll",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Denver Barkey": 0.98,
+    "Nikita Grebenkin": 0.97,
+    "Garrett Wilson": 0.97,
+    "David Jiricek": 0.97,
+    "Johnathan Kovacevic": 0.4
+   }
+  },
+  "home": {
+   "starter": "Jake Allen",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Johnathan Kovacevic": 0.94,
+    "Connor Brown": 0.98,
+    "Jesper Boqvist": 0.97,
+    "Remi Poirier": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 26.8,
+  "jev": 0.5
+ }
+}
