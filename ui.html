@@ -38,7 +38,7 @@
   --trail: rgba(90, 140, 190, .22); --trail-head: rgba(70, 120, 175, .45);
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; }
+html, body { margin: 0; overflow-x: clip; }
 body {
   font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--text-primary); background: var(--page); min-height: 100vh; overflow-x: hidden;
@@ -123,7 +123,7 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .empty { padding: 40px; text-align: center; color: var(--text-muted); }
 
 /* ============ Hero soirée ============ */
-.hero { display: grid; grid-template-columns: 1fr 1.15fr; gap: 16px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 16px; }
 .hero-main { padding: 26px 28px; position: relative; overflow: hidden; }
 .hero-main::after { content: ""; position: absolute; right: -60px; top: -60px; width: 240px; height: 240px; border-radius: 50%; border: 2px solid var(--rink-red); box-shadow: 0 0 0 26px var(--rink), 0 0 0 28px var(--rink-red); opacity: .8; }
 .eyebrow { color: var(--ice); font-size: 11.5px; font-weight: 750; letter-spacing: 2.4px; text-transform: uppercase; }
@@ -140,7 +140,8 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .edge-card .head span { color: var(--text-muted); font-size: 12px; }
 
 /* ============ Cartes de match ============ */
-.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 16px; }
+.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 16px; }
+.game, .card { min-width: 0; }
 .game { position: relative; padding: 18px; display: flex; flex-direction: column; gap: 14px; transform-style: preserve-3d; transition: transform .25s ease, border-color .25s, box-shadow .25s; will-change: transform; }
 .card:not(.game) { transition: box-shadow .25s, border-color .25s; }  /* les cartes de match gardent leur transition (inclinaison) */
 .card:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, .14); }  /* ombre très légère, identique sur toutes les cartes */
@@ -208,15 +209,15 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .status.wait { color: var(--text-muted); }
 
 /* ============ Simulation ============ */
-.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr)); gap: 14px; }
 .kpi { padding: 18px 20px; position: relative; overflow: hidden; }
 .kpi .label { color: var(--text-muted); font-size: 11px; font-weight: 750; text-transform: uppercase; letter-spacing: 1.2px; }
 .kpi .value { font-size: 34px; font-weight: 850; margin-top: 6px; letter-spacing: -1px; font-variant-numeric: tabular-nums; }
 .kpi .hint { color: var(--text-muted); font-size: 12px; margin-top: 2px; }
 .kpi.big { grid-column: span 2; background: radial-gradient(120% 140% at 0% 0%, var(--ice-soft), transparent 55%), var(--surface-1); }
 .kpi.big .value { font-size: 52px; }
-@media (max-width: 700px) { .kpi.big { grid-column: auto; } }
-.strats { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 14px; margin-top: 14px; }
+@media (max-width: 700px) { .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .kpi.big { grid-column: 1 / -1; } }
+.strats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr)); gap: 14px; margin-top: 14px; }
 .strat { padding: 16px 18px; display: grid; grid-template-columns: 1fr auto; gap: 8px 14px; align-items: center; }
 .strat .name { display: flex; align-items: center; gap: 8px; font-weight: 700; grid-column: 1 / -1; }
 .strat .nums { display: flex; gap: 18px; font-variant-numeric: tabular-nums; }
@@ -255,7 +256,7 @@ td.r, th.r { text-align: right; }
 .skill { display: inline-block; height: 6px; border-radius: 3px; background: var(--s1); vertical-align: middle; margin-right: 8px; }
 
 /* ============ Modèle ============ */
-.grid2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
+.grid2 { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 16px; margin-top: 16px; }
 .note { color: var(--text-muted); font-size: 12px; margin-top: 10px; }
 
 /* ============ Palet vu de dessus, qui glisse sur la glace SOUS les cartes ============ */
@@ -285,7 +286,68 @@ body.static .updated { display: flex; }
 .guide .n { width: 30px; height: 30px; border-radius: 10px; flex: none; display: grid; place-items: center; font-weight: 800; background: var(--ice-soft); color: var(--ice); }
 .guide b { display: block; margin-bottom: 2px; }
 .guide p { margin: 0; color: var(--text-secondary); font-size: 12.5px; }
-@media (max-width: 1000px) { .hero, .grid2 { grid-template-columns: 1fr; } .guide { grid-template-columns: 1fr; } .games { grid-template-columns: 1fr; } }
+@media (max-width: 1000px) { .hero, .grid2, .guide { grid-template-columns: minmax(0, 1fr); } }
+
+/* ============ Mobile ============ */
+@media (max-width: 700px) {
+  header { position: relative; }                       /* l'en-tête ne colle plus : plus de place pour le contenu */
+  .bar { padding: 10px 14px; gap: 8px 10px; }
+  .brand { flex: 1 1 100%; }
+  .puck { width: 30px; height: 30px; }
+  .brand .word { font-size: 15px; letter-spacing: 2px; }
+  .brand small, .clock:not(.updated) { display: none; }
+  .controls { flex: 1 1 auto; gap: 6px; }
+  .field { height: 34px; padding: 0 8px; }
+  button { height: 34px; padding: 0 12px; }
+  button.icon { width: 34px; }
+  .clock.updated { padding: 5px 10px; font-size: 11.5px; }
+  .ticker { height: 28px; font-size: 11.5px; }
+  .wrap { padding: 0 12px 60px; }
+  .tabs { display: flex; width: 100%; margin: 16px 0 16px; }
+  .tabs button { flex: 1; padding: 0 6px; }
+  h2 { flex-wrap: wrap; gap: 4px 10px; margin: 24px 0 10px; }
+  .hero-main { padding: 18px; }
+  .hero-main h1 { font-size: 28px; letter-spacing: -.5px; }
+  .hero-main::after { width: 150px; height: 150px; right: -50px; top: -50px; }
+  .chips { gap: 8px; margin-top: 16px; }
+  .chip { flex: 1 1 calc(50% - 8px); min-width: 0; padding: 8px 10px; }
+  .chip .v { font-size: 19px; }
+  .edge-card { padding: 14px 14px 8px; }
+  .edge-card .head { flex-direction: column; gap: 2px; }
+  .games { gap: 12px; }
+  .game { padding: 14px; gap: 12px; }
+  .logo { width: 46px; height: 46px; border-radius: 12px; }
+  .logo img { width: 38px; height: 38px; }
+  .gauge { width: 70px; height: 70px; }
+  .tname b { font-size: 15px; }
+  .prob { grid-template-columns: 58px minmax(0, 1fr); gap: 8px; }
+  .bet { gap: 6px; font-size: 11.5px; }
+  .status { padding: 2px 6px; }
+  .kpi { padding: 14px 16px; }
+  .kpi .value { font-size: 26px; }
+  .kpi.big .value { font-size: 38px; }
+  .strat { padding: 14px; }
+  .strat .nums { gap: 12px; flex-wrap: wrap; }
+  .strat .nums b { font-size: 16px; }
+  .chart-card { padding: 14px 10px 6px; }
+  .legend { gap: 10px; }
+  .filters select { flex: 1 1 auto; min-width: 0; }
+  th, td { padding: 8px 10px; }
+  .guide { padding: 16px; }
+  .toast { left: 12px; right: 12px; bottom: 12px; max-width: none; }
+  /* Paris fictifs : chaque ligne devient une mini-fiche (match / statut, pari / cote, stratégie / valeur, score) */
+  #bets thead { display: none; }
+  #bets tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+  #bets td { border: 0; padding: 0; white-space: normal; min-width: 0; }
+  #bets td:nth-child(2), #bets td:nth-child(6), #bets td:nth-child(8) { display: none; }
+  #bets td:nth-child(1) { grid-area: 1 / 1; } #bets td:nth-child(9) { grid-area: 1 / 2; justify-self: end; }
+  #bets td:nth-child(4) { grid-area: 2 / 1; color: var(--text-secondary); } #bets td:nth-child(5) { grid-area: 2 / 2; }
+  #bets td:nth-child(3) { grid-area: 3 / 1; color: var(--text-secondary); font-size: 12px; } #bets td:nth-child(7) { grid-area: 3 / 2; }
+  #bets td:nth-child(10) { grid-area: 4 / 1 / 5 / 3; color: var(--text-muted); font-size: 12px; }
+  #bets td:nth-child(10):empty { display: none; }
+  #bets td[colspan] { grid-column: 1 / -1; }
+  .skill { max-width: 50px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -709,7 +771,7 @@ function lineChart(el, series) {
   series.forEach(se => se.points = [...new Map(se.points.sort((a, b) => a.x - b.x).map(p => [+p.x, p])).values()]);
   const pts = series.flatMap(s => s.points);
   if (!pts.length) { el.innerHTML = `<div class="empty">La courbe se dessinera après les premiers paris réglés.</div>`; return; }
-  const W = el.clientWidth || 900, H = 320, m = { l: 58, r: 132, t: 14, b: 30 };
+  const W = el.clientWidth || 900, narrow = W < 560, H = narrow ? 260 : 320, m = { l: narrow ? 46 : 58, r: narrow ? 14 : 132, t: 14, b: 30 };
   const xs = pts.map(p => +p.x), x0 = Math.min(...xs), x1 = Math.max(...xs) === x0 ? x0 + 864e5 : Math.max(...xs);
   const ticks = niceTicks(Math.min(0, ...pts.map(p => p.y)), Math.max(0, ...pts.map(p => p.y)));
   const y0 = ticks[0], y1 = ticks[ticks.length - 1];
@@ -731,7 +793,7 @@ function lineChart(el, series) {
   ends.sort((a, b) => a.y - b.y); for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 15) ends[i].y = ends[i - 1].y + 15;
   ends.forEach(e => s += `<circle class="endpulse" cx="${e.x}" cy="${Y(e.last.y)}" r="4" fill="${css(e.se.color)}"/>
     <circle cx="${e.x}" cy="${Y(e.last.y)}" r="4.5" fill="${css(e.se.color)}" stroke="${css("--surface-1")}" stroke-width="2"/>
-    <text x="${W - m.r + 12}" y="${e.y + 4}" style="fill:${css("--text-secondary")};font-weight:650">${e.se.name} <tspan style="fill:${css("--text-primary")}">${e.last.y >= 0 ? "+" : ""}${e.last.y.toFixed(0)} €</tspan></text>`);
+    ${narrow ? "" : `<text x="${W - m.r + 12}" y="${e.y + 4}" style="fill:${css("--text-secondary")};font-weight:650">${e.se.name} <tspan style="fill:${css("--text-primary")}">${e.last.y >= 0 ? "+" : ""}${e.last.y.toFixed(0)} €</tspan></text>`}`);
   s += `<line class="xh" y1="${m.t}" y2="${H - m.b}" stroke="${css("--axis")}" stroke-dasharray="3 3" opacity="0"/><g class="dots"></g>
     <rect class="hit" x="${m.l}" y="0" width="${W - m.l - m.r}" height="${H}" fill="transparent"/></svg>`;
   el.innerHTML = s;
@@ -812,13 +874,14 @@ function calibChart(el, pts) {
 function coefChart(el, coefs) {
   const names = { d_xg: "Part d'xG (forme)", d_sat: "Part des tirs (Corsi)", d_gd: "Différence de buts", d_goalie: "Gardien (GSAx)", home_b2b: "Domicile en back-to-back", away_b2b: "Extérieur en back-to-back", d_miss: "Absences (pts/match manquants)" };
   const ent = Object.entries(coefs), max = Math.max(...ent.map(([, v]) => Math.abs(v)));
-  const W = el.clientWidth || 500, rowH = 40, H = ent.length * rowH + 10, lab = 176, half = (W - lab - 56) / 2, mid = lab + half;
+  const W = el.clientWidth || 500, narrow = W < 480, rowH = narrow ? 50 : 40, H = ent.length * rowH + 10,
+        lab = narrow ? 0 : 176, half = (W - lab - 56) / 2, mid = lab + half, by = narrow ? 18 : 4;
   let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Poids du modèle"><line x1="${mid}" x2="${mid}" y1="0" y2="${H}" stroke="${css("--axis")}" stroke-width="1.5"/>`;
   ent.forEach(([k, v], i) => {
     const y = i * rowH + 8, w = Math.max(Math.abs(v) / max * half, 2), x = v >= 0 ? mid : mid - w;
-    s += `<text x="0" y="${y + 16}" style="fill:${css("--text-secondary")}">${names[k] || k}</text>
-      <rect class="cbar" x="${mid}" y="${y + 4}" width="0" height="16" rx="4" fill="${css(v >= 0 ? "--s1" : "--neg")}" data-x="${x}" data-w="${w}"/>
-      <text x="${v >= 0 ? mid + w + 7 : mid - w - 7}" y="${y + 16}" text-anchor="${v >= 0 ? "start" : "end"}" style="fill:${css("--text-primary")};font-weight:700">${v.toFixed(2)}</text>`;
+    s += `<text x="0" y="${y + (narrow ? 8 : 16)}" style="fill:${css("--text-secondary")}">${names[k] || k}</text>
+      <rect class="cbar" x="${mid}" y="${y + by}" width="0" height="16" rx="4" fill="${css(v >= 0 ? "--s1" : "--neg")}" data-x="${x}" data-w="${w}"/>
+      <text x="${v >= 0 ? mid + w + 7 : mid - w - 7}" y="${y + by + 12}" text-anchor="${v >= 0 ? "start" : "end"}" style="fill:${css("--text-primary")};font-weight:700">${v.toFixed(2)}</text>`;
   });
   el.innerHTML = s + `</svg><p class="note">Bleu : un écart en faveur du domicile augmente sa probabilité de victoire. Rouge : la diminue.</p>`;
   nextFrame(() => el.querySelectorAll(".cbar").forEach((b, i) => { b.style.transition = REDUCED ? "" : `x .9s cubic-bezier(.2,.8,.2,1) ${i * 70}ms, width .9s cubic-bezier(.2,.8,.2,1) ${i * 70}ms`; b.style.x = b.dataset.x + "px"; b.style.width = b.dataset.w + "px"; }));
