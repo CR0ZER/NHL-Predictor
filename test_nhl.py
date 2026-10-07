@@ -42,4 +42,19 @@ assert abs(r.iloc[0]) < 1e-12, "1re apparition : note neutre"
 assert r.iloc[1] > 0, "après un bon match (1 but pour 3 xG) : note positive"
 assert r.iloc[2] > r.iloc[1], "encore un bon match : la note monte"
 assert current[7] < r.iloc[2], "le mauvais dernier match (10 buts) n'entre que dans la note courante"
+
+# Qualité des prédictions réelles : CLV = cote prise / cote de clôture du même bookmaker, marché et issue − 1
+import tempfile
+from pathlib import Path
+
+import app
+import odds
+
+odds.CLOSING = Path(tempfile.mkdtemp()) / "closing.csv"
+odds.CLOSING.write_text("fixtureId,home,date,book,market,side,price\nx,tampa bay lightning,2026-10-05,unibet.fr,151,H,2.0\n")
+q = app.quality(pd.DataFrame([{"date": "2026-10-05", "p_home": 0.6, "pin_fair": 0.5, "result": "H"}]),
+                pd.DataFrame([{"date": "2026-10-05", "home": "Tampa Bay Lightning", "kickoff": "2026-10-06T00:30:00Z",
+                               "book": "Unibet FR", "market": "Vainqueur", "pick": "H", "price": 2.2, "status": "gagné"}]))["total"]
+assert abs(q["clv"] - 0.1) < 1e-9 and q["n_clv"] == 1, "pari à 2,20 contre une clôture à 2,00 : +10 %"
+assert q["ll_model_pin"] < q["ll_pin"], "domicile gagnant : 60 % (modèle) fait mieux que 50 % (Pinnacle)"
 print("ok")

@@ -1,4 +1,4 @@
-# Automatisation : prédictions du soir, règlement le matin, cotes de clôture le lundi, puis publication de la page.
+# Automatisation : prédictions du soir, règlement et cotes de clôture le matin, puis publication de la page.
 # Heures en UTC (heure de Paris = UTC+2 l'été, UTC+1 l'hiver). GitHub peut décaler un déclenchement de quelques minutes.
 name: NHL Predictor
 
@@ -7,15 +7,14 @@ on:
   # Chaque passage de prédiction règle aussi les paris terminés : un règlement retardé ou sauté est rattrapé.
   schedule:
     - cron: "17 16 * * *"  # prédictions : 18 h 17 à Paris (été), après les compositions probables
-    - cron: "47 21 * * *"  # prédictions, matchs de la côte Ouest : 23 h 47 à Paris (été)
-    - cron: "13 6 * * *"   # résultats et règlement des paris : 8 h 13 à Paris (été)
-    - cron: "43 7 * * 1"   # cotes de clôture de la semaine (évaluation face au marché), le lundi
+    - cron: "47 21 * * *"  # rattrapage, 23 h 47 à Paris (été) : seuls les matchs restés sans prédiction
+    - cron: "13 6 * * *"   # résultats, règlement des paris et cotes de clôture de la veille : 8 h 13 à Paris (été)
   workflow_dispatch:
     inputs:
       task:
         description: "Tâche à lancer à la main"
         type: choice
-        options: [predict, settle, odds, export]
+        options: [predict, rescue, settle, odds, export]
         default: export
 
 permissions:
@@ -74,14 +73,16 @@ jobs:
           ODDSPAPI_API_KEY: ${{ secrets.ODDSPAPI_API_KEY }}
         run: |
           case "${{ github.event.schedule }}" in
-            "17 16 * * *"|"47 21 * * *") TASK=predict ;;
+            "17 16 * * *") TASK=predict ;;
+            "47 21 * * *") TASK=rescue ;;
             "13 6 * * *") TASK=settle ;;
-            "43 7 * * 1") TASK=odds ;;
             *) TASK="${{ inputs.task }}" ;;
           esac
           echo "Tâche : $TASK"
-          if [ "$TASK" = predict ]; then uv run python app.py settle; fi
+          if [ "$TASK" = predict ] || [ "$TASK" = rescue ]; then uv run python app.py settle; fi
           if [ "$TASK" != export ]; then uv run python app.py "$TASK"; fi
+          # cotes de clôture (qualité des paris) : 1 requête OddsPapi décomptée par jour ; un échec ne bloque pas le règlement
+          if [ "$TASK" = settle ]; then uv run python app.py odds || echo "Cotes de clôture indisponibles aujourd'hui"; fi
           uv run python app.py export
 
       - name: Enregistrer les données dans le dépôt

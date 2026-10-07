@@ -2,7 +2,7 @@
 
     uv run --env-file .env python app.py                  # serveur local avec boutons : http://127.0.0.1:8765
     uv run --env-file .env python app.py predict [DATE]   # mêmes tâches en ligne de commande (GitHub Actions)
-    uv run --env-file .env python app.py settle | odds
+    uv run --env-file .env python app.py rescue | settle | odds   # rescue : matchs du jour restés sans prédiction
     uv run python app.py export                           # page statique en lecture seule dans site/ (GitHub Pages)
 
 Paris fictifs enregistrés dans data/paper_bets.csv à la cote disponible au moment de la prédiction,
@@ -59,9 +59,11 @@ def clean(x):
     return int(x) if isinstance(x, np.integer) else x
 
 
-def run_predict(day, stake, use_news):
+def run_predict(day, stake, use_news, rescue=False):
+    """rescue : rattrapage, seuls les matchs encore sans prédiction (passage de 18 h 17 échoué ou sauté)."""
     JOB["msg"] = "Chargement du modèle…"
-    u = nhl.predictions(day, use_news=use_news, progress=lambda m: JOB.update(msg=m))
+    skip = set(read(PREDS).get("gameId", [])) if rescue else set()
+    u = nhl.predictions(day, use_news=use_news, progress=lambda m: JOB.update(msg=m), skip=skip)
     if len(u):  # un match commencé garde sa prédiction et ses paris d'origine
         u = u[pd.to_datetime(u["kickoff"], utc=True) > pd.Timestamp.now(tz="UTC")]
     if u.empty:
@@ -76,7 +78,7 @@ def run_predict(day, stake, use_news):
         pin_h, pin_a = c("pinnacle", "151", "H"), c("pinnacle", "151", "A")
         base = {"gameId": int(g.gameId), "date": day, "kickoff": g.kickoff, "away": g.away, "home": g.home}
         preds.append({**base, "placed_at": now, "away_goalie": g.away_goalie, "home_goalie": g.home_goalie,
-                      "p_home": g.p_home, "pH": g.pH, "pX": g.pX, "pA": g.pA, "news": bool(g.news),
+                      "p_home": g.p_home, "pH": g.pH, "pX": g.pX, "pA": g.pA, "news": bool(g.news), "llm": g.llm,
                       "away_absents": g.away_absents, "home_absents": g.home_absents,
                       "away_summary": g.away_summary, "home_summary": g.home_summary,
                       "away_miss": g.away_miss, "home_miss": g.home_miss,
@@ -193,9 +195,40 @@ def state():
     if len(preds):
         preds = preds.sort_values("kickoff", ascending=False)
     return {"bets": records(bets.sort_values("kickoff", ascending=False) if len(bets) else bets),
-            "preds": records(preds), "schedule": schedule(), "summary": summary, "curve": curve,
+            "preds": records(preds), "schedule": schedule(), "quality": quality(preds, bets), "summary": summary, "curve": curve,
             "strategies": STRATEGIES, "today": et_today(), "job": JOB,
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+
+
+BOOK_IDS, MARKET_IDS = {"Unibet FR": "unibet.fr", "Winamax": "winamax.fr"}, {"Vainqueur": "151", "1N2": "153"}
+
+
+def quality(preds, bets):
+    """Prédictions réelles face aux résultats, au total et par soirée : log loss du modèle et de Pinnacle (sans marge, au
+    moment de la prédiction) sur les mêmes matchs, réussite du favori, et CLV des paris (cote prise / clôture − 1)."""
+    if "result" not in preds or preds["result"].isna().all():
+        return {"total": None, "days": []}
+    p = preds.dropna(subset=["result"]).copy()
+    y = p["result"] == "H"
+    ll = lambda q: -np.log(np.where(y, q, 1 - q))
+    p["ll"], p["ll_pin"], p["ok"] = ll(p["p_home"]), ll(p["pin_fair"]), (p["p_home"] > 0.5) == y
+    b = bets[bets["status"] != "en attente"].copy() if len(bets) else pd.DataFrame(columns=["date"])
+    b["clv"] = np.nan
+    if len(b) and odds.CLOSING.exists():
+        co = pd.read_csv(odds.CLOSING, dtype={"market": str, "date": str})
+        close = dict(zip(zip(co["home"], co["date"], co["book"], co["market"], co["side"]), co["price"]))
+        keys = zip(b["home"].map(odds.norm), b["kickoff"].map(lambda k: str(odds.local_date(k))),
+                   b["book"].map(BOOK_IDS), b["market"].map(MARKET_IDS), b["pick"])
+        b["clv"] = b["price"] / pd.Series([close.get(k, np.nan) for k in keys], index=b.index) - 1
+
+    def agg(g, gb):
+        m = g.dropna(subset=["ll_pin"])
+        return {"n": len(g), "accuracy": g["ok"].mean(), "logloss": g["ll"].mean(), "n_pin": len(m),
+                "ll_model_pin": m["ll"].mean() if len(m) else None, "ll_pin": m["ll_pin"].mean() if len(m) else None,
+                "n_clv": int(gb["clv"].notna().sum()), "clv": gb["clv"].mean()}
+
+    return clean({"total": agg(p, b), "days": [{"date": d, **agg(g, b[b["date"] == d])}
+                                               for d, g in sorted(p.groupby("date"), reverse=True)]})
 
 
 def model_stats():
@@ -302,6 +335,7 @@ def export(out=ROOT / "site"):
 def cli(cmd, *args):
     """Tâches sans serveur (planifiées par GitHub Actions). Code de sortie 1 si la tâche a échoué."""
     jobs = {"predict": lambda: run_predict(args[0] if args else et_today(), 10.0, True),
+            "rescue": lambda: run_predict(args[0] if args else et_today(), 10.0, True, rescue=True),
             "settle": run_settle, "odds": run_odds_update, "export": export}
     if cmd not in jobs:
         sys.exit(__doc__)

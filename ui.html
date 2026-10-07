@@ -109,6 +109,10 @@ button.icon { width: 38px; padding: 0; display: grid; place-items: center; }
 .tabs .ind { position: absolute; top: 4px; height: 34px; border-radius: 10px; background: var(--surface-3); box-shadow: inset 0 0 0 1px var(--border-strong), 0 0 18px var(--ice-soft); transition: left .35s cubic-bezier(.3,1.2,.5,1), width .35s cubic-bezier(.3,1.2,.5,1); }
 section.tab { display: none; }
 section.tab.on { display: block; }
+.subpane { display: none; } .subpane.on { display: block; }
+.subtabs { display: inline-flex; gap: 2px; margin: 0 0 18px; padding: 3px; border-radius: 12px; background: var(--surface-1); border: 1px solid var(--border); }
+.subtabs button { border: 0; background: transparent; height: 30px; color: var(--text-secondary); border-radius: 9px; }
+.subtabs button.on { color: var(--text-primary); background: var(--surface-3); box-shadow: inset 0 0 0 1px var(--border-strong); }
 .card { position: relative; border-radius: 18px; background: var(--glass-tint);
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--glass-border); }
 .chip { background: var(--glass-tint); }
@@ -180,6 +184,8 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .news .abs b { color: var(--text-primary); font-weight: 650; }
 .news .imp { margin-left: auto; flex: none; font-weight: 750; font-variant-numeric: tabular-nums; color: var(--critical-text); }
 .news .none { color: var(--text-muted); }
+.news .src { font-size: 10.5px; font-weight: 750; letter-spacing: .04em; text-transform: uppercase; color: var(--good-text); }
+.news .src.off { color: var(--critical-text); }
 .news details summary { cursor: pointer; color: var(--ice); font-weight: 650; list-style: none; }
 .news details summary::-webkit-details-marker { display: none; }
 .news details summary::before { content: "▸ "; display: inline-block; transition: transform .2s; }
@@ -442,6 +448,13 @@ body.static .updated { display: flex; }
   </section>
 
   <section class="tab" id="tab-model">
+    <nav class="subtabs" role="tablist"><button class="on" data-sub="real">Prédictions réelles</button><button data-sub="hist">Historique</button></nav>
+    <div class="subpane on" id="sub-real">
+    <div class="kpis" id="q-kpis"></div>
+    <div class="card tbl-wrap"><table id="q-days"></table></div>
+    <p class="note">Pinnacle = cote sans marge relevée au moment de la prédiction, sur les mêmes matchs. CLV = cote prise ÷ cote de clôture du même bookmaker − 1 : positif, le pari a été pris à un meilleur prix que le marché final (disponible le lendemain matin).</p>
+    </div>
+    <div class="subpane" id="sub-hist">
     <div class="kpis" id="m-kpis"></div>
     <div class="grid2">
       <div class="card chart-card"><div class="legend"><span class="title">Calibration</span><span>prédit vs observé, hors échantillon</span></div><div class="chart" id="calib"></div></div>
@@ -450,6 +463,7 @@ body.static .updated { display: flex; }
     <h2>Par saison <span class="sub">log-loss : plus bas = mieux (0.693 = pile ou face) · Pinnacle = clôture sans marge, mêmes matchs</span></h2>
     <div class="card tbl-wrap"><table id="seasons"></table></div>
     <p class="note">Chaque saison est prédite par un modèle appris uniquement sur les saisons précédentes ; les variables d'un match n'utilisent que les matchs joués avant lui.</p>
+    </div>
   </section>
 </div>
 
@@ -516,6 +530,11 @@ document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
   document.querySelectorAll("section.tab").forEach(s => s.classList.toggle("on", s.id === "tab-" + b.dataset.tab));
   moveInd(); SEEN = {};
   if (b.dataset.tab === "model") loadModel(); else render();
+});
+document.querySelectorAll(".subtabs button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".subtabs button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll(".subpane").forEach(s => s.classList.toggle("on", s.id === "sub-" + b.dataset.sub));
+  SEEN = {}; loadModel();  // les graphiques se dimensionnent une fois visibles
 });
 
 // ---------- API & tâches ----------
@@ -598,7 +617,7 @@ function render() {
   renderTicker(games, upcoming);
   if ($("#tab-tonight").classList.contains("on")) { renderHero(games, shown, upcoming); renderEdge(games, shown, upcoming); renderGames(games, shown, upcoming); }
   if ($("#tab-sim").classList.contains("on")) renderSim();
-  if ($("#tab-model").classList.contains("on") && MODEL) renderModel();
+  if ($("#tab-model").classList.contains("on")) { renderQuality(); if (MODEL) renderModel(); }
 }
 
 function renderTicker(games, upcoming = []) {
@@ -620,7 +639,7 @@ function renderHero(games, day, upcoming = []) {
   const next = [...games, ...upcoming].map(g => g.kickoff).filter(k => new Date(k) > Date.now()).sort()[0];
   const title = day ? new Date(day + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }) : "Aucune soirée";
   $("#hero").innerHTML = `<div class="eyebrow">Soirée NHL</div><h1>${title}</h1>
-    <p>${!games.length && upcoming.length ? `${upcoming.length} matchs au programme. ` : ""}${games.length ? "Probabilités de victoire prolongation incluse, comparées au marché. Les paris fictifs sont pris aux cotes du moment de la prédiction." : (STATIC ? "Pas encore de prédiction : elles arrivent vers 18 h 15 et 23 h 45 (heure de Paris)." : "Choisissez la soirée en haut à droite, puis lancez <b>Prédire</b>.")}</p>
+    <p>${!games.length && upcoming.length ? `${upcoming.length} matchs au programme. ` : ""}${games.length ? "Probabilités de victoire prolongation incluse, comparées au marché. Les paris fictifs sont pris aux cotes du moment de la prédiction." : (STATIC ? "Pas encore de prédiction : elle arrive vers 18 h 15 (heure de Paris)." : "Choisissez la soirée en haut à droite, puis lancez <b>Prédire</b>.")}</p>
     <div class="chips">
       <div class="chip"><div class="k">Matchs</div><div class="v" id="c-games"></div></div>
       <div class="chip"><div class="k">Paris valeur</div><div class="v" id="c-value"></div></div>
@@ -630,7 +649,7 @@ function renderHero(games, day, upcoming = []) {
   countUp($("#c-value"), value, v => Math.round(v), "value");
 }
 
-const PASSES = ["16:17", "21:47"];  // passages de prédiction (UTC), crons de .github/workflows/pipeline.yml
+const PASSES = ["16:17", "21:47"];  // prédiction puis rattrapage (UTC), crons de .github/workflows/pipeline.yml
 function renderEdge(games, day, upcoming = []) {
   const el = $("#edge");
   const rows = games.map(g => ({ g, e: g.pin_fair != null ? g.p_home - g.pin_fair : null })).sort((a, b) => Math.abs(b.e ?? 0) - Math.abs(a.e ?? 0));
@@ -686,7 +705,8 @@ function status(b) {
   return `<span class="status wait">⏳ en attente</span>`;
 }
 function newsBlock(g) {
-  if (!g.news) return `<div class="news"><span class="none">Actualité non lue (match commencé, Ollama ou Jev indisponible) : gardien deviné, absences ignorées.</span></div>`;
+  if (!g.news) return `<div class="news"><span class="src off">Actualité inaccessible</span><span class="none">Gardien deviné, absences ignorées.</span></div>`;
+  const llm = String(g.llm || "").replace(/^.*\//, "").split(/[-:]/)[0];  // « nvidia/nemotron-3-…:free » -> « nemotron »
   const line = side => {
     let abs = []; try { abs = JSON.parse(g[side + "_absents"] || "[]"); } catch (e) {}
     const sure = abs.filter(a => a.p >= 0.15);  // même seuil que l'impact affiché (les plus faibles pèsent peu)
@@ -695,7 +715,7 @@ function newsBlock(g) {
     return `<div class="line"><span class="who">${abbr(g[side])}</span><span class="abs">${txt}</span>${imp}</div>`;
   };
   const sum = ["away", "home"].filter(s => g[s + "_summary"]).map(s => `<p><b>${abbr(g[s])}</b> · ${esc(g[s + "_summary"])}</p>`).join("");
-  return `<div class="news">${line("away")}${line("home")}${sum ? `<details><summary>Résumé de l'actualité</summary>${sum}</details>` : ""}</div>`;
+  return `<div class="news"><span class="src">Actualité lue${llm ? ` · ${esc(llm)}` : ""}</span>${line("away")}${line("home")}${sum ? `<details><summary>Résumé de l'actualité</summary>${sum}</details>` : ""}</div>`;
 }
 function renderGames(list, day, upcoming = []) {
   $("#games-sub").textContent = list.length ? "probabilité de victoire (extérieur | domicile), prolongation incluse · survolez une carte" : "";
@@ -849,7 +869,24 @@ function lineChart(el, series) {
 }
 
 // ---------- Modèle ----------
+function renderQuality() {
+  const Q = STATE?.quality, T = Q?.total;
+  if (!T) { $("#q-kpis").innerHTML = `<div class="card kpi"><div class="label">Aucun match joué</div><div class="hint">les mesures apparaissent après le premier règlement (8 h 13)</div></div>`; $("#q-days").innerHTML = ""; return; }
+  const gap = r => r.ll_pin == null ? null : r.ll_model_pin - r.ll_pin;
+  const gapTxt = v => v == null ? "–" : `<span class="${cls(-v)}">${(v >= 0 ? "+" : "") + v.toFixed(3)}</span>`;
+  const clvTxt = r => r.clv == null ? `<span class="muted">–</span>` : `<span class="${cls(r.clv)}">${signPct(r.clv)}</span> <span class="muted">(${r.n_clv})</span>`;
+  $("#q-kpis").innerHTML = `
+    <div class="card kpi rise"><div class="label">Matchs joués</div><div class="value">${T.n}</div><div class="hint">${Q.days.length} soirée${Q.days.length > 1 ? "s" : ""}</div></div>
+    <div class="card kpi rise" style="--i:1"><div class="label">Favori gagnant</div><div class="value">${pct(T.accuracy)}</div><div class="hint">le camp donné à plus de 50 % a gagné</div></div>
+    <div class="card kpi rise" style="--i:2"><div class="label">Modèle vs Pinnacle</div><div class="value">${gapTxt(gap(T))}</div><div class="hint">log-loss ${T.ll_model_pin?.toFixed(3) ?? "–"} contre ${T.ll_pin?.toFixed(3) ?? "–"} · négatif = modèle meilleur</div></div>
+    <div class="card kpi rise" style="--i:3"><div class="label">CLV moyen</div><div class="value">${T.clv == null ? "–" : `<span class="${cls(T.clv)}">${signPct(T.clv)}</span>`}</div><div class="hint">${T.n_clv ? `${T.n_clv} paris comparés à la clôture` : "cotes de clôture récupérées le lendemain matin"}</div></div>`;
+  $("#q-days").innerHTML = `<thead><tr><th>Soirée</th><th class="r">Matchs</th><th class="r">Favori gagnant</th><th class="r">Log-loss modèle</th><th class="r">Log-loss Pinnacle</th><th class="r">Écart</th><th class="r">CLV (paris)</th></tr></thead><tbody>` +
+    Q.days.map(r => `<tr><td><b>${new Date(r.date + "T12:00").toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "short" })}</b></td>
+      <td class="r">${r.n}</td><td class="r">${pct(r.accuracy)}</td><td class="r">${r.logloss.toFixed(3)}</td><td class="r">${r.ll_pin?.toFixed(3) ?? "–"}</td>
+      <td class="r">${gapTxt(gap(r))}</td><td class="r">${clvTxt(r)}</td></tr>`).join("") + `</tbody>`;
+}
 async function loadModel() {
+  renderQuality();
   if (MODEL) return renderModel();
   $("#m-kpis").innerHTML = `<div class="card kpi"><div class="label">Calcul en cours</div><div class="value"><svg class="spin-puck" viewBox="0 0 26 26"><circle cx="13" cy="13" r="10" fill="none" stroke="var(--grid)" stroke-width="3"/><path d="M13 3 a10 10 0 0 1 10 10" fill="none" stroke="var(--ice)" stroke-width="3" stroke-linecap="round"/></svg></div><div class="hint">prédictions hors échantillon de toutes les saisons (~20 s)</div></div>`;
   MODEL = await api("/api/model");

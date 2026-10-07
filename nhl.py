@@ -231,7 +231,7 @@ def probable_starter(goalies, abbrev, before):
     return pid, starts.loc[starts["playerId"] == pid, "goalieFullName"].iloc[-1]
 
 
-def predictions(day, use_news=True, progress=print):
+def predictions(day, use_news=True, progress=print, skip=()):
     """Matchs du jour non encore joués : probabilités (vainqueur et 1N2 temps réglementaire), gardiens et absences.
     Chaîne d'actualité (NHL.com -> qwen3 -> Jev) pour chaque match pas encore commencé ; repli sur l'heuristique du
     gardien et aucune absence si Ollama ou Jev sont indisponibles."""
@@ -244,7 +244,8 @@ def predictions(day, use_news=True, progress=print):
 
     week = get_json(f"{WEB}/schedule/{day}")["gameWeek"]
     played = set(team["gameId"])
-    games = [x for d in week if d["date"] == day for x in d["games"] if x["gameType"] == 2 and x["id"] not in played]
+    games = [x for d in week if d["date"] == day for x in d["games"]
+             if x["gameType"] == 2 and x["id"] not in played and x["id"] not in skip]
     if not games:
         return pd.DataFrame()
     chain = use_news and news.ready()
@@ -266,7 +267,7 @@ def predictions(day, use_news=True, progress=print):
                  **{f"{s}_id": x[f"{s}Team"]["id"] for s in ("away", "home")},
                  **{f"{s}_abbr": abbr[s] for s in ("away", "home")}}
             res = news.run_game(client, g, {ab: news.roster_goalies(ab) for ab in abbr.values()}, refresh=True)
-        news_ok[x["id"]] = res is not None
+        news_ok[x["id"]] = (res or {}).get("llm") or ""  # modèle qui a lu les articles, vide si l'extraction a échoué
         for side, s in (("H", "home"), ("R", "away")):
             pid, gname = probable_starter(goalies, abbr[s], day)
             miss, absents, summary = 0.0, [], ""
@@ -291,7 +292,8 @@ def predictions(day, use_news=True, progress=print):
     tie = w["reg_tie"].mean()
     u["pH"], u["pX"], u["pA"] = (u["p_home"] - tie / 2).clip(0.01), tie, (1 - u["p_home"] - tie / 2).clip(0.01)
     u["kickoff"] = u.index.map({x["id"]: x["startTimeUTC"] for x in games})
-    u["news"] = u.index.map(news_ok)
+    u["llm"] = u.index.map(news_ok)
+    u["news"] = u["llm"] != ""
     for side, s in (("H", "home"), ("R", "away")):
         tt = t[t["homeRoad"] == side].set_index("gameId")
         u[f"{s}_absents"], u[f"{s}_summary"], u[f"{s}_miss"] = tt["absents"], tt["summary"], tt["miss"]
