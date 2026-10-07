@@ -138,6 +138,7 @@ def run_settle():
                 results[gm["id"]] = {"Vainqueur": win, "1N2": win if period == "REG" else "X",
                                      "score": f"{a} - {h}" + ("" if period == "REG" else f" ({period})")}
     n = 0
+    bets["score"] = bets["score"].astype(object)  # colonne vide lue en float : le score est un texte
     for idx, b in bets[bets["status"] == "en attente"].iterrows():
         r = results.get(int(b["gameId"]))
         if r:
