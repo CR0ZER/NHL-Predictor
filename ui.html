@@ -595,7 +595,7 @@ function render() {
   games.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
   upcoming.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
   renderTicker(games);
-  if ($("#tab-tonight").classList.contains("on")) { renderHero(games, shown, upcoming); renderEdge(games); renderGames(games, shown, upcoming); }
+  if ($("#tab-tonight").classList.contains("on")) { renderHero(games, shown, upcoming); renderEdge(games, shown, upcoming); renderGames(games, shown, upcoming); }
   if ($("#tab-sim").classList.contains("on")) renderSim();
   if ($("#tab-model").classList.contains("on") && MODEL) renderModel();
 }
@@ -625,10 +625,17 @@ function renderHero(games, day, upcoming = []) {
   countUp($("#c-value"), value, v => Math.round(v), "value");
 }
 
-function renderEdge(games) {
+const PASSES = ["16:17", "21:47"];  // passages de prédiction (UTC), crons de .github/workflows/pipeline.yml
+function renderEdge(games, day, upcoming = []) {
   const el = $("#edge");
   const rows = games.map(g => ({ g, e: g.pin_fair != null ? g.p_home - g.pin_fair : null })).sort((a, b) => Math.abs(b.e ?? 0) - Math.abs(a.e ?? 0));
-  if (!rows.length) { el.innerHTML = `<div class="empty">L'écart avec le marché apparaîtra après la première prédiction.</div>`; return; }
+  if (!rows.length) {
+    const pass = PASSES.map(t => `${day}T${t}:00Z`).find(t => new Date(t) > Date.now());
+    el.innerHTML = !upcoming.length ? `<div class="empty">L'écart avec le marché apparaîtra après la première prédiction.</div>`
+      : pass ? `<div class="empty">Prédiction automatique <b data-kick="${pass}">${countdown(pass)}</b><br><small>${paris(pass)}, heure de Paris · GitHub peut la retarder</small></div>`
+      : `<div class="empty">Le passage de prédiction prévu est en retard : GitHub le lancera dès que possible.</div>`;
+    return;
+  }
   const W = el.clientWidth || 600, rowH = 26, H = rows.length * rowH + 24, lab = 92, val = 56, half = (W - lab - 2 * val) / 2, mid = lab + val + half;
   const max = Math.max(0.1, ...rows.map(r => Math.abs(r.e ?? 0)));
   let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Écart modèle moins marché par match">`;
