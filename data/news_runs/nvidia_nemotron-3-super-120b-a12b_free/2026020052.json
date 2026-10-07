@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020052,
+  "kickoff": "2026-10-07T02:00:00Z",
+  "away": "Florida Panthers",
+  "home": "Los Angeles Kings",
+  "away_id": 13,
+  "home_id": 26,
+  "away_abbr": "FLA",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-07T01:04:10.353203+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Kings projected lineups",
+   "published": "2026-10-06T19:20:36.886Z",
+   "lineups": true
+  },
+  {
+   "title": "FINAL - LAK 4, SJS 5 (OT)",
+   "published": "2026-10-04T05:05:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Panthers ready to face ‘great transition game’ in Anaheim ",
+   "published": "2026-10-04T06:53:38.847Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Ducks projected lineups",
+   "published": "2026-10-04T16:09:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘A great boost’: Marchand set to make season debut vs. Ducks",
+   "published": "2026-10-04T21:52:40.537Z",
+   "lineups": false
+  },
+  {
+   "title": "Gudas welcomed back with ovation during return to Anaheim",
+   "published": "2026-10-05T02:08:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "Injured: lower body (placed on LTIR, expected to miss 6-8 weeks)"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "Injured: neck"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "Injured: lower body (but returning per article; however, projected lineups list him as injured, so included as out with note)"
+    },
+    {
+     "player": "Aaron Ekblad",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Sam Lafferty",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Alexander Petrovic",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/** Brad Marchand is returning per article 'A great boost’: Marchand set to make season debut vs. Ducks', but projected lineups still list him as injured. Since the article confirms his return and it is published before the game, he is included here as returning. **/",
+    "Brad Marchand"
+   ],
+   "summary": "The Panthers are without captain Aleksander Barkov (lower body, LTIR, 6-8 weeks out) and will also miss Jonah Gadjovich (neck) and Brad Marchand (lower body, though he is returning for this game per a separate article). Aaron Ekblad, Sam Lafferty, and Alexander Petrovic are scratched. The team expects to dress the same lineup used in their 3-2 OT loss at Anaheim, with Lars Eller centering Barkov’s usual line and Gustav Forsling a game-time decision."
+  },
+  "home": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kevin Fiala",
+     "detail": "Injured: leg surgery (resumed skating, expected back in early November)"
+    },
+    {
+     "player": "Andre Lee",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Samuel Helenius",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Kings are coming off a 5-4 OT loss to the Sharks, earning their first point of the season. Darcy Kuemper is projected to start in net, the only change from their last game. Kevin Fiala remains out after leg surgery but has resumed skating and could return in early November. Andre Lee and Samuel Helenius are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Aleksander Barkov": 0.98,
+    "Jonah Gadjovich": 0.97,
+    "Brad Marchand": 0.49,
+    "Aaron Ekblad": 0.96,
+    "Sam Lafferty": 0.95,
+    "Alexander Petrovic": 0.96
+   }
+  },
+  "home": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Kevin Fiala": 0.97,
+    "Andre Lee": 0.96,
+    "Samuel Helenius": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.5,
+  "jev": 0.8
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "game": {
+  "gameId": 2026020051,
+  "kickoff": "2026-10-07T01:40:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Seattle Kraken",
+  "away_id": 54,
+  "home_id": 55,
+  "away_abbr": "VGK",
+  "home_abbr": "SEA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-07T01:04:00.740200+00:00",
+ "articles": [
+  {
+   "title": "Golden Knights at Kraken projected lineups",
+   "published": "2026-10-06T17:36:49.919Z",
+   "lineups": true
+  },
+  {
+   "title": "Kraken Hang Tough But Lose Late",
+   "published": "2026-10-04T01:59:49.615Z",
+   "lineups": false
+  },
+  {
+   "title": "Post-Game Instant Analysis: Seattle at Edmonton",
+   "published": "2026-10-04T02:05:52.567Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames at Kraken projected lineups",
+   "published": "2026-10-04T14:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames (0-2-0) vs. Kraken (1-1-0) | 5:00 p.m.",
+   "published": "2026-10-04T15:07:51.371Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Oct. 4, 2026",
+   "published": "2026-10-04T15:35:46.126Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights are 2-1-0 and projected to start Carter Hart in goal. Their projected lineup features Ivan Barbashev, Jack Eichel, and Mark Stone on the top line, with Brett Howden, William Karlsson, and Mitch Marner on the second. Dylan Coghlan and Raphael Lavoie are scratched, and there are no reported injuries."
+  },
+  "home": {
+   "starting_goalie": "Joey Daccord",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jacob Melanson",
+     "detail": "Injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Meyers will play on the fourth line after being scratched for Douglas, a forward, in a 6-1 win against the Calgary Flames on Sunday."
+   ],
+   "summary": "The Kraken are 2-1-0 and projected to start Joey Daccord in goal. Their projected lineup includes Jared McCann, Matty Beniers, and Mackie Samoskevich on the top line, with Bobby McMann, Chandler Stephenson, and Jordan Eberle on the second. Josh Mahura, Ville Ottavainen, and Curtis Douglas are scratched, and Jacob Melanson is injured (upper body). Ben Meyers is returning to the lineup after being scratched in the previous game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Carter Hart",
+   "p_starter": 0.99,
+   "announced": 0.81,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "Joey Daccord",
+   "p_starter": 0.97,
+   "announced": 0.92,
+   "p_out": {
+    "Jacob Melanson": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.6,
+  "jev": 0.5
+ }
+}
