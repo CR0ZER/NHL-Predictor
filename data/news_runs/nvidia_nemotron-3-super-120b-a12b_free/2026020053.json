@@ -1,0 +1,138 @@
+{
+ "game": {
+  "gameId": 2026020053,
+  "kickoff": "2026-10-07T23:30:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Washington Capitals",
+  "away_id": 5,
+  "home_id": 15,
+  "away_abbr": "PIT",
+  "home_abbr": "WSH"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-07T21:18:52.679721+00:00",
+ "articles": [
+  {
+   "title": "Penguins at Capitals projected lineups",
+   "published": "2026-10-07T16:57:05.386Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: 10.05.26 vs. Winnipeg Jets",
+   "published": "2026-10-05T11:00:06.102Z",
+   "lineups": false
+  },
+  {
+   "title": "Alex Ovechkin Announces 2026-27 Will Be His Final NHL Season",
+   "published": "2026-10-05T14:54:48.388Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin tells Capitals teammates this will be his last NHL season",
+   "published": "2026-10-05T15:11:27.593Z",
+   "lineups": false
+  },
+  {
+   "title": "Jets at Penguins projected lineups",
+   "published": "2026-10-05T16:17:21.064Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin will leave lasting legacy in D.C. area",
+   "published": "2026-10-05T16:29:18.968Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Solovyov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Spencer Stastney",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Bryan Rust",
+     "detail": "game-time decision, upper-body injury"
+    }
+   ],
+   "returning": [],
+   "summary": "The Penguins (2-1-0) are projected to start Arturs Silovs in goal. They will be without injured players Justin Brazeau (lower body) and Ryan Graves (knee), and scratched players Elmer Soderblom, Ilya Solovyov, and Spencer Stastney. Bryan Rust is a game-time decision due to an upper-body injury and could make his season debut after missing three games."
+  },
+  "home": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ivan Miroshnichenko",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ethen Frank",
+     "detail": "scratched"
+    },
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Matt Roy",
+     "detail": "lower body injury, day to day, will not play"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals (1-1-0) are projected to start Logan Thompson in goal. They will be without scratched players Ivan Miroshnichenko and Ethen Frank, and injured players Rasmus Sandin (knee) and Matt Roy (lower body, day to day, will not play). Alex Ovechkin has announced this will be his final NHL season, adding emotional context to the home opener."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Arturs Silovs",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Justin Brazeau": 0.98,
+    "Ryan Graves": 0.97,
+    "Elmer Soderblom": 0.98,
+    "Ilya Solovyov": 0.97,
+    "Spencer Stastney": 0.97,
+    "Bryan Rust": 0.25
+   }
+  },
+  "home": {
+   "starter": "Logan Thompson",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Ivan Miroshnichenko": 0.98,
+    "Ethen Frank": 0.97,
+    "Rasmus Sandin": 0.8,
+    "Matt Roy": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.8,
+  "jev": 0.3
+ }
+}

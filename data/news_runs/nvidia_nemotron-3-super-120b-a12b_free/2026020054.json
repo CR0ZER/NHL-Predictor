@@ -1,0 +1,129 @@
+{
+ "game": {
+  "gameId": 2026020054,
+  "kickoff": "2026-10-07T23:30:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Winnipeg Jets",
+  "away_id": 21,
+  "home_id": 52,
+  "away_abbr": "COL",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-07T21:18:57.259865+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Avalanche at Jets",
+   "published": "2026-10-07T11:24:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Avalanche at Jets projected lineups",
+   "published": "2026-10-07T17:00:05.785Z",
+   "lineups": true
+  },
+  {
+   "title": "GAMEDAY: Jets at Penguins",
+   "published": "2026-10-05T05:12:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: October 5 Winnipeg Jets at Pittsburgh Penguins",
+   "published": "2026-10-05T12:17:33.448Z",
+   "lineups": false
+  },
+  {
+   "title": "Jets at Penguins projected lineups",
+   "published": "2026-10-05T16:17:21.064Z",
+   "lineups": false
+  },
+  {
+   "title": "30 saves for Stevenson in Jets win over Pens",
+   "published": "2026-10-06T00:55:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Logan O'Connor",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Noah Juulsen",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": L’Heureux will make his Avalanche debut after recovering from a lower-body injury sustained during the preseason."
+   ],
+   "summary": "The Avalanche are 2-0 to start the season, having scored 14 goals in their first two games. They face a Jets team that has allowed just four goals in their first three wins. Colorado will rely on their offensive firepower, led by MacKinnon and Landeskog, to test Winnipeg's strong defensive start."
+  },
+  "home": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Elias Salomonsson",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Walker Duehr",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Haydn Fleury",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nino Niederreiter",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Tyrel Bauer",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Jets are 2-0-1 to start the season, having won their first two games and allowed just four goals. They are riding strong defensive play and goaltending, with Stuart Skinner projected to start in net after a 3-2 win over Pittsburgh. The Jets will look to continue their success without relying on Mark Scheifele's scoring, as he remains point-less through three games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Logan O'Connor": 0.97,
+    "Noah Juulsen": 0.97
+   }
+  },
+  "home": {
+   "starter": "Stuart Skinner",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Elias Salomonsson": 0.98,
+    "Walker Duehr": 0.97,
+    "Garrett Brown": 0.97,
+    "Haydn Fleury": 0.97,
+    "Nino Niederreiter": 0.97,
+    "Tyrel Bauer": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.2,
+  "jev": 0.3
+ }
+}
