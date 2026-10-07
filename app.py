@@ -9,6 +9,8 @@ Paris fictifs enregistrés dans data/paper_bets.csv à la cote disponible au mom
 réglés ensuite avec les résultats officiels NHL. Rien n'est jamais misé réellement.
 """
 import json
+import mimetypes
+import shutil
 import sys
 import threading
 import traceback
@@ -24,6 +26,11 @@ import odds
 from xg import DATA, WEB, get_json
 
 ROOT = Path(__file__).parent
+mimetypes.add_type("application/manifest+json", ".webmanifest")
+LOGO = ROOT / "assets" / "logo"
+# Fichiers publiés à côté de la page (icônes, manifeste, logos du header, image de partage), servis aussi en local
+PUBLIC = {f.name: f for f in [*(LOGO / "web").glob("*.*"), *(LOGO / "svg").glob("logo-horizontal-color-*.svg"),
+                               LOGO / "social" / "og-image-1200x630.png"] if f.suffix != ".html"}
 BETS, PREDS = DATA / "paper_bets.csv", DATA / "predictions.csv"
 PORT = 8765
 VALUE_MIN = 0.0  # avantage minimal (p_modèle × cote - 1) pour les stratégies « valeur »
@@ -295,6 +302,9 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path in ("/", "/index.html"):
             return self.send(200, (ROOT / "ui.html").read_bytes(), "text/html")
+        if self.path[1:] in PUBLIC:
+            f = PUBLIC[self.path[1:]]
+            return self.send(200, f.read_bytes(), mimetypes.guess_type(f.name)[0] or "application/octet-stream")
         routes = {"/api/state": state, "/api/job": lambda: JOB, "/api/model": model_stats}
         if self.path in routes:
             try:
@@ -327,6 +337,8 @@ def export(out=ROOT / "site"):
     html = (ROOT / "ui.html").read_text(encoding="utf-8")
     (out / "index.html").write_text(html.replace("<script>", "<script>window.STATIC_MODE = true;</script>\n<script>", 1),
                                     encoding="utf-8")
+    for f in PUBLIC.values():
+        shutil.copy(f, out / f.name)
     for name, data in (("state.json", state()), ("model.json", model_stats())):
         (out / name).write_text(json.dumps(clean(data), default=str, ensure_ascii=False), encoding="utf-8")
     print(f"Page statique écrite dans {out}")

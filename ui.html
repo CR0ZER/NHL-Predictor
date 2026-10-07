@@ -4,6 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NHL Predictor</title>
+<meta name="description" content="Prédiction des matchs NHL et simulation de paris fictifs à mise fixe.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0E2236">
+<meta property="og:title" content="NHL Predictor">
+<meta property="og:description" content="Prédiction des matchs NHL et simulation de paris fictifs à mise fixe.">
+<meta property="og:image" content="https://cr0zer.github.io/NHL-Predictor/og-image-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 /* ============ Tokens : « Arène » (sombre, défaut) et « Glace » (clair) ============ */
 :root {
@@ -58,10 +70,10 @@ body {
 header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px) saturate(140%); background: var(--glass); border-bottom: 1px solid var(--border); }
 .bar { max-width: 1320px; margin: 0 auto; padding: 12px 24px; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
 .brand { display: flex; align-items: center; gap: 12px; margin-right: auto; }
-.puck { width: 38px; height: 38px; flex: none; filter: drop-shadow(0 6px 14px var(--ice-glow)); }
-.brand .word { font-weight: 850; font-size: 18px; letter-spacing: 3px; }
-.brand .word em { font-style: normal; color: var(--ice); }
-.brand small { display: block; color: var(--text-muted); font-size: 11.5px; font-weight: 500; letter-spacing: .2px; }
+.brand-logo { height: 36px; width: auto; display: block; flex: none; }
+.brand-logo.light, :root[data-theme="light"] .brand-logo.dark { display: none; }
+:root[data-theme="light"] .brand-logo.light { display: block; }
+.brand small { display: block; color: var(--text-muted); font-size: 11.5px; font-weight: 500; letter-spacing: .2px; padding-left: 12px; border-left: 1px solid var(--border); }
 .clock { display: flex; gap: 10px; font-size: 12px; color: var(--text-secondary); font-variant-numeric: tabular-nums; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-1); }
 .clock b { color: var(--text-primary); }
 .live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--critical); align-self: center; animation: pulse 1.6s ease-in-out infinite; }
@@ -301,8 +313,7 @@ body.static .updated { display: flex; }
   header { position: relative; }                       /* l'en-tête ne colle plus : plus de place pour le contenu */
   .bar { padding: 10px 14px; gap: 8px 10px; }
   .brand { flex: 1 1 100%; }
-  .puck { width: 30px; height: 30px; }
-  .brand .word { font-size: 15px; letter-spacing: 2px; }
+  .brand-logo { height: 28px; }
   .brand small, .clock:not(.updated) { display: none; }
   .controls { flex: 1 1 auto; gap: 6px; }
   .field { height: 34px; padding: 0 8px; }
@@ -386,9 +397,9 @@ body.static .updated { display: flex; }
 <header>
   <div class="bar">
     <div class="brand">
-      <svg class="puck" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="pk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b3445"/><stop offset="1" stop-color="#05070b"/></linearGradient></defs>
-        <ellipse cx="20" cy="26" rx="16" ry="6" fill="#05070b"/><rect x="4" y="16" width="32" height="10" fill="url(#pk)"/><ellipse cx="20" cy="16" rx="16" ry="6" fill="#2f3a4d"/><ellipse cx="20" cy="16" rx="10" ry="3.4" fill="none" stroke="#7fdcff" stroke-width="1.4" opacity=".9"/></svg>
-      <div><div class="word">NHL<em>·</em>PREDICTOR</div><small>Modèle xG · Jev · paris fictifs à mise fixe</small></div>
+      <img class="brand-logo dark" src="logo-horizontal-color-dark.svg" alt="NHL Predictor" width="161" height="36">
+      <img class="brand-logo light" src="logo-horizontal-color-light.svg" alt="NHL Predictor" width="161" height="36">
+      <small>Modèle xG · Jev · paris fictifs à mise fixe</small>
     </div>
     <div class="clock updated" title="Données mises à jour automatiquement par GitHub Actions"><span>Mis à jour <b id="upd"></b></span></div>
     <div class="clock" title="Heure de Paris et de New York"><span class="live-dot"></span><span>Paris <b id="clk-paris"></b></span><span>New York <b id="clk-ny"></b></span></div>
