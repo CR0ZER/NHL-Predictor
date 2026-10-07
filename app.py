@@ -163,6 +163,17 @@ def run_odds_update():
     JOB["msg"] = "Cotes à jour."
 
 
+def schedule():
+    """Calendrier NHL de la semaine à venir, pour voir les matchs avant leur prédiction."""
+    full = lambda tm: f"{tm['placeName']['default']} {tm['commonName']['default']}"
+    try:
+        week = nhl.get_json(f"{nhl.WEB}/schedule/{et_today()}")["gameWeek"]
+    except Exception:  # API NHL indisponible : la page reste utilisable sans le calendrier
+        return []
+    return [{"gameId": x["id"], "date": d["date"], "kickoff": x["startTimeUTC"], "away": full(x["awayTeam"]),
+             "home": full(x["homeTeam"])} for d in week for x in d["games"] if x["gameType"] == 2]
+
+
 def state():
     bets, preds = read(BETS), read(PREDS)
     summary, curve = [], []
@@ -182,7 +193,7 @@ def state():
     if len(preds):
         preds = preds.sort_values("kickoff", ascending=False)
     return {"bets": records(bets.sort_values("kickoff", ascending=False) if len(bets) else bets),
-            "preds": records(preds), "summary": summary, "curve": curve,
+            "preds": records(preds), "schedule": schedule(), "summary": summary, "curve": curve,
             "strategies": STRATEGIES, "today": et_today(), "job": JOB,
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
 

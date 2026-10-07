@@ -533,7 +533,8 @@ async function api(path, body) {
 }
 async function refresh() {
   STATE = await api("/api/state");
-  const days = [...new Set(STATE.preds.map(p => p.date))].sort();
+  STATE.schedule ??= [];
+  const days = [...new Set([...STATE.preds, ...STATE.schedule].map(p => p.date))].sort();
   if (!$("#date").value) $("#date").value = days.includes(STATE.today) || !days.length ? STATE.today : days.at(-1);
   if (STATIC && days.length) Object.assign($("#date"), { min: days[0], max: days.at(-1) });
   if (STATE.generated_at) $("#upd").textContent = tz(STATE.generated_at, "Europe/Paris", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
@@ -590,9 +591,11 @@ function render() {
   if (!STATE) return;
   const day = $("#date").value;
   const games = STATE.preds.filter(p => p.date === day), shown = day;
+  const upcoming = STATE.schedule.filter(x => x.date === day && !games.some(g => g.gameId === x.gameId));
   games.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
+  upcoming.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
   renderTicker(games);
-  if ($("#tab-tonight").classList.contains("on")) { renderHero(games, shown); renderEdge(games); renderGames(games, shown); }
+  if ($("#tab-tonight").classList.contains("on")) { renderHero(games, shown, upcoming); renderEdge(games); renderGames(games, shown, upcoming); }
   if ($("#tab-sim").classList.contains("on")) renderSim();
   if ($("#tab-model").classList.contains("on") && MODEL) renderModel();
 }
@@ -606,19 +609,19 @@ function renderTicker(games) {
   $("#track").innerHTML = html + html;
 }
 
-function renderHero(games, day) {
+function renderHero(games, day, upcoming = []) {
   const bets = STATE.bets.filter(b => games.some(g => g.gameId === b.gameId));
   const value = bets.filter(b => b.strategy !== "favori").length;
-  const next = games.map(g => g.kickoff).filter(k => new Date(k) > Date.now()).sort()[0];
+  const next = [...games, ...upcoming].map(g => g.kickoff).filter(k => new Date(k) > Date.now()).sort()[0];
   const title = day ? new Date(day + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }) : "Aucune soirée";
   $("#hero").innerHTML = `<div class="eyebrow">Soirée NHL</div><h1>${title}</h1>
-    <p>${games.length ? "Probabilités de victoire prolongation incluse, comparées au marché. Les paris fictifs sont pris aux cotes du moment de la prédiction." : (STATIC ? "Pas encore de prédiction pour cette soirée : elles arrivent vers 18 h 15 et 23 h 45 (heure de Paris)." : "Choisissez la soirée en haut à droite, puis lancez <b>Prédire</b>.")}</p>
+    <p>${!games.length && upcoming.length ? `${upcoming.length} matchs au programme. ` : ""}${games.length ? "Probabilités de victoire prolongation incluse, comparées au marché. Les paris fictifs sont pris aux cotes du moment de la prédiction." : (STATIC ? "Pas encore de prédiction : elles arrivent vers 18 h 15 et 23 h 45 (heure de Paris)." : "Choisissez la soirée en haut à droite, puis lancez <b>Prédire</b>.")}</p>
     <div class="chips">
       <div class="chip"><div class="k">Matchs</div><div class="v" id="c-games"></div></div>
       <div class="chip"><div class="k">Paris valeur</div><div class="v" id="c-value"></div></div>
       <div class="chip ${next ? "glow" : ""}"><div class="k">Prochain coup d'envoi</div><div class="v" style="font-size:16px;margin-top:4px" ${next ? `data-kick="${next}"` : ""}>${next ? countdown(next) : "–"}</div></div>
     </div>`;
-  countUp($("#c-games"), games.length, v => Math.round(v), "games");
+  countUp($("#c-games"), games.length + upcoming.length, v => Math.round(v), "games");
   countUp($("#c-value"), value, v => Math.round(v), "value");
 }
 
@@ -682,9 +685,18 @@ function newsBlock(g) {
   const sum = ["away", "home"].filter(s => g[s + "_summary"]).map(s => `<p><b>${abbr(g[s])}</b> · ${esc(g[s + "_summary"])}</p>`).join("");
   return `<div class="news">${line("away")}${line("home")}${sum ? `<details><summary>Résumé de l'actualité</summary>${sum}</details>` : ""}</div>`;
 }
-function renderGames(list, day) {
+function renderGames(list, day, upcoming = []) {
   $("#games-sub").textContent = list.length ? "probabilité de victoire (extérieur | domicile), prolongation incluse · survolez une carte" : "";
-  if (!list.length) { $("#games").innerHTML = `<div class="card empty" style="grid-column:1/-1">Aucune prédiction enregistrée pour l'instant.</div>`; return; }
+  if (!list.length && !upcoming.length) { $("#games").innerHTML = `<div class="card empty" style="grid-column:1/-1">Aucun match ce jour-là.</div>`; return; }
+  const later = upcoming.map((g, i) => `<div class="card game rise" style="--i:${list.length + i}">
+      <div class="top"><span>${paris(g.kickoff)}</span><span class="pill soon" data-kick="${g.kickoff}">${countdown(g.kickoff)}</span></div>
+      <div class="faceoff">
+        <div class="team" title="${esc(g.away)}">${logo(g.away)}<div class="tname"><b>${abbr(g.away)} <span class="nick">${esc(nick(g.away))}</span></b></div></div>
+        <span class="muted">@</span>
+        <div class="team home" title="${esc(g.home)}">${logo(g.home)}<div class="tname"><b>${abbr(g.home)} <span class="nick">${esc(nick(g.home))}</span></b></div></div>
+      </div>
+      <div class="bets"><div class="bet"><span class="what">Prédiction à venir.</span></div></div>
+    </div>`).join("");
   $("#games").innerHTML = list.map((g, i) => {
     const bets = STATE.bets.filter(b => b.gameId === g.gameId);
     const uni = g.uni_H && g.uni_A ? (1 / g.uni_H) / (1 / g.uni_H + 1 / g.uni_A) : null;
@@ -711,7 +723,7 @@ function renderGames(list, day) {
         <span class="edgebadge ${cls(b.ev)}">${signPct(b.ev)}</span>${status(b)}</div>`).join("")
         : `<div class="bet"><span class="what">Aucun pari : pas de cote ou pas de valeur.</span></div>`}</div>
     </div>`;
-  }).join("");
+  }).join("") + later;
   nextFrame(() => {
     document.querySelectorAll("#games .arc").forEach(a => a.style.strokeDashoffset = a.dataset.off);
     document.querySelectorAll("#games .tug div[data-w]").forEach(d => d.style.width = `calc(${d.dataset.w}% - 1px)`);
