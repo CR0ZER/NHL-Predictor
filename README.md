@@ -35,7 +35,7 @@ lendemain avec les résultats officiels. **Aucun pari réel n'est jamais engagé
 ## Fonctionnement
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["API NHL<br/>résultats, play-by-play"] --> B["Modèle xG<br/>qualité de chaque tir"]
     B --> C["Variables d'avant-match<br/>xG, Corsi, gardien, fatigue"]
     D["NHL.com<br/>articles d'avant-match"] --> E["Modèle de langage<br/>extraction structurée"]
