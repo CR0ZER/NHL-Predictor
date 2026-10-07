@@ -62,6 +62,8 @@ def clean(x):
 def run_predict(day, stake, use_news):
     JOB["msg"] = "Chargement du modèle…"
     u = nhl.predictions(day, use_news=use_news, progress=lambda m: JOB.update(msg=m))
+    if len(u):  # un match commencé garde sa prédiction et ses paris d'origine
+        u = u[pd.to_datetime(u["kickoff"], utc=True) > pd.Timestamp.now(tz="UTC")]
     if u.empty:
         JOB["msg"] = f"Aucun match à venir le {day}."
         return
