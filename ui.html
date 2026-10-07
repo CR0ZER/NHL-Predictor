@@ -594,19 +594,23 @@ function render() {
   const upcoming = STATE.schedule.filter(x => x.date === day && !games.some(g => g.gameId === x.gameId));
   games.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
   upcoming.sort((a, b) => a.kickoff.localeCompare(b.kickoff));
-  renderTicker(games);
+  renderTicker(games, upcoming);
   if ($("#tab-tonight").classList.contains("on")) { renderHero(games, shown, upcoming); renderEdge(games, shown, upcoming); renderGames(games, shown, upcoming); }
   if ($("#tab-sim").classList.contains("on")) renderSim();
   if ($("#tab-model").classList.contains("on") && MODEL) renderModel();
 }
 
-function renderTicker(games) {
+function renderTicker(games, upcoming = []) {
+  const later = upcoming.map(g => `<span><b>${abbr(g.away)}</b> @ <b>${abbr(g.home)}</b> · ${tz(g.kickoff, "Europe/Paris", { hour: "2-digit", minute: "2-digit" })}</span>`);
   const items = games.map(g => {
     const edge = g.pin_fair != null ? g.p_home - g.pin_fair : null;
     return `<span><b>${abbr(g.away)}</b> ${Math.round((1 - g.p_home) * 100)}% · <b>${abbr(g.home)}</b> ${Math.round(g.p_home * 100)}%${edge != null ? ` <span class="edge">Δ ${signPct(edge, 0)}</span>` : ""}${g.score ? ` · <b>${esc(g.score)}</b>` : ""}</span>`;
-  });
-  const html = items.length ? items.join("") : `<span>Aucune prédiction pour cette soirée${STATIC ? "" : " — lancez <b>Prédire</b>"}</span>`;
+  }).concat(later);
+  // soirée courte : les matchs sont répétés pour que la bande reste pleine
+  const reps = Math.ceil(12 / Math.max(items.length, 1));
+  const html = items.length ? items.join("").repeat(reps) : `<span>Aucune prédiction pour cette soirée${STATIC ? "" : " — lancez <b>Prédire</b>"}</span>`;
   $("#track").innerHTML = html + html;
+  $("#track").style.animationDuration = 60 * reps + "s";  // même vitesse de défilement
 }
 
 function renderHero(games, day, upcoming = []) {
