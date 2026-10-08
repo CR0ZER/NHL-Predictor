@@ -138,6 +138,10 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .neg { color: var(--critical-text); }
 .muted { color: var(--text-muted); }
 .empty { padding: 40px; text-align: center; color: var(--text-muted); }
+.nextpred { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.nextpred span { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.nextpred b { font-size: 34px; font-weight: 850; color: var(--ice); text-shadow: 0 0 24px var(--ice-glow); font-variant-numeric: tabular-nums; }
+.nextpred small { font-size: 13px; color: var(--text-secondary); }
 
 /* ============ Hero soirée ============ */
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 16px; }
@@ -170,9 +174,21 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .game .top { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); font-weight: 650; }
 .pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; border: 1px solid var(--border); background: var(--surface-2); color: var(--text-secondary); font-variant-numeric: tabular-nums; }
 .pill.final { color: var(--text-primary); border-color: var(--border-strong); }
+[hidden] { display: none !important; }
 .pill.hit { color: var(--good-text); border-color: color-mix(in srgb, var(--good) 45%, transparent); }
 .pill.miss { color: var(--critical-text); border-color: color-mix(in srgb, var(--critical) 45%, transparent); }
 .team.lose { opacity: .45; }
+.result { display: flex; align-items: center; gap: 10px; }
+.result .sc { font-size: 34px; font-weight: 850; line-height: 1; font-variant-numeric: tabular-nums; color: var(--text-muted); min-width: 24px; text-align: center; }
+.result .sc.w { color: var(--text-primary); }
+.gauge.sm { width: 52px; height: 52px; }
+.gauge.sm .num b { font-size: 12px; }
+.gauge.sm .num small { font-size: 8px; }
+.news > summary { display: flex; align-items: center; gap: 8px; cursor: pointer; list-style: none; }
+.news > summary::-webkit-details-marker { display: none; }
+.news > summary::after { content: "Détails ▸"; margin-left: auto; font-size: 11.5px; font-weight: 650; color: var(--ice); }
+.news[open] > summary { margin-bottom: 4px; }
+.news[open] > summary::after { content: "Masquer ▾"; }
 .team.win .logo { box-shadow: 0 0 0 2px var(--good), 0 0 16px color-mix(in srgb, var(--good) 35%, transparent); }
 .pill.soon { color: var(--ice); border-color: var(--ice); box-shadow: 0 0 14px var(--ice-soft); }
 .faceoff { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; }
@@ -310,6 +326,13 @@ th { text-align: left; color: var(--text-muted); font-weight: 700; font-size: 10
 td { padding: 10px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; font-variant-numeric: tabular-nums; }
 tbody tr { transition: background .15s; }
 tbody tr:hover { background: var(--surface-2); }
+#bets tr.m0 { background: color-mix(in srgb, #fff 3%, transparent); }
+#bets tr.m1 { background: color-mix(in srgb, var(--ice) 12%, transparent); }
+#bets tr.m0:hover, #bets tr.m1:hover { background: var(--surface-2); }
+#bets tr.day td { padding: 14px 14px 8px; font-weight: 800; font-size: 13.5px; text-transform: capitalize; color: var(--text-primary); border-bottom: 2px solid var(--border-strong); background: transparent; }
+#bets tr.day td span { margin-left: 10px; font-weight: 550; font-size: 12px; text-transform: none; color: var(--text-muted); }
+.pager { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 12px; color: var(--text-secondary); font-size: 13px; font-variant-numeric: tabular-nums; }
+.pager button { width: 34px; height: 34px; padding: 0; }
 tr:last-child td { border-bottom: 0; }
 td.r, th.r { text-align: right; }
 .skill { display: inline-block; height: 6px; border-radius: 3px; background: var(--s1); vertical-align: middle; margin-right: 8px; }
@@ -399,6 +422,7 @@ body.static .updated { display: flex; }
   #bets thead { display: none; }
   #bets tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 10px; padding: 10px 12px; border-bottom: 1px solid var(--border); }
   #bets td { border: 0; padding: 0; white-space: normal; min-width: 0; }
+  #bets tr.day, #bets tr.day td { display: block; }
   #bets td:nth-child(2), #bets td:nth-child(6), #bets td:nth-child(8) { display: none; }
   #bets td:nth-child(1) { grid-area: 1 / 1; } #bets td:nth-child(9) { grid-area: 1 / 2; justify-self: end; }
   #bets td:nth-child(4) { grid-area: 2 / 1; color: var(--text-secondary); } #bets td:nth-child(5) { grid-area: 2 / 2; }
@@ -500,6 +524,7 @@ body.static .updated { display: flex; }
       <select id="f-status"><option value="">Tous les statuts</option><option>en attente</option><option>gagné</option><option>perdu</option></select>
     </div>
     <div class="card tbl-wrap"><table id="bets"></table></div>
+    <div class="pager" id="pager"></div>
   </section>
 
   <section class="tab" id="tab-model">
@@ -779,14 +804,12 @@ function renderHero(games, day, upcoming = []) {
   const next = [...games, ...upcoming].map(g => g.kickoff).filter(k => new Date(k) > Date.now()).sort()[0];
   const over = games.length && !upcoming.length && games.every(g => g.score);  // soirée terminée et réglée : bilan
   const hits = games.filter(g => g.result && (g.p_home >= 0.5) === (g.result === "H")).length;
-  const profit = bets.reduce((a, b) => a + (b.profit ?? 0), 0);
   const title = day ? new Date(day + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }) : "Aucune soirée";
   $("#hero").innerHTML = `<div class="eyebrow">Soirée NHL</div><h1>${title}</h1>
     <p>${!games.length && upcoming.length ? `${upcoming.length} matchs au programme. ` : ""}${games.length ? "Probabilités de victoire prolongation incluse, comparées au marché. Les paris fictifs sont pris aux cotes du moment de la prédiction." : (STATIC ? "Pas encore de prédiction : elle arrive vers 18 h 15 (heure de Paris)." : "Choisissez la soirée en haut à droite, puis lancez <b>Prédire</b>.")}</p>
     <div class="chips">
       <div class="chip"><div class="k">Matchs</div><div class="v" id="c-games"></div></div>
-      ${over ? `<div class="chip"><div class="k">Favori du modèle</div><div class="v">${hits}/${games.length} <small class="muted">gagnés</small></div></div>
-      <div class="chip"><div class="k">Profit fictif</div><div class="v ${cls(profit)}">${eur(profit)}</div></div>`
+      ${over ? `<div class="chip" title="Matchs où l'équipe donnée gagnante par le modèle (plus de 50 %) a gagné, indépendamment des paris"><div class="k">Vainqueur bien prédit</div><div class="v">${hits} <small class="muted">sur ${games.length}</small></div></div>`
       : `<div class="chip"><div class="k">Paris valeur</div><div class="v" id="c-value"></div></div>
       <div class="chip ${next ? "glow" : ""}"><div class="k">Prochain coup d'envoi</div><div class="v" style="font-size:16px;margin-top:4px" ${next ? `data-kick="${next}"` : ""}>${next ? countdown(next) : "–"}</div></div>`}
     </div>`;
@@ -807,8 +830,8 @@ function renderEdge(games, day, upcoming = []) {
   if (!rows.length) {
     const pass = passes(day).find(t => new Date(t) > Date.now());
     el.innerHTML = !upcoming.length ? `<div class="empty">L'écart avec le marché apparaîtra après la première prédiction.</div>`
-      : pass ? `<div class="empty">Prédiction automatique <b data-kick="${pass}">${countdown(pass)}</b><br><small>${paris(pass)}, heure de Paris · GitHub peut la retarder</small></div>`
-      : `<div class="empty">Le passage de prédiction prévu est en retard : GitHub le lancera dès que possible.</div>`;
+      : pass ? `<div class="empty nextpred"><span>Prédiction automatique</span><b data-kick="${pass}">${countdown(pass)}</b><small>${paris(pass)}, heure de Paris</small></div>`
+      : `<div class="empty">La prédiction de cette soirée n'a pas encore été publiée.</div>`;
     return;
   }
   const W = el.clientWidth || 600, rowH = 26, H = rows.length * rowH + 24, lab = 92, val = 56, half = (W - lab - 2 * val) / 2, mid = lab + val + half;
@@ -840,9 +863,9 @@ function logo(name) {
   const a = abbr(name);
   return `<div class="logo"><img src="https://assets.nhle.com/logos/nhl/svg/${a}${css("--logo").replace(/"/g, "")}.svg" alt="${a}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'mono',textContent:'${a}'}))"></div>`;
 }
-function gauge(p) {
+function gauge(p, sm = false) {
   const r = 30, c = 2 * Math.PI * r;
-  return `<div class="gauge" title="Modèle : probabilité de victoire à domicile"><svg viewBox="0 0 74 74"><circle cx="37" cy="37" r="${r}" fill="none" stroke="${css("--surface-3")}" stroke-width="7"/>
+  return `<div class="gauge ${sm ? "sm" : ""}" title="Modèle : probabilité de victoire à domicile"><svg viewBox="0 0 74 74"><circle cx="37" cy="37" r="${r}" fill="none" stroke="${css("--surface-3")}" stroke-width="7"/>
     <circle class="arc" cx="37" cy="37" r="${r}" fill="none" stroke="${css("--s1")}" stroke-width="7" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c}" data-off="${c * (1 - p)}"/></svg>
     <div class="num"><div><b>${Math.round(p * 100)}%</b><small>dom.</small></div></div></div>`;
 }
@@ -855,10 +878,11 @@ function status(b) {
   if (b.status === "perdu") return `<span class="status lost">✕ ${eur(b.profit)}</span>`;
   return `<span class="status wait">⏳ en attente</span>`;
 }
-function newsBlock(g) {
+function newsBlock(g, folded = false) {  // folded : match terminé, une ligne qu'on déroule
+  const box = (head, body) => folded ? `<details class="news"><summary>${head}</summary>${body}</details>` : `<div class="news">${head}${body}</div>`;
   if (!g.news) {  // extraction des absents ratée ; Jev a pu lire les gardiens quand même (nom suivi de « * »)
     const jev = [g.away_goalie, g.home_goalie].some(n => String(n || "").endsWith("*"));
-    return `<div class="news"><span class="src off">${jev ? "Actualité incomplète" : "Actualité inaccessible"}</span><span class="none">${jev ? "Absents non lus · gardiens identifiés par Jev." : "Gardiens devinés, absents ignorés."}</span></div>`;
+    return box(`<span class="src off">${jev ? "Actualité incomplète" : "Actualité inaccessible"}</span>`, `<span class="none">${jev ? "Absents non lus · gardiens identifiés par Jev." : "Gardiens devinés, absents ignorés."}</span>`);
   }
   const llm = String(g.llm || "").replace(/^.*\//, "").split(/[-:]/)[0];  // « nvidia/nemotron-3-…:free » -> « nemotron »
   const line = side => {
@@ -869,7 +893,7 @@ function newsBlock(g) {
     return `<div class="line"><span class="who">${abbr(g[side])}</span><span class="abs">${txt}</span>${imp}</div>`;
   };
   const sum = ["away", "home"].filter(s => g[s + "_summary"]).map(s => `<p><b>${abbr(g[s])}</b> · ${esc(g[s + "_summary"])}</p>`).join("");
-  return `<div class="news"><span class="src">Actualité lue${llm ? ` · ${esc(llm)}` : ""}</span>${line("away")}${line("home")}${sum ? `<details><summary>Résumé de l'actualité</summary>${sum}</details>` : ""}</div>`;
+  return box(`<span class="src">Actualité lue${llm ? ` · ${esc(llm)}` : ""}</span>`, `${line("away")}${line("home")}${sum ? `<details><summary>Résumé de l'actualité</summary>${sum}</details>` : ""}`);
 }
 function renderGames(list, day, upcoming = []) {
   $("#games-sub").textContent = list.length ? "probabilité de victoire (extérieur | domicile), prolongation incluse · survolez une carte" : "";
@@ -890,16 +914,17 @@ function renderGames(list, day, upcoming = []) {
     const started = new Date(g.kickoff) <= Date.now();
     const won = g.score && g.result, hit = won && (g.p_home >= 0.5) === (won === "H");
     const side = s => won ? (won === s ? "win" : "lose") : "";
-    const top = g.score ? `<span class="pill final">FINAL ${esc(g.score)}</span>${won ? `<span class="pill ${hit ? "hit" : "miss"}" title="Le favori du modèle a-t-il gagné ?">${hit ? "✓ modèle" : "✗ modèle"}</span>` : ""}` : `<span>${paris(g.kickoff)}</span><span class="pill ${started ? "" : "soon"}" ${started ? "" : `data-kick="${g.kickoff}"`}>${started ? "en cours" : countdown(g.kickoff)}</span>`;
+    const [, sa, sh, ot] = String(g.score || "").match(/^(\d+) - (\d+)(?: \((\w+)\))?/) || [];  // « 4 - 5 (OT) »
+    const top = g.score ? `<span class="pill final">FINAL${ot ? ` · ${esc(ot)}` : ""}</span>${won ? `<span class="pill ${hit ? "hit" : "miss"}" title="Le favori du modèle a-t-il gagné ?">${hit ? "✓ modèle" : "✗ modèle"}</span>` : ""}` : `<span>${paris(g.kickoff)}</span><span class="pill ${started ? "" : "soon"}" ${started ? "" : `data-kick="${g.kickoff}"`}>${started ? "en cours" : countdown(g.kickoff)}</span>`;
     const hasValue = bets.some(b => b.strategy !== "favori");
     return `<div class="card game rise ${hasValue ? "value" : ""}" style="--i:${i}">
       <div class="top">${top}</div>
       <div class="faceoff">
         <div class="team ${side("A")}" title="${esc(g.away)}">${logo(g.away)}<div class="tname"><b>${abbr(g.away)} <span class="nick">${esc(nick(g.away))}</span></b><small>${gk(g.away_goalie)}</small></div></div>
-        ${gauge(g.p_home)}
+        ${sa ? `<div class="result"><span class="sc ${won === "A" ? "w" : ""}">${sa}</span>${gauge(g.p_home, true)}<span class="sc ${won === "H" ? "w" : ""}">${sh}</span></div>` : gauge(g.p_home)}
         <div class="team home ${side("H")}" title="${esc(g.home)}">${logo(g.home)}<div class="tname"><b>${abbr(g.home)} <span class="nick">${esc(nick(g.home))}</span></b><small>${gk(g.home_goalie)}</small></div></div>
       </div>
-      ${newsBlock(g)}
+      ${newsBlock(g, !!g.score)}
       <div class="probs">${tug(g.p_home, "Modèle")}${tug(g.pin_fair, "Pinnacle")}${tug(uni, "Unibet")}</div>
       <div class="odds">
         <span class="odd">Unibet <b>${g.uni_A ?? "–"}</b> | <b>${g.uni_H ?? "–"}</b></span>
@@ -954,17 +979,38 @@ function renderSim() {
   const sel = $("#f-strat"); if (sel.options.length === 1) Object.entries(STATE.strategies).forEach(([k, v]) => sel.add(new Option(v, k)));
   renderBets();
 }
+let PAGE = 0;  // page du tableau des paris (30 par page)
 function renderBets() {
-  const fs = $("#f-strat").value, st = $("#f-status").value;
-  const rows = STATE.bets.filter(b => (!fs || b.strategy === fs) && (!st || b.status === st));
+  const fs = $("#f-strat").value, st = $("#f-status").value, per = 30;
+  const order = Object.keys(STATE.strategies);  // soirée la plus récente d'abord, paris d'un même match regroupés
+  const all = STATE.bets.filter(b => (!fs || b.strategy === fs) && (!st || b.status === st))
+    .sort((a, b) => b.date.localeCompare(a.date) || a.kickoff.localeCompare(b.kickoff) || a.gameId - b.gameId || order.indexOf(a.strategy) - order.indexOf(b.strategy));
+  const pages = Math.max(1, Math.ceil(all.length / per));
+  PAGE = Math.min(PAGE, pages - 1);
+  const rows = all.slice(PAGE * per, PAGE * per + per);
+  let day = null, game = null, band = 1;
+  const html = rows.map(b => {
+    let head = "";
+    if (b.date !== day) {
+      day = b.date;
+      const n = all.filter(x => x.date === day).length;
+      head = `<tr class="day"><td colspan="10">${new Date(day + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" })}<span>${n} pari${n > 1 ? "s" : ""}</span></td></tr>`;
+    }
+    if (b.gameId !== game) { game = b.gameId; band = 1 - band; }
+    return head + row(b, band);
+  }).join("");
+  $("#pager").innerHTML = pages > 1 ? `<button type="button" data-p="-1" aria-label="Page précédente" ${PAGE ? "" : "disabled"}>‹</button><span>Page ${PAGE + 1} / ${pages}</span><button type="button" data-p="1" aria-label="Page suivante" ${PAGE < pages - 1 ? "" : "disabled"}>›</button>` : "";
   $("#bets").innerHTML = `<thead><tr><th>Match</th><th>Coup d'envoi (Paris)</th><th>Stratégie</th><th>Pari</th><th class="r">Cote</th><th class="r">P modèle</th><th class="r">Valeur</th><th class="r">Mise</th><th>Statut</th><th>Score (ext. - dom.)</th></tr></thead><tbody>` +
-    (rows.length ? rows.map(b => `<tr><td><b>${abbr(b.away)}</b> @ <b>${abbr(b.home)}</b></td><td>${paris(b.kickoff)}</td>
+    (rows.length ? html : `<tr><td colspan="10" class="empty">Aucun pari pour l'instant.</td></tr>`) + `</tbody>`;
+}
+function row(b, band) {
+  return `<tr class="m${band}"><td><b>${abbr(b.away)}</b> @ <b>${abbr(b.home)}</b></td><td>${paris(b.kickoff)}</td>
       <td><span class="swatch" style="margin-right:6px;background:${COLORS[b.strategy]}"></span>${SHORT[b.strategy]}</td>
       <td>${esc(b.market)} · <b>${esc(b.pick === "X" ? "Nul 60 min" : b.pick_label)}</b></td><td class="r">${b.price}</td><td class="r">${pct(b.p_model)}</td>
-      <td class="r"><span class="edgebadge ${cls(b.ev)}">${signPct(b.ev)}</span></td><td class="r">${b.stake} €</td><td>${status(b)}</td><td>${esc(b.score ?? "")}</td></tr>`).join("")
-      : `<tr><td colspan="10" class="empty">Aucun pari pour l'instant.</td></tr>`) + `</tbody>`;
+      <td class="r"><span class="edgebadge ${cls(b.ev)}">${signPct(b.ev)}</span></td><td class="r">${b.stake} €</td><td>${status(b)}</td><td>${esc(b.score ?? "")}</td></tr>`;
 }
-$("#f-strat").onchange = renderBets; $("#f-status").onchange = renderBets;
+$("#f-strat").onchange = $("#f-status").onchange = () => { PAGE = 0; renderBets(); };
+$("#pager").onclick = e => { const d = e.target.closest("[data-p]"); if (d) { PAGE += +d.dataset.p; renderBets(); $("#bets").scrollIntoView({ block: "start", behavior: "smooth" }); } };
 
 // ---------- courbe de profit (SVG) ----------
 function lineChart(el, series) {
