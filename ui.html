@@ -264,7 +264,42 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .endpulse { animation: endpulse 2.2s ease-out infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes endpulse { 0% { opacity: .55; transform: scale(1); } 100% { opacity: 0; transform: scale(3.2); } }
 .filters { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
-select { font: inherit; height: 36px; border-radius: 11px; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); padding: 0 10px; }
+/* ============ Listes déroulantes et calendrier (remplacent les contrôles natifs) ============ */
+.dd { position: relative; }
+.dd.open { z-index: 40; }
+.dd-btn { display: flex; align-items: center; gap: 10px; height: 36px; padding: 0 12px; border-radius: 11px; font-weight: 600; text-align: left; }
+.dd-btn.open, .dd-btn:focus-visible { border-color: var(--ice); box-shadow: 0 0 0 3px var(--ice-soft); outline: none; }
+.dd-btn .chev { width: 10px; height: 10px; flex: none; margin-left: auto; color: var(--text-muted); transition: transform .2s; }
+.dd-btn.open .chev { transform: rotate(180deg); }
+.pop { position: absolute; top: calc(100% + 6px); left: 0; min-width: 100%; padding: 6px; border-radius: 14px; background: var(--surface-2); border: 1px solid var(--border-strong); box-shadow: 0 18px 44px rgba(0, 0, 0, .38); transform-origin: top; animation: popin .16s cubic-bezier(.2,.9,.3,1.2); }
+.pop[hidden] { display: none; }
+@keyframes popin { from { opacity: 0; transform: translateY(-4px) scale(.98); } }
+.dd-opt { display: flex; align-items: center; width: 100%; height: 34px; padding: 0 10px; border: 0; border-radius: 9px; background: transparent; color: var(--text-secondary); font-weight: 550; white-space: nowrap; }
+.dd-opt:hover, .dd-opt:focus-visible { background: var(--surface-3); color: var(--text-primary); outline: none; }
+.dd-opt:active { transform: none; }
+.dd-opt.on { color: var(--text-primary); font-weight: 700; }
+.dd-opt.on::after { content: "✓"; margin-left: auto; padding-left: 18px; color: var(--ice); }
+.datepick .dd-btn { height: 38px; gap: 8px; }
+.datepick .lbl { color: var(--text-muted); font-size: 12px; font-weight: 500; }
+.datepick .ico { width: 15px; height: 15px; flex: none; color: var(--ice); }
+.cal { width: 284px; padding: 12px; }
+.cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.cal-head b { text-transform: capitalize; font-size: 14px; }
+.cal-nav { width: 30px; height: 30px; padding: 0; border-radius: 9px; font-size: 17px; line-height: 1; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.cal-wd { text-align: center; font-size: 10.5px; font-weight: 700; color: var(--text-muted); padding: 2px 0 6px; }
+.cal-day { position: relative; height: 34px; padding: 0; border: 1px solid transparent; border-radius: 10px; background: transparent; color: var(--text-secondary); font-weight: 600; font-variant-numeric: tabular-nums; }
+.cal-day:hover:not(:disabled) { background: var(--surface-3); color: var(--text-primary); border-color: transparent; }
+.cal-day:disabled { opacity: .28; cursor: default; }
+.cal-day.today { border-color: var(--ice); color: var(--text-primary); }
+.cal-day.sel { background: var(--ice); border-color: var(--ice); color: var(--page); font-weight: 800; }
+.cal-day.has::after, .cal-day.sched::after { content: ""; position: absolute; left: 50%; bottom: 4px; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%; }
+.cal-day.has::after, .cal-foot .dot.has { background: var(--ice); }
+.cal-day.sched::after, .cal-foot .dot.sched { background: var(--text-muted); }
+.cal-day.sel::after { background: var(--page); }
+.cal-foot { display: flex; align-items: center; gap: 12px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-muted); }
+.cal-foot .dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin: 0 5px 1px 0; vertical-align: middle; }
+.cal-today { margin-left: auto; height: 28px; padding: 0 10px; border-radius: 8px; font-size: 12px; }
 .tbl-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
 th { text-align: left; color: var(--text-muted); font-weight: 700; font-size: 10.5px; text-transform: uppercase; letter-spacing: .8px; padding: 12px 14px; border-bottom: 1px solid var(--border); white-space: nowrap; }
@@ -350,7 +385,9 @@ body.static .updated { display: flex; }
   .strat .nums b { font-size: 16px; }
   .chart-card { padding: 14px 10px 6px; }
   .legend { gap: 10px; }
-  .filters select { flex: 1 1 auto; min-width: 0; }
+  .filters .dd { flex: 1 1 auto; min-width: 0; }
+  .filters .dd-btn { width: 100%; }
+  .datepick .dd-btn { height: 34px; }
   th, td { padding: 8px 10px; }
   .guide { padding: 16px; }
   .toast { left: 12px; right: 12px; bottom: 12px; max-width: none; }
@@ -404,7 +441,9 @@ body.static .updated { display: flex; }
     <div class="clock updated" title="Données mises à jour automatiquement par GitHub Actions"><span>Mis à jour <b id="upd"></b></span></div>
     <div class="clock" title="Heure de Paris et de New York"><span class="live-dot"></span><span>Paris <b id="clk-paris"></b></span><span>New York <b id="clk-ny"></b></span></div>
     <div class="controls">
-      <div class="field"><label for="date">Soirée</label><input id="date" type="date"></div>
+      <div class="dd datepick"><input id="date" type="hidden">
+        <button type="button" class="dd-btn" id="date-btn" aria-haspopup="dialog" aria-expanded="false"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M1.5 6.5h13M5 1v3M11 1v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span class="lbl">Soirée</span><b id="date-label">–</b></button>
+        <div class="pop cal" id="cal" role="dialog" aria-label="Choisir une soirée" hidden></div></div>
       <div class="field stake"><label for="stake">Mise</label><input id="stake" type="number" min="1" step="1" value="10"><label>€</label></div>
       <label class="field switch" title="Chaîne d'actualité : articles NHL.com lus par un modèle de langage (Ollama en local ou OpenRouter), puis gardiens et absences tranchés par Jev"><input id="jev" type="checkbox" checked><span class="knob"></span><span>Actu + Jev</span></label>
       <button class="cta" id="btn-predict" title="Prédit la soirée et enregistre les paris fictifs aux cotes actuelles">Prédire</button>
@@ -535,6 +574,91 @@ $("#btn-theme").onclick = () => {
   SEEN = {}; render(); window.redrawIce && window.redrawIce();
 };
 
+// ---------- listes déroulantes et calendrier ----------
+let OPEN = null;  // fenêtre ouverte { btn, pop } : une seule à la fois
+function closePop() {
+  if (!OPEN) return;
+  OPEN.pop.hidden = true; OPEN.btn.classList.remove("open"); OPEN.btn.setAttribute("aria-expanded", "false");
+  OPEN.btn.parentElement.classList.remove("open"); OPEN = null;
+}
+function openPop(btn, pop) {
+  closePop();
+  pop.hidden = false; pop.style.left = "0px";
+  btn.classList.add("open"); btn.setAttribute("aria-expanded", "true"); btn.parentElement.classList.add("open");
+  OPEN = { btn, pop };
+  const r = pop.getBoundingClientRect(), over = r.right - (document.documentElement.clientWidth - 12);  // reste dans l'écran
+  if (over > 0) pop.style.left = -Math.min(over, r.left - 12) + "px";
+}
+document.addEventListener("click", e => { if (OPEN && !e.composedPath().includes(OPEN.btn.parentElement)) closePop(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && OPEN) { const b = OPEN.btn; closePop(); b.focus(); } });
+const CHEV = `<svg class="chev" viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 3.5 5 7l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+function dropdown(sel) {  // le <select> reste la source de vérité (value, change), seul l'affichage change
+  const wrap = Object.assign(document.createElement("div"), { className: "dd" });
+  const btn = Object.assign(document.createElement("button"), { type: "button", className: "dd-btn" });
+  const pop = Object.assign(document.createElement("div"), { className: "pop", hidden: true });
+  btn.setAttribute("aria-haspopup", "listbox"); pop.setAttribute("role", "listbox");
+  sel.before(wrap); wrap.append(sel, btn, pop); sel.hidden = true;
+  const label = () => btn.innerHTML = `<span>${esc(sel.selectedOptions[0]?.text)}</span>${CHEV}`;
+  label();
+  btn.onclick = () => {
+    if (OPEN?.pop === pop) return closePop();
+    pop.innerHTML = [...sel.options].map(o => `<button type="button" role="option" class="dd-opt ${o.selected ? "on" : ""}" aria-selected="${o.selected}" data-v="${esc(o.value)}">${esc(o.text)}</button>`).join("");
+    openPop(btn, pop); pop.querySelector(".on")?.focus();
+  };
+  pop.onclick = e => {
+    const o = e.target.closest(".dd-opt"); if (!o) return;
+    sel.value = o.dataset.v; label(); closePop(); btn.focus(); sel.dispatchEvent(new Event("change"));
+  };
+  pop.onkeydown = e => {
+    const opts = [...pop.querySelectorAll(".dd-opt")], i = opts.indexOf(document.activeElement);
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); opts[(i + (e.key === "ArrowDown" ? 1 : -1) + opts.length) % opts.length].focus(); }
+  };
+}
+dropdown($("#f-strat")); dropdown($("#f-status"));
+
+let CAL_MONTH;  // mois affiché, « AAAA-MM »
+function setDay(v) {
+  $("#date").value = v;
+  $("#date-label").textContent = v ? new Date(v + "T12:00").toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "short" }) : "–";
+}
+function renderCal() {
+  const [y, m] = CAL_MONTH.split("-").map(Number), n = new Date(Date.UTC(y, m, 0)).getUTCDate();
+  const lead = (new Date(Date.UTC(y, m - 1, 1)).getUTCDay() + 6) % 7;  // lundi en premier
+  const iso = d => `${CAL_MONTH}-${String(d).padStart(2, "0")}`, { min, max, value } = $("#date");
+  const off = v => (min && v < min) || (max && v > max);
+  const pred = new Set(STATE.preds.map(p => p.date)), sched = new Set(STATE.schedule.map(x => x.date));
+  let cells = "<span></span>".repeat(lead);
+  for (let d = 1; d <= n; d++) {
+    const v = iso(d), cls = [v === value && "sel", v === STATE.today && "today", pred.has(v) ? "has" : sched.has(v) && "sched"].filter(Boolean).join(" ");
+    cells += `<button type="button" class="cal-day ${cls}" data-v="${v}" ${off(v) ? "disabled" : ""} aria-label="${new Date(v + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" })}">${d}</button>`;
+  }
+  const title = new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString("fr-FR", { month: "long", year: "numeric", timeZone: "UTC" });
+  $("#cal").innerHTML = `<div class="cal-head">
+      <button type="button" class="cal-nav" data-step="-1" aria-label="Mois précédent" ${min && iso(1) <= min ? "disabled" : ""}>‹</button><b>${title}</b>
+      <button type="button" class="cal-nav" data-step="1" aria-label="Mois suivant" ${max && iso(n) >= max ? "disabled" : ""}>›</button></div>
+    <div class="cal-grid">${["L", "M", "M", "J", "V", "S", "D"].map(w => `<span class="cal-wd">${w}</span>`).join("")}${cells}</div>
+    <div class="cal-foot"><span><i class="dot has"></i>prédite</span><span><i class="dot sched"></i>au programme</span>
+      <button type="button" class="cal-today" data-v="${STATE.today}" ${off(STATE.today) ? "disabled" : ""}>Aujourd'hui</button></div>`;
+}
+$("#date-btn").onclick = () => {
+  if (!STATE) return;
+  if (OPEN?.pop === $("#cal")) return closePop();
+  CAL_MONTH = ($("#date").value || STATE.today).slice(0, 7);
+  renderCal(); openPop($("#date-btn"), $("#cal"));
+  ($("#cal .sel") || $("#cal .today") || $("#cal .cal-day:not(:disabled)"))?.focus();
+};
+$("#cal").onclick = e => {
+  const nav = e.target.closest(".cal-nav");
+  if (nav) {
+    const [y, m] = CAL_MONTH.split("-").map(Number);
+    CAL_MONTH = new Date(Date.UTC(y, m - 1 + +nav.dataset.step, 1)).toISOString().slice(0, 7);
+    return renderCal();
+  }
+  const d = e.target.closest("[data-v]");
+  if (d && !d.disabled) { setDay(d.dataset.v); closePop(); $("#date-btn").focus(); SEEN = {}; render(); }
+};
+
 // ---------- onglets (indicateur glissant) ----------
 function moveInd() { const b = $(".tabs button.on"); $("#ind").style.left = b.offsetLeft + "px"; $("#ind").style.width = b.offsetWidth + "px"; }
 document.querySelectorAll(".tabs button").forEach(b => b.onclick = () => {
@@ -567,7 +691,7 @@ async function refresh() {
   STATE = await api("/api/state");
   STATE.schedule ??= [];
   const days = [...new Set([...STATE.preds, ...STATE.schedule].map(p => p.date))].sort();
-  if (!$("#date").value) $("#date").value = days.includes(STATE.today) || !days.length ? STATE.today : days.at(-1);
+  if (!$("#date").value) setDay(days.includes(STATE.today) || !days.length ? STATE.today : days.at(-1));
   if (STATIC && days.length) Object.assign($("#date"), { min: days[0], max: days.at(-1) });
   if (STATE.generated_at) $("#upd").textContent = tz(STATE.generated_at, "Europe/Paris", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" });
   render();
@@ -599,7 +723,6 @@ async function run(path, body, sub) {
 $("#btn-predict").onclick = () => run("/api/predict", { date: $("#date").value, stake: +$("#stake").value, jev: $("#jev").checked }, "≈ 2-3 min");
 $("#btn-settle").onclick = () => run("/api/settle", {}, "quelques secondes");
 $("#btn-odds").onclick = () => { if (confirm("Historique des cotes des matchs terminés de la saison : ≈ 6 s par nouveau match (≈ 5 min pour une semaine). Lancer ?")) run("/api/odds-update", {}, "≈ 6 s par match"); };
-$("#date").onchange = () => { SEEN = {}; render(); };
 
 // ---------- utilitaires d'animation ----------
 function countUp(el, to, fmt, key) {
