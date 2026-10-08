@@ -1,18 +1,21 @@
 # Automatisation : prédictions du soir, règlement et cotes de clôture le matin, puis publication de la page.
-# Heures en UTC (heure de Paris = UTC+2 l'été, UTC+1 l'hiver). GitHub peut décaler un déclenchement de quelques minutes.
+#
+# Déclenchement à l'heure exacte par cron-job.org (fuseau Europe/Paris), via l'API workflow_dispatch :
+#   18 h 17  task=predict   règlement des paris terminés, puis prédiction de la soirée
+#    8 h 13  task=settle    résultats, règlement des paris et cotes de clôture de la veille
+# Les crons GitHub ci-dessous ne sont que des filets de sécurité : GitHub retarde les déclenchements planifiés de
+# plusieurs heures (jusqu'à 5 h observé), voire les saute. Ils ne lancent que des tâches sans effet si elles sont
+# rejouées. La prédiction n'a pas de cron GitHub : un passage en retard re-prédirait les matchs pas encore commencés.
 name: NHL Predictor
 
 on:
-  # Minutes décalées des heures pleines : GitHub retarde fortement les déclenchements à :00 et :30 (jusqu'à 4 h observé).
-  # Chaque passage de prédiction règle aussi les paris terminés : un règlement retardé ou sauté est rattrapé.
-  schedule:
-    - cron: "17 16 * * *"  # prédictions : 18 h 17 à Paris (été), après les compositions probables
-    - cron: "47 21 * * *"  # rattrapage, 23 h 47 à Paris (été) : seuls les matchs restés sans prédiction
-    - cron: "13 6 * * *"   # résultats, règlement des paris et cotes de clôture de la veille : 8 h 13 à Paris (été)
+  schedule:  # heures UTC (Paris = UTC+2 l'été, UTC+1 l'hiver)
+    - cron: "47 21 * * *"  # rattrapage : seuls les matchs du jour restés sans prédiction
+    - cron: "13 6 * * *"   # secours du règlement de 8 h 13 (sans effet s'il a déjà été fait)
   workflow_dispatch:
     inputs:
       task:
-        description: "Tâche à lancer à la main"
+        description: "Tâche (lancée par cron-job.org ou à la main)"
         type: choice
         options: [predict, rescue, settle, odds, export]
         default: export
@@ -73,7 +76,6 @@ jobs:
           ODDSPAPI_API_KEY: ${{ secrets.ODDSPAPI_API_KEY }}
         run: |
           case "${{ github.event.schedule }}" in
-            "17 16 * * *") TASK=predict ;;
             "47 21 * * *") TASK=rescue ;;
             "13 6 * * *") TASK=settle ;;
             *) TASK="${{ inputs.task }}" ;;

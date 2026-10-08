@@ -93,16 +93,19 @@ Mise fixe de 10 € par pari, à la cote disponible au moment de la prédiction.
 
 ## Automatisation
 
-GitHub Actions ([`pipeline.yml`](.github/workflows/pipeline.yml)) fait tourner la chaîne sans intervention :
+GitHub Actions ([`pipeline.yml`](.github/workflows/pipeline.yml)) fait tourner la chaîne sans intervention. Les
+lancements sont déclenchés à l'heure exacte par [cron-job.org](https://cron-job.org) via l'API `workflow_dispatch` :
+les déclenchements planifiés de GitHub partent souvent avec plusieurs heures de retard.
 
-| Heure (UTC) | Paris (heure d'été) | Tâche |
+| Heure de Paris | Déclencheur | Tâche |
 |---|---|---|
-| 16 h 17 | 18 h 17 | Règlement des paris terminés, puis prédiction de la soirée et paris fictifs aux cotes du moment |
-| 21 h 47 | 23 h 47 | Rattrapage : seuls les matchs restés sans prédiction (passage de 18 h 17 échoué ou sauté) |
-| 6 h 13 | 8 h 13 | Résultats officiels, règlement des paris et cotes de clôture de la veille |
+| 18 h 17 | cron-job.org | Règlement des paris terminés, puis prédiction de la soirée et paris fictifs aux cotes du moment |
+| 8 h 13 | cron-job.org | Résultats officiels, règlement des paris et cotes de clôture de la veille |
+| 23 h 47 (21 h 47 UTC) | cron GitHub, filet de sécurité | Rattrapage : seuls les matchs restés sans prédiction |
+| 8 h 13 (6 h 13 UTC) | cron GitHub, filet de sécurité | Règlement de secours, sans effet s'il a déjà été fait |
 
-Les minutes sont volontairement décalées des heures pleines, que GitHub retarde fortement. Après chaque tâche, les
-prédictions et le registre de paris sont enregistrés dans le dépôt (`data/`) et la page est republiée.
+Après chaque tâche, les prédictions et le registre de paris sont enregistrés dans le dépôt (`data/`) et la page est
+republiée.
 
 Secrets du dépôt : `OPENROUTER_API_KEY`, `TYPESAFE_API_KEY`, `ODDSPAPI_API_KEY`.
 
