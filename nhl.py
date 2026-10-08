@@ -1,7 +1,6 @@
 """NHL predictor v3 : forces d'équipe dynamiques (xG, tirs, buts), gardien titulaire (GSAx), fatigue, absences.
 
     uv run python nhl.py backtest          # walk-forward saison par saison
-    uv run python nhl.py predict [AAAA-MM-JJ]
 
 Cible : victoire domicile, prolongation et tirs au but inclus (marché « vainqueur du match »).
 """
@@ -27,6 +26,11 @@ OFFSEASON_GAMES = 5         # matchs fictifs « moyens » à chaque intersaison 
 GOALIE_PRIOR_SHOTS = 1500   # tirs non bloqués « fictifs » à GSAx nul : rétrécit la note des gardiens peu vus
 SHOTS_PER_GAME = 40         # tirs non bloqués par match, pour exprimer la note gardien en buts par match
 FEATURES = ["d_xg", "d_sat", "d_gd", "d_goalie", "home_b2b", "away_b2b", "d_miss"]
+
+
+def team_name(tm):
+    """Nom complet d'une équipe dans les réponses api-web (« Toronto » + « Maple Leafs »)."""
+    return f"{tm['placeName']['default']} {tm['commonName']['default']}"
 
 
 def current_season():
@@ -255,7 +259,6 @@ def predictions(day, use_news=True, progress=print, skip=()):
     sk = players()
     ppg_now = sk[sk["gameDate"] < pd.Timestamp(day)].groupby("playerId")["ppg"].last()
     news.fresh()  # listes d'articles relues à chaque prédiction
-    full = lambda tm: f"{tm['placeName']['default']} {tm['commonName']['default']}"
     rows = []
     for i, x in enumerate(games):
         kickoff = datetime.fromisoformat(x["startTimeUTC"].replace("Z", "+00:00"))
@@ -263,7 +266,7 @@ def predictions(day, use_news=True, progress=print, skip=()):
         res = None
         if chain and kickoff > datetime.now(timezone.utc):  # jamais sur un match commencé
             progress(f"Actualité {i + 1}/{len(games)} : qwen lit les articles, Jev tranche ({abbr['away']} @ {abbr['home']})")
-            g = {"gameId": x["id"], "kickoff": x["startTimeUTC"], "away": full(x["awayTeam"]), "home": full(x["homeTeam"]),
+            g = {"gameId": x["id"], "kickoff": x["startTimeUTC"], "away": team_name(x["awayTeam"]), "home": team_name(x["homeTeam"]),
                  **{f"{s}_id": x[f"{s}Team"]["id"] for s in ("away", "home")},
                  **{f"{s}_abbr": abbr[s] for s in ("away", "home")}}
             res = news.run_game(client, g, {ab: news.roster_goalies(ab) for ab in abbr.values()}, refresh=True)
@@ -279,7 +282,7 @@ def predictions(day, use_news=True, progress=print, skip=()):
                 miss, absents = news.expected_missing(j["p_out"], abbr[s], sk, ppg_now)
                 summary = res["qwen"][s]["summary"]
             rows.append({"gameId": x["id"], "gameDate": pd.Timestamp(day), "season": current_season(),
-                         "teamId": x[f"{s}Team"]["id"], "teamFullName": full(x[f"{s}Team"]), "homeRoad": side,
+                         "teamId": x[f"{s}Team"]["id"], "teamFullName": team_name(x[f"{s}Team"]), "homeRoad": side,
                          "goalieFullName": gname, "goalie_rating": current.get(pid, 0.0), "miss": miss,
                          "absents": json.dumps(absents, ensure_ascii=False), "summary": summary})
     up = pd.DataFrame(rows)
@@ -300,22 +303,8 @@ def predictions(day, use_news=True, progress=print, skip=()):
     return u.reset_index()
 
 
-def predict(day):
-    u = predictions(day)
-    if u.empty:
-        return print(f"Aucun match de saison régulière à venir le {day}.")
-    u["cote_juste_dom"] = 1 / u["p_home"]
-    u["cote_juste_ext"] = 1 / (1 - u["p_home"])
-    print(f"Matchs du {day} — gardien suivi de * = identifié par Jev dans la presse, sinon heuristique :\n")
-    print(u[["away", "away_goalie", "home", "home_goalie", "p_home", "cote_juste_dom", "cote_juste_ext"]]
-          .round(3).to_string(index=False))
-
-
 if __name__ == "__main__":
-    cmd = sys.argv[1] if len(sys.argv) > 1 else "backtest"
-    if cmd == "backtest":
+    if sys.argv[1:] in ([], ["backtest"]):
         backtest()
-    elif cmd == "predict":
-        predict(sys.argv[2] if len(sys.argv) > 2 else date.today().isoformat())
     else:
         sys.exit(__doc__)

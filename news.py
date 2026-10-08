@@ -11,7 +11,6 @@ import os
 import re
 import sys
 import time
-import unicodedata
 import urllib.error
 import urllib.request
 from datetime import timedelta
@@ -21,6 +20,8 @@ import pandas as pd
 from typesafe_sdk import Choice, Noul, NoulCriteria, TypeSafeClient
 
 import nhl
+import odds
+from odds import norm
 from xg import DATA, WEB, get_json
 
 CONTENT = "https://forge-dapi.d3.nhle.com/v2/content/en-us/stories"
@@ -59,10 +60,6 @@ puck drop). For each team (away, home) extract:
 - summary: 2-3 sentences on the team's situation (form, lineup changes, context)
 Never invent players or facts. If the articles say nothing, use empty lists, null and "unknown"."""
 EMPTY = {"starting_goalie": None, "goalie_status": "unknown", "out": [], "doubtful": [], "returning": [], "summary": ""}
-
-
-def norm(name):
-    return unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower().strip()
 
 
 def clean(md):
@@ -344,11 +341,7 @@ def evaluate(season=None):
         "D. chaîne complète (qwen + Jev)": full.predict_proba(X("jev", nhl.FEATURES, t["h_miss_jev"] - t["a_miss_jev"]))[:, 1],
         "E. réel (vrai gardien, vrais absents)": full.predict_proba(t[nhl.FEATURES])[:, 1],
     }
-    import odds
-    co = odds.closing_odds()
-    pin = co[(co["book"] == "pinnacle") & (co["market"] == "151")].pivot_table(index=["home", "date"], columns="side",
-                                                                                values="price").reset_index()
-    pin["q"] = (1 / pin["H"]) / (1 / pin["H"] + 1 / pin["A"])
+    pin = odds.pinnacle_home(odds.closing_odds())
     q = t.assign(hn=t["home"].map(odds.norm), dd=t["date"].dt.date).merge(
         pin.rename(columns={"home": "hn", "date": "dd"})[["hn", "dd", "q"]], how="left", on=["hn", "dd"])["q"].to_numpy()
     y = t["home_win"].to_numpy()

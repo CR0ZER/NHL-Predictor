@@ -42,24 +42,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - name: Démarrage de la simulation (planification active à partir du 7 octobre 2026, UTC)
-        id: gate
-        run: |
-          if [ "${{ github.event_name }}" = "schedule" ] && [[ "$(date -u +%F)" < "2026-10-07" ]]; then
-            echo "Passage planifié ignoré : la simulation démarre le 2026-10-07."
-            echo "go=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "go=true" >> "$GITHUB_OUTPUT"
-          fi
-
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.go == 'true'
 
       - uses: astral-sh/setup-uv@v6
-        if: steps.gate.outputs.go == 'true'
 
       - name: Données reconstructibles (cache)
-        if: steps.gate.outputs.go == 'true'
         uses: actions/cache@v4
         with:
           path: |
@@ -69,7 +56,6 @@ jobs:
           restore-keys: nhl-data-
 
       - name: Tâche
-        if: steps.gate.outputs.go == 'true'
         env:
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
@@ -88,7 +74,6 @@ jobs:
           uv run python app.py export
 
       - name: Enregistrer les données dans le dépôt
-        if: steps.gate.outputs.go == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -100,13 +85,10 @@ jobs:
           fi
 
       - uses: actions/configure-pages@v5
-        if: steps.gate.outputs.go == 'true'
 
       - uses: actions/upload-pages-artifact@v3
-        if: steps.gate.outputs.go == 'true'
         with:
           path: site
 
       - id: deploy
-        if: steps.gate.outputs.go == 'true'
         uses: actions/deploy-pages@v4

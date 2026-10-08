@@ -10,7 +10,7 @@ La courbe représente la fonction logistique du modèle, et le point au bout rep
 | `png/horizontal`, `png/stacked` | Logos détourés (fond transparent), largeurs 512, 1024 et 2048 px | Slides, README, réseaux |
 | `png/mark` | Le symbole seul, détouré, de 128 à 1024 px | Avatars, filigranes |
 | `png/app-icon` | Icône carrée à coins arrondis, fond navy, de 256 à 1024 px | Avatar GitHub, Discord, Slack |
-| `web/` | favicon.ico (16/32/48), favicon.svg, apple-touch-icon, android-chrome, icône maskable, site.webmanifest, snippet `<head>` | Site GitHub Pages |
+| `web/` | favicon.ico (16/32/48), favicon.svg, apple-touch-icon, android-chrome, icône maskable, site.webmanifest | Site GitHub Pages |
 | `social/` | Image Open Graph 1200×630 et aperçu social GitHub 1280×640 | Partage de liens, paramètres du repo |
 
 ## Variantes
@@ -38,5 +38,5 @@ Barlow Condensed ExtraBold Italic (Google Fonts, licence SIL OFL 1.1, usage comm
 
 ## Intégration sur GitHub Pages
 1. Copier le contenu de `web/` et `social/og-image-1200x630.png` à la racine publiée.
-2. Coller `web/head-snippet.html` dans le `<head>` de `ui.html`.
+2. Les balises correspondantes sont dans le `<head>` de `ui.html`.
 3. GitHub › Settings › Social preview : y mettre `social/github-social-preview-1280x640.png`.

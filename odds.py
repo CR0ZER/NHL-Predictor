@@ -17,13 +17,12 @@ import unicodedata
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import date
-
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import cross_val_predict
 
+import nhl
 from xg import DATA
 
 API = "https://api.oddspapi.io/v4"
@@ -71,14 +70,25 @@ def fetch(start, end, refresh=False):
 
 def update():
     """Saison en cours : liste des matchs rafraîchie (fichier unique par saison, statuts à jour) + nouveaux historiques."""
-    t = date.today()
-    season = t.year if t.month >= 9 else t.year - 1
+    season = nhl.current_season()
     fetch(f"{season}-09-01", f"{season + 1}-07-01", refresh=True)
     closing_odds()  # résume les nouveaux matchs dans closing.csv
 
 
 def norm(name):
-    return unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode().lower()
+    return unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower().strip()
+
+
+def fair(home, away):
+    """Probabilité de victoire à domicile sans la marge du bookmaker, à partir des deux cotes."""
+    return (1 / home) / (1 / home + 1 / away)
+
+
+def pinnacle_home(co):
+    """Cotes de clôture Pinnacle (vainqueur) par (domicile normalisé, date), avec la probabilité sans marge q."""
+    pin = co[(co["book"] == "pinnacle") & (co["market"] == MONEYLINE)].pivot_table(
+        index=["home", "date"], columns="side", values="price").reset_index()
+    return pin.assign(q=fair(pin["H"], pin["A"]))
 
 
 def last_prices(hist, before):
@@ -122,8 +132,7 @@ def closing_odds():
 
 def current_odds(home, kickoff):
     """Cotes actuelles d'un match à venir (endpoint historique : gratuit, ~5 s d'attente entre deux appels)."""
-    t = date.today()
-    season = t.year if t.month >= 9 else t.year - 1
+    season = nhl.current_season()
     ids = {(norm(f["participant1Name"]), local_date(f["startTime"])): f["fixtureId"]
            for f in fixtures(f"{season}-09-01", f"{season + 1}-07-01")}
     fid = ids.get((norm(home), local_date(kickoff)))
@@ -135,8 +144,6 @@ def current_odds(home, kickoff):
 
 def model_probs(season):
     """Probabilités walk-forward (modèle appris sur les saisons < season) : vainqueur et 1N2 temps réglementaire."""
-    import nhl
-
     w, _ = nhl.history(*nhl.load())
     w = w.dropna(subset=nhl.FEATURES + ["home_win"]).reset_index()
     train, test = w[w["season"] < season], w[w["season"] == season].copy()
@@ -163,7 +170,7 @@ def evaluate(season=2025):
 
     # 1. Vainqueur (prolongation incluse) : modèle vs Pinnacle, et le modèle apporte-t-il quelque chose au marché ?
     pin = m[(m["book"] == "pinnacle") & (m["market"] == MONEYLINE)].dropna(subset=["H", "A"]).copy()
-    pin["q"] = (1 / pin["H"]) / (1 / pin["H"] + 1 / pin["A"])
+    pin["q"] = fair(pin["H"], pin["A"])
     y = pin["home_win"]
     ll = lambda p: -(y * np.log(p) + (1 - y) * np.log(1 - p))
     print(f"Vainqueur, {len(pin)} matchs — log-loss modèle {ll(pin['p']).mean():.4f} | Pinnacle clôture {ll(pin['q']).mean():.4f}"
