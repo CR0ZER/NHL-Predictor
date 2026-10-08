@@ -1,0 +1,101 @@
+{
+ "game": {
+  "gameId": 2026020060,
+  "kickoff": "2026-10-08T23:00:00Z",
+  "away": "Minnesota Wild",
+  "home": "Tampa Bay Lightning",
+  "away_id": 30,
+  "home_id": 14,
+  "away_abbr": "MIN",
+  "home_abbr": "TBL"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-08T16:18:18.106161+00:00",
+ "articles": [
+  {
+   "title": "Mishkin's Extra Shift: Lightning 4, Flyers 1",
+   "published": "2026-10-06T03:50:30.189Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Wild at Sabres",
+   "published": "2026-10-06T13:00:43.289Z",
+   "lineups": false
+  },
+  {
+   "title": "Minnesota Wild and Greater Twin Cities United Way to Host School Supply Drive, Presented by Fortinet on Oct. 15",
+   "published": "2026-10-06T14:55:46.188Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Sabres projected lineups",
+   "published": "2026-10-06T16:26:32.793Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Wrap-Up: MIN at BUF",
+   "published": "2026-10-06T17:00:50.251Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: Wild at Sabres",
+   "published": "2026-10-06T19:03:19.13Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Danila Yurov",
+     "detail": "questionable to play"
+    }
+   ],
+   "returning": [],
+   "summary": "The Wild are 2-0-0 on the season, coming off wins against Nashville and Boston. They will be without injured defenseman Brock Faber (skull fracture) and goalie Filip Gustavsson (lower body), with forward Danila Yurov questionable after leaving practice early. Jesper Wallstedt is projected to start in goal for his third straight appearance."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning defeated the Flyers 4-1 on October 6, extending their winning streak. The team dictated play for most of the game, outshooting Philadelphia 36-14 and receiving strong performances from Brayden Point, Nikita Kucherov, and John Carlson on the opening goal. No specific lineup or injury information for the upcoming game against the Wild is available in the provided articles."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 0.54,
+   "announced": 0.12,
+   "p_out": {
+    "Brock Faber": 0.54,
+    "Filip Gustavsson": 0.47,
+    "Danila Yurov": 0.15
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.98,
+   "announced": 0.06,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 6.5,
+  "jev": 0.3
+ }
+}

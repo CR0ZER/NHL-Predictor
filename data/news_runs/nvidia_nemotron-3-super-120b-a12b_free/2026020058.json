@@ -1,0 +1,99 @@
+{
+ "game": {
+  "gameId": 2026020058,
+  "kickoff": "2026-10-08T23:00:00Z",
+  "away": "Nashville Predators",
+  "home": "Montréal Canadiens",
+  "away_id": 18,
+  "home_id": 8,
+  "away_abbr": "NSH",
+  "home_abbr": "MTL"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-08T16:18:04.925142+00:00",
+ "articles": [
+  {
+   "title": "GAME DAY: Preds at Maple Leafs, October 6",
+   "published": "2026-10-06T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "CAR@MTL: What you need to know",
+   "published": "2026-10-06T13:08:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ivan Demidov out 2-4 weeks",
+   "published": "2026-10-06T14:35:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators Recall Matt Murray From Milwaukee (AHL)",
+   "published": "2026-10-06T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Demidov out 2-4 weeks for Canadiens with lower-body injury",
+   "published": "2026-10-06T15:09:27.886Z",
+   "lineups": false
+  },
+  {
+   "title": "The Foundation’s 50/50 raffles return for the 2026-27 season",
+   "published": "2026-10-06T16:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Matt Murray",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Justus Annunen",
+     "detail": "placed on injured reserve"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators are coming off a 2-1 win over Dallas and will start recalled goaltender Matt Murray, with Justus Annunen on IR. They have no lineup changes from Monday's practice, with Vitali Pinchuk serving as an extra forward and William Trudeau and Jack Ahcan having made their debuts recently."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower-body injury, out 2-4 weeks"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Florian Xhekaj will make his season debut Tuesday with Demidov out of the lineup."
+   ],
+   "summary": "The Canadiens are coming off a 6-5 overtime loss to Pittsburgh and will be without Ivan Demidov for 2-4 weeks with a lower-body injury. Florian Xhekaj is expected to make his season debut in his place. The team hosted the Hurricanes in their home opener on Tuesday, but no goalie information for the upcoming game vs. Nashville is available in the provided articles."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.72,
+   "announced": 0.23,
+   "p_out": {
+    "Justus Annunen": 0.34
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.06,
+   "p_out": {
+    "Ivan Demidov": 0.87
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.5,
+  "jev": 0.3
+ }
+}

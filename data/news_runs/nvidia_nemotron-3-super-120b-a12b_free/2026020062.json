@@ -1,0 +1,112 @@
+{
+ "game": {
+  "gameId": 2026020062,
+  "kickoff": "2026-10-08T23:30:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "New York Islanders",
+  "away_id": 16,
+  "home_id": 2,
+  "away_abbr": "CHI",
+  "home_abbr": "NYI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-08T16:18:27.754941+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders vs Blackhawks",
+   "published": "2026-10-08T04:00:40.535Z",
+   "lineups": true
+  },
+  {
+   "title": "Blackhawks at Islanders projected lineups",
+   "published": "2026-10-08T16:17:47.693Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Blackhawks Open Home Schedule Against Blues",
+   "published": "2026-10-06T00:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kane looks to help Blackhawks get first win in return to United Center",
+   "published": "2026-10-06T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Islanders at Rangers ",
+   "published": "2026-10-06T04:00:31.558Z",
+   "lineups": false
+  },
+  {
+   "title": "Kane's Blackhawks homecoming sparks memories of other NHL second acts",
+   "published": "2026-10-06T16:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "shoulder surgery"
+    },
+    {
+     "player": "Andrew Mangiapane",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Teuvo Teravainen",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blackhawks (1-3-0) are seeking their second win of the season after beating the Blues 4-2 on Tuesday. They will be without injured forwards Connor Bedard (shoulder), Andrew Mangiapane (lower body), and Teuvo Teravainen (lower body), with Spencer Knight projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn ACL, out 6-8 months"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Islanders (1-2-0) lost their last game 5-2 to the Rangers and will be without injured forwards Mathew Barzal (knee) and defenseman Alexander Romanov (torn ACL). Ilya Sorokin is projected to start in goal, with Semyon Varlamov as the backup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Spencer Knight",
+   "p_starter": 0.64,
+   "announced": 0.91,
+   "p_out": {
+    "Connor Bedard": 0.98,
+    "Andrew Mangiapane": 0.97,
+    "Teuvo Teravainen": 0.98
+   }
+  },
+  "home": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Mathew Barzal": 0.97,
+    "Alexander Romanov": 0.99
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.6,
+  "jev": 0.3
+ }
+}

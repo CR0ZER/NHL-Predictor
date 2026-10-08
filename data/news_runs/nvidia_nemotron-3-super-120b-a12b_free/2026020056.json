@@ -1,0 +1,90 @@
+{
+ "game": {
+  "gameId": 2026020056,
+  "kickoff": "2026-10-08T23:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Boston Bruins",
+  "away_id": 68,
+  "home_id": 6,
+  "away_abbr": "UTA",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-08T16:17:47.116563+00:00",
+ "articles": [
+  {
+   "title": "Bruins Lose 4-1 to the Senators, ‘Make Sure That Never Happens Again’",
+   "published": "2026-10-06T03:19:49.591Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators shaking off doubters with strong start to season",
+   "published": "2026-10-06T04:34:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Visits New Jersey to Start Week",
+   "published": "2026-10-06T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Devils projected lineups",
+   "published": "2026-10-06T17:04:43.251Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Utah 5, New Jersey 3",
+   "published": "2026-10-06T23:07:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Continues Trip in Boston",
+   "published": "2026-10-08T12:16:21.436Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "Injured (shoulder)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Utah Mammoth (3-1-0) are on a three-game road trip, having bounced back from a loss to the Rangers with a 5-3 win over the Devils. They are led by Nick Schmaltz (5 goals, 7 points) and Clayton Keller (1 goal, 6 assists), with a strong power play (61.5%) and solid goaltending from Vejmelka (2-1-0, 2.02 GAA, .913 SV%)."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Boston Bruins (2-2-0) are looking to bounce back from two consecutive 4-1 losses (to Minnesota and Ottawa) after starting the season 2-0. They are led by JJ Peterka and James Hagens (two goals each), with Jeremy Swayman as the primary goaltender (2-1-0, 2.30 GAA, .914 SV%). The team is working to regain consistency and defensive structure."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.65,
+   "announced": 0.18,
+   "p_out": {
+    "Maveric Lamoureux": 0.22
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.6,
+   "announced": 0.17,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 9.1,
+  "jev": 0.3
+ }
+}

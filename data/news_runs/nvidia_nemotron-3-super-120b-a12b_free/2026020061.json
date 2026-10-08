@@ -1,0 +1,90 @@
+{
+ "game": {
+  "gameId": 2026020061,
+  "kickoff": "2026-10-08T23:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "Carolina Hurricanes",
+  "away_id": 23,
+  "home_id": 12,
+  "away_abbr": "VAN",
+  "home_abbr": "CAR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-08T16:18:22.740127+00:00",
+ "articles": [
+  {
+   "title": "Buium accepts challenge of 'earning' long-term contract with Canucks",
+   "published": "2026-10-06T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Preview: October 6 at Montreal",
+   "published": "2026-10-06T09:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: October 6 at Montreal",
+   "published": "2026-10-06T16:34:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes at Canadiens projected lineups",
+   "published": "2026-10-06T17:11:38.065Z",
+   "lineups": false
+  },
+  {
+   "title": "Luke Schenn, Paul Cotter Talk Leaning into Early-Season Road Trip as Team-Bonding Opportunity",
+   "published": "2026-10-06T23:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canes Embracing The Target On Their Backs As Defending Champs",
+   "published": "2026-10-07T20:05:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vancouver Canucks (2-2-0) begin a six-game road trip in Carolina after a 6-5 overtime win over Edmonton to open the season. Zeev Buium is expected to play on the top defensive pairing with Filip Hronek, averaging 21:40 of ice time. The team is focusing on building chemistry during the extended road trip, with veterans like Luke Schenn emphasizing off-ice bonding."
+  },
+  "home": {
+   "starting_goalie": "Brandon Bussi",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Seth Jarvis",
+     "detail": "Injured (shoulder), practicing in a yellow no-contact jersey after offseason surgery, initially expected to miss 4-6 months from end of June."
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Carolina Hurricanes (1-1-1) are preparing to host Vancouver after a 3-2 overtime win over Philadelphia. They are projecting Brandon Bussi to start in net, with Pyotr Kochetkov as backup. The team has been successful on the power play (3 of 5 goals) and is embracing their role as defending Stanley Cup champions, expecting opponents to bring their best effort every night."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.96,
+   "announced": 0.07,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.67,
+   "announced": 0.47,
+   "p_out": {
+    "Seth Jarvis": 0.87
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.2,
+  "jev": 0.3
+ }
+}

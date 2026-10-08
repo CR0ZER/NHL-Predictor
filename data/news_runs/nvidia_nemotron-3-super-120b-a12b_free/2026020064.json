@@ -1,0 +1,95 @@
+{
+ "game": {
+  "gameId": 2026020064,
+  "kickoff": "2026-10-09T01:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Calgary Flames",
+  "away_id": 21,
+  "home_id": 20,
+  "away_abbr": "COL",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-08T16:18:36.390465+00:00",
+ "articles": [
+  {
+   "title": "Trophy Tracker: Avalanche defenseman Makar early-season choice for Norris",
+   "published": "2026-10-06T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Assign Two To Wranglers",
+   "published": "2026-10-06T19:08:30.63Z",
+   "lineups": false
+  },
+  {
+   "title": "Wednesday in Winnipeg",
+   "published": "2026-10-07T11:00:16.875Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Recall Suniev, Castagna From Wranglers",
+   "published": "2026-10-07T15:00:37.782Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche at Jets projected lineups",
+   "published": "2026-10-07T17:00:05.785Z",
+   "lineups": false
+  },
+  {
+   "title": "'Bring The Best I Can'",
+   "published": "2026-10-07T19:21:51.839Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Logan O'Connor",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": L’Heureux will make his Avalanche debut after recovering from a lower-body injury sustained during the preseason."
+   ],
+   "summary": "The Avalanche are 2-0-0 to start the season, coming off a 6-1 win over the St. Louis Blues. They will have Mackenzie Blackwood in goal as projected starter, with Logan O'Connor out due to a lower-body injury. Zachary L’Heureux is returning from injury and expected to make his season debut."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [
+    "Aydar Suniev",
+    "Jonathan Castagna"
+   ],
+   "summary": "The Flames have assigned Connor Zary and Brayden Pachal to the AHL Wranglers, then recalled Aydar Suniev and Jonathan Castagna from the Wranglers. Castagna practiced with the team and is in line for a potential NHL debut. No goalie or injury information specific to the upcoming game vs. Colorado is provided in the articles."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.53,
+   "announced": 0.25,
+   "p_out": {
+    "Logan O'Connor": 0.26
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.05,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 3.8,
+  "jev": 0.3
+ }
+}

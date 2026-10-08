@@ -1,0 +1,95 @@
+{
+ "game": {
+  "gameId": 2026020065,
+  "kickoff": "2026-10-09T02:00:00Z",
+  "away": "Toronto Maple Leafs",
+  "home": "Vegas Golden Knights",
+  "away_id": 10,
+  "home_id": 54,
+  "away_abbr": "TOR",
+  "home_abbr": "VGK"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-08T16:18:40.748450+00:00",
+ "articles": [
+  {
+   "title": "Morning Skate Report: Oct. 6, 2026",
+   "published": "2026-10-06T15:25:20.548Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Maple leafs projected lineups",
+   "published": "2026-10-06T16:20:24.413Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights at Kraken projected lineups",
+   "published": "2026-10-06T17:36:49.919Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY vs NASHVILLE | Oct 6, 2026",
+   "published": "2026-10-06T18:06:25.435Z",
+   "lineups": false
+  },
+  {
+   "title": "McKenna scores first NHL goal in Leafs 5-4 OT win",
+   "published": "2026-10-07T03:52:05.159Z",
+   "lineups": false
+  },
+  {
+   "title": "McKenna goes top shelf for first NHL goal ",
+   "published": "2026-10-07T03:58:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Anthony Stolarz",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dakota Joshua",
+     "detail": "Injured (core)"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "Injured (undisclosed)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Maple Leafs are 2-2-0 after a 5-4 OT win over Nashville, with Gavin McKenna scoring his first NHL goal. They project to dress the same 18 skaters for a third straight game, with Anthony Stolarz and Sergei Bobrovsky listed as goalies in the projected lineup. Key injuries include Dakota Joshua (core) and Max Domi (undisclosed)."
+  },
+  "home": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights are 2-1-0 and coming off a game against the Kraken, with no injuries reported. Their projected lineup features Carter Hart and Adin Hill as goalies, and they have no scratched or injured players listed. Key streaks include Jack Eichel, Victor Olofsson, and Brayden McNabb maintaining three-game point streaks, and Marc Gatcomb scoring his first goal as a Golden Knight."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.79,
+   "announced": 0.38,
+   "p_out": {
+    "Dakota Joshua": 0.86,
+    "Max Domi": 0.85
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.96,
+   "announced": 0.53,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 4.0,
+  "jev": 0.3
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "game": {
+  "gameId": 2026020059,
+  "kickoff": "2026-10-08T23:00:00Z",
+  "away": "Philadelphia Flyers",
+  "home": "Ottawa Senators",
+  "away_id": 4,
+  "home_id": 9,
+  "away_abbr": "PHI",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-08T16:18:11.176294+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers @ Senators",
+   "published": "2026-10-08T13:51:58.238Z",
+   "lineups": true
+  },
+  {
+   "title": "Postgame RAV4: Flyers Lose to Bolts, 4-1",
+   "published": "2026-10-06T02:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators shaking off doubters with strong start to season",
+   "published": "2026-10-06T04:34:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sens Army Express will depart from eight bars to begin season",
+   "published": "2026-10-06T13:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Red Wings projected lineups",
+   "published": "2026-10-06T16:14:47.201Z",
+   "lineups": false
+  },
+  {
+   "title": "Ottawa Still Feels Like Home for the Emery Family",
+   "published": "2026-10-06T16:21:04.839Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alex Bump",
+     "detail": "assigned to AHL's Lehigh Valley Phantoms"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers (0-2-2) are still seeking their first win of the 2026-27 season after a 4-1 loss to Tampa Bay. Dan Vladar is projected to start in goal, sharing duties with Joseph Woll. The team signed Michael Bunting and assigned Alex Bump to the AHL, while relying on Trevor Zegras to transition to a full-time No. 1 center role."
+  },
+  "home": {
+   "starting_goalie": "Jonas Johansson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Linus Ullmark",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Artem Zub",
+     "detail": "injured (knee)"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Jake Sanderson",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ":{",
+    "player Ridly Greig",
+    "detail return after completing a two-game suspension for roughing Carolina Hurricanes defenseman Sean Walker during Game 4 of the Eastern Conference First Round last season; he will replace Hodgson, a forward."
+   ],
+   "summary": "The Senators (2-0-0) are off a 5-3 road loss to Detroit and projected to start Jonas Johansson in goal, with Linus Ullmark sidelined due to injury. Ridly Greig returns from suspension to replace scratched Hayden Hodgson. Ottawa aims to build on its strong early season start despite missing several key defenders."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dan Vladar",
+   "p_starter": 0.88,
+   "announced": 0.75,
+   "p_out": {
+    "Alex Bump": 0.8
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.88,
+   "announced": 0.1,
+   "p_out": {
+    "Linus Ullmark": 0.53,
+    "Artem Zub": 0.19,
+    "Kurtis MacDermid": 0.23,
+    "Andre Burakovsky": 0.24,
+    "Jake Sanderson": 0.24,
+    "Hayden Hodgson": 0.33
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.8,
+  "jev": 0.3
+ }
+}
