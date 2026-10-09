@@ -1,0 +1,95 @@
+{
+ "game": {
+  "gameId": 2026020067,
+  "kickoff": "2026-10-09T23:00:00Z",
+  "away": "New York Rangers",
+  "home": "Washington Capitals",
+  "away_id": 3,
+  "home_id": 15,
+  "away_abbr": "NYR",
+  "home_abbr": "WSH"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-09T16:17:53.747579+00:00",
+ "articles": [
+  {
+   "title": "Caps Host Pens in Home Opener",
+   "published": "2026-10-07T00:28:41.993Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers vs. Islanders: Postgame Notes",
+   "published": "2026-10-07T03:40:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin set tone for historic career with memorable debut in Capitals' home opener",
+   "published": "2026-10-07T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin set tone for historic career with memorable debut in Capitals' home opener",
+   "published": "2026-10-07T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Goalie goals 'neat thing' with Shesterkin latest to score in empty net",
+   "published": "2026-10-07T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin’s best moments on home ice discussed by NHL.com",
+   "published": "2026-10-07T04:06:15.612Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Igor Shesterkin",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Rangers extended their win streak to four-straight games, the longest-active streak in the NHL, and have won four of their first five games. Igor Shesterkin has notched his third-straight win this season, allowing two or fewer goals in all four games played. Cole Beaudoin made his NHL debut in the most recent game."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [
+    {
+     "player": "Matt Roy",
+     "detail": "lower body injury, has not practiced with the team these last two days, day-to-day"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Matt Roy",
+     "detail": "day-to-day, will see in the morning if he can play"
+    }
+   ],
+   "returning": [],
+   "summary": "The Capitals kicked off their home portion of the 2026-27 regular season slate when they hosted the Pittsburgh Penguins. Defenseman Matt Roy departed Saturday's game with the Lightning with a lower body injury and has not practiced with the team these last two days, but coach Spencer Carbery stopped short of ruling him out of Wednesday's game, calling him day-to-day. Dylan McIlrath would slot in for Roy in the lineup if the latter is unable to play."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Igor Shesterkin",
+   "p_starter": 0.63,
+   "announced": 0.35,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.05,
+   "p_out": {
+    "Matt Roy": 0.27
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.9,
+  "jev": 0.4
+ }
+}

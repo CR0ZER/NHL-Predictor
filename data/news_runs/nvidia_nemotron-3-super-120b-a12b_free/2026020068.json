@@ -1,0 +1,116 @@
+{
+ "game": {
+  "gameId": 2026020068,
+  "kickoff": "2026-10-09T23:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Columbus Blue Jackets",
+  "away_id": 5,
+  "home_id": 29,
+  "away_abbr": "PIT",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-09T16:18:04.113881+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: 10.07.26 at Washington Capitals",
+   "published": "2026-10-07T11:00:16.851Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins Acquire Defenseman Spencer Stastney from Edmonton in Exchange for Filip Hallander",
+   "published": "2026-10-07T16:25:05.689Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins at Capitals projected lineups",
+   "published": "2026-10-07T16:57:05.386Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets activate forward Mikael Pyyhtiä off Injured Reserve and loaned to Cleveland Monsters",
+   "published": "2026-10-07T19:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Musings: Too Little, Too Late in Washington",
+   "published": "2026-10-08T03:07:14.195Z",
+   "lineups": false
+  },
+  {
+   "title": "Spezza Talks Trading for Stastney",
+   "published": "2026-10-08T03:19:25.059Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Solovyov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Spencer Stastney",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Bryan Rust",
+     "detail": "game-time decision (upper-body injury)"
+    }
+   ],
+   "returning": [],
+   "summary": "The Penguins are coming off a 5-3 loss to Washington where Bryan Rust scored in his season debut. They face the Blue Jackets on the second night of a back-to-back, with Rust a game-time decision due to an upper-body injury. Defenseman Spencer Stastney was acquired from Edmonton but is scratched for this game, while Andrei Kuzmenko remains on non-roster status and will not play."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blue Jackets activated Mikael Pyyhtiä off Injured Reserve and loaned him to the Cleveland Monsters. They return to action on Friday against the Penguins after not playing since their last game. No specific lineup or injury updates for this game were provided in the articles."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.52,
+   "announced": 0.63,
+   "p_out": {
+    "Justin Brazeau": 0.93,
+    "Ryan Graves": 0.9,
+    "Elmer Soderblom": 0.95,
+    "Ilya Solovyov": 0.93,
+    "Spencer Stastney": 0.89,
+    "Bryan Rust": 0.31
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.07,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 9.5,
+  "jev": 0.6
+ }
+}
