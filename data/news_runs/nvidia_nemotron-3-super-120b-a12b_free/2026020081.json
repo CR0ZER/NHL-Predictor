@@ -1,0 +1,114 @@
+{
+ "game": {
+  "gameId": 2026020081,
+  "kickoff": "2026-10-10T23:30:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "New York Islanders",
+  "away_id": 14,
+  "home_id": 2,
+  "away_abbr": "TBL",
+  "home_abbr": "NYI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:19:10.389676+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders vs Lightning",
+   "published": "2026-10-10T04:00:48.624Z",
+   "lineups": true
+  },
+  {
+   "title": "Lightning at Islanders projected lineups",
+   "published": "2026-10-10T16:06:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Trophy Tracker: Lightning goalie Vasilevskiy early-season choice for Vezina",
+   "published": "2026-10-08T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Islanders vs Blackhawks",
+   "published": "2026-10-08T04:00:40.535Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks at Islanders projected lineups",
+   "published": "2026-10-08T16:17:47.693Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Lightning projected lineups",
+   "published": "2026-10-08T17:11:30.664Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Emil Lilleberg",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Dominic James",
+     "detail": "hand injury"
+    },
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning are riding a three-game winning streak after a slow start, with Nikita Kucherov leading a talented roster and Andrei Vasilevskiy expected to start in goal. They’ve snapped an 0-for-14 power-play drought and remain a model of consistency, though they’ve struggled in recent playoff first rounds. Vasilevskiy is the early-season Vezina favorite after a strong start to the season."
+  },
+  "home": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Bo Horvat (full participant in morning skate after concussion protocol from hit by Frank Nazar)"
+   ],
+   "summary": "The Islanders are coming off a 4-1 win over the Blackhawks, with Bo Horvat scoring twice and Ilya Sorokin carrying a shutout streak into the third period. They’re getting Horvat back after he exited Thursday’s game late due to a hit, and are hoping to put together a complete 60-minute effort against a physical Lightning team. Alexander Romanov remains out 6-8 months with a torn ACL, and Mathew Barzal continues to miss time with a knee issue."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Emil Lilleberg": 0.95,
+    "Dominic James": 0.97,
+    "Yanni Gourde": 0.97
+   }
+  },
+  "home": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Mathew Barzal": 0.98,
+    "Alexander Romanov": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 7.5,
+  "jev": 0.3
+ }
+}

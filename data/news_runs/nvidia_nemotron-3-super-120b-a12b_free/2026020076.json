@@ -1,0 +1,90 @@
+{
+ "game": {
+  "gameId": 2026020076,
+  "kickoff": "2026-10-10T23:00:00Z",
+  "away": "Nashville Predators",
+  "home": "Ottawa Senators",
+  "away_id": 18,
+  "home_id": 9,
+  "away_abbr": "NSH",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:18:33.062132+00:00",
+ "articles": [
+  {
+   "title": "GAME DAY: Preds at Canadiens, October 8",
+   "published": "2026-10-08T10:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Know Before You Go: 2026–27 Home Opener",
+   "published": "2026-10-08T15:29:19.193Z",
+   "lineups": false
+  },
+  {
+   "title": "Preds Official Podcast: The First Three Games and William Trudeau's Homecoming",
+   "published": "2026-10-08T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Canadiens projected lineups",
+   "published": "2026-10-08T16:31:42.506Z",
+   "lineups": false
+  },
+  {
+   "title": "Sens ‘fired up’ to get back in front of fans for home opener",
+   "published": "2026-10-08T18:45:29.491Z",
+   "lineups": false
+  },
+  {
+   "title": "Stützle and Batherson off to flying start",
+   "published": "2026-10-08T19:35:15.218Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Justus Annunen",
+     "detail": "Injured Reserve (undisclosed)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators are 1-1-1 to start the season, coming off a 5-4 overtime loss to the Maple Leafs where Steven Stamkos scored twice and Juuse Saros made 32 saves. They are on an eastern Canada road trip and will face the Canadiens after a loss in Toronto. The team has dressed 11 forwards and seven defensemen in their last two games, with practice lines unchanged from recent days."
+  },
+  "home": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Senators are preparing for their home opener against the Philadelphia Flyers, with Linus Ullmark set to start his third straight home opener. Ullmark enters the game with a .949 save percentage, 1.20 GAA, and a 2-0-0 record. Ottawa is riding a five-game win streak against the Flyers and has a strong home opener history, holding a 19-9-3-2 all-time record in such games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.68,
+   "announced": 0.6,
+   "p_out": {
+    "Justus Annunen": 0.94
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.9,
+   "announced": 0.07,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 4.9,
+  "jev": 0.2
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "game": {
+  "gameId": 2026020071,
+  "kickoff": "2026-10-10T19:30:00Z",
+  "away": "Vancouver Canucks",
+  "home": "New Jersey Devils",
+  "away_id": 23,
+  "home_id": 1,
+  "away_abbr": "VAN",
+  "home_abbr": "NJD"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:17:55.565465+00:00",
+ "articles": [
+  {
+   "title": "Canucks at Devils projected lineups",
+   "published": "2026-10-09T17:15:22.903Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks Begin Six-Game Road Trip in Carolina on Thursday Night",
+   "published": "2026-10-08T01:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Notes: Canucks at Hurricanes",
+   "published": "2026-10-08T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hughes, Siegenthaler Absent, Poirier Practices | NOTEBOOK",
+   "published": "2026-10-08T15:26:36.867Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Hurricanes projected lineups",
+   "published": "2026-10-08T16:45:03.428Z",
+   "lineups": false
+  },
+  {
+   "title": "Evangelista meets his dad's favorite hockey player Resch",
+   "published": "2026-10-08T20:19:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brendan Gallagher",
+     "detail": "scratched"
+    },
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "scratched"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "injured (hip)"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "injured (shoulder)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks are projected to start Kevin Lankinen in goal for this game, coming off a 7-2 loss to the Hurricanes. They will be without scratched forwards Brendan Gallagher and Guillaume Brisebois, plus injured Thatcher Demko (hip) and Filip Chytil (shoulder). The team did not practice Friday after the Hurricanes loss and is beginning a six-game road trip."
+  },
+  "home": {
+   "starting_goalie": "Nico Daws",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Remi Poirier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Connor Brown",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Nick Bjugstad",
+     "detail": "injured (upper body)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jonas Siegenthaler",
+     "detail": "could be in lineup after undisclosed injury; practiced Friday and may play"
+    },
+    {
+     "player": "Jack Hughes",
+     "detail": "maintenance day; expected to practice tomorrow"
+    }
+   ],
+   "returning": [],
+   "summary": "The Devils are projected to start Nico Daws in goal, with Jake Allen also available. They will be without scratched Remi Poirier and injured Connor Brown (lower body), Johnathan Kovacevic (upper body), and Nick Bjugstad (upper body). Jonas Siegenthaler and Jack Hughes were absent from Thursday's practice but are questionable for Saturday, with Siegenthaler improving and Hughes on a maintenance day."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.98,
+   "announced": 0.95,
+   "p_out": {
+    "Brendan Gallagher": 0.95,
+    "Guillaume Brisebois": 0.98,
+    "Thatcher Demko": 0.98,
+    "Filip Chytil": 0.98
+   }
+  },
+  "home": {
+   "starter": "Nico Daws",
+   "p_starter": 0.98,
+   "announced": 0.9,
+   "p_out": {
+    "Remi Poirier": 0.96,
+    "Connor Brown": 0.97,
+    "Johnathan Kovacevic": 0.97,
+    "Nick Bjugstad": 0.97,
+    "Jonas Siegenthaler": 0.18,
+    "Jack Hughes": 0.11
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.3,
+  "jev": 0.2
+ }
+}

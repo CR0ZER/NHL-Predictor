@@ -1,0 +1,179 @@
+{
+ "game": {
+  "gameId": 2026020072,
+  "kickoff": "2026-10-10T20:00:00Z",
+  "away": "Edmonton Oilers",
+  "home": "San Jose Sharks",
+  "away_id": 22,
+  "home_id": 28,
+  "away_abbr": "EDM",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:18:05.901468+00:00",
+ "articles": [
+  {
+   "title": "Oilers at Sharks projected lineups",
+   "published": "2026-10-09T21:56:40.648Z",
+   "lineups": true
+  },
+  {
+   "title": "RELEASE: Dickinson activated, Dach placed on IR",
+   "published": "2026-10-07T20:28:51.663Z",
+   "lineups": false
+  },
+  {
+   "title": "PROJECTED LINEUP: Dickinson activated off IR to make season debut against Ducks",
+   "published": "2026-10-07T20:31:03.073Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL EDGE stats: Bouchard’s early case for Norris Trophy",
+   "published": "2026-10-08T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL EDGE stats: Bouchard’s early case for Norris Trophy",
+   "published": "2026-10-08T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks at Blues projected lineups",
+   "published": "2026-10-08T17:30:41.673Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Frederik Andersen",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Zach Hyman",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Ryan Nugent-Hopkins",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Matthew Savoie",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Colton Dach",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Shakir Mukhamadullin",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Trent Frederic",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Filip Hallander",
+     "detail": "Could make debut after trade; skated in practice"
+    },
+    {
+     "player": "Jason Dickinson",
+     "detail": "Activated off IR; expected to make season debut"
+    }
+   ],
+   "returning": [
+    "/"
+   ],
+   "summary": "The Oilers (3-0-1) are dealing with several key injuries, including Andersen, Hyman, Janmark, Nugent-Hopkins, Regula, Savoie, and Dach. Jason Dickinson has been activated off IR and is expected to make his season debut, while Filip Hallander, recently acquired from Pittsburgh, could make his Oilers debut after skating in practice. The team is working to regain depth as they prepare for the Sharks matchup."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Macklin Celebrini",
+     "detail": "Injured (lower body); game-time decision"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "Injured (upper body); could return after full practice participation"
+    },
+    {
+     "player": "Nolan Allan",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Macklin Celebrini",
+     "detail": "Game-time decision; participated fully in practice but no line rushes; missed two games"
+    },
+    {
+     "player": "Kiefer Sherwood",
+     "detail": "Game-time decision; did not participate in practice due to upper-body injury"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "Could return after fully participating in practice following upper-body injury"
+    }
+   ],
+   "returning": [
+    "/"
+   ],
+   "summary": "The Sharks (3-1-0) are missing Macklin Celebrini (lower-body injury, game-time decision) and Adam Gaudette (upper-body injury, but could return after full practice). Kiefer Sherwood is also a game-time decision due to an upper-body injury. Yaroslav Askarov is projected to start in goal, with Alex Nedeljkovic as the backup. The team is managing several key availability questions heading into the game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Tristan Jarry",
+   "p_starter": 1.0,
+   "announced": 0.9,
+   "p_out": {
+    "Frederik Andersen": 0.96,
+    "Zach Hyman": 0.9,
+    "Mattias Janmark": 0.96,
+    "Ryan Nugent-Hopkins": 0.96,
+    "Alec Regula": 0.96,
+    "Matthew Savoie": 0.96,
+    "Colton Dach": 0.97,
+    "Shakir Mukhamadullin": 0.96,
+    "Trent Frederic": 0.93,
+    "Filip Hallander": 0.22
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 1.0,
+   "announced": 0.95,
+   "p_out": {
+    "Macklin Celebrini": 0.35,
+    "Adam Gaudette": 0.56,
+    "Nolan Allan": 0.95,
+    "Kiefer Sherwood": 0.29
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 9.8,
+  "jev": 0.2
+ }
+}

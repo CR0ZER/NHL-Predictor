@@ -1,0 +1,107 @@
+{
+ "game": {
+  "gameId": 2026020074,
+  "kickoff": "2026-10-10T23:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Buffalo Sabres",
+  "away_id": 68,
+  "home_id": 7,
+  "away_abbr": "UTA",
+  "home_abbr": "BUF"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:18:18.898005+00:00",
+ "articles": [
+  {
+   "title": "Utah Continues Trip in Boston",
+   "published": "2026-10-08T12:16:21.436Z",
+   "lineups": false
+  },
+  {
+   "title": "Injuries and transactions | Timmins progressing in rehab",
+   "published": "2026-10-08T14:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres vs. Stars | How to watch, lineup notes and storylines",
+   "published": "2026-10-08T14:56:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Stars at Sabres projected lineups",
+   "published": "2026-10-08T16:31:50.97Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Bruins projected lineups",
+   "published": "2026-10-08T16:57:33.256Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Boston 6, Utah 1",
+   "published": "2026-10-08T23:07:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Utah Mammoth (3-1-0) are on a road trip and will face the Boston Bruins after a 5-3 win over New Jersey Devils. Head coach André Tourigny confirmed no lineup changes from the morning skate, with veterans like Nick Schmaltz (5 goals, 7 points) providing leadership. The team aims to maintain its identity and exploit its strengths against a Bruins squad known for grit, skill, and strong defensive structure."
+  },
+  "home": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body injury, on IR since Sept. 24"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body injury, on IR since Sept. 26, began rehab skating Oct. 8"
+    },
+    {
+     "player": "Jason Zucker",
+     "detail": "sports hernia, out since start of camp, returned to practice Oct. 6 in non-contact jersey, 'probably a couple weeks out'"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Buffalo Sabres (2-1-0) are seeking a third straight win against the Dallas Stars, having trailed 2-0 before coming back to beat the Wild in overtime. The team leads the NHL in even-strength expected goals share (65.4%) and has a strong 19-0-3 run vs. Western Conference teams. Mattias Samuelsson is in the lineup after missing Wednesday's practice for maintenance, and Ukko-Pekka Luukkonen gets his third start of the season."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.74,
+   "announced": 0.09,
+   "p_out": {
+    "Maveric Lamoureux": 0.13
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.65,
+   "announced": 0.6,
+   "p_out": {
+    "Alex Lyon": 0.51,
+    "Conor Timmins": 0.95,
+    "Jason Zucker": 0.93
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.7,
+  "jev": 0.2
+ }
+}

@@ -1,0 +1,139 @@
+{
+ "game": {
+  "gameId": 2026020082,
+  "kickoff": "2026-10-11T02:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "Calgary Flames",
+  "away_id": 24,
+  "home_id": 20,
+  "away_abbr": "ANA",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:19:17.295481+00:00",
+ "articles": [
+  {
+   "title": "5 Things - Flames vs. Avalanche",
+   "published": "2026-10-08T13:49:59.161Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche at Flames projected lineups",
+   "published": "2026-10-08T18:09:52.34Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup - Flames vs. Avalanche",
+   "published": "2026-10-09T00:37:44.321Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Fall To Avalanche",
+   "published": "2026-10-09T03:51:35.231Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Jets projected lineups",
+   "published": "2026-10-09T17:57:22.454Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Ducks Look to Bounce Back in Winnipeg",
+   "published": "2026-10-09T21:11:23.114Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Drew Helleson",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Nick Jensen",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Sam Colangelo",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Anaheim Ducks (2-1-0) are coming off a 5-2 loss to the Edmonton Oilers and are projected to use the same lineup. Lukas Dostal is expected to start in goal. Key absences include Drew Helleson, Ian Moore (both lower-body injuries), and Troy Terry (hip). The Ducks aim to bounce back on a two-game Canadian trip, beginning with Winnipeg before facing Calgary."
+  },
+  "home": {
+   "starting_goalie": "Devin Cooley",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Maksim Tsyplakov",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Brennan Othmann",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Joel Hanley",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Jonathan Castagna\", \"detail\": \"Making NHL debut after recall from AHL\"}, {\"player\": \"Aydar Suniev\", \"detail\": \"Making season debut after recall from AHL\"}"
+   ],
+   "summary": "The Calgary Flames (0-3-0) suffered a 7-3 loss to the Avalanche in their last game. Devin Cooley is confirmed to start in goal. Jonathan Huberdeau remains out with a hip injury, while several players are scratched. The Flames have welcomed AHL recalls Jonathan Castagna and Aydar Suniev, with Castagna making his NHL debut and earning an assist in the last game. They look to end their losing streak in a home-and-home set with the Ducks, beginning Saturday at the Scotiabank Saddledome."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.97,
+   "announced": 0.24,
+   "p_out": {
+    "Drew Helleson": 0.12,
+    "Ian Moore": 0.1,
+    "Troy Terry": 0.1,
+    "Nick Jensen": 0.11,
+    "Frank Vatrano": 0.15,
+    "Sam Colangelo": 0.14
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.48,
+   "announced": 0.92,
+   "p_out": {
+    "Jonathan Huberdeau": 0.92,
+    "Maksim Tsyplakov": 0.95,
+    "Brennan Othmann": 0.95,
+    "Joel Hanley": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.4,
+  "jev": 0.3
+ }
+}

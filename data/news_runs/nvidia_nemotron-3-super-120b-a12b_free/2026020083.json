@@ -1,0 +1,97 @@
+{
+ "game": {
+  "gameId": 2026020083,
+  "kickoff": "2026-10-11T02:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "Vegas Golden Knights",
+  "away_id": 26,
+  "home_id": 54,
+  "away_abbr": "LAK",
+  "home_abbr": "VGK"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:19:22.729539+00:00",
+ "articles": [
+  {
+   "title": "Morning Skate Report: Oct. 8, 2026",
+   "published": "2026-10-08T15:23:38.778Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs at Golden Knights projected lineups",
+   "published": "2026-10-08T19:17:46.433Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings prospects Zielinski, Vandenberg prepare to don the black, silver and white......as freshmen at Providence",
+   "published": "2026-10-09T17:24:00Z",
+   "lineups": false
+  },
+  {
+   "title": "LA Kings Recall Forward Jared Wright from Ontario Reign",
+   "published": "2026-10-09T18:13:41.641Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: October 9",
+   "published": "2026-10-09T18:24:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Oct. 10, 2026",
+   "published": "2026-10-10T06:38:18.987Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jared Wright",
+     "detail": "recalled from AHL Ontario Reign on Oct 9"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Los Angeles Kings (0-2-1) are seeking their first win of the season as they visit the Vegas Golden Knights. They recalled forward Jared Wright from the AHL Ontario Reign on Oct 9 to bolster their roster. No injuries or scratches were reported for the Kings in the provided articles."
+  },
+  "home": {
+   "starting_goalie": "Adin Hill",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Victor Olofsson",
+     "detail": "injured (undisclosed), week to week"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vegas Golden Knights (4-1-0) host the Los Angeles Knights in their first meeting of the season. They are coming off a 4-3 shootout win over the Toronto Maple Leafs, highlighted by Jack Eichel's first penalty-shot goal of the season. Victor Olofsson remains out with an undisclosed injury, week to week, while Adin Hill is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.95,
+   "announced": 0.06,
+   "p_out": {
+    "Jared Wright": 0.08
+   }
+  },
+  "home": {
+   "starter": "Adin Hill",
+   "p_starter": 0.61,
+   "announced": 0.73,
+   "p_out": {
+    "Victor Olofsson": 0.81
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.9,
+  "jev": 0.3
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "game": {
+  "gameId": 2026020073,
+  "kickoff": "2026-10-10T22:00:00Z",
+  "away": "Minnesota Wild",
+  "home": "Florida Panthers",
+  "away_id": 30,
+  "home_id": 13,
+  "away_abbr": "MIN",
+  "home_abbr": "FLA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:18:12.688548+00:00",
+ "articles": [
+  {
+   "title": "Wild at Panthers projected lineups",
+   "published": "2026-10-10T15:11:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: Wild at Lightning",
+   "published": "2026-10-08T13:00:52.373Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers loan defenseman Alexander Petrovic to AHL",
+   "published": "2026-10-08T16:00:56.788Z",
+   "lineups": false
+  },
+  {
+   "title": "STAT PACK: Panthers start season on 4-game point streak",
+   "published": "2026-10-08T16:46:48.754Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Lightning projected lineups",
+   "published": "2026-10-08T17:11:30.664Z",
+   "lineups": false
+  },
+  {
+   "title": "Hispanic Excellence: Nonprofit",
+   "published": "2026-10-08T17:45:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Marcus Foligno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Wild (2-1-1) are missing several key players including Marcus Foligno, Brock Faber, Filip Gustavsson, and Nick Foligno due to injuries. Jesper Wallstedt is projected to start in goal. Lorentz could make his NHL debut, and Kiersted was recalled from Iowa."
+  },
+  "home": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury, out for six weeks"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/Aaron Ekblad",
+    "detail: returning after missing two games for paternity leave"
+   ],
+   "summary": "The Panthers (2-0-2) are off to a strong start with a four-game point streak. They will have Aaron Ekblad back in the lineup after missing two games for family-related reasons, but will be without Barkov, Marchand, and Gadjovich due to injuries. Jacob Markstrom is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Marcus Foligno": 0.95,
+    "Brock Faber": 0.97,
+    "Filip Gustavsson": 0.98,
+    "Nick Foligno": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Aleksander Barkov": 0.98,
+    "Brad Marchand": 0.98,
+    "Jonah Gadjovich": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.3,
+  "jev": 0.2
+ }
+}

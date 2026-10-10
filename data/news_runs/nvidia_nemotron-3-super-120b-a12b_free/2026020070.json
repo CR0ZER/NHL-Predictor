@@ -1,0 +1,122 @@
+{
+ "game": {
+  "gameId": 2026020070,
+  "kickoff": "2026-10-10T17:00:00Z",
+  "away": "Philadelphia Flyers",
+  "home": "Boston Bruins",
+  "away_id": 4,
+  "home_id": 6,
+  "away_abbr": "PHI",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:17:49.763612+00:00",
+ "articles": [
+  {
+   "title": "Flyers at Bruins projected lineups",
+   "published": "2026-10-09T19:37:06.926Z",
+   "lineups": true
+  },
+  {
+   "title": "RAV4 Things: Flyers @ Bruins",
+   "published": "2026-10-10T12:09:59.494Z",
+   "lineups": true
+  },
+  {
+   "title": "RAV4 Things: Flyers @ Senators",
+   "published": "2026-10-08T13:51:58.238Z",
+   "lineups": false
+  },
+  {
+   "title": "Need to Know: Bruins vs. Mammoth",
+   "published": "2026-10-08T15:57:27.798Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Bruins projected lineups",
+   "published": "2026-10-08T16:57:33.256Z",
+   "lineups": false
+  },
+  {
+   "title": "In the System: Pelosi, Groenewold Pace Quinnipiac",
+   "published": "2026-10-08T18:46:46.296Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Garrett Wilson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Carl Grundstrom",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Rasmus Ristolainen",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers (0-3-2) are seeking their first win of the season after a 2-1 loss in Ottawa. They are splitting goaltending duties in a back-to-back, with Dan Vladar projected to start in Boston. Offensively, they have only six goals in five games and remain 1-for-15 on the power play."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Jonathan Aspirot",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sean Kuraly",
+     "detail": "scratched"
+    },
+    {
+     "player": "Charlie McAvoy",
+     "detail": "serving final game of six-game suspension for slashing"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins (3-2-0) are coming off an 8-1 win over Seattle, where they were perfect on the penalty kill and strong on the power play. Jeremy Swayman is confirmed to start in net after stopping 36 of 37 shots in the previous game. Charlie McAvoy remains suspended for the final game of his six-game ban."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joseph Woll",
+   "p_starter": 0.86,
+   "announced": 0.99,
+   "p_out": {
+    "Garrett Wilson": 0.97,
+    "Carl Grundstrom": 0.98,
+    "Nikita Grebenkin": 0.97,
+    "Rasmus Ristolainen": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 0.99,
+   "announced": 0.94,
+   "p_out": {
+    "Jonathan Aspirot": 0.97,
+    "Sean Kuraly": 0.97,
+    "Charlie McAvoy": 0.92
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.0,
+  "jev": 0.2
+ }
+}

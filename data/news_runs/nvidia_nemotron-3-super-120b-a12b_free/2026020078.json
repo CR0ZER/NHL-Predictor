@@ -1,0 +1,109 @@
+{
+ "game": {
+  "gameId": 2026020078,
+  "kickoff": "2026-10-10T23:00:00Z",
+  "away": "Carolina Hurricanes",
+  "home": "Chicago Blackhawks",
+  "away_id": 12,
+  "home_id": 16,
+  "away_abbr": "CAR",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-10T16:18:50.376074+00:00",
+ "articles": [
+  {
+   "title": "Hurricanes at Blackhawks projected lineups",
+   "published": "2026-10-10T16:16:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Preview: October 8 vs. Vancouver",
+   "published": "2026-10-08T09:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Blackhawks Head to New York to Face Islanders",
+   "published": "2026-10-08T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: October 8 vs. Vancouver",
+   "published": "2026-10-08T15:29:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks at Islanders projected lineups",
+   "published": "2026-10-08T16:17:47.693Z",
+   "lineups": false
+  },
+  {
+   "title": "Injury Report: Jarvis Sheds 'No-Contact' Sweater",
+   "published": "2026-10-08T16:36:38.871Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Seth Jarvis",
+     "detail": "Injured (shoulder)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes (3-1-1) are coming off a 6-4 win over Montreal and are projected to start Pyotr Kochetkov in net after Brandon Bussi's recent start. Seth Jarvis remains out with a shoulder injury, though he has progressed to practicing in a standard sweater. The team is riding strong performances from Sebastian Aho and Andrei Svechnikov, with Aho tied for third in league goal-scoring through four games."
+  },
+  "home": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Andrew Mangiapane",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Frank Nazar",
+     "detail": "Suspended (two games for illegal check to the head)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ":{"
+   ],
+   "summary": "The Blackhawks (1-4-0) are projected to start Spencer Knight in goal, with Connor Bedard and Andrew Mangiapane out due to injuries and Frank Nazar serving a suspension. Teuvo Teravainen is returning to the lineup after missing the previous game with a lower-body injury. The team has been getting contributions from younger players, with 65.2% of their points coming from players 25 or younger."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Brandon Bussi",
+   "p_starter": 0.66,
+   "announced": 0.93,
+   "p_out": {
+    "Seth Jarvis": 0.94
+   }
+  },
+  "home": {
+   "starter": "Spencer Knight",
+   "p_starter": 0.98,
+   "announced": 0.91,
+   "p_out": {
+    "Connor Bedard": 0.98,
+    "Andrew Mangiapane": 0.97,
+    "Frank Nazar": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 10.6,
+  "jev": 0.2
+ }
+}
