@@ -1,0 +1,107 @@
+{
+ "game": {
+  "gameId": 2026020084,
+  "kickoff": "2026-10-11T21:00:00Z",
+  "away": "Seattle Kraken",
+  "home": "Washington Capitals",
+  "away_id": 55,
+  "home_id": 15,
+  "away_abbr": "SEA",
+  "home_abbr": "WSH"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-11T16:17:49.226765+00:00",
+ "articles": [
+  {
+   "title": "Kraken at Capitals projected lineups",
+   "published": "2026-10-10T20:11:47.352Z",
+   "lineups": true
+  },
+  {
+   "title": "Kraken (2-2-0) at Red Wings (1-2-0) | 4 p.m.",
+   "published": "2026-10-08T22:14:01.529Z",
+   "lineups": false
+  },
+  {
+   "title": "Caps Continue Homestand vs. Rangers",
+   "published": "2026-10-08T22:55:55.287Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin final season has Capitals energized to win another Cup",
+   "published": "2026-10-09T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Capitals projected lineups",
+   "published": "2026-10-09T16:39:21.369Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken at Red Wings projected lineups",
+   "published": "2026-10-09T17:42:32.604Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joey Daccord",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jacob Melanson",
+     "detail": "Injured: upper body (anterior mediastinum hematoma with vascular pseudo aneurysm)"
+    },
+    {
+     "player": "Ryan Lindgren",
+     "detail": "Injured: upper body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Kraken (3-2-0) are projected to start Joey Daccord in goal. They will be without injured players Jacob Melanson (upper body) and Ryan Lindgren (upper body), with Curtis Douglas and Cale Fleury scratched. Jared McCann and Jordan Eberle are expected to provide offensive leadership."
+  },
+  "home": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "Injured: knee"
+    },
+    {
+     "player": "Matt Roy",
+     "detail": "Injured: lower body (expected to miss third straight game)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals (3-1-0) are projected to start Logan Thompson in goal. They will be without injured players Rasmus Sandin (knee) and Matt Roy (lower body), with Ivan Miroshnichenko and Ethen Frank scratched. The team is energized by Alex Ovechkin's final season and recent success, including a 5-3 win over Pittsburgh."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joey Daccord",
+   "p_starter": 0.96,
+   "announced": 0.97,
+   "p_out": {
+    "Jacob Melanson": 0.97,
+    "Ryan Lindgren": 0.97
+   }
+  },
+  "home": {
+   "starter": "Logan Thompson",
+   "p_starter": 0.96,
+   "announced": 0.96,
+   "p_out": {
+    "Rasmus Sandin": 0.96,
+    "Matt Roy": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.1,
+  "jev": 0.3
+ }
+}

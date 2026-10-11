@@ -1,0 +1,144 @@
+{
+ "game": {
+  "gameId": 2026020085,
+  "kickoff": "2026-10-11T22:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "New York Rangers",
+  "away_id": 23,
+  "home_id": 3,
+  "away_abbr": "VAN",
+  "home_abbr": "NYR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-11T16:17:56.652050+00:00",
+ "articles": [
+  {
+   "title": "Canucks at Rangers projected lineups",
+   "published": "2026-10-11T15:20:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Rangers at Capitals: Pregame Notes",
+   "published": "2026-10-09T12:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "From Seattle to Abbotsford, Braeden Cootes and Sawyer Mynio’s Connection Continues",
+   "published": "2026-10-09T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Capitals projected lineups",
+   "published": "2026-10-09T16:39:21.369Z",
+   "lineups": false
+  },
+  {
+   "title": "CANUCKS SPORTS & ENTERTAINMENT WELCOMES COKE CANADA BOTTLING AS NEW OFFICIAL BEVERAGE PARTNER",
+   "published": "2026-10-09T17:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Devils projected lineups",
+   "published": "2026-10-09T17:15:22.903Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Filip Chytil",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Arshdeep Bains",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Victor Mancini",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks (2-4-0) are projected to start Kevin Lankinen in net with Leevi Merilainen as backup. They will be without injured players Filip Chytil (shoulder) and Thatcher Demko (hip), and have scratched Arshdeep Bains, Victor Mancini, and Guillaume Brisebois. The team is coming off a 7-2 loss to the Hurricanes and did not practice Friday."
+  },
+  "home": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Scott Morrow",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Matt Rempe",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Juuso Parssinen",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Cole Beaudoin recalled from Hartford after playing one shift and being sent down"
+   ],
+   "summary": "The Rangers (4-2-0) are projected to start Dylan Garand in net with Spencer Martin as backup, following Igor Shesterkin's lower-body injury. They will also be without Joonas Korpisalo and Joseph Veleno (both lower body), and have scratched Scott Morrow, Matt Rempe, and Juuso Parssinen. Cole Beaudoin was recalled from Hartford after playing one shift. The Rangers have won four straight games and lead the league in several defensive categories."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Filip Chytil": 0.97,
+    "Thatcher Demko": 0.98,
+    "Arshdeep Bains": 0.96,
+    "Victor Mancini": 0.96,
+    "Guillaume Brisebois": 0.97
+   }
+  },
+  "home": {
+   "starter": "Dylan Garand",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Igor Shesterkin": 0.98,
+    "Joonas Korpisalo": 0.97,
+    "Joseph Veleno": 0.97,
+    "Scott Morrow": 0.97,
+    "Matt Rempe": 0.97,
+    "Juuso Parssinen": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.9,
+  "jev": 0.3
+ }
+}
