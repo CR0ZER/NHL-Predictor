@@ -1,0 +1,117 @@
+{
+ "game": {
+  "gameId": 2026020089,
+  "kickoff": "2026-10-13T00:00:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Minnesota Wild",
+  "away_id": 54,
+  "home_id": 30,
+  "away_abbr": "VGK",
+  "home_abbr": "MIN"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-12T16:18:07.077751+00:00",
+ "articles": [
+  {
+   "title": "Morning Skate Report: Oct. 10, 2026",
+   "published": "2026-10-10T06:38:18.987Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Wild at Lightning",
+   "published": "2026-10-10T13:00:01.097Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Panthers projected lineups",
+   "published": "2026-10-10T15:11:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild Wrap Up Three-Game Road Trip in Florida",
+   "published": "2026-10-10T17:36:22.726Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Golden Knights projected lineups",
+   "published": "2026-10-10T19:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: Wild at Panthers",
+   "published": "2026-10-10T19:47:35.91Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Victor Olofsson",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vegas Golden Knights (4-1-0) are coming off a 4-3 shootout win over Toronto and are projected to dress the same 18 skaters from that game. Carter Hart is expected to start in goal, with Adin Hill as backup. The team will be without Victor Olofsson due to an undisclosed injury, but otherwise have a relatively healthy lineup as they prepare to face Minnesota."
+  },
+  "home": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Marcus Foligno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body injury (long-term IR)"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "upper body injury (placed on IR)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ":{",
+    "player",
+    "Olli Maatta",
+    "detail expected to return to the lineup and play alongside Jonas Brodin after missing Thursday's game in Tampa Bay."
+   ],
+   "summary": "The Minnesota Wild (2-1-1) are concluding a three-game Florida road trip and have been dealing with significant injuries, placing multiple forwards on IR. Defenseman Olli Maatta is expected to return after sitting out Thursday's game, while forward Rieger Lorenz may make his NHL debut. Jesper Wallstedt is projected to start in goal, with Calvin Pickard as backup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.94,
+   "announced": 0.08,
+   "p_out": {
+    "Victor Olofsson": 0.1
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.84,
+   "announced": 0.8,
+   "p_out": {
+    "Marcus Foligno": 0.92,
+    "Brock Faber": 0.96,
+    "Filip Gustavsson": 0.97,
+    "Nick Foligno": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 10.7,
+  "jev": 0.3
+ }
+}

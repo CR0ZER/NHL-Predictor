@@ -1,0 +1,118 @@
+{
+ "game": {
+  "gameId": 2026020088,
+  "kickoff": "2026-10-12T23:00:00Z",
+  "away": "Ottawa Senators",
+  "home": "New Jersey Devils",
+  "away_id": 9,
+  "home_id": 1,
+  "away_abbr": "OTT",
+  "home_abbr": "NJD"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-12T16:17:55.940609+00:00",
+ "articles": [
+  {
+   "title": "Predators at Senators projected lineups",
+   "published": "2026-10-10T16:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kovacevic Activated | TRANSACTION",
+   "published": "2026-10-10T17:22:52.648Z",
+   "lineups": false
+  },
+  {
+   "title": "Know Before You Go: Senators vs. Predators ",
+   "published": "2026-10-10T18:07:28.763Z",
+   "lineups": false
+  },
+  {
+   "title": "QUICK RECAP: Devils 4, Canucks 1",
+   "published": "2026-10-10T19:25:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Thomas Chabot and Tim Stützle pledge $1,872 per Senators win to CHEO Foundation",
+   "published": "2026-10-10T19:58:19.9Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators look to stay perfect on home ice",
+   "published": "2026-10-10T20:06:33.275Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Artem Zub",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jake Sanderson",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Cameron Crotty",
+     "detail": "illness"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Andre Burakovsky",
+    "detail: making regular-season debut after missing time with an upper-body injury sustained during the preseason"
+   ],
+   "summary": "The Senators are coming off a 2-1 win over the Flyers and have a 3-1-0 record to start the season. They welcome back Andre Burakovsky to the lineup after missing time with an upper-body injury, while dealing with several defensive absences including Zub, MacDermid, Sanderson, and Crotty. Linus Ullmark is projected to start in goal and has won his first three decisions of the season."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "No information about the New Jersey Devils is available in the provided articles. The only Devils-related content is a transaction activating Johnathan Kovacevic off IR (but not playing) and a recap of a past game against Vancouver, neither of which pertains to the upcoming game against Ottawa."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Linus Ullmark",
+   "p_starter": 0.5,
+   "announced": 0.84,
+   "p_out": {
+    "Artem Zub": 0.96,
+    "Kurtis MacDermid": 0.97,
+    "Jake Sanderson": 0.94,
+    "William Eklund": 0.96,
+    "Cameron Crotty": 0.96,
+    "Hayden Hodgson": 0.95
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.05,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 7.8,
+  "jev": 0.3
+ }
+}
