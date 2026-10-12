@@ -779,7 +779,8 @@ function placeTip(tip, el, x, y) { const w = el.clientWidth; tip.style.left = Ma
 function niceTicks(min, max, n = 5) {
   const span = max - min || 1, step0 = span / n, mag = 10 ** Math.floor(Math.log10(step0));
   const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => span / s <= n) || mag * 10;
-  const out = []; for (let v = Math.floor(min / step) * step; v <= max + 1e-9; v += step) out.push(+v.toFixed(10));
+  const top = Math.ceil(max / step - 1e-9) * step;  // la dernière graduation couvre le maximum : la courbe reste dans le cadre
+  const out = []; for (let v = Math.floor(min / step) * step; v <= top + 1e-9; v += step) out.push(+v.toFixed(10));
   return out;
 }
 
