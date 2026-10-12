@@ -377,6 +377,7 @@ body.static .updated { display: flex; }
   .brand { flex: 1 1 100%; }
   .brand-logo { height: 28px; }
   .brand small, .clock:not(.updated) { display: none; }
+  .datepick .lbl { display: none; }
   .controls { flex: 1 1 auto; gap: 6px; }
   .field { height: 34px; padding: 0 8px; }
   button { height: 34px; padding: 0 12px; }
@@ -431,6 +432,16 @@ body.static .updated { display: flex; }
   #bets td:nth-child(10):empty { display: none; }
   #bets td[colspan] { grid-column: 1 / -1; }
   .skill { max-width: 50px; }
+}
+
+/* Écrans tactiles : le flou des cartes (recalculé à chaque image au-dessus du fond animé) et les lumières mobiles
+   faisaient clignoter ou disparaître les cartes pendant le défilement ; fonds opaques et décor figé à la place */
+@media (hover: none) {
+  .card, header, .tip, .toast { -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .card { background: color-mix(in srgb, var(--surface-1) 90%, transparent); }
+  header { background: color-mix(in srgb, var(--surface-1) 96%, transparent); }
+  .lights i { animation: none; }
+  .game { will-change: auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -564,6 +575,7 @@ body.static .updated { display: flex; }
 <script>
 const $ = s => document.querySelector(s);
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const TOUCH = matchMedia("(hover: none)").matches;  // téléphone, tablette : décor figé
 const COLORS = { favori: "var(--s1)", valeur_unibet: "var(--s2)", valeur_winamax: "var(--s3)" };
 const SHORT = { favori: "Favori", valeur_unibet: "Valeur Unibet", valeur_winamax: "Valeur Winamax" };
 const ABBR = {"anaheim ducks":"ANA","boston bruins":"BOS","buffalo sabres":"BUF","calgary flames":"CGY","carolina hurricanes":"CAR","chicago blackhawks":"CHI","colorado avalanche":"COL","columbus blue jackets":"CBJ","dallas stars":"DAL","detroit red wings":"DET","edmonton oilers":"EDM","florida panthers":"FLA","los angeles kings":"LAK","minnesota wild":"MIN","montreal canadiens":"MTL","nashville predators":"NSH","new jersey devils":"NJD","new york islanders":"NYI","new york rangers":"NYR","ottawa senators":"OTT","philadelphia flyers":"PHI","pittsburgh penguins":"PIT","san jose sharks":"SJS","seattle kraken":"SEA","st. louis blues":"STL","tampa bay lightning":"TBL","toronto maple leafs":"TOR","utah mammoth":"UTA","vancouver canucks":"VAN","vegas golden knights":"VGK","washington capitals":"WSH","winnipeg jets":"WPG"};
@@ -1195,13 +1207,14 @@ function coefChart(el, coefs) {
     gl.uniform1f(U("light"), document.documentElement.dataset.theme === "light" ? 1 : 0);
     gl.uniform2f(U("m"), mouse[0], mouse[1]); gl.drawArrays(gl.TRIANGLES, 0, 3);
   };
-  addEventListener("resize", () => { size(); draw(performance.now()); });
+  let w0 = innerWidth;
+  addEventListener("resize", () => { if (TOUCH && innerWidth === w0) return; w0 = innerWidth; size(); draw(performance.now()); });
   addEventListener("mousemove", e => { mouse = [e.clientX * SCALE, (innerHeight - e.clientY) * SCALE]; }, { passive: true });
   size(); draw(0);
-  if (REDUCED) return;                                               // image fixe si « réduire les animations »
+  window.redrawIce = () => draw(performance.now());
+  if (REDUCED || TOUCH) return;                                      // image fixe : « réduire les animations » ou écran tactile
   const loop = ms => { if (!document.hidden && ms - last > 40) { last = ms; draw(ms); } requestAnimationFrame(loop); };  // ~25 i/s
   requestAnimationFrame(loop);
-  window.redrawIce = () => draw(performance.now());
 })();
 
 function puckPass() {
