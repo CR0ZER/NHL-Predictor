@@ -440,8 +440,10 @@ body.static .updated { display: flex; }
   .card, header, .tip, .toast { -webkit-backdrop-filter: none; backdrop-filter: none; }
   .card { background: color-mix(in srgb, var(--surface-1) 90%, transparent); }
   header { background: color-mix(in srgb, var(--surface-1) 96%, transparent); }
-  .lights i { animation: none; }
-  .game { will-change: auto; }
+  .lights, .puck-fly { display: none; }                 /* calques fixes géants (flou de 60 px) : trop lourds pour Safari iOS */
+  .game { will-change: auto; transform-style: flat; }   /* la 3D ne sert qu'à l'inclinaison au survol de la souris */
+  .rise { animation: none; opacity: 1; transform: none; }  /* « forwards » gardait chaque carte en calque séparé */
+  .game.value::before { animation: none; }               /* liseré rouge figé : plus de redessin à chaque image */
 }
 
 @media (prefers-reduced-motion: reduce) {
