@@ -57,4 +57,26 @@ q = app.quality(pd.DataFrame([{"date": "2026-10-05", "p_home": 0.6, "pin_fair": 
                                "book": "Unibet FR", "market": "Vainqueur", "pick": "H", "price": 2.2, "status": "gagné"}]))["total"]
 assert abs(q["clv"] - 0.1) < 1e-9 and q["n_clv"] == 1, "pari à 2,20 contre une clôture à 2,00 : +10 %"
 assert q["ll_model_pin"] < q["ll_pin"], "domicile gagnant : 60 % (modèle) fait mieux que 50 % (Pinnacle)"
+
+# OddsPapi : une réponse tronquée (incident du 13 octobre) est retentée au lieu de faire planter la soirée
+import http.client
+import io
+import os
+import urllib.request
+
+os.environ.setdefault("ODDSPAPI_API_KEY", "test")
+odds.time.sleep = lambda s: None
+answers = iter([http.client.IncompleteRead(b""), b'{"ok": 1}'])
+
+
+def fake_urlopen(req, timeout):
+    a = next(answers)
+    if isinstance(a, Exception):
+        raise a
+    return io.BytesIO(a)
+
+
+real_urlopen, urllib.request.urlopen = urllib.request.urlopen, fake_urlopen
+assert odds.api("historical-odds") == {"ok": 1}, "2e essai après une réponse tronquée"
+urllib.request.urlopen = real_urlopen
 print("ok")

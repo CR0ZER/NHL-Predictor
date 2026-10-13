@@ -9,6 +9,7 @@ Chaque update/fetch : 1 requête décomptée (liste des matchs) + historiques gr
 
 Quota gratuit : 250 requêtes/mois ; /historical-odds n'est pas décompté (mais 5 s d'attente entre appels).
 """
+import http.client
 import json
 import os
 import sys
@@ -33,16 +34,24 @@ MONEYLINE, REGULATION = "151", "153"     # vainqueur prolongation incluse (1, 2)
 OUTCOMES = {MONEYLINE: {"151": "H", "152": "A"}, REGULATION: {"153": "H", "154": "X", "155": "A"}}
 
 
-def api(endpoint, **params):
+def api(endpoint, tries=3, **params):
+    """Réponse JSON d'OddsPapi. Incident réseau (coupure, délai dépassé, réponse tronquée), saturation (429) ou
+    erreur serveur (5xx) : nouvel essai après le délai minimal entre deux appels, jusqu'à `tries` fois."""
     url = f"{API}/{endpoint}?" + urllib.parse.urlencode({**params, "apiKey": os.environ["ODDSPAPI_API_KEY"]})
-    try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "nhl-predictor"}),
-                                    timeout=120) as r:
-            return json.load(r)
-    except urllib.error.HTTPError as e:
-        if e.code == 404:  # « No historical odds found »
-            return {}
-        raise
+    for i in range(tries):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "nhl-predictor"}),
+                                        timeout=120) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code == 404:  # « No historical odds found »
+                return {}
+            if (e.code != 429 and e.code < 500) or i == tries - 1:
+                raise
+        except (OSError, http.client.HTTPException, json.JSONDecodeError):  # 13 oct. : réponse tronquée (IncompleteRead)
+            if i == tries - 1:
+                raise
+        time.sleep(5.5 * (i + 1))  # au moins le cooldown de l'endpoint (5 s)
 
 
 def fixtures(start, end, refresh=False):
