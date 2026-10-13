@@ -8,6 +8,7 @@
 Paris fictifs enregistrés dans data/paper_bets.csv à la cote disponible au moment de la prédiction,
 réglés ensuite avec les résultats officiels NHL. Rien n'est jamais misé réellement.
 """
+import http.client
 import json
 import mimetypes
 import shutil
@@ -79,7 +80,11 @@ def run_predict(day, stake, use_news, rescue=False):
     preds, bets = [], []
     for i, g in u.reset_index(drop=True).iterrows():
         JOB["msg"] = f"Cotes {i + 1}/{len(u)} : {g.away} @ {g.home}"
-        o = odds.current_odds(g.home, g.kickoff)
+        try:
+            o = odds.current_odds(g.home, g.kickoff)
+        except (OSError, http.client.HTTPException, ValueError) as e:  # OddsPapi injoignable malgré les nouveaux essais
+            print(f"Cotes indisponibles pour {g.away} @ {g.home} ({type(e).__name__}) : match prédit sans pari", flush=True)
+            o = {}
         c = lambda book, market, side: o.get((book, market, side))
         pin_h, pin_a = c("pinnacle", "151", "H"), c("pinnacle", "151", "A")
         base = {"gameId": int(g.gameId), "date": day, "kickoff": g.kickoff, "away": g.away, "home": g.home}
