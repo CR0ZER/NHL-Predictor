@@ -1,0 +1,109 @@
+{
+ "game": {
+  "gameId": 2026020103,
+  "kickoff": "2026-10-14T01:45:00Z",
+  "away": "Calgary Flames",
+  "home": "Anaheim Ducks",
+  "away_id": 20,
+  "home_id": 24,
+  "away_abbr": "CGY",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:32:48.953615+00:00",
+ "articles": [
+  {
+   "title": "Cooley walks in with pet bunny Tito before Flames game",
+   "published": "2026-10-11T01:48:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Doubled By Ducks",
+   "published": "2026-10-11T05:02:18.953Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL player poll names breakout stars in action during Frozen Frenzy ",
+   "published": "2026-10-12T13:49:00Z",
+   "lineups": false
+  },
+  {
+   "title": "The Farm Report - 12.10.26",
+   "published": "2026-10-12T16:41:25.547Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Reassign Mitchell to San Diego",
+   "published": "2026-10-12T23:25:59.332Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames @ Ducks",
+   "published": "2026-10-13T13:23:02.197Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Sam Honzek",
+     "detail": "week-to-week with a lower-body ailment suffered Thursday against Colorado"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames are coming off a 4-2 loss to the Ducks in their most recent meeting, where they showed improvement but fell short. They will be without forward Sam Honzek due to a lower-body injury, listed as week-to-week. Goaltender Dustin Wolf is confirmed to start, with Devin Cooley as the backup."
+  },
+  "home": {
+   "starting_goalie": "Ville Husso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ryan Poehling",
+     "detail": "placed on IR after crashing into the goalpost post-game-winner"
+    },
+    {
+     "player": "Cutter Gauthier",
+     "detail": "day-to-day after leaving Saturday's contest after five shifts"
+    },
+    {
+     "player": "Travis Mitchell",
+     "detail": "reassigned to San Diego Gulls (AHL)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Roger McQueen recalled from San Diego Gulls, potential debut tonight"
+   ],
+   "summary": "The Ducks won the previous meeting 4-2, with Ryan Poehling scoring the game-winner before exiting due to injury. Poehling has since been placed on IR, and Cutter Gauthier is day-to-day. The Ducks recalled Roger McQueen from the AHL for potential debut. Goaltender Ville Husso is projected to start based on prior usage."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Sam Honzek": 0.19
+   }
+  },
+  "home": {
+   "starter": "Ville Husso",
+   "p_starter": 0.76,
+   "announced": 0.62,
+   "p_out": {
+    "Ryan Poehling": 0.21,
+    "Cutter Gauthier": 0.14,
+    "Travis Mitchell": 0.34
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 28.8,
+  "jev": 0.4
+ }
+}

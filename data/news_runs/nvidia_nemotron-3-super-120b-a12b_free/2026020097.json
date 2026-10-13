@@ -1,0 +1,132 @@
+{
+ "game": {
+  "gameId": 2026020097,
+  "kickoff": "2026-10-13T23:45:00Z",
+  "away": "Vancouver Canucks",
+  "home": "New York Islanders",
+  "away_id": 23,
+  "home_id": 2,
+  "away_abbr": "VAN",
+  "home_abbr": "NYI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:31:46.323404+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders vs Canucks",
+   "published": "2026-10-13T04:00:26.82Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks at Islanders projected lineups",
+   "published": "2026-10-13T16:52:37.013Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks Play Second Game of Back-to-Back Against Rangers on Sunday",
+   "published": "2026-10-11T00:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Notes: Canucks at Rangers",
+   "published": "2026-10-11T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Rangers projected lineups",
+   "published": "2026-10-11T15:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "The Skinny: Lightning 5, Islanders 3 ",
+   "published": "2026-10-11T16:00:54.883Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Filip Chytil",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Victor Mancini",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Aatu Raty",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks are coming off a 6-2 loss to the Rangers, their fourth straight defeat. They have allowed a league-worst 35 goals this season but have offensive depth with 14 different goal scorers and 24 total goals (5th most in the league). Elias Pettersson leads the team with eight points (2G, 6A) through seven games, and Paul Cotter has four goals in seven games."
+  },
+  "home": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "Injured (torn right ACL)"
+    },
+    {
+     "player": "Kyle MacLean",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Matt Kessel",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Islanders are finishing a three-game homestand and hosted the Lightning on Saturday, clawing back from deficits to tie 3-3 before losing in the final minutes. Bo Horvat has a point in each of the first five games, the first time in his NHL career. Brayden Schenn has five points in his last four games and will face his brother Luke Schenn. The Islanders have just one first-period goal this season compared to 10 in the second and five in the third."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.98,
+   "announced": 0.92,
+   "p_out": {
+    "Filip Chytil": 0.96,
+    "Thatcher Demko": 0.97,
+    "Victor Mancini": 0.96,
+    "Guillaume Brisebois": 0.95,
+    "Aatu Raty": 0.95
+   }
+  },
+  "home": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Mathew Barzal": 0.98,
+    "Alexander Romanov": 0.98,
+    "Kyle MacLean": 0.96,
+    "Matt Kessel": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 7.3,
+  "jev": 0.4
+ }
+}

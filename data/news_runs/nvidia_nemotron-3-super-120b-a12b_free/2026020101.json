@@ -1,0 +1,136 @@
+{
+ "game": {
+  "gameId": 2026020101,
+  "kickoff": "2026-10-14T00:45:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Nashville Predators",
+  "away_id": 54,
+  "home_id": 18,
+  "away_abbr": "VGK",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:32:13.870266+00:00",
+ "articles": [
+  {
+   "title": "Golden Knights at Predators projected lineups",
+   "published": "2026-10-13T16:35:33.2Z",
+   "lineups": true
+  },
+  {
+   "title": "Craig chronicled lessons learned, relationships formed on road to becoming Vegas coach",
+   "published": "2026-10-11T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Craig chronicled lessons learned, relationships formed on road to becoming Vegas coach",
+   "published": "2026-10-11T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Preds, Bridgestone Arena Set to Host Battle of the Badges on Monday Night",
+   "published": "2026-10-11T19:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Lawless: Craig Coaching Era Starting Strong",
+   "published": "2026-10-11T21:05:38.334Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Oct 12, 2026",
+   "published": "2026-10-12T14:41:06.349Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Adin Hill",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Victor Olofsson",
+     "detail": "Injured: lower body"
+    },
+    {
+     "player": "Parker Wotherspoon",
+     "detail": "Injured: upper body"
+    },
+    {
+     "player": "Ville Heinola",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights (5-2-0) are projected to start Adin Hill in goal after Carter Hart's recent appearance. They will be without injured forwards Victor Olofsson (lower body) and Parker Wotherspoon (upper body, week-to-week), and scratched defenseman Ville Heinola. The team is coming off a 4-2 loss to Minnesota and aims to maintain their strong early-season form under first-year head coach Ryan Craig."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Justus Annunen",
+     "detail": "Injured: undisclosed"
+    },
+    {
+     "player": "Mavrik Bourque",
+     "detail": "Injured: upper body"
+    },
+    {
+     "player": "William Trudeau",
+     "detail": "Injured: upper body"
+    },
+    {
+     "player": "Jack Ahcan",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Justus Annunen",
+     "detail": "Day to day"
+    },
+    {
+     "player": "Mavrik Bourque",
+     "detail": "Day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "The Predators (2-1-2) are projected to start Juuse Saros in goal, with Matt Murray as backup. They will be without injured goaltender Justus Annunen (undisclosed, day-to-day) and forwards Mavrik Bourque (upper body, day-to-day) and William Trudeau (upper body), plus scratched defensemen Jack Ahcan and Ilya Lyubushkin. Nashville looks to improve on a slow start as they host Vegas in the first of a back-to-back set."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Adin Hill",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Victor Olofsson": 0.97,
+    "Parker Wotherspoon": 0.9,
+    "Ville Heinola": 0.96
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Justus Annunen": 0.39,
+    "Mavrik Bourque": 0.37,
+    "William Trudeau": 0.86,
+    "Jack Ahcan": 0.95,
+    "Ilya Lyubushkin": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.9,
+  "jev": 0.4
+ }
+}

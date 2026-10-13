@@ -1,0 +1,150 @@
+{
+ "game": {
+  "gameId": 2026020090,
+  "kickoff": "2026-10-13T22:00:00Z",
+  "away": "New Jersey Devils",
+  "home": "Detroit Red Wings",
+  "away_id": 1,
+  "home_id": 17,
+  "away_abbr": "NJD",
+  "home_abbr": "DET"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:30:39.290939+00:00",
+ "articles": [
+  {
+   "title": "Devils at Red Wings projected lineups",
+   "published": "2026-10-13T15:23:25.39Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Detroit determined to bounce back in Montreal on Saturday",
+   "published": "2026-10-10T22:26:00Z",
+   "lineups": false
+  },
+  {
+   "title": "A LIST: 25 Great Devils-Rangers Quotes Over the Years",
+   "published": "2026-10-11T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "The Rivalry | STAN'S STORIES",
+   "published": "2026-10-11T15:56:56.546Z",
+   "lineups": false
+  },
+  {
+   "title": "Rodrigues fined maximum for high-sticking in Devils game",
+   "published": "2026-10-11T16:23:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils Finish Homestand V. Sens  | PREVIEW",
+   "published": "2026-10-11T19:29:54.981Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Nico Daws",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Connor Brown",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Nick Bjugstad",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Stefen Noesen",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Remi Poirier",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Luke Evangelista",
+     "detail": "Ill (did not participate in morning skate, questionable for warmup)"
+    }
+   ],
+   "returning": [],
+   "summary": "The Devils (2-3-0) are coming off a 4-1 loss to Ottawa and did not hold a morning skate. They project to start Nico Daws in goal, with Jake Allen as backup. Key absences include Connor Brown, Johnathan Kovacevic, and Nick Bjugstad due to injury, while Luke Evangelista is questionable due to illness. Stefen Noesen and Remi Poirier are scratched."
+  },
+  "home": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Marco Kasper",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "J.T. Compher",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Mason Appleton",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Andreas Englund",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Jacob Bernard-Docker",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Axel Sandin-Pellikka",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Raymond and Faulk each missed practice Monday for maintenance, but each was on the ice Tuesday and will play."
+   ],
+   "summary": "The Red Wings (1-3-1) are preparing for their game after a back-to-back set. John Gibson is projected to start in goal, with Daniil Tarasov as backup. Marco Kasper, J.T. Compher, and Mason Appleton are out with injuries, while Andreas Englund, Jacob Bernard-Docker, and Axel Sandin-Pellikka are scratched. Lucas Raymond and Justin Faulk, who missed Monday's practice for maintenance, are expected to play."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Nico Daws",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Connor Brown": 0.97,
+    "Johnathan Kovacevic": 0.98,
+    "Nick Bjugstad": 0.98,
+    "Stefen Noesen": 0.97,
+    "Remi Poirier": 0.97,
+    "Luke Evangelista": 0.11
+   }
+  },
+  "home": {
+   "starter": "John Gibson",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Marco Kasper": 0.97,
+    "J.T. Compher": 0.95,
+    "Mason Appleton": 0.96,
+    "Andreas Englund": 0.95,
+    "Jacob Bernard-Docker": 0.96,
+    "Axel Sandin-Pellikka": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 12.7,
+  "jev": 0.4
+ }
+}

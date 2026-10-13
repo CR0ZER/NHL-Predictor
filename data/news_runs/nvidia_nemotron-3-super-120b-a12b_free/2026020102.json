@@ -1,0 +1,83 @@
+{
+ "game": {
+  "gameId": 2026020102,
+  "kickoff": "2026-10-14T01:00:00Z",
+  "away": "Toronto Maple Leafs",
+  "home": "Utah Mammoth",
+  "away_id": 10,
+  "home_id": 68,
+  "away_abbr": "TOR",
+  "home_abbr": "UTA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:32:19.543608+00:00",
+ "articles": [
+  {
+   "title": "Nylander ties career high with 5 points in the Mile-High City",
+   "published": "2026-10-11T02:58:25.51Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah’s Complete Game Leads to 4-1 Win in Buffalo",
+   "published": "2026-10-11T03:50:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Gavin McKenna Watch: No. 1 pick, Maple Leafs ready to host Schaefer, Islanders",
+   "published": "2026-10-12T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Schmaltz capitalizing on 'ton of chances' with Mammoth",
+   "published": "2026-10-12T13:43:13.418Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL player poll names breakout stars in action during Frozen Frenzy ",
+   "published": "2026-10-12T13:49:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Matthews leads Three Stars of the Week, had nine points in three games",
+   "published": "2026-10-12T17:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Toronto Maple Leafs (3-2-1, 7 points) are coming off a 6-3 win over the Colorado Avalanche, marking their first road win of the season. Sergei Bobrovsky earned his first victory as a Maple Leaf, making 30 saves. The team scored a season-high six goals and showed improved special teams, going 2-for-4 on the power play and 5-for-5 on the penalty kill."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Utah Mammoth (4-2-0) are returning home after a 4-1 win over the Buffalo Sabres to wrap up a five-game road trip. They are tied for fifth in the NHL in goals per game (3.67) and lead the league in power play efficiency at 40 percent. Forward Nick Schmaltz is tied for the league lead with six goals and scored his fourth power-play goal of the season in the Sabres win."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 0.58,
+   "announced": 0.22,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.05,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 4.9,
+  "jev": 0.4
+ }
+}

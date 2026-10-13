@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020091,
+  "kickoff": "2026-10-13T22:15:00Z",
+  "away": "Florida Panthers",
+  "home": "Columbus Blue Jackets",
+  "away_id": 13,
+  "home_id": 29,
+  "away_abbr": "FLA",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:30:46.211441+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Blue Jackets projected lineups",
+   "published": "2026-10-13T14:43:19.565Z",
+   "lineups": true
+  },
+  {
+   "title": "Panthers at Sabres projected lineups",
+   "published": "2026-10-11T20:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "NOTEBOOK: Panthers prepare for back-to-back on the road; Luostarinen update",
+   "published": "2026-10-11T21:23:21.509Z",
+   "lineups": false
+  },
+  {
+   "title": "Florida Panthers to Host Fifth Annual ‘Pink in the Rink’ Night Presented by Baptist Health Cancer Care & Promise Fund on Saturday, Oct. 17",
+   "published": "2026-10-12T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Panthers start back-to-back with visit to Buffalo",
+   "published": "2026-10-12T15:01:58.223Z",
+   "lineups": false
+  },
+  {
+   "title": "Good Grief! The Blue Jackets bring Peanuts Spooktacular to Nationwide Arena",
+   "published": "2026-10-12T15:50:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Akira Schmid",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "Injured (neck)"
+    },
+    {
+     "player": "Uvis Balinskis",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Panthers are 2-2-2 and coming off a 5-3 loss to the Sabres. Akira Schmid is projected to start in goal after Jacob Markstrom exited early in that game with tightness. Key absences include Barkov, Marchand, and Gadjovich due to injury, with Balinskis scratched."
+  },
+  "home": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dante Fabbro",
+     "detail": "Injured (broken hand)"
+    },
+    {
+     "player": "Ivan Provorov",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Conor Garland",
+     "detail": "Injured (illness)"
+    },
+    {
+     "player": "Emil Andrae",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Conor Garland",
+     "detail": "Game-time decision; if unable to play, Del Bel Belluz will make season debut"
+    }
+   ],
+   "returning": [],
+   "summary": "The Blue Jackets are 2-2-0 and preparing to host the Panthers. Cam Talbot is projected to start for the second time in three games. The team will be without Fabbro, Provorov, Lundestrom, and Andrae due to injury or scratch, with Garland a game-time decision due to illness."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Akira Schmid",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Aleksander Barkov": 0.98,
+    "Brad Marchand": 0.97,
+    "Jonah Gadjovich": 0.97,
+    "Uvis Balinskis": 0.97
+   }
+  },
+  "home": {
+   "starter": "Cam Talbot",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Dante Fabbro": 0.98,
+    "Ivan Provorov": 0.97,
+    "Isac Lundestrom": 0.96,
+    "Conor Garland": 0.32,
+    "Emil Andrae": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.2,
+  "jev": 0.4
+ }
+}

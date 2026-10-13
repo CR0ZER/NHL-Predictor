@@ -1,0 +1,75 @@
+{
+ "game": {
+  "gameId": 2026020105,
+  "kickoff": "2026-10-14T03:00:00Z",
+  "away": "Boston Bruins",
+  "home": "San Jose Sharks",
+  "away_id": 6,
+  "home_id": 28,
+  "away_abbr": "BOS",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:33:02.826016+00:00",
+ "articles": [
+  {
+   "title": "The Sunday Read: Inside the Hours, Roles and History of the B’s Equipment Staff",
+   "published": "2026-10-11T13:16:20.616Z",
+   "lineups": false
+  },
+  {
+   "title": "Trophy Tracker: Sharks captain Celebrini early-season favorite to win Hart ",
+   "published": "2026-10-11T14:44:00Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL player poll names breakout stars in action during Frozen Frenzy ",
+   "published": "2026-10-12T13:49:00Z",
+   "lineups": false
+  },
+  {
+   "title": "McAvoy on His Return, Readiness and Bruins Road Trip, ‘I’m Really Excited’",
+   "published": "2026-10-12T21:31:42.552Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [
+    "Charlie McAvoy"
+   ],
+   "summary": "The Boston Bruins are coming off a 4-2-0 record without Charlie McAvoy, who is set to make his season debut after serving a suspension. McAvoy expressed excitement about rejoining the team as they find their stride on a four-game road trip starting in San Jose. No goalie information or other roster moves were mentioned in the provided articles."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The San Jose Sharks are led by captain Macklin Celebrini, who is an early favorite for the Hart Trophy after a strong start to the season. Celebrini has shown resilience, returning from a lower-body injury to contribute immediately. The team has improved significantly from last season and is expected to make the playoffs if Celebrini stays healthy. No goalie information or other roster moves were mentioned in the provided articles."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.04,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.04,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 5.8,
+  "jev": 0.4
+ }
+}

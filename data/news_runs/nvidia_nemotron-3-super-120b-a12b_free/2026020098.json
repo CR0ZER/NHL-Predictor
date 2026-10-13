@@ -1,0 +1,90 @@
+{
+ "game": {
+  "gameId": 2026020098,
+  "kickoff": "2026-10-14T00:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Chicago Blackhawks",
+  "away_id": 5,
+  "home_id": 16,
+  "away_abbr": "PIT",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:31:53.115679+00:00",
+ "articles": [
+  {
+   "title": "Blackhawks hold moment of silence for former Bears coach Mike Ditka",
+   "published": "2026-10-11T00:22:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Musings: Penguins Respond in Win Over Stars",
+   "published": "2026-10-11T04:38:57.435Z",
+   "lineups": false
+  },
+  {
+   "title": "Bedard nearing return for Blackhawks after full-contact practice",
+   "published": "2026-10-11T18:49:00Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL player poll names breakout stars in action during Frozen Frenzy ",
+   "published": "2026-10-12T13:49:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins Acquire Defenseman Ryan Johnson from Buffalo in Exchange for Caleb Jones and Daniel Laatsch\n",
+   "published": "2026-10-12T20:55:30.434Z",
+   "lineups": false
+  },
+  {
+   "title": "Millick’s Moment Behind the Mic",
+   "published": "2026-10-12T21:05:33.482Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "confirmed",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Penguins bounced back with a 2-1 shootout win over Dallas, with Arturs Silovs playing solidly in net. They acquired defenseman Ryan Johnson from Buffalo in exchange for Caleb Jones and Daniel Laatsch. Pittsburgh is embarking on a four-game road trip starting in Chicago, aiming to build on their recent win after a winless stretch."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [
+    {
+     "player": "Connor Bedard",
+     "detail": "Nearing return from offseason shoulder injury; participated in full-contact practice but no official return date set; possible game-time decision for Tuesday's game vs Penguins per coach Blashill."
+    }
+   ],
+   "returning": [],
+   "summary": "The Blackhawks held a moment of silence for Mike Ditka prior to their game against Carolina. Captain Connor Bedard is nearing a return from shoulder injury after full-contact practice, though no official timeline is set. Chicago has lost five of its first six games (1-5-0) and hopes Bedard's return will provide a boost."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.51,
+   "announced": 0.37,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.06,
+   "p_out": {
+    "Connor Bedard": 0.43
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.1,
+  "jev": 0.4
+ }
+}

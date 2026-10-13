@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020092,
+  "kickoff": "2026-10-13T22:30:00Z",
+  "away": "Buffalo Sabres",
+  "home": "Montréal Canadiens",
+  "away_id": 7,
+  "home_id": 8,
+  "away_abbr": "BUF",
+  "home_abbr": "MTL"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:30:55.436669+00:00",
+ "articles": [
+  {
+   "title": "Sabres at Canadiens projected lineups",
+   "published": "2026-10-13T15:52:15.369Z",
+   "lineups": true
+  },
+  {
+   "title": "At the Horn | Mammoth 4 - Sabres 1",
+   "published": "2026-10-11T01:52:33.766Z",
+   "lineups": false
+  },
+  {
+   "title": "Danforth finding his footing, Sabres continue tinkering with lines",
+   "published": "2026-10-11T18:20:44.345Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Sabres projected lineups",
+   "published": "2026-10-11T20:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres vs. Panthers | How to watch, lineup notes, and storylines",
+   "published": "2026-10-12T11:40:11.918Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL player poll names breakout stars in action during Frozen Frenzy ",
+   "published": "2026-10-12T13:49:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Dahlin",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Jason Zucker",
+     "detail": "Injured (sports hernia)"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Tyson Kozak",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sabres are coming off a 5-3 win against the Florida Panthers on Monday and did not hold a morning skate. Rasmus Dahlin was injured in that game and did not make the trip to Montreal. Ukko-Pekka Luukkonen is projected to start in net after playing the final 33:34 in Monday's win. The team is dealing with several injuries and scratches, including Danforth and Kozak."
+  },
+  "home": {
+   "starting_goalie": "Jacob Fowler",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Samuel Montembeault",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Oliver Kapanen",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Florian Xhekaj",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Mike Matheson",
+     "detail": "Injured (lower body), day to day"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Mike Matheson",
+     "detail": "Day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "The Canadiens are projected to start Jacob Fowler in net for his third straight start since being recalled from Laval on Oct. 7. They will dress 12 forwards and six defensemen after using 11 and seven in their last game. Mike Matheson is day to day and will not play. Florian Xhekaj, a forward, will miss a second straight game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Rasmus Dahlin": 0.98,
+    "Alex Lyon": 0.96,
+    "Conor Timmins": 0.97,
+    "Jason Zucker": 0.98,
+    "Justin Danforth": 0.95,
+    "Tyson Kozak": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jacob Fowler",
+   "p_starter": 0.95,
+   "announced": 0.97,
+   "p_out": {
+    "Samuel Montembeault": 0.98,
+    "Ivan Demidov": 0.97,
+    "Oliver Kapanen": 0.98,
+    "Florian Xhekaj": 0.97,
+    "Mike Matheson": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.4,
+  "jev": 0.4
+ }
+}

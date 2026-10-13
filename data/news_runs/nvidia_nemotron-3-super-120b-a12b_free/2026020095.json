@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020095,
+  "kickoff": "2026-10-13T23:15:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "New York Rangers",
+  "away_id": 14,
+  "home_id": 3,
+  "away_abbr": "TBL",
+  "home_abbr": "NYR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-13T17:31:29.846247+00:00",
+ "articles": [
+  {
+   "title": "Lightning at Rangers projected lineups",
+   "published": "2026-10-13T16:00:24.047Z",
+   "lineups": true
+  },
+  {
+   "title": "Mishkin's Extra Shift: Lightning 5, Islanders 3",
+   "published": "2026-10-11T03:29:38.228Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers vs. Canucks: Pregame Notes",
+   "published": "2026-10-11T13:00:16.415Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Rangers projected lineups",
+   "published": "2026-10-11T15:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers ‘know what needs to be done’ to win without Shesterkin",
+   "published": "2026-10-11T17:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mishkin's Musings: On Mikheyev-Girgensons-Holmberg Line and Playoff Pace Metric",
+   "published": "2026-10-11T22:01:49.437Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Yanni Gourde",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Emil Lilleberg",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Mads Sogaard",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning are 4-1-0 and riding a four-game winning streak. They will start Andrei Vasilevskiy in goal with Dennis Hildeby as backup. The lineup features minor changes: Scott Sabourin and Mads Sogaard are scratched, with Jeff Viel replacing Sabourin. Yanni Gourde (hip) and Emil Lilleberg (upper body) are injured and out."
+  },
+  "home": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "Injured (lower body, season-ending)"
+    },
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Scott Morrow",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Jaroslav Chmelar",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Matt Rempe\", \"detail\": \"Returns to lineup after being a healthy scratch for the past six games; will play his second game of the season\"], ",
+    "summary\": "
+   ],
+   "summary": "The Rangers are 5-2-0 and will start Dylan Garand in goal due to Igor Shesterkin's season-ending lower-body injury. Spencer Martin is the backup. The lineup includes Matt Rempe returning from a six-game healthy scratch to replace Jaroslav Chmelar on the fourth line. The team has been strong at home and relies on Garand, who has performed well in recent action."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.95,
+   "announced": 0.99,
+   "p_out": {
+    "Yanni Gourde": 0.98,
+    "Emil Lilleberg": 0.98,
+    "Scott Sabourin": 0.98,
+    "Mads Sogaard": 0.97
+   }
+  },
+  "home": {
+   "starter": "Dylan Garand",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Igor Shesterkin": 0.97,
+    "Joonas Korpisalo": 0.97,
+    "Joseph Veleno": 0.97,
+    "Scott Morrow": 0.96,
+    "Jaroslav Chmelar": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 9.5,
+  "jev": 0.4
+ }
+}
