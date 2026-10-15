@@ -1,0 +1,152 @@
+{
+ "game": {
+  "gameId": 2026020117,
+  "kickoff": "2026-10-16T01:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Edmonton Oilers",
+  "away_id": 68,
+  "home_id": 22,
+  "away_abbr": "UTA",
+  "home_abbr": "EDM"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-15T16:20:16.256621+00:00",
+ "articles": [
+  {
+   "title": "Utah Returns Home, Hosts Toronto",
+   "published": "2026-10-13T16:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs at Mammoth projected lineups",
+   "published": "2026-10-13T18:15:37.344Z",
+   "lineups": false
+  },
+  {
+   "title": "Oilers at Kings projected lineups",
+   "published": "2026-10-13T18:34:15.166Z",
+   "lineups": false
+  },
+  {
+   "title": "PROJECTED LINEUP: Levi getting the start in Tuesday's road trip finale against Kings",
+   "published": "2026-10-13T19:29:51.01Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Utah 5, Toronto 4",
+   "published": "2026-10-14T01:07:00Z",
+   "lineups": false
+  },
+  {
+   "title": "QUICK RECAP: Oilers 4, Kings 1",
+   "published": "2026-10-14T02:28:20.714Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick DeSimone",
+     "detail": "scratched"
+    },
+    {
+     "player": "Liam O'Brien",
+     "detail": "scratched"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "injured (shoulder)"
+    },
+    {
+     "player": "Michael Carcone",
+     "detail": "injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Utah Mammoth (4-2-0) are coming off a 5-4 win over Toronto and will host their second home game of the season. The team held an optional morning skate and is projected to start Karel Vejmelka in goal. Key absences include scratched players Nick DeSimone and Liam O'Brien, plus injured Maveric Lamoureux (shoulder) and Michael Carcone (upper body)."
+  },
+  "home": {
+   "starting_goalie": "Devon Levi",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Max Jones",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frederik Andersen",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Zach Hyman",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Ryan Nugent-Hopkins",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Matthew Savoie",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Colton Dach",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Jake Walman",
+     "detail": "injured (undisclosed)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Edmonton Oilers (4-0-1) are riding a five-game win streak after a 4-1 victory over the Kings. Devon Levi is projected to start in goal, continuing his strong play. The Oilers will be without scratched Max Jones and a lengthy injury list including Frederik Andersen, Zach Hyman, Mattias Janmark, Ryan Nugent-Hopkins (lower body), Alec Regula, Matthew Savoie, Colton Dach, and Jake Walman. They return home to face Utah after a successful California road trip."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.75,
+   "announced": 0.58,
+   "p_out": {
+    "Nick DeSimone": 0.94,
+    "Liam O'Brien": 0.94,
+    "Maveric Lamoureux": 0.93,
+    "Michael Carcone": 0.95
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.78,
+   "announced": 0.61,
+   "p_out": {
+    "Max Jones": 0.83,
+    "Frederik Andersen": 0.91,
+    "Zach Hyman": 0.91,
+    "Mattias Janmark": 0.91,
+    "Ryan Nugent-Hopkins": 0.91,
+    "Alec Regula": 0.93,
+    "Matthew Savoie": 0.92,
+    "Colton Dach": 0.91,
+    "Jake Walman": 0.9
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 21.8,
+  "jev": 0.2
+ }
+}

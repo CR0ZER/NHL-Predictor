@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020109,
+  "kickoff": "2026-10-15T23:00:00Z",
+  "away": "New York Islanders",
+  "home": "Ottawa Senators",
+  "away_id": 2,
+  "home_id": 9,
+  "away_abbr": "NYI",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-15T16:18:13.275354+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Senators",
+   "published": "2026-10-15T04:00:35.21Z",
+   "lineups": true
+  },
+  {
+   "title": "Brayden Schenn Becoming the Teacher for Young Islanders",
+   "published": "2026-10-13T02:29:24.584Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Islanders vs Canucks",
+   "published": "2026-10-13T04:00:26.82Z",
+   "lineups": false
+  },
+  {
+   "title": "Sens Start Drop the Puck Program ",
+   "published": "2026-10-13T13:56:44.728Z",
+   "lineups": false
+  },
+  {
+   "title": "Blues at Senators projected lineups",
+   "published": "2026-10-13T16:04:40.032Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Islanders projected lineups",
+   "published": "2026-10-13T16:52:37.013Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "Injured (torn right ACL)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Islanders (3-3-0) are coming off a 3-2 win over the Canucks, with Kyle Palmieri scoring the game-winner and Matias Maccelli extending his point streak to four games. They project to keep the same lines that worked against Vancouver, led by the Maccelli-Horvat-Palmieri top trio. Defenseman Matt Kessel remains in the lineup following Romanov's ACL injury, while Barzal (knee) and Romanov (ACL) are out."
+  },
+  "home": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Eklund",
+     "detail": "Out for an extended period due to ankle injury sustained vs Flyers on Oct. 8"
+    },
+    {
+     "player": "Jake Sanderson",
+     "detail": "Injured (undisclosed, season-opener Oct. 3)"
+    },
+    {
+     "player": "Artem Zub",
+     "detail": "Injured (knee, yet to make season debut)"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Cameron Crotty",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Nikolas Matinpalo",
+     "detail": "Injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Senators (5-2-0) are coming off a 7-2 loss to the Blues, relying on Tim Stützle's hot start (11 points in 7 games). They will be without William Eklund (ankle) long-term, and several defenders including Sanderson (undisclosed), Zub (knee), and MacDermid (upper body) are injured. Ullmark is projected to start in net."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.89,
+   "announced": 0.21,
+   "p_out": {
+    "Mathew Barzal": 0.22,
+    "Alexander Romanov": 0.97
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.96,
+   "announced": 0.07,
+   "p_out": {
+    "William Eklund": 0.85,
+    "Jake Sanderson": 0.26,
+    "Artem Zub": 0.29,
+    "Kurtis MacDermid": 0.24,
+    "Cameron Crotty": 0.22,
+    "Nikolas Matinpalo": 0.22
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 15.1,
+  "jev": 0.2
+ }
+}

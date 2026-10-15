@@ -1,0 +1,116 @@
+{
+ "game": {
+  "gameId": 2026020112,
+  "kickoff": "2026-10-15T23:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "Florida Panthers",
+  "away_id": 23,
+  "home_id": 13,
+  "away_abbr": "VAN",
+  "home_abbr": "FLA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-15T16:18:35.893737+00:00",
+ "articles": [
+  {
+   "title": "Canucks Continue Road Trip with Tuesday Evening Game Against Islanders",
+   "published": "2026-10-13T01:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Notes: Canucks at Islanders",
+   "published": "2026-10-13T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Team USA members basking in gold medal, ready for Frozen Frenzy",
+   "published": "2026-10-13T13:18:46.188Z",
+   "lineups": false
+  },
+  {
+   "title": "Florida Panthers Announce 2026-27 Radio Network Presented by Baptist Health",
+   "published": "2026-10-13T14:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Blue Jackets projected lineups",
+   "published": "2026-10-13T14:43:19.565Z",
+   "lineups": false
+  },
+  {
+   "title": "Reinhart becomes Panthers’ all-time leader in power-play goals",
+   "published": "2026-10-13T16:46:28.368Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vancouver Canucks are on a road trip, having played the Islanders on October 13 and preparing to face the Florida teams next. No specific lineup or injury information for the upcoming game against the Panthers is provided in the articles; the focus is on past games and general team attitude."
+  },
+  "home": {
+   "starting_goalie": "Akira Schmid",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Jacob Markstrom",
+     "detail": "undisclosed injury, day to day"
+    },
+    {
+     "player": "Radko Gudas",
+     "detail": "undisclosed injury, day to day"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Conor Garland",
+     "detail": "illness, game-time decision"
+    }
+   ],
+   "returning": [],
+   "summary": "The Florida Panthers are projected to start Akira Schmid in goal against the Blue Jackets on October 13, with several key players out due to injury (Barkov, Marchand, Gadjovich, Markstrom, Gudas) and Conor Garland a game-time decision. The team did not hold a morning skate after a loss to Buffalo, and Cooper Black was recalled to back up Schmid."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.06,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.78,
+   "announced": 0.06,
+   "p_out": {
+    "Aleksander Barkov": 0.2,
+    "Brad Marchand": 0.28,
+    "Jonah Gadjovich": 0.28,
+    "Jacob Markstrom": 0.21,
+    "Radko Gudas": 0.25,
+    "Conor Garland": 0.13
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 9.5,
+  "jev": 0.2
+ }
+}
