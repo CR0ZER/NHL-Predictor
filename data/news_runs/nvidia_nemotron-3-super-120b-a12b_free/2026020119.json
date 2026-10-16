@@ -1,0 +1,83 @@
+{
+ "game": {
+  "gameId": 2026020119,
+  "kickoff": "2026-10-17T01:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Colorado Avalanche",
+  "away_id": 5,
+  "home_id": 21,
+  "away_abbr": "PIT",
+  "home_abbr": "COL"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-16T16:17:45.592640+00:00",
+ "articles": [
+  {
+   "title": "Musings: Penguins Leave Things to Chance in Loss to Chicago",
+   "published": "2026-10-14T03:46:00.548Z",
+   "lineups": false
+  },
+  {
+   "title": "Johnson Adds to the Penguins' Defensive Depth",
+   "published": "2026-10-14T15:24:00.563Z",
+   "lineups": false
+  },
+  {
+   "title": "Showdown with the Stars",
+   "published": "2026-10-14T15:30:23.961Z",
+   "lineups": false
+  },
+  {
+   "title": "Stars at Avalanche projected lineups",
+   "published": "2026-10-14T18:50:23.092Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche Hires Brett McLean",
+   "published": "2026-10-15T15:00:49.429Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: 10.16.26 at Colorado Avalanche",
+   "published": "2026-10-16T11:00:18.033Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sergei Murashov",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Penguins are on a four-game road trip after a 5-3 loss to Chicago, where rookie goaltender Sergei Murashov made 43 saves in a prior shootout loss to Columbus and played well despite a late goal allowed. They acquired defenseman Ryan Johnson from Buffalo to add depth, with Trevor van Riemsdyk sidelined due to injury. The team is working to correct inconsistencies, particularly on special teams, as they aim to stack wins together."
+  },
+  "home": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche are coming off a 3-2 road win over Dallas, with Martin Necas scoring twice and Mackenzie Blackwood making 24 saves. They project to have a full lineup except for scratched players Cale Makar (missing for twins' birth) and Logan O'Connor (bereavement), and no injuries listed. L’Heureux is a game-time decision due to an upper-body injury, with a potential AHL recall if needed. The team leads the NHL in home goals per game (5.67) and looks to continue strong home play."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sergei Murashov",
+   "p_starter": 0.91,
+   "announced": 0.55,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.81,
+   "announced": 0.31,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 8.2,
+  "jev": 0.4
+ }
+}
