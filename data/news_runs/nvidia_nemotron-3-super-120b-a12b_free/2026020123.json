@@ -1,0 +1,136 @@
+{
+ "game": {
+  "gameId": 2026020123,
+  "kickoff": "2026-10-17T20:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "Tampa Bay Lightning",
+  "away_id": 23,
+  "home_id": 14,
+  "away_abbr": "VAN",
+  "home_abbr": "TBL"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:18:33.660759+00:00",
+ "articles": [
+  {
+   "title": "Canucks at Lightning projected lineups",
+   "published": "2026-10-16T22:12:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Nuts & Bolts: Celebrating Noche Latina",
+   "published": "2026-10-14T20:14:34.277Z",
+   "lineups": false
+  },
+  {
+   "title": "Bolts alum Roy brings dynamic personality, color to Lightning game broadcasts",
+   "published": "2026-10-14T21:52:23.625Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks Play Fifth Game of Road Trip on Thursday Evening Against Panthers",
+   "published": "2026-10-15T01:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Notes: Canucks at Panthers",
+   "published": "2026-10-15T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Dominic James’ return will inject pace, ‘juice’, into Lightning lineup",
+   "published": "2026-10-15T15:57:54.148Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Thatcher Demko",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Luke Schenn",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Arshdeep Bains",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Aatu Raty",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks (2-6-1) are on a road trip and will start Kevin Lankinen in goal, with Thatcher Demko out due to a hip injury. The projected lineup features Jake DeBrusk, Elias Pettersson, and Jonathan Lekkerimaki on the top line, while Guillaume Brisebois, Luke Schenn, Arshdeep Bains, and Aatu Raty are scratched. The team has shown offensive production from DeBrusk and strong underlying numbers from the Pettersson-Willander defensive pairing."
+  },
+  "home": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Yanni Gourde",
+     "detail": "Injured (hip)"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Charle-Edouard D'Astous",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Emil Lilleberg",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/Dominic James",
+    "/Gage Goncalves",
+    "/Dennis Hildeby"
+   ],
+   "summary": "The Lightning (5-2-0) are set to start Andrei Vasilevskiy in goal, with Yanni Gourde out due to a hip injury. Dominic James is returning from a broken hand injury and is expected to inject pace into the lineup, while Gage Goncalves returns after being a healthy scratch and Dennis Hildeby is projected to start after returning from an undisclosed injury. The scratched players include Scott Sabourin, Charle-Edouard D'Astous, and Emil Lilleberg."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.95,
+   "announced": 0.98,
+   "p_out": {
+    "Thatcher Demko": 0.98,
+    "Guillaume Brisebois": 0.97,
+    "Luke Schenn": 0.96,
+    "Arshdeep Bains": 0.97,
+    "Aatu Raty": 0.96
+   }
+  },
+  "home": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.55,
+   "announced": 0.97,
+   "p_out": {
+    "Yanni Gourde": 0.97,
+    "Scott Sabourin": 0.96,
+    "Charle-Edouard D'Astous": 0.94,
+    "Emil Lilleberg": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 12.6,
+  "jev": 0.3
+ }
+}

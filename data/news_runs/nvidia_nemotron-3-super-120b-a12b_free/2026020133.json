@@ -1,0 +1,143 @@
+{
+ "game": {
+  "gameId": 2026020133,
+  "kickoff": "2026-10-18T02:00:00Z",
+  "away": "Edmonton Oilers",
+  "home": "Utah Mammoth",
+  "away_id": 22,
+  "home_id": 68,
+  "away_abbr": "EDM",
+  "home_abbr": "UTA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:20:43.961157+00:00",
+ "articles": [
+  {
+   "title": "Utah Starts Home and Home With Edmonton",
+   "published": "2026-10-15T14:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PROJECTED LINEUP: Oilers vs. Mammoth",
+   "published": "2026-10-15T17:56:58.202Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Oilers projected lineups",
+   "published": "2026-10-15T18:53:38.81Z",
+   "lineups": false
+  },
+  {
+   "title": "QUICK RECAP: Mammoth 4, Oilers 2",
+   "published": "2026-10-16T01:02:36.448Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Utah 4, Edmonton 2",
+   "published": "2026-10-16T01:07:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah’s Committed Effort Leads to 4-2 Win over Edmonton",
+   "published": "2026-10-16T05:15:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Devon Levi",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Zach Hyman",
+     "detail": "injured"
+    },
+    {
+     "player": "Jake Walman",
+     "detail": "injured"
+    },
+    {
+     "player": "Ryan Nugent-Hopkins",
+     "detail": "on the mend (lower-body)"
+    },
+    {
+     "player": "Colton Dach",
+     "detail": "on the mend (undisclosed)"
+    },
+    {
+     "player": "Frederik Andersen",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Matt Savoie",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Max Jones",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jason Dickinson",
+     "detail": "questionable (limped off morning skate)"
+    }
+   ],
+   "returning": [],
+   "summary": "The Edmonton Oilers are riding a five-game win streak into this game but suffered their first regulation loss of the season in Thursday's matchup against Utah. Devon Levi is confirmed to start in goal after a strong performance versus the Kings, while the team deals with multiple injuries including Zach Hyman and Jake Walman. Trent Frederic has been moved up to the second line to add physicality, and Evan Bouchard is expected to return to his regular spot after missing the full morning skate."
+  },
+  "home": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Michael Carcone",
+     "detail": "injured (upper body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Utah Mammoth are coming off a 4-2 victory over the Oilers in the first game of the home-and-home series, marking their first franchise win in Edmonton. Utah will dress the same lineup that beat Toronto on Tuesday, with Karel Vejmelka confirmed to start in goal. The team is riding momentum from a strong power play and disciplined defensive effort, aiming to build on lessons learned from containing Edmonton's top players."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Devon Levi",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Zach Hyman": 0.98,
+    "Jake Walman": 0.98,
+    "Ryan Nugent-Hopkins": 0.9,
+    "Colton Dach": 0.81,
+    "Frederik Andersen": 0.96,
+    "Mattias Janmark": 0.96,
+    "Alec Regula": 0.96,
+    "Matt Savoie": 0.96,
+    "Max Jones": 0.94,
+    "Jason Dickinson": 0.15
+   }
+  },
+  "home": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "Michael Carcone": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 14.4,
+  "jev": 0.3
+ }
+}

@@ -1,0 +1,112 @@
+{
+ "game": {
+  "gameId": 2026020125,
+  "kickoff": "2026-10-17T23:00:00Z",
+  "away": "New York Islanders",
+  "home": "Toronto Maple Leafs",
+  "away_id": 2,
+  "home_id": 10,
+  "away_abbr": "NYI",
+  "home_abbr": "TOR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:19:01.219979+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Maple Leafs",
+   "published": "2026-10-17T04:00:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: Islanders at Senators",
+   "published": "2026-10-15T04:00:35.21Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY vs BUFFALO | Oct. 15, 2026",
+   "published": "2026-10-15T15:15:19.776Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Maple Leafs projected lineups",
+   "published": "2026-10-15T16:39:44.069Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders at Senators projected lineups",
+   "published": "2026-10-15T17:15:50.701Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs Complete Trade With Vancouver",
+   "published": "2026-10-15T21:58:09.585Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "knee injury, did not travel, missed seventh straight game"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Islanders (3-3-1) are coming off a 2-1 shootout loss to Ottawa where Semyon Varlamov made 18 saves. They project Ilya Sorokin to start in net with Mathew Barzal (knee) and Alexander Romanov (torn ACL) out. The team has allowed three goals or fewer in five of seven games and has a 2.29 goals-against per game, second best in the NHL."
+  },
+  "home": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dakota Joshua",
+     "detail": "core injury"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Chris Tanev",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Maple Leafs (3-3-2) dropped a 5-4 overtime decision to Buffalo despite a 4-2 third-period lead and a hat-trick from Kirill Marchenko. They project Sergei Bobrovsky to start in net with Dakota Joshua (core), Max Domi (undisclosed), and Chris Tanev (upper body) out. Auston Matthews has a six-game point streak with 13 points and leads the team in goals (6), assists (7), and points (13)."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Mathew Barzal": 0.3,
+    "Alexander Romanov": 0.91
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.97,
+   "announced": 0.11,
+   "p_out": {
+    "Dakota Joshua": 0.1,
+    "Max Domi": 0.11,
+    "Chris Tanev": 0.1
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.7,
+  "jev": 0.3
+ }
+}

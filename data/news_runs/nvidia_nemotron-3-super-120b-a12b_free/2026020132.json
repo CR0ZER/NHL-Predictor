@@ -1,0 +1,90 @@
+{
+ "game": {
+  "gameId": 2026020132,
+  "kickoff": "2026-10-18T01:00:00Z",
+  "away": "Boston Bruins",
+  "home": "Los Angeles Kings",
+  "away_id": 6,
+  "home_id": 26,
+  "away_abbr": "BOS",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:20:29.099005+00:00",
+ "articles": [
+  {
+   "title": "LA Kings Recall Forward Jared Wright To AHL's Ontario Reign",
+   "published": "2026-10-15T17:25:33.469Z",
+   "lineups": false
+  },
+  {
+   "title": "INSIDER: Changes Coming As Kings Search For Offense",
+   "published": "2026-10-15T20:28:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Practice Report: Sturm, Lindholm Talk Early Defensive Production ",
+   "published": "2026-10-15T22:37:22.188Z",
+   "lineups": false
+  },
+  {
+   "title": "In the System: Zellers Named NCHC Forward of the Week",
+   "published": "2026-10-16T13:58:45.489Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins at Ducks projected lineups",
+   "published": "2026-10-16T18:33:47.003Z",
+   "lineups": false
+  },
+  {
+   "title": "Need to Know: Bruins at Ducks ",
+   "published": "2026-10-16T19:30:25.69Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins are coming off a road trip that included a win over the Sharks and a game against the Ducks. They are expected to have Jeremy Swayman in net for Saturday's game against the Kings, with Michael DiPietro having started the previous game. The team has been getting offensive contributions from defensemen, with five goals from the blueline through seven games. No injuries or scratches are mentioned for the Bruins in the provided articles for the Kings game."
+  },
+  "home": {
+   "starting_goalie": "Kuemper",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [
+    {
+     "player": "Mats Zuccarello",
+     "detail": "Not a full participant in practice; taking defensive shifts with Ceci during full-line work, status uncertain for game"
+    }
+   ],
+   "returning": [],
+   "summary": "The Kings held a practice where they experimented with line combinations to boost offense, considering moving either Laferriere or Kempe to center, which would remove Quinton Byfield from the top line. Mats Zuccarello practiced but was not a full participant, raising questions about his availability. The team recalled Jared Wright from the AHL and has been struggling offensively, scoring just one goal in their last three games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 0.6,
+   "announced": 0.16,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 0.97,
+   "announced": 0.68,
+   "p_out": {
+    "Mats Zuccarello": 0.33
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 15.5,
+  "jev": 0.3
+ }
+}

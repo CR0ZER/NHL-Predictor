@@ -1,0 +1,134 @@
+{
+ "game": {
+  "gameId": 2026020124,
+  "kickoff": "2026-10-17T22:00:00Z",
+  "away": "Seattle Kraken",
+  "home": "Florida Panthers",
+  "away_id": 55,
+  "home_id": 13,
+  "away_abbr": "SEA",
+  "home_abbr": "FLA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:18:52.008352+00:00",
+ "articles": [
+  {
+   "title": "Kraken at Panthers projected lineups",
+   "published": "2026-10-17T15:18:17.273Z",
+   "lineups": true
+  },
+  {
+   "title": "Kraken (5-2-0) at Lightning (4-2-0) | 4 p.m.",
+   "published": "2026-10-15T02:00:32.391Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Panthers want sticks to stay hot vs. Canucks",
+   "published": "2026-10-15T15:44:19.103Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Panthers projected lineups",
+   "published": "2026-10-15T16:53:18.235Z",
+   "lineups": false
+  },
+  {
+   "title": "Injury Update: Markstrom, Gudas still day-to-day, targeting returns on Oct. 21",
+   "published": "2026-10-15T17:02:39.62Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken at Lightning projected lineups",
+   "published": "2026-10-15T17:39:15.79Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joey Daccord",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brandon Montour",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Jacob Melanson",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Ryan Lindgren",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Curtis Douglas",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Ty Nelson",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Seattle Kraken (5-2-1) are projected to start Joey Daccord in net, with Philipp Grubauer as backup. They will be without defensemen Brandon Montour (lower body), Jacob Melanson (upper body), and Ryan Lindgren (upper body), plus scratched players Curtis Douglas and Ty Nelson. The team is coming off a strong road trip where goaltending has been a key factor, but they need to improve third-period consistency."
+  },
+  "home": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "Injured (neck)"
+    },
+    {
+     "player": "Radko Gudas",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Markstrom will return and start after missing two games with an undisclosed injury."
+   ],
+   "summary": "The Florida Panthers (4-2-2) project Jacob Markstrom to start in goal, with Akira Schmid as backup, after he missed two games with an undisclosed injury. They will be without Aleksander Barkov (knee), Brad Marchand (knee), Jonah Gadjovich (neck), and Radko Gudas (lower body). The Panthers are targeting a return for Markstrom and Gudas on Oct. 21 against Ottawa, but Markstrom is expected to start this game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joey Daccord",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Brandon Montour": 0.98,
+    "Jacob Melanson": 0.97,
+    "Ryan Lindgren": 0.97,
+    "Curtis Douglas": 0.97,
+    "Ty Nelson": 0.96
+   }
+  },
+  "home": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Aleksander Barkov": 0.97,
+    "Brad Marchand": 0.97,
+    "Jonah Gadjovich": 0.96,
+    "Radko Gudas": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 17.9,
+  "jev": 0.2
+ }
+}

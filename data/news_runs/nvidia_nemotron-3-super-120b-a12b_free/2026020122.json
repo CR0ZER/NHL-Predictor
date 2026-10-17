@@ -1,0 +1,150 @@
+{
+ "game": {
+  "gameId": 2026020122,
+  "kickoff": "2026-10-17T19:30:00Z",
+  "away": "Carolina Hurricanes",
+  "home": "Winnipeg Jets",
+  "away_id": 12,
+  "home_id": 52,
+  "away_abbr": "CAR",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:18:20.615409+00:00",
+ "articles": [
+  {
+   "title": "Hurricanes at Jets projected lineups",
+   "published": "2026-10-16T19:29:03.033Z",
+   "lineups": true
+  },
+  {
+   "title": "GAMEDAY: Hurricanes at Jets",
+   "published": "2026-10-17T12:37:00Z",
+   "lineups": true
+  },
+  {
+   "title": "GAMEDAY: Jets at Blackhawks",
+   "published": "2026-10-15T08:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: October 15 Winnipeg Jets at Chicago Blackhawks",
+   "published": "2026-10-15T12:05:41.47Z",
+   "lineups": false
+  },
+  {
+   "title": "Morrissey listed as week-to-week",
+   "published": "2026-10-15T17:43:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Jets at Blackhawks projected lineups",
+   "published": "2026-10-15T17:51:29.284Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Seth Jarvis",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Jordan Staal",
+     "detail": "Injured (calf)"
+    },
+    {
+     "player": "Taylor Hall",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Juuso Valimaki",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Nicolas Deslauriers",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Bradly Nadeau recalled from AHL and expected to play",
+    ": Jesperi Kotkaniemi recalled from AHL and expected to play"
+   ],
+   "summary": "The Hurricanes (6-1-1) are dealing with several key injuries, including Seth Jarvis (shoulder), Jordan Staal (calf), and Taylor Hall (upper body), though Hall is week-to-week. They have recalled Bradly Nadeau and Jesperi Kotkaniemi from the AHL, both expected to play. Pyotr Kochetkov is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Clay Stevenson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Elias Salomonsson",
+     "detail": "Injured (shoulder)"
+    },
+    {
+     "player": "Walker Duehr",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Josh Morrissey",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Vladislav Namestnikov",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "Tyrel Bauer",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Vladislav Namestnikov",
+     "detail": "Week to week; forward crashed into boards during morning skate in Chicago and did not play against Blackhawks"
+    }
+   ],
+   "returning": [],
+   "summary": "The Jets (4-1-2) are coming off a 4-3 overtime loss in Chicago and have earned a point in six of seven games to open the season. They are dealing with multiple injuries, including Josh Morrissey (upper body, week-to-week), Elias Salomonsson (shoulder), Walker Duehr (lower body), Garrett Brown (lower body), and Vladislav Namestnikov (undisclosed, week-to-week). Clay Stevenson is expected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Pyotr Kochetkov",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Seth Jarvis": 0.95,
+    "Jordan Staal": 0.97,
+    "Taylor Hall": 0.96,
+    "Juuso Valimaki": 0.97,
+    "Nicolas Deslauriers": 0.97
+   }
+  },
+  "home": {
+   "starter": "Clay Stevenson",
+   "p_starter": 0.96,
+   "announced": 0.97,
+   "p_out": {
+    "Elias Salomonsson": 0.97,
+    "Walker Duehr": 0.95,
+    "Garrett Brown": 0.97,
+    "Josh Morrissey": 0.97,
+    "Vladislav Namestnikov": 0.73,
+    "Tyrel Bauer": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 30.1,
+  "jev": 0.3
+ }
+}

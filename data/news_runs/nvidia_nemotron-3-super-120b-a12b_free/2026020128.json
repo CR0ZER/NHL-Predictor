@@ -1,0 +1,130 @@
+{
+ "game": {
+  "gameId": 2026020128,
+  "kickoff": "2026-10-17T23:00:00Z",
+  "away": "Ottawa Senators",
+  "home": "Philadelphia Flyers",
+  "away_id": 9,
+  "home_id": 4,
+  "away_abbr": "OTT",
+  "home_abbr": "PHI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:19:33.143865+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers vs. Senators",
+   "published": "2026-10-17T13:25:00Z",
+   "lineups": true
+  },
+  {
+   "title": "RAV4 Things: Flyers @ Red WIngs",
+   "published": "2026-10-15T13:25:03.363Z",
+   "lineups": false
+  },
+  {
+   "title": "Eklund out 10-12 weeks for Senators following ankle surgery",
+   "published": "2026-10-15T15:48:18.606Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers at Red Wings projected lineups",
+   "published": "2026-10-15T16:23:32.767Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders at Senators projected lineups",
+   "published": "2026-10-15T17:15:50.701Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators look to bounce back against Islanders",
+   "published": "2026-10-15T17:39:47.855Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "William Eklund",
+     "detail": "ankle surgery, out 10-12 weeks"
+    },
+    {
+     "player": "Jake Sanderson",
+     "detail": "undisclosed injury, missed sixth consecutive game"
+    },
+    {
+     "player": "Nikolas Matinpalo",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/Artem Zub",
+    "/Cam Crotty"
+   ],
+   "summary": "The Senators are 6-2-0 and have won three of their last four games, including a shootout victory over the Islanders. They will welcome back Artem Zub and Cam Crotty from injury, but remain without William Eklund (ankle surgery) and Jake Sanderson (undisclosed). Linus Ullmark is confirmed to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Travis Konecny",
+     "detail": "lower body injury, missed last four games"
+    },
+    {
+     "player": "Cam York",
+     "detail": "upper body injury, missed fourth game"
+    },
+    {
+     "player": "Rasmus Ristolainen",
+     "detail": "upper body injury, missed fifth game"
+    },
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers are 0-6-3 and have scored only 11 goals through nine games, with Matvei Michkov leading the team with three goals. They remain without Travis Konecny (lower body), Cam York (upper body), and Rasmus Ristolainen (upper body). Dan Vladar is projected to start in goal for Philadelphia."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.53,
+   "announced": 0.19,
+   "p_out": {
+    "William Eklund": 0.93,
+    "Jake Sanderson": 0.18,
+    "Nikolas Matinpalo": 0.22,
+    "Kurtis MacDermid": 0.25
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.71,
+   "announced": 0.07,
+   "p_out": {
+    "Travis Konecny": 0.71,
+    "Cam York": 0.37,
+    "Rasmus Ristolainen": 0.42,
+    "Nikita Grebenkin": 0.17
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.5,
+  "jev": 0.5
+ }
+}

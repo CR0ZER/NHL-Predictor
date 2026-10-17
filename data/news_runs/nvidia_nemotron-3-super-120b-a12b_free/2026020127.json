@@ -1,0 +1,95 @@
+{
+ "game": {
+  "gameId": 2026020127,
+  "kickoff": "2026-10-17T23:00:00Z",
+  "away": "San Jose Sharks",
+  "home": "Detroit Red Wings",
+  "away_id": 28,
+  "home_id": 17,
+  "away_abbr": "SJS",
+  "home_abbr": "DET"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:19:24.025221+00:00",
+ "articles": [
+  {
+   "title": "DeBrincat signs seven-year extension, feels ‘so proud to be a Red Wing and put on that jersey every night’",
+   "published": "2026-10-15T00:42:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers at Red Wings projected lineups",
+   "published": "2026-10-15T16:23:32.767Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks at Predators projected lineups",
+   "published": "2026-10-15T17:47:15.364Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Red Wings host Flyers for We Are Hockeytown: Hockey Fights Cancer Night on Thursday",
+   "published": "2026-10-15T20:50:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Coulier helps Red Wings raise awareness, funds on Hockey Fights Cancer Night",
+   "published": "2026-10-16T14:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "No information about the San Jose Sharks is available in the provided articles. The Sharks are not mentioned in any of the texts, which focus on the Detroit Red Wings, Philadelphia Flyers, and Nashville Predators."
+  },
+  "home": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Marco Kasper",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Mason Appleton",
+     "detail": "Injured (undisclosed)"
+    },
+    {
+     "player": "J.T. Compher",
+     "detail": "Injured (undisclosed)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Detroit Red Wings are projected to start John Gibson in goal for their game against the Flyers. The team is dealing with injuries to Marco Kasper (upper body), Mason Appleton (undisclosed), and J.T. Compher (undisclosed), all listed as out. Lucas Raymond has been moved to the third line with Nate Danielson shifting to the first line, indicating a lineup adjustment ahead of the game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.87,
+   "announced": 0.21,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 0.86,
+   "announced": 0.58,
+   "p_out": {
+    "Marco Kasper": 0.83,
+    "Mason Appleton": 0.87,
+    "J.T. Compher": 0.88
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.7,
+  "jev": 0.3
+ }
+}

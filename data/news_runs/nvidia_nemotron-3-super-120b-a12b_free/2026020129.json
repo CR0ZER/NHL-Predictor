@@ -1,0 +1,100 @@
+{
+ "game": {
+  "gameId": 2026020129,
+  "kickoff": "2026-10-17T23:00:00Z",
+  "away": "New York Rangers",
+  "home": "Columbus Blue Jackets",
+  "away_id": 3,
+  "home_id": 29,
+  "away_abbr": "NYR",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-17T16:19:48.935440+00:00",
+ "articles": [
+  {
+   "title": "NHL EDGE stats: Rangers’ outlook with Shesterkin injured",
+   "published": "2026-10-15T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Devils: Pregame Notes",
+   "published": "2026-10-15T12:15:39.549Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Devils projected lineups",
+   "published": "2026-10-15T16:29:05.813Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Devils: Postgame Notes",
+   "published": "2026-10-16T02:15:01.553Z",
+   "lineups": false
+  },
+  {
+   "title": "Hockey x Peanuts: Connecting Generations for Generations",
+   "published": "2026-10-16T16:31:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bowness says Blue Jackets 'should be very angry with where we are'",
+   "published": "2026-10-16T20:49:52.078Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "season-ending lower-body injury"
+    },
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Rangers will start Dylan Garand in goal due to the season-ending injury to Igor Shesterkin. Garand has been strong in his starts, posting a .932 save percentage and winning all three of his appearances. The team remains competitive offensively, led by Alexis Lafrenière's breakout season, and ranks among the league leaders in penalty kill and goal differential."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Columbus Blue Jackets are struggling defensively, allowing a league-worst 4.20 goals per game and sitting 30th in goals-against. Coach Rick Bowness expressed frustration with the team's effort and preparation, noting they have not played since a 7-3 loss to the Florida Panthers. No specific lineup or goalie information for the upcoming game against the Rangers was provided in the articles."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dylan Garand",
+   "p_starter": 0.7,
+   "announced": 0.76,
+   "p_out": {
+    "Igor Shesterkin": 0.98,
+    "Joonas Korpisalo": 0.89,
+    "Joseph Veleno": 0.91
+   }
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.05,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 15.3,
+  "jev": 0.2
+ }
+}
