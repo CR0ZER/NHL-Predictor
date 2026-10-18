@@ -1,0 +1,177 @@
+{
+ "game": {
+  "gameId": 2026020135,
+  "kickoff": "2026-10-18T22:00:00Z",
+  "away": "Columbus Blue Jackets",
+  "home": "Minnesota Wild",
+  "away_id": 29,
+  "home_id": 30,
+  "away_abbr": "CBJ",
+  "home_abbr": "MIN"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-18T16:18:05.820130+00:00",
+ "articles": [
+  {
+   "title": "Blue Jackets at Wild projected lineups",
+   "published": "2026-10-18T13:10:23.523Z",
+   "lineups": true
+  },
+  {
+   "title": "Stacking the Deck",
+   "published": "2026-10-16T16:30:26.304Z",
+   "lineups": false
+  },
+  {
+   "title": "Hockey x Peanuts: Connecting Generations for Generations",
+   "published": "2026-10-16T16:31:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Creating A Greater State of Hockey: Equipment Drive Recap",
+   "published": "2026-10-16T18:30:05.287Z",
+   "lineups": false
+  },
+  {
+   "title": "Bowness says Blue Jackets 'should be very angry with where we are'",
+   "published": "2026-10-16T20:49:52.078Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Blue Jackets projected lineups",
+   "published": "2026-10-17T16:50:07.466Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dante Fabbro",
+     "detail": "broken hand"
+    },
+    {
+     "player": "Ivan Provorov",
+     "detail": "lower body"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Luca Del Bel Belluz",
+     "detail": "game-time decision"
+    },
+    {
+     "player": "Carson Soucy",
+     "detail": "scratched"
+    },
+    {
+     "player": "Danton Heinen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Emil Andrae",
+     "detail": "scratched"
+    }
+   ],
+   "returning": [],
+   "summary": "The Blue Jackets (3-3-0) are coming off a 1-0 overtime win against the Rangers and are projected to start Cam Talbot in goal after Jet Greaves' strong performance. They will be without injured defenders Dante Fabbro (broken hand), Ivan Provorov, and Isac Lundestrom (both lower body). Luca Del Bel Belluz is a game-time decision, while Carson Soucy, Danton Heinen, and Emil Andrae are scratched."
+  },
+  "home": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Marcus Foligno",
+     "detail": "mid body"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "upper body"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body"
+    },
+    {
+     "player": "Olli Maatta",
+     "detail": "upper body"
+    },
+    {
+     "player": "Nico Sturm",
+     "detail": "upper body"
+    },
+    {
+     "player": "Jared Spurgeon",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Marcus Foligno",
+     "detail": "questionable"
+    },
+    {
+     "player": "Jared Spurgeon",
+     "detail": "questionable"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "did not practice with team"
+    },
+    {
+     "player": "Nico Sturm",
+     "detail": "concussion protocol"
+    }
+   ],
+   "returning": [
+    ": Kaprizov (illness) did not practice Saturday but is expected to play."
+   ],
+   "summary": "The Wild (5-2-1) are projected to start Jesper Wallstedt in goal. They face significant absences with Brock Faber (skull fracture) out, and several players questionable including Marcus Foligno, Jared Spurgeon, Nick Foligno (not practicing with team), and Nico Sturm (concussion protocol). Kirill Kaprizov, who missed practice due to illness, is expected to play."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Cam Talbot",
+   "p_starter": 0.97,
+   "announced": 0.93,
+   "p_out": {
+    "Dante Fabbro": 0.97,
+    "Ivan Provorov": 0.97,
+    "Isac Lundestrom": 0.96,
+    "Luca Del Bel Belluz": 0.11,
+    "Carson Soucy": 0.96,
+    "Danton Heinen": 0.6,
+    "Emil Andrae": 0.48
+   }
+  },
+  "home": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Brock Faber": 0.97,
+    "Marcus Foligno": 0.81,
+    "Nick Foligno": 0.82,
+    "Filip Gustavsson": 0.96,
+    "Olli Maatta": 0.91,
+    "Nico Sturm": 0.65,
+    "Jared Spurgeon": 0.82
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 27.7,
+  "jev": 0.3
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "game": {
+  "gameId": 2026020136,
+  "kickoff": "2026-10-19T00:00:00Z",
+  "away": "Carolina Hurricanes",
+  "home": "Calgary Flames",
+  "away_id": 12,
+  "home_id": 20,
+  "away_abbr": "CAR",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-18T16:18:15.893724+00:00",
+ "articles": [
+  {
+   "title": "Projected Lineup - Flames @ Golden Knights",
+   "published": "2026-10-16T01:37:26.926Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Defeated By Golden Knights",
+   "published": "2026-10-16T04:53:35.818Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: October 16",
+   "published": "2026-10-16T16:04:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hall week to week for Hurricanes with upper-body injury",
+   "published": "2026-10-16T16:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Injury Report: Hall Out 'Week-to-Week'; Jarvis Nearing Return",
+   "published": "2026-10-16T18:06:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes at Jets projected lineups",
+   "published": "2026-10-16T19:29:03.033Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Taylor Hall",
+     "detail": "upper-body injury (week-to-week)"
+    },
+    {
+     "player": "Jordan Staal",
+     "detail": "calf tear (out 1-2 months)"
+    },
+    {
+     "player": "Seth Jarvis",
+     "detail": "shoulder (surgery in June, not cleared to play)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes are 6-1-1 and riding a six-game win streak, but will be without key forwards Taylor Hall (upper-body injury, week-to-week) and Jordan Staal (calf tear, out 1-2 months) for their upcoming road trip. Seth Jarvis (shoulder) is traveling with the team but remains uncleared to play. The Hurricanes have recalled AHL forwards Bradly Nadeau and Felix Unger Sorum to fill in the lineup gaps."
+  },
+  "home": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames are coming off a 6-2 loss to the Golden Knights in Las Vegas, splitting their two-game Pacific Division road trip. They are projected to start Dustin Wolf in goal for their upcoming home game against the Hurricanes, with the same lineup used in their last game. No injuries or scratches were mentioned for the Flames in the provided articles."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.89,
+   "announced": 0.07,
+   "p_out": {
+    "Taylor Hall": 0.21,
+    "Jordan Staal": 0.2,
+    "Seth Jarvis": 0.3
+   }
+  },
+  "home": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.83,
+   "announced": 0.8,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 9.7,
+  "jev": 0.2
+ }
+}
