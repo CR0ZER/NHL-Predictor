@@ -99,9 +99,8 @@ les déclenchements planifiés de GitHub partent souvent avec plusieurs heures d
 
 | Heure de Paris | Déclencheur | Tâche |
 |---|---|---|
-| 18 h 17 | cron-job.org | Règlement des paris terminés, puis prédiction de la soirée et paris fictifs aux cotes du moment |
+| Toutes les heures à :47 | cron-job.org | Règlement des paris terminés, puis prédiction des matchs qui commencent dans moins de 3 h et pas encore prédits : chaque match est prédit une fois, 2 à 3 h avant son coup d'envoi (compositions publiées, matchs de l'après-midi compris) |
 | 8 h 13 | cron-job.org | Résultats officiels, règlement des paris et cotes de clôture de la veille |
-| 23 h 47 (21 h 47 UTC) | cron GitHub, filet de sécurité | Rattrapage : seuls les matchs restés sans prédiction |
 | 8 h 13 (6 h 13 UTC) | cron GitHub, filet de sécurité | Règlement de secours, sans effet s'il a déjà été fait |
 
 Après chaque tâche, les prédictions et le registre de paris sont enregistrés dans le dépôt (`data/`) et la page est
@@ -129,7 +128,7 @@ Quota gratuit OpenRouter : 50 requêtes par jour, une par match.
 ```bash
 uv sync
 uv run --env-file .env python app.py                 # interface avec boutons : http://127.0.0.1:8765
-uv run --env-file .env python app.py predict          # ou rescue, settle, odds, publier
+uv run --env-file .env python app.py predict          # ou settle, odds, publier
 uv run python nhl.py backtest                         # backtest walk-forward
 uv run --env-file .env python news.py eval            # évaluation de la chaîne d'actualité
 uv run --env-file .env python odds.py eval [SAISON]   # modèle face au marché

@@ -235,21 +235,28 @@ def probable_starter(goalies, abbrev, before):
     return pid, starts.loc[starts["playerId"] == pid, "goalieFullName"].iloc[-1]
 
 
-def predictions(day, use_news=True, progress=print, skip=()):
+def predictions(day, use_news=True, progress=print, skip=(), until=None):
     """Matchs du jour non encore joués : probabilités (vainqueur et 1N2 temps réglementaire), gardiens et absences.
     Chaîne d'actualité (NHL.com -> qwen3 -> Jev) pour chaque match pas encore commencé ; repli sur l'heuristique du
-    gardien et aucune absence si Ollama ou Jev sont indisponibles."""
+    gardien et aucune absence si Ollama ou Jev sont indisponibles.
+    skip : matchs à ignorer ; until (UTC) : seuls les matchs pas encore commencés dont le coup d'envoi est avant until.
+    Le calendrier est lu avant le modèle : un passage sans match à prédire s'arrête tout de suite."""
     import news  # import local : news dépend de nhl
+
+    now = pd.Timestamp.now(tz="UTC")
+    week = get_json(f"{WEB}/schedule/{day}")["gameWeek"]
+    games = [x for d in week if d["date"] == day for x in d["games"]
+             if x["gameType"] == 2 and x["id"] not in skip
+             and (until is None or now < pd.Timestamp(x["startTimeUTC"]) <= until)]
+    if not games:
+        return pd.DataFrame()
 
     team, goalies = load()
     w, current = history(team, goalies)
     w = w.dropna(subset=FEATURES + ["home_win"])
     model = LogisticRegression().fit(w[FEATURES], w["home_win"])
-
-    week = get_json(f"{WEB}/schedule/{day}")["gameWeek"]
     played = set(team["gameId"])
-    games = [x for d in week if d["date"] == day for x in d["games"]
-             if x["gameType"] == 2 and x["id"] not in played and x["id"] not in skip]
+    games = [x for x in games if x["id"] not in played]
     if not games:
         return pd.DataFrame()
     chain = use_news and news.ready()

@@ -2,7 +2,7 @@
 
     uv run --env-file .env python app.py                  # serveur local avec boutons : http://127.0.0.1:8765
     uv run --env-file .env python app.py predict [DATE]   # mêmes tâches en ligne de commande (GitHub Actions)
-    uv run --env-file .env python app.py rescue | settle | odds   # rescue : matchs du jour restés sans prédiction
+    uv run --env-file .env python app.py settle | odds
     uv run python app.py publier                          # page statique en lecture seule dans site/ (GitHub Pages)
 
 Paris fictifs enregistrés dans data/paper_bets.csv à la cote disponible au moment de la prédiction,
@@ -66,15 +66,21 @@ def clean(x):
     return int(x) if isinstance(x, np.integer) else x
 
 
-def run_predict(day, stake, use_news, rescue=False):
-    """rescue : rattrapage, seuls les matchs encore sans prédiction (passage de 18 h 17 échoué ou sauté)."""
+WINDOW_H = 3  # passage automatique (toutes les heures) : matchs pas encore prédits qui commencent dans moins de 3 h
+
+
+def run_predict(day, stake, use_news, window=False):
+    """Bouton « Prédire » (local) : toute la soirée, les matchs pas encore commencés sont re-prédits.
+    window (passage automatique horaire) : chaque match n'est prédit qu'une fois, 2 à 3 h avant son coup d'envoi,
+    quand les compositions probables sont publiées ; un match de l'après-midi est traité comme les autres."""
     JOB["msg"] = "Chargement du modèle…"
-    skip = set(read(PREDS).get("gameId", [])) if rescue else set()
-    u = nhl.predictions(day, use_news=use_news, progress=lambda m: JOB.update(msg=m), skip=skip)
+    skip = set(read(PREDS).get("gameId", [])) if window else set()
+    until = pd.Timestamp.now(tz="UTC") + pd.Timedelta(hours=WINDOW_H) if window else None
+    u = nhl.predictions(day, use_news=use_news, progress=lambda m: JOB.update(msg=m), skip=skip, until=until)
     if len(u):  # un match commencé garde sa prédiction et ses paris d'origine
         u = u[pd.to_datetime(u["kickoff"], utc=True) > pd.Timestamp.now(tz="UTC")]
     if u.empty:
-        JOB["msg"] = f"Aucun match à venir le {day}."
+        JOB["msg"] = f"Aucun match à prédire maintenant ({day})."
         return
     now = pd.Timestamp.now(tz="UTC").isoformat()
     preds, bets = [], []
@@ -141,7 +147,8 @@ def run_settle():
         JOB["msg"] = "Aucun pari à régler."
         return
     results = {}
-    for day in sorted(set(bets.loc[bets["status"] == "en attente", "date"]) | set(preds.get("date", []))):
+    open_days = set(preds.loc[preds["result"].isna(), "date"]) if "result" in preds else set(preds.get("date", []))
+    for day in sorted(set(bets.loc[bets["status"] == "en attente", "date"]) | open_days):
         JOB["msg"] = f"Résultats du {day}…"
         for gm in get_json(f"{WEB}/score/{day}")["games"]:
             if gm["gameState"] in ("OFF", "FINAL"):
@@ -162,9 +169,10 @@ def run_settle():
             n += 1
     bets.to_csv(BETS, index=False)
     if len(preds):
-        preds["result"] = preds["gameId"].map(lambda i: results.get(int(i), {}).get("Vainqueur"))
-        preds["result3"] = preds["gameId"].map(lambda i: results.get(int(i), {}).get("1N2"))
-        preds["score"] = preds["gameId"].map(lambda i: results.get(int(i), {}).get("score"))
+        found = preds["gameId"].map(lambda i: results.get(int(i), {}))
+        for col, key in (("result", "Vainqueur"), ("result3", "1N2"), ("score", "score")):
+            new = found.map(lambda r: r.get(key))
+            preds[col] = new.where(new.notna(), preds[col].astype(object)) if col in preds else new  # résultats déjà connus gardés
         preds.to_csv(PREDS, index=False)
     JOB["msg"] = f"{n} paris réglés."
 
@@ -353,8 +361,7 @@ def publish(out=ROOT / "site"):
 
 def cli(cmd, *args):
     """Tâches sans serveur (planifiées par GitHub Actions). Code de sortie 1 si la tâche a échoué."""
-    jobs = {"predict": lambda: run_predict(args[0] if args else et_today(), 10.0, True),
-            "rescue": lambda: run_predict(args[0] if args else et_today(), 10.0, True, rescue=True),
+    jobs = {"predict": lambda: run_predict(args[0] if args else et_today(), 10.0, True, window=True),
             "settle": run_settle, "odds": run_odds_update, "publier": publish}
     if cmd not in jobs:
         sys.exit(__doc__)

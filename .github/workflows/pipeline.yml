@@ -1,23 +1,23 @@
 # Automatisation : prédictions du soir, règlement et cotes de clôture le matin, puis publication de la page.
 #
 # Déclenchement à l'heure exacte par cron-job.org (fuseau Europe/Paris), via l'API workflow_dispatch :
-#   18 h 17  task=predict   règlement des paris terminés, puis prédiction de la soirée
-#    8 h 13  task=settle    résultats, règlement des paris et cotes de clôture de la veille
-# Les crons GitHub ci-dessous ne sont que des filets de sécurité : GitHub retarde les déclenchements planifiés de
-# plusieurs heures (jusqu'à 5 h observé), voire les saute. Ils ne lancent que des tâches sans effet si elles sont
-# rejouées. La prédiction n'a pas de cron GitHub : un passage en retard re-prédirait les matchs pas encore commencés.
+#   toutes les heures à :47  task=predict  règlement des paris terminés, puis prédiction des matchs pas encore
+#                                          prédits qui commencent dans moins de 3 h (chaque match prédit une fois)
+#   8 h 13                   task=settle   résultats, règlement des paris et cotes de clôture de la veille
+# Le cron GitHub ci-dessous n'est qu'un filet de sécurité pour le règlement : GitHub retarde les déclenchements
+# planifiés de plusieurs heures (jusqu'à 7 h observé), voire les saute. Un passage de prédiction raté est rattrapé
+# par le suivant, une heure plus tard.
 name: NHL Predictor
 
 on:
   schedule:  # heures UTC (Paris = UTC+2 l'été, UTC+1 l'hiver)
-    - cron: "47 21 * * *"  # rattrapage : seuls les matchs du jour restés sans prédiction
     - cron: "13 6 * * *"   # secours du règlement de 8 h 13 (sans effet s'il a déjà été fait)
   workflow_dispatch:
     inputs:
       task:
         description: "Tâche (lancée par cron-job.org ou à la main)"
         type: choice
-        options: [predict, rescue, settle, odds, publier]
+        options: [predict, settle, odds, publier]
         default: publier
 
 permissions:
@@ -62,12 +62,11 @@ jobs:
           ODDSPAPI_API_KEY: ${{ secrets.ODDSPAPI_API_KEY }}
         run: |
           case "${{ github.event.schedule }}" in
-            "47 21 * * *") TASK=rescue ;;
             "13 6 * * *") TASK=settle ;;
             *) TASK="${{ inputs.task }}" ;;
           esac
           echo "Tâche : $TASK"
-          if [ "$TASK" = predict ] || [ "$TASK" = rescue ]; then uv run python app.py settle; fi
+          if [ "$TASK" = predict ]; then uv run python app.py settle; fi
           if [ "$TASK" != publier ]; then uv run python app.py "$TASK"; fi
           # cotes de clôture (qualité des paris) : 1 requête OddsPapi décomptée par jour ; un échec ne bloque pas le règlement
           if [ "$TASK" = settle ]; then uv run python app.py odds || echo "Cotes de clôture indisponibles aujourd'hui"; fi

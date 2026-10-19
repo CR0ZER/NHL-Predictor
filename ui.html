@@ -513,7 +513,7 @@ body.static .updated { display: flex; }
     <h2>Matchs <span class="sub" id="games-sub"></span></h2>
     <div class="games" id="games"></div>
     <div class="card guide rise auto-guide" style="--i:2" hidden>
-      <div class="step"><div class="n">1</div><div><b>18 h 17 : prédictions</b><p>GitHub Actions lit l'actualité (Nemotron + Jev), prédit la soirée et prend les paris fictifs aux cotes du moment. À 23 h 47, un rattrapage prédit les matchs restés sans prédiction.</p></div></div>
+      <div class="step"><div class="n">1</div><div><b>Toutes les heures : prédictions</b><p>Chaque match est prédit une seule fois, 2 à 3 h avant son coup d'envoi, quand les compositions sont publiées : GitHub Actions lit l'actualité (Nemotron + Jev), prédit le match et prend les paris fictifs aux cotes du moment.</p></div></div>
       <div class="step"><div class="n">2</div><div><b>8 h 13 : résultats</b><p>Résultats officiels NHL, règlement des paris et cotes de clôture de la veille, pour comparer chaque pari au marché final.</p></div></div>
       <div class="step"><div class="n">3</div><div><b>Lecture seule</b><p>Cette page affiche les résultats publiés ; les heures sont celles de Paris.</p></div></div>
     </div>
@@ -821,7 +821,7 @@ function renderHero(games, day, upcoming = []) {
   const hits = games.filter(g => g.result && (g.p_home >= 0.5) === (g.result === "H")).length;
   const title = day ? new Date(day + "T12:00").toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" }) : "Aucune soirée";
   $("#hero").innerHTML = `<div class="eyebrow">Soirée NHL</div><h1>${title}</h1>
-    <p>${!games.length && upcoming.length ? `${upcoming.length} matchs au programme. ` : ""}${games.length ? "Probabilités de victoire prolongation incluse, comparées au marché. Les paris fictifs sont pris aux cotes du moment de la prédiction." : (STATIC ? "Pas encore de prédiction : elle arrive vers 18 h 15 (heure de Paris)." : "Choisissez la soirée en haut à droite, puis lancez <b>Prédire</b>.")}</p>
+    <p>${!games.length && upcoming.length ? `${upcoming.length} matchs au programme. ` : ""}${games.length ? "Probabilités de victoire prolongation incluse, comparées au marché. Les paris fictifs sont pris aux cotes du moment de la prédiction." : (STATIC ? "Chaque match est prédit 2 à 3 h avant son coup d'envoi." : "Choisissez la soirée en haut à droite, puis lancez <b>Prédire</b>.")}</p>
     <div class="chips">
       <div class="chip"><div class="k">Matchs</div><div class="v" id="c-games"></div></div>
       ${over ? `<div class="chip" title="Matchs où l'équipe donnée gagnante par le modèle (plus de 50 %) a gagné, indépendamment des paris"><div class="k">Vainqueur bien prédit</div><div class="v">${hits} <small class="muted">sur ${games.length}</small></div></div>`
@@ -832,20 +832,21 @@ function renderHero(games, day, upcoming = []) {
   if (!over) countUp($("#c-value"), value, v => Math.round(v), "value");
 }
 
-// Instant UTC d'une heure de Paris donnée ce jour-là (gère l'heure d'été et d'hiver)
-function parisAt(day, hm) {
-  const t = new Date(`${day}T${hm}:00Z`), f = tz => new Date(t.toLocaleString("en-US", { timeZone: tz }));
-  return new Date(t - (f("Europe/Paris") - f("UTC"))).toISOString();
+// Passage automatique qui prédira un match : le premier « :47 » à moins de 3 h du coup d'envoi
+// (cron-job.org toutes les heures à :47, WINDOW_H = 3 dans app.py)
+function predAt(kickoff) {
+  const t = new Date(+new Date(kickoff) - 3 * 3600e3);
+  if (t.getUTCMinutes() > 47 || (t.getUTCMinutes() === 47 && t.getUTCSeconds() > 0)) t.setUTCHours(t.getUTCHours() + 1);
+  t.setUTCMinutes(47, 0, 0);
+  return t.toISOString();
 }
-// prédiction (cron-job.org, heure de Paris) puis rattrapage (cron GitHub, UTC) : voir .github/workflows/pipeline.yml
-const passes = day => [parisAt(day, "18:17"), `${day}T21:47:00Z`];
 function renderEdge(games, day, upcoming = []) {
   const el = $("#edge");
   const rows = games.map(g => ({ g, e: g.pin_fair != null ? g.p_home - g.pin_fair : null })).sort((a, b) => Math.abs(b.e ?? 0) - Math.abs(a.e ?? 0));
   if (!rows.length) {
-    const pass = passes(day).find(t => new Date(t) > Date.now());
+    const pass = upcoming.map(g => predAt(g.kickoff)).filter(t => new Date(t) > Date.now()).sort()[0];
     el.innerHTML = !upcoming.length ? `<div class="empty">L'écart avec le marché apparaîtra après la première prédiction.</div>`
-      : pass ? `<div class="empty nextpred"><span>Prédiction automatique</span><b data-kick="${pass}">${countdown(pass)}</b><small>${paris(pass)}, heure de Paris</small></div>`
+      : pass ? `<div class="empty nextpred"><span>Première prédiction</span><b data-kick="${pass}">${countdown(pass)}</b><small>${paris(pass)}, heure de Paris</small></div>`
       : `<div class="empty">La prédiction de cette soirée n'a pas encore été publiée.</div>`;
     return;
   }
@@ -920,7 +921,7 @@ function renderGames(list, day, upcoming = []) {
         <span class="muted">@</span>
         <div class="team home" title="${esc(g.home)}">${logo(g.home)}<div class="tname"><b>${abbr(g.home)} <span class="nick">${esc(nick(g.home))}</span></b></div></div>
       </div>
-      <div class="bets"><div class="bet"><span class="what">Prédiction à venir.</span></div></div>
+      <div class="bets"><div class="bet"><span class="what">Prédiction prévue ${new Date(predAt(g.kickoff)) > Date.now() ? `vers ${tz(predAt(g.kickoff), "Europe/Paris", { hour: "2-digit", minute: "2-digit" })}` : "au prochain passage"}.</span></div></div>
     </div>`).join("");
   $("#games").innerHTML = list.map((g, i) => {
     const bets = STATE.bets.filter(b => b.gameId === g.gameId);
