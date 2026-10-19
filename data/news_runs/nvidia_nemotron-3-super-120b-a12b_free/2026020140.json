@@ -1,0 +1,123 @@
+{
+ "game": {
+  "gameId": 2026020140,
+  "kickoff": "2026-10-20T01:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Utah Mammoth",
+  "away_id": 5,
+  "home_id": 68,
+  "away_abbr": "PIT",
+  "home_abbr": "UTA"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-19T22:47:56.546187+00:00",
+ "articles": [
+  {
+   "title": "Penguins at Mammoth projected lineups",
+   "published": "2026-10-19T18:22:31.97Z",
+   "lineups": true
+  },
+  {
+   "title": "Musings: \"It Just Didn't Fall in Our Favor\" in Colorado",
+   "published": "2026-10-17T04:27:51.973Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: 10.17.26 at Vegas Golden Knights",
+   "published": "2026-10-17T11:00:03.099Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah’s Home and Home Series with Edmonton Wraps at Delta Center",
+   "published": "2026-10-17T14:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Oilers at Mammoth projected lineups",
+   "published": "2026-10-17T18:38:09.663Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins at Golden Knights projected lineups",
+   "published": "2026-10-17T18:51:24.804Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "Injured (lower body)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Samuel Girard",
+     "detail": "Game time decision (Penguins coach Dan Muse said Girard is a game time decision)"
+    },
+    {
+     "player": "Egor Chinakhov",
+     "detail": "Game time decision (Penguins coach Dan Muse said Chinakhov is a game time decision; missed past two games but was on ice in regular jersey at morning skate)"
+    }
+   ],
+   "returning": [],
+   "summary": "The Penguins (3-5-1) are on a four-game road trip and have won seven of their last 11 games against Vegas. They are dealing with injuries to Justin Brazeau, Ryan Graves, and Trevor van Riemsdyk, while Girard and Chinakhov are game-time decisions. The team reassigned Ryan Johnson to the AHL and recalled Ilya Solovyov. Sidney Crosby recently recorded his 1,110th career assist, moving into sole possession of seventh place in NHL history."
+  },
+  "home": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick DeSimone",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Liam O’Brien",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Utah Mammoth (6-3-0) are expected to dress the same 18 skaters from their 6-2 loss to the Edmonton Oilers on Saturday. They are coming off a home-and-home series with Edmonton, having won the first game 4-2. The Mammoth have a strong power play (first in NHL at 37.5%) and are averaging the fourth-most goals per game (3.88) while holding opponents to the ninth-fewest (2.63). Goaltending tandem Karel Vejmelka and Sebastian Cossa are available, with Cossa projected to start."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Arturs Silovs",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Justin Brazeau": 0.94,
+    "Ryan Graves": 0.96,
+    "Trevor van Riemsdyk": 0.96,
+    "Samuel Girard": 0.13,
+    "Egor Chinakhov": 0.29
+   }
+  },
+  "home": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 0.98,
+   "announced": 0.52,
+   "p_out": {
+    "Nick DeSimone": 0.96,
+    "Liam O’Brien": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 11.2,
+  "jev": 0.5
+ }
+}
