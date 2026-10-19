@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020138,
+  "kickoff": "2026-10-19T23:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Philadelphia Flyers",
+  "away_id": 21,
+  "home_id": 4,
+  "away_abbr": "COL",
+  "home_abbr": "PHI"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-19T20:48:17.264265+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers vs. Avalanche",
+   "published": "2026-10-19T13:45:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers Recall Forwards Bump and Knuble from Lehigh Valley",
+   "published": "2026-10-19T14:15:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Avalanche at Flyers projected lineups",
+   "published": "2026-10-19T17:05:33.63Z",
+   "lineups": true
+  },
+  {
+   "title": "RAV4 Things: Flyers vs. Senators",
+   "published": "2026-10-17T13:25:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Flyers projected lineups",
+   "published": "2026-10-17T17:07:21.475Z",
+   "lineups": false
+  },
+  {
+   "title": "Postgame RAV4: Flyers Top Sens, 3-1",
+   "published": "2026-10-18T02:35:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Logan O'Connor",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nicolas Roy",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Colorado Avalanche (5-2-1) come off a 5-2 home win over Pittsburgh and begin a two-game Eastern road trip in Philadelphia. Projected to use 11 forwards and seven defensemen, they will be without injured players Logan O'Connor (lower body), Zachary L'Heureux (upper body), and Nicolas Roy (lower body). Mackenzie Blackwood is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Joseph Woll",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    },
+    {
+     "player": "Travis Konecny",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Cam York",
+     "detail": "upper body injury (IR retroactive to Oct. 8)"
+    },
+    {
+     "player": "Rasmus Ristolainen",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Owen Tippett",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Hunter McDonald",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Sean Couturier",
+     "detail": "game-time decision"
+    },
+    {
+     "player": "Tyson Foerster",
+     "detail": "game-time decision (took part in optional morning skate)"
+    }
+   ],
+   "returning": [
+    ":{",
+    "player: Alex Bump",
+    "detail: recalled from AHL Lehigh Valley Phantoms and available to play tonight."
+   ],
+   "summary": "The Philadelphia Flyers (1-6-3) earned their first win of the season, a 3-1 home victory over Ottawa, and host Colorado seeking to build on improved shot mentality and shifting play. They remain banged up, with multiple forwards and defenders day-to-day or injured, including Konecny (out), Couturier and Foerster (game-time decisions), and York on IR. Recalls Alex Bump and Cole Knuble from the AHL add depth, while Woll is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Logan O'Connor": 0.96,
+    "Zachary L'Heureux": 0.97,
+    "Nicolas Roy": 0.97
+   }
+  },
+  "home": {
+   "starter": "Joseph Woll",
+   "p_starter": 0.9,
+   "announced": 0.95,
+   "p_out": {
+    "Nikita Grebenkin": 0.97,
+    "Travis Konecny": 0.98,
+    "Cam York": 0.98,
+    "Rasmus Ristolainen": 0.97,
+    "Owen Tippett": 0.97,
+    "Hunter McDonald": 0.96,
+    "Sean Couturier": 0.14,
+    "Tyson Foerster": 0.17
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 14.6,
+  "jev": 0.2
+ }
+}

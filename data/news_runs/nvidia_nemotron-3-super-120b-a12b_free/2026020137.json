@@ -1,0 +1,123 @@
+{
+ "game": {
+  "gameId": 2026020137,
+  "kickoff": "2026-10-19T23:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "New York Rangers",
+  "away_id": 24,
+  "home_id": 3,
+  "away_abbr": "ANA",
+  "home_abbr": "NYR"
+ },
+ "llm": "nvidia/nemotron-3-super-120b-a12b:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-19T20:48:02.222407+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Rangers projected lineups",
+   "published": "2026-10-19T16:38:31.985Z",
+   "lineups": true
+  },
+  {
+   "title": "Rangers at Blue Jackets: Pregame Notes",
+   "published": "2026-10-17T13:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Blue Jackets projected lineups",
+   "published": "2026-10-17T16:50:07.466Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Blue Jackets: Postgame Notes",
+   "published": "2026-10-18T02:30:09.633Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks cheer on Malott's UFC fighter brother, celebrate big victory",
+   "published": "2026-10-18T18:23:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Cheer on Malott's UFC Fighter Brother, Celebrate Big Victory",
+   "published": "2026-10-18T18:23:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ville Husso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "knee injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Mikael Granlund",
+    "detail: returns after missing a 4-2 win against the Boston Bruins on Friday, replacing Nesterenko"
+   ],
+   "summary": "The Ducks (4-3-0) are projected to start Ville Husso in goal. They will have Mikael Granlund return to the lineup after missing the Bruins game, while Ian Moore (lower body), Troy Terry (hip), and Ryan Poehling (knee) are out. Jensen is expected to make his season debut, replacing Helleson on defense."
+  },
+  "home": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Taylor Raddysh",
+    "detail: enters the lineup after being recalled from Hartford (AHL) on Friday"
+   ],
+   "summary": "The Rangers (6-3-1) are projected to start Dylan Garand in goal. They will have Taylor Raddysh return to the lineup after being recalled from the AHL, while Igor Shesterkin (lower body), Joonas Korpisalo (lower body), and Joseph Veleno (lower body) are out. The Rangers have earned points in seven of their 10 games and have a strong penalty kill."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ville Husso",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Ian Moore": 0.98,
+    "Troy Terry": 0.98,
+    "Ryan Poehling": 0.98
+   }
+  },
+  "home": {
+   "starter": "Dylan Garand",
+   "p_starter": 0.98,
+   "announced": 0.92,
+   "p_out": {
+    "Igor Shesterkin": 0.97,
+    "Joonas Korpisalo": 0.97,
+    "Joseph Veleno": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 20.3,
+  "jev": 0.3
+ }
+}
