@@ -210,12 +210,14 @@ def state():
             "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds")}
 
 
-BOOK_IDS, MARKET_IDS = {"Unibet FR": "unibet.fr", "Winamax": "winamax.fr"}, {"Vainqueur": "151", "1N2": "153"}
+MARKET_IDS = {"Vainqueur": "151", "1N2": "153"}
 
 
 def quality(preds, bets):
     """Prédictions réelles face aux résultats, au total et par soirée : log loss du modèle et de Pinnacle (sans marge, au
-    moment de la prédiction) sur les mêmes matchs, réussite du favori, et CLV des paris (cote prise / clôture − 1)."""
+    moment de la prédiction) sur les mêmes matchs, réussite du favori, et CLV des paris : cote prise × probabilité Pinnacle
+    sans marge à la clôture, même marché et même issue, − 1. Pas la clôture du bookmaker du pari : Unibet et Winamax
+    augmentent leur marge avant le match, ce qui gonflait la CLV quel que soit le pari."""
     if "result" not in preds or preds["result"].isna().all():
         return {"total": None, "days": []}
     p = preds.dropna(subset=["result"]).copy()
@@ -226,10 +228,14 @@ def quality(preds, bets):
     b["clv"] = np.nan
     if len(b) and odds.CLOSING.exists():
         co = pd.read_csv(odds.CLOSING, dtype={"market": str, "date": str})
-        close = dict(zip(zip(co["home"], co["date"], co["book"], co["market"], co["side"]), co["price"]))
+        pin = co[co["book"] == "pinnacle"].assign(inv=lambda d: 1 / d["price"])
+        by = pin.groupby(["home", "date", "market"])["inv"]
+        pin = pin[by.transform("size") == pin["market"].map({"151": 2, "153": 3})]  # toutes les issues du marché cotées
+        fair = dict(zip(zip(pin["home"], pin["date"], pin["market"], pin["side"]),
+                        pin["inv"] / pin.groupby(["home", "date", "market"])["inv"].transform("sum")))
         keys = zip(b["home"].map(odds.norm), b["kickoff"].map(lambda k: str(odds.local_date(k))),
-                   b["book"].map(BOOK_IDS), b["market"].map(MARKET_IDS), b["pick"])
-        b["clv"] = b["price"] / pd.Series([close.get(k, np.nan) for k in keys], index=b.index) - 1
+                   b["market"].map(MARKET_IDS), b["pick"])
+        b["clv"] = b["price"] * pd.Series([fair.get(k, np.nan) for k in keys], index=b.index) - 1
 
     def agg(g, gb):
         m = g.dropna(subset=["ll_pin"])

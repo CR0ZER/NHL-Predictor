@@ -545,7 +545,7 @@ body.static .updated { display: flex; }
     <div class="subpane on" id="sub-real">
     <div class="kpis" id="q-kpis"></div>
     <div class="card tbl-wrap"><table id="q-days"></table></div>
-    <p class="note">Pinnacle = cote sans marge relevée au moment de la prédiction, sur les mêmes matchs. CLV = cote prise ÷ cote de clôture du même bookmaker − 1 : positif, le pari a été pris à un meilleur prix que le marché final (disponible le lendemain matin).</p>
+    <p class="note">Pinnacle = cote sans marge relevée au moment de la prédiction, sur les mêmes matchs. CLV = cote prise × probabilité de Pinnacle sans marge à la clôture − 1 : positif, le pari valait plus que le prix final du marché le plus précis (disponible le lendemain matin).</p>
     </div>
     <div class="subpane" id="sub-hist">
     <div class="kpis" id="m-kpis"></div>
@@ -1096,7 +1096,7 @@ function renderQuality() {
     <div class="card kpi rise"><div class="label">Matchs joués</div><div class="value">${T.n}</div><div class="hint">${Q.days.length} soirée${Q.days.length > 1 ? "s" : ""}</div></div>
     <div class="card kpi rise" style="--i:1"><div class="label">Favori gagnant</div><div class="value">${pct(T.accuracy)}</div><div class="hint">le camp donné à plus de 50 % a gagné</div></div>
     <div class="card kpi rise" style="--i:2"><div class="label">Modèle vs Pinnacle</div><div class="value">${gapTxt(gap(T))}</div><div class="hint">log-loss ${num(T.ll_model_pin, 3)} contre ${num(T.ll_pin, 3)} · négatif = modèle meilleur</div></div>
-    <div class="card kpi rise" style="--i:3"><div class="label">CLV moyen</div><div class="value">${T.clv == null ? "–" : `<span class="${cls(T.clv)}">${signPct(T.clv)}</span>`}</div><div class="hint">${T.n_clv ? `${T.n_clv} paris comparés à la clôture` : "cotes de clôture récupérées le lendemain matin"}</div></div>`;
+    <div class="card kpi rise" style="--i:3"><div class="label">CLV moyen</div><div class="value">${T.clv == null ? "–" : `<span class="${cls(T.clv)}">${signPct(T.clv)}</span>`}</div><div class="hint">${T.n_clv ? `${T.n_clv} paris comparés à la clôture Pinnacle` : "cotes de clôture récupérées le lendemain matin"}</div></div>`;
   $("#q-days").innerHTML = `<thead><tr><th>Soirée</th><th class="r">Matchs</th><th class="r">Favori gagnant</th><th class="r">Log-loss modèle</th><th class="r">Log-loss Pinnacle</th><th class="r">Écart</th><th class="r">CLV (paris)</th></tr></thead><tbody>` +
     Q.days.map(r => `<tr><td><b>${new Date(r.date + "T12:00").toLocaleDateString("fr-FR", { weekday: "short", day: "numeric", month: "short" })}</b></td>
       <td class="r">${r.n}</td><td class="r">${pct(r.accuracy)}</td><td class="r">${num(r.logloss, 3)}</td><td class="r">${num(r.ll_pin, 3)}</td>
