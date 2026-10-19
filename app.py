@@ -3,7 +3,7 @@
     uv run --env-file .env python app.py                  # serveur local avec boutons : http://127.0.0.1:8765
     uv run --env-file .env python app.py predict [DATE]   # mêmes tâches en ligne de commande (GitHub Actions)
     uv run --env-file .env python app.py rescue | settle | odds   # rescue : matchs du jour restés sans prédiction
-    uv run python app.py export                           # page statique en lecture seule dans site/ (GitHub Pages)
+    uv run python app.py publier                          # page statique en lecture seule dans site/ (GitHub Pages)
 
 Paris fictifs enregistrés dans data/paper_bets.csv à la cote disponible au moment de la prédiction,
 réglés ensuite avec les résultats officiels NHL. Rien n'est jamais misé réellement.
@@ -338,7 +338,7 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
 
-def export(out=ROOT / "site"):
+def publish(out=ROOT / "site"):
     """Page statique en lecture seule : l'interface + state.json et model.json, publiés tels quels sur GitHub Pages."""
     out.mkdir(exist_ok=True)
     html = (ROOT / "ui.html").read_text(encoding="utf-8")
@@ -355,7 +355,7 @@ def cli(cmd, *args):
     """Tâches sans serveur (planifiées par GitHub Actions). Code de sortie 1 si la tâche a échoué."""
     jobs = {"predict": lambda: run_predict(args[0] if args else et_today(), 10.0, True),
             "rescue": lambda: run_predict(args[0] if args else et_today(), 10.0, True, rescue=True),
-            "settle": run_settle, "odds": run_odds_update, "export": export}
+            "settle": run_settle, "odds": run_odds_update, "publier": publish}
     if cmd not in jobs:
         sys.exit(__doc__)
     jobs[cmd]()

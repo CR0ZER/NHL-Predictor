@@ -17,8 +17,8 @@ on:
       task:
         description: "Tâche (lancée par cron-job.org ou à la main)"
         type: choice
-        options: [predict, rescue, settle, odds, export]
-        default: export
+        options: [predict, rescue, settle, odds, publier]
+        default: publier
 
 permissions:
   contents: write  # enregistrer le registre de paris et les prédictions dans le dépôt
@@ -68,10 +68,10 @@ jobs:
           esac
           echo "Tâche : $TASK"
           if [ "$TASK" = predict ] || [ "$TASK" = rescue ]; then uv run python app.py settle; fi
-          if [ "$TASK" != export ]; then uv run python app.py "$TASK"; fi
+          if [ "$TASK" != publier ]; then uv run python app.py "$TASK"; fi
           # cotes de clôture (qualité des paris) : 1 requête OddsPapi décomptée par jour ; un échec ne bloque pas le règlement
           if [ "$TASK" = settle ]; then uv run python app.py odds || echo "Cotes de clôture indisponibles aujourd'hui"; fi
-          uv run python app.py export
+          uv run python app.py publier  # recalcule les données de la page et la publie sur GitHub Pages
 
       - name: Enregistrer les données dans le dépôt
         run: |

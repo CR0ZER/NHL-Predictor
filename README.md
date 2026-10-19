@@ -59,7 +59,7 @@ flowchart TD
 | `nhl.py` | Variables d'avant-match, modèle, backtest walk-forward, prédictions du jour |
 | `news.py` | Actualité d'avant-match : articles NHL.com, extraction par un modèle de langage, jugement Jev |
 | `odds.py` | Cotes OddsPapi (actuelles et de clôture), évaluation face au marché |
-| `app.py` | Paris fictifs, règlement, mesures de qualité, export de la page ; serveur local avec boutons |
+| `app.py` | Paris fictifs, règlement, mesures de qualité, publication de la page ; serveur local avec boutons |
 | `ui.html` | Interface : onglets Soirée, Simulation et Modèle |
 | `test_nhl.py` | Garde-fous : aucune fuite d'information future, calcul de la CLV |
 | `assets/logo/` | Kit logo (SVG, PNG, PDF, icônes web, images de partage) et sa charte |
@@ -129,7 +129,7 @@ Quota gratuit OpenRouter : 50 requêtes par jour, une par match.
 ```bash
 uv sync
 uv run --env-file .env python app.py                 # interface avec boutons : http://127.0.0.1:8765
-uv run --env-file .env python app.py predict          # ou rescue, settle, odds, export
+uv run --env-file .env python app.py predict          # ou rescue, settle, odds, publier
 uv run python nhl.py backtest                         # backtest walk-forward
 uv run --env-file .env python news.py eval            # évaluation de la chaîne d'actualité
 uv run --env-file .env python odds.py eval [SAISON]   # modèle face au marché
