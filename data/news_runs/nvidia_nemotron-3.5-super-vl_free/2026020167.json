@@ -1,0 +1,128 @@
+{
+ "game": {
+  "gameId": 2026020167,
+  "kickoff": "2026-10-24T01:00:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "Colorado Avalanche",
+  "away_id": 14,
+  "home_id": 21,
+  "away_abbr": "TBL",
+  "home_abbr": "COL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-23T22:47:39.591491+00:00",
+ "articles": [
+  {
+   "title": "Lightning at Avalanche projected lineups",
+   "published": "2026-10-23T18:13:24.635Z",
+   "lineups": true
+  },
+  {
+   "title": "Mishkin's Extra Shift: Tampa Bay Lightning 6, Vegas Golden Knights 2",
+   "published": "2026-10-21T13:26:08.532Z",
+   "lineups": false
+  },
+  {
+   "title": "Lightning named first NHL partner for Uptop, launches Bolts Rewards",
+   "published": "2026-10-21T18:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Nuts & Bolts: Back-to-back begins in Colorado",
+   "published": "2026-10-22T18:14:05.995Z",
+   "lineups": false
+  },
+  {
+   "title": "Tussle with Tampa Bay",
+   "published": "2026-10-23T11:00:08.417Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Charle-Edouard D'Astous",
+     "detail": "scratched"
+    },
+    {
+     "player": "Emil Lilleberg",
+     "detail": "scratched"
+    },
+    {
+     "player": "Yanni Gourde",
+     "detail": "injured (hip)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Anthony Cirelli",
+    "detail: "
+   ],
+   "summary": "The Lightning (7-2-0) are on a Western Conference road trip and come off a 6-2 win over Vegas. Anthony Cirelli will play after leaving Tuesday's game with an undisclosed injury. Andrei Vasilevskiy is projected to start in net."
+  },
+  "home": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Noah Juulsen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Nicolas Roy",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Nicolas Roy",
+     "detail": "day to day"
+    }
+   ],
+   "returning": [
+    "/player: Logan O'Connor",
+    "detail: "
+   ],
+   "summary": "The Avalanche (5-4-1) return home after a 4-3 loss to New Jersey. Logan O'Connor will make his season debut after missing 10 games with a lower-body injury and a personal absence. Taylor Makar was recalled from the AHL and will also make his season debut."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Scott Sabourin": 0.97,
+    "Charle-Edouard D'Astous": 0.97,
+    "Emil Lilleberg": 0.96,
+    "Yanni Gourde": 0.97
+   }
+  },
+  "home": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Noah Juulsen": 0.97,
+    "Zachary L'Heureux": 0.94,
+    "Nicolas Roy": 0.71
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.9,
+  "jev": 0.3
+ }
+}
