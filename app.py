@@ -139,6 +139,9 @@ def run_predict(day, stake, use_news, window=False):
     pd.concat([old_b, new_b], ignore_index=True).to_csv(BETS, index=False)
     pd.concat([old_p, pd.DataFrame(preds)], ignore_index=True).to_csv(PREDS, index=False)
     JOB["msg"] = f"{len(preds)} matchs prédits, {len(bets)} paris fictifs enregistrés."
+    if use_news and not any(p["news"] for p in preds):  # 20 au 22 octobre : modèle retiré, panne passée inaperçue
+        JOB["alert"] = (f"Actualité non lue sur les {len(preds)} matchs prédits (modèles de langage indisponibles) : "
+                        "gardiens et absents non extraits, voir le journal du passage")
 
 
 def run_settle():
@@ -368,6 +371,9 @@ def cli(cmd, *args):
     jobs[cmd]()
     if JOB["msg"]:
         print(JOB["msg"])
+    if JOB.get("alert"):  # lu par l'étape « Alerte » du workflow, qui fait échouer le passage après la publication
+        print(JOB["alert"])
+        (ROOT / "alerte.txt").write_text(JOB["alert"], encoding="utf-8")
 
 
 if __name__ == "__main__":

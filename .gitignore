@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 .env
+alerte.txt
 site/
 
 # Données : seuls les fichiers petits et précieux sont versionnés (registre de paris, prédictions, passages de
@@ -12,9 +13,6 @@ data/*
 !data/xg_model_*.pkl
 !data/shots_*.csv.gz
 !data/news_runs/
-data/news_runs/*
-!data/news_runs/nvidia_nemotron-3-super-120b-a12b_free/
-!data/news_runs/qwen3_8b/
 !data/oddspapi/
 data/oddspapi/*
 !data/oddspapi/closing.csv

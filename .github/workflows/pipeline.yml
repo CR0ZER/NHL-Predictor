@@ -30,7 +30,9 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  NHL_LLM: "nvidia/nemotron-3-super-120b-a12b:free,google/gemma-4-26b-a4b-it:free,google/gemma-4-31b-it:free"
+  # Nemotron 3 Super gratuit renvoie 404 depuis le 20 octobre 2026 (modèle retiré chez le fournisseur) ; remplacé
+  # par son successeur, puis dots-3 et Gemma en secours (testés sur VGK @ STL du 22 octobre : absents justes)
+  NHL_LLM: "nvidia/nemotron-3.5-super-vl:free,dots-studio/dots-3-note-preview:free,google/gemma-4-26b-a4b-it:free"
   PYTHONIOENCODING: utf-8
   PYTHONWARNINGS: ignore
 
@@ -91,3 +93,9 @@ jobs:
 
       - id: deploy
         uses: actions/deploy-pages@v4
+
+      - name: Alerte (actualité non lue)
+        run: |
+          # écrit par app.py quand des matchs ont été prédits sans qu'aucune actualité soit lue : prédictions
+          # enregistrées et publiées, puis échec du passage pour que GitHub envoie un mail
+          if [ -f alerte.txt ]; then echo "::error::$(cat alerte.txt)"; exit 1; fi

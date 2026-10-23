@@ -116,12 +116,15 @@ de match indique le modèle qui a lu l'actualité, ou « Actualité inaccessible
 
 | Modèle | Où | Résultat sur les 43 premiers matchs de 2026-27 |
 |---|---|---|
-| **Nemotron 3 Super 120B** (`nvidia/nemotron-3-super-120b-a12b:free`) | OpenRouter, gratuit | **Production.** 6,7 s par match, gardien trouvé 91 %, absents « certains » exacts à 95 % |
-| Gemma 4 26B / 31B (`:free`) | OpenRouter, gratuit | Secours (souvent saturés) |
+| **Nemotron 3.5 Super** (`nvidia/nemotron-3.5-super-vl:free`) | OpenRouter, gratuit | **Production depuis le 23 octobre 2026.** ~18 s par match |
+| dots-3-note-preview (`dots-studio/dots-3-note-preview:free`) | OpenRouter, gratuit | Premier secours, ~6 s par match |
+| Gemma 4 26B (`:free`) | OpenRouter, gratuit | Dernier secours (souvent saturé) |
+| Nemotron 3 Super 120B (`nvidia/nemotron-3-super-120b-a12b:free`) | OpenRouter, gratuit | Production du 7 au 19 octobre (gardien trouvé 91 %, absents « certains » exacts à 95 % sur 43 matchs), puis retiré par le fournisseur (erreur 404) |
 | qwen3:8b | Ollama, local | Défaut en local. 22 s par match, gardien 87 %, absents exacts à 94 % |
 | Llama 3.1 8B | Ollama, local | Abandonné (rappel plus faible, réponses JSON qui bouclent) |
 
-Quota gratuit OpenRouter : 50 requêtes par jour, une par match.
+Quota gratuit OpenRouter : 50 requêtes par jour, une par match. Si aucun match d'un passage n'a pu être lu, le passage
+publie quand même ses prédictions puis se termine en échec : GitHub envoie un mail.
 
 ## Utilisation en local
 
