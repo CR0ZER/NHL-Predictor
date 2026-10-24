@@ -1,0 +1,119 @@
+{
+ "game": {
+  "gameId": 2026020178,
+  "kickoff": "2026-10-25T02:00:00Z",
+  "away": "Detroit Red Wings",
+  "home": "Calgary Flames",
+  "away_id": 17,
+  "home_id": 20,
+  "away_abbr": "DET",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T23:47:39.897986+00:00",
+ "articles": [
+  {
+   "title": "Red Wings at Flames projected lineups",
+   "published": "2026-10-24T18:39:52.659Z",
+   "lineups": true
+  },
+  {
+   "title": "5 Things - Flames vs. Wild",
+   "published": "2026-10-22T13:26:26.685Z",
+   "lineups": false
+  },
+  {
+   "title": "Duguay, popular Rangers player during late 1970s, dies at 69",
+   "published": "2026-10-22T14:04:29.142Z",
+   "lineups": false
+  },
+  {
+   "title": "'A Lot Of Similarities'",
+   "published": "2026-10-22T18:42:30.092Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Flames projected lineups",
+   "published": "2026-10-22T18:53:36.434Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings recall Michal Postava from Grand Rapids under emergency conditions",
+   "published": "2026-10-22T19:43:57.281Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Daniil Tarasov",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Mason Appleton",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "J.T. Compher"
+   ],
+   "summary": "The Red Wings (4-3-3) head to Calgary with John Gibson expected to start in goal after missing the third period of Thursday's win in Vancouver due to something in his eye; coach Todd McLellan confirmed Gibson is fine. The lineup includes projected scratches Andreas Englund and Axel Sandin-Pellikka, while J.T. Compher has been activated from injured reserve and could return. McLellan indicated he might make additional lineup changes after warmups."
+  },
+  "home": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip, has yet to play this season after hip refacing surgery in March"
+    },
+    {
+     "player": "Samuel Honzek",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Mikael Backlund",
+     "detail": "upper body injury, will miss his second straight game"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames (3-6-0) are expected to dress the same lineup from their 2-1 win over Minnesota on Thursday, with Dustin Wolf projected as the starting goaltender. Captain Mikael Backlund remains day-to-day with an upper-body injury and will miss a second consecutive game, while Jonathan Huberdeau has yet to play this season following hip surgery. Ben Jones, recalled from the AHL, is in the projected lineup and could make his Calgary NHL debut."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "John Gibson",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Daniil Tarasov": 0.96,
+    "Marco Kasper": 0.97,
+    "Mason Appleton": 0.97
+   }
+  },
+  "home": {
+   "starter": "Devin Cooley",
+   "p_starter": 0.65,
+   "announced": 0.98,
+   "p_out": {
+    "Jonathan Huberdeau": 0.95,
+    "Samuel Honzek": 0.95,
+    "Mikael Backlund": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.0,
+  "jev": 0.2
+ }
+}
