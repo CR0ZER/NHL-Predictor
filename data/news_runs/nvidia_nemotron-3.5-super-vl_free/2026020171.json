@@ -1,0 +1,150 @@
+{
+ "game": {
+  "gameId": 2026020171,
+  "kickoff": "2026-10-24T23:00:00Z",
+  "away": "New York Rangers",
+  "home": "Ottawa Senators",
+  "away_id": 3,
+  "home_id": 9,
+  "away_abbr": "NYR",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T20:48:06.815706+00:00",
+ "articles": [
+  {
+   "title": "Rangers at Senators projected lineups",
+   "published": "2026-10-24T16:20:27.695Z",
+   "lineups": true
+  },
+  {
+   "title": "Brady Tkachuk hears full force of Senators fans in return to Ottawa",
+   "published": "2026-10-22T05:30:34.431Z",
+   "lineups": false
+  },
+  {
+   "title": "After the Buzzer: Greig one of many “nail guns” during Sens win over Panthers",
+   "published": "2026-10-22T12:00:37.146Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Maple Leafs: Pregame Notes",
+   "published": "2026-10-22T12:15:06.27Z",
+   "lineups": false
+  },
+  {
+   "title": "After the Buzzer: Spence says Sens need to clean up defensive play in front of Ersson",
+   "published": "2026-10-22T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Duguay, popular Rangers player during late 1970s, dies at 69",
+   "published": "2026-10-22T14:04:29.142Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Scott Morrow",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matt Rempe",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matthew Robertson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Rangers (7-4-1) are missing goaltenders Igor Shesterkin and Joonas Korpisalo, along with forward Joseph Veleno, due to lower-body injuries. Dylan Garand is projected to make his seventh consecutive start, with Spencer Martin as backup. Scott Morrow, Matt Rempe, and Matthew Robertson are scratched, while Luke Glendening could make his Rangers debut after signing Thursday."
+  },
+  "home": {
+   "starting_goalie": "Jonas Johansson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Linus Ullmark",
+     "detail": "lower body injury, out 1-2 weeks, placed on injured reserve"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Thomas Chabot",
+     "detail": "upper body injury, will miss third straight game"
+    },
+    {
+     "player": "Cameron Crotty",
+     "detail": "scratched"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/Andre Burakovsky",
+    "detail: "
+   ],
+   "summary": "The Senators (7-4-0) will be without Linus Ullmark (1-2 weeks, IR), William Eklund, Kurtis MacDermid, and Thomas Chabot due to injuries. Jonas Johansson is projected to start and make his Senators debut, with Samuel Ersson as backup. Andre Burakovsky returns to the lineup after being a healthy scratch the past two games, while Hayden Hodgson comes out. Chabot is expected to return during the upcoming five-game road trip."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dylan Garand",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Igor Shesterkin": 0.98,
+    "Joonas Korpisalo": 0.98,
+    "Joseph Veleno": 0.98,
+    "Scott Morrow": 0.97,
+    "Matt Rempe": 0.97,
+    "Matthew Robertson": 0.91
+   }
+  },
+  "home": {
+   "starter": "Jonas Johansson",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Linus Ullmark": 0.98,
+    "William Eklund": 0.97,
+    "Kurtis MacDermid": 0.98,
+    "Thomas Chabot": 0.96,
+    "Cameron Crotty": 0.97,
+    "Hayden Hodgson": 0.9
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.7,
+  "jev": 0.2
+ }
+}

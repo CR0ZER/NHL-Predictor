@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020172,
+  "kickoff": "2026-10-24T23:00:00Z",
+  "away": "Nashville Predators",
+  "home": "Pittsburgh Penguins",
+  "away_id": 18,
+  "home_id": 5,
+  "away_abbr": "NSH",
+  "home_abbr": "PIT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T20:48:11.271540+00:00",
+ "articles": [
+  {
+   "title": "Predators at Penguins projected lineups",
+   "published": "2026-10-24T15:44:26.529Z",
+   "lineups": true
+  },
+  {
+   "title": "GAME DAY: Preds at Bruins, October 22",
+   "published": "2026-10-22T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: 10.22.26 vs. Florida Panthers",
+   "published": "2026-10-22T11:00:35.978Z",
+   "lineups": false
+  },
+  {
+   "title": "Duguay, popular Rangers player during late 1970s, dies at 69",
+   "published": "2026-10-22T14:04:29.142Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Penguins projected lineups",
+   "published": "2026-10-22T16:34:00Z",
+   "lineups": false
+  },
+  {
+   "title": "EPIC Girl Accordion",
+   "published": "2026-10-22T16:39:08.521Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators (3-3-3) are coming off a 6-0 loss at Boston and could make several changes, including Matthew Wood elevating to the first line, Alexander Kerfoot moving to third-line center, Filip Forsberg shifting to second-line left wing, and Nick Perbix likely entering the lineup on the third defense pair in place of Ilya Lyubushkin."
+  },
+  "home": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Evgeni Malkin",
+     "detail": "illness"
+    },
+    {
+     "player": "Justin Brazeau",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ben Kindel",
+     "detail": "vasovagal episode"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Samuel Girard",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Egor Chinakhov",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Avery Hayes",
+    "detail: "
+   ],
+   "summary": "The Penguins (4-6-1) are missing multiple key players, including Evgeni Malkin (illness), Bryan Rust (lower body), and Samuel Girard (lower body, placed on IR). Avery Hayes will make his season debut after being recalled from Wilkes-Barre/Scranton."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "William Trudeau": 0.96
+   }
+  },
+  "home": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Evgeni Malkin": 0.98,
+    "Justin Brazeau": 0.96,
+    "Ryan Graves": 0.98,
+    "Trevor van Riemsdyk": 0.98,
+    "Ben Kindel": 0.96,
+    "Bryan Rust": 0.98,
+    "Samuel Girard": 0.98,
+    "Egor Chinakhov": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.2,
+  "jev": 0.1
+ }
+}

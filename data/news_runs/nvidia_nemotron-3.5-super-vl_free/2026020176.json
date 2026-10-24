@@ -1,0 +1,154 @@
+{
+ "game": {
+  "gameId": 2026020176,
+  "kickoff": "2026-10-24T23:00:00Z",
+  "away": "Toronto Maple Leafs",
+  "home": "Edmonton Oilers",
+  "away_id": 10,
+  "home_id": 22,
+  "away_abbr": "TOR",
+  "home_abbr": "EDM"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T20:48:49.148719+00:00",
+ "articles": [
+  {
+   "title": "Maple Leafs at Oilers projected lineups",
+   "published": "2026-10-24T16:43:38.911Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Oilers vs. Hurricanes",
+   "published": "2026-10-22T03:06:49.827Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY vs RANGERS | Oct. 22, 2026",
+   "published": "2026-10-22T15:48:27.611Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Maple Leafs projected lineups",
+   "published": "2026-10-22T16:33:12.505Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes at Oilers projected lineups",
+   "published": "2026-10-22T18:19:37.533Z",
+   "lineups": false
+  },
+  {
+   "title": "PROJECTED LINEUP: Nugent-Hopkins to centre second line in return against Canes",
+   "published": "2026-10-22T18:30:25.691Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dakota Joshua",
+     "detail": "core injury"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Chris Tanev",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Tavares",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Marshall Rifai",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Blankenburg",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Maple Leafs (6-4-2) are projected to start Sergei Bobrovsky in goal against the Oilers. The team is dealing with significant injuries, including John Tavares, Chris Tanev, Dakota Joshua, Max Domi, Marshall Rifai, and Nick Blankenburg. Cole McWard and Bo Groulx are listed as scratched in the projected lineup."
+  },
+  "home": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Frederik Andersen",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Devon Levi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Jason Dickinson",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matt Savoie",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Mattias Ekholm",
+     "detail": "concussion"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Ryan Nugent-Hopkins"
+   ],
+   "summary": "The Oilers (8-1-1) are projected to start Tristan Jarry in goal, with Matt Tomkins serving as the backup after Devon Levi was placed on injured reserve. Ryan Nugent-Hopkins is returning to the lineup after missing the first nine games of the season with a lower-body injury. Mattias Ekholm is out with a concussion, and Shakir Mukhamadullin is projected to enter the lineup in his place."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Dakota Joshua": 0.97,
+    "Max Domi": 0.97,
+    "Chris Tanev": 0.97,
+    "John Tavares": 0.97,
+    "Marshall Rifai": 0.96,
+    "Nick Blankenburg": 0.96
+   }
+  },
+  "home": {
+   "starter": "Tristan Jarry",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Frederik Andersen": 0.95,
+    "Devon Levi": 0.97,
+    "Jason Dickinson": 0.95,
+    "Mattias Janmark": 0.95,
+    "Alec Regula": 0.95,
+    "Matt Savoie": 0.94,
+    "Mattias Ekholm": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 20.5,
+  "jev": 0.2
+ }
+}

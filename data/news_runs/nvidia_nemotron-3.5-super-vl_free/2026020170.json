@@ -1,0 +1,120 @@
+{
+ "game": {
+  "gameId": 2026020170,
+  "kickoff": "2026-10-24T23:00:00Z",
+  "away": "San Jose Sharks",
+  "home": "Boston Bruins",
+  "away_id": 28,
+  "home_id": 6,
+  "away_abbr": "SJS",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T20:48:00.706018+00:00",
+ "articles": [
+  {
+   "title": "Sharks at Bruins projected lineups",
+   "published": "2026-10-24T16:57:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Need to Know: Bruins vs. Predators ",
+   "published": "2026-10-22T16:05:49.389Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks at Senators projected lineups",
+   "published": "2026-10-22T16:54:55.421Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Bruins projected lineups",
+   "published": "2026-10-22T17:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Save of the Season? Sharks' Askarov makes diving glove save to rob goal",
+   "published": "2026-10-23T01:36:00Z",
+   "lineups": false
+  },
+  {
+   "title": "DiPietro Posts First NHL Shutout, Honors Mom in 6-0 Bruins Win",
+   "published": "2026-10-23T03:12:24.155Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Alex Nedeljkovic",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alexander Wennberg",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury, week to week after blocking a slap shot off his left arm"
+    },
+    {
+     "player": "Luca Cagnoni",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Collin Graf",
+    "detail: returns to the top line"
+   ],
+   "summary": "The Sharks (6-4-1) are projected to dress the same lineup as their previous game, with Adam Gaudette making his season debut on the fourth line and Collin Graf returning to the top line alongside Macklin Celebrini and Will Smith. Alex Nedeljkovic is projected to start in goal. Alexander Wennberg and Igor Chernyshov remain injured, while Luca Cagnoni is scratched."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Aspirot",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sean Kuraly",
+     "detail": "scratched"
+    },
+    {
+     "player": "Connor Clifton",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins (8-2-1) will dress the same 18 skaters they used in a 6-0 win against the Nashville Predators on Thursday. Jeremy Swayman is projected to start in goal, with Michael DiPietro as backup. The team has no reported injuries and is coming off a strong home performance."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Alex Nedeljkovic",
+   "p_starter": 0.96,
+   "announced": 0.98,
+   "p_out": {
+    "Alexander Wennberg": 0.95,
+    "Igor Chernyshov": 0.87,
+    "Luca Cagnoni": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 0.97,
+   "announced": 0.97,
+   "p_out": {
+    "Jonathan Aspirot": 0.97,
+    "Sean Kuraly": 0.96,
+    "Connor Clifton": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 19.5,
+  "jev": 0.2
+ }
+}

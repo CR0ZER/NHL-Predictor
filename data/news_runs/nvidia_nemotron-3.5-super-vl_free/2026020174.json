@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020174,
+  "kickoff": "2026-10-24T23:00:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Columbus Blue Jackets",
+  "away_id": 54,
+  "home_id": 29,
+  "away_abbr": "VGK",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T20:48:23.285375+00:00",
+ "articles": [
+  {
+   "title": "Golden Knights at Blue Jackets projected lineups",
+   "published": "2026-10-24T16:07:54.097Z",
+   "lineups": true
+  },
+  {
+   "title": "Morning Skate Report, Oct. 22, 2026",
+   "published": "2026-10-22T06:14:01.529Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights at Blues projected lineups",
+   "published": "2026-10-22T17:19:54.72Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Blue Jackets vs Golden Knights",
+   "published": "2026-10-23T22:39:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Oct. 24, 2026",
+   "published": "2026-10-24T05:43:25.367Z",
+   "lineups": false
+  },
+  {
+   "title": "Columbus Blue Jackets games to air on DIRECTV beginning tonight",
+   "published": "2026-10-24T17:08:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mitch Marner",
+     "detail": "personal (birth of second child)"
+    },
+    {
+     "player": "Victor Olofsson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Parker Wotherspoon",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights (8-4-0) are on a two-game road trip and come off a 6-2 loss to the St. Louis Blues. Mitch Marner will miss a second straight game for personal reasons, with Alexander Holtz recalled from the AHL to fill in. Victor Olofsson and Parker Wotherspoon remain injured."
+  },
+  "home": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Danton Heien",
+     "detail": "scratched"
+    },
+    {
+     "player": "Emil Andrae",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dante Fabbro",
+     "detail": "broken hand"
+    },
+    {
+     "player": "Ivan Provorov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blue Jackets (3-5-0) host the Golden Knights at Nationwide Arena. Cam Talbot is projected to start for the second time in three games. Zach Werenski moves to the top line, replacing Knies, who takes Sillinger’s spot on the second line, while Carson Soucy replaces Emil Andrae on defense."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Carter Hart",
+   "p_starter": 0.92,
+   "announced": 0.77,
+   "p_out": {
+    "Mitch Marner": 0.96,
+    "Victor Olofsson": 0.98,
+    "Parker Wotherspoon": 0.97
+   }
+  },
+  "home": {
+   "starter": "Cam Talbot",
+   "p_starter": 0.98,
+   "announced": 0.99,
+   "p_out": {
+    "Danton Heien": 0.96,
+    "Emil Andrae": 0.96,
+    "Dante Fabbro": 0.98,
+    "Ivan Provorov": 0.98,
+    "Isac Lundestrom": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.1
+ }
+}

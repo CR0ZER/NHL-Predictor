@@ -1,0 +1,165 @@
+{
+ "game": {
+  "gameId": 2026020173,
+  "kickoff": "2026-10-24T23:00:00Z",
+  "away": "Buffalo Sabres",
+  "home": "Washington Capitals",
+  "away_id": 7,
+  "home_id": 15,
+  "away_abbr": "BUF",
+  "home_abbr": "WSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T20:48:18.699422+00:00",
+ "articles": [
+  {
+   "title": "Sabres at Capitals projected lineups",
+   "published": "2026-10-24T17:04:16.743Z",
+   "lineups": true
+  },
+  {
+   "title": "‘Bright lights don’t bug him’ | After nearly winning NCAA championship, Zelenov ready for big sophomore campaign",
+   "published": "2026-10-22T16:10:02.37Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: October 23",
+   "published": "2026-10-23T16:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Desharnais out 4-6 weeks for Capitals after appendectomy",
+   "published": "2026-10-23T16:57:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kulich exits, Sabres make tweaks ahead of week-long road trip",
+   "published": "2026-10-23T18:53:05.085Z",
+   "lineups": false
+  },
+  {
+   "title": "Caps, Tuch Take on Sabres",
+   "published": "2026-10-23T18:57:51.22Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jiri Kulich",
+     "detail": "upper body injury; took puck to face, did not travel to Washington"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Sam Carrick",
+     "detail": "middle body injury"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Dennis Gilbert",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sabres (4-4-2) head to Washington on a four-game road trip after a 3-1 home loss to Philadelphia. Ukko-Pekka Luukkonen is projected to start in net, with Colten Ellis as backup. Buffalo is missing several key players, including Jiri Kulich (upper body), Justin Danforth, Sam Carrick, Matt Grzelcyk, Alex Lyon, and Conor Timmins, with Dennis Gilbert scratched."
+  },
+  "home": {
+   "starting_goalie": "Charlie Lindgren",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Logan Thompson",
+     "detail": "lower body injury; day-to-day"
+    },
+    {
+     "player": "Vincent Desharnais",
+     "detail": "appendectomy; out 4-6 weeks, placed on injured reserve"
+    },
+    {
+     "player": "Ethen Frank",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ivan Miroshnichenko",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Logan Thompson",
+     "detail": "day-to-day; lower body injury, game-time decision"
+    },
+    {
+     "player": "Pierre-Luc Dubois",
+     "detail": "illness; returned to practice, status for game uncertain"
+    },
+    {
+     "player": "Justin Sourdif",
+     "detail": "illness; returned to practice, status for game uncertain"
+    }
+   ],
+   "returning": [
+    "/player: Pierre-Luc Dubois",
+    "detail: "
+   ],
+   "summary": "The Capitals (5-4-0) host Buffalo after a 5-2 loss to Los Angeles. Charlie Lindgren is projected to start with Mitch Gibson backing him up, as Logan Thompson is day-to-day with a lower-body injury. Vincent Desharnais is out 4-6 weeks after an appendectomy, while Pierre-Luc Dubois and Justin Sourdif are returning from illness and were full practice participants."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Jiri Kulich": 0.98,
+    "Justin Danforth": 0.97,
+    "Sam Carrick": 0.98,
+    "Matt Grzelcyk": 0.98,
+    "Alex Lyon": 0.97,
+    "Conor Timmins": 0.98,
+    "Dennis Gilbert": 0.96
+   }
+  },
+  "home": {
+   "starter": "Charlie Lindgren",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Rasmus Sandin": 0.97,
+    "Logan Thompson": 0.62,
+    "Vincent Desharnais": 0.98,
+    "Ethen Frank": 0.96,
+    "Ivan Miroshnichenko": 0.95,
+    "Pierre-Luc Dubois": 0.07,
+    "Justin Sourdif": 0.08
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 7.2,
+  "jev": 0.2
+ }
+}
