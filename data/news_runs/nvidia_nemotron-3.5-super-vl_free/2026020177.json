@@ -1,0 +1,132 @@
+{
+ "game": {
+  "gameId": 2026020177,
+  "kickoff": "2026-10-25T01:00:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "Utah Mammoth",
+  "away_id": 14,
+  "home_id": 68,
+  "away_abbr": "TBL",
+  "home_abbr": "UTA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T22:47:42.553849+00:00",
+ "articles": [
+  {
+   "title": "Lightning at Mammoth projected lineups",
+   "published": "2026-10-24T18:11:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Utah Heads to Seattle for Thursday Night Game ",
+   "published": "2026-10-22T15:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Kraken projected lineups",
+   "published": "2026-10-22T16:58:37.414Z",
+   "lineups": false
+  },
+  {
+   "title": "Nuts & Bolts: Back-to-back begins in Colorado",
+   "published": "2026-10-22T18:14:05.995Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings at Canucks projected lineups",
+   "published": "2026-10-22T20:02:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Seattle 5, Utah 3",
+   "published": "2026-10-23T02:07:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Emil Lilleberg",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jeffrey Viel",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning (7-3-0) are on a Western Conference road trip following a 6-3 loss to the Colorado Avalanche on Friday. Victor Hedman left that game with an undisclosed injury and did not return, with no immediate update provided. Yanni Gourde is out with a hip injury, while Scott Sabourin, Emil Lilleberg, and Jeffrey Viel are listed as scratched."
+  },
+  "home": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "Michael Carcone",
+     "detail": "upper body injury; placed on injured reserve"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury; week to week"
+    },
+    {
+     "player": "Liam O'Brien",
+     "detail": "scratched"
+    },
+    {
+     "player": "Artem Duda",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Mammoth (7-4-0) host the Lightning after a 5-3 loss to the Seattle Kraken on Thursday. John Marino is week to week with an upper-body injury, while Michael Carcone skated in a non-contact jersey but is not expected to play. Maveric Lamoureux remains out with a shoulder injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.62,
+   "announced": 0.98,
+   "p_out": {
+    "Yanni Gourde": 0.95,
+    "Scott Sabourin": 0.96,
+    "Emil Lilleberg": 0.95,
+    "Jeffrey Viel": 0.97
+   }
+  },
+  "home": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.98,
+   "announced": 0.93,
+   "p_out": {
+    "Maveric Lamoureux": 0.96,
+    "Michael Carcone": 0.94,
+    "John Marino": 0.78,
+    "Liam O'Brien": 0.92,
+    "Artem Duda": 0.87
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.8,
+  "jev": 0.2
+ }
+}
