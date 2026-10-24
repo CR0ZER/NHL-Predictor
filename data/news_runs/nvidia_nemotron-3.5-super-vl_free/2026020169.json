@@ -1,0 +1,105 @@
+{
+ "game": {
+  "gameId": 2026020169,
+  "kickoff": "2026-10-24T19:30:00Z",
+  "away": "Los Angeles Kings",
+  "home": "New Jersey Devils",
+  "away_id": 26,
+  "home_id": 1,
+  "away_abbr": "LAK",
+  "home_abbr": "NJD"
+ },
+ "llm": "dots-studio/dots-3-note-preview:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T16:47:43.609174+00:00",
+ "articles": [
+  {
+   "title": "Kings at Devils projected lineups",
+   "published": "2026-10-23T19:49:20.995Z",
+   "lineups": true
+  },
+  {
+   "title": "INSIDER: Mats Zuccarello Talks Return + Byfield/Wright Updates in NY",
+   "published": "2026-10-21T19:52:07.497Z",
+   "lineups": false
+  },
+  {
+   "title": "Duguay, popular Rangers player during late 1970s, dies at 69",
+   "published": "2026-10-22T14:04:29.142Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK @ NYI",
+   "published": "2026-10-22T15:24:54.831Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Devils projected lineups",
+   "published": "2026-10-22T16:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Islanders projected lineups",
+   "published": "2026-10-22T16:57:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "doubtful": [
+    {
+     "detail": "upper-body injury",
+     "player": "Quinton Byfield"
+    }
+   ],
+   "goalie_status": "projected",
+   "out": [
+    {
+     "detail": "undisclosed injury",
+     "player": "Alex Turcotte"
+    },
+    {
+     "detail": "leg surgery",
+     "player": "Kevin Fiala"
+    }
+   ],
+   "returning": [
+    "Mats Zuccarello"
+   ],
+   "starting_goalie": "Darcy Kuemper",
+   "summary": "The Kings are coming off a 5-2 win over Washington and have a 2-4-2 record. Mats Zuccarello is returning to the lineup after missing time with a shoulder injury, while Quinton Byfield is questionable due to an upper-body injury. Alex Turcotte and Kevin Fiala remain out."
+  },
+  "home": {
+   "doubtful": [],
+   "goalie_status": "projected",
+   "out": [],
+   "returning": [
+    "Amadeus Lombardi"
+   ],
+   "starting_goalie": "Jake Allen",
+   "summary": "The Devils have a strong 6-4-0 record and are coming off a 3-2 overtime win over the Islanders. Amadeus Lombardi is returning to the lineup after being a healthy scratch for two games, while Jake Allen is projected to start in goal. Brenden Dillon and Connor Hellebuyck are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Alex Turcotte": 0.97,
+    "Kevin Fiala": 0.97,
+    "Quinton Byfield": 0.25
+   }
+  },
+  "home": {
+   "starter": "Jake Allen",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 8.1,
+  "jev": 0.2
+ }
+}
