@@ -1,0 +1,143 @@
+{
+ "game": {
+  "gameId": 2026020168,
+  "kickoff": "2026-10-24T17:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "Philadelphia Flyers",
+  "away_id": 24,
+  "home_id": 4,
+  "away_abbr": "ANA",
+  "home_abbr": "PHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-24T14:47:39.847795+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Flyers projected lineups",
+   "published": "2026-10-23T21:09:12.262Z",
+   "lineups": true
+  },
+  {
+   "title": " RAV4 Things: Flyers vs. Ducks",
+   "published": "2026-10-24T13:00:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Postgame RAV4: Flyers Foil Sabres, 3-1",
+   "published": "2026-10-22T02:35:08.038Z",
+   "lineups": false
+  },
+  {
+   "title": "Knuble’s dad joins him for postgame interview after first two NHL goals ",
+   "published": "2026-10-22T03:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Knuble’s dad joins him for postgame interview after first two NHL goals ",
+   "published": "2026-10-22T03:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "IBX and The Flyers Team Up to Spread Warmth with Winter Drive",
+   "published": "2026-10-22T13:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Pavel Mintyukov",
+     "detail": "lower body injury, placed on injured reserve Friday"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Travis Mitchell",
+     "detail": "recalled from AHL, unclear if he will play"
+    }
+   ],
+   "returning": [],
+   "summary": "The Ducks (4-6-0) are playing their fourth game in six nights and the final game of a four-game road trip, having lost five straight in regulation, including a 4-1 loss to the Devils on Thursday. Their projected lineup lists Lukas Dostal as the starting goalie ahead of Ville Husso, with Judd Caulfield, Jeff Malott, and Travis Mitchell scratched."
+  },
+  "home": {
+   "starting_goalie": "Joseph Woll",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    },
+    {
+     "player": "Travis Konecny",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Cam York",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Owen Tippett",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Rasmus Ristolainen",
+     "detail": "could return after missing nine games with an upper-body injury; full practice participant Friday"
+    },
+    {
+     "player": "Cam York",
+     "detail": "missed past seven games, practiced Friday but coach unsure if available"
+    }
+   ],
+   "returning": [],
+   "summary": "The Flyers (3-6-3) are home after a 3-1 win in Buffalo on Wednesday, their third straight victory. Joseph Woll is projected to start in goal over Dan Vladar, who made 27 saves in the Sabres win. Scratched players include Hunter McDonald, Garrett Wilson, David Jiricek, and Michael Bunting."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Lukas Dostal",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Ian Moore": 0.95,
+    "Troy Terry": 0.96,
+    "Ryan Poehling": 0.96,
+    "Pavel Mintyukov": 0.96,
+    "Travis Mitchell": 0.46
+   }
+  },
+  "home": {
+   "starter": "Joseph Woll",
+   "p_starter": 0.98,
+   "announced": 0.91,
+   "p_out": {
+    "Nikita Grebenkin": 0.95,
+    "Travis Konecny": 0.95,
+    "Cam York": 0.47,
+    "Owen Tippett": 0.95,
+    "Rasmus Ristolainen": 0.26
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.2,
+  "jev": 0.2
+ }
+}
