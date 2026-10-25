@@ -1,0 +1,130 @@
+{
+ "game": {
+  "gameId": 2026020182,
+  "kickoff": "2026-10-25T23:00:00Z",
+  "away": "Montréal Canadiens",
+  "home": "Winnipeg Jets",
+  "away_id": 8,
+  "home_id": 52,
+  "away_abbr": "MTL",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-25T20:47:56.817492+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Canadiens at Jets",
+   "published": "2026-10-25T12:21:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Canadiens at Jets projected lineups",
+   "published": "2026-10-25T16:55:52.728Z",
+   "lineups": true
+  },
+  {
+   "title": "Dallas edges Winnipeg in overtime ",
+   "published": "2026-10-23T02:18:00Z",
+   "lineups": false
+  },
+  {
+   "title": "MTL@CHI: What you need to know",
+   "published": "2026-10-23T12:43:00Z",
+   "lineups": false
+  },
+  {
+   "title": "How to watch the Winnipeg Jets Alumni Game",
+   "published": "2026-10-23T13:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Jarvis enjoyed watching Suzuki, 'epitome of a team player,' chase Canadiens ironman mark",
+   "published": "2026-10-23T13:58:04.232Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Fowler",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Suzuki",
+     "detail": "upper-body injury, sidelined 2-4 weeks"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canadiens (5-3-2) are coming off a 4-1 win at Chicago and are expected to use the same lineup. They are without captain Nick Suzuki (upper body), goaltender Samuel Montembeault (lower body), and forward Ivan Demidov (lower body). Jacob Fowler is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Hellebuyck",
+     "detail": "traded to New Jersey Devils"
+    },
+    {
+     "player": "Garrett Brown",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Josh Morrissey",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Vladislav Namestnikov",
+     "detail": "undisclosed injury, placed on IR retroactive to Oct. 15"
+    },
+    {
+     "player": "Nick Bjugstad",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Dawson Mercer",
+    "detail: "
+   ],
+   "summary": "The Jets (4-3-3) are trying to end a four-game winless streak in the Heritage Classic outdoor game. Connor Hellebuyck was traded to New Jersey, and Stuart Skinner is projected to start. Dawson Mercer is expected to make his Jets debut, while Elias Salomonsson makes his season debut after shoulder surgery."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Fowler",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Nick Suzuki": 0.97,
+    "Samuel Montembeault": 0.98,
+    "Ivan Demidov": 0.97
+   }
+  },
+  "home": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Connor Hellebuyck": 0.99,
+    "Garrett Brown": 0.98,
+    "Josh Morrissey": 0.97,
+    "Vladislav Namestnikov": 0.98,
+    "Nick Bjugstad": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 21.4,
+  "jev": 0.3
+ }
+}
