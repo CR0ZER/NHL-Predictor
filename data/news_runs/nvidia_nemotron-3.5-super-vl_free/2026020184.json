@@ -1,0 +1,116 @@
+{
+ "game": {
+  "gameId": 2026020184,
+  "kickoff": "2026-10-26T02:00:00Z",
+  "away": "Minnesota Wild",
+  "home": "Vancouver Canucks",
+  "away_id": 30,
+  "home_id": 23,
+  "away_abbr": "MIN",
+  "home_abbr": "VAN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-25T23:47:41.121602+00:00",
+ "articles": [
+  {
+   "title": "Wild at Canucks projected lineups",
+   "published": "2026-10-25T18:44:39.219Z",
+   "lineups": true
+  },
+  {
+   "title": "Coleman receives warm welcome back to Calgary ",
+   "published": "2026-10-23T02:07:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Liam Öhgren is Building Confidence and Finding His Game ",
+   "published": "2026-10-23T18:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Building Blue: Riley Patterson's AHL Success is Coming from a Focus on Hard-Work and Early Confidence as a Pro",
+   "published": "2026-10-23T21:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild+ Now Available on DIRECTV",
+   "published": "2026-10-24T17:18:28.116Z",
+   "lineups": false
+  },
+  {
+   "title": "Minnesota Wild Recalls Forward Mason Shaw from Iowa",
+   "published": "2026-10-24T19:29:00.485Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Calvin Pickard",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Marcus Foligno",
+     "detail": "lower body"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "upper body"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "hip"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Wild (7-3-2) are coming off a 5-1 win at Seattle and did not hold a morning skate. Calvin Pickard is projected to start in goal for the second time this season, with Jesper Wallstedt listed as the backup. The lineup includes several scratches (David Spacek, Rieger Lorenz, Mason Shaw) and key injuries to Faber, both Folignos, and Gustavsson."
+  },
+  "home": {
+   "starting_goalie": "Leevi Merilainen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Liam Ohgren",
+    "player: Guillaume Brisebois",
+    "player: Luke Schenn"
+   ],
+   "summary": "The Canucks (2-9-1) are struggling early in the season and held an optional morning skate. Leevi Merilainen is projected to start ahead of Kevin Lankinen. Liam Ohgren returns to the lineup after being a healthy scratch on Thursday, while Guillaume Brisebois replaces Jamie Oleksiak and Luke Schenn returns after being scratched for Victor Mancini."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Calvin Pickard",
+   "p_starter": 0.96,
+   "announced": 0.98,
+   "p_out": {
+    "Brock Faber": 0.98,
+    "Marcus Foligno": 0.98,
+    "Nick Foligno": 0.98,
+    "Filip Gustavsson": 0.98
+   }
+  },
+  "home": {
+   "starter": "Leevi Meriläinen",
+   "p_starter": 0.93,
+   "announced": 0.95,
+   "p_out": {
+    "Thatcher Demko": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.6,
+  "jev": 0.1
+ }
+}
