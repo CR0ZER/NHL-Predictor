@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020183,
+  "kickoff": "2026-10-26T00:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Nashville Predators",
+  "away_id": 21,
+  "home_id": 18,
+  "away_abbr": "COL",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-25T21:47:46.123269+00:00",
+ "articles": [
+  {
+   "title": "Avalanche at Predators projected lineups",
+   "published": "2026-10-25T17:18:05.437Z",
+   "lineups": true
+  },
+  {
+   "title": "Tussle with Tampa Bay",
+   "published": "2026-10-23T11:00:08.417Z",
+   "lineups": false
+  },
+  {
+   "title": "Lightning at Avalanche projected lineups",
+   "published": "2026-10-23T18:13:24.635Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY: Preds at Penguins, October 24",
+   "published": "2026-10-24T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Penguins projected lineups",
+   "published": "2026-10-24T15:44:26.529Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators Claim Daemon Hunt on Waivers From Minnesota",
+   "published": "2026-10-24T18:40:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Scott Wedgewood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Noah Juulsen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Zachary L’Heureux",
+     "detail": "upper body injury, week to week"
+    },
+    {
+     "player": "Nicolas Roy",
+     "detail": "lower body injury, unlikely to play"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Nicolas Roy",
+     "detail": "unlikely to play"
+    }
+   ],
+   "returning": [],
+   "summary": "The Avalanche (6-4-1) are coming off a 4-3 loss to the New Jersey Devils. Scott Wedgewood is projected to start in goal ahead of Mackenzie Blackwood, while Nicolas Roy is unlikely to play and Zachary L’Heureux is week to week."
+  },
+  "home": {
+   "starting_goalie": "Justus Annunen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Daemon Hunt",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Vitali Pinchuk",
+     "detail": "scratched"
+    },
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators (3-3-4) are coming off a 3-2 overtime loss to the Pittsburgh Penguins. Justus Annunen is expected to start after Juuse Saros made 34 saves in that game. Daemon Hunt was claimed off waivers from Minnesota but is listed as scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Scott Wedgewood",
+   "p_starter": 0.73,
+   "announced": 0.9,
+   "p_out": {
+    "Noah Juulsen": 0.97,
+    "Zachary L’Heureux": 0.96,
+    "Nicolas Roy": 0.83
+   }
+  },
+  "home": {
+   "starter": "Justus Annunen",
+   "p_starter": 0.93,
+   "announced": 0.98,
+   "p_out": {
+    "Daemon Hunt": 0.94,
+    "Ilya Lyubushkin": 0.95,
+    "Vitali Pinchuk": 0.96,
+    "William Trudeau": 0.93
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.6,
+  "jev": 0.2
+ }
+}
