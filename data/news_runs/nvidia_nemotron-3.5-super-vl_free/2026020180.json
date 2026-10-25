@@ -1,0 +1,117 @@
+{
+ "game": {
+  "gameId": 2026020180,
+  "kickoff": "2026-10-25T19:00:00Z",
+  "away": "Florida Panthers",
+  "home": "Chicago Blackhawks",
+  "away_id": 13,
+  "home_id": 16,
+  "away_abbr": "FLA",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-25T16:47:44.461588+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Blackhawks projected lineups",
+   "published": "2026-10-24T18:55:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Florida Panthers Partner with Payactiv to Enable Earned Wage Access for Employees",
+   "published": "2026-10-22T20:08:21.624Z",
+   "lineups": false
+  },
+  {
+   "title": "Cooper Black set to become tallest goaltender in NHL history",
+   "published": "2026-10-22T20:51:32.281Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Blackhawks Host Canadiens for Friday Night Hockey",
+   "published": "2026-10-23T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: October 23",
+   "published": "2026-10-23T16:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Blackhawks projected lineups",
+   "published": "2026-10-23T17:45:06.084Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Akira Schmid",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jacob Markstrom",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Vilmanis",
+    "Gudas"
+   ],
+   "summary": "The Panthers (5-4-2) are missing several key players, including goaltender Jacob Markstrom and forwards Aleksander Barkov, Brad Marchand, and Jonah Gadjovich. Akira Schmid is projected to start in goal after Cooper Black made his NHL debut in the previous game. Sandis Vilmanis and Radko Gudas are likely to return to the lineup after being scratched for Thursday's 4-0 loss at Pittsburgh."
+  },
+  "home": {
+   "starting_goalie": "Arvid Soderblom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Bowen Byram",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Andrew Mangiapane"
+   ],
+   "summary": "The Blackhawks (3-7-0) are dealing with an injury to defenseman Bowen Byram, who has missed three consecutive games and skated in a non-contact jersey on Saturday. Andrew Mangiapane may play in his first game since the season opener after being activated off injured reserve on Friday. Arvid Soderblom could start in goal after Spencer Knight started the past five games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Akira Schmid",
+   "p_starter": 0.98,
+   "announced": 0.99,
+   "p_out": {
+    "Jacob Markstrom": 0.97,
+    "Aleksander Barkov": 0.98,
+    "Brad Marchand": 0.97,
+    "Jonah Gadjovich": 0.97
+   }
+  },
+  "home": {
+   "starter": "Arvid Soderblom",
+   "p_starter": 0.79,
+   "announced": 0.88,
+   "p_out": {
+    "Bowen Byram": 0.83
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.3,
+  "jev": 0.4
+ }
+}
