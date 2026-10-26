@@ -1,0 +1,120 @@
+{
+ "game": {
+  "gameId": 2026020185,
+  "kickoff": "2026-10-26T23:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "New York Rangers",
+  "away_id": 26,
+  "home_id": 3,
+  "away_abbr": "LAK",
+  "home_abbr": "NYR"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-26T20:47:48.654767+00:00",
+ "articles": [
+  {
+   "title": "Kings at Rangers projected lineups",
+   "published": "2026-10-26T16:25:03.733Z",
+   "lineups": true
+  },
+  {
+   "title": "Rangers at Ottawa Senators: Pregame Notes",
+   "published": "2026-10-24T12:20:18.321Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK @ NJD",
+   "published": "2026-10-24T15:00:13.254Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Senators projected lineups",
+   "published": "2026-10-24T16:20:27.695Z",
+   "lineups": false
+  },
+  {
+   "title": "FINAL - LAK 1, NJD 3",
+   "published": "2026-10-24T23:00:47.945Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Senators: Postgame Notes",
+   "published": "2026-10-25T02:25:13.735Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alex Turcotte",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "leg surgery"
+    },
+    {
+     "player": "Mats Zuccarello",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Quinton Byfield",
+    "detail: "
+   ],
+   "summary": "The Kings (2-5-2) are on a road trip and have been dealing with injuries to key forwards Alex Turcotte, Kevin Fiala, and Mats Zuccarello. Quinton Byfield could return after missing two games with an upper-body injury, though if he cannot play, Cody Ceci may enter the lineup as the Kings go with 11 forwards and seven defensemen. Darcy Kuemper is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "James Reimer",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Rangers (7-5-1) will start James Reimer, who signed a one-year contract on Sunday and will make his first start with New York after a 35-save win with Hartford on Friday. Igor Shesterkin, Joonas Korpisalo, and Joseph Veleno are all out with lower-body injuries. Pavel Dorofeyev has been moved to the third line, with Oliver Bjorkstrand taking his place in the top six."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Alex Turcotte": 0.93,
+    "Kevin Fiala": 0.98,
+    "Mats Zuccarello": 0.98
+   }
+  },
+  "home": {
+   "starter": "James Reimer",
+   "p_starter": 0.97,
+   "announced": 0.99,
+   "p_out": {
+    "Igor Shesterkin": 0.99,
+    "Joonas Korpisalo": 0.98,
+    "Joseph Veleno": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.5,
+  "jev": 0.2
+ }
+}
