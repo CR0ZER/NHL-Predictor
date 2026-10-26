@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020187,
+  "kickoff": "2026-10-27T01:30:00Z",
+  "away": "Detroit Red Wings",
+  "home": "Edmonton Oilers",
+  "away_id": 17,
+  "home_id": 22,
+  "away_abbr": "DET",
+  "home_abbr": "EDM"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-26T22:48:40.763005+00:00",
+ "articles": [
+  {
+   "title": "Red Wings at Oilers projected lineups",
+   "published": "2026-10-26T18:45:07.287Z",
+   "lineups": true
+  },
+  {
+   "title": "Maple Leafs at Oilers projected lineups",
+   "published": "2026-10-24T16:43:38.911Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings at Flames projected lineups",
+   "published": "2026-10-24T18:39:52.659Z",
+   "lineups": false
+  },
+  {
+   "title": "QUICK RECAP: Maple Leafs 7, Oilers 2",
+   "published": "2026-10-25T02:09:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Red Wings, riding six-game point streak, pay final visit to Scotiabank Saddledome on Saturday",
+   "published": "2026-10-25T03:50:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Oilers vs. Red Wings",
+   "published": "2026-10-26T04:26:10.794Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mason Appleton",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Daniil Tarasov",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Red Wings (4-4-3) saw their six-game point streak snapped with a 4-1 loss to the Calgary Flames on Saturday. They are expected to dress 12 forwards and six defensemen, with Carter Mazur coming in for scratched defenseman Andreas Englund. Goalie John Gibson is projected to start after missing the third period of Thursday's win over Vancouver due to an eye issue."
+  },
+  "home": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Frederik Andersen",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Jason Dickinson",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Mattias Ekholm",
+     "detail": "concussion"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Devon Levi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matt Savoie",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Trent Frederic",
+    "detail: "
+   ],
+   "summary": "The Oilers (8-2-1) are in the fourth game of a five-game homestand after a 7-2 loss to the Toronto Maple Leafs on Saturday. Tristan Jarry allowed six goals on 31-32 shots in that game and is projected to start. Defenseman Mattias Ekholm will miss his second straight game and is not expected to return until a road trip beginning Saturday against the New York Islanders."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Michal Postava",
+   "p_starter": 0.77,
+   "announced": 0.97,
+   "p_out": {
+    "Mason Appleton": 0.96,
+    "Marco Kasper": 0.97,
+    "Daniil Tarasov": 0.96
+   }
+  },
+  "home": {
+   "starter": "Tristan Jarry",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Frederik Andersen": 0.95,
+    "Jason Dickinson": 0.96,
+    "Mattias Ekholm": 0.96,
+    "Mattias Janmark": 0.97,
+    "Devon Levi": 0.97,
+    "Alec Regula": 0.96,
+    "Matt Savoie": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 62.3,
+  "jev": 0.2
+ }
+}
