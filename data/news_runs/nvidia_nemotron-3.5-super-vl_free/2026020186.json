@@ -1,0 +1,158 @@
+{
+ "game": {
+  "gameId": 2026020186,
+  "kickoff": "2026-10-27T00:30:00Z",
+  "away": "Toronto Maple Leafs",
+  "home": "Calgary Flames",
+  "away_id": 10,
+  "home_id": 20,
+  "away_abbr": "TOR",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-26T21:47:39.323066+00:00",
+ "articles": [
+  {
+   "title": "Maple Leafs at Flames projected lineups",
+   "published": "2026-10-26T18:10:22.889Z",
+   "lineups": true
+  },
+  {
+   "title": "GAME DAY @ Oilers | Oct. 24, 2026",
+   "published": "2026-10-24T14:09:21.027Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames vs. Red Wings",
+   "published": "2026-10-24T14:11:14.226Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs at Oilers projected lineups",
+   "published": "2026-10-24T16:43:38.911Z",
+   "lineups": false
+  },
+  {
+   "title": "'Sometimes Less Is More'",
+   "published": "2026-10-24T17:54:51.166Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings at Flames projected lineups",
+   "published": "2026-10-24T18:39:52.659Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dakota Joshua",
+     "detail": "core injury"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Chris Tanev",
+     "detail": "upper body injury, missed eighth straight game"
+    },
+    {
+     "player": "John Tavares",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Marshall Rifai",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Blankenburg",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Cole McWard",
+     "detail": "scratched"
+    },
+    {
+     "player": "Bo Groulx",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Maple Leafs (7-4-2) are projected to start Sergei Bobrovsky after Anthony Stolarz made 30 saves in a 7-2 win at Edmonton on Saturday. Chris Tanev practiced in a noncontact jersey Monday but will miss his eighth straight game. The team is missing several key players including John Tavares, Max Domi, and Dakota Joshua."
+  },
+  "home": {
+   "starting_goalie": "Devin Cooley",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Samuel Honzek",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ben Jones",
+     "detail": "scratched"
+    },
+    {
+     "player": "Maksim Tsyplakov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Joel Hanley",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Mikael Backlund",
+     "detail": "game-time decision, upper-body injury, missed two games"
+    }
+   ],
+   "returning": [],
+   "summary": "The Flames (4-6-0) are projected to start Devin Cooley for the fourth straight game after he was named NHL Second Star of the Week. Mikael Backlund wore a regular jersey at morning skate and will be a game-time decision after missing two games with an upper-body injury. Jonathan Huberdeau has yet to play this season following hip refacing surgery in March."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Dakota Joshua": 0.98,
+    "Max Domi": 0.97,
+    "Chris Tanev": 0.98,
+    "John Tavares": 0.97,
+    "Marshall Rifai": 0.98,
+    "Nick Blankenburg": 0.98,
+    "Cole McWard": 0.96,
+    "Bo Groulx": 0.96
+   }
+  },
+  "home": {
+   "starter": "Devin Cooley",
+   "p_starter": 0.96,
+   "announced": 0.98,
+   "p_out": {
+    "Jonathan Huberdeau": 0.97,
+    "Samuel Honzek": 0.97,
+    "Ben Jones": 0.92,
+    "Maksim Tsyplakov": 0.96,
+    "Joel Hanley": 0.95,
+    "Mikael Backlund": 0.28
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.9,
+  "jev": 0.4
+ }
+}
