@@ -1,0 +1,126 @@
+{
+ "game": {
+  "gameId": 2026020189,
+  "kickoff": "2026-10-28T00:00:00Z",
+  "away": "Boston Bruins",
+  "home": "Carolina Hurricanes",
+  "away_id": 6,
+  "home_id": 12,
+  "away_abbr": "BOS",
+  "home_abbr": "CAR"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-27T21:47:48.072310+00:00",
+ "articles": [
+  {
+   "title": "Bruins at Hurricanes projected lineups",
+   "published": "2026-10-27T16:47:22.263Z",
+   "lineups": true
+  },
+  {
+   "title": "Bruins Beat Sharks 6-4 in Back-and-Forth Affair at TD Garden",
+   "published": "2026-10-25T02:52:05.883Z",
+   "lineups": false
+  },
+  {
+   "title": "The Sunday Read: Inside Halloween Shopping and a Strong Start with the Bruins Cubs",
+   "published": "2026-10-25T10:00:10.975Z",
+   "lineups": false
+  },
+  {
+   "title": "Positives Aplenty On Successful State Fair Road Trip",
+   "published": "2026-10-25T19:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canes Sign Nikishin To One-Year Contract",
+   "published": "2026-10-25T21:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Injury Report: Hall Hopeful To Return To Action On Tuesday",
+   "published": "2026-10-26T18:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Aspirot",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sean Kuraly",
+     "detail": "scratched"
+    },
+    {
+     "player": "Connor Clifton",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins (9-2-1) are riding a strong stretch, having won seven of their last eight games and four straight at home before a 6-4 win over San Jose. They will use the same projected lineup from that victory, with no new injuries reported. Young players like James Hagens, Fraser Minten, and Marat Khusnutdinov have provided significant offensive depth early in the season."
+  },
+  "home": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jordan Staal",
+     "detail": "calf injury"
+    },
+    {
+     "player": "Mike Reilly",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nicolas Deslauriers",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Taylor Hall",
+     "detail": "upper-body injury; practiced Monday and hopeful to play, but coach was non-committal"
+    }
+   ],
+   "returning": [
+    "/player",
+    "detail"
+   ],
+   "summary": "The Hurricanes (9-2-2) are coming off a successful 3-1-1 State Fair road trip and are the first team to reach 20 standings points. They remain without Jordan Staal (calf), while Taylor Hall is hopeful to return after a five-game absence. Mark Jankowski is not yet available despite skating solo, though the projected lineup lists him as playing after missing four games with a lower-body injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Jonathan Aspirot": 0.97,
+    "Sean Kuraly": 0.97,
+    "Connor Clifton": 0.97
+   }
+  },
+  "home": {
+   "starter": "Pyotr Kochetkov",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Jordan Staal": 0.96,
+    "Mike Reilly": 0.95,
+    "Nicolas Deslauriers": 0.96,
+    "Taylor Hall": 0.08
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.9,
+  "jev": 0.2
+ }
+}

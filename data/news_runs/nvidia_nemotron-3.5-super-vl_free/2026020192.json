@@ -1,0 +1,115 @@
+{
+ "game": {
+  "gameId": 2026020192,
+  "kickoff": "2026-10-28T00:00:00Z",
+  "away": "New York Islanders",
+  "home": "Nashville Predators",
+  "away_id": 2,
+  "home_id": 18,
+  "away_abbr": "NYI",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-27T21:48:05.359662+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Predators ",
+   "published": "2026-10-27T04:00:06.718Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders at Predators projected lineups",
+   "published": "2026-10-27T17:14:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: Islanders at Stars",
+   "published": "2026-10-25T04:00:03.256Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY: Avalanche vs. Preds, October 25",
+   "published": "2026-10-25T13:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche at Predators projected lineups",
+   "published": "2026-10-25T17:18:05.437Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators Assign Jack Ahcan to Milwaukee (AHL)",
+   "published": "2026-10-25T18:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Semyon Varlamov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Matias Maccelli",
+     "detail": "lower body injury, placed on injured reserve retroactive to Oct. 17"
+    },
+    {
+     "player": "Calum Ritchie",
+     "detail": "lower body injury, placed on injured reserve retroactive to Oct. 17"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Scott Mayfield",
+    "detail: "
+   ],
+   "summary": "The Islanders (5-4-2) had their five-game point streak snapped Sunday with a 6-3 loss to Dallas. They will dress 11 forwards and seven defensemen, with Scott Mayfield returning to the lineup for the first time since Oct. 10 and Kyle MacLean serving as a healthy scratch."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators (4-3-4) snapped a five-loss-in-six-games stretch with a 6-2 win over Colorado on Sunday, scoring four power-play goals. They are expected to dress 11 forwards and seven defensemen, with Ilya Lyubushkin, Vitali Pinchuk and Reid Schaefer scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Semyon Varlamov",
+   "p_starter": 0.95,
+   "announced": 0.78,
+   "p_out": {
+    "Mathew Barzal": 0.98,
+    "Matias Maccelli": 0.98,
+    "Calum Ritchie": 0.98,
+    "Alexander Romanov": 0.99
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "William Trudeau": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.9,
+  "jev": 0.2
+ }
+}

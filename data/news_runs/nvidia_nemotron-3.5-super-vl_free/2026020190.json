@@ -1,0 +1,129 @@
+{
+ "game": {
+  "gameId": 2026020190,
+  "kickoff": "2026-10-28T00:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "Chicago Blackhawks",
+  "away_id": 26,
+  "home_id": 16,
+  "away_abbr": "LAK",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-27T21:47:52.606441+00:00",
+ "articles": [
+  {
+   "title": "Kings at Blackhawks projected lineups",
+   "published": "2026-10-27T16:30:49.724Z",
+   "lineups": true
+  },
+  {
+   "title": "INSIDER: Alex Laferriere Staking His Claim On First Line",
+   "published": "2026-10-25T13:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK @ NYR",
+   "published": "2026-10-26T16:06:36.366Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Rangers projected lineups",
+   "published": "2026-10-26T16:25:03.733Z",
+   "lineups": false
+  },
+  {
+   "title": "Ways to attend the LA Kings' 7-game homestand",
+   "published": "2026-10-26T19:12:59.483Z",
+   "lineups": false
+  },
+  {
+   "title": "FEATURE: Ian Cole's Journey of Longevity, 1,000 Games Later",
+   "published": "2026-10-26T21:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Anton Forsberg",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jared Wright",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cody Ceci",
+     "detail": "scratched"
+    },
+    {
+     "player": "Alex Turcotte",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "leg surgery"
+    },
+    {
+     "player": "Mats Zuccarello",
+     "detail": "upper body injury / placed on injured reserve"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Kings (3-5-2) are coming off a 6-3 win at the New York Rangers and did not hold a morning skate. Anton Forsberg is projected to start after Darcy Kuemper played Monday. The lineup remains depleted by injuries to Turcotte, Fiala, and Zuccarello, with Wright and Ceci scratched."
+  },
+  "home": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ethan Del Mastro",
+     "detail": "scratched"
+    },
+    {
+     "player": "Andrew Mangiapane",
+     "detail": "scratched"
+    },
+    {
+     "player": "Bowen Byram",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/ Oliver Moore"
+   ],
+   "summary": "The Blackhawks (3-8-0) have lost three straight and scored just three goals over that span. Spencer Knight is expected to make his seventh straight start. Oliver Moore returns to the lineup after being a healthy scratch Sunday, while Ryan Greene moves to the top line and Patrick Kane shifts to the third line."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Anton Forsberg",
+   "p_starter": 0.88,
+   "announced": 0.98,
+   "p_out": {
+    "Jared Wright": 0.96,
+    "Cody Ceci": 0.96,
+    "Alex Turcotte": 0.92,
+    "Kevin Fiala": 0.98,
+    "Mats Zuccarello": 0.98
+   }
+  },
+  "home": {
+   "starter": "Spencer Knight",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Ethan Del Mastro": 0.96,
+    "Andrew Mangiapane": 0.96,
+    "Bowen Byram": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.2,
+  "jev": 0.2
+ }
+}

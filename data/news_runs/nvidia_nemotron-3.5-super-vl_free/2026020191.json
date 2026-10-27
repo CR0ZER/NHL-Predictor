@@ -1,0 +1,145 @@
+{
+ "game": {
+  "gameId": 2026020191,
+  "kickoff": "2026-10-28T00:00:00Z",
+  "away": "Montréal Canadiens",
+  "home": "St. Louis Blues",
+  "away_id": 8,
+  "home_id": 19,
+  "away_abbr": "MTL",
+  "home_abbr": "STL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-27T21:47:59.167698+00:00",
+ "articles": [
+  {
+   "title": "Canadiens at Blues projected lineups",
+   "published": "2026-10-27T16:58:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Heritage Classic blog: Jake Evans",
+   "published": "2026-10-25T04:33:23.734Z",
+   "lineups": false
+  },
+  {
+   "title": "Jets, Canadiens to face off in Heritage Classic seeking ‘important two points’",
+   "published": "2026-10-25T05:11:53.128Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens focused on ‘collective game’ without Suzuki for Heritage Classic",
+   "published": "2026-10-25T05:36:35.399Z",
+   "lineups": false
+  },
+  {
+   "title": "MTL@WPG: What you need to know",
+   "published": "2026-10-25T12:51:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Jets projected lineups",
+   "published": "2026-10-25T16:55:52.728Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jakub Dobes",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Suzuki",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Adam Engstrom",
+     "detail": "scratched"
+    },
+    {
+     "player": "Owen Beck",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canadiens (6-3-2) are without captain Nick Suzuki (upper body) for a second consecutive game, with Oliver Kapanen centering the top line. Samuel Montembeault (lower body) and Ivan Demidov (lower body) are also injured, while Adam Engstrom and Owen Beck are scratched. Jakub Dobes is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Jordan Binnington",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Logan Mailloux",
+     "detail": "hand injury"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Ross Johnston",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Otto Stenberg",
+     "detail": "scratched"
+    },
+    {
+     "player": "Quinton Burns",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Alexey Toropchenko",
+    "detail: activated from injured reserve and returns after missing 10 games with a shoulder injury; replaces Stenberg"
+   ],
+   "summary": "The Blues (5-5-1) will start Jordan Binnington for the first time since Oct. 17. Alexey Toropchenko returns from a 10-game absence due to a shoulder injury, replacing Otto Stenberg in the lineup. Tyler Tucker, Logan Mailloux, Dillon Dube, and Ross Johnston remain injured, while Quinton Burns is also scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jakub Dobes",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "Nick Suzuki": 0.93,
+    "Samuel Montembeault": 0.97,
+    "Ivan Demidov": 0.97,
+    "Adam Engstrom": 0.95,
+    "Owen Beck": 0.95
+   }
+  },
+  "home": {
+   "starter": "Jordan Binnington",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Tyler Tucker": 0.98,
+    "Logan Mailloux": 0.98,
+    "Dillon Dube": 0.98,
+    "Ross Johnston": 0.98,
+    "Otto Stenberg": 0.97,
+    "Quinton Burns": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.3,
+  "jev": 0.2
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020193,
+  "kickoff": "2026-10-28T00:00:00Z",
+  "away": "New Jersey Devils",
+  "home": "Dallas Stars",
+  "away_id": 1,
+  "home_id": 25,
+  "away_abbr": "NJD",
+  "home_abbr": "DAL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-27T21:48:11.125195+00:00",
+ "articles": [
+  {
+   "title": "Devils at Stars projected lineups",
+   "published": "2026-10-27T17:30:08.25Z",
+   "lineups": true
+  },
+  {
+   "title": "Hellebuyck will be ‘rock’ in goal, Devils say after blockbuster trade",
+   "published": "2026-10-25T00:31:58.902Z",
+   "lineups": false
+  },
+  {
+   "title": "Hellebuyck will be ‘rock’ in goal, Devils say after blockbuster trade",
+   "published": "2026-10-25T00:31:58.902Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Day Guide: Islanders vs Stars",
+   "published": "2026-10-25T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Autopsy of a Trade | COLUMN",
+   "published": "2026-10-25T06:06:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders at Stars projected lineups",
+   "published": "2026-10-25T20:58:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Connor Hellebuyck",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Declan Chisholm",
+     "detail": "scratched"
+    },
+    {
+     "player": "Remi Poirier",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Devils (7-4-0) are riding positive momentum after a 3-0-0 homestand and begin a three-game road trip in Dallas. Newly acquired goalie Connor Hellebuyck is projected to make his Devils and season debut after being acquired from Winnipeg in a blockbuster trade for Dawson Mercer, Nick Bjugstad, Nico Daws, and draft picks. The team has no players listed as injured."
+  },
+  "home": {
+   "starting_goalie": "Casey DeSmith",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "David Perron",
+     "detail": "scratched"
+    },
+    {
+     "player": "Radek Faksa",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Sam Steel",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Oskar Bäck",
+     "detail": "injured (finger)"
+    },
+    {
+     "player": "Matt Duchene",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Esa Lindell",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Stars (7-3-1) are missing several key players, including Esa Lindell, who is 4-5 days away from returning, and Sam Steel, who could return Thursday against Montreal. David Perron is scratched and not yet ready for his Stars debut, while Casey DeSmith is projected to start in goal ahead of Jake Oettinger."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Connor Hellebuyck",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Declan Chisholm": 0.98,
+    "Remi Poirier": 0.97
+   }
+  },
+  "home": {
+   "starter": "Casey DeSmith",
+   "p_starter": 0.96,
+   "announced": 0.93,
+   "p_out": {
+    "David Perron": 0.97,
+    "Radek Faksa": 0.98,
+    "Sam Steel": 0.98,
+    "Oskar Bäck": 0.97,
+    "Matt Duchene": 0.98,
+    "Esa Lindell": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.4,
+  "jev": 0.2
+ }
+}
