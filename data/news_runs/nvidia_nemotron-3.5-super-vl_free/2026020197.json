@@ -1,0 +1,153 @@
+{
+ "game": {
+  "gameId": 2026020197,
+  "kickoff": "2026-10-28T02:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "Anaheim Ducks",
+  "away_id": 23,
+  "home_id": 24,
+  "away_abbr": "VAN",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-27T23:47:50.977381+00:00",
+ "articles": [
+  {
+   "title": "Canucks at Ducks projected lineups",
+   "published": "2026-10-27T18:32:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Notes: Canucks vs. Wild",
+   "published": "2026-10-25T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Canucks projected lineups",
+   "published": "2026-10-25T18:44:39.219Z",
+   "lineups": false
+  },
+  {
+   "title": "Hughes hears boos, cheers during Vancouver homecoming with Wild",
+   "published": "2026-10-26T13:28:04.413Z",
+   "lineups": false
+  },
+  {
+   "title": "The Week in Blue and Green",
+   "published": "2026-10-26T22:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks Travel to Anaheim to Begin Two-Game Road Trip Through California",
+   "published": "2026-10-27T01:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Leevi Merilainen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brendan Gallagher",
+     "detail": "scratched"
+    },
+    {
+     "player": "Luke Schenn",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Paul Cotter",
+    "detail: "
+   ],
+   "summary": "The Canucks (2-10-1) are struggling early in the season and head to Anaheim for a road game. Thatcher Demko remains out with a hip injury, while Leevi Merilainen is projected to start. Paul Cotter returns to the lineup after being a healthy scratch against Minnesota, and Jamie Oleksiak and Victor Mancini are back on the third defensive pairing after being scratched previously."
+  },
+  "home": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Pavel Mintyukov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nikita Klepov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Drew Helleson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Pavel Mintyukov",
+     "detail": "day to day"
+    }
+   ],
+   "returning": [
+    "/player: Nick Jensen",
+    "detail: "
+   ],
+   "summary": "The Ducks (5-6-0) snapped a five-game losing streak with a win over Philadelphia on Saturday. Lukas Dostal is projected to start in goal after starting eight of the team's 11 games. Nick Jensen returns to the lineup after being scratched against the Flyers, while Pavel Mintyukov will miss his fourth straight game and remains day to day."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.67,
+   "announced": 0.92,
+   "p_out": {
+    "Thatcher Demko": 0.98,
+    "Guillaume Brisebois": 0.95,
+    "Brendan Gallagher": 0.95,
+    "Luke Schenn": 0.94
+   }
+  },
+  "home": {
+   "starter": "Lukas Dostal",
+   "p_starter": 0.96,
+   "announced": 0.95,
+   "p_out": {
+    "Ian Moore": 0.98,
+    "Troy Terry": 0.98,
+    "Ryan Poehling": 0.98,
+    "Pavel Mintyukov": 0.92,
+    "Frank Vatrano": 0.95,
+    "Nikita Klepov": 0.97,
+    "Drew Helleson": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.9,
+  "jev": 0.2
+ }
+}

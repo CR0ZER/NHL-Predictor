@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020198,
+  "kickoff": "2026-10-28T02:30:00Z",
+  "away": "Buffalo Sabres",
+  "home": "San Jose Sharks",
+  "away_id": 7,
+  "home_id": 28,
+  "away_abbr": "BUF",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-27T23:47:55.303597+00:00",
+ "articles": [
+  {
+   "title": "Sabres at Sharks projected lineups",
+   "published": "2026-10-27T18:48:05.189Z",
+   "lineups": true
+  },
+  {
+   "title": "Sabres’ early struggles continue, have ‘got to remember it’s 60 minutes’",
+   "published": "2026-10-25T13:34:03.987Z",
+   "lineups": false
+  },
+  {
+   "title": "Rookie Watch: Stenberg, Hagens among first-year players trending up",
+   "published": "2026-10-26T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Injuries and transactions | Kulich in concussion protocol",
+   "published": "2026-10-26T20:01:00Z",
+   "lineups": false
+  },
+  {
+   "title": "'An ongoing battle' | Sabres continue working toward defensive improvement",
+   "published": "2026-10-26T21:25:00.948Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL EDGE stats: Stenberg’s early impact with Sharks",
+   "published": "2026-10-27T04:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Colten Ellis",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jiri Kulich",
+     "detail": "concussion protocol"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Sam Carrick",
+     "detail": "middle body injury"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Dennis Gilbert",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sabres (4-4-3) are on a four-game road trip and have struggled defensively, allowing the most high-danger chances per game in the NHL. They are missing several key players, including goalie Alex Lyon and forwards Jiri Kulich and Sam Carrick. Colten Ellis is projected to start in goal ahead of Ukko-Pekka Luukkonen."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alexander Wennberg",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nolan Allan",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sharks (6-5-1) are off to a promising start and look to contend for a playoff spot in the Pacific Division. Rookie Ivar Stenberg is expected to play on the first line with Macklin Celebrini and Will Smith. Yaroslav Askarov is projected to start in goal ahead of Alex Nedeljkovic."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 0.86,
+   "announced": 0.92,
+   "p_out": {
+    "Jiri Kulich": 0.95,
+    "Justin Danforth": 0.96,
+    "Sam Carrick": 0.96,
+    "Matt Grzelcyk": 0.97,
+    "Alex Lyon": 0.94,
+    "Conor Timmins": 0.97,
+    "Dennis Gilbert": 0.95
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Alexander Wennberg": 0.94,
+    "Igor Chernyshov": 0.96,
+    "Nolan Allan": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.0,
+  "jev": 0.2
+ }
+}
