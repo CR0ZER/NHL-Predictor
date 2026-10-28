@@ -1,0 +1,155 @@
+{
+ "game": {
+  "gameId": 2026020202,
+  "kickoff": "2026-10-29T02:00:00Z",
+  "away": "Toronto Maple Leafs",
+  "home": "Seattle Kraken",
+  "away_id": 10,
+  "home_id": 55,
+  "away_abbr": "TOR",
+  "home_abbr": "SEA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-28T23:47:38.488373+00:00",
+ "articles": [
+  {
+   "title": "Maple Leafs at Kraken projected lineups",
+   "published": "2026-10-28T19:05:22.363Z",
+   "lineups": true
+  },
+  {
+   "title": "Gavin McKenna Watch: No. 1 pick, Maple Leafs continue western trip",
+   "published": "2026-10-26T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY @ Flames | Oct. 26, 2026",
+   "published": "2026-10-26T15:27:29.21Z",
+   "lineups": false
+  },
+  {
+   "title": "Josh Mahura Focuses on Growth and Reliability",
+   "published": "2026-10-26T16:51:31.327Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs at Flames projected lineups",
+   "published": "2026-10-26T18:10:22.889Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP | Leafs @ Flames | Oct. 26, 2026",
+   "published": "2026-10-27T04:01:36.417Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dakota Joshua",
+     "detail": "core injury"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Chris Tanev",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Tavares",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Marshall Rifai",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Kirill Marchenko",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Blankenburg",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Cole McWard",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Maple Leafs (7-5-2) are on a western road trip and have seen their eight-game win streak against Calgary end. The projected lineup features Gavin McKenna on the top line with Auston Matthews and Jack Roslovic, while several key players including John Tavares, Chris Tanev, and Kirill Marchenko are sidelined with injuries."
+  },
+  "home": {
+   "starting_goalie": "Philipp Grubauer",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jacob Melanson",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ryan Lindgren",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jared McCann",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Curtis Douglas",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ville Ottavainen",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Jani Nyman",
+    "detail: "
+   ],
+   "summary": "The Kraken (7-4-1) held an optional morning skate ahead of the game. Jani Nyman will make his season debut after being recalled from Coachella Valley of the AHL, while Jared McCann will be out 10 weeks with a lower-body injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Dakota Joshua": 0.97,
+    "Max Domi": 0.96,
+    "Chris Tanev": 0.55,
+    "John Tavares": 0.97,
+    "Marshall Rifai": 0.96,
+    "Kirill Marchenko": 0.93,
+    "Nick Blankenburg": 0.94,
+    "Cole McWard": 0.93
+   }
+  },
+  "home": {
+   "starter": "Philipp Grubauer",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Jacob Melanson": 0.97,
+    "Ryan Lindgren": 0.97,
+    "Jared McCann": 0.98,
+    "Curtis Douglas": 0.96,
+    "Ville Ottavainen": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.7,
+  "jev": 0.2
+ }
+}
