@@ -1,0 +1,83 @@
+{
+ "game": {
+  "gameId": 2026020201,
+  "kickoff": "2026-10-29T01:00:00Z",
+  "away": "New Jersey Devils",
+  "home": "Colorado Avalanche",
+  "away_id": 1,
+  "home_id": 21,
+  "away_abbr": "NJD",
+  "home_abbr": "COL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-28T22:47:44.615552+00:00",
+ "articles": [
+  {
+   "title": "Hellebuyck Joins Devils at Practice Prior to Dallas Departure | NOTEBOOK",
+   "published": "2026-10-26T16:54:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hellebuyck says he's 'ready today’ to make Devils debut",
+   "published": "2026-10-26T18:26:24.283Z",
+   "lineups": false
+  },
+  {
+   "title": "Hellebuyck says he's 'ready today’ to make Devils debut",
+   "published": "2026-10-26T18:26:24.283Z",
+   "lineups": false
+  },
+  {
+   "title": "Fantasy spin on Hellebuyck trade to Devils",
+   "published": "2026-10-27T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hellebuyck to make first start for Devils against Stars",
+   "published": "2026-10-27T17:15:01.3Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils at Stars projected lineups",
+   "published": "2026-10-27T17:30:08.25Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jake Allen",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Devils (7-4-0) are on a three-game road trip that began Tuesday in Dallas and continues Wednesday in Colorado. Connor Hellebuyck made his Devils debut Tuesday against the Stars after being acquired from Winnipeg, but with no practice time between games and a back-to-back set, Jake Allen is projected to start in Colorado. Hellebuyck is expected to be involved at some point during the trip."
+  },
+  "home": {
+   "starting_goalie": null,
+   "goalie_status": "unknown",
+   "out": [],
+   "doubtful": [],
+   "returning": [],
+   "summary": "No articles about the Colorado Avalanche were provided, so no lineup, goalie, injury, or team information is available."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jake Allen",
+   "p_starter": 0.56,
+   "announced": 0.27,
+   "p_out": {}
+  },
+  "home": {
+   "starter": "unknown",
+   "p_starter": 1.0,
+   "announced": 0.04,
+   "p_out": {}
+  }
+ },
+ "seconds": {
+  "qwen": 5.0,
+  "jev": 0.3
+ }
+}
