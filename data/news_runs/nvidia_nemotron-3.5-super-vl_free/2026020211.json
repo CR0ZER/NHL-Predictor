@@ -1,0 +1,144 @@
+{
+ "game": {
+  "gameId": 2026020211,
+  "kickoff": "2026-10-30T02:00:00Z",
+  "away": "Buffalo Sabres",
+  "home": "Anaheim Ducks",
+  "away_id": 7,
+  "home_id": 24,
+  "away_abbr": "BUF",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T23:48:56.621398+00:00",
+ "articles": [
+  {
+   "title": "Sabres at Ducks projected lineups ",
+   "published": "2026-10-29T19:30:39.329Z",
+   "lineups": true
+  },
+  {
+   "title": "Sabres at Sharks | How to watch, lineup notes, and storylines",
+   "published": "2026-10-27T18:09:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Ducks projected lineups",
+   "published": "2026-10-27T18:32:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Sharks projected lineups",
+   "published": "2026-10-27T18:48:05.189Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks To Host Día de Muertos Celebration Presented by McDonald's ",
+   "published": "2026-10-27T19:00:03.838Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Ducks Back Home to Take on Canucks",
+   "published": "2026-10-27T19:20:04.355Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Colten Ellis",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jiri Kulich",
+     "detail": "concussion protocol"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body"
+    },
+    {
+     "player": "Konsta Helenius",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Sam Carrick",
+    "detail: "
+   ],
+   "summary": "The Sabres (5-4-3) are on a four-game road trip and have played four of their last five games beyond regulation. Colten Ellis is projected to start in net, with Ukko-Pekka Luukkonen listed as the backup. Sam Carrick returns after missing four games with a middle-body injury, while Dennis Gilbert replaces scratched Zach Metsa on defense."
+  },
+  "home": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ian Moore",
+     "detail": "lower body"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "knee"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Pavel Mintyukov",
+     "detail": "expected to return after missing three games with a lower-body injury; practiced Wednesday"
+    }
+   ],
+   "returning": [
+    "/player: Pavel Mintyukov",
+    "detail: "
+   ],
+   "summary": "The Ducks (5-6-1) are coming off a 2-0 loss to the Sharks and did not hold a morning skate. Lukas Dostal is projected to start, with Ville Husso as backup. Pavel Mintyukov is expected to return to the lineup after missing three games with a lower-body injury, while Cutter Gauthier and Alex Killorn switched lines at practice."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Colten Ellis",
+   "p_starter": 0.72,
+   "announced": 0.92,
+   "p_out": {
+    "Jiri Kulich": 0.97,
+    "Justin Danforth": 0.97,
+    "Matt Grzelcyk": 0.97,
+    "Alex Lyon": 0.97,
+    "Conor Timmins": 0.97,
+    "Konsta Helenius": 0.95
+   }
+  },
+  "home": {
+   "starter": "Lukas Dostal",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Ian Moore": 0.95,
+    "Troy Terry": 0.96,
+    "Ryan Poehling": 0.96,
+    "Pavel Mintyukov": 0.11
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 75.8,
+  "jev": 0.2
+ }
+}

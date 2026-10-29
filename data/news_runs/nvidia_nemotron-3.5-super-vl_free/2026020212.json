@@ -1,0 +1,142 @@
+{
+ "game": {
+  "gameId": 2026020212,
+  "kickoff": "2026-10-30T02:00:00Z",
+  "away": "Ottawa Senators",
+  "home": "Los Angeles Kings",
+  "away_id": 9,
+  "home_id": 26,
+  "away_abbr": "OTT",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T23:49:21.733680+00:00",
+ "articles": [
+  {
+   "title": "Senators at Kings projected lineups",
+   "published": "2026-10-29T18:58:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Doughty wants to ‘play until over 40,’ win another Stanley Cup championship with Kings",
+   "published": "2026-10-27T02:06:00Z",
+   "lineups": false
+  },
+  {
+   "title": "FINAL - LAK 6, NYR 3",
+   "published": "2026-10-27T02:57:30.029Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators Announce Lightenco as Official Lighting and Electrification Partner",
+   "published": "2026-10-27T14:56:40.393Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Blackhawks projected lineups",
+   "published": "2026-10-27T16:30:49.724Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK @ CHI",
+   "published": "2026-10-27T16:51:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jonas Johansson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body injury, out for an extended period"
+    },
+    {
+     "player": "Linus Ullmark",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Carter Yakemchuk",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/Thomas Chabot"
+   ],
+   "summary": "The Senators (8-5-0) are projected to start Jonas Johansson in goal. Thomas Chabot returns to the lineup after missing four games with an upper-body injury, while Carter Yakemchuk is scratched. The team is missing several key players including Warren Foegele, Linus Ullmark, William Eklund, and Kurtis MacDermid due to injuries."
+  },
+  "home": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alex Turcotte",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "leg surgery, week to week"
+    },
+    {
+     "player": "Mats Zuccarello",
+     "detail": "upper body injury, week to week"
+    },
+    {
+     "player": "Martin Chromiak",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cody Ceci",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/Drew Doughty",
+    "/player/Corey Perry"
+   ],
+   "summary": "The Kings (3-6-2) are projected to start Darcy Kuemper in goal. Drew Doughty and Corey Perry each return to the lineup after missing Tuesday's loss to Chicago with undisclosed injuries. Martin Chromiak and Cody Ceci are scratched, while Alex Turcotte, Kevin Fiala, and Mats Zuccarello remain out with injuries."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jonas Johansson",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Warren Foegele": 0.99,
+    "Linus Ullmark": 0.98,
+    "William Eklund": 0.98,
+    "Kurtis MacDermid": 0.98,
+    "Carter Yakemchuk": 0.97
+   }
+  },
+  "home": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Alex Turcotte": 0.96,
+    "Kevin Fiala": 0.97,
+    "Mats Zuccarello": 0.95,
+    "Martin Chromiak": 0.95,
+    "Cody Ceci": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 24.6,
+  "jev": 0.2
+ }
+}
