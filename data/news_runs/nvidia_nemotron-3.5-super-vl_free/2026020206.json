@@ -1,0 +1,107 @@
+{
+ "game": {
+  "gameId": 2026020206,
+  "kickoff": "2026-10-29T23:00:00Z",
+  "away": "Columbus Blue Jackets",
+  "home": "Carolina Hurricanes",
+  "away_id": 29,
+  "home_id": 12,
+  "away_abbr": "CBJ",
+  "home_abbr": "CAR"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T20:47:53.860602+00:00",
+ "articles": [
+  {
+   "title": "Blue Jackets at Hurricanes projected lineups ",
+   "published": "2026-10-29T16:56:32.123Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: Blue Jackets at Philadelphia Flyers ",
+   "published": "2026-10-27T00:23:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kochetkov just thinking 'about hockey' during perfect start for Hurricanes",
+   "published": "2026-10-27T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Preview: October 27 vs. Boston",
+   "published": "2026-10-27T04:05:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Nikishin, Hurricanes end stalemate with one-year contract",
+   "published": "2026-10-27T14:39:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets continue the fight against cancer on Nov. 5",
+   "published": "2026-10-27T15:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jet Greaves",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ivan Provorov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blue Jackets (5-5-0) are projected to start Jet Greaves in net against Carolina. The lineup includes Matthew Knies, who is set to reach 250 career games, and features a forward group led by Valeri Nichushkin, Adam Fantilli, and Kent Johnson. Ivan Provorov and Isac Lundestrom are out with lower-body injuries."
+  },
+  "home": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jordan Staal",
+     "detail": "calf injury"
+    },
+    {
+     "player": "Taylor Hall",
+     "detail": "upper body injury; will miss his seventh straight game"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes (10-2-2) are projected to start Pyotr Kochetkov, who is off to a 7-0-0 start with a 1.70 GAA and .916 save percentage. Taylor Hall remains out with an upper-body injury after leaving morning skate early Tuesday, while Jordan Staal is sidelined with a calf injury. Alexander Nikishin has signed a one-year contract but is not yet in the projected lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jet Greaves",
+   "p_starter": 0.5,
+   "announced": 0.96,
+   "p_out": {
+    "Ivan Provorov": 0.98,
+    "Isac Lundestrom": 0.98
+   }
+  },
+  "home": {
+   "starter": "Pyotr Kochetkov",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Jordan Staal": 0.98,
+    "Taylor Hall": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.5,
+  "jev": 0.2
+ }
+}

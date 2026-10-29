@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020205,
+  "kickoff": "2026-10-29T23:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Pittsburgh Penguins",
+  "away_id": 68,
+  "home_id": 5,
+  "away_abbr": "UTA",
+  "home_abbr": "PIT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T20:47:50.125427+00:00",
+ "articles": [
+  {
+   "title": "Mammoth at Penguins projected lineups ",
+   "published": "2026-10-29T16:13:46.114Z",
+   "lineups": true
+  },
+  {
+   "title": "Utah Hosts Minnesota in Central Division Matchup",
+   "published": "2026-10-27T16:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Mammoth projected lineups",
+   "published": "2026-10-27T17:23:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kindel practices with Penguins, wants to ‘move forward’ following health scare",
+   "published": "2026-10-27T17:41:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kindel Feeling Good, Moving Forward After Medical Episode",
+   "published": "2026-10-27T19:20:32.984Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Minnesota 3, Utah 1",
+   "published": "2026-10-28T01:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "Michael Carcone",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Utah (8-5-0) is coming off a 3-1 loss to Minnesota. The projected lineup includes rookie Artem Duda making his NHL debut on defense, while scratched players are Daniil But and Dmitri Simashev."
+  },
+  "home": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Samuel Girard",
+     "detail": "game-time decision (lower body injury)"
+    }
+   ],
+   "returning": [
+    "/player\": \"Ben Kindel\", \"detail\": \"returning after missing two games due to a vasovagal episode\"}, {\"player\": \"Evgeni Malkin\", \"detail\": \"expected to return after missing one game due to illness\"}, {\"player\": \"Egor Chinakhov\", \"detail\": \"should play after missing two games with a lower-body injury\"}"
+   ],
+   "summary": "Pittsburgh (5-6-1) is seeking a third straight home win. The projected lineup features Ben Kindel's return following a health scare, with Malkin and Chinakhov also expected back; Samuel Girard is a game-time decision."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Maveric Lamoureux": 0.97,
+    "Michael Carcone": 0.85,
+    "John Marino": 0.96
+   }
+  },
+  "home": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Justin Brazeau": 0.98,
+    "Ryan Graves": 0.97,
+    "Trevor van Riemsdyk": 0.97,
+    "Bryan Rust": 0.97,
+    "Elmer Soderblom": 0.76,
+    "Samuel Girard": 0.21
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.8,
+  "jev": 0.1
+ }
+}

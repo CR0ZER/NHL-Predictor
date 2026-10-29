@@ -1,0 +1,145 @@
+{
+ "game": {
+  "gameId": 2026020203,
+  "kickoff": "2026-10-29T23:30:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "Detroit Red Wings",
+  "away_id": 16,
+  "home_id": 17,
+  "away_abbr": "CHI",
+  "home_abbr": "DET"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T20:48:33.027106+00:00",
+ "articles": [
+  {
+   "title": "Blackhawks at Red Wings projected lineups",
+   "published": "2026-10-29T16:44:00Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Red Wings take on Oilers on Monday, wrap up four-game road trip through Pacific Northwest and Western Canada",
+   "published": "2026-10-27T04:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Blackhawks Close Out Homestand Against the Kings",
+   "published": "2026-10-27T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Blackhawks projected lineups",
+   "published": "2026-10-27T16:30:49.724Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings’ veterans ‘lending helping hands’ to youngsters, and it’s making an impact early in 2026-27 season",
+   "published": "2026-10-28T19:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings Week Ahead: Lidstrom Bobblehead Giveaway & Star Wars Night, Hockeytown Halloween and We Are Hockeytown: Military Appreciation Night ",
+   "published": "2026-10-29T01:06:09.509Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Bowen Byram",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Andrew Mangiapane",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ethan Del Mastro",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Alex Vlasic",
+     "detail": "game-time decision after missing morning skate due to illness"
+    }
+   ],
+   "returning": [],
+   "summary": "The Blackhawks (4-8-0) are projected to start Spencer Knight in goal. Patrick Kane faces Detroit for the first time since leaving the Red Wings after three seasons. Vlasic is a game-time decision due to illness, while Greene and Teravainen will switch lines."
+  },
+  "home": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Larkin",
+     "detail": "will not play"
+    },
+    {
+     "player": "Axel Sandin-Pellikka",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dylan Larkin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sheldon Dries",
+     "detail": "scratched"
+    },
+    {
+     "player": "Mason Appleton",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "injured (upper body)"
+    },
+    {
+     "player": "Albert Johansson",
+     "detail": "injured (undisclosed)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/players/daniil-tarasov",
+    "Daniil Tarasov"
+   ],
+   "summary": "The Red Wings (5-4-3) are projected to start John Gibson, with Daniil Tarasov returning after missing three games with an undisclosed injury to serve as backup. Dylan Larkin will not play, and coach Todd McLellan said interim GM Shawn Horcoff will address Larkin's situation later Thursday. Detroit returns home after a four-game road trip through the Pacific Northwest and Western Canada."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Spencer Knight",
+   "p_starter": 0.97,
+   "announced": 0.96,
+   "p_out": {
+    "Bowen Byram": 0.98,
+    "Andrew Mangiapane": 0.96,
+    "Ethan Del Mastro": 0.97,
+    "Alex Vlasic": 0.23
+   }
+  },
+  "home": {
+   "starter": "John Gibson",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Dylan Larkin": 0.95,
+    "Axel Sandin-Pellikka": 0.93,
+    "Sheldon Dries": 0.96,
+    "Mason Appleton": 0.97,
+    "Marco Kasper": 0.97,
+    "Albert Johansson": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 38.9,
+  "jev": 0.1
+ }
+}

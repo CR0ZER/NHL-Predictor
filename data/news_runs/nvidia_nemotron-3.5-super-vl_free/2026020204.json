@@ -1,0 +1,142 @@
+{
+ "game": {
+  "gameId": 2026020204,
+  "kickoff": "2026-10-29T23:00:00Z",
+  "away": "Winnipeg Jets",
+  "home": "Tampa Bay Lightning",
+  "away_id": 52,
+  "home_id": 14,
+  "away_abbr": "WPG",
+  "home_abbr": "TBL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T20:47:45.042249+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Jets at Lightning",
+   "published": "2026-10-29T05:28:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Jets at Lightning projected lineups",
+   "published": "2026-10-29T16:49:54.447Z",
+   "lineups": true
+  },
+  {
+   "title": "GAMEDAY: Panthers at Jets",
+   "published": "2026-10-27T11:59:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: October 27 Winnipeg Jets vs. Florida Panthers",
+   "published": "2026-10-27T12:04:44.07Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Jets projected lineups",
+   "published": "2026-10-27T17:44:12.962Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers extend Jets’ winless streak to six",
+   "published": "2026-10-28T02:35:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Garrett Brown",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Josh Morrissey",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nick Bjugstad",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Vladislav Namestnikov",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Clay Stevenson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nino Niederreiter",
+     "detail": "scratched"
+    },
+    {
+     "player": "Tyrel Bauer",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Jets (4-5-3) are winless in six games (0-4-2) and have scored just 10 goals over that span, though they remain strong defensively. Head coach Scott Arniel hinted at further lineup changes after shaking up lines against Florida, and no line rushes were taken at the morning skate. The team begins a challenging four-game road trip against playoff-caliber opponents."
+  },
+  "home": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Zemgus Girgensons",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning (7-3-1) have not played since Saturday and are expected to dress 11 forwards and seven defensemen. Emil Lilleberg enters the lineup for Max Crozier on defense. The projected lineup features a top line of Hagel, Cirelli, and Kucherov."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.96,
+   "announced": 0.96,
+   "p_out": {
+    "Garrett Brown": 0.97,
+    "Josh Morrissey": 0.97,
+    "Nick Bjugstad": 0.97,
+    "Vladislav Namestnikov": 0.97,
+    "Clay Stevenson": 0.95,
+    "Nino Niederreiter": 0.96,
+    "Tyrel Bauer": 0.92
+   }
+  },
+  "home": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Yanni Gourde": 0.97,
+    "Zemgus Girgensons": 0.92,
+    "Scott Sabourin": 0.97,
+    "Max Crozier": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.8,
+  "jev": 0.2
+ }
+}
