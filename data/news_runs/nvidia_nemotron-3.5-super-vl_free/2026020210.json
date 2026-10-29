@@ -1,0 +1,151 @@
+{
+ "game": {
+  "gameId": 2026020210,
+  "kickoff": "2026-10-30T00:00:00Z",
+  "away": "New York Islanders",
+  "home": "Minnesota Wild",
+  "away_id": 2,
+  "home_id": 30,
+  "away_abbr": "NYI",
+  "home_abbr": "MIN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T21:48:07.083103+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Wild ",
+   "published": "2026-10-29T04:00:12.858Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders at Wild projected lineups ",
+   "published": "2026-10-29T18:12:54.973Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: Islanders at Predators ",
+   "published": "2026-10-27T04:00:06.718Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders at Predators projected lineups",
+   "published": "2026-10-27T17:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Mammoth projected lineups",
+   "published": "2026-10-27T17:23:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Victor Eklund Earning His Keep Early On With Islanders",
+   "published": "2026-10-27T17:48:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Matias Maccelli",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Calum Ritchie",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    },
+    {
+     "player": "Matthew Kessel",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/Kyle MacLean"
+   ],
+   "summary": "The Islanders (6-4-2) have earned at least one point in six of their last seven games (4-1-2) and are coming off a 4-3 shootout win over Nashville. They will return to a conventional 12-forward, six-defenseman alignment after dressing 11 forwards and seven defensemen Tuesday, with Kyle MacLean returning to the lineup and Matt Kessel scratched. New York is expected to alternate starting goalies for the fifth straight game."
+  },
+  "home": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Marcus Foligno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Jared Spurgeon",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Mason Shaw",
+     "detail": "scratched"
+    },
+    {
+     "player": "Carson Lambos",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/David Spacek"
+   ],
+   "summary": "The Wild (9-3-2) lead the Central Division and have the second-most points in the NHL. They are 4-0-0 at home and just completed a five-game road trip with three straight wins. David Spacek will enter the lineup, while Brock Faber remains in return-to-play protocol and has not played since a preseason puck to the head on Sept. 25."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 0.91,
+   "announced": 0.86,
+   "p_out": {
+    "Mathew Barzal": 0.98,
+    "Matias Maccelli": 0.98,
+    "Calum Ritchie": 0.98,
+    "Alexander Romanov": 0.98,
+    "Matthew Kessel": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 0.99,
+   "announced": 0.87,
+   "p_out": {
+    "Brock Faber": 0.97,
+    "Marcus Foligno": 0.98,
+    "Nick Foligno": 0.98,
+    "Filip Gustavsson": 0.98,
+    "Jared Spurgeon": 0.94,
+    "Mason Shaw": 0.95,
+    "Carson Lambos": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.9,
+  "jev": 0.2
+ }
+}

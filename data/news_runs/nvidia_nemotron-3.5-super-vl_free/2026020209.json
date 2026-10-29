@@ -1,0 +1,155 @@
+{
+ "game": {
+  "gameId": 2026020209,
+  "kickoff": "2026-10-30T00:00:00Z",
+  "away": "Montréal Canadiens",
+  "home": "Dallas Stars",
+  "away_id": 8,
+  "home_id": 25,
+  "away_abbr": "MTL",
+  "home_abbr": "DAL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T21:48:00.608819+00:00",
+ "articles": [
+  {
+   "title": "Canadiens at Stars projected lineups",
+   "published": "2026-10-29T17:36:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Day Guide: Devils vs Stars",
+   "published": "2026-10-27T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "MTL@STL: What you need to know",
+   "published": "2026-10-27T12:54:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Blues projected lineups",
+   "published": "2026-10-27T16:58:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils at Stars projected lineups",
+   "published": "2026-10-27T17:30:08.25Z",
+   "lineups": false
+  },
+  {
+   "title": "Heika’s Take: Win streak comes to an end as Devils thoroughly outplay Stars",
+   "published": "2026-10-28T06:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jakub Dobes",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Suzuki",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Owen Beck",
+     "detail": "scratched"
+    },
+    {
+     "player": "Arber Xhekaj",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canadiens (7-3-2) are missing key players including Nick Suzuki, Samuel Montembeault, and Ivan Demidov to injuries, with Owen Beck and Arber Xhekaj scratched. Jakub Dobes is projected to start in goal after Jacob Fowler started the past three games."
+  },
+  "home": {
+   "starting_goalie": "Jake Oettinger",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kyle Capobianco",
+     "detail": "lower body injury, out four weeks"
+    },
+    {
+     "player": "Radek Faksa",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Oskar Bäck",
+     "detail": "finger injury"
+    },
+    {
+     "player": "Matt Duchene",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Esa Lindell",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "David Perron",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Radek Faksa",
+     "detail": "could play Saturday or Tuesday"
+    },
+    {
+     "player": "David Perron",
+     "detail": "could play Saturday or Tuesday"
+    },
+    {
+     "player": "Esa Lindell",
+     "detail": "could play Saturday or Tuesday"
+    }
+   ],
+   "returning": [],
+   "summary": "The Stars (7-4-1) are coming off a 5-1 loss to the Devils and have several injuries, including Kyle Capobianco (out four weeks), Radek Faksa, Oskar Bäck, Matt Duchene, and Esa Lindell. Jake Oettinger is projected to start after Casey DeSmith appeared in the previous game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jakub Dobes",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Nick Suzuki": 0.97,
+    "Samuel Montembeault": 0.98,
+    "Ivan Demidov": 0.97,
+    "Owen Beck": 0.97,
+    "Arber Xhekaj": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jake Oettinger",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Kyle Capobianco": 0.98,
+    "Radek Faksa": 0.73,
+    "Oskar Bäck": 0.95,
+    "Matt Duchene": 0.95,
+    "Esa Lindell": 0.87,
+    "David Perron": 0.89
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.6,
+  "jev": 0.3
+ }
+}

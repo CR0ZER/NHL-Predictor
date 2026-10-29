@@ -1,0 +1,105 @@
+{
+ "game": {
+  "gameId": 2026020208,
+  "kickoff": "2026-10-30T00:00:00Z",
+  "away": "Washington Capitals",
+  "home": "Nashville Predators",
+  "away_id": 15,
+  "home_id": 18,
+  "away_abbr": "WSH",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-29T21:47:54.493458+00:00",
+ "articles": [
+  {
+   "title": "Capitals at Predators projected lineups",
+   "published": "2026-10-29T17:10:55.587Z",
+   "lineups": true
+  },
+  {
+   "title": "GAME DAY: Islanders vs. Preds, October 27",
+   "published": "2026-10-27T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders at Predators projected lineups",
+   "published": "2026-10-27T17:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Caps Finish Homestand vs. Flyers",
+   "published": "2026-10-28T01:47:11.027Z",
+   "lineups": false
+  },
+  {
+   "title": "Noah Kahan, George Kittle cheer on Predators",
+   "published": "2026-10-28T05:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Capitals Loan Mitch Gibson to Hershey",
+   "published": "2026-10-28T18:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Charlie Lindgren",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Vincent Desharnais",
+     "detail": "appendectomy"
+    },
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals (7-4-0) are projected to start Charlie Lindgren in net after Logan Thompson made 23 saves in a 5-2 win over the Philadelphia Flyers on Wednesday. Vincent Desharnais (appendectomy) and Rasmus Sandin (knee) are listed as injured, while Ethen Frank, Dylan McIlrath, and Ivan Miroshnichenko are scratched."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Trudeau",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Vitali Pinchuk",
+    "detail: healthy scratch the past two games, will return to the lineup"
+   ],
+   "summary": "The Predators (4-3-5) are projected to start Juuse Saros, with Justus Annunen listed as the backup. Vitali Pinchuk returns to the lineup after being a healthy scratch for the past two games, while Daemon Hunt, Ilya Lyubushkin, and Reid Schaefer are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Charlie Lindgren",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Vincent Desharnais": 0.98,
+    "Rasmus Sandin": 0.98
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "William Trudeau": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.7,
+  "jev": 0.2
+ }
+}
