@@ -1,0 +1,133 @@
+{
+ "game": {
+  "gameId": 2026020216,
+  "kickoff": "2026-10-31T00:00:00Z",
+  "away": "Seattle Kraken",
+  "home": "Calgary Flames",
+  "away_id": 55,
+  "home_id": 20,
+  "away_abbr": "SEA",
+  "home_abbr": "CGY"
+ },
+ "llm": "dots-studio/dots-3-note-preview:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-30T21:50:02.875694+00:00",
+ "articles": [
+  {
+   "title": "Kraken at Flames projected lineups",
+   "published": "2026-10-30T18:16:02.069Z",
+   "lineups": true
+  },
+  {
+   "title": "Maple Leafs (7-5-2) vs Kraken (7-4-1) | 7:00 p.m.",
+   "published": "2026-10-28T03:00:15.937Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames @ Oilers",
+   "published": "2026-10-28T14:13:18.706Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup - Flames @ Oilers",
+   "published": "2026-10-28T17:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames at Oilers projected lineups",
+   "published": "2026-10-28T17:45:18.395Z",
+   "lineups": false
+  },
+  {
+   "title": "'Always Extra Fire Inside'",
+   "published": "2026-10-28T17:47:30.412Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "doubtful": [
+    {
+     "detail": "game-time decision after being a healthy scratch for a 5-4 win against the Toronto Maple Leafs on Wednesday",
+     "player": "Curtis Douglas"
+    }
+   ],
+   "goalie_status": "projected",
+   "out": [
+    {
+     "detail": "upper body injury",
+     "player": "Jacob Melanson"
+    },
+    {
+     "detail": "upper body injury",
+     "player": "Ryan Lindgren"
+    },
+    {
+     "detail": "lower body injury",
+     "player": "Jared McCann"
+    }
+   ],
+   "returning": [],
+   "starting_goalie": "Philipp Grubauer",
+   "summary": "The Kraken are coming off a 5-4 win against the Toronto Maple Leafs but have suffered significant injuries, notably losing Jared McCann (lower body) for an extended period. They are projected to start Philipp Grubauer in goal, with Curtis Douglas a game-time decision after recently being a healthy scratch."
+  },
+  "home": {
+   "doubtful": [
+    {
+     "detail": "day to day after leaving early in the first period Wednesday",
+     "player": "Brennan Othmann"
+    }
+   ],
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "detail": "lower body injury",
+     "player": "Devin Cooley"
+    },
+    {
+     "detail": "upper body injury",
+     "player": "Brennan Othmann"
+    },
+    {
+     "detail": "hip injury",
+     "player": "Jonathan Huberdeau"
+    },
+    {
+     "detail": "lower body injury",
+     "player": "Samuel Honzek"
+    }
+   ],
+   "returning": [],
+   "starting_goalie": "Dustin Wolf",
+   "summary": "The Flames are coming off a four-game winning streak and are in strong form. They will start Dustin Wolf in goal, with several key players out due to injuries, including Devin Cooley (lower body), Jonathan Huberdeau (hip), and Samuel Honzek (lower body). Brennan Othmann is day-to-day."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Philipp Grubauer",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Jacob Melanson": 0.97,
+    "Ryan Lindgren": 0.97,
+    "Jared McCann": 0.98,
+    "Curtis Douglas": 0.28
+   }
+  },
+  "home": {
+   "starter": "Dustin Wolf",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Devin Cooley": 0.95,
+    "Brennan Othmann": 0.52,
+    "Jonathan Huberdeau": 0.96,
+    "Samuel Honzek": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 141.0,
+  "jev": 0.2
+ }
+}
