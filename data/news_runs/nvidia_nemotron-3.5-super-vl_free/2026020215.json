@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020215,
+  "kickoff": "2026-10-30T23:00:00Z",
+  "away": "Winnipeg Jets",
+  "home": "Florida Panthers",
+  "away_id": 52,
+  "home_id": 13,
+  "away_abbr": "WPG",
+  "home_abbr": "FLA"
+ },
+ "llm": "dots-studio/dots-3-note-preview:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-30T20:50:07.741506+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Jets at Panthers",
+   "published": "2026-10-30T09:49:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Jets at Panthers projected lineups",
+   "published": "2026-10-30T15:00:41.159Z",
+   "lineups": true
+  },
+  {
+   "title": "Panthers extend Jets’ winless streak to six",
+   "published": "2026-10-28T02:35:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘So gifted’: Tkachuk dishing assists at an historic rate for Panthers",
+   "published": "2026-10-28T14:38:19.807Z",
+   "lineups": false
+  },
+  {
+   "title": "Winnipeg Jets celebrate annual Pride Night Nov. 19",
+   "published": "2026-10-28T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "GAMEDAY: Jets at Lightning",
+   "published": "2026-10-29T05:28:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "doubtful": [],
+   "goalie_status": "projected",
+   "out": [
+    {
+     "detail": "lower body",
+     "player": "Garrett Brown"
+    },
+    {
+     "detail": "upper body",
+     "player": "Josh Morrissey"
+    },
+    {
+     "detail": "upper body",
+     "player": "Nick Bjugstad"
+    },
+    {
+     "detail": "undisclosed",
+     "player": "Vladislav Namestnikov"
+    }
+   ],
+   "returning": [],
+   "starting_goalie": "Nico Daws",
+   "summary": "The Jets are on a seven-game winless skid and have struggled to maintain consistency over full 60-minute efforts, often collapsing in stretches that lead to large deficits. Coach Scott Arniel has shuffled lines and emphasized mental mistakes, while the team hopes momentum from a late third-period rally against Tampa can carry into Florida. With several key injuries, Winnipeg is relying on its blue line to contribute more offensively and needs discipline to snap the slide."
+  },
+  "home": {
+   "doubtful": [],
+   "goalie_status": "projected",
+   "out": [
+    {
+     "detail": "upper body",
+     "player": "Jacob Markstrom"
+    },
+    {
+     "detail": "knee",
+     "player": "Aleksander Barkov"
+    },
+    {
+     "detail": "knee",
+     "player": "Brad Marchand"
+    },
+    {
+     "detail": "neck",
+     "player": "Jonah Gadjovich"
+    }
+   ],
+   "returning": [],
+   "starting_goalie": "Akira Schmid",
+   "summary": "The Panthers enter on a strong note with a 5-1 win over Winnipeg, powered by Matthew Tkachuk’s historic assist pace and balanced scoring. They are dressing the same lineup as their previous two games and have depth despite injuries to key players like Barkov and Markstrom. Florida is poised to extend the Jets’ struggles with a disciplined, high-powered attack and strong special teams."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Nico Daws",
+   "p_starter": 0.92,
+   "announced": 0.97,
+   "p_out": {
+    "Garrett Brown": 0.95,
+    "Josh Morrissey": 0.97,
+    "Nick Bjugstad": 0.97,
+    "Vladislav Namestnikov": 0.96
+   }
+  },
+  "home": {
+   "starter": "Akira Schmid",
+   "p_starter": 0.95,
+   "announced": 0.98,
+   "p_out": {
+    "Jacob Markstrom": 0.97,
+    "Aleksander Barkov": 0.98,
+    "Brad Marchand": 0.95,
+    "Jonah Gadjovich": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 143.6,
+  "jev": 0.1
+ }
+}
