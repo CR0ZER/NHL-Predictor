@@ -35,10 +35,14 @@ PUBLIC = {f.name: f for f in [*(LOGO / "web").glob("*.*"), *(LOGO / "svg").glob(
 BETS, PREDS = DATA / "paper_bets.csv", DATA / "predictions.csv"
 PORT = 8765
 STRATEGIES = {
+    "favori_bet365": "Favori du modèle · bet365 vainqueur",
+    "valeur_bet365": "Valeur · bet365 vainqueur",
+    "valeur_winamax": "Valeur · Winamax 1N2",
     "favori": "Favori du modèle · Unibet vainqueur",
     "valeur_unibet": "Valeur · Unibet vainqueur",
-    "valeur_winamax": "Valeur · Winamax 1N2",
 }
+# Stratégies closes : plus de cotes Unibet avant les matchs chez OddsPapi depuis le 26 octobre (remplacé par bet365)
+CLOSED = {"favori": "2026-10-25", "valeur_unibet": "2026-10-25"}
 JOB = {"busy": False, "msg": "", "error": None, "done_at": None}
 MODEL_CACHE = {}
 
@@ -101,7 +105,7 @@ def run_predict(day, stake, use_news, window=False):
                       "away_miss": g.away_miss, "home_miss": g.home_miss,
                       "pin_fair": odds.fair(pin_h, pin_a) if pin_h and pin_a else None,
                       "pin_H": pin_h, "pin_A": pin_a,
-                      "uni_H": c("unibet.fr", "151", "H"), "uni_A": c("unibet.fr", "151", "A"),
+                      "b365_H": c("bet365.fr", "151", "H"), "b365_A": c("bet365.fr", "151", "A"),
                       "wmx_H": c("winamax.fr", "153", "H"), "wmx_X": c("winamax.fr", "153", "X"),
                       "wmx_A": c("winamax.fr", "153", "A")})
         label = {"H": g.home, "A": g.away, "X": "Nul après 60 min"}
@@ -111,13 +115,13 @@ def run_predict(day, stake, use_news, window=False):
                          "pick_label": label[side], "price": price, "p_model": p, "ev": p * price - 1,
                          "stake": stake, "status": "en attente", "profit": None, "score": None})
 
-        uni = {"H": (c("unibet.fr", "151", "H"), g.p_home), "A": (c("unibet.fr", "151", "A"), 1 - g.p_home)}
-        if all(price for price, _ in uni.values()):
+        b365 = {"H": (c("bet365.fr", "151", "H"), g.p_home), "A": (c("bet365.fr", "151", "A"), 1 - g.p_home)}
+        if all(price for price, _ in b365.values()):
             fav = "H" if g.p_home >= 0.5 else "A"
-            bet("favori", "Vainqueur", "Unibet FR", fav, *uni[fav])
-            side = max(uni, key=lambda s: uni[s][1] * uni[s][0])
-            if uni[side][1] * uni[side][0] > 1:  # valeur positive
-                bet("valeur_unibet", "Vainqueur", "Unibet FR", side, *uni[side])
+            bet("favori_bet365", "Vainqueur", "bet365", fav, *b365[fav])
+            side = max(b365, key=lambda s: b365[s][1] * b365[s][0])
+            if b365[side][1] * b365[side][0] > 1:  # valeur positive
+                bet("valeur_bet365", "Vainqueur", "bet365", side, *b365[side])
         wmx = {s: (c("winamax.fr", "153", s), g[f"p{s}"]) for s in "HXA"}
         if all(price for price, _ in wmx.values()):
             side = max(wmx, key=lambda s: wmx[s][1] * wmx[s][0])
@@ -207,7 +211,7 @@ def state():
         b = bets[bets["strategy"] == key]
         done = b[b["status"] != "en attente"].sort_values("kickoff")
         staked, profit = done["stake"].sum(), done["profit"].sum()
-        summary.append({"key": key, "name": name, "settled": len(done), "pending": int((b["status"] == "en attente").sum()),
+        summary.append({"key": key, "name": name, "closed": CLOSED.get(key), "settled": len(done), "pending": int((b["status"] == "en attente").sum()),
                         "won": int((done["status"] == "gagné").sum()), "staked": staked,
                         "profit": profit, "roi": profit / staked if staked else None})
         curve += [{"strategy": key, "i": i + 1, "kickoff": k, "cum": c, "match": f"{a} @ {h}", "profit": p}
@@ -227,7 +231,7 @@ MARKET_IDS = {"Vainqueur": "151", "1N2": "153"}
 def quality(preds, bets):
     """Prédictions réelles face aux résultats, au total et par soirée : log loss du modèle et de Pinnacle (sans marge, au
     moment de la prédiction) sur les mêmes matchs, réussite du favori, et CLV des paris : cote prise × probabilité Pinnacle
-    sans marge à la clôture, même marché et même issue, − 1. Pas la clôture du bookmaker du pari : Unibet et Winamax
+    sans marge à la clôture, même marché et même issue, − 1. Pas la clôture du bookmaker du pari : les opérateurs français
     augmentent leur marge avant le match, ce qui gonflait la CLV quel que soit le pari."""
     if "result" not in preds or preds["result"].isna().all():
         return {"total": None, "days": []}

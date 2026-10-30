@@ -1,4 +1,4 @@
-"""Cotes NHL via OddsPapi : historique Pinnacle / Winamax / Unibet FR, et évaluation du modèle face au marché.
+"""Cotes NHL via OddsPapi : historique Pinnacle / Winamax / bet365 FR, et évaluation du modèle face au marché.
 
     uv run --env-file .env python odds.py update                        # saison en cours, à lancer ~1 fois par semaine
     uv run --env-file .env python odds.py fetch AAAA-MM-JJ AAAA-MM-JJ   # une période passée précise
@@ -29,7 +29,9 @@ from xg import DATA
 API = "https://api.oddspapi.io/v4"
 DIR = DATA / "oddspapi"
 CLOSING = DIR / "closing.csv"  # cotes de clôture résumées (versionné) ; les historiques bruts restent en local
-BOOKS = "pinnacle,winamax.fr,unibet.fr"  # 3 max par appel ; fdj et zebet.fr sont des clones d'unibet.fr
+# 3 max par appel. Unibet (et ses clones zebet.fr, fdj) remplacé par bet365 le 2026-10-29 : depuis le 26 octobre,
+# OddsPapi n'enregistre plus aucune cote Unibet avant le coup d'envoi (première cote ~20 s avant le match)
+BOOKS = "pinnacle,winamax.fr,bet365.fr"
 MONEYLINE, REGULATION = "151", "153"     # vainqueur prolongation incluse (1, 2) ; 1N2 temps réglementaire (1, X, 2)
 OUTCOMES = {MONEYLINE: {"151": "H", "152": "A"}, REGULATION: {"153": "H", "154": "X", "155": "A"}}
 
@@ -195,7 +197,7 @@ def evaluate(season=2025):
 
     # 2. 1N2 temps réglementaire chez les opérateurs français : paris à valeur selon le modèle, et selon Pinnacle
     pin3 = m[(m["book"] == "pinnacle") & (m["market"] == REGULATION)].set_index("gameId")
-    for book in ["winamax.fr", "unibet.fr"]:
+    for book in ["winamax.fr", "unibet.fr", "bet365.fr"]:
         b = m[(m["book"] == book) & (m["market"] == REGULATION)].dropna(subset=["H", "X", "A"]).set_index("gameId")
         if b.empty:
             continue

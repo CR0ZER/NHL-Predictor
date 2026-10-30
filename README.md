@@ -42,7 +42,7 @@ flowchart TD
     E --> F["Jev<br/>gardien titulaire, absences"]
     F --> C
     C --> G["Régression logistique<br/>P(victoire à domicile)"]
-    H["OddsPapi<br/>Pinnacle, Unibet FR, Winamax"] --> I["Paris fictifs<br/>et règlement"]
+    H["OddsPapi<br/>Pinnacle, bet365 FR, Winamax"] --> I["Paris fictifs<br/>et règlement"]
     G --> I
     I --> J["Page publique<br/>GitHub Pages"]
 ```
@@ -87,9 +87,10 @@ Mise fixe de 10 € par pari, à la cote disponible au moment de la prédiction.
 
 | Stratégie | Règle |
 |---|---|
-| Favori du modèle (Unibet FR, vainqueur) | Un pari par match sur l'équipe que le modèle donne gagnante |
-| Valeur Unibet (vainqueur) | Côté où probabilité du modèle × cote − 1 est le plus élevé, s'il est positif |
+| Favori du modèle (bet365 FR, vainqueur) | Un pari par match sur l'équipe que le modèle donne gagnante |
+| Valeur bet365 (vainqueur) | Côté où probabilité du modèle × cote − 1 est le plus élevé, s'il est positif |
 | Valeur Winamax (1N2) | Même règle sur les trois issues |
+| Favori et Valeur Unibet | Closes le 25 octobre 2026 : depuis le 26, OddsPapi n'enregistre plus de cote Unibet avant le coup d'envoi. Remplacées par les stratégies bet365, leur historique reste affiché |
 
 ## Automatisation
 

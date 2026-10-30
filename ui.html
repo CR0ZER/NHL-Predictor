@@ -260,6 +260,8 @@ h2 .sub { text-transform: none; letter-spacing: 0; color: var(--text-muted); fon
 .strats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr)); gap: 14px; margin-top: 14px; }
 .strat { padding: 16px 18px; display: grid; grid-template-columns: 1fr auto; gap: 8px 14px; align-items: center; }
 .strat .name { display: flex; align-items: center; gap: 8px; font-weight: 700; grid-column: 1 / -1; }
+.strat .name .pill { margin-left: auto; font-size: 10.5px; padding: 2px 8px; white-space: nowrap; flex: none; }
+.strat.closed { opacity: .62; }
 .strat .nums { display: flex; flex-wrap: wrap; gap: 8px 14px; font-variant-numeric: tabular-nums; }
 .strat .nums div { display: flex; flex-direction: column; }
 .strat .nums b { font-size: 19px; white-space: nowrap; }
@@ -578,8 +580,9 @@ body.static .updated { display: flex; }
 const $ = s => document.querySelector(s);
 const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const TOUCH = matchMedia("(hover: none)").matches;  // téléphone, tablette : décor figé
-const COLORS = { favori: "var(--s1)", valeur_unibet: "var(--s2)", valeur_winamax: "var(--s3)" };
-const SHORT = { favori: "Favori", valeur_unibet: "Valeur Unibet", valeur_winamax: "Valeur Winamax" };
+// Unibet (favori, valeur_unibet) : stratégies closes le 25 octobre, en gris ; bet365 reprend le bleu et l'orange
+const COLORS = { favori_bet365: "var(--s1)", valeur_bet365: "var(--s2)", valeur_winamax: "var(--s3)", favori: "#8b95a7", valeur_unibet: "#c4a08c" };
+const SHORT = { favori_bet365: "Favori bet365", valeur_bet365: "Valeur bet365", valeur_winamax: "Valeur Winamax", favori: "Favori Unibet (close)", valeur_unibet: "Valeur Unibet (close)" };
 const ABBR = {"anaheim ducks":"ANA","boston bruins":"BOS","buffalo sabres":"BUF","calgary flames":"CGY","carolina hurricanes":"CAR","chicago blackhawks":"CHI","colorado avalanche":"COL","columbus blue jackets":"CBJ","dallas stars":"DAL","detroit red wings":"DET","edmonton oilers":"EDM","florida panthers":"FLA","los angeles kings":"LAK","minnesota wild":"MIN","montreal canadiens":"MTL","nashville predators":"NSH","new jersey devils":"NJD","new york islanders":"NYI","new york rangers":"NYR","ottawa senators":"OTT","philadelphia flyers":"PHI","pittsburgh penguins":"PIT","san jose sharks":"SJS","seattle kraken":"SEA","st. louis blues":"STL","tampa bay lightning":"TBL","toronto maple leafs":"TOR","utah mammoth":"UTA","vancouver canucks":"VAN","vegas golden knights":"VGK","washington capitals":"WSH","winnipeg jets":"WPG"};
 const nick = n => { const w = (n || "").split(" "); return ["Maple", "Red", "Blue", "Golden"].includes(w[w.length - 2]) ? w.slice(-2).join(" ") : w[w.length - 1]; };
 const abbr = n => ABBR[(n || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase()] || (n || "?").split(" ").map(w => w[0]).join("").slice(0, 3).toUpperCase();
@@ -925,7 +928,8 @@ function renderGames(list, day, upcoming = []) {
     </div>`).join("");
   $("#games").innerHTML = list.map((g, i) => {
     const bets = STATE.bets.filter(b => b.gameId === g.gameId);
-    const uni = g.uni_H && g.uni_A ? (1 / g.uni_H) / (1 / g.uni_H + 1 / g.uni_A) : null;
+    const [bk, bkH, bkA] = g.b365_H ? ["bet365", g.b365_H, g.b365_A] : ["Unibet", g.uni_H, g.uni_A];  // Unibet jusqu'au 25 octobre
+    const fair = bkH && bkA ? (1 / bkH) / (1 / bkH + 1 / bkA) : null;
     const gk = n => !n ? "" : n.endsWith("*") ? `${esc(n.slice(0, -2))} <span class="jev" title="Titulaire annoncé dans la presse, lu par Jev">● Jev</span>` : `${esc(n)} <span class="muted" title="Heuristique : le plus titularisé récemment">· probable</span>`;
     const started = new Date(g.kickoff) <= Date.now();
     const won = g.score && g.result, hit = won && (g.p_home >= 0.5) === (won === "H");
@@ -941,9 +945,9 @@ function renderGames(list, day, upcoming = []) {
         <div class="team home ${side("H")}" title="${esc(g.home)}">${logo(g.home)}<div class="tname"><b>${abbr(g.home)} <span class="nick">${esc(nick(g.home))}</span></b><small>${gk(g.home_goalie)}</small></div></div>
       </div>
       ${newsBlock(g, !!g.score)}
-      <div class="probs">${tug(g.p_home, "Modèle")}${tug(g.pin_fair, "Pinnacle")}${tug(uni, "Unibet")}</div>
+      <div class="probs">${tug(g.p_home, "Modèle")}${tug(g.pin_fair, "Pinnacle")}${tug(fair, bk)}</div>
       <div class="odds">
-        <span class="odd">Unibet <b>${g.uni_A ?? "–"}</b> | <b>${g.uni_H ?? "–"}</b></span>
+        <span class="odd">${bk} <b>${bkA ?? "–"}</b> | <b>${bkH ?? "–"}</b></span>
         <span class="odd">Winamax 1N2 <b>${g.wmx_A ?? "–"}</b> · <b>${g.wmx_X ?? "–"}</b> · <b>${g.wmx_H ?? "–"}</b></span>
         <span class="odd">Nul 60 min <b>${pct(g.pX, 0)}</b></span>
       </div>
@@ -981,8 +985,8 @@ function renderSim() {
   countUp($("#k-roi"), roi, v => v == null ? "–" : signPct(v), "roi");
   countUp($("#k-set"), tot.settled, v => Math.round(v), "set");
   countUp($("#k-pend"), tot.pending, v => Math.round(v), "pend");
-  $("#strats").innerHTML = S.map((s, i) => `<div class="card strat rise" style="--i:${i + 3}">
-    <div class="name"><span class="swatch" style="background:${COLORS[s.key]}"></span>${esc(s.name)}</div>
+  $("#strats").innerHTML = S.map((s, i) => `<div class="card strat rise ${s.closed ? "closed" : ""}" style="--i:${i + 3}">
+    <div class="name"><span class="swatch" style="background:${COLORS[s.key]}"></span>${esc(s.name)}${s.closed ? `<span class="pill" title="Plus de cotes Unibet avant les matchs chez OddsPapi : remplacé par bet365">close le ${new Date(s.closed + "T12:00").toLocaleDateString("fr-FR", { day: "numeric", month: "short" })}</span>` : ""}</div>
     <div class="nums"><div><b class="${cls(s.profit)}">${eur(s.profit)}</b><span>profit</span></div>
       <div><b class="${cls(s.roi)}">${s.roi == null ? "–" : signPct(s.roi)}</b><span>ROI</span></div>
       <div><b>${s.won}/${s.settled}</b><span>gagnés</span></div><div><b>${s.pending}</b><span>attente</span></div></div>
