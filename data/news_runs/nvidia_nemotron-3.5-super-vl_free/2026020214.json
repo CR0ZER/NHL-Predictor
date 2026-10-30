@@ -1,0 +1,121 @@
+{
+ "game": {
+  "gameId": 2026020214,
+  "kickoff": "2026-10-30T22:00:00Z",
+  "away": "New Jersey Devils",
+  "home": "Vegas Golden Knights",
+  "away_id": 1,
+  "home_id": 54,
+  "away_abbr": "NJD",
+  "home_abbr": "VGK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-30T19:47:57.220511+00:00",
+ "articles": [
+  {
+   "title": "Devils at Golden Knights projected lineups",
+   "published": "2026-10-29T19:45:29.81Z",
+   "lineups": true
+  },
+  {
+   "title": "QUICK RECAP: Devils 5, Stars 1",
+   "published": "2026-10-27T23:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL EDGE stats: Hellebuyck trade solidifies Devils as contender",
+   "published": "2026-10-28T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hellebuyck impresses in first start with Devils: 'He was exceptional'",
+   "published": "2026-10-28T04:42:42.533Z",
+   "lineups": false
+  },
+  {
+   "title": "Hellebuyck impresses in first start with Devils: 'He was exceptional'",
+   "published": "2026-10-28T04:42:42.533Z",
+   "lineups": false
+  },
+  {
+   "title": "Hellebuyck widens 'window of winning' for Devils, Brodeur says",
+   "published": "2026-10-28T14:55:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Connor Hellebuyck",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Devils (8-5-0) are on a road trip following a 5-2 loss to the Colorado Avalanche on Wednesday. They acquired Connor Hellebuyck from Winnipeg on Oct. 23, and he made a strong debut with 17 saves in a 5-1 win over Dallas on Tuesday. Jake Allen is listed as the backup in the projected lineup."
+  },
+  "home": {
+   "starting_goalie": "Adin Hill",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Coghlan",
+     "detail": "scratched"
+    },
+    {
+     "player": "Carter Hart",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Victor Olofsson",
+     "detail": "injured (lower body)"
+    },
+    {
+     "player": "Parker Wotherspoon",
+     "detail": "injured (upper body)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Carter Hart",
+     "detail": "status for Friday remains unclear after participating in morning skate"
+    },
+    {
+     "player": "Victor Olofsson",
+     "detail": "practiced in a noncontact jersey; hopeful to join team for road trip beginning Monday"
+    }
+   ],
+   "returning": [],
+   "summary": "The Golden Knights (9-4-1) are expected to dress the same skaters from their 4-1 victory over Ottawa on Tuesday. Carter Hart's status for Friday remains unclear despite participating in the morning skate, while Victor Olofsson practiced in a noncontact jersey. Adin Hill is projected to start in goal with Cameron Whitehead as backup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Connor Hellebuyck",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Johnathan Kovacevic": 0.84
+   }
+  },
+  "home": {
+   "starter": "Adin Hill",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Dylan Coghlan": 0.96,
+    "Carter Hart": 0.58,
+    "Victor Olofsson": 0.87,
+    "Parker Wotherspoon": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 13.6,
+  "jev": 0.3
+ }
+}
