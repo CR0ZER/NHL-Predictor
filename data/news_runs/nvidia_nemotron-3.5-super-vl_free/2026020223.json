@@ -1,0 +1,132 @@
+{
+ "game": {
+  "gameId": 2026020223,
+  "kickoff": "2026-10-31T23:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Montréal Canadiens",
+  "away_id": 5,
+  "home_id": 8,
+  "away_abbr": "PIT",
+  "home_abbr": "MTL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-31T20:47:50.077157+00:00",
+ "articles": [
+  {
+   "title": "Penguins at Canadiens projected lineups ",
+   "published": "2026-10-31T16:52:42.41Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: 10.29.26 vs. Utah Mammoth",
+   "published": "2026-10-29T11:00:02.189Z",
+   "lineups": false
+  },
+  {
+   "title": "MTL@DAL: What you need to know",
+   "published": "2026-10-29T13:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens to honor Guy Lafleur's legacy with a special 50/50 raffle",
+   "published": "2026-10-29T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Penguins projected lineups ",
+   "published": "2026-10-29T16:13:46.114Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Stars projected lineups",
+   "published": "2026-10-29T17:36:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sergei Murashov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "lower body"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "lower body"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Penguins (5-6-2) are coming off a 4-3 overtime loss to the Utah Mammoth and are expected to dress the same 18 skaters. Sergei Murashov is projected to make his first start in five games. The team is dealing with several injuries, including key forwards Bryan Rust and Justin Brazeau, and defensemen Ryan Graves and Trevor van Riemsdyk."
+  },
+  "home": {
+   "starting_goalie": "Jacob Fowler",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Suzuki",
+     "detail": "upper body"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower body"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body"
+    },
+    {
+     "player": "Mike Matheson",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canadiens (8-3-2) are missing several key players, including captain Nick Suzuki (upper body) and goaltender Samuel Montembeault (lower body), who is day to day and has yet to play this season. Defenseman Mike Matheson will be out two weeks. Jakub Dobes is projected to start in goal after Jacob Fowler started the past three games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sergei Murashov",
+   "p_starter": 0.91,
+   "announced": 0.97,
+   "p_out": {
+    "Justin Brazeau": 0.94,
+    "Ryan Graves": 0.97,
+    "Trevor van Riemsdyk": 0.97,
+    "Bryan Rust": 0.97,
+    "Elmer Soderblom": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jacob Fowler",
+   "p_starter": 0.93,
+   "announced": 0.86,
+   "p_out": {
+    "Nick Suzuki": 0.98,
+    "Samuel Montembeault": 0.69,
+    "Ivan Demidov": 0.97,
+    "Mike Matheson": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.4
+ }
+}
