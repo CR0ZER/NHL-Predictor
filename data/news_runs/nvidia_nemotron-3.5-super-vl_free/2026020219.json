@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020219,
+  "kickoff": "2026-10-31T18:00:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "Nashville Predators",
+  "away_id": 14,
+  "home_id": 18,
+  "away_abbr": "TBL",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-31T15:48:07.088028+00:00",
+ "articles": [
+  {
+   "title": "Lightning at Predators projected lineups",
+   "published": "2026-10-30T19:33:37.655Z",
+   "lineups": true
+  },
+  {
+   "title": "On The Record, Episode Six: The Season Begins in Smashville",
+   "published": "2026-10-28T20:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ahead of Golden Hall Induction, Trotz Reminisces on Time With Nashville, Thanks Preds Fans for Support",
+   "published": "2026-10-28T21:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Nuts & Bolts: Haunting on Home Ice",
+   "published": "2026-10-29T03:44:27.694Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY: Capitals vs. Preds, October 29",
+   "published": "2026-10-29T11:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘Simplified’: Lightning power play clicks with shooting mentality",
+   "published": "2026-10-29T16:02:36.473Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zemgus Girgensons",
+     "detail": "lower body injury, likely to miss second straight game"
+    },
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning (8-3-1) are coming off a 6-4 win over Winnipeg and project to dress 11 forwards and seven defensemen again. Andrei Vasilevskiy is listed first among projected goaltenders ahead of Dennis Hildeby. Girgensons and Gourde are injured, while Crozier and Sabourin are scratched."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Vitali Pinchuk",
+     "detail": "scratched"
+    },
+    {
+     "player": "Reid Schaefer",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators (4-4-5) lost 4-3 to Washington on Thursday and are projected to dress 11 forwards and seven defensemen. Juuse Saros is listed first among projected goaltenders ahead of Justus Annunen. Nicolas Hague was benched in the third period Thursday after a misplay and penalty, but he remains in the projected lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Zemgus Girgensons": 0.92,
+    "Yanni Gourde": 0.87,
+    "Max Crozier": 0.95,
+    "Scott Sabourin": 0.96
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "William Trudeau": 0.95,
+    "Ilya Lyubushkin": 0.96,
+    "Vitali Pinchuk": 0.95,
+    "Reid Schaefer": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 24.4,
+  "jev": 0.4
+ }
+}
