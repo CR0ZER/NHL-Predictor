@@ -1,0 +1,143 @@
+{
+ "game": {
+  "gameId": 2026020221,
+  "kickoff": "2026-10-31T20:00:00Z",
+  "away": "Buffalo Sabres",
+  "home": "Los Angeles Kings",
+  "away_id": 7,
+  "home_id": 26,
+  "away_abbr": "BUF",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-31T17:47:48.104954+00:00",
+ "articles": [
+  {
+   "title": "Sabres at Kings projected lineups",
+   "published": "2026-10-30T21:02:46.495Z",
+   "lineups": true
+  },
+  {
+   "title": "Sabres’ Hometown Remix jerseys to be revealed Monday, Nov. 2 at 10 a.m.",
+   "published": "2026-10-29T13:54:43.397Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK vs. OTT",
+   "published": "2026-10-29T16:35:44.629Z",
+   "lineups": false
+  },
+  {
+   "title": "LA Kings Recall Martin Chromiak from AHL-Ontario",
+   "published": "2026-10-29T17:32:11.626Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Kings projected lineups",
+   "published": "2026-10-29T18:58:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Injuries and transactions | Helenius out, Carrick in",
+   "published": "2026-10-29T18:59:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jiri Kulich",
+     "detail": "concussion protocol"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body"
+    },
+    {
+     "player": "Konsta Helenius",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/Sam Carrick"
+   ],
+   "summary": "The Sabres (6-4-3) are on a road trip and will wear Hometown Remix jerseys for the first time on Nov. 4 against Ottawa. Sam Carrick returns from injured reserve to the fourth line, while Konsta Helenius is out with an upper-body injury. Ukko-Pekka Luukkonen is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alex Turcotte",
+     "detail": "undisclosed"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "leg surgery"
+    },
+    {
+     "player": "Mats Zuccarello",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Kevin Fiala",
+     "detail": "week to week"
+    },
+    {
+     "player": "Mats Zuccarello",
+     "detail": "week to week"
+    }
+   ],
+   "returning": [],
+   "summary": "The Kings (4-6-2) are beginning a seven-game homestand after a five-game road trip. Darcy Kuemper is expected to start and is coming off a 3-0-0 road trip stretch. Adrian Kempe and Kuemper did not practice Friday for maintenance but are expected to play."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Jiri Kulich": 0.97,
+    "Justin Danforth": 0.97,
+    "Matt Grzelcyk": 0.97,
+    "Alex Lyon": 0.97,
+    "Conor Timmins": 0.97,
+    "Konsta Helenius": 0.97
+   }
+  },
+  "home": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 0.97,
+   "announced": 0.93,
+   "p_out": {
+    "Alex Turcotte": 0.91,
+    "Kevin Fiala": 0.96,
+    "Mats Zuccarello": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.4,
+  "jev": 0.3
+ }
+}

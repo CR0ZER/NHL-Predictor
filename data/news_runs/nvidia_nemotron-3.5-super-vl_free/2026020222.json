@@ -1,0 +1,117 @@
+{
+ "game": {
+  "gameId": 2026020222,
+  "kickoff": "2026-10-31T20:00:00Z",
+  "away": "Ottawa Senators",
+  "home": "San Jose Sharks",
+  "away_id": 9,
+  "home_id": 28,
+  "away_abbr": "OTT",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-31T17:47:52.669701+00:00",
+ "articles": [
+  {
+   "title": "Senators at Sharks projected lineups",
+   "published": "2026-10-30T20:15:31.907Z",
+   "lineups": true
+  },
+  {
+   "title": "Senators vice-president of communications Ian Mendes ‘floored’ to receive Order of Ottawa honour",
+   "published": "2026-10-28T23:13:43.434Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Sharks projected lineups",
+   "published": "2026-10-29T18:43:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Kings projected lineups",
+   "published": "2026-10-29T18:58:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sens blueline returns to full health in Los Angeles",
+   "published": "2026-10-29T19:43:28.444Z",
+   "lineups": false
+  },
+  {
+   "title": "Hodgson to have Player Safety hearing for actions in Senators game",
+   "published": "2026-10-30T16:03:02.86Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jonas Johansson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "lower-body injury, out for an extended period"
+    },
+    {
+     "player": "Linus Ullmark",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Senators (8-5-1) are coming off a 6-5 loss to the Kings and have dealt with several injuries, including Foegele, Ullmark, Eklund, and MacDermid. Thomas Chabot has returned to the blueline, giving Ottawa a fully healthy defense corps. Jonas Johansson is projected to start in goal after earning a third consecutive start versus the Kings."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alexander Wennberg",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sharks (7-6-1) held an optional practice Friday, with coach Ryan Warsofsky not revealing lineup decisions. Alexander Wennberg and Igor Chernyshov remain on injured reserve. Yaroslav Askarov is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jonas Johansson",
+   "p_starter": 0.99,
+   "announced": 0.93,
+   "p_out": {
+    "Warren Foegele": 0.97,
+    "Linus Ullmark": 0.98,
+    "William Eklund": 0.98,
+    "Kurtis MacDermid": 0.98
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.93,
+   "p_out": {
+    "Alexander Wennberg": 0.97,
+    "Igor Chernyshov": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.1,
+  "jev": 0.2
+ }
+}
