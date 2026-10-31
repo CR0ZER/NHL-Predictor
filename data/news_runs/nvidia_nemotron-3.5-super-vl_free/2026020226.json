@@ -1,0 +1,132 @@
+{
+ "game": {
+  "gameId": 2026020226,
+  "kickoff": "2026-11-01T02:00:00Z",
+  "away": "Calgary Flames",
+  "home": "Colorado Avalanche",
+  "away_id": 20,
+  "home_id": 21,
+  "away_abbr": "CGY",
+  "home_abbr": "COL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-10-31T23:47:41.054649+00:00",
+ "articles": [
+  {
+   "title": "Flames at Avalanche projected lineups ",
+   "published": "2026-10-31T17:27:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flames Fall To Oilers",
+   "published": "2026-10-29T03:16:47.294Z",
+   "lineups": false
+  },
+  {
+   "title": "The Farm Report - 29.10.26",
+   "published": "2026-10-29T17:49:53.589Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames vs. Kraken",
+   "published": "2026-10-30T13:21:35.39Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Recall Pair From Wranglers",
+   "published": "2026-10-30T15:16:23.192Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: October 30",
+   "published": "2026-10-30T16:10:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Devin Cooley",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Brennan Othmann",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Samuel Honzek",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "William Stromgren",
+     "detail": "scratched"
+    },
+    {
+     "player": "Joel Hanley",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames (6-7-0) are coming off a 6-2 win over the Seattle Kraken and did not hold a morning skate. Dustin Wolf is projected to start in goal after Devin Cooley suffered a lower-body injury. William Stromgren and Joel Hanley are scratched, while Arsenii Sergeev could make his season debut."
+  },
+  "home": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower-body injury, out approximately eight weeks"
+    },
+    {
+     "player": "Logan O'Connor",
+     "detail": "away from the team for his father's memorial service"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (7-5-1) held an optional morning skate. Mackenzie Blackwood is projected to start in goal. Logan O'Connor will not play due to a family memorial service and is replaced by Gavin Brindley, while Noah Juulsen enters the lineup in place of Josh Manson."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Devin Cooley": 0.97,
+    "Brennan Othmann": 0.97,
+    "Jonathan Huberdeau": 0.98,
+    "Samuel Honzek": 0.98,
+    "William Stromgren": 0.96,
+    "Joel Hanley": 0.96
+   }
+  },
+  "home": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Zachary L'Heureux": 0.97,
+    "Josh Manson": 0.98,
+    "Logan O'Connor": 0.99
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.0,
+  "jev": 0.1
+ }
+}
