@@ -263,3 +263,4 @@ gameId,date,kickoff,away,home,placed_at,strategy,market,book,pick,pick_label,pri
 2026020226,2026-10-31,2026-11-01T02:00:00Z,Calgary Flames,Colorado Avalanche,2026-10-31T23:47:41.161188+00:00,valeur_winamax,1N2,Winamax,X,Nul après 60 min,5.6,0.2249288892130406,0.2596017795930274,10.0,perdu,-10.0,2 - 5
 2026020227,2026-11-01,2026-11-01T18:00:00Z,Winnipeg Jets,Carolina Hurricanes,2026-11-01T15:47:40.569771+00:00,favori_bet365,Vainqueur,bet365,H,Carolina Hurricanes,1.26,0.7556631383292692,-0.0478644457051207,10.0,en attente,,
 2026020227,2026-11-01,2026-11-01T18:00:00Z,Winnipeg Jets,Carolina Hurricanes,2026-11-01T15:47:40.569771+00:00,valeur_winamax,1N2,Winamax,X,Nul après 60 min,4.5,0.2248632883703973,0.0118847976667881,10.0,en attente,,
+2026020228,2026-11-01,2026-11-01T20:30:00Z,Minnesota Wild,Washington Capitals,2026-11-01T17:47:47.636562+00:00,favori_bet365,Vainqueur,bet365,H,Washington Capitals,1.83,0.5098539249823727,-0.06696731728225791,10.0,en attente,,

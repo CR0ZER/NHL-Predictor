@@ -1,0 +1,125 @@
+{
+ "game": {
+  "gameId": 2026020228,
+  "kickoff": "2026-11-01T20:30:00Z",
+  "away": "Minnesota Wild",
+  "home": "Washington Capitals",
+  "away_id": 30,
+  "home_id": 15,
+  "away_abbr": "MIN",
+  "home_abbr": "WSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-01T17:47:47.538002+00:00",
+ "articles": [
+  {
+   "title": "Wild at Capitals projected lineups",
+   "published": "2026-10-31T17:48:45.836Z",
+   "lineups": true
+  },
+  {
+   "title": "Jenner Finds Quick Fit with Caps",
+   "published": "2026-10-29T22:08:28.454Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL teams bid farewell to Ovechkin during final season ",
+   "published": "2026-10-29T23:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hutson Helps Caps Push Past Preds",
+   "published": "2026-10-30T04:46:34.797Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: October 30",
+   "published": "2026-10-30T16:10:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wallstedt living 'the dream' after emerging for Wild",
+   "published": "2026-10-31T05:06:36.025Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Marcus Foligno",
+     "detail": "lower body"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "upper body"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body"
+    },
+    {
+     "player": "Jared Spurgeon",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Joel Eriksson Ek",
+    "detail: "
+   ],
+   "summary": "The Wild (9-3-3) are missing several key players, including goaltender Filip Gustavsson and defensemen Brock Faber and Jared Spurgeon. Jesper Wallstedt is projected to start in net, while Joel Eriksson Ek is expected to play after practicing Saturday following an undisclosed injury."
+  },
+  "home": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee"
+    },
+    {
+     "player": "Vincent Desharnais",
+     "detail": "appendectomy"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals (8-4-0) are coming off a 4-3 win in Nashville, with Charlie Lindgren earning his third straight win. Logan Thompson is projected to start this game, while Rasmus Sandin participated in practice for the first time since tearing his ACL but remains injured."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Brock Faber": 0.98,
+    "Marcus Foligno": 0.97,
+    "Nick Foligno": 0.97,
+    "Filip Gustavsson": 0.98,
+    "Jared Spurgeon": 0.98
+   }
+  },
+  "home": {
+   "starter": "Logan Thompson",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "Rasmus Sandin": 0.93,
+    "Vincent Desharnais": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.2,
+  "jev": 0.2
+ }
+}
