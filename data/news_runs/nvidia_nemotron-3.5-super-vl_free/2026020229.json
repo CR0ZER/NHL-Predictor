@@ -1,0 +1,124 @@
+{
+ "game": {
+  "gameId": 2026020229,
+  "kickoff": "2026-11-01T21:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Philadelphia Flyers",
+  "away_id": 68,
+  "home_id": 4,
+  "away_abbr": "UTA",
+  "home_abbr": "PHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-01T18:47:50.044727+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers vs. Mammoth\n",
+   "published": "2026-11-01T13:25:06.939Z",
+   "lineups": true
+  },
+  {
+   "title": "Mammoth at Flyers projected lineups",
+   "published": "2026-11-01T16:00:00Z",
+   "lineups": true
+  },
+  {
+   "title": "RECAP: Utah 4, Pittsburgh 3",
+   "published": "2026-10-29T23:05:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers Friday Flashback: Andre the Giant",
+   "published": "2026-10-30T14:59:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Faces Philadelphia in a Sunday Matinee",
+   "published": "2026-11-01T16:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "Michael Carcone",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Ben McCartney",
+     "detail": "recalled from AHL; unclear if he will play (game-time decision)"
+    }
+   ],
+   "returning": [],
+   "summary": "The Utah Mammoth (9-5-0) are second in the Central Division and 6-4-0 over their last 10 games. They are in the second match of a six-game road trip after a 4-3 overtime win against Pittsburgh on Thursday, led by Logan Cooley's hat trick and Mikhail Sergachev's overtime winner. Coach Andre Tourigny indicated there could be game-time decisions, and the team could use the same lineup from Pittsburgh."
+  },
+  "home": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    },
+    {
+     "player": "Rasmus Ristolainen",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Travis Konecny",
+     "detail": "lower-body injury; missed 10 games; full practice participant Saturday; could be an option"
+    },
+    {
+     "player": "Owen Tippett",
+     "detail": "upper-body injury; missed six games; full practice participant Saturday; could be an option"
+    }
+   ],
+   "returning": [],
+   "summary": "The Philadelphia Flyers (3-8-4) have lost three straight after a three-game winning streak, including a 4-3 overtime loss to Columbus and a 5-2 loss in Washington. Goaltending has alternated between Dan Vladar and Joseph Woll. Travis Konecny and Owen Tippett practiced fully for a second straight day and could be activated from injured reserve, though it was not confirmed as of the pre-game writing."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.95,
+   "announced": 0.95,
+   "p_out": {
+    "Maveric Lamoureux": 0.97,
+    "Michael Carcone": 0.96,
+    "John Marino": 0.96,
+    "Ben McCartney": 0.4
+   }
+  },
+  "home": {
+   "starter": "Dan Vladar",
+   "p_starter": 0.99,
+   "announced": 0.93,
+   "p_out": {
+    "Nikita Grebenkin": 0.97,
+    "Rasmus Ristolainen": 0.97,
+    "Travis Konecny": 0.29,
+    "Owen Tippett": 0.29
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.2,
+  "jev": 0.6
+ }
+}
