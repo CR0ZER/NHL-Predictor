@@ -1,0 +1,141 @@
+{
+ "game": {
+  "gameId": 2026020235,
+  "kickoff": "2026-11-03T02:00:00Z",
+  "away": "Calgary Flames",
+  "home": "San Jose Sharks",
+  "away_id": 20,
+  "home_id": 28,
+  "away_abbr": "CGY",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-02T23:47:36.945184+00:00",
+ "articles": [
+  {
+   "title": "Flames at Sharks projected lineups",
+   "published": "2026-11-02T19:19:05.216Z",
+   "lineups": true
+  },
+  {
+   "title": "Krak-ed The Code",
+   "published": "2026-10-31T02:56:39.299Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames @ Avalanche",
+   "published": "2026-10-31T14:25:11.074Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames at Avalanche projected lineups ",
+   "published": "2026-10-31T17:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "'It's Coming Together'",
+   "published": "2026-10-31T18:50:05.338Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL stars dress up for Hockey Halloween 2026",
+   "published": "2026-10-31T20:35:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Devin Cooley",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Brennan Othmann",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Samuel Honzek",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Maksim Tsyplakov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Joel Hanley",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"William Stromgren\", \"detail\": \"season debut, replaces Tsyplakov\""
+   ],
+   "summary": "The Flames (6-8-0) are coming off a 6-2 win over the Kraken, extending their home winning streak to five games. William Stromgren will make his season debut after being called up from the AHL, while several players remain sidelined with injuries."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alexander Wennberg",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Libor Hajek",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ty Dellandrea",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Adam Gaudette\", \"detail\": \"returns after being a healthy scratch vs Ottawa\""
+   ],
+   "summary": "The Sharks (7-7-1) host the Flames with Yaroslav Askarov projected to start in goal. Adam Gaudette returns to the lineup after a healthy scratch, while Alexander Wennberg skated in a non-contact jersey for the first time since his injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Devin Cooley": 0.98,
+    "Brennan Othmann": 0.96,
+    "Jonathan Huberdeau": 0.98,
+    "Samuel Honzek": 0.98,
+    "Maksim Tsyplakov": 0.97,
+    "Joel Hanley": 0.97
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Alexander Wennberg": 0.82,
+    "Igor Chernyshov": 0.97,
+    "Libor Hajek": 0.97,
+    "Ty Dellandrea": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 2.7,
+  "jev": 0.2
+ }
+}
