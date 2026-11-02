@@ -1,0 +1,105 @@
+{
+ "game": {
+  "gameId": 2026020234,
+  "kickoff": "2026-11-03T01:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Chicago Blackhawks",
+  "away_id": 21,
+  "home_id": 16,
+  "away_abbr": "COL",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-02T22:47:45.608574+00:00",
+ "articles": [
+  {
+   "title": "Avalanche at Blackhawks projected lineups",
+   "published": "2026-11-02T17:49:12.147Z",
+   "lineups": true
+  },
+  {
+   "title": "Halloween Hockey",
+   "published": "2026-10-31T11:00:12.282Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames at Avalanche projected lineups ",
+   "published": "2026-10-31T17:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Landeskogs scare Avalanche teammates before Halloween party",
+   "published": "2026-10-31T22:41:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Clash in Chicago",
+   "published": "2026-11-02T12:00:21.245Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Blackhawks, NHL and Fanatics Unveil Hometown Remix Uniform, Apparel and Headwear Collection Inspired by the Fans, Fabric and Culture of Chicago",
+   "published": "2026-11-02T15:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Scott Wedgewood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Logan O'Connor",
+    "detail: returns after missing the previous game to attend his father's memorial service"
+   ],
+   "summary": "The Avalanche (8-5-1) are on a back-to-back after a 5-2 win over Calgary. Logan O'Connor returns to the lineup after missing Saturday's game for personal reasons, while Gavin Brindley was assigned to the AHL. Zachary L'Heureux and Josh Manson remain injured."
+  },
+  "home": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Bowen Byram",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blackhawks (4-9-1) come off a 5-4 overtime loss to Boston. Kevin Korchinski and Jordan Greenway are scratched, with Greenway potentially a healthy scratch for the first time this season. Bowen Byram will miss his eighth straight game and is seeing a specialist."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Scott Wedgewood",
+   "p_starter": 0.83,
+   "announced": 0.86,
+   "p_out": {
+    "Zachary L'Heureux": 0.97,
+    "Josh Manson": 0.97
+   }
+  },
+  "home": {
+   "starter": "Spencer Knight",
+   "p_starter": 0.97,
+   "announced": 0.89,
+   "p_out": {
+    "Bowen Byram": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.5,
+  "jev": 0.3
+ }
+}
