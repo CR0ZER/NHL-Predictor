@@ -1,0 +1,125 @@
+{
+ "game": {
+  "gameId": 2026020232,
+  "kickoff": "2026-11-03T00:00:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Boston Bruins",
+  "away_id": 54,
+  "home_id": 6,
+  "away_abbr": "VGK",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-02T21:47:46.234579+00:00",
+ "articles": [
+  {
+   "title": "Golden Knights at Bruins projected lineups",
+   "published": "2026-11-02T19:13:32.938Z",
+   "lineups": true
+  },
+  {
+   "title": "Need to Know: Bruins vs. Blackhawks ",
+   "published": "2026-10-31T15:57:32.184Z",
+   "lineups": false
+  },
+  {
+   "title": "Lawless: A Hill To Make Saves On",
+   "published": "2026-10-31T16:42:36.81Z",
+   "lineups": false
+  },
+  {
+   "title": "Pastrnak will one day top Bruins' goals list, Bucyk, Esposito say",
+   "published": "2026-10-31T17:50:05.657Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL stars dress up for Hockey Halloween 2026",
+   "published": "2026-10-31T20:35:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins Post 5-4 Comeback Win Against Blackhawks in Overtime",
+   "published": "2026-10-31T21:27:08.329Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Victor Olofsson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Parker Wotherspoon",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Raphael Lavoie",
+     "detail": "scratched"
+    },
+    {
+     "player": "Viliam Kmec",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights (9-5-1) are coming off a 5-2 loss to New Jersey and have dropped three of their last four games. Carter Hart is projected to start after missing the previous two games with a lower-body injury, while Adin Hill is listed as the backup. Victor Olofsson and Parker Wotherspoon are injured, and Raphael Lavoie and Viliam Kmec are scratched."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Clifton",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sean Kuraly",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frederic Brunet",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Matthew Poitras",
+    "detail: will play after being scratched for the 5-4 overtime win against Chicago on Saturday; replaces Sean Kuraly on the fourth line"
+   ],
+   "summary": "The Bruins (10-4-1) are coming off a 5-4 overtime comeback win against Chicago and have won two straight after a loss to St. Louis. Jeremy Swayman is projected to start in net, with Michael DiPietro as backup. Matthew Poitras returns to the lineup after being scratched Saturday, while Connor Clifton, Sean Kuraly, and Frederic Brunet are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Carter Hart",
+   "p_starter": 0.95,
+   "announced": 0.95,
+   "p_out": {
+    "Victor Olofsson": 0.98,
+    "Parker Wotherspoon": 0.98,
+    "Raphael Lavoie": 0.97,
+    "Viliam Kmec": 0.89
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Connor Clifton": 0.95,
+    "Sean Kuraly": 0.85,
+    "Frederic Brunet": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.0,
+  "jev": 0.3
+ }
+}

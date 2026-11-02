@@ -1,0 +1,153 @@
+{
+ "game": {
+  "gameId": 2026020233,
+  "kickoff": "2026-11-03T00:00:00Z",
+  "away": "Detroit Red Wings",
+  "home": "Florida Panthers",
+  "away_id": 17,
+  "home_id": 13,
+  "away_abbr": "DET",
+  "home_abbr": "FLA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-02T21:47:51.036122+00:00",
+ "articles": [
+  {
+   "title": "Red Wings at Panthers projected lineups",
+   "published": "2026-11-02T17:12:15.904Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Red Wings host Blues for Hockeytown Halloween on Saturday afternoon",
+   "published": "2026-10-31T14:39:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘Just flowing right now’: Seth Jones piled up the points in October",
+   "published": "2026-10-31T15:09:08.158Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings prepared to 'wait as long as necessary' to trade Larkin",
+   "published": "2026-10-31T20:12:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings recall John Leonard from Grand Rapids",
+   "published": "2026-11-01T14:38:20.803Z",
+   "lineups": false
+  },
+  {
+   "title": "NOTEBOOK: Hats are flying in Florida; Imama making an impact",
+   "published": "2026-11-01T20:53:38.103Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Daniil Tarasov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jacob Bernard-Docker",
+     "detail": "scratched"
+    },
+    {
+     "player": "Carter Mazur",
+     "detail": "scratched"
+    },
+    {
+     "player": "Mason Appleton",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Albert Johansson",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Dylan Larkin",
+     "detail": "suspended without pay (trade request)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: John Leonard",
+    "detail: recalled from Grand Rapids and will play"
+   ],
+   "summary": "The Red Wings (6-5-3) are projected to start Daniil Tarasov in goal against the Panthers. John Leonard has been recalled from Grand Rapids and will play, while Jacob Bernard-Docker and Carter Mazur are scratched. Mason Appleton, Marco Kasper, and Albert Johansson are injured, and Dylan Larkin remains suspended without pay amid trade discussions."
+  },
+  "home": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Uvis Balinskis",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cole Reinhardt",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cooper Black",
+     "detail": "scratched"
+    },
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Jacob Markstrom",
+    "detail: will make his first start since Oct. 17 after missing five games with an upper-body injury sustained in practice"
+   ],
+   "summary": "The Panthers (8-4-2) are projected to start Jacob Markstrom, who returns after missing five games with an upper-body injury. Aleksander Barkov, Brad Marchand, and Jonah Gadjovich remain out with injuries, while Uvis Balinskis, Cole Reinhardt, and Cooper Black are scratched. Florida has won six of its last eight games and sits at 8-4-2."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Daniil Tarasov",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Jacob Bernard-Docker": 0.97,
+    "Carter Mazur": 0.94,
+    "Mason Appleton": 0.94,
+    "Marco Kasper": 0.95,
+    "Albert Johansson": 0.95,
+    "Dylan Larkin": 0.33
+   }
+  },
+  "home": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 0.97,
+   "announced": 0.97,
+   "p_out": {
+    "Uvis Balinskis": 0.97,
+    "Cole Reinhardt": 0.97,
+    "Cooper Black": 0.96,
+    "Aleksander Barkov": 0.97,
+    "Brad Marchand": 0.97,
+    "Jonah Gadjovich": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.4,
+  "jev": 0.2
+ }
+}
