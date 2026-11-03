@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020239,
+  "kickoff": "2026-11-04T00:30:00Z",
+  "away": "Edmonton Oilers",
+  "home": "New Jersey Devils",
+  "away_id": 22,
+  "home_id": 1,
+  "away_abbr": "EDM",
+  "home_abbr": "NJD"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T21:48:49.486762+00:00",
+ "articles": [
+  {
+   "title": "Oilers at Devils projected lineups",
+   "published": "2026-11-03T17:25:23.187Z",
+   "lineups": true
+  },
+  {
+   "title": "PRE-GAME REPORT: Oilers at Rangers",
+   "published": "2026-11-01T01:20:26.743Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils Acquire Seventh-Round Pick From Washington | TRANSACTION",
+   "published": "2026-11-01T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: McDavid named NHL's First Star of the Month",
+   "published": "2026-11-01T19:17:39.4Z",
+   "lineups": false
+  },
+  {
+   "title": "FEATURE: Tomkins' Terrific Return",
+   "published": "2026-11-02T04:38:28.35Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL EDGE stats behind McDavid’s historic start for Oilers",
+   "published": "2026-11-02T05:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Isaac Howard",
+     "detail": "knee injury, will miss his second straight game"
+    },
+    {
+     "player": "Frederik Andersen",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Zach Hyman",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Devon Levi",
+     "detail": "undisclosed injury, no timetable on return"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matt Savoie",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Trent Frederic",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ty Emberson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Oilers (11-2-2) are riding strong form, sitting atop the Pacific Division and Western Conference. Tristan Jarry is projected to start in goal with Devon Levi sidelined, while Max Jones returns to the lineup after being a healthy scratch for four games and Jake Walman returns after three scratches. Key injuries include Zach Hyman (neck), Frederik Andersen, and Isaac Howard (knee, out a couple weeks)."
+  },
+  "home": {
+   "starting_goalie": "Connor Hellebuyck",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brenden Dillon",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Devils (9-5-0) host the Oilers with no players listed as injured. Connor Hellebuyck is projected to start in goal, with Jake Allen as the backup. Brenden Dillon is a healthy scratch, and the lineup features Jack Hughes centering Jesper Bratt and Arseny Gritsyuk on the top line."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Tristan Jarry",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Isaac Howard": 0.98,
+    "Frederik Andersen": 0.97,
+    "Zach Hyman": 0.96,
+    "Mattias Janmark": 0.97,
+    "Devon Levi": 0.95,
+    "Alec Regula": 0.96,
+    "Matt Savoie": 0.96,
+    "Trent Frederic": 0.97,
+    "Ty Emberson": 0.95
+   }
+  },
+  "home": {
+   "starter": "Connor Hellebuyck",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Brenden Dillon": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.6,
+  "jev": 0.1
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "game": {
+  "gameId": 2026020242,
+  "kickoff": "2026-11-04T00:00:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Pittsburgh Penguins",
+  "away_id": 54,
+  "home_id": 5,
+  "away_abbr": "VGK",
+  "home_abbr": "PIT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T21:48:25.323537+00:00",
+ "articles": [
+  {
+   "title": "Golden Knights at Penguins projected lineups",
+   "published": "2026-11-03T16:32:11.1Z",
+   "lineups": true
+  },
+  {
+   "title": "Lapierre’s family wear penguin costumes to watch Pittsburgh forward play",
+   "published": "2026-11-01T01:46:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Musings: Same Issues Haunt Penguins in Montreal",
+   "published": "2026-11-01T03:43:53.026Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Nov. 2, 2026",
+   "published": "2026-11-02T06:24:55.705Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins, NHL and Fanatics Unveil Hometown Remix Uniform, Apparel and Headwear Collection Inspired by the Fans, Fabric and Culture of Pittsburgh",
+   "published": "2026-11-02T14:57:00.804Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights, NHL & Fanatics Unveil Hometown Remix Uniforms",
+   "published": "2026-11-02T14:57:07.563Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Adin Hill",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Victor Olofsson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Parker Wotherspoon",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights (9-5-2) are projected to start Adin Hill in net after Carter Hart made 25 saves in a 3-2 shootout loss to the Boston Bruins on Monday. The projected lineup includes Mitch Marner on the second line with William Karlsson and Brett Howden, while Raphael Lavoie and Viliam Kmec are scratched. Victor Olofsson and Parker Wotherspoon are out with injuries."
+  },
+  "home": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Evgeni Malkin",
+     "detail": "lower body injury, day to day"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Kaedan Korczak",
+     "detail": "game-time decision"
+    }
+   ],
+   "returning": [
+    "/player: Justin Brazeau",
+    "detail: "
+   ],
+   "summary": "The Penguins (5-7-2) are projected to start Arturs Silovs in goal, with Sergei Murashov listed as the backup. Evgeni Malkin will not play despite participating in an optional morning skate and is day to day with a lower-body injury. Kaedan Korczak is a game-time decision, while Justin Brazeau could make his season debut after returning from a conditioning loan."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Adin Hill",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Victor Olofsson": 0.97,
+    "Parker Wotherspoon": 0.98
+   }
+  },
+  "home": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Evgeni Malkin": 0.83,
+    "Ryan Graves": 0.97,
+    "Trevor van Riemsdyk": 0.97,
+    "Bryan Rust": 0.98,
+    "Elmer Soderblom": 0.97,
+    "Kaedan Korczak": 0.19
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.4,
+  "jev": 0.2
+ }
+}

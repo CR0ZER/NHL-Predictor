@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020240,
+  "kickoff": "2026-11-04T00:00:00Z",
+  "away": "St. Louis Blues",
+  "home": "New York Rangers",
+  "away_id": 19,
+  "home_id": 3,
+  "away_abbr": "STL",
+  "home_abbr": "NYR"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T21:48:09.238282+00:00",
+ "articles": [
+  {
+   "title": "Blues at Rangers projected lineups ",
+   "published": "2026-11-03T17:14:56.036Z",
+   "lineups": true
+  },
+  {
+   "title": "Tkachuk played ‘old-time hockey’ on way to Hall of Fame  ",
+   "published": "2026-11-01T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers vs. Oilers: Pregame Notes",
+   "published": "2026-11-01T13:40:00Z",
+   "lineups": false
+  },
+  {
+   "title": "October review: What we've learned about the Blues in the early-going",
+   "published": "2026-11-01T20:25:27.79Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers vs. Oilers: Postgame Notes",
+   "published": "2026-11-02T02:15:17.545Z",
+   "lineups": false
+  },
+  {
+   "title": "Blues reveal Hometown Remix uniform",
+   "published": "2026-11-02T15:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joel Hofer",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksanteri Kaskimaki",
+     "detail": "scratched"
+    },
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Colton Parayko",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Ross Johnston",
+    "detail: "
+   ],
+   "summary": "The Blues (7-6-1) are on a 13-game November slate after a 7-6-1 October. They are missing defensemen Tyler Tucker, Dillon Dube, and Colton Parayko, with Parayko expected to miss his second straight game. Ross Johnston returns to the lineup for the first time since an upper-body injury on Oct. 15."
+  },
+  "home": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Luke Glendenning",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matthew Robertson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Igor Shesterkin",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joonas Korpisalo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Sean Durzi",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Rangers (7-7-1) are beginning a 13-game November slate with three straight home games. They are without goaltenders Igor Shesterkin and Joonas Korpisalo due to lower-body injuries, and defenseman Sean Durzi will miss his second straight game. Taylor Raddysh was sent back to Hartford, while Jaroslav Chmelar was recalled."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joel Hofer",
+   "p_starter": 0.87,
+   "announced": 0.95,
+   "p_out": {
+    "Aleksanteri Kaskimaki": 0.97,
+    "Tyler Tucker": 0.98,
+    "Dillon Dube": 0.98,
+    "Colton Parayko": 0.98
+   }
+  },
+  "home": {
+   "starter": "Dylan Garand",
+   "p_starter": 0.95,
+   "announced": 0.97,
+   "p_out": {
+    "Luke Glendenning": 0.97,
+    "Matthew Robertson": 0.95,
+    "Igor Shesterkin": 0.98,
+    "Joonas Korpisalo": 0.98,
+    "Joseph Veleno": 0.97,
+    "Sean Durzi": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.1,
+  "jev": 0.1
+ }
+}

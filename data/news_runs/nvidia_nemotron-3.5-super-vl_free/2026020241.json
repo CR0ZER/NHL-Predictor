@@ -1,0 +1,122 @@
+{
+ "game": {
+  "gameId": 2026020241,
+  "kickoff": "2026-11-04T00:00:00Z",
+  "away": "Minnesota Wild",
+  "home": "Philadelphia Flyers",
+  "away_id": 30,
+  "home_id": 4,
+  "away_abbr": "MIN",
+  "home_abbr": "PHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T21:48:19.937608+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers vs. Wild\n",
+   "published": "2026-11-03T14:20:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Wild at Flyers projected lineups",
+   "published": "2026-11-03T17:21:41.534Z",
+   "lineups": true
+  },
+  {
+   "title": "RAV4 Things: Flyers vs. Mammoth\n",
+   "published": "2026-11-01T13:25:06.939Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Capitals projected lineups",
+   "published": "2026-11-01T18:42:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Flyers projected lineups",
+   "published": "2026-11-01T18:56:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Wild at Capitals",
+   "published": "2026-11-01T18:58:01.818Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Marcus Foligno",
+     "detail": "lower body"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "upper body"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body"
+    },
+    {
+     "player": "Jared Spurgeon",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Wild (10-3-3) are riding a 4-0-1 stretch since a loss to Calgary and beat the Capitals 5-1 on Sunday. Coach John Hynes said there will be no lineup changes from that win, and Jesper Wallstedt is projected to start in net. Minnesota is missing several key players, including Brock Faber, both Folignos, Filip Gustavsson, and Jared Spurgeon."
+  },
+  "home": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back"
+    },
+    {
+     "player": "Rasmus Ristolainen",
+     "detail": "upper body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers (4-8-4) snapped a three-game losing skid with a 6-3 win over Utah on Saturday, their best offensive performance of the season. Rick Tocchet said there will be no lineup changes from that game, and Dan Vladar will start for the second straight game. Travis Konecny will play after a maintenance day, while Alex Bump was sent to the AHL on Monday."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Brock Faber": 0.98,
+    "Marcus Foligno": 0.98,
+    "Nick Foligno": 0.97,
+    "Filip Gustavsson": 0.98,
+    "Jared Spurgeon": 0.98
+   }
+  },
+  "home": {
+   "starter": "Dan Vladar",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Nikita Grebenkin": 0.98,
+    "Rasmus Ristolainen": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 10.3,
+  "jev": 0.1
+ }
+}

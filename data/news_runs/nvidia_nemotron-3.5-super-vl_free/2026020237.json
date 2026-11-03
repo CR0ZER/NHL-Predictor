@@ -1,0 +1,149 @@
+{
+ "game": {
+  "gameId": 2026020237,
+  "kickoff": "2026-11-04T00:00:00Z",
+  "away": "Winnipeg Jets",
+  "home": "Montréal Canadiens",
+  "away_id": 52,
+  "home_id": 8,
+  "away_abbr": "WPG",
+  "home_abbr": "MTL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T21:48:00.150834+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Jets at Canadiens",
+   "published": "2026-11-03T08:27:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Jets at Canadiens projected lineups ",
+   "published": "2026-11-03T18:06:18.771Z",
+   "lineups": true
+  },
+  {
+   "title": "Tkachuk played ‘old-time hockey’ on way to Hall of Fame  ",
+   "published": "2026-11-01T04:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "GAMEDAY: Jets at Hurricanes",
+   "published": "2026-11-01T04:32:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: November 1 Winnipeg Jets at Carolina Hurricanes",
+   "published": "2026-11-01T06:00:21.08Z",
+   "lineups": false
+  },
+  {
+   "title": "Fowler named NHL Rookie of the Month for October",
+   "published": "2026-11-01T18:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Garrett Brown",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Josh Morrissey",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nick Bjugstad",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Vladislav Namestnikov",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Nico Daws",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brad Lambert",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cole Koepke",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/Dawson Mercer"
+   ],
+   "summary": "The Jets (4-8-3) are in the midst of a 0-7-2 run and have lost five straight one-goal games. They are coming off a 7-0 loss to Carolina and have given up the first goal in six straight contests. Coach Scott Arniel shuffled lines at practice, but Dawson Mercer will return to the lineup after missing Monday's skate."
+  },
+  "home": {
+   "starting_goalie": "Jacob Fowler",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Suzuki",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Kirby Dach",
+     "detail": "illness"
+    },
+    {
+     "player": "Mike Matheson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canadiens (9-3-2) have won all three games since their 2-1 Heritage Classic victory over Winnipeg. They are dealing with several injuries, including key forwards Nick Suzuki and Kirby Dach, and defenseman Mike Matheson. Goaltender Jacob Fowler was named NHL Rookie of the Month for October after going 7-1-0 with a 1.84 GAA and .932 save percentage."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.9,
+   "announced": 0.72,
+   "p_out": {
+    "Garrett Brown": 0.98,
+    "Josh Morrissey": 0.98,
+    "Nick Bjugstad": 0.98,
+    "Vladislav Namestnikov": 0.98,
+    "Nico Daws": 0.96,
+    "Brad Lambert": 0.96,
+    "Cole Koepke": 0.89
+   }
+  },
+  "home": {
+   "starter": "Jacob Fowler",
+   "p_starter": 0.89,
+   "announced": 0.8,
+   "p_out": {
+    "Nick Suzuki": 0.98,
+    "Kirby Dach": 0.98,
+    "Mike Matheson": 0.98,
+    "Ivan Demidov": 0.98,
+    "Samuel Montembeault": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.6,
+  "jev": 0.3
+ }
+}

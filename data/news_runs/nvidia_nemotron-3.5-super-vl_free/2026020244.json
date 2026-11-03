@@ -1,0 +1,129 @@
+{
+ "game": {
+  "gameId": 2026020244,
+  "kickoff": "2026-11-04T00:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Columbus Blue Jackets",
+  "away_id": 21,
+  "home_id": 29,
+  "away_abbr": "COL",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T21:48:42.533049+00:00",
+ "articles": [
+  {
+   "title": "Avalanche at Blue Jackets projected lineups ",
+   "published": "2026-11-03T17:17:53.296Z",
+   "lineups": true
+  },
+  {
+   "title": "Blue Jackets make connections at annual Nationwide Children's visit",
+   "published": "2026-11-01T16:26:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Clash in Chicago",
+   "published": "2026-11-02T12:00:21.245Z",
+   "lineups": false
+  },
+  {
+   "title": "Columbus Blue Jackets to televise 10 regular season games on over-the-air stations this season",
+   "published": "2026-11-02T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets, NHL, and Fanatics unveil Blue Jackets Hometown Remix uniform",
+   "published": "2026-11-02T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche at Blackhawks projected lineups",
+   "published": "2026-11-02T17:49:12.147Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (9-5-1) are on a back-to-back after defeating the Chicago Blackhawks 5-2 on Monday. They did not hold a morning skate, and Mackenzie Blackwood is projected to start after making 21 saves in that game, though Scott Wedgewood may also start. Zachary L'Heureux and Josh Manson remain injured."
+  },
+  "home": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Emil Andrae",
+     "detail": "scratched"
+    },
+    {
+     "player": "Danton Heinen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Erik Gudbranson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Emil Andrae",
+     "detail": "game-time decision for third defense pair"
+    },
+    {
+     "player": "Erik Gudbranson",
+     "detail": "game-time decision for third defense pair"
+    }
+   ],
+   "returning": [
+    "/player\": \"Dmitri Voronkov\", \"detail\": \"returns to lineup in place of Danton Heinen\"}], ",
+    "summary"
+   ],
+   "summary": "The Blue Jackets (5-7-0) host the Avalanche wearing their Hometown Remix uniforms. Cam Talbot is projected to start in goal. Danton Heinen is scratched and replaced by Dmitri Voronkov on the second line, while Charlie Coyle moves to the third line and Sean Monahan to the fourth. The third defensive pairing remains a game-time decision between Emil Andrae and Erik Gudbranson."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.98,
+   "announced": 0.9,
+   "p_out": {
+    "Zachary L'Heureux": 0.97,
+    "Josh Manson": 0.97
+   }
+  },
+  "home": {
+   "starter": "Cam Talbot",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Emil Andrae": 0.47,
+    "Danton Heinen": 0.97,
+    "Erik Gudbranson": 0.44,
+    "Isac Lundestrom": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.2,
+  "jev": 0.3
+ }
+}

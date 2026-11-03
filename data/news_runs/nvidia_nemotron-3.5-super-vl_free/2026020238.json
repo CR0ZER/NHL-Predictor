@@ -1,0 +1,134 @@
+{
+ "game": {
+  "gameId": 2026020238,
+  "kickoff": "2026-11-04T00:00:00Z",
+  "away": "Detroit Red Wings",
+  "home": "Tampa Bay Lightning",
+  "away_id": 17,
+  "home_id": 14,
+  "away_abbr": "DET",
+  "home_abbr": "TBL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T21:48:04.816486+00:00",
+ "articles": [
+  {
+   "title": "Red Wings at Lightning projected lineups",
+   "published": "2026-11-03T17:02:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Red Wings recall John Leonard from Grand Rapids",
+   "published": "2026-11-01T14:38:20.803Z",
+   "lineups": false
+  },
+  {
+   "title": "Lightning unveil Hometown Remix uniform, set to debut on November 14",
+   "published": "2026-11-02T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings at Panthers projected lineups",
+   "published": "2026-11-02T17:12:15.904Z",
+   "lineups": false
+  },
+  {
+   "title": "Kucherov says trade request to Lightning about poor communication, respect",
+   "published": "2026-11-02T18:16:42.809Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Red Wings begin back-to-back set in Florida, battle Panthers on Monday",
+   "published": "2026-11-02T22:12:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mason Appleton",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Albert Johansson",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Jacob Bernard-Docker",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nate Danielson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/John Leonard"
+   ],
+   "summary": "The Red Wings (7-5-3) are on a back-to-back after a 5-3 win at Florida on Monday. John Gibson is expected to start in goal after Daniil Tarasov played the opener. John Leonard was recalled from Grand Rapids and is projected into the lineup."
+  },
+  "home": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zemgus Girgensons",
+     "detail": "lower body injury; participated in optional morning skate but will not play"
+    },
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning (8-3-2) host the Red Wings on Tuesday. Andrei Vasilevskiy is projected to start in goal. Nikita Kucherov remains with the team despite requesting a trade, and Brandon Hagel said Kucherov is focused on helping the team win."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "John Gibson",
+   "p_starter": 0.95,
+   "announced": 0.98,
+   "p_out": {
+    "Mason Appleton": 0.98,
+    "Marco Kasper": 0.98,
+    "Albert Johansson": 0.97,
+    "Jacob Bernard-Docker": 0.97,
+    "Nate Danielson": 0.97
+   }
+  },
+  "home": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.95,
+   "announced": 0.93,
+   "p_out": {
+    "Zemgus Girgensons": 0.98,
+    "Yanni Gourde": 0.97,
+    "Max Crozier": 0.97,
+    "Scott Sabourin": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.1
+ }
+}
