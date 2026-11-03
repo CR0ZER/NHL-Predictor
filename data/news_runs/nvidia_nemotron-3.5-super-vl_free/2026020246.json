@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020246,
+  "kickoff": "2026-11-04T02:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "Vancouver Canucks",
+  "away_id": 24,
+  "home_id": 23,
+  "away_abbr": "ANA",
+  "home_abbr": "VAN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T23:47:40.161468+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Canucks projected lineups",
+   "published": "2026-11-03T19:43:35.256Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Ducks Battle Senators for Día de Muertos Night",
+   "published": "2026-11-01T17:00:21.996Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Assign Jensen to San Diego",
+   "published": "2026-11-01T20:12:45.881Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Ducks projected lineups",
+   "published": "2026-11-01T20:27:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Vancouver Canucks, NHL and Fanatics Unveil Hometown Remix Uniform, Apparel and Headwear Collection Inspired by the Fans Fabric and Culture of Vancouver",
+   "published": "2026-11-02T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Unveil Hometown Remix Jersey for 2026-27 Season",
+   "published": "2026-11-02T15:00:01.865Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Laurent Brossoit",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ville Husso",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    },
+    {
+     "player": "Tyson Hinds",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "knee injury"
+    },
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (6-7-1) are on a three-game road trip and will start Laurent Brossoit in goal for the second straight game after his recall from San Diego. The lineup includes several scratches (Husso, Vatrano, Hinds) and injuries to Moore, Terry, Poehling, and Greer, while Nico Myatovic was recalled from the AHL."
+  },
+  "home": {
+   "starting_goalie": "Kevin Lankinen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "scratched"
+    },
+    {
+     "player": "Luke Schenn",
+     "detail": "scratched"
+    },
+    {
+     "player": "Arshdeep Bains",
+     "detail": "scratched"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks (3-12-1) are projected to start Kevin Lankinen in net. Victor Mancini will replace Luke Schenn in the lineup for the third time in four games, while Guillaume Brisebois and Arshdeep Bains are also scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Laurent Brossoit",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Ville Husso": 0.97,
+    "Frank Vatrano": 0.96,
+    "Tyson Hinds": 0.97,
+    "Ian Moore": 0.96,
+    "Troy Terry": 0.96,
+    "Ryan Poehling": 0.97,
+    "A.J. Greer": 0.97
+   }
+  },
+  "home": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Guillaume Brisebois": 0.98,
+    "Luke Schenn": 0.96,
+    "Arshdeep Bains": 0.96,
+    "Filip Chytil": 0.97,
+    "Thatcher Demko": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 2.7,
+  "jev": 0.2
+ }
+}
