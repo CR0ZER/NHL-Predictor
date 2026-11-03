@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020245,
+  "kickoff": "2026-11-04T01:00:00Z",
+  "away": "Carolina Hurricanes",
+  "home": "Nashville Predators",
+  "away_id": 12,
+  "home_id": 18,
+  "away_abbr": "CAR",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-03T22:47:45.044216+00:00",
+ "articles": [
+  {
+   "title": "Hurricanes at Predators projected lineups ",
+   "published": "2026-11-03T18:45:28.353Z",
+   "lineups": true
+  },
+  {
+   "title": "Preview: November 1 vs. Winnipeg",
+   "published": "2026-11-01T10:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: November 1 vs. Winnipeg",
+   "published": "2026-11-01T16:06:35.814Z",
+   "lineups": false
+  },
+  {
+   "title": "Kochetkov Named NHL's Third Star Of The Month",
+   "published": "2026-11-01T19:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators Acquire Shane Wright From Kraken",
+   "published": "2026-11-01T22:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes players bring children to center ice for Kids Day Storm Surge",
+   "published": "2026-11-02T02:32:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Taylor Hall",
+     "detail": "Upper body injury; made the trip and participated in morning skate but will not play per coach Rod Brind'Amour"
+    },
+    {
+     "player": "Jordan Staal",
+     "detail": "Calf injury"
+    },
+    {
+     "player": "Mike Reilly",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes (12-2-2) are riding strong form and project to use the same forward and defensive groupings as their recent games. Taylor Hall is out despite participating in the morning skate, while Jordan Staal remains sidelined with a calf injury. Pyotr Kochetkov is the projected starter after a franchise-record 9-0-0 start to the season and October’s NHL Third Star honors."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nicolas Hague",
+     "detail": "Scratched; has not played since being benched in the second period of a 4-3 loss to Washington on Oct. 29"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Jonathan Marchessault",
+     "detail": "Scratched; listed as a game-time decision due to an undisclosed issue and did not skate Monday or Tuesday"
+    },
+    {
+     "player": "William Trudeau",
+     "detail": "Upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jonathan Marchessault",
+     "detail": "Game-time decision due to an undisclosed issue; did not skate Monday or Tuesday"
+    }
+   ],
+   "returning": [],
+   "summary": "The Predators (5-4-5) are projected to start Juuse Saros in net. Shane Wright is expected to make his Predators debut after being acquired from Seattle for Matthew Wood. Nashville has multiple scratches, including Nicolas Hague, Ilya Lyubushkin, and Jonathan Marchessault, with Marchessault’s status uncertain as a game-time decision."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Pyotr Kochetkov",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Taylor Hall": 0.98,
+    "Jordan Staal": 0.98,
+    "Mike Reilly": 0.97
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Nicolas Hague": 0.97,
+    "Ilya Lyubushkin": 0.96,
+    "Jonathan Marchessault": 0.61,
+    "William Trudeau": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.2
+ }
+}
