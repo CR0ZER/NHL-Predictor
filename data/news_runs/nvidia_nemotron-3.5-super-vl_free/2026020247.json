@@ -1,0 +1,168 @@
+{
+ "game": {
+  "gameId": 2026020247,
+  "kickoff": "2026-11-05T00:30:00Z",
+  "away": "Ottawa Senators",
+  "home": "Buffalo Sabres",
+  "away_id": 9,
+  "home_id": 7,
+  "away_abbr": "OTT",
+  "home_abbr": "BUF"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-04T21:47:44.424196+00:00",
+ "articles": [
+  {
+   "title": "Senators at Sabres projected lineups",
+   "published": "2026-11-04T17:37:08.585Z",
+   "lineups": true
+  },
+  {
+   "title": "Mendes Monday Musings",
+   "published": "2026-11-02T14:29:53.521Z",
+   "lineups": false
+  },
+  {
+   "title": "Ottawa Senators, NHL and Fanatics Unveil Hometown Remix Uniform, Apparel and Headwear",
+   "published": "2026-11-02T14:57:22.984Z",
+   "lineups": false
+  },
+  {
+   "title": "Sens’ Hometown Remix jersey features five details uniquely designed for Ottawa",
+   "published": "2026-11-02T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Thompson named NHL’s 1st Star of the Week",
+   "published": "2026-11-02T18:01:09.468Z",
+   "lineups": false
+  },
+  {
+   "title": "5 numbers that define Sabres through October",
+   "published": "2026-11-02T19:44:25.15Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Samuel Ersson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyler Kleven",
+     "detail": "sick"
+    },
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body"
+    },
+    {
+     "player": "Linus Ullmark",
+     "detail": "lower body"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "lower body"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Nikolas Matinpalo",
+    "detail: replaces Kleven in lineup after being scratched past three games"
+   ],
+   "summary": "The Senators (9-6-1) are dealing with a significant injury list, including goalie Linus Ullmark (lower body), who skated in the morning skate and is described as a step in the right direction after missing six games. Forward Tyler Kleven is out sick, with Nikolas Matinpalo returning to the lineup in his place after being scratched the previous three games. Samuel Ersson is projected to start in goal for Ottawa."
+  },
+  "home": {
+   "starting_goalie": "Colten Ellis",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Konsta Helenius",
+     "detail": "upper body"
+    },
+    {
+     "player": "Jiri Kulich",
+     "detail": "concussion protocol"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Konsta Helenius",
+     "detail": "week to week"
+    },
+    {
+     "player": "Jiri Kulich",
+     "detail": "available to play per coach"
+    },
+    {
+     "player": "Conor Timmins",
+     "detail": "available to play per coach"
+    }
+   ],
+   "returning": [],
+   "summary": "The Sabres (7-4-3) enter November riding their first three-game winning streak and sit in the thick of the Atlantic Division race. Tage Thompson was named the NHL's First Star of the Week after an eight-point week in California. Several players remain injured, including Alex Lyon in goal, with Colten Ellis projected to start; Kulich and Timmins are available to play per coach Lindy Ruff, while Helenius is week to week."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Samuel Ersson",
+   "p_starter": 0.97,
+   "announced": 0.96,
+   "p_out": {
+    "Tyler Kleven": 0.97,
+    "Warren Foegele": 0.98,
+    "Linus Ullmark": 0.85,
+    "William Eklund": 0.96,
+    "Kurtis MacDermid": 0.97,
+    "Andre Burakovsky": 0.98,
+    "Hayden Hodgson": 0.96
+   }
+  },
+  "home": {
+   "starter": "Colten Ellis",
+   "p_starter": 0.65,
+   "announced": 0.92,
+   "p_out": {
+    "Konsta Helenius": 0.85,
+    "Jiri Kulich": 0.19,
+    "Justin Danforth": 0.86,
+    "Matt Grzelcyk": 0.9,
+    "Alex Lyon": 0.91,
+    "Conor Timmins": 0.22
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.4,
+  "jev": 0.2
+ }
+}
