@@ -1,0 +1,167 @@
+{
+ "game": {
+  "gameId": 2026020260,
+  "kickoff": "2026-11-06T01:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "Edmonton Oilers",
+  "away_id": 24,
+  "home_id": 22,
+  "away_abbr": "ANA",
+  "home_abbr": "EDM"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-05T22:47:47.052303+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Oilers projected lineups",
+   "published": "2026-11-05T19:06:54.747Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Oilers at Devils",
+   "published": "2026-11-03T04:25:48.23Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL EDGE stats behind McDavid’s historic start for Oilers",
+   "published": "2026-11-03T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "NU93 RECORD",
+   "published": "2026-11-03T05:29:34.311Z",
+   "lineups": false
+  },
+  {
+   "title": "PROJECTED LINEUP: Oilers at Devils",
+   "published": "2026-11-03T17:02:54.609Z",
+   "lineups": false
+  },
+  {
+   "title": "Oilers at Devils projected lineups",
+   "published": "2026-11-03T17:25:23.187Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Laurent Brossoit",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyson Hinds",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ville Husso",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    },
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (7-7-1) head to Edmonton off a 5-4 win at Vancouver on Tuesday. Coach Joel Quenneville said there will be no lineup changes from that game. They are missing several players to injury and scratches, including Troy Terry (hip) and Ryan Poehling (MCL)."
+  },
+  "home": {
+   "starting_goalie": "Matt Tomkins",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ty Emberson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Trent Frederic",
+     "detail": "scratched"
+    },
+    {
+     "player": "Isaac Howard",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frederik Andersen",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Zach Hyman",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Tristan Jarry",
+     "detail": "illness"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matthew Savoie",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Oilers (11-2-3) are coming off a 4-3 shootout loss at New Jersey on Tuesday and will use the same skaters from that game. With Tristan Jarry out due to illness, Devon Levi is expected to dress as the backup after sitting out the past six games with an undisclosed injury. Matt Tomkins is projected to start in net."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Laurent Brossoit",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Tyson Hinds": 0.97,
+    "Ville Husso": 0.97,
+    "Frank Vatrano": 0.98,
+    "A.J. Greer": 0.98,
+    "Ian Moore": 0.98,
+    "Ryan Poehling": 0.98,
+    "Troy Terry": 0.97
+   }
+  },
+  "home": {
+   "starter": "Matt Tomkins",
+   "p_starter": 0.98,
+   "announced": 0.95,
+   "p_out": {
+    "Ty Emberson": 0.96,
+    "Trent Frederic": 0.96,
+    "Isaac Howard": 0.97,
+    "Frederik Andersen": 0.96,
+    "Zach Hyman": 0.97,
+    "Tristan Jarry": 0.97,
+    "Mattias Janmark": 0.97,
+    "Alec Regula": 0.97,
+    "Matthew Savoie": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.3,
+  "jev": 0.3
+ }
+}
