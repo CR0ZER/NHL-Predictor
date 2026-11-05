@@ -1,0 +1,122 @@
+{
+ "game": {
+  "gameId": 2026020251,
+  "kickoff": "2026-11-06T00:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Montréal Canadiens",
+  "away_id": 68,
+  "home_id": 8,
+  "away_abbr": "UTA",
+  "home_abbr": "MTL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-05T21:47:47.715277+00:00",
+ "articles": [
+  {
+   "title": "Mammoth at Canadiens projected lineups",
+   "published": "2026-11-05T18:46:31.658Z",
+   "lineups": true
+  },
+  {
+   "title": "WPG@MTL: What you need to know",
+   "published": "2026-11-03T14:08:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Continues Road Trip in Toronto",
+   "published": "2026-11-03T15:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Updates from optional morning skate – Nov. 3",
+   "published": "2026-11-03T16:55:29.716Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Maple Leafs projected lineups",
+   "published": "2026-11-03T17:53:04.347Z",
+   "lineups": false
+  },
+  {
+   "title": "Jets at Canadiens projected lineups ",
+   "published": "2026-11-03T18:06:18.771Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kailer Yamamoto",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Utah Mammoth (10-6-0) head to Montreal for a road matchup against the Canadiens. Coach Andre Tourigny would not confirm his starting goalie, though Sebastian Cossa was in the starter's net at morning skate and has alternated starts with Karel Vejmelka over the past four games. The Mammoth are without Kailer Yamamoto, Maveric Lamoureux, and John Marino due to injuries, while Ben McCartney and Artem Duda are listed as scratched."
+  },
+  "home": {
+   "starting_goalie": "Jacob Fowler",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mike Matheson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Nick Suzuki",
+    "detail: missed six games with a left hand injury",
+    "/player: Kirby Dach",
+    "detail: missed two games with illness"
+   ],
+   "summary": "The Montreal Canadiens (9-3-3) welcome the Utah Mammoth to the Bell Centre. Nick Suzuki and Kirby Dach will each return to the lineup, replacing forwards Florian Xhekaj and Owen Beck, who are scratched. Suzuki missed six games after injuring his left hand on Oct. 20 against San Jose, while Dach sat out the past two games due to illness. Jacob Fowler is projected to start in net, with Jakub Dobes as the backup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 0.93,
+   "announced": 0.62,
+   "p_out": {
+    "Kailer Yamamoto": 0.97,
+    "Maveric Lamoureux": 0.97,
+    "John Marino": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jacob Fowler",
+   "p_starter": 0.95,
+   "announced": 0.81,
+   "p_out": {
+    "Mike Matheson": 0.97,
+    "Ivan Demidov": 0.97,
+    "Samuel Montembeault": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.0,
+  "jev": 0.2
+ }
+}

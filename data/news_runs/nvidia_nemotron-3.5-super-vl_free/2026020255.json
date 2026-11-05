@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020255,
+  "kickoff": "2026-11-06T00:00:00Z",
+  "away": "Carolina Hurricanes",
+  "home": "New York Islanders",
+  "away_id": 12,
+  "home_id": 2,
+  "away_abbr": "CAR",
+  "home_abbr": "NYI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-05T21:48:10.997071+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders vs Hurricanes",
+   "published": "2026-11-05T05:00:05.078Z",
+   "lineups": true
+  },
+  {
+   "title": "Hurricanes at Islanders projected lineups",
+   "published": "2026-11-05T16:47:25.404Z",
+   "lineups": true
+  },
+  {
+   "title": "Schaefer family, Islanders honor late mom at cancer center",
+   "published": "2026-11-03T00:46:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders Prospect Report: Nov. 2, 2026",
+   "published": "2026-11-03T01:47:15.007Z",
+   "lineups": false
+  },
+  {
+   "title": "Preview: November 3 at Nashville",
+   "published": "2026-11-03T05:05:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders, Matthew Schaefer and Northwell Health Unveil Jennifer Schaefer Child Support Room",
+   "published": "2026-11-03T15:17:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Pyotr Kochetkov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jordan Staal",
+     "detail": "calf injury"
+    },
+    {
+     "player": "Taylor Hall",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes (12-3-2) lead the Metropolitan Division with 26 points but saw their four-game winning streak snapped Tuesday in a 4-1 loss to Nashville. Pyotr Kochetkov suffered his first loss after opening the season with 10 straight wins. Jordan Staal (calf) and Taylor Hall (upper body) are listed as injured, while Mike Reilly is scratched."
+  },
+  "home": {
+   "starting_goalie": "Semyon Varlamov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    },
+    {
+     "player": "Ryan Pulock",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Matias Maccelli",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Cal Ritchie",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ben Hutton",
+     "detail": "signed PTO Monday and cannot officially play games while on PTO"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Islanders (7-5-2) are coming off a 4-0 shutout loss to Edmonton and have allowed just 2.71 goals per game, fifth-best in the NHL. Mathew Barzal, Matias Maccelli, and Ryan Pulock practiced in non-contact jerseys but are not expected to play Thursday. Semyon Varlamov is projected to make his fifth start of the season."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Pyotr Kochetkov",
+   "p_starter": 0.77,
+   "announced": 0.96,
+   "p_out": {
+    "Jordan Staal": 0.96,
+    "Taylor Hall": 0.92
+   }
+  },
+  "home": {
+   "starter": "Semyon Varlamov",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Mathew Barzal": 0.98,
+    "Alexander Romanov": 0.99,
+    "Ryan Pulock": 0.98,
+    "Matias Maccelli": 0.98,
+    "Cal Ritchie": 0.97,
+    "Ben Hutton": 0.92
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.9,
+  "jev": 0.1
+ }
+}

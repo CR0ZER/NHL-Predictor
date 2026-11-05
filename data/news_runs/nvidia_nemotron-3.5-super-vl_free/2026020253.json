@@ -1,0 +1,128 @@
+{
+ "game": {
+  "gameId": 2026020253,
+  "kickoff": "2026-11-06T00:00:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "Tampa Bay Lightning",
+  "away_id": 16,
+  "home_id": 14,
+  "away_abbr": "CHI",
+  "home_abbr": "TBL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-05T21:47:59.352568+00:00",
+ "articles": [
+  {
+   "title": "Blackhawks at Lightning projected lineups",
+   "published": "2026-11-05T18:38:08.848Z",
+   "lineups": true
+  },
+  {
+   "title": "Hometown Remix jerseys hit the ice for Panthers, Blackhawks, Sharks",
+   "published": "2026-11-03T04:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hometown Remix jerseys hit the ice for Panthers, Blackhawks, Sharks",
+   "published": "2026-11-03T04:14:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kane leaves game for Blackhawks with upper-body injury",
+   "published": "2026-11-03T04:47:00Z",
+   "lineups": false
+  },
+  {
+   "title": "‘No better place’: Lightning ready for this season’s Atlantic Division gauntlet",
+   "published": "2026-11-03T15:49:26.763Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Blackhawks Recall Dillion Boucher From Rockford, Place Bowen Byram on Injured Reserve",
+   "published": "2026-11-03T17:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arvid Soderblom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Patrick Kane",
+     "detail": "upper-body injury, expected to miss multiple games"
+    },
+    {
+     "player": "Bowen Byram",
+     "detail": "upper-body injury, placed on injured reserve retroactive to Oct. 15"
+    },
+    {
+     "player": "Kevin Korchinski",
+     "detail": "scratched"
+    },
+    {
+     "player": "Andrew Mangiapane",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blackhawks (4-11-1) are projected to start Arvid Soderblom in the second half of a back-to-back after Spencer Knight made 24 saves in a 5-3 loss to Florida on Wednesday. Patrick Kane (upper body) and Bowen Byram (upper body) are out, while Kevin Korchinski and Andrew Mangiapane are listed as scratched."
+  },
+  "home": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Scott Sabourin",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Zemgus Girgensons",
+     "detail": "lower body, listed as questionable after missing Tuesday's game against Detroit"
+    }
+   ],
+   "returning": [],
+   "summary": "The Lightning (9-3-2) are projected to start Andrei Vasilevskiy, with Dennis Hildeby listed as the backup. Yanni Gourde (hip) is out, and Zemgus Girgensons (lower body) is questionable after missing Tuesday's game against Detroit. Max Crozier and Scott Sabourin are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Arvid Soderblom",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Patrick Kane": 0.96,
+    "Bowen Byram": 0.97,
+    "Kevin Korchinski": 0.96,
+    "Andrew Mangiapane": 0.97
+   }
+  },
+  "home": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.97,
+   "announced": 0.96,
+   "p_out": {
+    "Yanni Gourde": 0.96,
+    "Max Crozier": 0.96,
+    "Scott Sabourin": 0.97,
+    "Zemgus Girgensons": 0.24
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.2,
+  "jev": 0.1
+ }
+}

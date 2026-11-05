@@ -1,0 +1,142 @@
+{
+ "game": {
+  "gameId": 2026020257,
+  "kickoff": "2026-11-06T00:00:00Z",
+  "away": "Boston Bruins",
+  "home": "Pittsburgh Penguins",
+  "away_id": 6,
+  "home_id": 5,
+  "away_abbr": "BOS",
+  "home_abbr": "PIT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-05T21:48:24.083534+00:00",
+ "articles": [
+  {
+   "title": "Bruins at Penguins projected lineups ",
+   "published": "2026-11-05T16:53:27.782Z",
+   "lineups": true
+  },
+  {
+   "title": "Bruins Beat Golden Knights 3-2 in Shootout, ‘No Quit Out There’",
+   "published": "2026-11-03T04:06:07.296Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: 11.03.26 vs. Vegas Golden Knights",
+   "published": "2026-11-03T12:00:00.169Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights at Penguins projected lineups",
+   "published": "2026-11-03T16:32:11.1Z",
+   "lineups": false
+  },
+  {
+   "title": "Practice Report: Kuraly Talks Depth Role, Sturm on Injury Updates ",
+   "published": "2026-11-03T19:00:12.885Z",
+   "lineups": false
+  },
+  {
+   "title": "Musings: Penguins Don't Get the Job Done in Key Moments",
+   "published": "2026-11-04T04:21:24.111Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Matthew Poitras",
+     "detail": "Injured (upper body/broken nose from elbow to face)"
+    },
+    {
+     "player": "Connor Clifton",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Jonathan Aspirot",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/Frederic Brunet"
+   ],
+   "summary": "The Bruins (11-4-1) are coming off a 3-2 shootout win over Vegas and have won six straight at TD Garden. Matt Poitras is out with an upper-body injury after taking an elbow to the face, while Frederic Brunet is expected to return to the defense after serving as a healthy scratch. Jeremy Swayman is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ryan Graves",
+     "detail": "Injured (knee)"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "Injured (upper body)"
+    },
+    {
+     "player": "Jake Livanavage",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Ilya Solovyov",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Andrei Kuzmenko",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Evgeni Malkin",
+    "Justin Brazeau"
+   ],
+   "summary": "The Penguins (5-8-2) have lost three straight games and are dealing with multiple defensive injuries. Evgeni Malkin is expected to return after missing Tuesday's loss to Vegas with a lower-body injury, and Justin Brazeau is poised to make his season debut after a preseason injury. Arturs Silovs is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Matthew Poitras": 0.89,
+    "Connor Clifton": 0.97,
+    "Jonathan Aspirot": 0.97
+   }
+  },
+  "home": {
+   "starter": "Arturs Silovs",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Ryan Graves": 0.97,
+    "Trevor van Riemsdyk": 0.97,
+    "Bryan Rust": 0.97,
+    "Elmer Soderblom": 0.95,
+    "Jake Livanavage": 0.97,
+    "Ilya Solovyov": 0.96,
+    "Andrei Kuzmenko": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.4,
+  "jev": 0.2
+ }
+}

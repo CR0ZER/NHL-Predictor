@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020259,
+  "kickoff": "2026-11-06T00:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "Winnipeg Jets",
+  "away_id": 23,
+  "home_id": 52,
+  "away_abbr": "VAN",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-05T21:48:35.467302+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Canucks at Jets",
+   "published": "2026-11-05T11:27:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks at Jets projected lineups",
+   "published": "2026-11-05T18:31:00.644Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks Host Ducks at Rogers Arena on Tuesday Night for Diwali Night",
+   "published": "2026-11-03T00:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: November 3 Winnipeg Jets at Montreal Canadiens",
+   "published": "2026-11-03T05:14:24.952Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Notes: Canucks vs. Ducks",
+   "published": "2026-11-03T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "GAMEDAY: Jets at Canadiens",
+   "published": "2026-11-03T08:27:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Leevi Merilainen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Luke Schenn",
+     "detail": "scratched"
+    },
+    {
+     "player": "Arshdeep Bains",
+     "detail": "scratched"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Tom Willander",
+     "detail": "lower-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks (3-13-1) are struggling this season and head to Winnipeg for a Thursday matchup. Leevi Merilainen is projected to start in goal with Thatcher Demko sidelined by a hip injury. Tom Willander skated in Winnipeg on Thursday but is not expected to play due to a lower-body injury, while Luke Schenn and Arshdeep Bains are listed as scratched."
+  },
+  "home": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Clay Stevenson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nino Niederreiter",
+     "detail": "scratched"
+    },
+    {
+     "player": "Isak Rosén",
+     "detail": "scratched"
+    },
+    {
+     "player": "Josh Morrissey",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Nick Bjugstad",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Brayden Yager",
+    "detail: recalled from Manitoba and enters the lineup in place of Nino Niederreiter"
+   ],
+   "summary": "The Jets (5-8-3) snapped a nine-game winless streak with a dramatic 5-4 overtime victory in Montreal on Tuesday. Stuart Skinner is projected to start in goal. Josh Morrissey skated in a non-contact jersey and will not play after missing 12 games, while Brayden Yager was recalled and enters the lineup on the second line between Cole Perfetti and Dawson Mercer."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Leevi Meriläinen",
+   "p_starter": 0.68,
+   "announced": 0.98,
+   "p_out": {
+    "Luke Schenn": 0.96,
+    "Arshdeep Bains": 0.96,
+    "Filip Chytil": 0.97,
+    "Thatcher Demko": 0.97,
+    "Tom Willander": 0.97
+   }
+  },
+  "home": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.97,
+   "announced": 0.97,
+   "p_out": {
+    "Clay Stevenson": 0.96,
+    "Nino Niederreiter": 0.96,
+    "Isak Rosén": 0.97,
+    "Josh Morrissey": 0.98,
+    "Nick Bjugstad": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.3,
+  "jev": 0.1
+ }
+}
