@@ -1,0 +1,117 @@
+{
+ "game": {
+  "gameId": 2026020261,
+  "kickoff": "2026-11-06T02:30:00Z",
+  "away": "Nashville Predators",
+  "home": "Colorado Avalanche",
+  "away_id": 18,
+  "home_id": 21,
+  "away_abbr": "NSH",
+  "home_abbr": "COL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-05T23:47:44.763367+00:00",
+ "articles": [
+  {
+   "title": "Predators at Avalanche projected lineups",
+   "published": "2026-11-05T19:28:44.408Z",
+   "lineups": true
+  },
+  {
+   "title": "Rinne was Hall of Fame person as well as goalie, Vanderklok says",
+   "published": "2026-11-03T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rinne evolved from long-shot NHL prospect to Hockey Hall of Famer",
+   "published": "2026-11-03T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Battle in the Buckeye State",
+   "published": "2026-11-03T12:00:00.345Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY: Hurricanes vs. Preds, November 3",
+   "published": "2026-11-03T12:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Nashville Predators to Host Hockey Fights Cancer Night on Nov. 3",
+   "published": "2026-11-03T15:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jonathan Marchessault",
+     "detail": "lower body injury; participated in morning skate but not expected to play"
+    },
+    {
+     "player": "Nicolas Hague",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators (6-4-5) are projected to start Juuse Saros in net. They will be without William Trudeau and Jonathan Marchessault due to injuries, with Marchessault having skated but not expected to play. Nicolas Hague and Ilya Lyubushkin are listed as scratched."
+  },
+  "home": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zachary L’Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (9-6-1) are projected to start Mackenzie Blackwood. Zachary L’Heureux and Josh Manson are injured. The team is coming off a 5-2 win over Chicago and has won three straight games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "William Trudeau": 0.94,
+    "Jonathan Marchessault": 0.96,
+    "Nicolas Hague": 0.97,
+    "Ilya Lyubushkin": 0.97
+   }
+  },
+  "home": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Zachary L’Heureux": 0.95,
+    "Josh Manson": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.0,
+  "jev": 0.3
+ }
+}
