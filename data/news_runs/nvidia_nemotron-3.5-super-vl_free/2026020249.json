@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020249,
+  "kickoff": "2026-11-05T03:00:00Z",
+  "away": "San Jose Sharks",
+  "home": "Los Angeles Kings",
+  "away_id": 28,
+  "home_id": 26,
+  "away_abbr": "SJS",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-05T00:47:41.495768+00:00",
+ "articles": [
+  {
+   "title": "Sharks at Kings projected lineups",
+   "published": "2026-11-04T20:17:46.883Z",
+   "lineups": true
+  },
+  {
+   "title": "INSIDER: An Impressive NHL Debut for Martin Chromiak",
+   "published": "2026-11-02T07:54:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Los Angeles Kings, NHL and Fanatics Unveil Hometown Remix Uniform, Apparel and Headwear Collection Inspired by the Fans Fabric and Culture of Los Angeles",
+   "published": "2026-11-02T14:55:01.176Z",
+   "lineups": false
+  },
+  {
+   "title": "San Jose Sharks, NHL, and Fanatics unveil Hometown Remix uniform, apparel and headwear collection inspired by the fans, fabric and culture of San Jose",
+   "published": "2026-11-02T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames at Sharks projected lineups",
+   "published": "2026-11-02T19:19:05.216Z",
+   "lineups": false
+  },
+  {
+   "title": "Hometown Remix jerseys hit the ice for Panthers, Blackhawks, Sharks",
+   "published": "2026-11-03T04:14:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alexander Wennberg",
+     "detail": "upper body injury; needs more practice time before returning, will miss his eighth straight game"
+    },
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nolan Allan",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sharks (7-8-1) head to Los Angeles with a projected lineup featuring Yaroslav Askarov as the first-listed goalie. Alexander Wennberg remains out for an eighth straight game with an upper-body injury, while Igor Chernyshov is also injured. Adam Gaudette and Nolan Allan are scratched, and Dmitry Orlov is paired with Eric Pohlkamp, who is set to make his NHL debut after recall from the AHL."
+  },
+  "home": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Cody Ceci",
+     "detail": "scratched"
+    },
+    {
+     "player": "Samuel Helenius",
+     "detail": "scratched"
+    },
+    {
+     "player": "Alex Turcotte",
+     "detail": "undisclosed injury; returned to practice but remains week to week, has not played since Oct. 6"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "leg surgery"
+    },
+    {
+     "player": "Mats Zuccarello",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Adrian Kempe",
+    "detail: "
+   ],
+   "summary": "The Kings (4-7-2) are projected to start Darcy Kuemper in net. Adrian Kempe returns to the lineup after missing the Oct. 31 game versus Buffalo with an undisclosed injury. Cody Ceci and Samuel Helenius are scratched, while Alex Turcotte (week to week), Kevin Fiala (leg surgery), and Mats Zuccarello (upper body) are out."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Alexander Wennberg": 0.98,
+    "Igor Chernyshov": 0.97,
+    "Adam Gaudette": 0.97,
+    "Nolan Allan": 0.96
+   }
+  },
+  "home": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Cody Ceci": 0.96,
+    "Samuel Helenius": 0.96,
+    "Alex Turcotte": 0.91,
+    "Kevin Fiala": 0.98,
+    "Mats Zuccarello": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.3,
+  "jev": 0.3
+ }
+}
