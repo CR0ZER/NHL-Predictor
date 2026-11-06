@@ -1,0 +1,152 @@
+{
+ "game": {
+  "gameId": 2026020264,
+  "kickoff": "2026-11-07T01:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "Calgary Flames",
+  "away_id": 24,
+  "home_id": 20,
+  "away_abbr": "ANA",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-06T22:47:50.349972+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Flames projected lineups",
+   "published": "2026-11-06T18:21:14.068Z",
+   "lineups": true
+  },
+  {
+   "title": "5 Things - Flames @ Kraken",
+   "published": "2026-11-04T13:56:41.608Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames at Kraken projected lineups",
+   "published": "2026-11-04T20:03:02.892Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Making Franchise History",
+   "published": "2026-11-04T22:29:16.595Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup - Flames @ Kraken",
+   "published": "2026-11-05T02:36:53.49Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Settle For Point In Seattle",
+   "published": "2026-11-05T05:47:47.378Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyson Hinds",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ville Husso",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    },
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (8-7-1) are coming off a 5-4 win at Edmonton on Thursday and did not hold a morning skate. They are projected to start Lukas Dostal, with Laurent Brossoit listed as the backup. Frank Vatrano, A.J. Greer, Ian Moore, Ryan Poehling, and Troy Terry are unavailable, while Tyson Hinds and Ville Husso are scratched."
+  },
+  "home": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Maksim Tsyplakov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Joel Hanley",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brennan Othmann",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Samuel Honzek",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Brennan Othmann",
+     "detail": "day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "The Flames (7-8-1) return home after a 2-1 overtime loss to Seattle on Wednesday, their third straight game decided beyond regulation. Dustin Wolf is projected to start in net, with Devin Cooley activated from injured reserve and listed as the backup; Arsenii Sergeev was reassigned to the AHL. Jonathan Huberdeau skated Friday but has no timeline to return, while Othmann is day to day."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Lukas Dostal",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Tyson Hinds": 0.97,
+    "Ville Husso": 0.96,
+    "Frank Vatrano": 0.97,
+    "A.J. Greer": 0.97,
+    "Ian Moore": 0.98,
+    "Ryan Poehling": 0.97,
+    "Troy Terry": 0.97
+   }
+  },
+  "home": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.97,
+   "announced": 0.95,
+   "p_out": {
+    "Maksim Tsyplakov": 0.95,
+    "Joel Hanley": 0.96,
+    "Brennan Othmann": 0.64,
+    "Jonathan Huberdeau": 0.95,
+    "Samuel Honzek": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.8,
+  "jev": 0.1
+ }
+}
