@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020262,
+  "kickoff": "2026-11-07T00:00:00Z",
+  "away": "Columbus Blue Jackets",
+  "home": "Buffalo Sabres",
+  "away_id": 29,
+  "home_id": 7,
+  "away_abbr": "CBJ",
+  "home_abbr": "BUF"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-06T21:47:49.766738+00:00",
+ "articles": [
+  {
+   "title": "Blue Jackets at Sabres projected lineups",
+   "published": "2026-11-06T17:50:25.006Z",
+   "lineups": true
+  },
+  {
+   "title": "Blue Jackets saluting those who serve on Thursday, Nov. 12",
+   "published": "2026-11-04T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Injuries and transactions | Timmins, Kulich available Wednesday",
+   "published": "2026-11-04T15:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres vs. Senators | How to watch, lineup notes, and storylines",
+   "published": "2026-11-04T15:56:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Sabres projected lineups",
+   "published": "2026-11-04T17:37:08.585Z",
+   "lineups": false
+  },
+  {
+   "title": "Save of the Season? Ellis robs Senators with impressive pad save",
+   "published": "2026-11-05T01:52:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jet Greaves",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Erik Gudbranson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jack Williams",
+     "detail": "scratched"
+    },
+    {
+     "player": "Steven Lorentz",
+     "detail": "scratched"
+    },
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blue Jackets (7-7-0) are projected to start Jet Greaves in net after Cam Talbot made 27 saves in a 2-1 shootout win against the Dallas Stars on Thursday. Erik Gudbranson, Jack Williams, and Steven Lorentz are scratched, while Isac Lundestrom is out with a lower-body injury. Williams and Lorentz were recalled from Cleveland but are unlikely to play."
+  },
+  "home": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ryan McLeod",
+     "detail": "scratched"
+    },
+    {
+     "player": "Louis Crevier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Konsta Helenius",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player_name\": \"Conor Timmins\", \"detail\": \"season debut after recovering from lower-body injury\"}, {\"player_name\": \"Jiri Kulich\", \"detail\": \"returning after missing five games due to concussion\"], ",
+    "summary"
+   ],
+   "summary": "The Sabres (7-5-3) are projected to start Ukko-Pekka Luukkonen, with Colten Ellis listed as the backup. Conor Timmins will make his season debut after recovering from a lower-body injury sustained in the preseason finale, replacing Louis Crevier in the lineup. Jiri Kulich returns after missing five games due to a concussion, taking Ryan McLeod's spot."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jet Greaves",
+   "p_starter": 0.93,
+   "announced": 0.99,
+   "p_out": {
+    "Erik Gudbranson": 0.97,
+    "Jack Williams": 0.95,
+    "Steven Lorentz": 0.94,
+    "Isac Lundestrom": 0.97
+   }
+  },
+  "home": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 1.0,
+   "announced": 0.99,
+   "p_out": {
+    "Ryan McLeod": 0.97,
+    "Louis Crevier": 0.96,
+    "Konsta Helenius": 0.97,
+    "Justin Danforth": 0.94,
+    "Matt Grzelcyk": 0.97,
+    "Alex Lyon": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.4,
+  "jev": 0.2
+ }
+}
