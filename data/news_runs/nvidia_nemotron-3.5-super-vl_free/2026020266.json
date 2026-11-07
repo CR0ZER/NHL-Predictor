@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020266,
+  "kickoff": "2026-11-07T18:00:00Z",
+  "away": "St. Louis Blues",
+  "home": "Nashville Predators",
+  "away_id": 19,
+  "home_id": 18,
+  "away_abbr": "STL",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-07T15:47:37.647434+00:00",
+ "articles": [
+  {
+   "title": "Blues at Predators projected lineups",
+   "published": "2026-11-06T19:07:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Preds Fathers' Trip Provides Chance for Players to Reflect, Give Thanks to Dads",
+   "published": "2026-11-04T22:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Preds Official Podcast: The Hall of Famer's Coach",
+   "published": "2026-11-05T00:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY: Preds at Avalanche, November 5",
+   "published": "2026-11-05T12:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Preview: Blues at Devils",
+   "published": "2026-11-05T12:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: Nov. 5 at New Jersey",
+   "published": "2026-11-05T18:03:21.078Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jordan Binnington",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Logan Mailloux",
+     "detail": "right hand injury; remains on injured reserve after conditioning assignment"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blues (7-7-2) are on a four-game road trip and could use the same lineup from their 5-4 overtime loss at New Jersey on Thursday. Projected goalie Jordan Binnington is listed first in the projected lineup. Scratches are Jonatan Berggren and Theo Lindstein, while Tyler Tucker, Dillon Dube, and Logan Mailloux are injured."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nicolas Hague",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jonathan Marchessault",
+     "detail": "lower-body injury; expected to miss a third straight game"
+    },
+    {
+     "player": "William Trudeau",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jonathan Marchessault",
+     "detail": "day-to-day with lower-body injury"
+    }
+   ],
+   "returning": [],
+   "summary": "The Predators (7-4-5) could go with the same lineup from their 3-2 overtime win at Colorado on Thursday. Juuse Saros is listed first among projected goalies. Nicolas Hague and Ilya Lyubushkin are scratched, while Jonathan Marchessault (lower body, day-to-day) and William Trudeau (upper body) are injured."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jordan Binnington",
+   "p_starter": 0.88,
+   "announced": 0.98,
+   "p_out": {
+    "Tyler Tucker": 0.97,
+    "Dillon Dube": 0.96,
+    "Logan Mailloux": 0.97
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Nicolas Hague": 0.96,
+    "Ilya Lyubushkin": 0.96,
+    "Jonathan Marchessault": 0.9,
+    "William Trudeau": 0.9
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.1,
+  "jev": 0.3
+ }
+}
