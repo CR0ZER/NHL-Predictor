@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020265,
+  "kickoff": "2026-11-07T17:30:00Z",
+  "away": "Florida Panthers",
+  "home": "Washington Capitals",
+  "away_id": 13,
+  "home_id": 15,
+  "away_abbr": "FLA",
+  "home_abbr": "WSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-07T14:47:46.673810+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Capitals projected lineups ",
+   "published": "2026-11-06T18:37:23.054Z",
+   "lineups": true
+  },
+  {
+   "title": "Blackhawks at Panthers projected lineups",
+   "published": "2026-11-04T18:35:21.038Z",
+   "lineups": false
+  },
+  {
+   "title": "JetBlue and Florida Panthers Take Dedication to South Florida to New Heights with New Aircraft Design",
+   "published": "2026-11-05T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Marchand won’t return to Panthers till next month, getting ‘stronger every day’",
+   "published": "2026-11-05T16:43:54.024Z",
+   "lineups": false
+  },
+  {
+   "title": "ESPN Films to feature Stanley Cup Champion T.J. Oshie in new ’30 for 30 Short,’ ‘Coach Osh’",
+   "published": "2026-11-05T17:32:40.506Z",
+   "lineups": false
+  },
+  {
+   "title": "‘There’s an energy’: Panthers react to new aircraft design with JetBlue",
+   "published": "2026-11-05T18:00:02.18Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Radko Gudas",
+     "detail": "healthy scratch"
+    },
+    {
+     "player": "Cole Reinhardt",
+     "detail": "healthy scratch"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Panthers (9-5-2) are missing key forwards Aleksander Barkov and Brad Marchand due to knee injuries, with Marchand not expected back until December. Radko Gudas and Cole Reinhardt are listed as healthy scratches. Defenseman Niko Mikkola practiced after taking a shot off his leg and is expected to play."
+  },
+  "home": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Vincent Desharnais",
+     "detail": "appendectomy"
+    },
+    {
+     "player": "Ethen Frank",
+     "detail": "healthy scratch"
+    },
+    {
+     "player": "Ivan Miroshnichenko",
+     "detail": "healthy scratch"
+    },
+    {
+     "player": "Remi Poirier",
+     "detail": "healthy scratch"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Martin Fehervary",
+    "detail: practiced Friday after a maintenance day and will play"
+   ],
+   "summary": "The Capitals (8-6-0) will be without defensemen Rasmus Sandin (knee) and Vincent Desharnais (appendectomy). Martin Fehervary is returning to the lineup after a maintenance day. Ethen Frank, Ivan Miroshnichenko, and Remi Poirier are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Aleksander Barkov": 0.98,
+    "Brad Marchand": 0.97,
+    "Jonah Gadjovich": 0.97,
+    "Radko Gudas": 0.97,
+    "Cole Reinhardt": 0.97
+   }
+  },
+  "home": {
+   "starter": "Logan Thompson",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Rasmus Sandin": 0.98,
+    "Vincent Desharnais": 0.98,
+    "Ethen Frank": 0.98,
+    "Ivan Miroshnichenko": 0.98,
+    "Remi Poirier": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.3,
+  "jev": 0.2
+ }
+}
