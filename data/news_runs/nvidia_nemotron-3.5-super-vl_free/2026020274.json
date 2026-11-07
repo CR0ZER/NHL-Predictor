@@ -1,0 +1,130 @@
+{
+ "game": {
+  "gameId": 2026020274,
+  "kickoff": "2026-11-08T02:00:00Z",
+  "away": "Detroit Red Wings",
+  "home": "Colorado Avalanche",
+  "away_id": 17,
+  "home_id": 21,
+  "away_abbr": "DET",
+  "home_abbr": "COL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-07T23:47:44.772217+00:00",
+ "articles": [
+  {
+   "title": "Red Wings at Avalanche projected lineups",
+   "published": "2026-11-07T19:35:08.238Z",
+   "lineups": true
+  },
+  {
+   "title": "Central Division Clash",
+   "published": "2026-11-05T12:00:07.864Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights at Red Wings projected lineups",
+   "published": "2026-11-05T18:27:07.738Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Avalanche projected lineups",
+   "published": "2026-11-05T19:28:44.408Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Back at Little Caesars Arena for Military Appreciation Night, Red Wings host Golden Knights on Thursday",
+   "published": "2026-11-05T23:18:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Meet Our 2026 Cancer Warriors",
+   "published": "2026-11-06T15:00:26.057Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Daniil Tarasov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mason Appleton",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Marco Kasper",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Albert Johansson",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "John Gibson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Dylan Larkin",
+     "detail": "suspended"
+    },
+    {
+     "player": "Nate Danielson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: John Leonard",
+    "detail: expected to return after being scratched for a 2-1 loss to the Vegas Golden Knights on Thursday"
+   ],
+   "summary": "The Red Wings (7-7-3) are projected to use Daniil Tarasov in net with John Gibson still undergoing evaluation for a lower-body injury. Dylan Larkin is suspended, while Mason Appleton, Marco Kasper, Albert Johansson, and Nate Danielson are out. John Leonard is expected back into the lineup after being a healthy scratch in Detroit's previous game."
+  },
+  "home": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (9-6-2) are expected to dress the same lineup from their 3-2 overtime loss to the Nashville Predators on Thursday. Mackenzie Blackwood is projected to start in goal. Zachary L'Heureux and Josh Manson remain on injured reserve."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Daniil Tarasov",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Mason Appleton": 0.97,
+    "Marco Kasper": 0.97,
+    "Albert Johansson": 0.97,
+    "John Gibson": 0.96,
+    "Dylan Larkin": 0.99,
+    "Nate Danielson": 0.96
+   }
+  },
+  "home": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Zachary L'Heureux": 0.97,
+    "Josh Manson": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.6,
+  "jev": 0.3
+ }
+}

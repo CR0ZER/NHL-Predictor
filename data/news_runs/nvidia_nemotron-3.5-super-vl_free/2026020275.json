@@ -1,0 +1,150 @@
+{
+ "game": {
+  "gameId": 2026020275,
+  "kickoff": "2026-11-08T02:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Los Angeles Kings",
+  "away_id": 5,
+  "home_id": 26,
+  "away_abbr": "PIT",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-07T23:47:51.186446+00:00",
+ "articles": [
+  {
+   "title": "Penguins at Kings projected lineups",
+   "published": "2026-11-07T19:22:47.795Z",
+   "lineups": true
+  },
+  {
+   "title": "FINAL - LAK 7, SJS 2",
+   "published": "2026-11-05T07:26:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: 11.05.26 vs. Boston Bruins",
+   "published": "2026-11-05T12:00:06.908Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins at Penguins projected lineups ",
+   "published": "2026-11-05T16:53:27.782Z",
+   "lineups": false
+  },
+  {
+   "title": "Musings: Penguins Continue to Struggle With Consistency ",
+   "published": "2026-11-06T03:53:49.853Z",
+   "lineups": false
+  },
+  {
+   "title": "Pittsburgh Penguins Foundation and ForgiveCo Eliminate $1 Million in Medical Debt for Local Veterans",
+   "published": "2026-11-06T16:55:29.5Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "lower body injury; will miss his 11th straight game"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jake Livanavage",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Solovyov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Andrei Kuzmenko",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Penguins (5-9-2) are on a three-game California road trip and have lost four straight games. Evgeni Malkin is projected to move up to the first line alongside Sidney Crosby and Rickard Rakell at the morning skate. The defense remains depleted with multiple injuries and scratches."
+  },
+  "home": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kevin Fiala",
+     "detail": "leg surgery"
+    },
+    {
+     "player": "Mats Zuccarello",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Cody Ceci",
+     "detail": "scratched"
+    },
+    {
+     "player": "Samuel Helenius",
+     "detail": "scratched"
+    },
+    {
+     "player": "Martin Chromiak",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Alex Turcotte",
+    "detail: returning after missing 11 games due to an undisclosed injury; first game since Oct. 6"
+   ],
+   "summary": "The Kings (5-7-2) are coming off a dominant 7-2 win over the San Jose Sharks. Alex Turcotte is projected to return to the lineup after missing 11 games. The Kings remain without Kevin Fiala and Mats Zuccarello due to injuries."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.89,
+   "announced": 0.98,
+   "p_out": {
+    "Ryan Graves": 0.98,
+    "Trevor van Riemsdyk": 0.98,
+    "Bryan Rust": 0.98,
+    "Elmer Soderblom": 0.98,
+    "Jake Livanavage": 0.97,
+    "Ilya Solovyov": 0.96,
+    "Andrei Kuzmenko": 0.97
+   }
+  },
+  "home": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Kevin Fiala": 0.98,
+    "Mats Zuccarello": 0.97,
+    "Cody Ceci": 0.96,
+    "Samuel Helenius": 0.96,
+    "Martin Chromiak": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.0,
+  "jev": 0.3
+ }
+}
