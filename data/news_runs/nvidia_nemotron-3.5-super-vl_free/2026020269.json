@@ -1,0 +1,162 @@
+{
+ "game": {
+  "gameId": 2026020269,
+  "kickoff": "2026-11-08T00:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Ottawa Senators",
+  "away_id": 68,
+  "home_id": 9,
+  "away_abbr": "UTA",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-07T21:47:56.837602+00:00",
+ "articles": [
+  {
+   "title": "Mammoth at Senators projected lineups",
+   "published": "2026-11-07T17:48:55.189Z",
+   "lineups": true
+  },
+  {
+   "title": "Save of the Season? Ellis robs Senators with impressive pad save",
+   "published": "2026-11-05T01:52:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Continues Road Trip in Montréal",
+   "published": "2026-11-05T13:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Canadiens projected lineups",
+   "published": "2026-11-05T18:46:31.658Z",
+   "lineups": false
+  },
+  {
+   "title": "Keller’s Professionalism, Drive Leads to 700th Career Game",
+   "published": "2026-11-05T23:25:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Montreal 5, Utah 4 (OT)",
+   "published": "2026-11-06T00:10:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kailer Yamamoto",
+     "detail": "upper body, on injured reserve retroactive to Oct. 29"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "upper body, injured in first period of 5-4 overtime loss to Montreal Canadiens"
+    },
+    {
+     "player": "Ben McCartney",
+     "detail": "scratched"
+    },
+    {
+     "player": "Gregor Biber",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Mammoth (10-6-1) are wrapping up a five-game road trip in Ottawa after a 5-4 overtime loss to Montreal on Thursday. They are dealing with several defensive injuries, including Nate Schmidt (upper body), John Marino (upper body), and Maveric Lamoureux (shoulder), while Kailer Yamamoto remains on IR. Defenseman Gregor Biber was recalled from Tucson after Schmidt's injury, and Ben McCartney is also scratched."
+  },
+  "home": {
+   "starting_goalie": "Samuel Ersson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body"
+    },
+    {
+     "player": "Linus Ullmark",
+     "detail": "lower body, not ready to return after missing seven games"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle"
+    },
+    {
+     "player": "Kurtis MacDermid",
+     "detail": "upper body"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "lower body"
+    },
+    {
+     "player": "Ridly Greig",
+     "detail": "lower body"
+    },
+    {
+     "player": "Nikolas Matinpalo",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Ridly Greig",
+     "detail": "day to day"
+    },
+    {
+     "player": "Tyler Kleven",
+     "detail": "illness, returned to practice Friday and could play"
+    }
+   ],
+   "returning": [],
+   "summary": "The Senators (10-6-1) are 1-2 over their last three games and will be without starting goalie Linus Ullmark, who is close but not ready to return. Samuel Ersson is projected to start in net. Coach Travis Green indicated there will be a couple of game-time decisions, with Ridly Greig day to day and Tyler Kleven potentially returning from illness. Nikolas Matinpalo is scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.97,
+   "announced": 0.94,
+   "p_out": {
+    "Kailer Yamamoto": 0.98,
+    "Maveric Lamoureux": 0.94,
+    "John Marino": 0.94,
+    "Nate Schmidt": 0.95,
+    "Ben McCartney": 0.95,
+    "Gregor Biber": 0.88
+   }
+  },
+  "home": {
+   "starter": "Samuel Ersson",
+   "p_starter": 0.98,
+   "announced": 0.94,
+   "p_out": {
+    "Warren Foegele": 0.96,
+    "Linus Ullmark": 0.98,
+    "William Eklund": 0.94,
+    "Kurtis MacDermid": 0.96,
+    "Andre Burakovsky": 0.96,
+    "Ridly Greig": 0.31,
+    "Nikolas Matinpalo": 0.96,
+    "Tyler Kleven": 0.24
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.5,
+  "jev": 0.1
+ }
+}
