@@ -1,0 +1,136 @@
+{
+ "game": {
+  "gameId": 2026020273,
+  "kickoff": "2026-11-08T01:00:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "Minnesota Wild",
+  "away_id": 14,
+  "home_id": 30,
+  "away_abbr": "TBL",
+  "home_abbr": "MIN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-07T22:47:56.137063+00:00",
+ "articles": [
+  {
+   "title": "Lightning at Wild projected lineups",
+   "published": "2026-11-07T17:41:54.999Z",
+   "lineups": true
+  },
+  {
+   "title": "Minnesota Wild and Red Baron® Pizza to Host 10th Annual Girls’ Hockey Weekend",
+   "published": "2026-11-05T16:25:13.408Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks at Lightning projected lineups",
+   "published": "2026-11-05T18:38:08.848Z",
+   "lineups": false
+  },
+  {
+   "title": "Kirill KaprizOctober",
+   "published": "2026-11-05T21:26:43.997Z",
+   "lineups": false
+  },
+  {
+   "title": "Mishkin's Extra Shift: Lightning 4, Blackhawks 1",
+   "published": "2026-11-06T04:39:54.052Z",
+   "lineups": false
+  },
+  {
+   "title": "Minnesota Wild Recalls Forward Mason Shaw from Iowa Wild",
+   "published": "2026-11-06T15:57:27.607Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dennis Hildeby",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Yanni Gourde",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning (10-3-2) are on a four-game road trip in two sets of back-to-backs. Dennis Hildeby is projected to start in the opener of this back-to-back, with Andrei Vasilevskiy listed as the backup. Yanni Gourde remains out with a hip injury, while Max Crozier and Scott Sabourin are scratched."
+  },
+  "home": {
+   "starting_goalie": "Calvin Pickard",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Marcus Foligno",
+     "detail": "lower body"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "upper body"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body"
+    },
+    {
+     "player": "Jared Spurgeon",
+     "detail": "lower body"
+    },
+    {
+     "player": "Cameron Crotty",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Michael McCarron",
+     "detail": "questionable after leaving Friday's game with an undisclosed injury"
+    },
+    {
+     "player": "Marcus Foligno",
+     "detail": "could possibly return after missing 14 games"
+    },
+    {
+     "player": "Nick Foligno",
+     "detail": "could possibly return after missing 15 games"
+    }
+   ],
+   "returning": [],
+   "summary": "The Wild (12-3-3) are coming off a 4-1 win over the San Jose Sharks and did not hold a morning skate. Calvin Pickard is expected to start after Jesper Wallstedt made 23 saves in the previous game. The Wild are missing several key players, including Brock Faber (skull fracture) and Filip Gustavsson (lower body), and have reassigned Mason Shaw to Iowa."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dennis Hildeby",
+   "p_starter": 0.93,
+   "announced": 0.98,
+   "p_out": {
+    "Yanni Gourde": 0.97
+   }
+  },
+  "home": {
+   "starter": "Calvin Pickard",
+   "p_starter": 0.96,
+   "announced": 0.98,
+   "p_out": {
+    "Brock Faber": 0.98,
+    "Marcus Foligno": 0.76,
+    "Nick Foligno": 0.72,
+    "Filip Gustavsson": 0.97,
+    "Jared Spurgeon": 0.97,
+    "Cameron Crotty": 0.96,
+    "Michael McCarron": 0.24
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.8,
+  "jev": 0.2
+ }
+}
