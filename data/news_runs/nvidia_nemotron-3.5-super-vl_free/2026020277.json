@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020277,
+  "kickoff": "2026-11-08T18:00:00Z",
+  "away": "Florida Panthers",
+  "home": "Boston Bruins",
+  "away_id": 13,
+  "home_id": 6,
+  "away_abbr": "FLA",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-08T15:47:44.888379+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Bruins projected lineups",
+   "published": "2026-11-08T15:42:00Z",
+   "lineups": true
+  },
+  {
+   "title": "‘There’s an energy’: Panthers react to new aircraft design with JetBlue",
+   "published": "2026-11-05T18:00:02.18Z",
+   "lineups": false
+  },
+  {
+   "title": "Need to Know: Bruins at Penguins ",
+   "published": "2026-11-05T23:04:20.631Z",
+   "lineups": false
+  },
+  {
+   "title": "‘Incredible consistency’: Verhaeghe off to hot start for Panthers",
+   "published": "2026-11-06T17:09:17.073Z",
+   "lineups": false
+  },
+  {
+   "title": "In the System: Letourneau Has Three-Point Weekend for Boston College",
+   "published": "2026-11-06T23:58:19.586Z",
+   "lineups": false
+  },
+  {
+   "title": "Bruins Place James Hagens on IR; Recall Mikey Eyssimont",
+   "published": "2026-11-07T15:00:28.247Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Anton Lundell",
+     "detail": "undisclosed injury, day to day"
+    },
+    {
+     "player": "Sandis Vilmanis",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Radko Gudas",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Anton Lundell",
+     "detail": "day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "The Panthers (9-6-2) are missing several key players, including Aleksander Barkov, Brad Marchand, and Anton Lundell, though Lundell is day to day. Brady Tkachuk is projected to center the top line alongside Sam Bennett and Matthew Tkachuk, while Carter Verhaeghe is on a five-game point streak. Jacob Markstrom is the projected starting goaltender."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Matthew Poitras",
+     "detail": "upper body injury (broke nose), game-time decision"
+    },
+    {
+     "player": "James Hagens",
+     "detail": "back injury, placed on injured reserve"
+    },
+    {
+     "player": "Connor Clifton",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jonathan Aspirot",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Matthew Poitras",
+     "detail": "not 100 percent, could play if needed"
+    }
+   ],
+   "returning": [],
+   "summary": "The Bruins (12-4-1) are without James Hagens (IR) and have Matthew Poitras questionable after breaking his nose. Mikey Eyssimont was recalled and will play, while Frederic Brunet re-enters the lineup on defense with Clifton and Aspirot scratched. Jeremy Swayman is projected to start in net."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Anton Lundell": 0.4,
+    "Sandis Vilmanis": 0.93,
+    "Aleksander Barkov": 0.93,
+    "Brad Marchand": 0.85,
+    "Jonah Gadjovich": 0.96,
+    "Radko Gudas": 0.95
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Matthew Poitras": 0.73,
+    "James Hagens": 0.95,
+    "Connor Clifton": 0.94,
+    "Jonathan Aspirot": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.8,
+  "jev": 0.2
+ }
+}
