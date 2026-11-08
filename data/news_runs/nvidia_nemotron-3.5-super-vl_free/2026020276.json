@@ -1,0 +1,162 @@
+{
+ "game": {
+  "gameId": 2026020276,
+  "kickoff": "2026-11-08T03:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "Edmonton Oilers",
+  "away_id": 23,
+  "home_id": 22,
+  "away_abbr": "VAN",
+  "home_abbr": "EDM"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-08T00:47:47.053673+00:00",
+ "articles": [
+  {
+   "title": "Canucks at Oilers projected lineups",
+   "published": "2026-11-07T19:30:24.446Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Notes: Canucks at Jets",
+   "published": "2026-11-05T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: EOCF & Alberta Cancer Foundation bring 'The Time Store' to Rogers Place",
+   "published": "2026-11-05T17:25:26.84Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Jets projected lineups",
+   "published": "2026-11-05T18:31:00.644Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Oilers projected lineups",
+   "published": "2026-11-05T19:06:54.747Z",
+   "lineups": false
+  },
+  {
+   "title": "PROJECTED LINEUP: Oilers vs. Ducks",
+   "published": "2026-11-05T19:10:46.345Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Leevi Merilainen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "scratched"
+    },
+    {
+     "player": "Victor Mancini",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jacob Quillan",
+     "detail": "scratched"
+    },
+    {
+     "player": "Filip Chytil",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Arshdeep Bains (expected to enter lineup for Quillan)",
+    "Tom Willander (expected to replace Brisebois after missing two games with lower-body injury)",
+    "Jamie Oleksiak (expected to come in for Mancini)"
+   ],
+   "summary": "The Canucks (3-14-1) are projected to start Leevi Merilainen in goal. Several lineup changes are expected, with Arshdeep Bains, Tom Willander, and Jamie Oleksiak slated to replace scratched players. The team remains without injured Filip Chytil and Thatcher Demko."
+  },
+  "home": {
+   "starting_goalie": "Devon Levi",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Colton Dach",
+     "detail": "scratched"
+    },
+    {
+     "player": "Filip Hallander",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jake Walman",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frederik Andersen",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Isaac Howard",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matthew Savoie",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Zach Hyman (returns after missing five games with neck injury)",
+    "Trent Frederic (comes in for Hallander)",
+    "Shakir Mukhamadullin (replaces Walman)",
+    "Devon Levi (plays after missing past seven games with undisclosed injury)",
+    "Tristan Jarry (dresses after sitting out previous game due to illness)"
+   ],
+   "summary": "The Oilers (11-3-3) are projected to start Devon Levi in goal, with Tristan Jarry dressing as backup. Zach Hyman returns to the lineup after a five-game absence due to a neck injury. The team has several players out with undisclosed injuries, including Frederik Andersen."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Leevi Meriläinen",
+   "p_starter": 0.65,
+   "announced": 0.95,
+   "p_out": {
+    "Guillaume Brisebois": 0.97,
+    "Victor Mancini": 0.96,
+    "Jacob Quillan": 0.96,
+    "Filip Chytil": 0.98,
+    "Thatcher Demko": 0.98
+   }
+  },
+  "home": {
+   "starter": "Devon Levi",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Colton Dach": 0.97,
+    "Filip Hallander": 0.97,
+    "Jake Walman": 0.97,
+    "Frederik Andersen": 0.97,
+    "Isaac Howard": 0.97,
+    "Mattias Janmark": 0.98,
+    "Alec Regula": 0.97,
+    "Matthew Savoie": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.5,
+  "jev": 0.3
+ }
+}
