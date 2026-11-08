@@ -1,0 +1,157 @@
+{
+ "game": {
+  "gameId": 2026020282,
+  "kickoff": "2026-11-09T01:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Anaheim Ducks",
+  "away_id": 5,
+  "home_id": 24,
+  "away_abbr": "PIT",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-08T22:47:45.547881+00:00",
+ "articles": [
+  {
+   "title": "Penguins at Ducks projected lineups",
+   "published": "2026-11-08T17:06:43.294Z",
+   "lineups": true
+  },
+  {
+   "title": "Musings: Penguins Continue to Struggle With Consistency ",
+   "published": "2026-11-06T03:53:49.853Z",
+   "lineups": false
+  },
+  {
+   "title": "McDavid continues torrid pace following 'dangerous' hit from Helleson of Ducks",
+   "published": "2026-11-06T06:12:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Pittsburgh Penguins Foundation and ForgiveCo Eliminate $1 Million in Medical Debt for Local Veterans",
+   "published": "2026-11-06T16:55:29.5Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Flames projected lineups",
+   "published": "2026-11-06T18:21:14.068Z",
+   "lineups": false
+  },
+  {
+   "title": "Get to Know: Spencer Stastney",
+   "published": "2026-11-06T18:29:03.967Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jake Livanavage",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Solovyov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Andrei Kuzmenko",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Penguins (6-9-2) have lost four straight games and are struggling with defensive consistency. They are missing several key players to injury, including Bryan Rust, Trevor van Riemsdyk, Ryan Graves, and Elmer Soderblom. Arturs Silovs is projected to start in goal after Sergei Murashov's win in Los Angeles."
+  },
+  "home": {
+   "starting_goalie": "Ville Husso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    },
+    {
+     "player": "Troy Terry",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Tyson Hinds",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    },
+    {
+     "player": "Lukas Dostal",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (9-7-1) are coming off a 5-3 comeback win over the Calgary Flames. They are dealing with several injuries, including Troy Terry (hip) and Ryan Poehling (MCL). Ville Husso is projected to start after relieving Lukas Dostal and stopping all 10 shots against the Flames."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Ryan Graves": 0.98,
+    "Trevor van Riemsdyk": 0.98,
+    "Bryan Rust": 0.98,
+    "Elmer Soderblom": 0.98,
+    "Jake Livanavage": 0.96,
+    "Ilya Solovyov": 0.96,
+    "Andrei Kuzmenko": 0.96
+   }
+  },
+  "home": {
+   "starter": "Ville Husso",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "A.J. Greer": 0.95,
+    "Ian Moore": 0.97,
+    "Ryan Poehling": 0.97,
+    "Troy Terry": 0.97,
+    "Tyson Hinds": 0.95,
+    "Frank Vatrano": 0.94,
+    "Lukas Dostal": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.0,
+  "jev": 0.4
+ }
+}
