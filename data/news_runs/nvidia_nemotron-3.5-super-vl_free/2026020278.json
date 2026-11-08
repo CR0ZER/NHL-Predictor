@@ -1,0 +1,107 @@
+{
+ "game": {
+  "gameId": 2026020278,
+  "kickoff": "2026-11-08T20:30:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "Buffalo Sabres",
+  "away_id": 54,
+  "home_id": 7,
+  "away_abbr": "VGK",
+  "home_abbr": "BUF"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-08T17:47:43.494765+00:00",
+ "articles": [
+  {
+   "title": "Golden Knights at Sabres projected lineups",
+   "published": "2026-11-07T21:33:32.377Z",
+   "lineups": true
+  },
+  {
+   "title": "Sabres vs. Blue Jackets | How to watch, lineup notes, and storylines",
+   "published": "2026-11-06T16:37:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets at Sabres projected lineups",
+   "published": "2026-11-06T17:50:25.006Z",
+   "lineups": false
+  },
+  {
+   "title": "Ruff discusses Sabres’ healthy scratches, goaltending plans, more",
+   "published": "2026-11-07T19:19:26.681Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Nov. 8, 2026",
+   "published": "2026-11-08T06:31:57.469Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Adin Hill",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Parker Wotherspoon",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights (11-5-2) are projected to start Adin Hill in goal following their 2-1 win at Detroit on Thursday. Parker Wotherspoon is out with an upper-body injury, and Raphael Lavoie is listed as a scratch in the projected lineup."
+  },
+  "home": {
+   "starting_goalie": "Colten Ellis",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Konsta Helenius",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sabres (8-5-3) are expected to start Colten Ellis in goal, with Ukko-Pekka Luukkonen having started Friday's win over Columbus. Ryan McLeod and Louis Crevier are projected to be scratched for a second straight game. Alex Lyon is practicing but still progressing toward a return to game action."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Adin Hill",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Parker Wotherspoon": 0.98
+   }
+  },
+  "home": {
+   "starter": "Colten Ellis",
+   "p_starter": 0.8,
+   "announced": 0.98,
+   "p_out": {
+    "Konsta Helenius": 0.98,
+    "Justin Danforth": 0.98,
+    "Matt Grzelcyk": 0.98,
+    "Alex Lyon": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.5,
+  "jev": 0.2
+ }
+}
