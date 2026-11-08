@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020281,
+  "kickoff": "2026-11-09T00:00:00Z",
+  "away": "Philadelphia Flyers",
+  "home": "Calgary Flames",
+  "away_id": 4,
+  "home_id": 20,
+  "away_abbr": "PHI",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-08T21:48:54.825469+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers @ Flames\n",
+   "published": "2026-11-08T15:00:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers at Flames projected lineups",
+   "published": "2026-11-08T17:16:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Postgame RAV4: Late Flyers Lead Slips Away\n",
+   "published": "2026-11-06T02:55:03.386Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames vs. Ducks",
+   "published": "2026-11-06T13:39:28.415Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers Friday Flashback: Propp's 300th Goal",
+   "published": "2026-11-06T16:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "'We're Gonna Look Good'",
+   "published": "2026-11-06T17:27:16.47Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    },
+    {
+     "player": "Rasmus Ristolainen",
+     "detail": "upper body injury, expected to miss sixth straight game"
+    },
+    {
+     "player": "David Jiricek",
+     "detail": "scratched"
+    },
+    {
+     "player": "Michael Bunting",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers (4-10-4) are on a five-game road trip and lost 3-2 to the Rangers in the opener. They have reunited Matvei Michkov, Porter Martone, and Noah Cates on a line, while Christian Dvorak centers Tyson Foerster and Travis Konecny. The team ranks 27th on the power play at 16.4 percent but has improved to 24.1 percent over recent games."
+  },
+  "home": {
+   "starting_goalie": "Devin Cooley",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brennan Othmann",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Samuel Honzek",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Kevin Bahl",
+     "detail": "lower body injury, ruptured Achilles requiring season-ending surgery"
+    },
+    {
+     "player": "Maksim Tsyplakov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brayden Pachal",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Devin Cooley",
+    "detail: "
+   ],
+   "summary": "The Flames (7-9-1) are coming off a 5-3 home loss to the Ducks after blowing a 3-1 lead. Devin Cooley is projected to start after missing five games with a lower-body injury and being activated off injured reserve Thursday. Calgary ranks fourth in the NHL on the power play at 30 percent, led in part by Zayne Parekh."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dan Vladar",
+   "p_starter": 0.94,
+   "announced": 0.97,
+   "p_out": {
+    "Nikita Grebenkin": 0.97,
+    "Rasmus Ristolainen": 0.97,
+    "David Jiricek": 0.96,
+    "Michael Bunting": 0.96
+   }
+  },
+  "home": {
+   "starter": "Devin Cooley",
+   "p_starter": 0.89,
+   "announced": 0.98,
+   "p_out": {
+    "Brennan Othmann": 0.98,
+    "Jonathan Huberdeau": 0.98,
+    "Samuel Honzek": 0.97,
+    "Kevin Bahl": 0.98,
+    "Maksim Tsyplakov": 0.96,
+    "Brayden Pachal": 0.93
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.1,
+  "jev": 0.2
+ }
+}

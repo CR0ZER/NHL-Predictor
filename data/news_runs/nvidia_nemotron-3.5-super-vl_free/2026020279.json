@@ -1,0 +1,130 @@
+{
+ "game": {
+  "gameId": 2026020279,
+  "kickoff": "2026-11-09T00:00:00Z",
+  "away": "New Jersey Devils",
+  "home": "Toronto Maple Leafs",
+  "away_id": 1,
+  "home_id": 10,
+  "away_abbr": "NJD",
+  "home_abbr": "TOR"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-08T21:48:49.388426+00:00",
+ "articles": [
+  {
+   "title": "Devils honor 100-year-old World War II veteran on Military Appreciation Night",
+   "published": "2026-11-06T01:13:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Tavares to return for Maple Leafs against Canadiens",
+   "published": "2026-11-07T16:21:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Maple Leafs projected lineups",
+   "published": "2026-11-07T17:48:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils at Islanders projected lineups",
+   "published": "2026-11-07T17:58:42.776Z",
+   "lineups": false
+  },
+  {
+   "title": "QUICK RECAP: Devils 5, Islanders 4 (OT)",
+   "published": "2026-11-07T23:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils broadcast team breaks down, breaks window on trip to Islanders arena",
+   "published": "2026-11-08T02:04:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jake Allen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brenden Dillon",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Devils (11-5-0) are on a back-to-back after a 5-4 overtime win over the Islanders on Saturday. Jake Allen is projected to start the opener of the back-to-back against Toronto on Sunday, with Connor Hellebuyck listed as the backup in the projected lineup. Brenden Dillon is scratched; no other injuries are listed."
+  },
+  "home": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dakota Mermis",
+     "detail": "scratched"
+    },
+    {
+     "player": "Vinnie Lettieri",
+     "detail": "scratched"
+    },
+    {
+     "player": "Anthony Stolarz",
+     "detail": "scratched"
+    },
+    {
+     "player": "Max Domi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Kirill Marchenko",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Marshall Rifai",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Nick Blankenburg",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"John Tavares\", \"detail\": \"returns after missing nine games with a lower-body injury\"}], ",
+    "summary: "
+   ],
+   "summary": "The Maple Leafs (8-7-2) have lost three of their past four games and begin a stretch of five straight games against playoff-position teams. John Tavares returns to the lineup after missing nine games with a lower-body injury, replacing Dakota Joshua on the second line and rejoining the top power-play unit. Sergei Bobrovsky is projected to start in net, with Artur Akhtyamov backing up; Anthony Stolarz is scratched and will start against the New Jersey Devils on Sunday."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "unknown",
+   "p_starter": 0.95,
+   "announced": 0.11,
+   "p_out": {
+    "Brenden Dillon": 0.21
+   }
+  },
+  "home": {
+   "starter": "Anthony Stolarz",
+   "p_starter": 0.7,
+   "announced": 0.6,
+   "p_out": {
+    "Dakota Mermis": 0.95,
+    "Vinnie Lettieri": 0.95,
+    "Anthony Stolarz": 0.94,
+    "Max Domi": 0.95,
+    "Kirill Marchenko": 0.96,
+    "Marshall Rifai": 0.96,
+    "Nick Blankenburg": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.5,
+  "jev": 0.4
+ }
+}
