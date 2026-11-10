@@ -1,0 +1,141 @@
+{
+ "game": {
+  "gameId": 2026020285,
+  "kickoff": "2026-11-10T03:00:00Z",
+  "away": "New York Islanders",
+  "home": "San Jose Sharks",
+  "away_id": 2,
+  "home_id": 28,
+  "away_abbr": "NYI",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-10T00:47:42.529706+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Sharks",
+   "published": "2026-11-09T05:00:02.517Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders at Sharks projected lineups",
+   "published": "2026-11-09T20:11:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: Islanders vs Devils",
+   "published": "2026-11-07T05:00:01.548Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders to Host Military Appreciation Night on Nov. 7 vs New Jersey",
+   "published": "2026-11-07T13:12:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks at Stars projected lineups ",
+   "published": "2026-11-07T17:44:05.81Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils at Islanders projected lineups",
+   "published": "2026-11-07T17:58:42.776Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    },
+    {
+     "player": "Ryan Pulock",
+     "detail": "upper body injury; will not play"
+    },
+    {
+     "player": "Matias Maccelli",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Cal Ritchie",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Scott Mayfield",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Mathew Barzal",
+     "detail": "wore non-contact jersey at morning skate; potential return during trip"
+    },
+    {
+     "player": "Matias Maccelli",
+     "detail": "wore non-contact jersey at morning skate; potential return during trip"
+    }
+   ],
+   "returning": [],
+   "summary": "The Islanders (7-6-3) are on a three-game winless stretch after a 5-4 overtime loss to New Jersey on Saturday. They begin a three-game West Coast swing in San Jose, with several key players (Barzal, Maccelli, Pulock) traveling but limited in practice; Pulock will not play this game."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury; week to week"
+    },
+    {
+     "player": "Nolan Allan",
+     "detail": "scratched"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sharks (7-11-1) are trying to snap a five-game losing streak and have only two regulation wins this season. Alexander Wennberg is expected to play after missing 10 games with an upper-body injury, while Filip Bystedt was returned to the AHL on Monday."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 0.99,
+   "announced": 0.76,
+   "p_out": {
+    "Mathew Barzal": 0.87,
+    "Alexander Romanov": 0.98,
+    "Ryan Pulock": 0.96,
+    "Matias Maccelli": 0.89,
+    "Cal Ritchie": 0.97,
+    "Scott Mayfield": 0.96
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Igor Chernyshov": 0.95,
+    "Nolan Allan": 0.96,
+    "Adam Gaudette": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.7,
+  "jev": 0.3
+ }
+}
