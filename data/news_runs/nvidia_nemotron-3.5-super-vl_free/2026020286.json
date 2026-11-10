@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020286,
+  "kickoff": "2026-11-11T00:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Toronto Maple Leafs",
+  "away_id": 21,
+  "home_id": 10,
+  "away_abbr": "COL",
+  "home_abbr": "TOR"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-10T21:47:47.524244+00:00",
+ "articles": [
+  {
+   "title": "Avalanche at Maple Leafs projected lineups ",
+   "published": "2026-11-10T17:52:49.175Z",
+   "lineups": true
+  },
+  {
+   "title": "Devils at Maple Leafs projected lineups",
+   "published": "2026-11-08T22:18:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Gavin McKenna Watch: McDavid, Oilers await Maple Leafs for rematch",
+   "published": "2026-11-09T16:29:07.904Z",
+   "lineups": false
+  },
+  {
+   "title": "Tuesday Tilt in Toronto",
+   "published": "2026-11-10T16:20:24.352Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (10-6-2) are coming off a 4-0 shutout win over Detroit, with Mackenzie Blackwood making 27 saves. Cale Makar will play despite leaving practice early Sunday for precautionary reasons. The projected lineup lists Blackwood as the starting goalie ahead of Scott Wedgewood."
+  },
+  "home": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Max Domi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Kirill Marchenko",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Marshall Rifai",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Blankenburg",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jack Roslovic",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Morgan Rielly",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Colton Sissons",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Cole McWard",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Morgan Rielly",
+     "detail": "day to day"
+    }
+   ],
+   "returning": [
+    "/player: Chris Tanev",
+    "detail: "
+   ],
+   "summary": "The Maple Leafs (8-9-2) lost 4-0 to New Jersey on Sunday and have a lengthy injury list. Chris Tanev will return after missing the Devils game for load management, while Morgan Rielly is day to day and Colton Sissons is week to week. The projected lineup lists Sergei Bobrovsky as the starting goalie ahead of Anthony Stolarz."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Zachary L'Heureux": 0.97,
+    "Josh Manson": 0.97
+   }
+  },
+  "home": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Max Domi": 0.95,
+    "Kirill Marchenko": 0.97,
+    "Marshall Rifai": 0.97,
+    "Nick Blankenburg": 0.97,
+    "Jack Roslovic": 0.59,
+    "Morgan Rielly": 0.44,
+    "Colton Sissons": 0.84,
+    "Cole McWard": 0.87
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.1,
+  "jev": 0.2
+ }
+}

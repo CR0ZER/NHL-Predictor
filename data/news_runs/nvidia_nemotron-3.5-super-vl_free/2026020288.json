@@ -1,0 +1,145 @@
+{
+ "game": {
+  "gameId": 2026020288,
+  "kickoff": "2026-11-11T00:00:00Z",
+  "away": "Washington Capitals",
+  "home": "Ottawa Senators",
+  "away_id": 15,
+  "home_id": 9,
+  "away_abbr": "WSH",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-10T21:47:57.681084+00:00",
+ "articles": [
+  {
+   "title": "Capitals at Senators projected lineups ",
+   "published": "2026-11-10T18:15:42.415Z",
+   "lineups": true
+  },
+  {
+   "title": "Ovechkin Launches Monthly Community Initiative on the 8th of Each Month for His Final NHL Season",
+   "published": "2026-11-08T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators ‘find a way’ after poor start in win over Mammoth",
+   "published": "2026-11-08T15:07:38.469Z",
+   "lineups": false
+  },
+  {
+   "title": "Johansson Returns to Belleville",
+   "published": "2026-11-08T16:53:16.76Z",
+   "lineups": false
+  },
+  {
+   "title": "Mendes Monday Musings",
+   "published": "2026-11-09T14:39:06.178Z",
+   "lineups": false
+  },
+  {
+   "title": "One goal away: An oral history of the Senators’ 2017 playoff run",
+   "published": "2026-11-09T19:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Vincent Desharnais",
+     "detail": "appendectomy"
+    },
+    {
+     "player": "Ethen Frank",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ivan Miroshnichenko",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Holl",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals (9-6-0) visit Ottawa with Logan Thompson projected to start in goal ahead of Charlie Lindgren. Rasmus Sandin (knee) and Vincent Desharnais (appendectomy) are injured, while Ethen Frank, Ivan Miroshnichenko, and Justin Holl are scratched. Alex Ovechkin remains in the lineup during his final NHL season."
+  },
+  "home": {
+   "starting_goalie": "Samuel Ersson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Linus Ullmark",
+     "detail": "lower body injury, will miss ninth straight game"
+    },
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Carter Yakemchuk",
+     "detail": "scratched"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Ridly Greig",
+    "detail: "
+   ],
+   "summary": "The Senators (11-6-1) host the Capitals with Samuel Ersson projected to start; Linus Ullmark remains out for a ninth straight game with a lower-body injury. Jonas Johansson was reassigned to Belleville and Jackson Parsons recalled to back up Ersson. Ridly Greig returns after missing two games with a lower-body injury, while Carter Yakemchuk and Hayden Hodgson are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Logan Thompson",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Rasmus Sandin": 0.97,
+    "Vincent Desharnais": 0.98,
+    "Ethen Frank": 0.97,
+    "Ivan Miroshnichenko": 0.96,
+    "Justin Holl": 0.84
+   }
+  },
+  "home": {
+   "starter": "Samuel Ersson",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Linus Ullmark": 0.98,
+    "Warren Foegele": 0.97,
+    "William Eklund": 0.97,
+    "Andre Burakovsky": 0.98,
+    "Carter Yakemchuk": 0.96,
+    "Hayden Hodgson": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.6,
+  "jev": 0.1
+ }
+}

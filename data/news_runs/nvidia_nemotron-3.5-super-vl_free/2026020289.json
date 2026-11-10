@@ -1,0 +1,134 @@
+{
+ "game": {
+  "gameId": 2026020289,
+  "kickoff": "2026-11-11T00:30:00Z",
+  "away": "Florida Panthers",
+  "home": "Columbus Blue Jackets",
+  "away_id": 13,
+  "home_id": 29,
+  "away_abbr": "FLA",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-10T21:48:09.005187+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Blue Jackets projected lineups",
+   "published": "2026-11-10T17:59:16.582Z",
+   "lineups": true
+  },
+  {
+   "title": "Panthers recall forward Jack Devine from AHL",
+   "published": "2026-11-08T15:00:36.433Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Bruins projected lineups",
+   "published": "2026-11-08T15:42:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Panthers take on Bruins in Atlantic Division battle",
+   "published": "2026-11-08T15:54:55.196Z",
+   "lineups": false
+  },
+  {
+   "title": "‘That’s legacy’: Tkachuk brothers celebrate father’s induction into Hall of Fame",
+   "published": "2026-11-09T13:29:40.118Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Facing Florida ",
+   "published": "2026-11-10T16:58:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury, missed 16 games since Oct. 1"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury, missed 14 games since Oct. 6"
+    },
+    {
+     "player": "Sandis Vilmanis",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Dmitry Kulikov",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Panthers (9-7-2) are missing several key players, including Aleksander Barkov and Brad Marchand, though both participated in morning skate and are within two weeks of returning. Jack Devine will make his season debut after being recalled from the AHL, while Dmitry Kulikov and Cole Reinhardt are scratched. Jacob Markstrom is projected to start in net."
+  },
+  "home": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Conor Garland",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Luca Del Bel Belluz",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jake Christiansen",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Erik Gudbranson\", \"detail\": \"returns to defense after being a scratch the previous three games\"], "
+   ],
+   "summary": "The Blue Jackets (7-8-0) will have Erik Gudbranson back in the lineup on defense, replacing Jake Christiansen. Ryan Lomberg replaces Conor Garland, who is injured. Cam Talbot is projected to start in goal. The team is coming off a 5-2 loss to the Buffalo Sabres."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Aleksander Barkov": 0.95,
+    "Brad Marchand": 0.91,
+    "Sandis Vilmanis": 0.96,
+    "Jonah Gadjovich": 0.97,
+    "Dmitry Kulikov": 0.95
+   }
+  },
+  "home": {
+   "starter": "Cam Talbot",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Isac Lundestrom": 0.96,
+    "Conor Garland": 0.98,
+    "Luca Del Bel Belluz": 0.96,
+    "Jake Christiansen": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.8,
+  "jev": 0.2
+ }
+}

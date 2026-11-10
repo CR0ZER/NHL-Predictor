@@ -1,0 +1,141 @@
+{
+ "game": {
+  "gameId": 2026020287,
+  "kickoff": "2026-11-11T00:00:00Z",
+  "away": "Minnesota Wild",
+  "home": "Montréal Canadiens",
+  "away_id": 30,
+  "home_id": 8,
+  "away_abbr": "MIN",
+  "home_abbr": "MTL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-10T21:47:52.724459+00:00",
+ "articles": [
+  {
+   "title": "Wild at Canadiens projected lineups ",
+   "published": "2026-11-10T17:05:50.294Z",
+   "lineups": true
+  },
+  {
+   "title": "Referee pulls out apple on ice, shows off to Canadiens goalie ",
+   "published": "2026-11-08T04:07:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Faber working way back to Wild, knows injury 'could have been a lot worse'",
+   "published": "2026-11-08T17:51:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Updates from practice – Nov. 9",
+   "published": "2026-11-09T17:41:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Carey Price’s most notable non-NHL accomplishments",
+   "published": "2026-11-09T20:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Former Canadien Bobby Sheehan passes away at age 77",
+   "published": "2026-11-09T21:40:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brock Faber",
+     "detail": "skull fracture"
+    },
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body"
+    },
+    {
+     "player": "Nico Sturm",
+     "detail": "scratched"
+    },
+    {
+     "player": "David Spacek",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ">Jonas Spurgeon",
+    "Michael McCarron"
+   ],
+   "summary": "The Wild (12-3-4) lead the Central Division and are projected to start Jesper Wallstedt in goal. Brock Faber (skull fracture) and Filip Gustavsson (lower body) remain out, while Jonas Spurgeon returns after missing five games and Michael McCarron is back from an upper-body injury."
+  },
+  "home": {
+   "starting_goalie": "Jacob Fowler",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mike Matheson",
+     "detail": "lower body"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower body"
+    },
+    {
+     "player": "Florian Xhekaj",
+     "detail": "scratched"
+    },
+    {
+     "player": "Owen Beck",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jake Evans",
+     "detail": "game-time decision after missing morning skate due to practice injury"
+    }
+   ],
+   "returning": [],
+   "summary": "The Canadiens (11-3-3) are projected to start Jacob Fowler in goal, with Samuel Montembeault (lower body) among those out. Jake Evans is a game-time decision after missing the morning skate, and Florian Xhekaj would play if Evans cannot."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Brock Faber": 0.95,
+    "Filip Gustavsson": 0.98,
+    "Nico Sturm": 0.97,
+    "David Spacek": 0.96
+   }
+  },
+  "home": {
+   "starter": "Jacob Fowler",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Mike Matheson": 0.98,
+    "Ivan Demidov": 0.98,
+    "Samuel Montembeault": 0.98,
+    "Florian Xhekaj": 0.81,
+    "Owen Beck": 0.96,
+    "Jake Evans": 0.28
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.8,
+  "jev": 0.2
+ }
+}

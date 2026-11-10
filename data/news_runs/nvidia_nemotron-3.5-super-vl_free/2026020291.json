@@ -1,0 +1,120 @@
+{
+ "game": {
+  "gameId": 2026020291,
+  "kickoff": "2026-11-11T00:00:00Z",
+  "away": "New Jersey Devils",
+  "home": "Winnipeg Jets",
+  "away_id": 1,
+  "home_id": 52,
+  "away_abbr": "NJD",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-10T21:48:03.842876+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Devils at Jets",
+   "published": "2026-11-10T11:31:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Devils at Jets projected lineups",
+   "published": "2026-11-10T17:56:14.254Z",
+   "lineups": true
+  },
+  {
+   "title": "Devils broadcast team breaks down, breaks window on trip to Islanders arena",
+   "published": "2026-11-08T02:04:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils broadcast team breaks down, breaks window on trip to Islanders arena",
+   "published": "2026-11-08T02:04:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: November 8 Winnipeg Jets vs. Tampa Bay Lightning",
+   "published": "2026-11-08T11:13:44.348Z",
+   "lineups": false
+  },
+  {
+   "title": "GAMEDAY: Lightning at Jets",
+   "published": "2026-11-08T12:22:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jake Allen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Riley Tufte",
+     "detail": "scratched"
+    },
+    {
+     "player": "Anthony Mantha",
+     "detail": "injured (throat)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Devils (13-5-0) are projected to use the same lineup from their 4-0 win at Toronto, with Jake Allen expected in goal. Anthony Mantha is out with a throat injury and Riley Tufte is scratched."
+  },
+  "home": {
+   "starting_goalie": "Nico Daws",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Clay Stevenson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nino Niederreiter",
+     "detail": "scratched"
+    },
+    {
+     "player": "Haydn Fleury",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nick Bjugstad",
+     "detail": "injured (undisclosed)"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Josh Morrissey",
+    "detail: returns after missing 13 games with an upper-body injury"
+   ],
+   "summary": "The Jets (7-8-3) are on a three-game win streak and look to make it four. Josh Morrissey returns to the lineup alongside Dylan DeMelo, replacing Haydn Fleury. Connor Hellebuyck will not play despite returning to Winnipeg as a Devil."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jake Allen",
+   "p_starter": 0.95,
+   "announced": 0.98,
+   "p_out": {
+    "Riley Tufte": 0.96,
+    "Anthony Mantha": 0.98
+   }
+  },
+  "home": {
+   "starter": "Nico Daws",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Clay Stevenson": 0.96,
+    "Nino Niederreiter": 0.97,
+    "Haydn Fleury": 0.96,
+    "Nick Bjugstad": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.6,
+  "jev": 0.3
+ }
+}
