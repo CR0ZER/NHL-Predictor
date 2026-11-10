@@ -1,0 +1,123 @@
+{
+ "game": {
+  "gameId": 2026020290,
+  "kickoff": "2026-11-11T01:00:00Z",
+  "away": "Detroit Red Wings",
+  "home": "St. Louis Blues",
+  "away_id": 17,
+  "home_id": 19,
+  "away_abbr": "DET",
+  "home_abbr": "STL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-10T22:47:51.766483+00:00",
+ "articles": [
+  {
+   "title": "Red Wings at Blues projected lineups",
+   "published": "2026-11-10T18:07:31.619Z",
+   "lineups": true
+  },
+  {
+   "title": "Red Wings assign three to Grand Rapids",
+   "published": "2026-11-08T17:41:10.294Z",
+   "lineups": false
+  },
+  {
+   "title": "Englund fitting into depth role, providing ‘sense of security’ to Detroit’s defense corps",
+   "published": "2026-11-08T21:47:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Tkachuk gets well-deserved Hockey Hall of Fame induction",
+   "published": "2026-11-09T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Reebok named official work shoe of the St. Louis Blues",
+   "published": "2026-11-09T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mailloux activated from injured reserve",
+   "published": "2026-11-09T19:25:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Larkin",
+     "detail": "suspended"
+    },
+    {
+     "player": "Carter Mazur",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Mason Appleton (missed 16 games with undisclosed injury)",
+    ": Marco Kasper (missed 17 games with upper-body injury)"
+   ],
+   "summary": "The Red Wings (7-8-3) are projected to start John Gibson in net after he missed two games with a lower-body injury. Detroit welcomes back forwards Mason Appleton and Marco Kasper, while Dylan Larkin is suspended and Carter Mazur is scratched. The team also assigned John Leonard, Nate Danielson, and goaltender Michal Postva to Grand Rapids."
+  },
+  "home": {
+   "starting_goalie": "Joel Hofer",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Aleksanteri Kaskimaki",
+     "detail": "scratched"
+    },
+    {
+     "player": "Calle Rosen",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ": Logan Mailloux (season debut after missing first 17 games with broken right hand)",
+    ": Calle Rosen (recalled from AHL Springfield)"
+   ],
+   "summary": "The Blues (7-8-2) are projected to start Joel Hofer in net. Logan Mailloux makes his season debut after missing the first 17 games with a broken right hand, while Calle Rosen was recalled from the AHL. Tyler Tucker (knee) and Dillon Dube (neck) remain injured, and Adam Jiricek and Theo Lindstein were assigned to Springfield."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "John Gibson",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Dylan Larkin": 0.99,
+    "Carter Mazur": 0.98
+   }
+  },
+  "home": {
+   "starter": "Joel Hofer",
+   "p_starter": 0.86,
+   "announced": 0.93,
+   "p_out": {
+    "Tyler Tucker": 0.97,
+    "Dillon Dube": 0.97,
+    "Aleksanteri Kaskimaki": 0.96,
+    "Calle Rosen": 0.9
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.6,
+  "jev": 0.6
+ }
+}
