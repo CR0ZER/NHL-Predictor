@@ -1,0 +1,155 @@
+{
+ "game": {
+  "gameId": 2026020294,
+  "kickoff": "2026-11-12T00:30:00Z",
+  "away": "New York Rangers",
+  "home": "Calgary Flames",
+  "away_id": 3,
+  "home_id": 20,
+  "away_abbr": "NYR",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-11T21:48:26.133104+00:00",
+ "articles": [
+  {
+   "title": "Rangers at Flames projected lineups",
+   "published": "2026-11-11T18:16:00.408Z",
+   "lineups": true
+  },
+  {
+   "title": "Answered The Bell",
+   "published": "2026-11-09T03:10:32.914Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Oilers: Pregame Notes",
+   "published": "2026-11-09T13:50:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Oilers projected lineups",
+   "published": "2026-11-09T18:29:30.34Z",
+   "lineups": false
+  },
+  {
+   "title": "'Be Great To Meet Him'",
+   "published": "2026-11-09T19:03:31.508Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Future Watch Update - 09.11.26",
+   "published": "2026-11-09T20:35:53.981Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joonas Korpisalo",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Sean Durzi",
+     "detail": "undisclosed injury, on injured reserve"
+    },
+    {
+     "player": "Alberts Smits",
+     "detail": "upper body injury, week to week"
+    },
+    {
+     "player": "Adam Sykora",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Matt Rempe",
+     "detail": "scratched"
+    },
+    {
+     "player": "Luke Glendening",
+     "detail": "scratched"
+    },
+    {
+     "player": "Marc Del Gaizo",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Rangers (10-8-1) are without starting goaltender Igor Shesterkin due to a lower-body injury, with Joonas Korpisalo projected to start. The lineup features several changes, including Glenn Gawdin making his season debut on the fourth line and Eeli Tolvanen moving up to center that unit. The team has won three straight games and sits fourth in the NHL with a 2.89 goals-against average."
+  },
+  "home": {
+   "starting_goalie": "Devin Cooley",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip injury, no timeline for return"
+    },
+    {
+     "player": "Kevin Bahl",
+     "detail": "lower body injury, out for remainder of season"
+    },
+    {
+     "player": "Maksim Tsyplakov",
+     "detail": "scratched"
+    },
+    {
+     "player": "William Stromgren",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brayden Pachal",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: ",
+    "detail: "
+   ],
+   "summary": "The Flames (8-9-1) will be without Kevin Bahl for the remainder of the season and Jonathan Huberdeau, who has no timeline for his return from a hip injury. Devin Cooley is projected to start in goal after returning from injury with a 32-save performance against the Flyers. Calgary has won six of its last seven home games, and Zayne Parekh is heating up offensively with six of his eight points coming since Oct. 24."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joonas Korpisalo",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Igor Shesterkin": 0.98,
+    "Sean Durzi": 0.97,
+    "Alberts Smits": 0.97,
+    "Adam Sykora": 0.98,
+    "Joseph Veleno": 0.98,
+    "Matt Rempe": 0.98,
+    "Luke Glendening": 0.98,
+    "Marc Del Gaizo": 0.97
+   }
+  },
+  "home": {
+   "starter": "Devin Cooley",
+   "p_starter": 0.66,
+   "announced": 0.95,
+   "p_out": {
+    "Jonathan Huberdeau": 0.94,
+    "Kevin Bahl": 0.97,
+    "Maksim Tsyplakov": 0.97,
+    "William Stromgren": 0.96,
+    "Brayden Pachal": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.0,
+  "jev": 0.2
+ }
+}

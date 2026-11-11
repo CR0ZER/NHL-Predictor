@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020293,
+  "kickoff": "2026-11-12T00:00:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "Buffalo Sabres",
+  "away_id": 14,
+  "home_id": 7,
+  "away_abbr": "TBL",
+  "home_abbr": "BUF"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-11T21:48:17.787631+00:00",
+ "articles": [
+  {
+   "title": "Lightning at Sabres projected lineups",
+   "published": "2026-11-11T18:07:25.884Z",
+   "lineups": true
+  },
+  {
+   "title": "Mishkin's Extra Shift: Jets 4, Lightning 3",
+   "published": "2026-11-09T02:43:31.249Z",
+   "lineups": false
+  },
+  {
+   "title": "‘Exceeded everything’: Gourde welcomed back after rare NHL surgery, months of intense rehab",
+   "published": "2026-11-09T15:27:11.881Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres partner with Danforth to host Military Appreciation Night on Wednesday, Nov. 11 ",
+   "published": "2026-11-09T15:27:16.014Z",
+   "lineups": false
+  },
+  {
+   "title": "Lightning recall F Sam O'Reilly from AHL Syracuse",
+   "published": "2026-11-10T15:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Injuries and transactions | Lyon to join team on road trip",
+   "published": "2026-11-10T18:02:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brayden Point",
+     "detail": "lower body injury, placed on injured reserve"
+    },
+    {
+     "player": "Emil Lilleberg",
+     "detail": "scratched"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Gage Goncalves",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning (11-4-2) are coming off a 4-3 loss to the Jets and will be without Brayden Point (lower body). Sam O'Reilly was recalled from Syracuse and is projected to make his NHL debut on the second line."
+  },
+  "home": {
+   "starting_goalie": "Ukko-Pekka Luukkonen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Konsta Helenius",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Alex Lyon",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jiri Kulich",
+     "detail": "scratched"
+    },
+    {
+     "player": "Louis Crevier",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Ryan McLeod",
+    "detail: "
+   ],
+   "summary": "The Sabres (8-6-3) host the Lightning on Military Appreciation Night. Alex Lyon is progressing but will join the team on a road trip after this game, leaving Ukko-Pekka Luukkonen as the projected starter. Ryan McLeod returns to the lineup after being scratched for two games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Brayden Point": 0.97,
+    "Emil Lilleberg": 0.97,
+    "Max Crozier": 0.97,
+    "Gage Goncalves": 0.97
+   }
+  },
+  "home": {
+   "starter": "Ukko-Pekka Luukkonen",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Konsta Helenius": 0.98,
+    "Justin Danforth": 0.98,
+    "Matt Grzelcyk": 0.92,
+    "Alex Lyon": 0.96,
+    "Jiri Kulich": 0.96,
+    "Louis Crevier": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 34.7,
+  "jev": 0.2
+ }
+}
