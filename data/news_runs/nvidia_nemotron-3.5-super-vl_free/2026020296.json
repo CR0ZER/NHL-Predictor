@@ -1,0 +1,146 @@
+{
+ "game": {
+  "gameId": 2026020296,
+  "kickoff": "2026-11-12T02:30:00Z",
+  "away": "Utah Mammoth",
+  "home": "Vegas Golden Knights",
+  "away_id": 68,
+  "home_id": 54,
+  "away_abbr": "UTA",
+  "home_abbr": "VGK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-11T23:47:49.653337+00:00",
+ "articles": [
+  {
+   "title": "Mammoth at Golden Knights projected lineups",
+   "published": "2026-11-11T20:27:25.47Z",
+   "lineups": true
+  },
+  {
+   "title": "Utah and America First Credit Union Introduce Bryce",
+   "published": "2026-11-09T17:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights Announce Plans for Knights Hockey Week",
+   "published": "2026-11-09T17:48:47.169Z",
+   "lineups": false
+  },
+  {
+   "title": "The Week Ahead: Nov. 9-15",
+   "published": "2026-11-09T19:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Lawless: Mr. Golden Knight",
+   "published": "2026-11-09T21:55:02.275Z",
+   "lineups": false
+  },
+  {
+   "title": "Connelly thriving as rookie with Golden Knights, ‘focused on winning’",
+   "published": "2026-11-11T06:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ben McCartney",
+     "detail": "scratched"
+    },
+    {
+     "player": "Gregor Biber",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kailer Yamamoto",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Kailer Yamamoto",
+     "detail": "game-time decision"
+    },
+    {
+     "player": "Lawson Crouse",
+     "detail": "game-time decision"
+    },
+    {
+     "player": "Dylan Guenther",
+     "detail": "game-time decision"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "game-time decision"
+    }
+   ],
+   "returning": [],
+   "summary": "The Utah Mammoth (10-7-1) are 4-5-1 over their last 10 games and are playing the final game of a six-game road trip. Coach Andre Tourigny hinted at several game-time decisions, including Yamamoto, Guenther, and Schmidt. The projected lineup lists Sebastian Cossa as the starting goaltender ahead of Karel Vejmelka."
+  },
+  "home": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Raphael Lavoie",
+     "detail": "scratched"
+    },
+    {
+     "player": "Noah Hanifin",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vegas Golden Knights (12-5-2) are 5-3-2 over their last 10 games and begin a five-game homestand against Utah. Noah Hanifin is week to week with an undisclosed injury sustained against Buffalo. Carter Hart is listed as the projected starting goaltender ahead of Adin Hill, while Parker Wotherspoon returns to the lineup after missing 13 games with an upper-body injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 0.97,
+   "announced": 0.97,
+   "p_out": {
+    "Ben McCartney": 0.97,
+    "Gregor Biber": 0.97,
+    "Kailer Yamamoto": 0.46,
+    "Maveric Lamoureux": 0.95,
+    "John Marino": 0.93,
+    "Nate Schmidt": 0.56,
+    "Lawson Crouse": 0.06,
+    "Dylan Guenther": 0.23
+   }
+  },
+  "home": {
+   "starter": "Carter Hart",
+   "p_starter": 0.97,
+   "announced": 0.95,
+   "p_out": {
+    "Raphael Lavoie": 0.95,
+    "Noah Hanifin": 0.91
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.3,
+  "jev": 0.2
+ }
+}

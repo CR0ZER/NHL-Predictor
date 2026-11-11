@@ -1,0 +1,123 @@
+{
+ "game": {
+  "gameId": 2026020295,
+  "kickoff": "2026-11-12T02:00:00Z",
+  "away": "Philadelphia Flyers",
+  "home": "Edmonton Oilers",
+  "away_id": 4,
+  "home_id": 22,
+  "away_abbr": "PHI",
+  "home_abbr": "EDM"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-11T23:47:44.011593+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers @ Oilers\n",
+   "published": "2026-11-11T14:30:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers at Oilers projected lineups ",
+   "published": "2026-11-11T18:50:25.155Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers Activate Defenseman Rasmus Ristolainen off Injured Reserve",
+   "published": "2026-11-11T20:30:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Postgame RAV4: Flyers Drop 4-3 OT Outcome to Flames\n",
+   "published": "2026-11-09T03:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rookie Watch: Caulfield, Bonk earning trust with Ducks, Flyers",
+   "published": "2026-11-09T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RAV4 Things: Flyers @ Canucks\n",
+   "published": "2026-11-09T14:30:19.751Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Rasmus Ristolainen",
+    "detail: activated off injured reserve and available for the game"
+   ],
+   "summary": "The Flyers (5-10-5) are on a challenging road trip, having won their most recent game in Vancouver 3-1. Rasmus Ristolainen returns to the lineup after missing seven games with a hand injury, while Nikita Grebenkin remains out with a back issue."
+  },
+  "home": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Frederik Andersen",
+     "detail": "offseason knee surgery, expected out until the new year"
+    },
+    {
+     "player": "Isaac Howard",
+     "detail": "lower body injury, missed sixth game"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matthew Savoie",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Colton Dach",
+    "detail: returns after sitting out two games with illness"
+   ],
+   "summary": "The Oilers (13-3-3) have won back-to-back games and have points in eight of their last 10. Colton Dach returns from illness, while Connor Murphy will play despite not practicing Tuesday. Goaltending remains a concern with Frederik Andersen out long-term."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dan Vladar",
+   "p_starter": 0.97,
+   "announced": 0.9,
+   "p_out": {
+    "Nikita Grebenkin": 0.97
+   }
+  },
+  "home": {
+   "starter": "Tristan Jarry",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Frederik Andersen": 0.98,
+    "Isaac Howard": 0.94,
+    "Mattias Janmark": 0.9,
+    "Alec Regula": 0.86,
+    "Matthew Savoie": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.8,
+  "jev": 0.2
+ }
+}
