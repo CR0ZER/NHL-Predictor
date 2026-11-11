@@ -1,0 +1,129 @@
+{
+ "game": {
+  "gameId": 2026020292,
+  "kickoff": "2026-11-11T03:00:00Z",
+  "away": "Nashville Predators",
+  "home": "Los Angeles Kings",
+  "away_id": 18,
+  "home_id": 26,
+  "away_abbr": "NSH",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-11T00:49:44.308653+00:00",
+ "articles": [
+  {
+   "title": "Predators at Kings projected lineups ",
+   "published": "2026-11-10T20:22:05.537Z",
+   "lineups": true
+  },
+  {
+   "title": "FINAL - LAK 2, PIT 5",
+   "published": "2026-11-08T05:26:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Darcy Kuemper unveils Hockey Fights Cancer mask, to be worn throughout all remaining November games",
+   "published": "2026-11-08T17:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Preds Official Podcast: Pekka Rinne - Hockey Hall of Famer",
+   "published": "2026-11-08T19:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Elite Goaltender, Better Person: How Pekka Rinne Reached the Hockey Hall of Fame",
+   "published": "2026-11-08T20:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bridgestone Arena Selects JE Dunn Construction to Lead Smashville's Next Stage: Broadway 2030 Transformation Project",
+   "published": "2026-11-09T16:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Marchessault",
+     "detail": "lower body injury, expected to miss fourth straight game"
+    },
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nicolas Hague",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators (8-4-5) head to Los Angeles for a road matchup against the Kings. Jonathan Marchessault remains sidelined with a lower-body injury and is expected to miss his fourth consecutive game, while William Trudeau is out with an upper-body issue. Nicolas Hague and Ilya Lyubushkin are listed as scratched in the projected lineup."
+  },
+  "home": {
+   "starting_goalie": "Anton Forsberg",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Erik Gustafsson",
+     "detail": "undisclosed injury, day to day"
+    },
+    {
+     "player": "Kevin Fiala",
+     "detail": "leg surgery, trending toward season debut Thursday vs Islanders"
+    },
+    {
+     "player": "Alex Turcotte",
+     "detail": "scratched"
+    },
+    {
+     "player": "Samuel Helenius",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: "
+   ],
+   "summary": "The Kings (5-8-2) host Nashville after a 5-2 loss to Pittsburgh. Erik Gustafsson is day to day with an undisclosed injury, while Kevin Fiala continues to recover from leg surgery and is not expected until at least Thursday. Alex Turcotte and Samuel Helenius are scratched in the projected lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Juuse Saros",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Jonathan Marchessault": 0.97,
+    "William Trudeau": 0.94,
+    "Nicolas Hague": 0.96,
+    "Ilya Lyubushkin": 0.96
+   }
+  },
+  "home": {
+   "starter": "Anton Forsberg",
+   "p_starter": 0.97,
+   "announced": 0.87,
+   "p_out": {
+    "Erik Gustafsson": 0.36,
+    "Kevin Fiala": 0.92,
+    "Alex Turcotte": 0.94,
+    "Samuel Helenius": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.7,
+  "jev": 0.5
+ }
+}
