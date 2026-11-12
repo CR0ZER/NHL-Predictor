@@ -46,7 +46,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.3.3  # pas d'étiquette « v10 » : astral-sh ne publie que des versions exactes
 
       - name: Données reconstructibles (cache)
         uses: actions/cache@v6
