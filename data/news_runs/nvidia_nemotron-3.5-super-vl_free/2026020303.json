@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020303,
+  "kickoff": "2026-11-13T00:00:00Z",
+  "away": "Washington Capitals",
+  "home": "New Jersey Devils",
+  "away_id": 15,
+  "home_id": 1,
+  "away_abbr": "WSH",
+  "home_abbr": "NJD"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-12T21:48:07.986593+00:00",
+ "articles": [
+  {
+   "title": "Capitals at Devils projected lineups",
+   "published": "2026-11-12T17:35:36.589Z",
+   "lineups": true
+  },
+  {
+   "title": "Devils Stick With Winning Formula in Winnipeg | MORNING SKATE",
+   "published": "2026-11-10T17:39:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils at Jets projected lineups",
+   "published": "2026-11-10T17:56:14.254Z",
+   "lineups": false
+  },
+  {
+   "title": "Capitals at Senators projected lineups ",
+   "published": "2026-11-10T18:15:42.415Z",
+   "lineups": false
+  },
+  {
+   "title": "Hellebuyck Reflects on Winnipeg Return, Explains Reasons for Change | FEATURE",
+   "published": "2026-11-10T18:46:32.61Z",
+   "lineups": false
+  },
+  {
+   "title": "Caps Start Road Heavy Stretch in Ottawa",
+   "published": "2026-11-10T20:34:26.453Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Vincent Desharnais",
+     "detail": "appendectomy"
+    },
+    {
+     "player": "Ethen Frank",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ivan Miroshnichenko",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Holl",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals (10-6-0) are projected to start Logan Thompson in net against the Devils. They are without Rasmus Sandin (knee) and Vincent Desharnais (appendectomy), while Ethen Frank, Ivan Miroshnichenko, and Justin Holl are listed as scratched. The team did not have a morning skate ahead of this matchup."
+  },
+  "home": {
+   "starting_goalie": "Connor Hellebuyck",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Anthony Mantha",
+     "detail": "throat injury (placed on long-term injured reserve)"
+    },
+    {
+     "player": "Brett Pesce",
+     "detail": "illness (day to day)"
+    },
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "lower body injury (undergoing imaging, no timetable)"
+    },
+    {
+     "player": "Amadeus Lombardi",
+     "detail": "healthy scratch"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Brett Pesce",
+     "detail": "day to day (illness)"
+    }
+   ],
+   "returning": [],
+   "summary": "The Devils (13-6-0) are projected to start Connor Hellebuyck in goal. Anthony Mantha has been placed on long-term injured reserve, while Brett Pesce is day to day with an illness and Johnathan Kovacevic is undergoing imaging with no return timetable. Amadeus Lombardi will be a healthy scratch, and Lenni Hameenaho and Stefan Noesen have been recalled from Utica."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Logan Thompson",
+   "p_starter": 1.0,
+   "announced": 0.93,
+   "p_out": {
+    "Rasmus Sandin": 0.98,
+    "Vincent Desharnais": 0.97,
+    "Ethen Frank": 0.98,
+    "Ivan Miroshnichenko": 0.97,
+    "Justin Holl": 0.97
+   }
+  },
+  "home": {
+   "starter": "Connor Hellebuyck",
+   "p_starter": 0.92,
+   "announced": 0.93,
+   "p_out": {
+    "Anthony Mantha": 0.98,
+    "Brett Pesce": 0.41,
+    "Johnathan Kovacevic": 0.64,
+    "Amadeus Lombardi": 0.92
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.1,
+  "jev": 0.2
+ }
+}

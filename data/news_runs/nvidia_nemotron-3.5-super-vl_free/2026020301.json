@@ -1,0 +1,120 @@
+{
+ "game": {
+  "gameId": 2026020301,
+  "kickoff": "2026-11-13T00:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Ottawa Senators",
+  "away_id": 21,
+  "home_id": 9,
+  "away_abbr": "COL",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-12T21:48:02.440809+00:00",
+ "articles": [
+  {
+   "title": "Avalanche at Senators projected lineups",
+   "published": "2026-11-12T18:06:47.983Z",
+   "lineups": true
+  },
+  {
+   "title": "Another Goaltender Recalled from Belleville",
+   "published": "2026-11-10T14:54:34.226Z",
+   "lineups": false
+  },
+  {
+   "title": "Tuesday Tilt in Toronto",
+   "published": "2026-11-10T16:20:24.352Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche at Maple Leafs projected lineups ",
+   "published": "2026-11-10T17:52:49.175Z",
+   "lineups": false
+  },
+  {
+   "title": "Capitals at Senators projected lineups ",
+   "published": "2026-11-10T18:15:42.415Z",
+   "lineups": false
+  },
+  {
+   "title": "Sens aim to keep momentum rolling against Washington",
+   "published": "2026-11-10T19:14:03.255Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Scott Wedgewood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (11-6-2) are on a three-game road trip through Canadian Atlantic Division cities. Nathan MacKinnon and Cale Makar did not participate in the morning skate but are expected to play. Mackenzie Blackwood recorded a 27-save shutout against Detroit on Saturday."
+  },
+  "home": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Cousins",
+     "detail": "upper body injury, expected to miss 7-10 days"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Samuel Blais",
+    "detail: forward coming into the lineup"
+   ],
+   "summary": "The Senators (11-6-2) host the Avalanche at Canadian Tire Centre. Linus Ullmark will start after missing nine games with a lower-body injury. Samuel Blais enters the lineup with Nick Cousins sidelined."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Scott Wedgewood",
+   "p_starter": 0.95,
+   "announced": 0.96,
+   "p_out": {
+    "Zachary L'Heureux": 0.98,
+    "Josh Manson": 0.97
+   }
+  },
+  "home": {
+   "starter": "Linus Ullmark",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Warren Foegele": 0.98,
+    "William Eklund": 0.97,
+    "Andre Burakovsky": 0.98,
+    "Nick Cousins": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.6,
+  "jev": 0.2
+ }
+}

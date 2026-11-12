@@ -1,0 +1,130 @@
+{
+ "game": {
+  "gameId": 2026020302,
+  "kickoff": "2026-11-13T00:30:00Z",
+  "away": "Detroit Red Wings",
+  "home": "Florida Panthers",
+  "away_id": 17,
+  "home_id": 13,
+  "away_abbr": "DET",
+  "home_abbr": "FLA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-12T21:48:18.191563+00:00",
+ "articles": [
+  {
+   "title": "Red Wings at Panthers projected lineups",
+   "published": "2026-11-12T17:20:00Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Panthers close out road trip in Columbus",
+   "published": "2026-11-10T17:35:35.754Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Blue Jackets projected lineups",
+   "published": "2026-11-10T17:59:16.582Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings at Blues projected lineups",
+   "published": "2026-11-10T18:07:31.619Z",
+   "lineups": false
+  },
+  {
+   "title": "Barkov and Marchand join morning skate, getting closer to return for Panthers",
+   "published": "2026-11-10T21:01:26.168Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Red Wings push forward on four-game road trip, battle the Blues on Tuesday",
+   "published": "2026-11-10T22:53:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "John Gibson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Larkin",
+     "detail": "suspended"
+    },
+    {
+     "player": "Michael Rasmussen",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Red Wings (7-9-3) are coming off a 3-2 loss to the St. Louis Blues. Carter Mazur replaces Michael Rasmussen in the projected lineup, while Dylan Larkin remains suspended."
+  },
+  "home": {
+   "starting_goalie": "Akira Schmid",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Uvis Balinskis",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cole Reinhardt",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jack Devine",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Sandis Vilmanis",
+    "detail: "
+   ],
+   "summary": "The Panthers (10-7-2) are missing key forwards Aleksander Barkov and Brad Marchand, both of whom skated in morning skate but are not expected back for at least two weeks. Sandis Vilmanis returns to the lineup after missing two games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "John Gibson",
+   "p_starter": 0.96,
+   "announced": 0.93,
+   "p_out": {
+    "Dylan Larkin": 0.98,
+    "Michael Rasmussen": 0.97
+   }
+  },
+  "home": {
+   "starter": "Akira Schmid",
+   "p_starter": 0.82,
+   "announced": 0.92,
+   "p_out": {
+    "Aleksander Barkov": 0.93,
+    "Brad Marchand": 0.92,
+    "Jonah Gadjovich": 0.96,
+    "Uvis Balinskis": 0.75,
+    "Cole Reinhardt": 0.91,
+    "Jack Devine": 0.68
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.0,
+  "jev": 0.2
+ }
+}

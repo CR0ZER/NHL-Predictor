@@ -1,0 +1,112 @@
+{
+ "game": {
+  "gameId": 2026020304,
+  "kickoff": "2026-11-13T00:00:00Z",
+  "away": "Tampa Bay Lightning",
+  "home": "Columbus Blue Jackets",
+  "away_id": 14,
+  "home_id": 29,
+  "away_abbr": "TBL",
+  "home_abbr": "CBJ"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-12T21:48:12.693262+00:00",
+ "articles": [
+  {
+   "title": "Lightning at Blue Jackets projected lineups",
+   "published": "2026-11-12T17:05:23.617Z",
+   "lineups": true
+  },
+  {
+   "title": "Lightning recall F Sam O'Reilly from AHL Syracuse",
+   "published": "2026-11-10T15:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Facing Florida ",
+   "published": "2026-11-10T16:58:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Panthers at Blue Jackets projected lineups",
+   "published": "2026-11-10T17:59:16.582Z",
+   "lineups": false
+  },
+  {
+   "title": "Sam O’Reilly ready for first NHL test after Lightning recall Tuesday",
+   "published": "2026-11-10T19:14:53.966Z",
+   "lineups": false
+  },
+  {
+   "title": "Columbus Blue Jackets and TENSPACE bring hometown remix to High Street",
+   "published": "2026-11-10T19:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dennis Hildeby",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Brayden Point",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Erik Cernak",
+     "detail": "undisclosed injury; may not play"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Erik Cernak",
+     "detail": "may not play"
+    }
+   ],
+   "returning": [],
+   "summary": "The Lightning (12-4-2) are coming off an 8-3 win over Buffalo. Dennis Hildeby is projected to start after Andrei Vasilevskiy played Wednesday. Brayden Point and Erik Cernak are injured, while Emil Lilleberg and Gage Goncalves are scratched. Sam O'Reilly has been recalled and is projected in the lineup."
+  },
+  "home": {
+   "starting_goalie": "Jet Greaves",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Conor Garland",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blue Jackets (7-9-0) have Cam Talbot and Jet Greaves listed as goalies, with Greaves first in the projected lineup. Isac Lundestrom and Conor Garland are injured. Luca Del Bel Belluz and Erik Gudbranson are scratched, with Jake Christiansen replacing Gudbranson on defense."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dennis Hildeby",
+   "p_starter": 0.95,
+   "announced": 0.95,
+   "p_out": {
+    "Brayden Point": 0.97,
+    "Erik Cernak": 0.59
+   }
+  },
+  "home": {
+   "starter": "Jet Greaves",
+   "p_starter": 0.95,
+   "announced": 0.93,
+   "p_out": {
+    "Isac Lundestrom": 0.97,
+    "Conor Garland": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.2
+ }
+}

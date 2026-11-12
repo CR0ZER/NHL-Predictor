@@ -1,0 +1,105 @@
+{
+ "game": {
+  "gameId": 2026020299,
+  "kickoff": "2026-11-13T00:00:00Z",
+  "away": "Montréal Canadiens",
+  "home": "Boston Bruins",
+  "away_id": 8,
+  "home_id": 6,
+  "away_abbr": "MTL",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-12T21:47:52.368624+00:00",
+ "articles": [
+  {
+   "title": "Canadiens at Bruins projected lineups",
+   "published": "2026-11-12T17:55:39.979Z",
+   "lineups": true
+  },
+  {
+   "title": "Bergeron’s Teammates, Opponents Reflect on Legendary Career",
+   "published": "2026-11-10T03:05:14.986Z",
+   "lineups": false
+  },
+  {
+   "title": "MIN@MTL: What you need to know",
+   "published": "2026-11-10T14:04:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Updates from optional morning skate – Nov. 10",
+   "published": "2026-11-10T17:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Boston Bruins to Host Causeway University Homecoming Game on November 12 in Celebration of Varsity Sweater Debut",
+   "published": "2026-11-10T17:00:47.803Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Canadiens projected lineups ",
+   "published": "2026-11-10T17:05:50.294Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Fowler",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Mike Matheson",
+    "detail: "
+   ],
+   "summary": "The Canadiens (11-3-4) are projected to start Jacob Fowler in net for the third straight game. Mike Matheson returns to the lineup after missing six games with a lower-body injury, while Samuel Montembeault and Ivan Demidov remain out with lower-body injuries."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "James Hagens",
+     "detail": "back injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins (13-4-1) are expected to dress the same lineup from their 4-1 win over the Florida Panthers. Jeremy Swayman is projected to start in goal, with James Hagens sidelined with a back injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Fowler",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Samuel Montembeault": 0.98,
+    "Ivan Demidov": 0.98
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "James Hagens": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.2,
+  "jev": 0.2
+ }
+}
