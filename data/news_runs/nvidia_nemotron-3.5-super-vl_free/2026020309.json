@@ -1,0 +1,157 @@
+{
+ "game": {
+  "gameId": 2026020309,
+  "kickoff": "2026-11-12T17:00:00Z",
+  "away": "Carolina Hurricanes",
+  "home": "Seattle Kraken",
+  "away_id": 12,
+  "home_id": 55,
+  "away_abbr": "CAR",
+  "home_abbr": "SEA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-12T14:47:52.790934+00:00",
+ "articles": [
+  {
+   "title": "Hurricanes at Kraken projected lineups",
+   "published": "2026-11-12T09:29:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Hurricanes practice at 'The Cave' ahead of Global Series, 'felt like home' ",
+   "published": "2026-11-09T17:24:58.52Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken practice in Helsinki, ready for team bonding at Global Series Finland",
+   "published": "2026-11-09T18:25:28.655Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken Took Slice Of Powerhouse Finnish Hockey Pie ",
+   "published": "2026-11-09T19:17:41.093Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken, ReWA grow youth skating program",
+   "published": "2026-11-09T20:00:24.603Z",
+   "lineups": false
+  },
+  {
+   "title": "Quotebook: Day 1 In Finland",
+   "published": "2026-11-09T20:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Brandon Bussi",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jordan Staal",
+     "detail": "calf injury; practiced but not expected to play Thursday"
+    },
+    {
+     "player": "Mike Reilly",
+     "detail": "scratched"
+    },
+    {
+     "player": "Alexander Nikishin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nicolas Deslauriers",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cayden Primeau",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes (14-3-2) are in Helsinki for the 2026 NHL Global Series, riding strong form as the reigning Stanley Cup champions. Captain Jordan Staal remains out with a calf injury despite returning to full practice, while Mike Reilly, Alexander Nikishin, Nicolas Deslauriers, and Cayden Primeau are scratched. Taylor Hall will mark his 1,000th NHL game, becoming the first player to reach the milestone outside North America."
+  },
+  "home": {
+   "starting_goalie": "Philipp Grubauer",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jacob Melanson",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Ryan Lindgren",
+     "detail": "upper-body injury; practiced in a regular jersey but coach Lane Lambert is \"not 100 percent sure\" he will be ready"
+    },
+    {
+     "player": "Jared McCann",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Curtis Douglas",
+     "detail": "upper-body injury; on the trip and practicing in a non-contact jersey"
+    },
+    {
+     "player": "Cale Fleury",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jagger Firkus",
+     "detail": "scratched"
+    },
+    {
+     "player": "Logan Morrison",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nikke Kokko",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Ryan Lindgren",
+     "detail": "upper-body injury; game-time uncertainty per coach Lane Lambert"
+    }
+   ],
+   "returning": [],
+   "summary": "The Kraken (9-6-1) are making their first-ever regular-season appearance outside North America, facing the Hurricanes in Helsinki. The team is dealing with several injuries, including Ryan Lindgren (upper body), Jared McCann (lower body), Jacob Melanson (upper body), and Curtis Douglas (upper body), with Lindgren's status uncertain. Cale Fleury, Jagger Firkus, Logan Morrison, and Nikke Kokko are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Brandon Bussi",
+   "p_starter": 0.92,
+   "announced": 0.96,
+   "p_out": {
+    "Jordan Staal": 0.95,
+    "Mike Reilly": 0.98,
+    "Alexander Nikishin": 0.97,
+    "Nicolas Deslauriers": 0.97,
+    "Cayden Primeau": 0.97
+   }
+  },
+  "home": {
+   "starter": "Philipp Grubauer",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Jacob Melanson": 0.85,
+    "Ryan Lindgren": 0.53,
+    "Jared McCann": 0.96,
+    "Curtis Douglas": 0.71,
+    "Cale Fleury": 0.95,
+    "Jagger Firkus": 0.96,
+    "Logan Morrison": 0.94,
+    "Nikke Kokko": 0.9
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 10.4,
+  "jev": 0.2
+ }
+}
