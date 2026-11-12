@@ -90,6 +90,8 @@ header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px) satu
 .switch .knob::after { content: ""; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; border-radius: 50%; background: var(--text-muted); transition: transform .25s cubic-bezier(.3,1.4,.6,1), background .2s; }
 .switch input:checked + .knob { background: var(--ice-soft); box-shadow: inset 0 0 0 1px var(--ice); }
 .switch input:checked + .knob::after { transform: translateX(12px); background: var(--ice); }
+.simbar { display: flex; justify-content: flex-end; margin: 0 0 12px; }
+.closedtoggle { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600; color: var(--text-secondary); padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface-1); }
 button { font: inherit; font-weight: 650; height: 38px; padding: 0 16px; border-radius: 12px; cursor: pointer; border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary); transition: transform .12s ease, background .2s, border-color .2s, box-shadow .2s, opacity .2s; }
 button:hover { border-color: var(--border-strong); background: var(--surface-2); }
 button:active { transform: translateY(1px) scale(.98); }
@@ -527,6 +529,7 @@ body.static .updated { display: flex; }
   </section>
 
   <section class="tab" id="tab-sim">
+    <div class="simbar"><label class="switch closedtoggle" title="Stratégies Unibet closes le 25 octobre (plus de cotes Unibet avant les matchs)"><input type="checkbox" id="show-closed"><span class="knob"></span><span>Inclure les stratégies closes</span></label></div>
     <div class="kpis" id="kpis"></div>
     <div class="strats" id="strats"></div>
     <div class="card chart-card rise" style="--i:3">
@@ -647,7 +650,7 @@ function dropdown(sel) {  // le <select> reste la source de vérité (value, cha
   btn.setAttribute("aria-haspopup", "listbox"); pop.setAttribute("role", "listbox");
   sel.before(wrap); wrap.append(sel, btn, pop); sel.hidden = true;
   const label = () => btn.innerHTML = `<span>${esc(sel.selectedOptions[0]?.text)}</span>${CHEV}`;
-  label();
+  label(); sel.addEventListener("change", label);  // aussi quand la valeur change par le code
   btn.onclick = () => {
     if (OPEN?.pop === pop) return closePop();
     pop.innerHTML = [...sel.options].map(o => `<button type="button" role="option" class="dd-opt ${o.selected ? "on" : ""}" aria-selected="${o.selected}" data-v="${esc(o.value)}">${esc(o.text)}</button>`).join("");
@@ -973,12 +976,23 @@ function ring(p, color) {
   return `<div class="ring" title="Taux de réussite"><svg viewBox="0 0 58 58"><circle cx="29" cy="29" r="${r}" fill="none" stroke="${css("--surface-3")}" stroke-width="6"/>
     <circle class="arc" cx="29" cy="29" r="${r}" fill="none" stroke="${css(color)}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c}" data-off="${c * (1 - (p ?? 0))}" style="transition:stroke-dashoffset 1.2s cubic-bezier(.2,.8,.2,1)"/></svg><b>${p == null ? "–" : Math.round(p * 100) + "%"}</b></div>`;
 }
+// Stratégies closes (Unibet) masquées par défaut : profit total, cartes, courbes et tableau ne montrent que celles en cours
+let SHOW_CLOSED = false;
+try { SHOW_CLOSED = localStorage.getItem("showClosed") === "1"; } catch (e) {}
+$("#show-closed").checked = SHOW_CLOSED;
+$("#show-closed").onchange = e => {
+  SHOW_CLOSED = e.target.checked;
+  try { localStorage.setItem("showClosed", SHOW_CLOSED ? "1" : "0"); } catch (err) {}
+  SEEN = {}; renderSim();
+};
+const shownStrategies = () => STATE.summary.filter(s => SHOW_CLOSED || !s.closed).map(s => s.key);
+
 function renderSim() {
-  const S = STATE.summary;
+  const S = STATE.summary.filter(s => SHOW_CLOSED || !s.closed);
   const tot = S.reduce((a, s) => ({ settled: a.settled + s.settled, pending: a.pending + s.pending, won: a.won + s.won, staked: a.staked + s.staked, profit: a.profit + s.profit }), { settled: 0, pending: 0, won: 0, staked: 0, profit: 0 });
   const roi = tot.staked ? tot.profit / tot.staked : null;
   $("#kpis").innerHTML = `
-    <div class="card kpi big rise"><div class="label">Profit total · toutes stratégies</div><div class="value ${cls(tot.profit)}" id="k-profit"></div><div class="hint">${tot.staked.toLocaleString("fr-FR")} € misés (fictifs)</div></div>
+    <div class="card kpi big rise"><div class="label">Profit total · ${SHOW_CLOSED ? "toutes stratégies" : "stratégies en cours"}</div><div class="value ${cls(tot.profit)}" id="k-profit"></div><div class="hint">${tot.staked.toLocaleString("fr-FR")} € misés (fictifs)</div></div>
     <div class="card kpi rise" style="--i:1"><div class="label">ROI global</div><div class="value ${cls(roi)}" id="k-roi"></div><div class="hint">profit / mises réglées</div></div>
     <div class="card kpi rise" style="--i:2"><div class="label">Réglés · en attente</div><div class="value"><span id="k-set"></span> <span class="muted" style="font-size:22px">· <span id="k-pend"></span></span></div><div class="hint">${tot.won} gagnés · ${tot.settled - tot.won} perdus</div></div>`;
   countUp($("#k-profit"), tot.profit, eur, "profit");
@@ -992,18 +1006,23 @@ function renderSim() {
       <div><b>${s.won}/${s.settled}</b><span>gagnés</span></div><div><b>${s.pending}</b><span>attente</span></div></div>
     ${ring(s.settled ? s.won / s.settled : null, COLORS[s.key])}</div>`).join("");
   nextFrame(() => document.querySelectorAll("#strats .arc").forEach(a => a.style.strokeDashoffset = a.dataset.off));
-  const series = Object.keys(STATE.strategies).map(k => ({ key: k, name: SHORT[k], color: COLORS[k],
+  const series = S.map(s => s.key).map(k => ({ key: k, name: SHORT[k], color: COLORS[k],
     points: STATE.curve.filter(c => c.strategy === k).map(c => ({ x: new Date(c.kickoff), y: c.cum, info: c })) }));
   $("#pnl-legend").innerHTML = `<span class="title">Profit cumulé (€)</span>` + series.map(s => `<span><span class="swatch" style="background:${s.color}"></span>${s.name}</span>`).join("");
   lineChart($("#pnl"), series);
-  const sel = $("#f-strat"); if (sel.options.length === 1) Object.entries(STATE.strategies).forEach(([k, v]) => sel.add(new Option(v, k)));
+  const sel = $("#f-strat"), keys = shownStrategies();
+  if ([...sel.options].slice(1).map(o => o.value).join() !== keys.join()) {  // filtre limité aux stratégies affichées
+    const v = sel.value; sel.length = 1; keys.forEach(k => sel.add(new Option(STATE.strategies[k], k)));
+    sel.value = keys.includes(v) ? v : ""; sel.dispatchEvent(new Event("change"));
+  }
   renderBets();
 }
 let PAGE = 0;  // page du tableau des paris (30 par page)
 function renderBets() {
   const fs = $("#f-strat").value, st = $("#f-status").value, per = 30;
   const order = Object.keys(STATE.strategies);  // soirée la plus récente d'abord, paris d'un même match regroupés
-  const all = STATE.bets.filter(b => (!fs || b.strategy === fs) && (!st || b.status === st))
+  const shown = new Set(shownStrategies());
+  const all = STATE.bets.filter(b => shown.has(b.strategy) && (!fs || b.strategy === fs) && (!st || b.status === st))
     .sort((a, b) => b.date.localeCompare(a.date) || a.kickoff.localeCompare(b.kickoff) || a.gameId - b.gameId || order.indexOf(a.strategy) - order.indexOf(b.strategy));
   const pages = Math.max(1, Math.ceil(all.length / per));
   PAGE = Math.min(PAGE, pages - 1);
