@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020298,
+  "kickoff": "2026-11-12T03:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "San Jose Sharks",
+  "away_id": 5,
+  "home_id": 28,
+  "away_abbr": "PIT",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-12T00:47:53.615940+00:00",
+ "articles": [
+  {
+   "title": "Penguins at Sharks projected lineups",
+   "published": "2026-11-11T19:57:02.373Z",
+   "lineups": true
+  },
+  {
+   "title": "Musings: Special Teams the Difference in Anaheim",
+   "published": "2026-11-09T04:24:08.51Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders at Sharks projected lineups",
+   "published": "2026-11-09T20:11:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins Hall of Fame Class of 2026: Marc-Andre Fleury",
+   "published": "2026-11-09T20:26:57.189Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders' Horvat makes incredible diving effort to stop sure goal",
+   "published": "2026-11-10T04:36:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Pavelski, Brind'Amour, Duggan among candidates for Hockey Hall of Fame Class of 2027",
+   "published": "2026-11-10T17:24:30.586Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sergei Murashov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jake Livanavage",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Solovyov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Andrei Kuzmenko",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Trevor van Riemsdyk",
+     "detail": "lower body injury; on road trip and practiced fully but won't play"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Penguins (6-10-2) are coming off a 5-2 loss to Anaheim and have several defensive injuries, including Ryan Graves, Trevor van Riemsdyk, and Bryan Rust. Sergei Murashov is projected to start in goal ahead of Arturs Silovs. Ville Koivunen is back in the projected lineup after being day-to-day with a lower-body injury."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nolan Allan",
+     "detail": "scratched"
+    },
+    {
+     "player": "Adam Gaudette",
+     "detail": "scratched"
+    },
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury; week to week"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Alexander Wennberg",
+    "detail: "
+   ],
+   "summary": "The Sharks (8-11-1) have Alexander Wennberg returning to the lineup after missing 10 games with an upper-body injury; he did not practice Tuesday but is expected to play. Yaroslav Askarov is projected to start in goal over Alex Nedeljkovic. Filip Bystedt was returned to the AHL, and Igor Chernyshov remains week to week."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sergei Murashov",
+   "p_starter": 0.95,
+   "announced": 0.96,
+   "p_out": {
+    "Jake Livanavage": 0.97,
+    "Ilya Solovyov": 0.97,
+    "Andrei Kuzmenko": 0.95,
+    "Ryan Graves": 0.98,
+    "Trevor van Riemsdyk": 0.97,
+    "Bryan Rust": 0.98,
+    "Elmer Soderblom": 0.98
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Nolan Allan": 0.96,
+    "Adam Gaudette": 0.97,
+    "Igor Chernyshov": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.5,
+  "jev": 0.2
+ }
+}

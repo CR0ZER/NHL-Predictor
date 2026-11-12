@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020297,
+  "kickoff": "2026-11-12T03:00:00Z",
+  "away": "Nashville Predators",
+  "home": "Anaheim Ducks",
+  "away_id": 18,
+  "home_id": 24,
+  "away_abbr": "NSH",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-12T00:47:47.656852+00:00",
+ "articles": [
+  {
+   "title": "Predators at Ducks projected lineups",
+   "published": "2026-11-11T20:32:25.821Z",
+   "lineups": true
+  },
+  {
+   "title": "Ducks Continue to Pile Up the Superlatives",
+   "published": "2026-11-09T04:09:00.884Z",
+   "lineups": false
+  },
+  {
+   "title": "Rookie Watch: Caulfield, Bonk earning trust with Ducks, Flyers",
+   "published": "2026-11-09T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bridgestone Arena Selects JE Dunn Construction to Lead Smashville's Next Stage: Broadway 2030 Transformation Project",
+   "published": "2026-11-09T16:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Host Military Appreciation Night Wednesday",
+   "published": "2026-11-09T18:12:03.217Z",
+   "lineups": false
+  },
+  {
+   "title": "Gauthier Named NHL's First Star of the Week",
+   "published": "2026-11-09T18:20:48.056Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Justus Annunen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nicolas Hague",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jonathan Marchessault",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators (9-4-5) are coming off a 3-0 win at Los Angeles on Tuesday and did not hold a morning skate. Justus Annunen is projected to start after Juuse Saros made 30 saves in the previous game. Nashville will be without scratched defensemen Nicolas Hague and Ilya Lyubushkin, plus injured forwards Jonathan Marchessault and William Trudeau."
+  },
+  "home": {
+   "starting_goalie": "Laurent Brossoit",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyson Hinds",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    },
+    {
+     "player": "Lukas Dostal",
+     "detail": "scratched"
+    },
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Troy Terry\", \"detail\": \"season debut after recovering from hip surgery\"}], ",
+    "summary"
+   ],
+   "summary": "The Ducks (10-7-1) are one of the NHL's hottest teams, winners of five straight and riding an eight-game stretch of five-plus goals. Cutter Gauthier was named First Star of the Week after three hat tricks in five games. Troy Terry will make his season debut after recovering from June 9 hip surgery, while the Ducks returned Nico Myatovic to the AHL. Laurent Brossoit is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Justus Annunen",
+   "p_starter": 0.9,
+   "announced": 0.97,
+   "p_out": {
+    "Nicolas Hague": 0.97,
+    "Ilya Lyubushkin": 0.97,
+    "Jonathan Marchessault": 0.97,
+    "William Trudeau": 0.97
+   }
+  },
+  "home": {
+   "starter": "Laurent Brossoit",
+   "p_starter": 0.97,
+   "announced": 0.98,
+   "p_out": {
+    "Tyson Hinds": 0.97,
+    "Frank Vatrano": 0.96,
+    "Lukas Dostal": 0.96,
+    "A.J. Greer": 0.97,
+    "Ian Moore": 0.97,
+    "Ryan Poehling": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.2,
+  "jev": 0.3
+ }
+}
