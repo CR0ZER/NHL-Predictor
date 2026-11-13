@@ -1,0 +1,128 @@
+{
+ "game": {
+  "gameId": 2026020308,
+  "kickoff": "2026-11-13T03:00:00Z",
+  "away": "New York Islanders",
+  "home": "Los Angeles Kings",
+  "away_id": 2,
+  "home_id": 26,
+  "away_abbr": "NYI",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-13T00:47:45.555039+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Kings",
+   "published": "2026-11-12T05:00:39.819Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders at Kings projected lineups ",
+   "published": "2026-11-12T20:03:12.475Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders' Horvat makes incredible diving effort to stop sure goal",
+   "published": "2026-11-10T04:36:00Z",
+   "lineups": false
+  },
+  {
+   "title": "The Skinny: Sharks 3, Islanders 2 (SO)",
+   "published": "2026-11-10T15:08:45.927Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK vs. NSH",
+   "published": "2026-11-10T19:11:55.425Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Kings projected lineups ",
+   "published": "2026-11-10T20:22:05.537Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jean-Gabriel Pageau",
+     "detail": "day-to-day with a lower-body injury; ruled out after morning skate"
+    },
+    {
+     "player": "Mathew Barzal",
+     "detail": "knee injury; participated in morning skate but will not play"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    },
+    {
+     "player": "Cal Ritchie",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "Scott Mayfield",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matthew Kessel",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/matias-maccelli-8481711/stats?article",
+    "/player/ryan-pulock-8477506?article"
+   ],
+   "summary": "The Islanders (7-6-4) have earned a point in each of their last two games but are winless in four after a 3-2 shootout loss to San Jose. Matias Maccelli returns after missing nine games with a lower-body injury, and Ryan Pulock returns after missing four games with an upper-body injury. Jean-Gabriel Pageau (day-to-day, lower body) and Mathew Barzal (knee) will not play, leaving the forward lines in flux."
+  },
+  "home": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Erik Gustafsson",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/kevin-fiala-8478421/stats?article",
+    "/player/drew-doughty-8477495/stats?article"
+   ],
+   "summary": "The Kings (5-9-2) have lost each of their last two games, including a 3-0 defeat to Nashville on Tuesday. Kevin Fiala will make his season debut after fracturing his left leg at the 2026 Winter Olympics and undergoing a follow-up procedure in September. Drew Doughty will play after taking a slap shot off his right ankle against Nashville and missing Wednesday's practice."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Jean-Gabriel Pageau": 0.99,
+    "Mathew Barzal": 0.99,
+    "Alexander Romanov": 0.98,
+    "Cal Ritchie": 0.97,
+    "Scott Mayfield": 0.97,
+    "Matthew Kessel": 0.97
+   }
+  },
+  "home": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Erik Gustafsson": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 7.9,
+  "jev": 0.2
+ }
+}
