@@ -1,0 +1,152 @@
+{
+ "game": {
+  "gameId": 2026020310,
+  "kickoff": "2026-11-14T02:00:00Z",
+  "away": "New York Rangers",
+  "home": "Vancouver Canucks",
+  "away_id": 3,
+  "home_id": 23,
+  "away_abbr": "NYR",
+  "home_abbr": "VAN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-13T23:47:45.728330+00:00",
+ "articles": [
+  {
+   "title": "Rangers at Canucks projected lineups",
+   "published": "2026-11-13T20:00:20.196Z",
+   "lineups": true
+  },
+  {
+   "title": "Rangers at Flames: Pregame Notes",
+   "published": "2026-11-11T14:15:11.749Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Flames projected lineups",
+   "published": "2026-11-11T18:16:00.408Z",
+   "lineups": false
+  },
+  {
+   "title": "Save of the Season? Korpisalo ditches stick, dives for save",
+   "published": "2026-11-12T01:35:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Flames: Postgame Notes",
+   "published": "2026-11-12T04:00:06.517Z",
+   "lineups": false
+  },
+  {
+   "title": "Sedins ‘disappointed’ by Canucks’ tough start, but don’t foresee wholesale trades",
+   "published": "2026-11-12T20:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Sean Durzi",
+     "detail": "undisclosed injury, will miss seventh straight game"
+    },
+    {
+     "player": "Alberts Smits",
+     "detail": "upper body injury, week to week, placed on injured reserve"
+    },
+    {
+     "player": "Adam Sykora",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Marcel Del Gaizo",
+     "detail": "scratched"
+    },
+    {
+     "player": "Luke Glendening",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matt Rempe",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Glenn Gawdin"
+   ],
+   "summary": "The Rangers (11-8-1) have won four of their last five games and are coming off a 3-1 win at Calgary. They will be without starting goaltender Igor Shesterkin (lower body), with Dylan Garand projected to start ahead of Joonas Korpisalo. Glenn Gawdin makes his NHL debut after being recalled from Hartford, while Marcel Del Gaizo, Luke Glendening, and Matt Rempe are scratched."
+  },
+  "home": {
+   "starting_goalie": "Leevi Merilainen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Victor Mancini",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jacob Quillan",
+     "detail": "scratched"
+    },
+    {
+     "player": "Arshdeep Bains",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Filip Chytil",
+    "Tom Willander"
+   ],
+   "summary": "The Canucks (3-16-1) are enduring the worst start in team history and have lost six straight in regulation. Thatcher Demko remains out with a hip injury, leaving Leevi Merilainen as the projected starter over Kevin Lankinen. Filip Chytil (shoulder) and Tom Willander (lower body) appear ready to return after missing multiple games, pending evaluation following an optional morning skate."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dylan Garand",
+   "p_starter": 0.6,
+   "announced": 0.95,
+   "p_out": {
+    "Igor Shesterkin": 0.98,
+    "Sean Durzi": 0.96,
+    "Alberts Smits": 0.97,
+    "Adam Sykora": 0.98,
+    "Joseph Veleno": 0.98,
+    "Marcel Del Gaizo": 0.97,
+    "Luke Glendening": 0.96,
+    "Matt Rempe": 0.96
+   }
+  },
+  "home": {
+   "starter": "Leevi Meriläinen",
+   "p_starter": 0.79,
+   "announced": 0.92,
+   "p_out": {
+    "Thatcher Demko": 0.98,
+    "Victor Mancini": 0.96,
+    "Jacob Quillan": 0.97,
+    "Arshdeep Bains": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 10.3,
+  "jev": 0.2
+ }
+}
