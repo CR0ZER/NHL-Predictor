@@ -1,0 +1,153 @@
+{
+ "game": {
+  "gameId": 2026020322,
+  "kickoff": "2026-11-15T01:00:00Z",
+  "away": "Buffalo Sabres",
+  "home": "Dallas Stars",
+  "away_id": 7,
+  "home_id": 25,
+  "away_abbr": "BUF",
+  "home_abbr": "DAL"
+ },
+ "llm": "dots-studio/dots-3-note-preview:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-14T22:47:49.048056+00:00",
+ "articles": [
+  {
+   "title": "Sabres at Stars projected lineups",
+   "published": "2026-11-14T19:00:43.404Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Day Guide: Jets vs Stars",
+   "published": "2026-11-12T06:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sign up now for the Sabrehood Sisterhood Vintage Holiday Tree Workshop, presented by Azuna",
+   "published": "2026-11-12T16:41:38.095Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Blackhawks projected lineups",
+   "published": "2026-11-12T17:40:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Jets at Stars projected lineups",
+   "published": "2026-11-12T18:41:28.341Z",
+   "lineups": false
+  },
+  {
+   "title": "Injuries and transactions | Lyon returns at CHI, Helenius placed on IR",
+   "published": "2026-11-12T23:14:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "doubtful": [
+    {
+     "detail": "Heiskanen, a defenseman, was moved to long-term injured reserve. He is also doubtful to play against the Florida Panthers on Sunday.",
+     "player": "Miro Heiskanen"
+    }
+   ],
+   "goalie_status": "projected",
+   "out": [
+    {
+     "detail": "lower body injury, placed on injured reserve retroactive to Nov. 12",
+     "player": "Lian Bichsel"
+    },
+    {
+     "detail": "lower body injury, moved to long-term injured reserve",
+     "player": "Kyle Capobianco"
+    },
+    {
+     "detail": "lower body injury",
+     "player": "Matt Duchene"
+    },
+    {
+     "detail": "finger injury",
+     "player": "Oskar Back"
+    },
+    {
+     "detail": "upper body injury, will miss his fourth straight game",
+     "player": "Miro Heiskanen"
+    }
+   ],
+   "returning": [
+    "Kyle Burroughs",
+    "Zach Metsa"
+   ],
+   "starting_goalie": "Alex Lyon",
+   "summary": "The Sabres are coming off a 3-2 overtime loss to the Blackhawks. They are projected to have a relatively healthy lineup with the exception of several injured players. Notably, defenseman Miro Heiskanen will miss his fourth straight game due to an upper body injury, while forward Matt Duchene is also out with a lower body injury. The team is looking to bounce back after a tough loss."
+  },
+  "home": {
+   "doubtful": [
+    {
+     "detail": "Heiskanen took part in the Stars morning skate but the defenseman will miss his fourth straight game; he is also doubtful to play against the Florida Panthers on Sunday.",
+     "player": "Miro Heiskanen"
+    }
+   ],
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "detail": "lower body injury, placed on injured reserve retroactive to Nov. 12",
+     "player": "Lian Bichsel"
+    },
+    {
+     "detail": "lower body injury, moved to long-term injured reserve",
+     "player": "Kyle Capobianco"
+    },
+    {
+     "detail": "lower body injury",
+     "player": "Matt Duchene"
+    },
+    {
+     "detail": "finger injury",
+     "player": "Oskar Back"
+    },
+    {
+     "detail": "upper body injury, will miss his fourth straight game",
+     "player": "Miro Heiskanen"
+    }
+   ],
+   "returning": [
+    "Kyle Burroughs",
+    "Zach Metsa"
+   ],
+   "starting_goalie": "Jake Oettinger",
+   "summary": "The Stars are coming off a 4-3 win over the San Jose Sharks. They are projected to have a strong lineup with the exception of several injured players. Notably, defenseman Miro Heiskanen will miss his fourth straight game due to an upper body injury, while forward Matt Duchene is also out with a lower body injury. The team is looking to build on their recent success."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Alex Lyon",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Lian Bichsel": 0.7,
+    "Kyle Capobianco": 0.55,
+    "Matt Duchene": 0.57,
+    "Oskar Back": 0.64,
+    "Miro Heiskanen": 0.87
+   }
+  },
+  "home": {
+   "starter": "Jake Oettinger",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Lian Bichsel": 0.97,
+    "Kyle Capobianco": 0.98,
+    "Matt Duchene": 0.97,
+    "Oskar Back": 0.95,
+    "Miro Heiskanen": 0.93
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.1,
+  "jev": 0.2
+ }
+}
