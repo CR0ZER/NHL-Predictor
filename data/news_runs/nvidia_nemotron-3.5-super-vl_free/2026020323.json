@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020323,
+  "kickoff": "2026-11-15T02:00:00Z",
+  "away": "San Jose Sharks",
+  "home": "Utah Mammoth",
+  "away_id": 28,
+  "home_id": 68,
+  "away_abbr": "SJS",
+  "home_abbr": "UTA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-14T23:47:42.888468+00:00",
+ "articles": [
+  {
+   "title": "Sharks at Mammoth projected lineups",
+   "published": "2026-11-14T19:19:00Z",
+   "lineups": true
+  },
+  {
+   "title": "RECAP: Vegas 5, Utah 3",
+   "published": "2026-11-12T02:40:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Hosts St. Louis in Second Half of Back-to-Back",
+   "published": "2026-11-12T17:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blues at Mammoth projected lineups ",
+   "published": "2026-11-12T19:32:09.831Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: St. Louis 1, Utah 0 SO",
+   "published": "2026-11-13T02:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah to Host Hockey Fights Cancer Night",
+   "published": "2026-11-13T17:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nolan Allan",
+     "detail": "scratched"
+    },
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Alexander Wennberg",
+     "detail": "upper body injury; will not play"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sharks (8-11-2) are projected to start Yaroslav Askarov in goal. Alexander Wennberg will not play despite having played the past two games after missing 10 with an upper-body injury, as the team manages the issue. Igor Chernyshov is also out with an upper-body injury, and Nolan Allan is scratched."
+  },
+  "home": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick DeSimone",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dylan Guenther",
+     "detail": "upper body injury; on IR, out approximately 2-4 weeks"
+    },
+    {
+     "player": "Logan Cooley",
+     "detail": "upper body injury; day-to-day"
+    },
+    {
+     "player": "Nick Schmaltz",
+     "detail": "lower body injury; day-to-day"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "upper body injury; on IR retroactive to 11/5"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury; missed 11 games, still weeks away"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Mammoth (10-8-2) are projected to start Karel Vejmelka in goal. The team is dealing with numerous injuries, including Dylan Guenther (IR, 2-4 weeks), Logan Cooley (day-to-day), Nick Schmaltz (day-to-day), Nate Schmidt (IR), John Marino (weeks away), and Maveric Lamoureux (shoulder). Nick DeSimone is scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "Nolan Allan": 0.96,
+    "Igor Chernyshov": 0.98,
+    "Alexander Wennberg": 0.98
+   }
+  },
+  "home": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Nick DeSimone": 0.92,
+    "Dylan Guenther": 0.97,
+    "Logan Cooley": 0.52,
+    "Nick Schmaltz": 0.33,
+    "Nate Schmidt": 0.96,
+    "John Marino": 0.91,
+    "Maveric Lamoureux": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.7,
+  "jev": 0.2
+ }
+}
