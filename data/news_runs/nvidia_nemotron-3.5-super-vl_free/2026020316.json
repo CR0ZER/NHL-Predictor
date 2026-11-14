@@ -1,0 +1,105 @@
+{
+ "game": {
+  "gameId": 2026020316,
+  "kickoff": "2026-11-15T00:00:00Z",
+  "away": "Detroit Red Wings",
+  "home": "Tampa Bay Lightning",
+  "away_id": 17,
+  "home_id": 14,
+  "away_abbr": "DET",
+  "home_abbr": "TBL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-14T21:48:07.417808+00:00",
+ "articles": [
+  {
+   "title": "Red Wings at Lightning projected lineups",
+   "published": "2026-11-14T18:22:33.515Z",
+   "lineups": true
+  },
+  {
+   "title": "Mishkin's Extra Shift: Lightning 8, Sabres 3",
+   "published": "2026-11-12T03:47:51.794Z",
+   "lineups": false
+  },
+  {
+   "title": "Nuts & Bolts: Back at it in Columbus",
+   "published": "2026-11-12T04:28:30.311Z",
+   "lineups": false
+  },
+  {
+   "title": "O’Reilly highlights ‘great’ NHL debut with first career point for Lightning",
+   "published": "2026-11-12T15:00:46.256Z",
+   "lineups": false
+  },
+  {
+   "title": "Lightning at Blue Jackets projected lineups",
+   "published": "2026-11-12T17:05:23.617Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings at Panthers projected lineups",
+   "published": "2026-11-12T17:20:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Daniil Tarasov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mason Appleton",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Michael Rasmussen",
+    "detail: enters lineup for Appleton"
+   ],
+   "summary": "The Red Wings (7-10-3) are projected to start Daniil Tarasov after John Gibson allowed five goals in a 5-4 loss at Florida on Thursday. Michael Rasmussen will enter the lineup for scratched forward Mason Appleton. No injuries are listed."
+  },
+  "home": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [],
+   "doubtful": [
+    {
+     "player": "Anthony Cirelli",
+     "detail": "lower body, game-time decision"
+    },
+    {
+     "player": "Erik Cernak",
+     "detail": "undisclosed, game-time decision"
+    }
+   ],
+   "returning": [],
+   "summary": "The Lightning (13-4-2) are projected to start Andrei Vasilevskiy. Brayden Point (lower body) and Erik Cernak (undisclosed) are listed as injured, though Cernak took part in the optional morning skate and is a game-time decision. Emil Lilleberg and Gage Goncalves are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Daniil Tarasov",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Mason Appleton": 0.97
+   }
+  },
+  "home": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Anthony Cirelli": 0.2,
+    "Erik Cernak": 0.25
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.1,
+  "jev": 0.2
+ }
+}

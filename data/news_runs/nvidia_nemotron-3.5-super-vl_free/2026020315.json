@@ -1,0 +1,131 @@
+{
+ "game": {
+  "gameId": 2026020315,
+  "kickoff": "2026-11-15T00:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Montréal Canadiens",
+  "away_id": 21,
+  "home_id": 8,
+  "away_abbr": "COL",
+  "home_abbr": "MTL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-14T21:48:02.871749+00:00",
+ "articles": [
+  {
+   "title": "Avalanche at Canadiens projected lineups",
+   "published": "2026-11-14T18:36:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Clash in Canada’s Capital",
+   "published": "2026-11-12T12:00:48.686Z",
+   "lineups": false
+  },
+  {
+   "title": "MTL@BOS: What you need to know",
+   "published": "2026-11-12T14:07:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Bruins projected lineups",
+   "published": "2026-11-12T17:55:39.979Z",
+   "lineups": false
+  },
+  {
+   "title": "Avalanche at Senators projected lineups",
+   "published": "2026-11-12T18:06:47.983Z",
+   "lineups": false
+  },
+  {
+   "title": "MacKinnon, Makar sustain lower-body injuries in Avalanche loss",
+   "published": "2026-11-13T04:20:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nathan MacKinnon",
+     "detail": "lower body injury, out at least one month"
+    },
+    {
+     "player": "Cale Makar",
+     "detail": "lower body injury, out approximately two weeks"
+    },
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (11-6-3) are missing key players Nathan MacKinnon and Cale Makar to lower-body injuries sustained in Thursday's loss to Ottawa. Gavin Brindley will make his NHL debut alongside Brent Burns, who plays his 1,600th game. Colorado is on the road for the second half of a back-to-back."
+  },
+  "home": {
+   "starting_goalie": "Jakub Dobes",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Chris Kreider",
+     "detail": "lower body injury, out 6-8 weeks"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Mike Matheson",
+     "detail": "game-time decision after returning to lineup Thursday; missed previous six games with lower-body injury"
+    }
+   ],
+   "returning": [
+    "/player\": \"Florian Xhekaj\", \"detail\": \"enters lineup after being a healthy scratch the past two games\"}], ",
+    "summary: "
+   ],
+   "summary": "The Canadiens (12-3-4) are without Chris Kreider (6-8 weeks) and Samuel Montembeault, with Jakub Dobes projected to start. Mike Matheson is a game-time decision, with Adam Engstrom available as a defensive replacement. Florian Xhekaj returns to the lineup after two games as a healthy scratch."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.98,
+   "announced": 0.93,
+   "p_out": {
+    "Nathan MacKinnon": 0.98,
+    "Cale Makar": 0.98,
+    "Zachary L'Heureux": 0.96,
+    "Josh Manson": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jakub Dobes",
+   "p_starter": 0.98,
+   "announced": 0.95,
+   "p_out": {
+    "Ivan Demidov": 0.97,
+    "Chris Kreider": 0.98,
+    "Samuel Montembeault": 0.98,
+    "Mike Matheson": 0.21
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.9,
+  "jev": 0.2
+ }
+}

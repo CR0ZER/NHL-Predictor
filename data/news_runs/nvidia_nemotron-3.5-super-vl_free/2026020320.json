@@ -1,0 +1,141 @@
+{
+ "game": {
+  "gameId": 2026020320,
+  "kickoff": "2026-11-15T00:00:00Z",
+  "away": "Florida Panthers",
+  "home": "St. Louis Blues",
+  "away_id": 13,
+  "home_id": 19,
+  "away_abbr": "FLA",
+  "home_abbr": "STL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-14T21:48:28.838280+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Blues projected lineups",
+   "published": "2026-11-14T17:32:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Preview: Blues at Mammoth",
+   "published": "2026-11-12T05:40:57.733Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Vilmanis returns as Panthers host Red Wings",
+   "published": "2026-11-12T16:54:20.96Z",
+   "lineups": false
+  },
+  {
+   "title": "Red Wings at Panthers projected lineups",
+   "published": "2026-11-12T17:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: Nov. 12 at Utah",
+   "published": "2026-11-12T18:47:34.879Z",
+   "lineups": false
+  },
+  {
+   "title": "Blues at Mammoth projected lineups ",
+   "published": "2026-11-12T19:32:09.831Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Uvis Balinskis",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cole Reinhardt",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jack Devine",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Sandis Vilmanis"
+   ],
+   "summary": "The Panthers (11-7-2) are missing key forwards Aleksander Barkov and Brad Marchand due to knee injuries, though both participated in the morning skate for a third straight time. Sandis Vilmanis returns to the lineup after missing two games with an undisclosed injury. Jacob Markstrom is projected to start in net, with Akira Schmid listed as the backup."
+  },
+  "home": {
+   "starting_goalie": "Joel Hofer",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Jonatan Berggren",
+     "detail": "scratched"
+    },
+    {
+     "player": "Calle Rosen",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "Aleksanteri Kaskimaki"
+   ],
+   "summary": "The Blues (9-8-2) snapped a three-game losing streak with a 3-2 win over Detroit and will look to build momentum at home. Pius Suter did not participate in the morning skate due to illness but will play, per coach Jim Montgomery. Joel Hofer is confirmed to start a fourth straight game, while Jordan Binnington is listed as the backup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 0.97,
+   "announced": 0.98,
+   "p_out": {
+    "Aleksander Barkov": 0.75,
+    "Brad Marchand": 0.62,
+    "Jonah Gadjovich": 0.97,
+    "Uvis Balinskis": 0.96,
+    "Cole Reinhardt": 0.96,
+    "Jack Devine": 0.96
+   }
+  },
+  "home": {
+   "starter": "Joel Hofer",
+   "p_starter": 0.94,
+   "announced": 0.98,
+   "p_out": {
+    "Tyler Tucker": 0.97,
+    "Dillon Dube": 0.97,
+    "Jonatan Berggren": 0.95,
+    "Calle Rosen": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.5,
+  "jev": 0.2
+ }
+}
