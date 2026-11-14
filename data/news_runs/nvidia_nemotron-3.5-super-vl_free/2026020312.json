@@ -1,0 +1,130 @@
+{
+ "game": {
+  "gameId": 2026020312,
+  "kickoff": "2026-11-14T20:30:00Z",
+  "away": "Winnipeg Jets",
+  "home": "Chicago Blackhawks",
+  "away_id": 52,
+  "home_id": 16,
+  "away_abbr": "WPG",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-14T17:47:53.904285+00:00",
+ "articles": [
+  {
+   "title": "Jets at Blackhawks projected lineups",
+   "published": "2026-11-13T20:09:36.747Z",
+   "lineups": true
+  },
+  {
+   "title": "GAMEDAY: Jets at Blackhawks",
+   "published": "2026-11-14T09:47:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Bedard says Blackhawks have ‘100 percent belief’ in Blashill as coach",
+   "published": "2026-11-11T22:05:36.971Z",
+   "lineups": false
+  },
+  {
+   "title": "GAMEDAY: Jets at Stars",
+   "published": "2026-11-12T10:11:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: November 12 Winnipeg Jets at Dallas Stars",
+   "published": "2026-11-12T12:32:10.811Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Blackhawks Return Home to Face Sabres",
+   "published": "2026-11-12T15:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Nico Daws",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan DeMelo",
+     "detail": "lower-body injury, week to week"
+    },
+    {
+     "player": "Nick Bjugstad",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Isak Rosen",
+     "detail": "undisclosed injury, banged up Thursday"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/Nino Niederreiter"
+   ],
+   "summary": "The Jets (9-8-3) are riding a five-game win streak after an 8-3 victory in Dallas. They will be without defenseman Dylan DeMelo (lower body, week to week), while Nino Niederreiter enters the lineup in place of Isak Rosen. Stuart Skinner is listed as the second goalie in the projected lineup, with Clay Stevenson scratched."
+  },
+  "home": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Bowen Byram",
+     "detail": "upper-body injury, expected to miss 13th straight game"
+    },
+    {
+     "player": "Dillon Boucher",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ethan Del Mastro",
+     "detail": "scratched"
+    },
+    {
+     "player": "Teuvo Teravainen",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Patrick Kane",
+     "detail": "upper-body injury since Nov. 2, day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "The Blackhawks (5-13-1) have lost six straight and are allowing the second-most goals per game in the NHL. Bowen Byram skated in a non-contact jersey but is expected to miss his 13th straight game, while Patrick Kane practiced Wednesday and is day to day with an upper-body injury. Spencer Knight is projected to start in goal ahead of Drew Commesso."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Nico Daws",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "Dylan DeMelo": 0.97,
+    "Nick Bjugstad": 0.96,
+    "Isak Rosen": 0.95
+   }
+  },
+  "home": {
+   "starter": "Spencer Knight",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Bowen Byram": 0.96,
+    "Dillon Boucher": 0.95,
+    "Ethan Del Mastro": 0.95,
+    "Teuvo Teravainen": 0.95,
+    "Patrick Kane": 0.48
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 8.4,
+  "jev": 0.2
+ }
+}
