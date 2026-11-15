@@ -1,0 +1,142 @@
+{
+ "game": {
+  "gameId": 2026020328,
+  "kickoff": "2026-11-16T01:00:00Z",
+  "away": "Calgary Flames",
+  "home": "Anaheim Ducks",
+  "away_id": 20,
+  "home_id": 24,
+  "away_abbr": "CGY",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-15T22:48:01.045669+00:00",
+ "articles": [
+  {
+   "title": "Flames at Ducks projected lineups",
+   "published": "2026-11-15T15:20:39.964Z",
+   "lineups": true
+  },
+  {
+   "title": "Unmasked: Goalies relating to Cooley's flow state, unconscious brain",
+   "published": "2026-11-13T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "My Favourite Saddledome Memory - Matt Stajan",
+   "published": "2026-11-13T15:53:03.775Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: November 13",
+   "published": "2026-11-13T20:28:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Reassign Brossoit to San Diego ",
+   "published": "2026-11-13T22:07:29.018Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames @ Kings",
+   "published": "2026-11-14T06:14:53.962Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Devin Cooley",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Kevin Bahl",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Maxim Tsyplakov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brennan Othmann",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brayden Pachal",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames (9-10-1) are on a road stretch with 14 of their next 19 games away from Calgary. Devin Cooley is projected to start after Dustin Wolf made 29 saves in a 3-2 win at Los Angeles on Saturday. Adam Klapka has been elevated to a top-six role alongside Morgan Frost and Yegor Sharangovich after a strong stretch, while Jonathan Huberdeau and Kevin Bahl remain injured."
+  },
+  "home": {
+   "starting_goalie": "Ville Husso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    },
+    {
+     "player": "Travis Mitchell",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Ian Moore",
+     "detail": "coach said he 'could be playing by the end of the week'; injured on first day of training camp"
+    }
+   ],
+   "returning": [],
+   "summary": "The Ducks (10-9-1) reassigned goaltender Laurent Brossoit to the AHL's San Diego Gulls. Ville Husso is projected to start after Lukas Dostal made 19 saves in a 6-2 loss to the New York Islanders on Saturday. Ian Moore's status is uncertain, with coach Joel Quenneville saying he could play by the end of the week."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Devin Cooley",
+   "p_starter": 0.95,
+   "announced": 0.99,
+   "p_out": {
+    "Jonathan Huberdeau": 0.97,
+    "Kevin Bahl": 0.98,
+    "Maxim Tsyplakov": 0.97,
+    "Brennan Othmann": 0.97,
+    "Brayden Pachal": 0.97
+   }
+  },
+  "home": {
+   "starter": "Ville Husso",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "A.J. Greer": 0.96,
+    "Ian Moore": 0.82,
+    "Ryan Poehling": 0.97,
+    "Travis Mitchell": 0.96,
+    "Frank Vatrano": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.4,
+  "jev": 0.2
+ }
+}
