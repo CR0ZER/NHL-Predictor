@@ -1,0 +1,112 @@
+{
+ "game": {
+  "gameId": 2026020330,
+  "kickoff": "2026-11-16T02:00:00Z",
+  "away": "Nashville Predators",
+  "home": "San Jose Sharks",
+  "away_id": 18,
+  "home_id": 28,
+  "away_abbr": "NSH",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-15T23:47:43.332128+00:00",
+ "articles": [
+  {
+   "title": "Predators at Sharks projected lineups",
+   "published": "2026-11-15T18:24:23.483Z",
+   "lineups": true
+  },
+  {
+   "title": "GAME DAY: Preds at Golden Knights, November 13",
+   "published": "2026-11-13T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Next Wave Report: November 13",
+   "published": "2026-11-13T18:04:36.27Z",
+   "lineups": false
+  },
+  {
+   "title": "Short Shifts Power Rankings: November 13",
+   "published": "2026-11-13T20:28:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Golden Knights projected lineups",
+   "published": "2026-11-13T20:35:32.439Z",
+   "lineups": false
+  },
+  {
+   "title": "Preds Official Podcast: Six Straight and the Hall of Fame",
+   "published": "2026-11-13T22:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Marchessault",
+     "detail": "lower-body injury"
+    },
+    {
+     "player": "William Trudeau",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Predators (11-4-5) are projected to start Juuse Saros, who was the first goalie off the ice at the optional morning skate. Nicolas Hague and Ilya Lyubushkin are scratched, while Jonathan Marchessault (lower body) and William Trudeau (upper body) are injured. Nashville is riding a six-game win streak."
+  },
+  "home": {
+   "starting_goalie": "Alex Nedeljkovic",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper-body injury"
+    },
+    {
+     "player": "Alexander Wennberg",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Alexander Wennberg",
+     "detail": "could return after being unavailable Saturday"
+    }
+   ],
+   "returning": [],
+   "summary": "The Sharks (9-11-2) are projected to start Alex Nedeljkovic after Yaroslav Askarov made 27 saves in a 6-5 shootout win over Utah on Saturday. Nolan Allan is scratched, and Igor Chernyshov (upper body) is injured. Alexander Wennberg (upper body) could return after missing Saturday's game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Jonathan Marchessault": 0.96,
+    "William Trudeau": 0.97
+   }
+  },
+  "home": {
+   "starter": "Alex Nedeljkovic",
+   "p_starter": 0.98,
+   "announced": 0.95,
+   "p_out": {
+    "Igor Chernyshov": 0.96,
+    "Alexander Wennberg": 0.52
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.6,
+  "jev": 0.2
+ }
+}
