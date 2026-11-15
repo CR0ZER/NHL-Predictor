@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020325,
+  "kickoff": "2026-11-15T03:00:00Z",
+  "away": "Calgary Flames",
+  "home": "Los Angeles Kings",
+  "away_id": 20,
+  "home_id": 26,
+  "away_abbr": "CGY",
+  "home_abbr": "LAK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-15T00:47:45.873501+00:00",
+ "articles": [
+  {
+   "title": "Flames at Kings projected lineups",
+   "published": "2026-11-14T20:12:14.173Z",
+   "lineups": true
+  },
+  {
+   "title": "Flames Fall To Rangers",
+   "published": "2026-11-12T03:24:52.207Z",
+   "lineups": false
+  },
+  {
+   "title": "LA Kings Loan Forward Kenny Connors to AHL's Ontario Reign",
+   "published": "2026-11-12T18:13:03.57Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK vs. NYI",
+   "published": "2026-11-12T19:04:30.755Z",
+   "lineups": false
+  },
+  {
+   "title": "Islanders at Kings projected lineups ",
+   "published": "2026-11-12T20:03:12.475Z",
+   "lineups": false
+  },
+  {
+   "title": "Fiala to make season debut for Kings, was injured at Olympics",
+   "published": "2026-11-12T20:09:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonathan Huberdeau",
+     "detail": "hip injury; has yet to play this season and did not travel with the Flames for their three-game California road trip"
+    },
+    {
+     "player": "Kevin Bahl",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Maksim Tsyplakov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brennan Othmann",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brayden Pachal",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames (8-10-1) are on a three-game California road trip and are projected to start Dustin Wolf in goal. They will be without Jonathan Huberdeau (hip) and Kevin Bahl (lower body), while Maksim Tsyplakov, Brennan Othmann, and Brayden Pachal are listed as scratched."
+  },
+  "home": {
+   "starting_goalie": "Anton Forsberg",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Artemi Panarin",
+     "detail": "personal reasons"
+    },
+    {
+     "player": "Samuel Helenius",
+     "detail": "scratched"
+    },
+    {
+     "player": "Erik Gustafsson",
+     "detail": "undisclosed injury; expected to miss his third straight game"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Kings (5-10-2) are projected to start Anton Forsberg in goal over Darcy Kuemper. Artemi Panarin will not play for personal reasons, Erik Gustafsson remains out with an undisclosed injury, and Samuel Helenius is scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.94,
+   "announced": 0.94,
+   "p_out": {
+    "Jonathan Huberdeau": 0.98,
+    "Kevin Bahl": 0.97,
+    "Maksim Tsyplakov": 0.97,
+    "Brennan Othmann": 0.96,
+    "Brayden Pachal": 0.97
+   }
+  },
+  "home": {
+   "starter": "Anton Forsberg",
+   "p_starter": 0.97,
+   "announced": 0.95,
+   "p_out": {
+    "Artemi Panarin": 0.94,
+    "Samuel Helenius": 0.92,
+    "Erik Gustafsson": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.7,
+  "jev": 0.1
+ }
+}

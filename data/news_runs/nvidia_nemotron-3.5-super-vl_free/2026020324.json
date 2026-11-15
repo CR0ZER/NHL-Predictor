@@ -1,0 +1,143 @@
+{
+ "game": {
+  "gameId": 2026020324,
+  "kickoff": "2026-11-15T03:00:00Z",
+  "away": "New York Islanders",
+  "home": "Anaheim Ducks",
+  "away_id": 2,
+  "home_id": 24,
+  "away_abbr": "NYI",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-15T00:47:41.970225+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Ducks",
+   "published": "2026-11-14T05:00:47.094Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders at Ducks projected lineups",
+   "published": "2026-11-14T20:51:47.249Z",
+   "lineups": true
+  },
+  {
+   "title": "Barzal Returns After ‘Hardest Journey Of My Life’ ",
+   "published": "2026-11-14T23:58:46.316Z",
+   "lineups": true
+  },
+  {
+   "title": "NHL EDGE stats: Gauthier joins ‘Rocket’ Richard Trophy race during goal surge",
+   "published": "2026-11-12T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Islanders at Kings",
+   "published": "2026-11-12T05:00:39.819Z",
+   "lineups": false
+  },
+  {
+   "title": "Isles Day-to-Day: Matias Maccelli, Ryan Pulock Returning to Isles Lineup at Kings ",
+   "published": "2026-11-12T19:45:22.437Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Semyon Varlamov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    },
+    {
+     "player": "Cal Ritchie",
+     "detail": "lower body"
+    },
+    {
+     "player": "Scott Mayfield",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matthew Kessel",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kyle MacLean",
+     "detail": "placed on non-roster waivers"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jean-Gabriel Pageau",
+     "detail": "game-time decision; lower-body injury"
+    }
+   ],
+   "returning": [],
+   "summary": "The Islanders (8-6-4) conclude their California road trip after snapping a four-game winless streak with a 5-2 win over the Kings. Mathew Barzal makes his season debut after recovering from left knee inflammation, while Matias Maccelli and Ryan Pulock have already returned from injury. JG Pageau is a game-time decision with a lower-body injury, and Semyon Varlamov is projected to start after not participating in the morning skate."
+  },
+  "home": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body"
+    },
+    {
+     "player": "Ian Moore",
+     "detail": "lower body"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL"
+    },
+    {
+     "player": "Travis Mitchell",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (10-8-1) had a five-game winning streak snapped with a 4-2 loss to Nashville on Wednesday. Cutter Gauthier is on a seven-game goal streak, the longest active mark in the NHL, and has 16 goals in 18 games. Goalie Laurent Brossoit was returned to San Diego of the AHL on Friday, leaving Lukas Dostal as the projected starter with Ville Husso as backup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Semyon Varlamov",
+   "p_starter": 0.96,
+   "announced": 0.96,
+   "p_out": {
+    "Alexander Romanov": 0.98,
+    "Cal Ritchie": 0.98,
+    "Scott Mayfield": 0.95,
+    "Matthew Kessel": 0.96,
+    "Kyle MacLean": 0.92,
+    "Jean-Gabriel Pageau": 0.36
+   }
+  },
+  "home": {
+   "starter": "Lukas Dostal",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "A.J. Greer": 0.98,
+    "Ian Moore": 0.97,
+    "Ryan Poehling": 0.97,
+    "Travis Mitchell": 0.95,
+    "Frank Vatrano": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.2,
+  "jev": 0.2
+ }
+}
