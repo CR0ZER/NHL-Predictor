@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020326,
+  "kickoff": "2026-11-16T00:30:00Z",
+  "away": "Edmonton Oilers",
+  "home": "Philadelphia Flyers",
+  "away_id": 22,
+  "home_id": 4,
+  "away_abbr": "EDM",
+  "home_abbr": "PHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-15T21:47:48.098734+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers vs Oilers\n",
+   "published": "2026-11-15T14:45:24.504Z",
+   "lineups": true
+  },
+  {
+   "title": "Oilers at Flyers projected lineups",
+   "published": "2026-11-15T15:17:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers Announce Military Appreciation Plans Ahead of Military Appreciation Game Presented by Toyota",
+   "published": "2026-11-13T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Friday Flyers Flashback: Neilson surpasses Adams",
+   "published": "2026-11-13T16:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Tikkanen moved to tears after receiving Borje Salming Courage Award",
+   "published": "2026-11-13T18:38:48.697Z",
+   "lineups": false
+  },
+  {
+   "title": "'No reason why' McDavid can't reach 200 points for Oilers, Kurri says",
+   "published": "2026-11-13T19:50:42.033Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Filip Hallander",
+     "detail": "scratched"
+    },
+    {
+     "player": "Max Jones",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jake Walman",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frederik Andersen",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Isaac Howard",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matt Savoie",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Oilers (15-3-3) are the second game of a back-to-back after a 1-0 win in Toronto on Saturday. Tristan Jarry is projected to start after Devon Levi played Saturday. The projected lineup includes several scratched and injured players, with Frederik Andersen among those sidelined."
+  },
+  "home": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "David Jiricek",
+     "detail": "scratched"
+    },
+    {
+     "player": "Simon Benoit",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cole Knuble",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers (6-10-6) are in the second game of a back-to-back and their fifth game in eight nights after a 4-3 win in Columbus on Saturday. Dan Vladar is likely to start after Joseph Woll played Saturday. The team is coming off a strong performance Thursday in Edmonton but has struggled with slow starts this season."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Tristan Jarry",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Filip Hallander": 0.97,
+    "Max Jones": 0.97,
+    "Jake Walman": 0.97,
+    "Frederik Andersen": 0.96,
+    "Isaac Howard": 0.96,
+    "Mattias Janmark": 0.97,
+    "Alec Regula": 0.96,
+    "Matt Savoie": 0.96
+   }
+  },
+  "home": {
+   "starter": "Dan Vladar",
+   "p_starter": 0.97,
+   "announced": 0.95,
+   "p_out": {
+    "David Jiricek": 0.95,
+    "Simon Benoit": 0.95,
+    "Cole Knuble": 0.96,
+    "Nikita Grebenkin": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.2,
+  "jev": 0.3
+ }
+}
