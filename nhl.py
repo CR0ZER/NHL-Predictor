@@ -99,6 +99,15 @@ def actual_missing(sk):
     return pd.concat(rows)[["gameId", "homeRoad", "miss"]]
 
 
+def regulars(sk, team_abbr, day, season):
+    """Joueurs ayant joué pour l'équipe lors de ses 10 derniers matchs de la saison avant `day` : même définition que
+    actual_missing (entraînement). Un blessé de longue date n'en fait pas partie, sa perte est déjà dans la forme
+    récente de l'équipe : le compter aussi parmi les absents le compterait deux fois."""
+    t = sk[(sk["teamAbbrev"] == team_abbr) & (sk["gameDate"] < pd.Timestamp(day)) & (sk["gameId"] // 1_000_000 == season)]
+    last = t.drop_duplicates("gameId").sort_values("gameDate")["gameId"].tail(10)
+    return set(t.loc[t["gameId"].isin(last), "playerId"])
+
+
 def load():
     seasons = range(FIRST_SEASON, current_season() + 1)
     team = pd.concat([
@@ -286,7 +295,8 @@ def predictions(day, use_news=True, progress=print, skip=(), until=None):
                 jev_pid = news.roster_goalies(abbr[s]).get(j["starter"])
                 if jev_pid and j["announced"] >= 0.5:
                     pid, gname = jev_pid, f"{j['starter']} *"
-                miss, absents = news.expected_missing(j["p_out"], abbr[s], sk, ppg_now)
+                miss, absents = news.expected_missing(j["p_out"], abbr[s], sk, ppg_now,
+                                                      regulars(sk, abbr[s], day, current_season()))
                 summary = res["qwen"][s]["summary"]
             rows.append({"gameId": x["id"], "gameDate": pd.Timestamp(day), "season": current_season(),
                          "teamId": x[f"{s}Team"]["id"], "teamFullName": team_name(x[f"{s}Team"]), "homeRoad": side,

@@ -254,8 +254,10 @@ def run_game(client, g, goalies_by_team, refresh=False):
     return out
 
 
-def expected_missing(p_out, team_abbr, sk, ppg_now):
+def expected_missing(p_out, team_abbr, sk, ppg_now, regulars=None):
     """Points par match attendus des absents : somme de P(absent) selon Jev x points par match du joueur.
+    regulars (nhl.regulars) : seuls les joueurs des 10 derniers matchs de l'équipe comptent, comme à l'entraînement ;
+    les autres (blessés de longue date) restent dans le détail avec regular=False.
     Retourne (total, détail trié par impact) ; un nom introuvable dans les données NHL compte pour 0."""
     names = sk.drop_duplicates("playerId", keep="last")
     team = dict(zip(names.loc[names["teamAbbrev"] == team_abbr, "skaterFullName"].map(norm),
@@ -264,9 +266,10 @@ def expected_missing(p_out, team_abbr, sk, ppg_now):
     detail = []
     for name, p in p_out.items():
         pid = team.get(norm(name), anyone.get(norm(name)))
-        detail.append({"name": name, "p": round(p, 2), "ppg": round(float(ppg_now.get(pid, 0.0)), 2) if pid else None})
-    detail.sort(key=lambda d: -(d["p"] * (d["ppg"] or 0)))
-    return sum(d["p"] * (d["ppg"] or 0) for d in detail), detail
+        detail.append({"name": name, "p": round(p, 2), "ppg": round(float(ppg_now.get(pid, 0.0)), 2) if pid else None,
+                       "regular": regulars is None or pid in regulars})
+    detail.sort(key=lambda d: -(d["p"] * (d["ppg"] or 0) * d["regular"]))
+    return sum(d["p"] * (d["ppg"] or 0) for d in detail if d["regular"]), detail
 
 
 # ---------------------------------------------------------------- évaluation sur une saison passée ou en cours
@@ -327,8 +330,9 @@ def evaluate(season=None):
             feat[f"{s}_goalie_ok_heur"], feat[f"{s}_goalie_ok_jev"] = heur == actual, (jev_pid or heur) == actual
             qwen_out = ({p["player"]: 1.0 for p in res["qwen"][side]["out"]}
                         | {p["player"]: .5 for p in res["qwen"][side]["doubtful"]})
-            feat[f"{s}_miss_qwen"] = expected_missing(qwen_out, ab, sk, ppg_now)[0]
-            feat[f"{s}_miss_jev"] = expected_missing(j["p_out"], ab, sk, ppg_now)[0]
+            reg = nhl.regulars(sk, ab, day, season)
+            feat[f"{s}_miss_qwen"] = expected_missing(qwen_out, ab, sk, ppg_now, reg)[0]
+            feat[f"{s}_miss_jev"] = expected_missing(j["p_out"], ab, sk, ppg_now, reg)[0]
         rows.append({"gameId": gid, **feat})
     t = test.join(pd.DataFrame(rows).set_index("gameId"))
     k = nhl.SHOTS_PER_GAME

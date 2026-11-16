@@ -910,7 +910,10 @@ function newsBlock(g, folded = false) {  // folded : match terminé, une ligne q
   const line = side => {
     let abs = []; try { abs = JSON.parse(g[side + "_absents"] || "[]"); } catch (e) {}
     const sure = abs.filter(a => a.p >= 0.15);  // même seuil que l'impact affiché (les plus faibles pèsent peu)
-    const txt = sure.length ? sure.slice(0, 4).map(a => `<b>${esc(a.name.split(" ").slice(-1)[0])}</b> ${Math.round(a.p * 100)} %`).join(" · ") + (sure.length > 4 ? ` · +${sure.length - 4}` : "") : `<span class="none">aucun absent signalé</span>`;
+    const who = a => a.regular === false  // blessé de longue date : déjà dans la forme de l'équipe, non compté
+      ? `<span class="muted" title="Absent de longue date : déjà pris en compte dans la forme de l'équipe">${esc(a.name.split(" ").slice(-1)[0])} ${Math.round(a.p * 100)} %</span>`
+      : `<b>${esc(a.name.split(" ").slice(-1)[0])}</b> ${Math.round(a.p * 100)} %`;
+    const txt = sure.length ? sure.slice(0, 4).map(who).join(" · ") + (sure.length > 4 ? ` · +${sure.length - 4}` : "") : `<span class="none">aucun absent signalé</span>`;
     const imp = g[side + "_miss"] > 0.05 ? `<span class="imp" title="Points par match habituels des absents, pondérés par la probabilité d'absence (Jev)">−${num(g[side + "_miss"], 1)} pt/m</span>` : "";
     return `<div class="line"><span class="who">${abbr(g[side])}</span><span class="abs">${txt}</span>${imp}</div>`;
   };

@@ -81,4 +81,19 @@ def fake_urlopen(req, timeout):
 real_urlopen, urllib.request.urlopen = urllib.request.urlopen, fake_urlopen
 assert odds.api("historical-odds") == {"ok": 1}, "2e essai après une réponse tronquée"
 urllib.request.urlopen = real_urlopen
+
+# Absents : comme à l'entraînement, seuls les joueurs des 10 derniers matchs de l'équipe comptent (pas de double
+# comptage d'un blessé de longue date, dont la perte est déjà dans la forme de l'équipe)
+import news
+
+games = [2026020000 + i for i in range(1, 13)]
+sk = pd.DataFrame([{"gameId": g, "gameDate": pd.Timestamp("2026-10-01") + pd.Timedelta(days=i), "teamAbbrev": "AAA",
+                    "playerId": pid, "skaterFullName": name}
+                   for i, g in enumerate(games) for pid, name in ((20, "Regular Player"), (10, "Long Player"))
+                   if pid == 20 or i < 2])  # 10 : blessé après le 2e match
+reg = nhl.regulars(sk, "AAA", "2026-10-20", 2026)
+assert reg == {20}, "le blessé de longue date n'est pas un régulier"
+total, detail = news.expected_missing({"Long Player": 1.0, "Regular Player": 1.0}, "AAA", sk,
+                                      pd.Series({10: 1.0, 20: 0.5}), reg)
+assert total == 0.5 and {d["name"]: d["regular"] for d in detail} == {"Regular Player": True, "Long Player": False}
 print("ok")
