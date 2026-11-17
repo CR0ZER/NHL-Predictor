@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020339,
+  "kickoff": "2026-11-18T01:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "St. Louis Blues",
+  "away_id": 24,
+  "home_id": 19,
+  "away_abbr": "ANA",
+  "home_abbr": "STL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-17T22:47:45.762451+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Blues projected lineups",
+   "published": "2026-11-17T18:29:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Blues celebrate Tkachuk’s 2026 Hockey Hall of Fame induction",
+   "published": "2026-11-15T02:03:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames at Ducks projected lineups",
+   "published": "2026-11-15T15:20:39.964Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Ducks Look to Bounce Back, Close Out Season Series Against Flames",
+   "published": "2026-11-15T18:37:40.053Z",
+   "lineups": false
+  },
+  {
+   "title": "Gauthier Continues to be Scorching Hot",
+   "published": "2026-11-16T01:48:02.561Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL EDGE stats: Gauthier joins ‘Rocket’ Richard Trophy race during goal surge",
+   "published": "2026-11-16T14:48:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ville Husso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    },
+    {
+     "player": "Travis Mitchell",
+     "detail": "scratched"
+    },
+    {
+     "player": "Frank Vatrano",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sam Colangelo",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (11-9-1) are coming off a 6-1 win over the Calgary Flames and are expected to dress 11 forwards and seven defensemen. Cutter Gauthier is on a historic nine-game goal streak and leads the NHL in November goals. Ville Husso is projected to start in goal ahead of Lukas Dostal."
+  },
+  "home": {
+   "starting_goalie": "Jordan Binnington",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Ross Johnston",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Calle Rosen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nathan Walker",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    ":player: Jake Neighbours",
+    ":player: Philip Broberg"
+   ],
+   "summary": "The Blues (9-9-2) will start Jordan Binnington for the first time since Nov. 5. Jake Neighbours (upper body) and Philip Broberg (lower body) are expected to play after being listed as day to day. The team recently honored Keith Tkachuk's Hockey Hall of Fame induction before their game against the Florida Panthers."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ville Husso",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "A.J. Greer": 0.97,
+    "Ryan Poehling": 0.97,
+    "Travis Mitchell": 0.96,
+    "Frank Vatrano": 0.96,
+    "Sam Colangelo": 0.92
+   }
+  },
+  "home": {
+   "starter": "Jordan Binnington",
+   "p_starter": 0.97,
+   "announced": 0.99,
+   "p_out": {
+    "Tyler Tucker": 0.97,
+    "Dillon Dube": 0.97,
+    "Ross Johnston": 0.97,
+    "Calle Rosen": 0.97,
+    "Nathan Walker": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.4,
+  "jev": 0.2
+ }
+}

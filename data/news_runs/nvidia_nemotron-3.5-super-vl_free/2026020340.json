@@ -1,0 +1,107 @@
+{
+ "game": {
+  "gameId": 2026020340,
+  "kickoff": "2026-11-18T01:00:00Z",
+  "away": "Nashville Predators",
+  "home": "Minnesota Wild",
+  "away_id": 18,
+  "home_id": 30,
+  "away_abbr": "NSH",
+  "home_abbr": "MIN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-17T22:47:49.974621+00:00",
+ "articles": [
+  {
+   "title": "Predators at Wild projected lineups",
+   "published": "2026-11-17T18:20:00Z",
+   "lineups": true
+  },
+  {
+   "title": "GAME DAY: Preds at Sharks, November 15",
+   "published": "2026-11-15T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Faber ‘didn’t miss a beat’ in season debut for Wild after skull fracture",
+   "published": "2026-11-15T14:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Sharks projected lineups",
+   "published": "2026-11-15T18:24:23.483Z",
+   "lineups": false
+  },
+  {
+   "title": "NHL EDGE stats behind Wallstedt’s breakout season for Wild",
+   "published": "2026-11-16T16:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hometown Remix: Prideful in black and green\n",
+   "published": "2026-11-16T20:59:11.547Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Jonathan Marchessault",
+    "/player: Nicolas Hauge"
+   ],
+   "summary": "The Predators (11-5-5) are on the road against the Wild. Jonathan Marchessault returns after missing seven games with a lower-body injury, and Nicolas Hauge plays after being scratched the past eight games. Juuse Saros is projected to start but was described as a game-time decision by coach Andrew Brunette."
+  },
+  "home": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Olli Maatta",
+     "detail": "upper body injury, placed on injured reserve"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Brock Faber"
+   ],
+   "summary": "The Wild (15-3-4) are at home and have an 11-game point streak. Brock Faber made his season debut after a skull fracture and preseason surgery. Jesper Wallstedt leads the NHL in wins and is projected to start in net with Filip Gustavsson injured."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Juuse Saros",
+   "p_starter": 0.95,
+   "announced": 0.78,
+   "p_out": {
+    "William Trudeau": 0.96
+   }
+  },
+  "home": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.96,
+   "p_out": {
+    "Filip Gustavsson": 0.97,
+    "Olli Maatta": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.7,
+  "jev": 0.2
+ }
+}
