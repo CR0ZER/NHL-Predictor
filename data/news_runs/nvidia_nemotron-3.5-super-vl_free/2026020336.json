@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020336,
+  "kickoff": "2026-11-18T00:00:00Z",
+  "away": "Columbus Blue Jackets",
+  "home": "New York Islanders",
+  "away_id": 29,
+  "home_id": 2,
+  "away_abbr": "CBJ",
+  "home_abbr": "NYI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-17T21:48:06.520167+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders vs Blue Jackets",
+   "published": "2026-11-17T05:00:22.28Z",
+   "lineups": true
+  },
+  {
+   "title": "Blue Jackets at Islanders projected lineups",
+   "published": "2026-11-17T17:25:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Blue Jackets coach Bowness misses second straight game with health issue",
+   "published": "2026-11-15T03:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Holmström Gets Oar, Schaefer Gets Helmet In 6-2 Win Over Ducks ",
+   "published": "2026-11-15T14:00:31.115Z",
+   "lineups": false
+  },
+  {
+   "title": "The Skinny: Islanders 6, Ducks 2",
+   "published": "2026-11-15T15:53:39.46Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets bring country flair to Nationwide Arena with 'Hockey Tonk' Night",
+   "published": "2026-11-16T15:22:26.66Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Isac Lundestrom",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Conor Garland",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Sean Monahan",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Denton Mateychuk",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blue Jackets are on a four-game losing skid, all against Eastern Conference teams, and are coming off a 4-3 home loss to the Philadelphia Flyers. Head coach Rick Bowness will miss this game for medical testing, with assistant Don Granato expected to coach. Zach Werenski remains a key offensive contributor, ranking among NHL defensemen in assists and points."
+  },
+  "home": {
+   "starting_goalie": "Ilya Sorokin",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Logan Stanley",
+     "detail": "lower body injury, did not practice or skate in morning skate"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    },
+    {
+     "player": "Cal Ritchie",
+     "detail": "lower body injury, will not play; next step is full contact practice"
+    },
+    {
+     "player": "Scott Mayfield",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jean-Gabriel Pageau",
+     "detail": "lower body injury, game-time decision; practiced with fourth line and skated in optional morning skate"
+    }
+   ],
+   "returning": [
+    "/players/returning/Barzal",
+    "/players/returning/Pulock",
+    "/players/returning/Maccelli"
+   ],
+   "summary": "The Islanders are on a four-game point streak (2-0-2) after earning five of six points on a California road trip, including wins over the Kings and Ducks. Mathew Barzal made his season debut Saturday, while Simon Holmström recorded a hat trick and is tied with Bo Horvat for the team lead with nine goals. The team is hosting Columbus in a key Metropolitan Division matchup at UBS Arena."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Cam Talbot",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Isac Lundestrom": 0.97,
+    "Conor Garland": 0.97,
+    "Sean Monahan": 0.97,
+    "Denton Mateychuk": 0.96
+   }
+  },
+  "home": {
+   "starter": "Ilya Sorokin",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Logan Stanley": 0.97,
+    "Alexander Romanov": 0.98,
+    "Cal Ritchie": 0.97,
+    "Scott Mayfield": 0.96,
+    "Jean-Gabriel Pageau": 0.31
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.8,
+  "jev": 0.2
+ }
+}

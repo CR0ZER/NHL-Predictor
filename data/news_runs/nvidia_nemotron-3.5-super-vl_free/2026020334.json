@@ -1,0 +1,143 @@
+{
+ "game": {
+  "gameId": 2026020334,
+  "kickoff": "2026-11-18T00:30:00Z",
+  "away": "Washington Capitals",
+  "home": "Tampa Bay Lightning",
+  "away_id": 15,
+  "home_id": 14,
+  "away_abbr": "WSH",
+  "home_abbr": "TBL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-17T21:48:28.682507+00:00",
+ "articles": [
+  {
+   "title": "Capitals at Lightning projected lineups",
+   "published": "2026-11-17T18:36:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Mishkin's Extra Shift: Red Wings 2, Lightning 0",
+   "published": "2026-11-15T03:44:10.608Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils Down Caps, 7-4",
+   "published": "2026-11-15T05:08:32.601Z",
+   "lineups": false
+  },
+  {
+   "title": "Ovechkin farewell tour around NHL: Next stop, Tampa",
+   "published": "2026-11-15T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Leonard fined maximum for high-sticking in Capitals game",
+   "published": "2026-11-15T17:09:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Lightning, the Malone Family Foundation announce third annual Tampa Warrior Hockey Academy",
+   "published": "2026-11-16T15:56:59.607Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Vincent Desharnais",
+     "detail": "appendectomy"
+    },
+    {
+     "player": "Ethen Frank",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ivan Miroshnichenko",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Holl",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals (10-8-0) are in Tampa for Alex Ovechkin's farewell tour stop at Benchmark International Arena. They are missing defensemen Rasmus Sandin (knee) and Vincent Desharnais (appendectomy), who are on the trip but will not play, while Ethen Frank, Ivan Miroshnichenko, and Justin Holl are scratched. Washington comes off a 7-4 loss to the Devils, though they generated 47 shots on goal."
+  },
+  "home": {
+   "starting_goalie": "Andrei Vasilevskiy",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Conor Geekie",
+     "detail": "undisclosed injury, placed on IR"
+    },
+    {
+     "player": "Emil Lilleberg",
+     "detail": "scratched"
+    },
+    {
+     "player": "Max Crozier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jeffrey Viel",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Anthony Cirelli",
+     "detail": "game-time decision"
+    },
+    {
+     "player": "Erik Cernak",
+     "detail": "game-time decision"
+    }
+   ],
+   "returning": [],
+   "summary": "The Lightning (13-5-2) host the Capitals after a 2-0 home shutout loss to Detroit, their first home defeat of the season. Brayden Point was activated off injured reserve and is expected to play, while Conor Geekie was placed on IR. Anthony Cirelli and Erik Cernak participated in the optional skate and are game-time decisions, with coach Jon Cooper expecting at least a couple to be in the lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Logan Thompson",
+   "p_starter": 0.99,
+   "announced": 0.96,
+   "p_out": {
+    "Rasmus Sandin": 0.98,
+    "Vincent Desharnais": 0.98,
+    "Ethen Frank": 0.97,
+    "Ivan Miroshnichenko": 0.97,
+    "Justin Holl": 0.97
+   }
+  },
+  "home": {
+   "starter": "Andrei Vasilevskiy",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Conor Geekie": 0.97,
+    "Emil Lilleberg": 0.96,
+    "Max Crozier": 0.97,
+    "Jeffrey Viel": 0.97,
+    "Anthony Cirelli": 0.18,
+    "Erik Cernak": 0.17
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.6,
+  "jev": 0.1
+ }
+}

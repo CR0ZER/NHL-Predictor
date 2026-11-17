@@ -1,0 +1,164 @@
+{
+ "game": {
+  "gameId": 2026020341,
+  "kickoff": "2026-11-18T00:00:00Z",
+  "away": "Ottawa Senators",
+  "home": "Winnipeg Jets",
+  "away_id": 9,
+  "home_id": 52,
+  "away_abbr": "OTT",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-17T21:48:22.884207+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Senators at Jets",
+   "published": "2026-11-17T12:00:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Senators at Jets projected lineups",
+   "published": "2026-11-17T18:03:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Scheifele feeling ‘very blessed,’ passes mentor Hawerchuk to set Jets scoring mark",
+   "published": "2026-11-15T02:01:57.301Z",
+   "lineups": false
+  },
+  {
+   "title": "Mendes Monday Musings",
+   "published": "2026-11-16T13:38:03.077Z",
+   "lineups": false
+  },
+  {
+   "title": "Boucher Gets His First Chance with Ottawa",
+   "published": "2026-11-16T14:25:05.396Z",
+   "lineups": false
+  },
+  {
+   "title": "Scheifele named NHL’s First Star of the Week",
+   "published": "2026-11-16T18:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Cousins",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Carter Yakemchuk",
+     "detail": "scratched"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Tyler Boucher",
+    "detail: "
+   ],
+   "summary": "The Senators are tied for first in the Atlantic Division with 28 points through 21 games. Tyler Boucher will make his NHL debut after being recalled from Belleville, entering the lineup in place of scratched Hayden Hodgson, while Nikolas Matinpalo replaces Carter Yakemchuk on defense. Linus Ullmark did not participate in Ottawa's optional skate but coach Travis Green confirmed he will start in goal."
+  },
+  "home": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Bjugstad",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Vladislav Namestnikov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elias Salomonsson",
+     "detail": "personal reasons"
+    },
+    {
+     "player": "Dylan DeMelo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Isak Rosén",
+     "detail": "upper body injury (placed on injured reserve retroactive to Nov. 12)"
+    },
+    {
+     "player": "Clay Stevenson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Tyrel Bauer",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Danny Zhilkin",
+     "detail": "in transit from Manitoba's road trip; still an option to play"
+    }
+   ],
+   "returning": [
+    "/player: Henry Thrun",
+    "detail: "
+   ],
+   "summary": "The Jets have won six straight games, including two four-goal comeback victories, and sit at 10-8-3 through 21 games. Mark Scheifele recently set franchise records for points and assists and is riding a six-game point streak. Henry Thrun is expected to make his Jets debut after being recalled from Manitoba, while Isak Rosén remains on injured reserve and Elias Salomonsson will not play despite rejoining the team for personal reasons."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Linus Ullmark",
+   "p_starter": 1.0,
+   "announced": 0.99,
+   "p_out": {
+    "Warren Foegele": 0.98,
+    "William Eklund": 0.98,
+    "Andre Burakovsky": 0.98,
+    "Nick Cousins": 0.98,
+    "Carter Yakemchuk": 0.98,
+    "Hayden Hodgson": 0.98
+   }
+  },
+  "home": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Nick Bjugstad": 0.97,
+    "Vladislav Namestnikov": 0.98,
+    "Elias Salomonsson": 0.98,
+    "Dylan DeMelo": 0.98,
+    "Isak Rosén": 0.98,
+    "Clay Stevenson": 0.96,
+    "Tyrel Bauer": 0.96,
+    "Danny Zhilkin": 0.26
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 10.4,
+  "jev": 0.2
+ }
+}

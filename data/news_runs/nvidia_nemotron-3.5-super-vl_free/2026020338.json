@@ -1,0 +1,153 @@
+{
+ "game": {
+  "gameId": 2026020338,
+  "kickoff": "2026-11-18T00:30:00Z",
+  "away": "Toronto Maple Leafs",
+  "home": "Chicago Blackhawks",
+  "away_id": 10,
+  "home_id": 16,
+  "away_abbr": "TOR",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-17T21:48:35.198394+00:00",
+ "articles": [
+  {
+   "title": "Maple Leafs at Blackhawks projected lineups",
+   "published": "2026-11-17T17:41:00Z",
+   "lineups": true
+  },
+  {
+   "title": "RECAP | Leafs vs Oilers | Nov. 14, 2026",
+   "published": "2026-11-15T05:49:11.275Z",
+   "lineups": false
+  },
+  {
+   "title": "RELEASE: Blackhawks Acquire Goaltender Spencer Martin from Rangers",
+   "published": "2026-11-15T22:12:41.508Z",
+   "lineups": false
+  },
+  {
+   "title": "Original Six Series turns back clock on intense NHL rivalries ",
+   "published": "2026-11-16T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Gavin McKenna Watch: No. 1 pick, Maple Leafs face Bedard in Chicago",
+   "published": "2026-11-16T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs won’t be defined by 0-6-0 homestand, Chayka says",
+   "published": "2026-11-16T19:45:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sergei Bobrovsky",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Max Domi",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Kirill Marchenko",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Marshall Rifai",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Blankenburg",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Colton Sissons",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Cole McWard",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brendan Brisson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dakota Mermis",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Morgan Rielly",
+    "detail: likely to play after missing three games with a lower-body injury"
+   ],
+   "summary": "The Maple Leafs (8-12-2) are coming off a winless 0-6-0 homestand and have lost six straight at home. They face a depleted injury list including Max Domi, Kirill Marchenko, Marshall Rifai, Nick Blankenburg, and Colton Sissons, while Morgan Rielly is expected back after missing three games with a lower-body injury. Rookie Gavin McKenna remains in the projected lineup on the third line."
+  },
+  "home": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Bowen Byram",
+     "detail": "upper body injury; will not play in either of the two remaining games on the Blackhawks' homestand"
+    },
+    {
+     "player": "Dillon Boucher",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kevin Korchinski",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jordan Greenway",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Patrick Kane",
+    "detail: will play after sustaining an upper-body injury during a 5-4 shootout loss to the Winnipeg Jets on Saturday"
+   ],
+   "summary": "The Blackhawks (5-13-2) are in the middle of an Original Six Series homestand and will evaluate Bowen Byram's status after their game against Columbus on Thursday. Patrick Kane returns to the lineup after an upper-body injury. Spencer Knight is projected to start in goal, with Drew Commesso listed as the backup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sergei Bobrovsky",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Max Domi": 0.96,
+    "Kirill Marchenko": 0.97,
+    "Marshall Rifai": 0.98,
+    "Nick Blankenburg": 0.97,
+    "Colton Sissons": 0.96,
+    "Cole McWard": 0.97,
+    "Brendan Brisson": 0.96,
+    "Dakota Mermis": 0.97
+   }
+  },
+  "home": {
+   "starter": "Spencer Knight",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Bowen Byram": 0.97,
+    "Dillon Boucher": 0.97,
+    "Kevin Korchinski": 0.96,
+    "Jordan Greenway": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.1,
+  "jev": 0.1
+ }
+}
