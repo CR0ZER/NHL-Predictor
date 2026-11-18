@@ -1,0 +1,159 @@
+{
+ "game": {
+  "gameId": 2026020345,
+  "kickoff": "2026-11-19T00:30:00Z",
+  "away": "Montréal Canadiens",
+  "home": "New Jersey Devils",
+  "away_id": 8,
+  "home_id": 1,
+  "away_abbr": "MTL",
+  "home_abbr": "NJD"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-18T21:47:52.764886+00:00",
+ "articles": [
+  {
+   "title": "Canadiens at Devils projected lineups",
+   "published": "2026-11-18T17:39:47.792Z",
+   "lineups": true
+  },
+  {
+   "title": "Original Six Series turns back clock on intense NHL rivalries ",
+   "published": "2026-11-16T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Trophy Tracker: Fowler of Canadiens choice for Calder as best rookie",
+   "published": "2026-11-16T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RWJBarnabas Health Announces Luke Hughes as Brand Ambassador | RELEASE",
+   "published": "2026-11-16T13:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "MTL@NYR: What you need to know",
+   "published": "2026-11-16T14:02:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Brett Berard recalled from Laval Rocket",
+   "published": "2026-11-16T14:45:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Fowler",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Chris Kreider",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Josh Anderson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Mike Matheson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Samuel Montembeault",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "David Reinbacher",
+     "detail": "scratched"
+    },
+    {
+     "player": "Florian Xhekaj",
+     "detail": "healthy scratch"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Alexandre Texier",
+     "detail": "illness, questionable"
+    }
+   ],
+   "returning": [],
+   "summary": "The Canadiens (12-5-4) are missing several key players to lower-body injuries, including Chris Kreider, Josh Anderson, Mike Matheson, Samuel Montembeault, and Ivan Demidov. Jacob Fowler is projected to start in goal after a strong rookie campaign. Brett Berard will make his Canadiens debut, while Florian Xhekaj is a healthy scratch and Alexandre Texier is questionable due to illness."
+  },
+  "home": {
+   "starting_goalie": "Connor Hellebuyck",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Anthony Mantha",
+     "detail": "throat surgery, out at least a month"
+    },
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "ankle sprain, out 4-6 weeks"
+    },
+    {
+     "player": "Amadeus Lombardi",
+     "detail": "scratched"
+    },
+    {
+     "player": "Anton Silaev",
+     "detail": "scratched"
+    },
+    {
+     "player": "Vladislav Kolyachonok",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Jesper Siegenthaler",
+     "detail": "illness, questionable"
+    }
+   ],
+   "returning": [],
+   "summary": "The Devils (15-6-0) are without Anthony Mantha and Johnathan Kovacevic due to injury. Connor Hellebuyck is projected to start in goal. Jesper Siegenthaler is questionable with an illness, and Brett Pesce is expected to return after missing two games with an illness."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Fowler",
+   "p_starter": 0.92,
+   "announced": 0.95,
+   "p_out": {
+    "Chris Kreider": 0.97,
+    "Josh Anderson": 0.98,
+    "Mike Matheson": 0.97,
+    "Samuel Montembeault": 0.97,
+    "Ivan Demidov": 0.98,
+    "David Reinbacher": 0.96,
+    "Florian Xhekaj": 0.95,
+    "Alexandre Texier": 0.26
+   }
+  },
+  "home": {
+   "starter": "Connor Hellebuyck",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Anthony Mantha": 0.98,
+    "Johnathan Kovacevic": 0.97,
+    "Amadeus Lombardi": 0.96,
+    "Anton Silaev": 0.95,
+    "Vladislav Kolyachonok": 0.9,
+    "Jesper Siegenthaler": 0.26
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.5,
+  "jev": 0.3
+ }
+}
