@@ -1,0 +1,128 @@
+{
+ "game": {
+  "gameId": 2026020343,
+  "kickoff": "2026-11-18T03:00:00Z",
+  "away": "Calgary Flames",
+  "home": "San Jose Sharks",
+  "away_id": 20,
+  "home_id": 28,
+  "away_abbr": "CGY",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-18T00:47:49.557016+00:00",
+ "articles": [
+  {
+   "title": "Flames at Sharks projected lineups",
+   "published": "2026-11-17T19:59:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Crowned 'Em!",
+   "published": "2026-11-15T06:01:44.724Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames at Ducks projected lineups",
+   "published": "2026-11-15T15:20:39.964Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames @ Ducks",
+   "published": "2026-11-15T15:44:20.28Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Sharks projected lineups",
+   "published": "2026-11-15T18:24:23.483Z",
+   "lineups": false
+  },
+  {
+   "title": "'We Did A Good Job'",
+   "published": "2026-11-15T19:23:45.992Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kevin Bahl",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Brennan Othmann",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brayden Pachal",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Maxim Tsyplakov",
+    "detail: "
+   ],
+   "summary": "The Flames (9-11-1) are on a three-game California road trip after a 3-2 win over the Kings. Maxim Tsyplakov returns to the lineup after being a healthy scratch for seven games, while Jonathan Huberdeau remains on a conditioning loan in the AHL and William Stromgren has been reassigned."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Kiefer Sherwood",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nolan Allan",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brett Leason",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Alexander Wennberg",
+    "detail: "
+   ],
+   "summary": "The Sharks (10-11-2) host the Flames after a 6-5 shootout win over Utah. Alexander Wennberg returns after missing two games, while Kiefer Sherwood is week to week with an upper-body injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Kevin Bahl": 0.96,
+    "Brennan Othmann": 0.96,
+    "Brayden Pachal": 0.95
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Igor Chernyshov": 0.97,
+    "Kiefer Sherwood": 0.93,
+    "Nolan Allan": 0.95,
+    "Brett Leason": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.5,
+  "jev": 0.1
+ }
+}
