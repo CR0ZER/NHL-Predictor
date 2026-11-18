@@ -2,7 +2,7 @@
 
     uv run --env-file .env python app.py                  # serveur local avec boutons : http://127.0.0.1:8765
     uv run --env-file .env python app.py predict [DATE]   # mêmes tâches en ligne de commande (GitHub Actions)
-    uv run --env-file .env python app.py settle | odds
+    uv run --env-file .env python app.py settle | odds | modele   # modele : statistiques de l'onglet Modèle
     uv run python app.py publier                          # page statique en lecture seule dans site/ (GitHub Pages)
 
 Paris fictifs enregistrés dans data/paper_bets.csv à la cote disponible au moment de la prédiction,
@@ -33,6 +33,7 @@ LOGO = ROOT / "assets" / "logo"
 PUBLIC = {f.name: f for f in [*(LOGO / "web").glob("*.*"), *(LOGO / "svg").glob("logo-horizontal-color-*.svg"),
                                LOGO / "social" / "og-image-1200x630.png"]}
 BETS, PREDS = DATA / "paper_bets.csv", DATA / "predictions.csv"
+MODEL_FILE = DATA / "model_stats.json"  # onglet Modèle (backtest complet), recalculé une fois par jour par la tâche modele
 PORT = 8765
 STRATEGIES = {
     "favori_bet365": "Favori du modèle · bet365 vainqueur",
@@ -353,15 +354,25 @@ class Handler(BaseHTTPRequestHandler):
         pass
 
 
+def run_model_stats():
+    """Recalcule l'onglet Modèle (backtest depuis 2015, ~1 min et des dizaines de requêtes à l'API NHL) et l'enregistre
+    dans data/model_stats.json : les passages horaires le réutilisent au lieu de le refaire."""
+    MODEL_CACHE.clear()
+    MODEL_FILE.write_text(json.dumps(clean(model_stats()), default=str, ensure_ascii=False), encoding="utf-8")
+    JOB["msg"] = "Statistiques du modèle recalculées."
+
+
 def publish(out=ROOT / "site"):
-    """Page statique en lecture seule : l'interface + state.json et model.json, publiés tels quels sur GitHub Pages."""
+    """Page statique en lecture seule : l'interface + state.json et model.json, publiés tels quels sur GitHub Pages.
+    model.json vient de data/model_stats.json (recalculé une fois par jour) ; à défaut, il est calculé ici."""
     out.mkdir(exist_ok=True)
     html = (ROOT / "ui.html").read_text(encoding="utf-8")
     (out / "index.html").write_text(html.replace("<script>", "<script>window.STATIC_MODE = true;</script>\n<script>", 1),
                                     encoding="utf-8")
     for f in PUBLIC.values():
         shutil.copy(f, out / f.name)
-    for name, data in (("state.json", state()), ("model.json", model_stats())):
+    model = json.loads(MODEL_FILE.read_text(encoding="utf-8")) if MODEL_FILE.exists() else model_stats()
+    for name, data in (("state.json", state()), ("model.json", model)):
         (out / name).write_text(json.dumps(clean(data), default=str, ensure_ascii=False), encoding="utf-8")
     print(f"Page statique écrite dans {out}")
 
@@ -369,7 +380,7 @@ def publish(out=ROOT / "site"):
 def cli(cmd, *args):
     """Tâches sans serveur (planifiées par GitHub Actions). Code de sortie 1 si la tâche a échoué."""
     jobs = {"predict": lambda: run_predict(args[0] if args else et_today(), 10.0, True, window=True),
-            "settle": run_settle, "odds": run_odds_update, "publier": publish}
+            "settle": run_settle, "odds": run_odds_update, "modele": run_model_stats, "publier": publish}
     if cmd not in jobs:
         sys.exit(__doc__)
     jobs[cmd]()

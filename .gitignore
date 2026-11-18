@@ -9,6 +9,7 @@ site/
 data/*
 !data/paper_bets.csv
 !data/predictions.csv
+!data/model_stats.json
 !data/xg_agg_*.pkl
 !data/xg_model_*.pkl
 !data/shots_*.csv.gz

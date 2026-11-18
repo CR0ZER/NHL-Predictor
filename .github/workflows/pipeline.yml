@@ -17,7 +17,7 @@ on:
       task:
         description: "Tâche (lancée par cron-job.org ou à la main)"
         type: choice
-        options: [predict, settle, odds, publier]
+        options: [predict, settle, odds, modele, publier]
         default: publier
 
 permissions:
@@ -70,9 +70,10 @@ jobs:
           echo "Tâche : $TASK"
           if [ "$TASK" = predict ]; then uv run python app.py settle; fi
           if [ "$TASK" != publier ]; then uv run python app.py "$TASK"; fi
-          # cotes de clôture (qualité des paris) : 1 requête OddsPapi décomptée par jour ; un échec ne bloque pas le règlement
+          # le matin seulement : cotes de clôture (1 requête OddsPapi décomptée) et onglet Modèle (backtest complet,
+          # des dizaines de requêtes à l'API NHL) ; un échec ne bloque pas le règlement, la page garde la veille
           if [ "$TASK" = settle ]; then uv run python app.py odds || echo "Cotes de clôture indisponibles aujourd'hui"; fi
-          uv run python app.py publier  # recalcule les données de la page et la publie sur GitHub Pages
+          if [ "$TASK" = settle ]; then uv run python app.py modele || echo "Onglet Modèle non recalculé aujourd'hui"; fi
 
       - name: Enregistrer les données dans le dépôt
         run: |
@@ -84,6 +85,11 @@ jobs:
             git pull --rebase
             git push
           fi
+
+      # Après l'enregistrement des données : une panne pendant la publication (le 18 novembre, l'API NHL ne répondait
+      # plus) ne fait plus perdre les prédictions ni les règlements du passage
+      - name: Publication de la page
+        run: uv run python app.py publier
 
       - uses: actions/configure-pages@v6
 
