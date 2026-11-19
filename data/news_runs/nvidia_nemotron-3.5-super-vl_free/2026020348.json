@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020348,
+  "kickoff": "2026-11-20T00:00:00Z",
+  "away": "Philadelphia Flyers",
+  "home": "Ottawa Senators",
+  "away_id": 4,
+  "home_id": 9,
+  "away_abbr": "PHI",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-19T21:48:00.113743+00:00",
+ "articles": [
+  {
+   "title": "RAV4 Things: Flyers @ Senators\n",
+   "published": "2026-11-19T14:55:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers at Senators projected lineups",
+   "published": "2026-11-19T17:15:20.099Z",
+   "lineups": true
+  },
+  {
+   "title": "RAV4 Things: Flyers vs. Sabres\n",
+   "published": "2026-11-17T14:45:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Flyers projected lineups",
+   "published": "2026-11-17T17:16:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Jets projected lineups",
+   "published": "2026-11-17T18:03:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Boucher set to debut as Sens look to snap Jets’ six-game win streak",
+   "published": "2026-11-17T18:56:37.264Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joseph Woll",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    },
+    {
+     "player": "David Jiricek",
+     "detail": "scratched"
+    },
+    {
+     "player": "Simon Benoit",
+     "detail": "scratched"
+    },
+    {
+     "player": "Michael Bunting",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers (7-11-6) are 3-1-1 over their last five games and come off a 4-3 comeback win over Buffalo on Tuesday. Joseph Woll will start in net after stopping 16 of 19 shots in that victory. Philadelphia has struggled offensively in the first period this season and will look to avoid a slow start against an Ottawa team on a six-game point streak."
+  },
+  "home": {
+   "starting_goalie": "Samuel Ersson",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Cousins",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "groin injury"
+    },
+    {
+     "player": "Carter Yakemchuk",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Senators (14-6-2) are on a three-game win streak and six-game point streak (5-0-1), and are 7-2-1 at home. Samuel Ersson will start in net for Ottawa. Tyler Boucher made his NHL debut Tuesday in Winnipeg and scored his first NHL goal, while Nick Cousins and Andre Burakovsky skated Thursday but remain listed as injured."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joseph Woll",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "Nikita Grebenkin": 0.98,
+    "David Jiricek": 0.96,
+    "Simon Benoit": 0.95,
+    "Michael Bunting": 0.95
+   }
+  },
+  "home": {
+   "starter": "Samuel Ersson",
+   "p_starter": 0.97,
+   "announced": 0.99,
+   "p_out": {
+    "Warren Foegele": 0.98,
+    "William Eklund": 0.97,
+    "Andre Burakovsky": 0.88,
+    "Nick Cousins": 0.88,
+    "Hayden Hodgson": 0.98,
+    "Carter Yakemchuk": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.2,
+  "jev": 0.2
+ }
+}

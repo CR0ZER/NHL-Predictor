@@ -1,0 +1,128 @@
+{
+ "game": {
+  "gameId": 2026020354,
+  "kickoff": "2026-11-20T00:00:00Z",
+  "away": "New York Islanders",
+  "home": "Winnipeg Jets",
+  "away_id": 2,
+  "home_id": 52,
+  "away_abbr": "NYI",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-19T21:48:32.408595+00:00",
+ "articles": [
+  {
+   "title": "Game Preview: Islanders at Jets",
+   "published": "2026-11-19T05:00:28.512Z",
+   "lineups": true
+  },
+  {
+   "title": "GAMEDAY: Islanders at Jets",
+   "published": "2026-11-19T11:31:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Islanders at Jets projected lineups",
+   "published": "2026-11-19T17:56:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: Islanders vs Blue Jackets",
+   "published": "2026-11-17T05:00:22.28Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: November 17 Winnipeg Jets vs. Ottawa Senators",
+   "published": "2026-11-17T11:48:16.456Z",
+   "lineups": false
+  },
+  {
+   "title": "GAMEDAY: Senators at Jets",
+   "published": "2026-11-17T12:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Semyon Varlamov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Logan Stanley",
+     "detail": "lower body injury, will miss second straight game"
+    },
+    {
+     "player": "Alexander Romanov",
+     "detail": "torn right ACL"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "JG Pageau",
+     "detail": "game-time decision, lower body injury, missed three straight games"
+    }
+   ],
+   "returning": [],
+   "summary": "The Islanders (10-6-4) are riding a five-game point streak and have won three straight games. Matthew Schaefer recorded his first career hat trick in Tuesday's 5-1 win over Columbus, while Ilya Sorokin earned his eighth win of the season. JG Pageau is a game-time decision after missing three games with a lower body injury, and Logan Stanley will miss a second straight game."
+  },
+  "home": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Bjugstad",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Vladislav Namestnikov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elias Salomonsson",
+     "detail": "personal"
+    },
+    {
+     "player": "Dylan DeMelo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Isak Rosén",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Jets (10-9-3) had their six-game winning streak snapped in a 2-1 loss to Ottawa on Tuesday. They are sixth in the Central Division and will use the same lineup from Tuesday's game, with Stuart Skinner expected to start in goal. Morgan Barron moves up to the left side with Adam Lowry and Viggo Björck, while Danny Zhilkin moves to centre with Alex Iafallo and Cole Koepke."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Semyon Varlamov",
+   "p_starter": 0.96,
+   "announced": 0.95,
+   "p_out": {
+    "Logan Stanley": 0.98,
+    "Alexander Romanov": 0.98,
+    "JG Pageau": 0.26
+   }
+  },
+  "home": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.9,
+   "announced": 0.97,
+   "p_out": {
+    "Nick Bjugstad": 0.97,
+    "Vladislav Namestnikov": 0.97,
+    "Elias Salomonsson": 0.97,
+    "Dylan DeMelo": 0.96,
+    "Isak Rosén": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.3,
+  "jev": 0.2
+ }
+}

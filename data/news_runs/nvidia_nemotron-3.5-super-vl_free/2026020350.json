@@ -1,0 +1,148 @@
+{
+ "game": {
+  "gameId": 2026020350,
+  "kickoff": "2026-11-20T00:00:00Z",
+  "away": "St. Louis Blues",
+  "home": "Pittsburgh Penguins",
+  "away_id": 19,
+  "home_id": 5,
+  "away_abbr": "STL",
+  "home_abbr": "PIT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-19T21:48:07.106685+00:00",
+ "articles": [
+  {
+   "title": "Blues at Penguins projected lineups",
+   "published": "2026-11-19T17:11:24.987Z",
+   "lineups": true
+  },
+  {
+   "title": "Get to Know: Egor Chinakhov",
+   "published": "2026-11-17T15:53:50.787Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: Nov. 17 vs. Anaheim",
+   "published": "2026-11-17T17:17:44.25Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Blues projected lineups",
+   "published": "2026-11-17T18:29:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Jecho cleared by NHL/NHLPA\nPlayer Assistance program ",
+   "published": "2026-11-17T20:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins to Hold ‘Hockey Fights Cancer’ Night on Thursday, November 19 Against the St. Louis Blues",
+   "published": "2026-11-18T17:52:01.261Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joel Hofer",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Tyler Tucker",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "neck injury"
+    },
+    {
+     "player": "Ross Johnston",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Calle Rosen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nathan Walker",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blues (10-9-2) are coming off an 8-6 win over the Anaheim Ducks. Joel Hofer is projected to start after Jordan Binnington made 25 saves in that game, which could be the only lineup change for St. Louis."
+  },
+  "home": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Andrei Kuzmenko",
+     "detail": "scratched"
+    },
+    {
+     "player": "Justin Brazeau",
+     "detail": "scratched"
+    },
+    {
+     "player": "Declan Carlile",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Nick Robertson",
+     "detail": "left optional morning skate early; may be replaced by Justin Brazeau if unable to play"
+    }
+   ],
+   "returning": [],
+   "summary": "The Penguins (7-11-2) are hosting Hockey Fights Cancer Night against the Blues. Trevor van Riemsdyk could return after missing 15 games with a lower-body injury, and Rutger Koivunen is expected to play after being a healthy scratch against Ottawa."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joel Hofer",
+   "p_starter": 0.94,
+   "announced": 0.97,
+   "p_out": {
+    "Tyler Tucker": 0.97,
+    "Dillon Dube": 0.96,
+    "Ross Johnston": 0.94,
+    "Calle Rosen": 0.97,
+    "Nathan Walker": 0.95
+   }
+  },
+  "home": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Ryan Graves": 0.97,
+    "Bryan Rust": 0.97,
+    "Elmer Soderblom": 0.97,
+    "Andrei Kuzmenko": 0.95,
+    "Justin Brazeau": 0.79,
+    "Declan Carlile": 0.96,
+    "Nick Robertson": 0.2
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.2,
+  "jev": 0.2
+ }
+}
