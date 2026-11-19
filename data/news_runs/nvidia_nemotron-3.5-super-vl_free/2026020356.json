@@ -1,0 +1,146 @@
+{
+ "game": {
+  "gameId": 2026020356,
+  "kickoff": "2026-11-20T02:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "Colorado Avalanche",
+  "away_id": 24,
+  "home_id": 21,
+  "away_abbr": "ANA",
+  "home_abbr": "COL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-19T23:47:48.528826+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Avalanche projected lineups",
+   "published": "2026-11-19T20:22:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Ducks at Blues projected lineups",
+   "published": "2026-11-17T18:29:00Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Ducks Seek Fifth Straight Road Win with Visit to Blues",
+   "published": "2026-11-17T18:43:27.649Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth look to end skid while hype for Winter Classic vs. Avalanche begins",
+   "published": "2026-11-17T20:04:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Gauthier ‘just flowing’ during 10-game goal streak for Ducks",
+   "published": "2026-11-18T06:33:22.994Z",
+   "lineups": false
+  },
+  {
+   "title": "Rocky Mountain Meeting with the Mammoth",
+   "published": "2026-11-18T12:00:03.847Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Lukas Dostal",
+   "goalie_status": "confirmed",
+   "out": [
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    },
+    {
+     "player": "Drew Helleson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sam Colangelo",
+     "detail": "scratched"
+    },
+    {
+     "player": "Tyson Hinds",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Beckett Sennecke\", \"detail\": \"missed the past game due to illness, will play\"], ",
+    "summary\": "
+   ],
+   "summary": "The Ducks (11-10-1) are coming off an 8-6 loss to the Blues, though Cutter Gauthier extended his goal streak to 10 games. Lukas Dostal is confirmed to start in net, while Beckett Sennecke returns after missing the previous game with an illness. Drew Helleson is scratched, Stian Solberg was recalled and could make his NHL debut, and Travis Mitchell was sent to the AHL."
+  },
+  "home": {
+   "starting_goalie": "Mike Reilly",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Gavin Brindley",
+     "detail": "upper body injury, not expected to play"
+    },
+    {
+     "player": "Nathan MacKinnon",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Cale Makar",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Mike Reilly",
+     "detail": "could make Avalanche debut if team plays with 11 forwards and seven defensemen"
+    }
+   ],
+   "returning": [],
+   "summary": "The Avalanche (12-7-3) lost 4-1 to the Utah Mammoth on Wednesday and did not hold a morning skate. They are without Gavin Brindley, Nathan MacKinnon, Cale Makar, Zachary L'Heureux, and Josh Manson due to injuries. Mike Reilly, claimed off waivers from Carolina on Sunday, could make his Avalanche debut depending on lineup construction."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Lukas Dostal",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "A.J. Greer": 0.97,
+    "Ryan Poehling": 0.98,
+    "Drew Helleson": 0.95,
+    "Sam Colangelo": 0.95,
+    "Tyson Hinds": 0.88
+   }
+  },
+  "home": {
+   "starter": "Scott Wedgewood",
+   "p_starter": 0.98,
+   "announced": 0.75,
+   "p_out": {
+    "Gavin Brindley": 0.98,
+    "Nathan MacKinnon": 0.98,
+    "Cale Makar": 0.98,
+    "Zachary L'Heureux": 0.97,
+    "Josh Manson": 0.97,
+    "Mike Reilly": 0.17
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.9,
+  "jev": 0.2
+ }
+}
