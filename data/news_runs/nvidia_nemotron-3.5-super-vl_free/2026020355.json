@@ -1,0 +1,120 @@
+{
+ "game": {
+  "gameId": 2026020355,
+  "kickoff": "2026-11-20T01:00:00Z",
+  "away": "Minnesota Wild",
+  "home": "Calgary Flames",
+  "away_id": 30,
+  "home_id": 20,
+  "away_abbr": "MIN",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-19T22:47:46.216210+00:00",
+ "articles": [
+  {
+   "title": "Wild at Flames projected lineups",
+   "published": "2026-11-19T18:38:00Z",
+   "lineups": true
+  },
+  {
+   "title": "5 Things - Flames @ Sharks",
+   "published": "2026-11-17T06:06:38.859Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Assign Huberdeau To Wranglers On Injury Conditioning Loan",
+   "published": "2026-11-17T16:00:50.756Z",
+   "lineups": false
+  },
+  {
+   "title": "Hometown Remix: We Actually Sent a Jersey to Space",
+   "published": "2026-11-17T16:15:14.578Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Wild projected lineups",
+   "published": "2026-11-17T18:20:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Wild vs Predators",
+   "published": "2026-11-17T18:58:01.888Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Filip Gustavsson",
+     "detail": "lower body; medically cleared but expected to play for AHL San Diego on Saturday, not this game"
+    },
+    {
+     "player": "Olli Maatta",
+     "detail": "upper body; placed on injured reserve"
+    },
+    {
+     "player": "David Spacek",
+     "detail": "scratched"
+    },
+    {
+     "player": "Tyler Pitlick",
+     "detail": "scratched; recalled from Iowa (AHL) on Thursday"
+    },
+    {
+     "player": "Yakov Trenin",
+     "detail": "personal reasons; not on the Wild’s three-game road trip"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Nico Sturm\", \"detail\": \"enters the lineup in Trenin’s place after sitting out the past four games\"], ",
+    "summary\": "
+   ],
+   "summary": "The Wild (16-3-4) are riding strong form and remain the only NHL team without a regulation loss at home this season. They face key absences on defense (Maatta) and in goal (Gustavsson), with Wallstedt projected to start and Pickard as backup. Nico Sturm returns to the lineup in place of Yakov Trenin, who is away for personal reasons."
+  },
+  "home": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kevin Bahl",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames (10-11-1) will dress the same lineup they used in a 5-2 win at San Jose on Tuesday. Jonathan Huberdeau is on an injury conditioning loan with the AHL Wranglers after hip resurfacing surgery and is not expected back for this game. Dustin Wolf is projected to start in net with Devin Cooley as backup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Filip Gustavsson": 0.96,
+    "Olli Maatta": 0.97,
+    "David Spacek": 0.96,
+    "Tyler Pitlick": 0.95,
+    "Yakov Trenin": 0.98
+   }
+  },
+  "home": {
+   "starter": "Dustin Wolf",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Kevin Bahl": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.5,
+  "jev": 0.2
+ }
+}

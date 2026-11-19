@@ -1,0 +1,124 @@
+{
+ "game": {
+  "gameId": 2026020353,
+  "kickoff": "2026-11-20T01:00:00Z",
+  "away": "Columbus Blue Jackets",
+  "home": "Chicago Blackhawks",
+  "away_id": 29,
+  "home_id": 16,
+  "away_abbr": "CBJ",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-19T22:47:41.315957+00:00",
+ "articles": [
+  {
+   "title": "Blue Jackets at Blackhawks projected lineups",
+   "published": "2026-11-19T18:34:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Blue Jackets' Holiday Pack is perfect for gift giving this season",
+   "published": "2026-11-17T15:59:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets at Islanders projected lineups",
+   "published": "2026-11-17T17:25:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Maple Leafs at Blackhawks projected lineups",
+   "published": "2026-11-17T17:41:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bowness planning on return to coach Blue Jackets during road trip",
+   "published": "2026-11-17T17:43:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks ambassadors talk Centennial matchup at pregame panel",
+   "published": "2026-11-18T00:56:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Conor Garland",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Sean Monahan",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Dante Fabbro",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dmitri Voronkov",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player/Isac Lundestrom"
+   ],
+   "summary": "The Blue Jackets (7-12-0) are on a four-game road trip and will have head coach Rick Bowness potentially joining them during the trip, though he is not expected behind the bench for this game. Isac Lundestrom returns to the lineup after missing the first 19 games with a lower-body injury. Conor Garland and Sean Monahan remain out with upper-body injuries, while Dante Fabbro and Dmitri Voronkov are listed as scratches."
+  },
+  "home": {
+   "starting_goalie": "Spencer Knight",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "right shoulder injury; will miss this game and at least three more on the upcoming road trip"
+    },
+    {
+     "player": "Bowen Byram",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Kevin Korchinski",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blackhawks (6-13-2) are without Connor Bedard, who will miss this game and at least three more on an upcoming road trip as the team discusses surgery or therapy options. Bowen Byram remains out with an upper-body injury and has missed 13 straight games. Kevin Korchinski is scratched, while Patrick Kane and Tyler Bertuzzi are in the projected lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Cam Talbot",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Conor Garland": 0.98,
+    "Sean Monahan": 0.98,
+    "Dante Fabbro": 0.96,
+    "Dmitri Voronkov": 0.96
+   }
+  },
+  "home": {
+   "starter": "Spencer Knight",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Connor Bedard": 0.99,
+    "Bowen Byram": 0.98,
+    "Kevin Korchinski": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.1
+ }
+}
