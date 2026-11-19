@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020346,
+  "kickoff": "2026-11-19T03:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Utah Mammoth",
+  "away_id": 21,
+  "home_id": 68,
+  "away_abbr": "COL",
+  "home_abbr": "UTA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-19T00:47:48.113613+00:00",
+ "articles": [
+  {
+   "title": "Avalanche at Mammoth projected lineups",
+   "published": "2026-11-18T20:05:17.814Z",
+   "lineups": true
+  },
+  {
+   "title": "The Week Ahead: Nov. 16-22",
+   "published": "2026-11-16T15:10:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Hosts Vancouver to Start the Week",
+   "published": "2026-11-16T15:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wedgewood's online book club gaining traction among Avalanche, fans",
+   "published": "2026-11-16T17:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Canucks at Mammoth projected lineups",
+   "published": "2026-11-16T19:49:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RECAP: Vancouver 3, Utah 2",
+   "published": "2026-11-17T02:30:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Mike Reilly",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nathan MacKinnon",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Cale Makar",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (12-6-3) are on a five-game points streak and have won three of their last five contests. They will be without key players Nathan MacKinnon (at least a month) and Cale Makar (about two weeks), both with lower-body injuries, along with Zachary L'Heureux and Josh Manson. Defenseman Mike Reilly, claimed off waivers from Carolina on Sunday, is listed as scratched in the projected lineup."
+  },
+  "home": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ben McCartney",
+     "detail": "scratched"
+    },
+    {
+     "player": "Gregor Biber",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dylan Guenther",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nick Schmaltz",
+     "detail": "lower body injury, placed on injured reserve retroactive to Nov. 11, week to week"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Utah Mammoth (10-9-3) have lost their last five games but have points in their last two after consecutive shootout losses. The team is dealing with significant injuries, including Dylan Guenther (2-4 weeks), Nick Schmaltz (week to week), Nate Schmidt, John Marino, and Maveric Lamoureux. Logan Cooley returned to the lineup in the Nov. 17 game against Vancouver after missing three games with an upper-body injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.98,
+   "announced": 0.92,
+   "p_out": {
+    "Mike Reilly": 0.95,
+    "Nathan MacKinnon": 0.98,
+    "Cale Makar": 0.97,
+    "Zachary L'Heureux": 0.97,
+    "Josh Manson": 0.98
+   }
+  },
+  "home": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 0.96,
+   "announced": 0.79,
+   "p_out": {
+    "Ben McCartney": 0.77,
+    "Gregor Biber": 0.91,
+    "Dylan Guenther": 0.96,
+    "Nick Schmaltz": 0.96,
+    "Nate Schmidt": 0.96,
+    "John Marino": 0.62,
+    "Maveric Lamoureux": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.4,
+  "jev": 0.2
+ }
+}
