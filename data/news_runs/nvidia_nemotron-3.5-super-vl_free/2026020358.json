@@ -1,0 +1,132 @@
+{
+ "game": {
+  "gameId": 2026020358,
+  "kickoff": "2026-11-20T03:00:00Z",
+  "away": "Dallas Stars",
+  "home": "Vegas Golden Knights",
+  "away_id": 25,
+  "home_id": 54,
+  "away_abbr": "DAL",
+  "home_abbr": "VGK"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-20T00:47:48.554241+00:00",
+ "articles": [
+  {
+   "title": "Game Day Guide: Dallas Stars at Vegas Golden Knights ",
+   "published": "2026-11-17T06:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Nov. 17, 2026",
+   "published": "2026-11-17T07:13:54.273Z",
+   "lineups": false
+  },
+  {
+   "title": "Stars at Golden Knights projected lineups",
+   "published": "2026-11-17T20:39:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Heika’s Take: Heiskanen’s return, Rantanen’s four points propel Stars to big win in Vegas ",
+   "published": "2026-11-18T15:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Vegas Golden Knights Secure 10-Year Extension \nof RBC City National Bank Partnership",
+   "published": "2026-11-18T16:58:25.165Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Day Guide: Dallas Stars at Vegas Golden Knights",
+   "published": "2026-11-19T06:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jake Oettinger",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Joel Kiviranta",
+     "detail": "scratched"
+    },
+    {
+     "player": "Rémi Poirier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Oskar Back",
+     "detail": "finger injury"
+    },
+    {
+     "player": "Lian Bichsel",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Kyle Capobianco",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Matt Duchene",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Tyler Myers",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Dallas Stars (12-6-2) are in strong form, having won four of their last five games against Vegas and riding a six-game point streak from Wyatt Johnston against the Golden Knights. Miro Heiskanen is projected to return to the lineup after missing five games with an upper-body injury, while Tyler Myers will not play after leaving Sunday's game. Jason Robertson leads the Stars in goals and is tied for the team lead in points with 22 in 20 games."
+  },
+  "home": {
+   "starting_goalie": "Adin Hill",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Marc Gatcomb",
+     "detail": "scratched"
+    },
+    {
+     "player": "Noah Hanifin",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Vegas Golden Knights (13-6-3) are coming off a 6-3 loss to the Vancouver Canucks and are 1-1-1 in their last three games. Mark Stone leads the team in goals (11) and is tied for the franchise lead in points with 417, while Jack Eichel leads the team in scoring with 28 points. Noah Hanifin is injured with an undisclosed injury, and Ivan Barbashev moves down to the third line with Trevor Connelly taking his spot on the second line."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jake Oettinger",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Joel Kiviranta": 0.97,
+    "Rémi Poirier": 0.97,
+    "Oskar Back": 0.97,
+    "Lian Bichsel": 0.97,
+    "Kyle Capobianco": 0.97,
+    "Matt Duchene": 0.98,
+    "Tyler Myers": 0.98
+   }
+  },
+  "home": {
+   "starter": "Adin Hill",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Marc Gatcomb": 0.97,
+    "Noah Hanifin": 0.93
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.7,
+  "jev": 0.3
+ }
+}
