@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020370,
+  "kickoff": "2026-11-22T02:00:00Z",
+  "away": "Anaheim Ducks",
+  "home": "Utah Mammoth",
+  "away_id": 24,
+  "home_id": 68,
+  "away_abbr": "ANA",
+  "home_abbr": "UTA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-21T23:47:50.473588+00:00",
+ "articles": [
+  {
+   "title": "Ducks at Mammoth projected lineups ",
+   "published": "2026-11-21T19:31:48.358Z",
+   "lineups": true
+  },
+  {
+   "title": "RECAP: Utah 4, Colorado 1",
+   "published": "2026-11-19T03:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth, Avalanche stoke rivalry ahead of Winter Classic",
+   "published": "2026-11-19T07:44:23.52Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Ducks Continue Road Trip With Matchup Against Avalanche",
+   "published": "2026-11-19T19:54:41.09Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Recall Defenseman Solberg from San Diego",
+   "published": "2026-11-19T20:15:09.781Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Avalanche projected lineups",
+   "published": "2026-11-19T20:22:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Ville Husso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    },
+    {
+     "player": "Beckett Sennecke",
+     "detail": "upper body injury; placed on injured reserve Saturday"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (11-11-1) are 1-2 on their current road trip after an 8-6 loss to St. Louis on Tuesday and a 4-0 loss at Colorado on Thursday. Cutter Gauthier has been dominant in November, scoring 17 goals in nine games including four hat tricks. The lineup sees several changes with Sennecke on IR, Myatovic recalled from San Diego, and Solberg in the projected defense corps; Tyson Hinds, Noah Warren, and Nico Myatovic are listed as scratched."
+  },
+  "home": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Guenther",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nick Schmaltz",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Mammoth (11-9-3) come off a 4-1 win over Colorado on Wednesday, a physical game that stoked a budding rivalry. Coach Andre Tourigny said there will be game-time lineup decisions among the forward group, and Gregor Biber was recalled from Tucson on Saturday. Ben McCartney, Gregor Biber, and Artem Duda are listed as scratched for this game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Ville Husso",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "A.J. Greer": 0.91,
+    "Ryan Poehling": 0.95,
+    "Beckett Sennecke": 0.98
+   }
+  },
+  "home": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 0.96,
+   "announced": 0.97,
+   "p_out": {
+    "Dylan Guenther": 0.97,
+    "Nick Schmaltz": 0.97,
+    "Nate Schmidt": 0.96,
+    "John Marino": 0.96,
+    "Maveric Lamoureux": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.2,
+  "jev": 0.2
+ }
+}
