@@ -1,0 +1,148 @@
+{
+ "game": {
+  "gameId": 2026020362,
+  "kickoff": "2026-11-21T23:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Nashville Predators",
+  "away_id": 5,
+  "home_id": 18,
+  "away_abbr": "PIT",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-21T20:47:49.502090+00:00",
+ "articles": [
+  {
+   "title": "Penguins at Predators projected lineups",
+   "published": "2026-11-20T19:57:20.638Z",
+   "lineups": true
+  },
+  {
+   "title": "Game Preview: 11.19.26 vs. St. Louis Blues",
+   "published": "2026-11-19T12:00:03.259Z",
+   "lineups": false
+  },
+  {
+   "title": "PPG Paints Arena to Host PWHL Takeover Tour™ Game on January 24",
+   "published": "2026-11-19T14:57:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Bridgestone Arena To Host PWHL Takeover Tour™ Game",
+   "published": "2026-11-19T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blues at Penguins projected lineups",
+   "published": "2026-11-19T17:11:24.987Z",
+   "lineups": false
+  },
+  {
+   "title": "Nashville Predators, Preds Foundation Participate in 15th Annual KABOOM! Playground Build",
+   "published": "2026-11-19T21:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Evgeni Malkin",
+     "detail": "upper body injury; day to day and not traveling on road trip"
+    },
+    {
+     "player": "Nick Robertson",
+     "detail": "lower body injury; placed on injured reserve, re-evaluated in two weeks"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury; on injured reserve"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Justin Brazeau",
+     "detail": "scratched"
+    },
+    {
+     "player": "Declan Carlile",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Penguins (7-12-2) are missing several key players, including Evgeni Malkin, Bryan Rust, Nick Robertson, Ryan Graves, and Elmer Soderblom due to injury. Andrei Kuzmenko is projected into the lineup, while Connor Dewar and Avery Hayes are also included in the projected forward group. Arturs Silovs is listed as the projected starting goaltender."
+  },
+  "home": {
+   "starting_goalie": "Juuse Saros",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Daemon Hunt",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Vitali Pinchuk",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Ryan O'Reilly",
+     "detail": "left practice early Friday; no immediate update on status"
+    }
+   ],
+   "returning": [],
+   "summary": "The Predators (11-6-5) are relatively healthy with only William Trudeau listed as injured. Juuse Saros is projected to start in goal. Ryan O'Reilly's status is uncertain after leaving practice early on Friday."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Arturs Silovs",
+   "p_starter": 0.94,
+   "announced": 0.98,
+   "p_out": {
+    "Ryan Graves": 0.97,
+    "Evgeni Malkin": 0.96,
+    "Nick Robertson": 0.98,
+    "Bryan Rust": 0.97,
+    "Elmer Soderblom": 0.95,
+    "Justin Brazeau": 0.96,
+    "Declan Carlile": 0.96
+   }
+  },
+  "home": {
+   "starter": "Juuse Saros",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "William Trudeau": 0.94,
+    "Daemon Hunt": 0.97,
+    "Ilya Lyubushkin": 0.97,
+    "Vitali Pinchuk": 0.97,
+    "Ryan O'Reilly": 0.19
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.0,
+  "jev": 0.1
+ }
+}

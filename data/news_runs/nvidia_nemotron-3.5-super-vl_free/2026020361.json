@@ -1,0 +1,142 @@
+{
+ "game": {
+  "gameId": 2026020361,
+  "kickoff": "2026-11-21T23:00:00Z",
+  "away": "Buffalo Sabres",
+  "home": "Florida Panthers",
+  "away_id": 7,
+  "home_id": 13,
+  "away_abbr": "BUF",
+  "home_abbr": "FLA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-21T20:47:43.304950+00:00",
+ "articles": [
+  {
+   "title": "Sabres at Panthers projected lineups",
+   "published": "2026-11-21T16:26:22.654Z",
+   "lineups": true
+  },
+  {
+   "title": "Amerant Bank Arena To Host Pwhl Takeover Tour™ Game",
+   "published": "2026-11-19T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Buffalo/KeyBank Center to host PWHL Takeover Tour™ game",
+   "published": "2026-11-19T15:51:09.559Z",
+   "lineups": false
+  },
+  {
+   "title": "Injuries and transactions | Samuelsson in against WSH",
+   "published": "2026-11-19T16:18:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Capitals projected lineups",
+   "published": "2026-11-19T17:47:03.25Z",
+   "lineups": false
+  },
+  {
+   "title": "Gadjovich joins Panthers for practice in no-contact jersey",
+   "published": "2026-11-19T18:43:09.467Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Alex Lyon",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Konsta Helenius",
+     "detail": "upper body injury, out since Oct. 27"
+    },
+    {
+     "player": "Justin Danforth",
+     "detail": "upper body injury, out since Oct. 17"
+    },
+    {
+     "player": "Matt Grzelcyk",
+     "detail": "lower body injury, out since Oct. 13"
+    },
+    {
+     "player": "Louis Crevier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ryan McLeod",
+     "detail": "scratched"
+    },
+    {
+     "player": "Colten Ellis",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sabres (9-9-4) head to Florida after a 5-2 loss to the Capitals. Coach Lindy Ruff indicated there could be a lineup change or two based on health, with Mattias Samuelsson back in the lineup after missing Wednesday's practice for maintenance. Ukko-Pekka Luukkonen is projected to start after making his first start in four games in the previous matchup."
+  },
+  "home": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Aleksander Barkov",
+     "detail": "knee injury, out since early October"
+    },
+    {
+     "player": "Brad Marchand",
+     "detail": "knee injury, out since early October"
+    },
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury, out since Oct. 25, 2025"
+    },
+    {
+     "player": "Uvis Balinskis",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cole Reinhardt",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Panthers (12-8-3) are dealing with significant injuries to Barkov and Marchand, both of whom have been practicing but are not expected back immediately; Barkov could return sometime next week before Marchand. Gadjovich practiced in a no-contact jersey but remains a ways from returning. Radko Gudas returns to the third defense pair as the only lineup change from Tuesday's loss to Edmonton."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Alex Lyon",
+   "p_starter": 0.96,
+   "announced": 0.68,
+   "p_out": {
+    "Konsta Helenius": 0.97,
+    "Justin Danforth": 0.97,
+    "Matt Grzelcyk": 0.97,
+    "Louis Crevier": 0.96,
+    "Ryan McLeod": 0.95,
+    "Colten Ellis": 0.96
+   }
+  },
+  "home": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Aleksander Barkov": 0.95,
+    "Brad Marchand": 0.96,
+    "Jonah Gadjovich": 0.97,
+    "Uvis Balinskis": 0.96,
+    "Cole Reinhardt": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.7,
+  "jev": 0.1
+ }
+}
