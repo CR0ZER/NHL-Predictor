@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020366,
+  "kickoff": "2026-11-22T00:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "Ottawa Senators",
+  "away_id": 26,
+  "home_id": 9,
+  "away_abbr": "LAK",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-21T21:47:58.369990+00:00",
+ "articles": [
+  {
+   "title": "Kings at Senators projected lineups",
+   "published": "2026-11-21T18:27:27.857Z",
+   "lineups": true
+  },
+  {
+   "title": "Flyers at Senators projected lineups",
+   "published": "2026-11-19T17:15:20.099Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Maple Leafs projected lineups",
+   "published": "2026-11-19T17:48:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK @ TOR",
+   "published": "2026-11-19T18:06:08.016Z",
+   "lineups": false
+  },
+  {
+   "title": "Cousins returns; Sens look to continue torrid November",
+   "published": "2026-11-19T19:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Sens turn to Ersson as three-game homestand begins",
+   "published": "2026-11-19T19:43:07.161Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Anton Forsberg",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Trevor Moore",
+     "detail": "Injured (undisclosed), day to day"
+    },
+    {
+     "player": "Cody Ceci",
+     "detail": "Scratched"
+    },
+    {
+     "player": "Artemi Panarin",
+     "detail": "Scratched, personal reasons"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Trevor Moore",
+     "detail": "Day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "The Kings (7-11-2) are on an East Coast swing and have been without Trevor Moore, who is day to day with an undisclosed injury. Cody Ceci and Artemi Panarin are listed as scratched, with Panarin missing time for personal reasons. Erik Gustafsson has returned to the lineup after a previous absence."
+  },
+  "home": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "Injured (ankle)"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "Injured (lower body)"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "Injured (groin)"
+    },
+    {
+     "player": "Carter Yakemchuk",
+     "detail": "Scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Nick Cousins",
+    "detail: "
+   ],
+   "summary": "The Senators (14-6-3) are riding a season-high seven-game point streak (5-0-2) and have been strong at home. Nick Cousins returns to the lineup after missing four games with an upper-body injury, while Tyler Boucher will come out. Linus Ullmark is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Anton Forsberg",
+   "p_starter": 0.94,
+   "announced": 0.85,
+   "p_out": {
+    "Trevor Moore": 0.71,
+    "Cody Ceci": 0.96,
+    "Artemi Panarin": 0.97
+   }
+  },
+  "home": {
+   "starter": "Linus Ullmark",
+   "p_starter": 0.92,
+   "announced": 0.93,
+   "p_out": {
+    "Warren Foegele": 0.97,
+    "William Eklund": 0.98,
+    "Andre Burakovsky": 0.95,
+    "Hayden Hodgson": 0.97,
+    "Carter Yakemchuk": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.5,
+  "jev": 0.1
+ }
+}

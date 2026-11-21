@@ -1,0 +1,102 @@
+{
+ "game": {
+  "gameId": 2026020363,
+  "kickoff": "2026-11-22T00:00:00Z",
+  "away": "Washington Capitals",
+  "home": "Boston Bruins",
+  "away_id": 15,
+  "home_id": 6,
+  "away_abbr": "WSH",
+  "home_abbr": "BOS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-21T21:47:44.314300+00:00",
+ "articles": [
+  {
+   "title": "Capitals at Bruins projected lineups",
+   "published": "2026-11-21T17:46:15.657Z",
+   "lineups": true
+  },
+  {
+   "title": "Caps Clash with Sabres",
+   "published": "2026-11-19T02:07:13.288Z",
+   "lineups": false
+  },
+  {
+   "title": "How Pilates Has Helped Swayman Be a Better Goaltender",
+   "published": "2026-11-19T11:00:01.831Z",
+   "lineups": false
+  },
+  {
+   "title": "Capitals Goaltenders Logan Thompson and Charlie Lindgren Unveil Special Goalie Masks Designed in Honor of Hockey Fights Cancer",
+   "published": "2026-11-19T14:04:01.977Z",
+   "lineups": false
+  },
+  {
+   "title": "Sabres at Capitals projected lineups",
+   "published": "2026-11-19T17:47:03.25Z",
+   "lineups": false
+  },
+  {
+   "title": "Thompson honoring teen with special Hockey Fights Cancer mask",
+   "published": "2026-11-19T19:49:43.407Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Charlie Lindgren",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Vincent Desharnais",
+     "detail": "appendectomy"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Capitals (10-10-0) are projected to start Charlie Lindgren in net against the Bruins. Washington is dealing with defensive injuries to Rasmus Sandin (knee) and Vincent Desharnais (appendectomy), while Ethen Frank, Ivan Miroshnichenko, and Justin Holl are scratched. Coach Spencer Carbery indicated there could be game-time decisions, and the team claimed goalie Clay Stevenson off waivers before loaning him to Hershey."
+  },
+  "home": {
+   "starting_goalie": "Jeremy Swayman",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "James Hagens",
+     "detail": "back injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Bruins (14-7-1) are projected to start Jeremy Swayman, who has been working on Pilates and core training with his fiancée. Boston is without forward James Hagens (back), who will miss his sixth straight game, while Frederic Brunet, Jonathan Aspirot, and Michael Eyssimont are scratched. Coach Marco Sturm tweaked his lines, placing Morgan Geekie on the first line with Elias Lindholm and David Pastrnak, and moving JJ Peterka to right wing on the second line."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Charlie Lindgren",
+   "p_starter": 0.92,
+   "announced": 0.96,
+   "p_out": {
+    "Rasmus Sandin": 0.97,
+    "Vincent Desharnais": 0.97
+   }
+  },
+  "home": {
+   "starter": "Jeremy Swayman",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "James Hagens": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.0,
+  "jev": 0.2
+ }
+}
