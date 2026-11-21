@@ -1,0 +1,102 @@
+{
+ "game": {
+  "gameId": 2026020360,
+  "kickoff": "2026-11-21T20:30:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "Calgary Flames",
+  "away_id": 16,
+  "home_id": 20,
+  "away_abbr": "CHI",
+  "home_abbr": "CGY"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-21T17:47:44.396216+00:00",
+ "articles": [
+  {
+   "title": "Blackhawks at Flames projected lineups",
+   "published": "2026-11-20T19:45:58.886Z",
+   "lineups": true
+  },
+  {
+   "title": "Flames, families support Huberdeau in first game back since surgery ",
+   "published": "2026-11-19T02:21:00Z",
+   "lineups": false
+  },
+  {
+   "title": "5 Things - Flames vs. Wild",
+   "published": "2026-11-19T13:58:54.242Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Blackhawks Look to Build Momentum Against Blue Jackets",
+   "published": "2026-11-19T14:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup - Flames vs. Wild",
+   "published": "2026-11-19T16:57:05.846Z",
+   "lineups": false
+  },
+  {
+   "title": "'Make Sure I'm Involved'",
+   "published": "2026-11-19T17:44:50.506Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Drew Commesso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "right shoulder injury"
+    },
+    {
+     "player": "Bowen Byram",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blackhawks (6-14-2) are coming off a 4-2 loss to the Columbus Blue Jackets and did not practice before traveling to Calgary. Coach Jeff Blashill juggled his lines Thursday and could make more changes prior to game time. Drew Commesso, called up from Rockford on Nov. 8, is projected to make his season debut in goal."
+  },
+  "home": {
+   "starting_goalie": "Dustin Wolf",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kevin Bahl",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames (10-12-1) lost 4-1 to the Minnesota Wild on Thursday and held an optional practice Friday with only Backlund, Pospisil and Middleton not skating. Coach Ryan Huska said he doesn’t anticipate making any lineup changes. Dustin Wolf is expected to make his third straight start after making 17 saves against the Wild."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Drew Commesso",
+   "p_starter": 0.9,
+   "announced": 0.95,
+   "p_out": {
+    "Connor Bedard": 0.98,
+    "Bowen Byram": 0.97
+   }
+  },
+  "home": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.97,
+   "announced": 0.98,
+   "p_out": {
+    "Kevin Bahl": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.9,
+  "jev": 0.2
+ }
+}
