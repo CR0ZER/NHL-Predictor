@@ -1,0 +1,136 @@
+{
+ "game": {
+  "gameId": 2026020373,
+  "kickoff": "2026-11-22T17:30:00Z",
+  "away": "Carolina Hurricanes",
+  "home": "New York Rangers",
+  "away_id": 12,
+  "home_id": 3,
+  "away_abbr": "CAR",
+  "home_abbr": "NYR"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-22T14:47:56.137315+00:00",
+ "articles": [
+  {
+   "title": "Hurricanes at Rangers projected lineups",
+   "published": "2026-11-21T22:00:51.984Z",
+   "lineups": true
+  },
+  {
+   "title": "Canadiens at Hurricanes projected lineups",
+   "published": "2026-11-19T19:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup: November 19 vs. Montreal",
+   "published": "2026-11-19T21:48:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers finding identity amid strong start to season",
+   "published": "2026-11-20T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes Step Out In Kids’ Cancer-Awareness Shoes",
+   "published": "2026-11-20T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "State Your Case: Hurricanes or Oilers as top team",
+   "published": "2026-11-20T15:24:13.238Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Brandon Bussi",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nikolaj Ehlers",
+     "detail": "lower body injury; will not play and will continue to be evaluated after being injured in the third period of a 7-4 win against the Edmonton Oilers on Saturday"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Hurricanes (17-3-3) are coming off a 7-4 win over Edmonton and are projected to start Brandon Bussi in net after Pyotr Kochetkov allowed four goals on 15 shots against the Oilers. Forward Nikolaj Ehlers is out with a lower-body injury, while Juuso Valimaki and Nicolas Deslauriers are listed as scratched. The team remains strong, leading the Metropolitan Division and sitting third in the Presidents' Trophy race."
+  },
+  "home": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "season-ending right knee injury suffered Oct. 9 at Washington"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Alberts Smits",
+     "detail": "upper body injury; out 2-3 months"
+    },
+    {
+     "player": "Pavel Dorofeyev",
+     "detail": "lower body injury; day to day"
+    },
+    {
+     "player": "Oliver Bjorkstrand",
+     "detail": "upper body injury; out 2-3 months"
+    },
+    {
+     "player": "Matt Rempe",
+     "detail": "scratched"
+    },
+    {
+     "player": "Matthew Robertson",
+     "detail": "scratched; likely would come out of the lineup if Sean Durzi is able to play"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Sean Durzi",
+     "detail": "game-time decision after missing eight games with an undisclosed injury; could return"
+    }
+   ],
+   "returning": [
+    "/player\": \"Max Sasson\", \"detail\": \"will make his Rangers debut after being acquired in a trade with the Vancouver Canucks on Friday\"}], ",
+    "summary"
+   ],
+   "summary": "The Rangers (13-8-1) have won three straight and six of their past seven, sitting third in the Metropolitan Division. They continue to play without goalie Igor Shesterkin, who suffered a season-ending knee injury early in the season, and are projected to start Dylan Garand with Joonas Korpisalo as backup. Defenseman Sean Durzi is a game-time decision after missing eight games, while forward Max Sasson is set to make his Rangers debut following a trade from Vancouver."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Pyotr Kochetkov",
+   "p_starter": 0.5,
+   "announced": 0.93,
+   "p_out": {
+    "Nikolaj Ehlers": 0.97
+   }
+  },
+  "home": {
+   "starter": "Dylan Garand",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "Igor Shesterkin": 0.98,
+    "Joseph Veleno": 0.97,
+    "Alberts Smits": 0.98,
+    "Pavel Dorofeyev": 0.59,
+    "Oliver Bjorkstrand": 0.98,
+    "Matt Rempe": 0.96,
+    "Matthew Robertson": 0.75,
+    "Sean Durzi": 0.26
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.5,
+  "jev": 0.1
+ }
+}
