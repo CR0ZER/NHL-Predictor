@@ -1,0 +1,158 @@
+{
+ "game": {
+  "gameId": 2026020375,
+  "kickoff": "2026-11-23T00:00:00Z",
+  "away": "Edmonton Oilers",
+  "home": "St. Louis Blues",
+  "away_id": 22,
+  "home_id": 19,
+  "away_abbr": "EDM",
+  "home_abbr": "STL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-22T21:47:38.983624+00:00",
+ "articles": [
+  {
+   "title": "Oilers at Blues projected lineups",
+   "published": "2026-11-22T16:13:58.262Z",
+   "lineups": true
+  },
+  {
+   "title": "McDavid, Draisaitl are works of art at Edmonton grocery",
+   "published": "2026-11-20T01:19:37.256Z",
+   "lineups": false
+  },
+  {
+   "title": "McDavid, Draisaitl are works of art at Edmonton grocery",
+   "published": "2026-11-20T01:19:37.256Z",
+   "lineups": false
+  },
+  {
+   "title": "Thomas ranks 3rd in assists in Blues history",
+   "published": "2026-11-20T02:08:39.125Z",
+   "lineups": false
+  },
+  {
+   "title": "Trophy Tracker: McDavid unanimous Hart pick as League MVP with Oilers",
+   "published": "2026-11-20T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Trophy Tracker: McDavid unanimous Hart pick as League MVP with Oilers",
+   "published": "2026-11-20T05:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Max Jones",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jake Walman",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ryan Nugent-Hopkins",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Frederik Andersen",
+     "detail": "injured (knee)"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "injured (shoulder)"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "injured (undisclosed)"
+    },
+    {
+     "player": "Matt Savoie",
+     "detail": "injured (lower body)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Zach Hyman",
+     "detail": "questionable (migraine)"
+    }
+   ],
+   "returning": [],
+   "summary": "The Oilers (17-5-3) are missing several key players, including Frederik Andersen, Ryan Nugent-Hopkins, and Mattias Janmark. Zach Hyman is questionable with a migraine after leaving Saturday's game early. Tristan Jarry is projected to start in goal after Devon Levi played Saturday."
+  },
+  "home": {
+   "starting_goalie": "Joel Hofer",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nathan Walker",
+     "detail": "scratched"
+    },
+    {
+     "player": "Calle Rosen",
+     "detail": "scratched"
+    },
+    {
+     "player": "Tyler Tucker",
+     "detail": "injured (knee)"
+    },
+    {
+     "player": "Dillon Dube",
+     "detail": "injured (neck)"
+    },
+    {
+     "player": "Connor McMichael",
+     "detail": "injured (undisclosed)"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Connor McMichael",
+     "detail": "questionable"
+    }
+   ],
+   "returning": [],
+   "summary": "The Blues (12-9-2) will start Joel Hofer in goal after Jordan Binnington played Saturday. Connor McMichael is questionable after missing Saturday's game against New Jersey. The team is also without Tyler Tucker and Dillon Dube due to injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Tristan Jarry",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Max Jones": 0.89,
+    "Jake Walman": 0.93,
+    "Ryan Nugent-Hopkins": 0.88,
+    "Frederik Andersen": 0.98,
+    "Mattias Janmark": 0.97,
+    "Alec Regula": 0.96,
+    "Matt Savoie": 0.97,
+    "Zach Hyman": 0.3
+   }
+  },
+  "home": {
+   "starter": "Joel Hofer",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Nathan Walker": 0.96,
+    "Calle Rosen": 0.96,
+    "Tyler Tucker": 0.96,
+    "Dillon Dube": 0.96,
+    "Connor McMichael": 0.47
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.3
+ }
+}

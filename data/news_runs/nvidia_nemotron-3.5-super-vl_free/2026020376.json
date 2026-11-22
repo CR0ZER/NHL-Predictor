@@ -1,0 +1,157 @@
+{
+ "game": {
+  "gameId": 2026020376,
+  "kickoff": "2026-11-23T00:00:00Z",
+  "away": "Pittsburgh Penguins",
+  "home": "Dallas Stars",
+  "away_id": 5,
+  "home_id": 25,
+  "away_abbr": "PIT",
+  "home_abbr": "DAL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-22T21:47:44.028181+00:00",
+ "articles": [
+  {
+   "title": "Penguins at Stars projected lineups",
+   "published": "2026-11-22T16:57:44.951Z",
+   "lineups": true
+  },
+  {
+   "title": "Musings: Second Period Turns Tide in Loss to Blues",
+   "published": "2026-11-20T04:28:25.659Z",
+   "lineups": false
+  },
+  {
+   "title": "Heika’s Take: Lady Luck stays on Stars’ side for second straight comeback win in Vegas",
+   "published": "2026-11-20T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Jason Robertson to hold Robo's Holiday Toy Drive in support of Children's Health℠",
+   "published": "2026-11-20T18:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Penguins at Predators projected lineups",
+   "published": "2026-11-20T19:57:20.638Z",
+   "lineups": false
+  },
+  {
+   "title": "A beautiful mess: Stars still boast potential for growth after solid first quarter of season",
+   "published": "2026-11-20T20:20:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Arturs Silovs",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Justin Brazeau",
+     "detail": "scratched"
+    },
+    {
+     "player": "Declan Carlile",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ryan Graves",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Evgeni Malkin",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nick Robertson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Bryan Rust",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Elmer Soderblom",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Penguins (7-13-2) are mired in a difficult stretch following a 4-3 loss at Nashville on Saturday. They are missing several key players, including Evgeni Malkin, Bryan Rust, Nick Robertson, Ryan Graves, and Elmer Soderblom, while Justin Brazeau and Declan Carlile are scratched. Arturs Silovs is projected to start in goal."
+  },
+  "home": {
+   "starting_goalie": "Jake Oettinger",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Colin Blackwell",
+     "detail": "scratched"
+    },
+    {
+     "player": "Rémi Poirier",
+     "detail": "scratched"
+    },
+    {
+     "player": "Oskar Back",
+     "detail": "finger injury"
+    },
+    {
+     "player": "Lian Bichsel",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Kyle Capobianco",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Matt Duchene",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Tyler Myers",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Stars (14-6-2) are riding a 7-1-1 roll and sit third in the Western Conference. They will be without Oskar Back and Tyler Myers for this game, with coach Glen Gulutzan hoping both can return against Nashville on Wednesday. Jake Oettinger is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Arturs Silovs",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Justin Brazeau": 0.97,
+    "Declan Carlile": 0.97,
+    "Ryan Graves": 0.98,
+    "Evgeni Malkin": 0.98,
+    "Nick Robertson": 0.98,
+    "Bryan Rust": 0.98,
+    "Elmer Soderblom": 0.98
+   }
+  },
+  "home": {
+   "starter": "Jake Oettinger",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Colin Blackwell": 0.97,
+    "Rémi Poirier": 0.97,
+    "Oskar Back": 0.98,
+    "Lian Bichsel": 0.98,
+    "Kyle Capobianco": 0.96,
+    "Matt Duchene": 0.98,
+    "Tyler Myers": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.6,
+  "jev": 0.2
+ }
+}
