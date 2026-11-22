@@ -1,0 +1,122 @@
+{
+ "game": {
+  "gameId": 2026020377,
+  "kickoff": "2026-11-23T01:00:00Z",
+  "away": "Chicago Blackhawks",
+  "home": "Vancouver Canucks",
+  "away_id": 16,
+  "home_id": 23,
+  "away_abbr": "CHI",
+  "home_abbr": "VAN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-22T22:47:41.585431+00:00",
+ "articles": [
+  {
+   "title": "Blackhawks at Canucks projected lineups",
+   "published": "2026-11-22T18:02:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Daniel and Henrik Sedin Join Canucks Insider Podcast to Talk Team Culture, Consistency, and the Road Ahead",
+   "published": "2026-11-20T17:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "NEWS: Nazar, Moore Help Serve Thanksgiving Meals to Chicago Seniors",
+   "published": "2026-11-20T18:30:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Building Blue: Wilson Björck's Love of the Game Fuels Him in Sophomore Season",
+   "published": "2026-11-20T19:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks at Flames projected lineups",
+   "published": "2026-11-20T19:45:58.886Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Blackhawks Head to Calgary for Matchup Against Flames",
+   "published": "2026-11-20T20:26:32.265Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Drew Commesso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "shoulder surgery"
+    },
+    {
+     "player": "Anton Frondell",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Bowen Byram",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Blackhawks (7-14-2) are projected to start Drew Commesso in goal, his first start since being recalled from Rockford on Nov. 8. The team is without Connor Bedard, Anton Frondell, and Bowen Byram due to injury, while Jordan Greenway and Wyatt Kaiser are listed as scratched. Toninato was recalled from Rockford, and Korchinski is likely to replace Kaiser, who has a Department of Player Safety hearing following a match penalty in Saturday's game."
+  },
+  "home": {
+   "starting_goalie": "Nikita Tolopilo",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Elias Pettersson",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Brendan Gallagher",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks (6-18-1) are projected to start Nikita Tolopilo in goal. The team is missing Elias Pettersson, Brendan Gallagher, Thatcher Demko, and Guillaume Brisebois due to injury, with Pettersson listed as day to day. Cameron Crotty and Kevin Lankinen are scratched, and Crotty could replace Luke Schenn in the lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Drew Commesso",
+   "p_starter": 0.97,
+   "announced": 0.98,
+   "p_out": {
+    "Connor Bedard": 0.98,
+    "Anton Frondell": 0.88,
+    "Bowen Byram": 0.85
+   }
+  },
+  "home": {
+   "starter": "Nikita Tolopilo",
+   "p_starter": 0.98,
+   "announced": 0.96,
+   "p_out": {
+    "Elias Pettersson": 0.68,
+    "Brendan Gallagher": 0.97,
+    "Thatcher Demko": 0.98,
+    "Guillaume Brisebois": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.4,
+  "jev": 0.1
+ }
+}
