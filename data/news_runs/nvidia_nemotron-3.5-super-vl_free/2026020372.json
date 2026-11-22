@@ -1,0 +1,110 @@
+{
+ "game": {
+  "gameId": 2026020372,
+  "kickoff": "2026-11-22T03:00:00Z",
+  "away": "Seattle Kraken",
+  "home": "San Jose Sharks",
+  "away_id": 55,
+  "home_id": 28,
+  "away_abbr": "SEA",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-22T00:48:03.393193+00:00",
+ "articles": [
+  {
+   "title": "Kraken at Sharks projected lineups",
+   "published": "2026-11-21T19:19:20.063Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks at Kraken projected lineups",
+   "published": "2026-11-19T19:54:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken Players Giving Back And Receiving More",
+   "published": "2026-11-19T22:08:27.203Z",
+   "lineups": false
+  },
+  {
+   "title": "Catton’s Hat Trick Powers Kraken Past Canucks",
+   "published": "2026-11-20T05:31:55.987Z",
+   "lineups": false
+  },
+  {
+   "title": "Post-Game Instant Analysis: Vancouver vs Seattle",
+   "published": "2026-11-20T05:40:16.354Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken (10-8-1) at Sharks (10-12-2) | 7 p.m.",
+   "published": "2026-11-20T23:18:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Joey Daccord",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jared McCann",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Curtis Douglas",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Kraken (10-8-1) are coming off a 5-1 win over Vancouver and are expected to use the same lines against San Jose. Joey Daccord is listed first in the projected goalie rotation, while Philipp Grubauer did not skate Friday for maintenance but will be available. Jared McCann and Curtis Douglas remain injured."
+  },
+  "home": {
+   "starting_goalie": "Alex Nedeljkovic",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Kiefer Sherwood",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Nolan Allan",
+    "detail: "
+   ],
+   "summary": "The Sharks (10-12-2) will have Nolan Allan return to the lineup after being a healthy scratch for the past eight games. Forward Brett Leason will make his San Jose debut and play his first NHL game since January 17, 2026. Michael Kesselring and Collin Graf are healthy scratches."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Joey Daccord",
+   "p_starter": 0.97,
+   "announced": 0.91,
+   "p_out": {
+    "Jared McCann": 0.98,
+    "Curtis Douglas": 0.97
+   }
+  },
+  "home": {
+   "starter": "Alex Nedeljkovic",
+   "p_starter": 0.97,
+   "announced": 0.97,
+   "p_out": {
+    "Igor Chernyshov": 0.98,
+    "Kiefer Sherwood": 0.98
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 18.5,
+  "jev": 0.2
+ }
+}
