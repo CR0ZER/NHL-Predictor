@@ -1,0 +1,138 @@
+{
+ "game": {
+  "gameId": 2026020378,
+  "kickoff": "2026-11-24T00:00:00Z",
+  "away": "Columbus Blue Jackets",
+  "home": "New Jersey Devils",
+  "away_id": 29,
+  "home_id": 1,
+  "away_abbr": "CBJ",
+  "home_abbr": "NJD"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-23T21:47:59.530182+00:00",
+ "articles": [
+  {
+   "title": "Blue Jackets at Devils projected lineups",
+   "published": "2026-11-23T17:39:52.014Z",
+   "lineups": true
+  },
+  {
+   "title": "Devils Look to Rediscover Pace Against Surging Blues | MORNING SKATE",
+   "published": "2026-11-21T17:12:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Blue Jackets at Maple Leafs projected lineups",
+   "published": "2026-11-21T18:09:46.936Z",
+   "lineups": false
+  },
+  {
+   "title": "Knies anticipates emotional return to Toronto with Blue Jackets",
+   "published": "2026-11-21T19:17:20.414Z",
+   "lineups": false
+  },
+  {
+   "title": "Devils at Blues projected lineups",
+   "published": "2026-11-21T23:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "QUICK RECAP: Blues 9, Devils 6",
+   "published": "2026-11-22T00:08:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Cam Talbot",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Erik Gudbranson",
+     "detail": "scratched"
+    },
+    {
+     "player": "Dmitri Voronkov",
+     "detail": "scratched"
+    },
+    {
+     "player": "Conor Garland",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Sean Monahan",
+     "detail": "upper body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Mikael Pyyhtia\", \"detail\": \"recalled from Cleveland and will make his season debut, replacing Voronkov\"], ",
+    "summary\": "
+   ],
+   "summary": "The Blue Jackets (9-12-0) are projected to start Cam Talbot in net. The team did not hold a morning skate, and Mikael Pyyhtia was recalled from Cleveland to make his season debut, replacing scratched forward Dmitri Voronkov. Steven Lorentz was reassigned to Cleveland, while Conor Garland and Sean Monahan remain out with upper-body injuries."
+  },
+  "home": {
+   "starting_goalie": "Connor Hellebuyck",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Lenni Hameenaho",
+     "detail": "scratched"
+    },
+    {
+     "player": "Vladislav Kolyachonok",
+     "detail": "scratched"
+    },
+    {
+     "player": "Anthony Mantha",
+     "detail": "throat injury"
+    },
+    {
+     "player": "Johnathan Kovacevic",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Seamus Casey",
+     "detail": "knee injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Stefan Noesen\", \"detail\": \"will play and replace Hameenaho\"], ",
+    "summary\": "
+   ],
+   "summary": "The Devils (15-8-0) are projected to start Connor Hellebuyck in net. The team debuted four new forward line combinations following a 9-6 loss to St. Louis, with Stefan Noesen returning to replace scratched Lenni Hameenaho. Amadeus Lombardi will play his second straight game at center after being a healthy scratch the previous three games, while Seamus Casey joined the team for the skate for the first time since his September injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Cam Talbot",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Erik Gudbranson": 0.97,
+    "Dmitri Voronkov": 0.97,
+    "Conor Garland": 0.97,
+    "Sean Monahan": 0.98
+   }
+  },
+  "home": {
+   "starter": "Connor Hellebuyck",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Lenni Hameenaho": 0.97,
+    "Vladislav Kolyachonok": 0.98,
+    "Anthony Mantha": 0.97,
+    "Johnathan Kovacevic": 0.97,
+    "Seamus Casey": 0.89
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.5,
+  "jev": 0.1
+ }
+}

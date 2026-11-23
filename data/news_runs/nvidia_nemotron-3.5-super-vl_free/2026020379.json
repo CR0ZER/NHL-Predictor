@@ -1,0 +1,117 @@
+{
+ "game": {
+  "gameId": 2026020379,
+  "kickoff": "2026-11-24T00:30:00Z",
+  "away": "Los Angeles Kings",
+  "home": "Montréal Canadiens",
+  "away_id": 26,
+  "home_id": 8,
+  "away_abbr": "LAK",
+  "home_abbr": "MTL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-23T21:48:06.073733+00:00",
+ "articles": [
+  {
+   "title": "Kings at Canadiens projected lineups",
+   "published": "2026-11-23T18:34:27.193Z",
+   "lineups": true
+  },
+  {
+   "title": "PHI@MTL: What you need to know",
+   "published": "2026-11-21T14:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Updates from optional morning skate – Nov. 21",
+   "published": "2026-11-21T16:33:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview - LAK @ OTT",
+   "published": "2026-11-21T17:54:14.784Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Senators projected lineups",
+   "published": "2026-11-21T18:27:27.857Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers at Canadiens projected lineups",
+   "published": "2026-11-21T18:36:40.244Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Erik Gustafsson",
+     "detail": "upper-body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Artemi Panarin",
+    "/player: Trevor Moore"
+   ],
+   "summary": "The Kings (7-12-2) are on an East Coast road trip and have won their first two games. Artemi Panarin returns after missing four games for personal reasons, and Trevor Moore returns after missing two games with an undisclosed injury. Erik Gustafsson is out with an upper-body injury."
+  },
+  "home": {
+   "starting_goalie": "Jakub Dobes",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Chris Kreider",
+     "detail": "lower body"
+    },
+    {
+     "player": "Josh Anderson",
+     "detail": "lower body"
+    },
+    {
+     "player": "Ivan Demidov",
+     "detail": "lower body"
+    },
+    {
+     "player": "Mike Matheson",
+     "detail": "lower body"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Dylan Larkin"
+   ],
+   "summary": "The Canadiens (14-6-4) are coming off a 4-3 loss to the Philadelphia Flyers. Dylan Larkin makes his Canadiens debut after being acquired in a trade with the Detroit Red Wings; it is his first game since Oct. 26 following a suspension. Florian Xhekaj and Adam Engstrom were healthy scratches in the previous game."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Erik Gustafsson": 0.98
+   }
+  },
+  "home": {
+   "starter": "Jakub Dobes",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Chris Kreider": 0.97,
+    "Josh Anderson": 0.97,
+    "Ivan Demidov": 0.97,
+    "Mike Matheson": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.2,
+  "jev": 0.1
+ }
+}

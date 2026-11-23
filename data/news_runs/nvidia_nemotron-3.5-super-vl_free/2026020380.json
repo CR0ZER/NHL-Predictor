@@ -1,0 +1,140 @@
+{
+ "game": {
+  "gameId": 2026020380,
+  "kickoff": "2026-11-24T00:30:00Z",
+  "away": "Calgary Flames",
+  "home": "Ottawa Senators",
+  "away_id": 20,
+  "home_id": 9,
+  "away_abbr": "CGY",
+  "home_abbr": "OTT"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-23T21:48:12.149979+00:00",
+ "articles": [
+  {
+   "title": "Flames at Senators projected lineups",
+   "published": "2026-11-23T18:17:58.374Z",
+   "lineups": true
+  },
+  {
+   "title": "Huberdeau 'touched' by Flames support in long-awaited return to ice",
+   "published": "2026-11-21T01:46:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Kings at Senators projected lineups",
+   "published": "2026-11-21T18:27:27.857Z",
+   "lineups": false
+  },
+  {
+   "title": "Projected Lineup - Flames vs. Blackhawks",
+   "published": "2026-11-21T20:09:45.093Z",
+   "lineups": false
+  },
+  {
+   "title": "Flames Drop OT Decision To Blackhawks",
+   "published": "2026-11-21T23:36:30.955Z",
+   "lineups": false
+  },
+  {
+   "title": "Greig and Cousins provide heart and soul for Sens in comeback win",
+   "published": "2026-11-22T14:30:22.117Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Devin Cooley",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Kevin Bahl",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Martin Pospisil",
+     "detail": "upper body injury, did not travel after leaving Saturday's game vs. Chicago following a hit from Wyatt Kaiser"
+    },
+    {
+     "player": "Brennan Othmann",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brayden Pachal",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flames (10-12-2) are projected to use Devin Cooley in goal over Dustin Wolf for Monday's game in Ottawa. Calgary is dealing with injuries to Kevin Bahl (lower body) and Martin Pospisil (upper body), with Pospisil not traveling after leaving Saturday's 4-3 overtime loss to Chicago. Brennan Othmann and Brayden Pachal are scratched, while forward Sam Morton was recalled from the AHL and will play."
+  },
+  "home": {
+   "starting_goalie": "Linus Ullmark",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "groin injury"
+    },
+    {
+     "player": "Carter Yakemchuk",
+     "detail": "scratched"
+    },
+    {
+     "player": "Tyler Boucher",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player Nick Cousins",
+    "detail: "
+   ],
+   "summary": "The Senators (15-6-3) are projected to start Linus Ullmark in goal against Calgary. Ottawa will use the same lineup from Saturday's 4-2 win over the Kings, with Nick Cousins returning after missing four games with an upper-body injury. Injuries continue to sideline Warren Foegele, William Eklund, Andre Burakovsky, and Hayden Hodgson, while Carter Yakemchuk and Tyler Boucher are scratched."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dustin Wolf",
+   "p_starter": 0.62,
+   "announced": 0.86,
+   "p_out": {
+    "Kevin Bahl": 0.97,
+    "Martin Pospisil": 0.98,
+    "Brennan Othmann": 0.97,
+    "Brayden Pachal": 0.97
+   }
+  },
+  "home": {
+   "starter": "Linus Ullmark",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Warren Foegele": 0.98,
+    "William Eklund": 0.98,
+    "Andre Burakovsky": 0.98,
+    "Hayden Hodgson": 0.98,
+    "Carter Yakemchuk": 0.96,
+    "Tyler Boucher": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.7,
+  "jev": 0.1
+ }
+}

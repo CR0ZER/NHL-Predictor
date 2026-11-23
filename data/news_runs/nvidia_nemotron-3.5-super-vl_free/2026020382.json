@@ -1,0 +1,171 @@
+{
+ "game": {
+  "gameId": 2026020382,
+  "kickoff": "2026-11-24T00:30:00Z",
+  "away": "Utah Mammoth",
+  "home": "Winnipeg Jets",
+  "away_id": 68,
+  "home_id": 52,
+  "away_abbr": "UTA",
+  "home_abbr": "WPG"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-23T21:48:34.662237+00:00",
+ "articles": [
+  {
+   "title": "GAMEDAY: Mammoth at Jets",
+   "published": "2026-11-23T11:17:00Z",
+   "lineups": true
+  },
+  {
+   "title": "Mammoth at Jets projected lineups ",
+   "published": "2026-11-23T18:21:11.702Z",
+   "lineups": true
+  },
+  {
+   "title": "European notebook: Late-round NHL draft picks making an impact",
+   "published": "2026-11-21T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Information: November 21 Winnipeg Jets vs. Vegas Golden Knights",
+   "published": "2026-11-21T12:12:21.287Z",
+   "lineups": false
+  },
+  {
+   "title": "GAMEDAY: Golden Knights at Jets",
+   "published": "2026-11-21T12:38:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Hosts Anaheim on Hockey Fights Cancer Night",
+   "published": "2026-11-21T17:15:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Dylan Guenther",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nick Schmaltz",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Artem Duda",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "Michael Carcone",
+     "detail": "upper body injury, out 3-4 months after surgery"
+    },
+    {
+     "player": "Gregor Biber",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Dylan Guenther",
+     "detail": "day to day"
+    },
+    {
+     "player": "John Marino",
+     "detail": "day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "Utah sits a point ahead of Winnipeg in the Western Conference standings but is 3-4-3 over its last 10 games as injuries pile up. The projected lineup lists Sebastian Cossa first in goal ahead of Karel Vejmelka, though neither starter is confirmed. Clayton Keller is expected to return after missing Saturday's win over Anaheim with an illness, while Dylan Guenther skated in Winnipeg on Monday but remains day to day after missing six games."
+  },
+  "home": {
+   "starting_goalie": "Stuart Skinner",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Bjugstad",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Vladislav Namestnikov",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Dylan DeMelo",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Isak Rosén",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Haydn Fleury",
+     "detail": "scratched"
+    },
+    {
+     "player": "Nino Niederreiter",
+     "detail": "scratched"
+    },
+    {
+     "player": "Cole Koepke",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Jets look to close out their four-game homestand with a win over division rival Utah. Scott Arniel is expected to dress 11 forwards and 7 defencemen, with Elias Salomonsson moving up to pair with Josh Morrissey and Neal Pionk dropping to the second pair with Dylan Samberg. Stuart Skinner is listed first in the projected goalie tandem ahead of Nico Daws, both undefeated against Utah in their careers, though no starter is officially confirmed."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 0.99,
+   "announced": 0.91,
+   "p_out": {
+    "Dylan Guenther": 0.47,
+    "Nick Schmaltz": 0.95,
+    "Nate Schmidt": 0.85,
+    "John Marino": 0.44,
+    "Artem Duda": 0.92,
+    "Maveric Lamoureux": 0.95,
+    "Michael Carcone": 0.97,
+    "Gregor Biber": 0.94
+   }
+  },
+  "home": {
+   "starter": "Stuart Skinner",
+   "p_starter": 0.96,
+   "announced": 0.77,
+   "p_out": {
+    "Nick Bjugstad": 0.94,
+    "Vladislav Namestnikov": 0.96,
+    "Dylan DeMelo": 0.95,
+    "Isak Rosén": 0.95,
+    "Haydn Fleury": 0.96,
+    "Nino Niederreiter": 0.95,
+    "Cole Koepke": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.3,
+  "jev": 0.1
+ }
+}
