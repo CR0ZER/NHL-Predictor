@@ -448,3 +448,5 @@ gameId,date,kickoff,away,home,placed_at,strategy,market,book,pick,pick_label,pri
 2026020381,2026-11-23,2026-11-24T00:30:00Z,Toronto Maple Leafs,New York Islanders,2026-11-23T21:48:34.794140+00:00,favori_bet365,Vainqueur,bet365,H,New York Islanders,1.47,0.6332695434992844,-0.0690937710560518,10.0,en attente,,
 2026020381,2026-11-23,2026-11-24T00:30:00Z,Toronto Maple Leafs,New York Islanders,2026-11-23T21:48:34.794140+00:00,valeur_winamax,1N2,Winamax,H,New York Islanders,1.94,0.5208446046602304,0.0104385330408469,10.0,en attente,,
 2026020382,2026-11-23,2026-11-24T00:30:00Z,Utah Mammoth,Winnipeg Jets,2026-11-23T21:48:34.794140+00:00,favori_bet365,Vainqueur,bet365,A,Utah Mammoth,1.77,0.5211623936500576,-0.0775425632393981,10.0,en attente,,
+2026020383,2026-11-23,2026-11-24T02:40:00Z,Anaheim Ducks,Seattle Kraken,2026-11-23T23:47:45.450446+00:00,favori_bet365,Vainqueur,bet365,A,Anaheim Ducks,1.85,0.5296254377767899,-0.020192940112938595,10.0,en attente,,
+2026020383,2026-11-23,2026-11-24T02:40:00Z,Anaheim Ducks,Seattle Kraken,2026-11-23T23:47:45.450446+00:00,valeur_winamax,1N2,Winamax,A,Anaheim Ducks,2.4,0.4172004989377359,0.0012811974505662072,10.0,en attente,,
