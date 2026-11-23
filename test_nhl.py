@@ -82,6 +82,13 @@ real_urlopen, urllib.request.urlopen = urllib.request.urlopen, fake_urlopen
 assert odds.api("historical-odds") == {"ok": 1}, "2e essai après une réponse tronquée"
 urllib.request.urlopen = real_urlopen
 
+# /odds (cotes d'avant-match depuis le 21 novembre 2026) : même clés que l'historique pour app.run_predict
+live = {"bookmakerOdds": {"pinnacle": {"markets": {"151": {"outcomes": {
+    "151": {"players": {"0": {"price": 1.8}}}, "152": {"players": {"0": {"price": 2.05}}}}}}},
+    "winamax.fr": {"markets": {"153": {"outcomes": {"154": {"players": {"0": {"price": 4.1}}}}}}}}}
+assert odds.live_prices(live) == {("pinnacle", "151", "H"): 1.8, ("pinnacle", "151", "A"): 2.05,
+                                  ("winamax.fr", "153", "X"): 4.1}
+
 # Absents : comme à l'entraînement, seuls les joueurs des 10 derniers matchs de l'équipe comptent (pas de double
 # comptage d'un blessé de longue date, dont la perte est déjà dans la forme de l'équipe)
 import news

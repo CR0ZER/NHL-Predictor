@@ -4,10 +4,10 @@
     uv run --env-file .env python odds.py fetch AAAA-MM-JJ AAAA-MM-JJ   # une période passée précise
     uv run python odds.py eval [SAISON]                                 # défaut 2025 (2025-26) ; 2026 = saison en cours
 
-Chaque update/fetch : 1 requête décomptée (liste des matchs) + historiques gratuits, ~6 s par nouveau match terminé
-(une semaine de NHL ≈ 50 matchs ≈ 5 min).
-
-Quota gratuit : 250 requêtes/mois ; /historical-odds n'est pas décompté (mais 5 s d'attente entre appels).
+Quota gratuit : 250 requêtes/mois. Depuis le 21 novembre 2026, l'offre gratuite ne sert /historical-odds (non
+décompté, 5 s d'attente entre appels) que pour les matchs terminés : il ne sert plus qu'aux cotes de clôture. Les cotes
+d'avant-match viennent de /odds, 1 requête décomptée par match prédit (jusqu'à ~232 matchs par mois en janvier) ; la
+liste des matchs (/fixtures, 1 requête) n'est donc rafraîchie que le lundi.
 """
 import http.client
 import json
@@ -66,13 +66,23 @@ def fixtures(start, end, refresh=False):
 
 
 def fetch(start, end, refresh=False):
+    """Historiques des matchs terminés pas encore résumés. La liste des matchs n'étant plus rafraîchie que le lundi,
+    un match est tenu pour terminé 5 h après son coup d'envoi (son statut dans la liste peut dater de la semaine)."""
     (DIR / "hist").mkdir(parents=True, exist_ok=True)
     done = set(pd.read_csv(CLOSING, usecols=["fixtureId"])["fixtureId"]) if CLOSING.exists() else set()  # déjà résumés
-    todo = [f for f in fixtures(start, end, refresh) if f["statusId"] == 2 and f["fixtureId"] not in done
+    over = pd.Timestamp.now(tz="UTC") - pd.Timedelta(hours=5)
+    todo = [f for f in fixtures(start, end, refresh)
+            if (f["statusId"] == 2 or pd.Timestamp(f["startTime"]) < over) and f["fixtureId"] not in done
             and not (DIR / "hist" / f"{f['fixtureId']}.json").exists()]
     for i, f in enumerate(todo):
-        (DIR / "hist" / f"{f['fixtureId']}.json").write_text(json.dumps(api("historical-odds", fixtureId=f["fixtureId"],
-                                                                            bookmakers=BOOKS)))
+        try:
+            hist = api("historical-odds", fixtureId=f["fixtureId"], bookmakers=BOOKS)
+        except urllib.error.HTTPError as e:
+            if e.code != 403:  # 403 : match pas terminé pour OddsPapi (reporté, en cours) ; repris au prochain passage
+                raise
+            time.sleep(5.5)
+            continue
+        (DIR / "hist" / f"{f['fixtureId']}.json").write_text(json.dumps(hist))
         if i % 50 == 0:
             print(f"{i}/{len(todo)}", flush=True)
         time.sleep(5.5)  # cooldown de l'endpoint : 5000 ms
@@ -80,9 +90,10 @@ def fetch(start, end, refresh=False):
 
 
 def update():
-    """Saison en cours : liste des matchs rafraîchie (fichier unique par saison, statuts à jour) + nouveaux historiques."""
+    """Saison en cours : nouveaux historiques (cotes de clôture). Liste des matchs rafraîchie le lundi seulement
+    (1 requête décomptée ; le quota mensuel va surtout aux cotes d'avant-match)."""
     season = nhl.current_season()
-    fetch(f"{season}-09-01", f"{season + 1}-07-01", refresh=True)
+    fetch(f"{season}-09-01", f"{season + 1}-07-01", refresh=pd.Timestamp.now(tz="UTC").weekday() == 0)
     closing_odds()  # résume les nouveaux matchs dans closing.csv
 
 
@@ -115,6 +126,19 @@ def last_prices(hist, before):
     return out
 
 
+def live_prices(odds):
+    """{(bookmaker, marché, issue): cote actuelle} à partir d'une réponse /odds (mêmes marchés et issues que l'historique)."""
+    out = {}
+    for book, b in odds.get("bookmakerOdds", {}).items():
+        for market, outcomes in OUTCOMES.items():
+            for oid, side in outcomes.items():
+                players = b.get("markets", {}).get(market, {}).get("outcomes", {}).get(oid, {}).get("players", {})
+                price = next(iter(players.values()), {}).get("price")
+                if price:
+                    out[(book, market, side)] = price
+    return out
+
+
 def local_date(ts):
     return (pd.Timestamp(ts) - pd.Timedelta(hours=8)).date()  # date locale nord-américaine
 
@@ -142,15 +166,16 @@ def closing_odds():
 
 
 def current_odds(home, kickoff):
-    """Cotes actuelles d'un match à venir (endpoint historique : gratuit, ~5 s d'attente entre deux appels)."""
+    """Cotes actuelles d'un match à venir : /odds, 1 requête décomptée (l'historique gratuit est réservé aux matchs
+    terminés depuis le 21 novembre 2026)."""
     season = nhl.current_season()
     ids = {(norm(f["participant1Name"]), local_date(f["startTime"])): f["fixtureId"]
            for f in fixtures(f"{season}-09-01", f"{season + 1}-07-01")}
     fid = ids.get((norm(home), local_date(kickoff)))
     if fid is None:
         return {}
-    time.sleep(5.5)  # cooldown de l'endpoint
-    return last_prices(api("historical-odds", fixtureId=fid, bookmakers=BOOKS), pd.Timestamp(kickoff))
+    time.sleep(0.6)  # 0,5 s minimum entre deux appels
+    return live_prices(api("odds", fixtureId=fid, bookmakers=BOOKS, oddsFormat="decimal"))
 
 
 def model_probs(season):
