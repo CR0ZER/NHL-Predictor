@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020384,
+  "kickoff": "2026-11-24T03:00:00Z",
+  "away": "Minnesota Wild",
+  "home": "San Jose Sharks",
+  "away_id": 30,
+  "home_id": 28,
+  "away_abbr": "MIN",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-24T00:47:43.169905+00:00",
+ "articles": [
+  {
+   "title": "Wild at Sharks projected lineups",
+   "published": "2026-11-23T19:58:28.624Z",
+   "lineups": true
+  },
+  {
+   "title": "Sharks celebrate grand opening of new SAP Center Pro Shop",
+   "published": "2026-11-21T17:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Minnesota Wild Recalls Defenseman Viking Gustafsson Nyberg from Iowa",
+   "published": "2026-11-21T18:25:00.582Z",
+   "lineups": false
+  },
+  {
+   "title": "Kraken at Sharks projected lineups",
+   "published": "2026-11-21T19:19:20.063Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Canucks projected lineups",
+   "published": "2026-11-21T20:04:34.343Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Wild at Canucks",
+   "published": "2026-11-21T20:27:52.513Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Filip Gustavsson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Quinn Hughes",
+     "detail": "undisclosed injury; returned to Minnesota for further evaluation, will not play"
+    },
+    {
+     "player": "Olli Maatta",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nico Sturm",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jesper Wallstedt",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Wild (17-3-5) are riding a nine-game road win streak and have allowed two or fewer goals in each win. They will be without star defenseman Quinn Hughes, who returned to Minnesota for evaluation after an undisclosed injury, and Olli Maatta (upper body). Filip Gustavsson will make his season debut after missing the start of the season with a lower-body injury."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Kiefer Sherwood",
+     "detail": "upper body injury; placed on injured reserve Monday"
+    },
+    {
+     "player": "Jacob Trouba",
+     "detail": "lower body injury; out one week"
+    },
+    {
+     "player": "Collin Graf",
+     "detail": "scratched"
+    },
+    {
+     "player": "Libor Hajek",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player\": \"Darnell Nurse\", \"detail\": \"returns to the lineup after being a healthy scratch during a 4-3 win against the Seattle Kraken on Saturday\"}]",
+    "summary"
+   ],
+   "summary": "The Sharks (11-12-2) are coming off a 4-3 win against the Seattle Kraken. Darnell Kesselring returns to the lineup after being a healthy scratch, while Collin Graf and Libor Hajek are scratched. The Sharks are dealing with injuries to Igor Chernyshov, Kiefer Sherwood, and Jacob Trouba."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Filip Gustavsson",
+   "p_starter": 1.0,
+   "announced": 0.98,
+   "p_out": {
+    "Quinn Hughes": 0.98,
+    "Olli Maatta": 0.97,
+    "Nico Sturm": 0.95,
+    "Jesper Wallstedt": 0.93
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Igor Chernyshov": 0.96,
+    "Kiefer Sherwood": 0.97,
+    "Jacob Trouba": 0.97,
+    "Collin Graf": 0.88,
+    "Libor Hajek": 0.88
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 6.5,
+  "jev": 0.3
+ }
+}
