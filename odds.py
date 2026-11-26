@@ -67,10 +67,10 @@ def fixtures(start, end, refresh=False):
 
 def fetch(start, end, refresh=False):
     """Historiques des matchs terminés pas encore résumés. La liste des matchs n'étant plus rafraîchie que le lundi,
-    un match est tenu pour terminé 5 h après son coup d'envoi (son statut dans la liste peut dater de la semaine)."""
+    un match est tenu pour terminé 4 h après son coup d'envoi (son statut dans la liste peut dater de la semaine)."""
     (DIR / "hist").mkdir(parents=True, exist_ok=True)
     done = set(pd.read_csv(CLOSING, usecols=["fixtureId"])["fixtureId"]) if CLOSING.exists() else set()  # déjà résumés
-    over = pd.Timestamp.now(tz="UTC") - pd.Timedelta(hours=5)
+    over = pd.Timestamp.now(tz="UTC") - pd.Timedelta(hours=4)  # match de 03 h UTC fini avant le règlement de 8 h 13 (Paris)
     todo = [f for f in fixtures(start, end, refresh)
             if (f["statusId"] == 2 or pd.Timestamp(f["startTime"]) < over) and f["fixtureId"] not in done
             and not (DIR / "hist" / f"{f['fixtureId']}.json").exists()]
