@@ -285,7 +285,10 @@ def predictions(day, use_news=True, progress=print, skip=(), until=None):
             g = {"gameId": x["id"], "kickoff": x["startTimeUTC"], "away": team_name(x["awayTeam"]), "home": team_name(x["homeTeam"]),
                  **{f"{s}_id": x[f"{s}Team"]["id"] for s in ("away", "home")},
                  **{f"{s}_abbr": abbr[s] for s in ("away", "home")}}
-            res = news.run_game(client, g, {ab: news.roster_goalies(ab) for ab in abbr.values()}, refresh=True)
+            try:
+                res = news.run_game(client, g, {ab: news.roster_goalies(ab) for ab in abbr.values()}, refresh=True)
+            except Exception as e:  # un article illisible ne doit pas priver les autres matchs de leur prédiction
+                progress(f"Actualité illisible pour {abbr['away']} @ {abbr['home']}, prédiction sans absences : {e!r}")
         news_ok[x["id"]] = (res or {}).get("llm") or ""  # modèle qui a lu les articles, vide si l'extraction a échoué
         for side, s in (("H", "home"), ("R", "away")):
             pid, gname = probable_starter(goalies, abbr[s], day)

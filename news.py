@@ -96,7 +96,9 @@ def stories(tag):
 
 def story_text(slug, updated):
     """Texte d'un article, mis en cache par version (un article modifié est relu)."""
-    path = DATA / "news" / f"{slug}_{re.sub(r'[^0-9]', '', updated)[:14]}.txt"
+    # slug tronqué : le 25 novembre 2026, celui d'un échange Red Wings–Canadiens dépassait les 255 octets d'un nom de
+    # fichier Linux et faisait planter toute la soirée
+    path = DATA / "news" / f"{slug[:150]}_{re.sub(r'[^0-9]', '', updated)[:14]}.txt"
     if not path.exists():
         path.parent.mkdir(parents=True, exist_ok=True)
         parts = get_json(f"{CONTENT}/{slug}")["parts"]
