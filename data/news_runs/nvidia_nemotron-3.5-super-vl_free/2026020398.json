@@ -1,0 +1,145 @@
+{
+ "game": {
+  "gameId": 2026020398,
+  "kickoff": "2026-11-26T03:00:00Z",
+  "away": "San Jose Sharks",
+  "home": "Anaheim Ducks",
+  "away_id": 28,
+  "home_id": 24,
+  "away_abbr": "SJS",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-26T00:48:04.390189+00:00",
+ "articles": [
+  {
+   "title": "Sharks at Ducks projected lineups",
+   "published": "2026-11-25T20:12:12.309Z",
+   "lineups": true
+  },
+  {
+   "title": "Rookie Watch: Stenberg, Bjorck trending up with Sharks, Jets",
+   "published": "2026-11-23T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rookie Watch: Stenberg, Bjorck trending up with Sharks, Jets",
+   "published": "2026-11-23T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Wild at Sharks projected lineups",
+   "published": "2026-11-23T19:58:28.624Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Ducks Close Out Road Trip Against Kraken",
+   "published": "2026-11-23T20:24:19.137Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks at Kraken projected lineups",
+   "published": "2026-11-23T20:29:20.567Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Alex Nedeljkovic",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Kiefer Sherwood",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jacob Trouba",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Libor Hajek",
+     "detail": "scratched"
+    },
+    {
+     "player": "Brett Leason",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Collin Graf",
+    "detail: "
+   ],
+   "summary": "The Sharks (11-13-2) are projected to start Alex Nedeljkovic in goal. Collin Graf returns to the lineup after being a healthy scratch for two games, while Libor Hajek and Brett Leason are scratched. Igor Chernyshov, Kiefer Sherwood, and Jacob Trouba remain injured."
+  },
+  "home": {
+   "starting_goalie": "Laurent Brossoit",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL injury"
+    },
+    {
+     "player": "Beckett Sennecke",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Leo Carlsson",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Tyson Hinds",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ville Husso",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Ducks (11-13-1) will start Laurent Brossoit, who was recalled from San Diego of the AHL. Leo Carlsson will miss his second straight game with an upper-body injury and remains day to day. Tyson Hinds and Ville Husso are scratched, and Noah Warren was reassigned to San Diego."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Alex Nedeljkovic",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Igor Chernyshov": 0.98,
+    "Kiefer Sherwood": 0.98,
+    "Jacob Trouba": 0.98,
+    "Libor Hajek": 0.97,
+    "Brett Leason": 0.96
+   }
+  },
+  "home": {
+   "starter": "Laurent Brossoit",
+   "p_starter": 0.99,
+   "announced": 0.99,
+   "p_out": {
+    "A.J. Greer": 0.98,
+    "Ryan Poehling": 0.98,
+    "Beckett Sennecke": 0.98,
+    "Leo Carlsson": 0.96,
+    "Tyson Hinds": 0.97,
+    "Ville Husso": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.9,
+  "jev": 0.1
+ }
+}

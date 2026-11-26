@@ -1,0 +1,159 @@
+{
+ "game": {
+  "gameId": 2026020396,
+  "kickoff": "2026-11-26T01:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Minnesota Wild",
+  "away_id": 68,
+  "home_id": 30,
+  "away_abbr": "UTA",
+  "home_abbr": "MIN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-26T00:47:46.922337+00:00",
+ "articles": [
+  {
+   "title": "Mammoth at Wild projected lineups",
+   "published": "2026-11-25T18:53:45.066Z",
+   "lineups": true
+  },
+  {
+   "title": "The Week Ahead: Nov 23-29",
+   "published": "2026-11-23T12:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Starts Road Trip in Winnipeg",
+   "published": "2026-11-23T12:15:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Jets projected lineups ",
+   "published": "2026-11-23T18:21:11.702Z",
+   "lineups": false
+  },
+  {
+   "title": "Hughes placed on injured reserve with undisclosed injury",
+   "published": "2026-11-23T19:42:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Gus Bus is Back",
+   "published": "2026-11-23T19:50:24.665Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Karel Vejmelka",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Schmaltz",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury, day to day"
+    },
+    {
+     "player": "Michael Carcone",
+     "detail": "upper body injury, out 3-4 months"
+    },
+    {
+     "player": "Artem Duda",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "Ben McCartney",
+     "detail": "scratched"
+    },
+    {
+     "player": "Gregor Biber",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "John Marino",
+     "detail": "day to day"
+    },
+    {
+     "player": "Artem Duda",
+     "detail": "day to day"
+    }
+   ],
+   "returning": [],
+   "summary": "The Utah Mammoth (12-10-3) have won their last two games to end a five-game homestand on a high note, collecting points in four of those five games. The team is dealing with multiple injuries, including Nick Schmaltz, Nate Schmidt, John Marino, Michael Carcone, Artem Duda, and Maveric Lamoureux. Vincent Trocheck has stepped up with a three-game goal streak, and Utah's power play ranks third in the NHL."
+  },
+  "home": {
+   "starting_goalie": "Jesper Wallstedt",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Quinn Hughes",
+     "detail": "undisclosed injury, placed on injured reserve"
+    },
+    {
+     "player": "Olli Maatta",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nico Sturm",
+     "detail": "scratched"
+    },
+    {
+     "player": "Viking Gustafsson Nyberg",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Filip Gustavsson",
+    "detail: "
+   ],
+   "summary": "The Minnesota Wild (18-3-5) are the top team in the NHL with 39 points and are on a 14-game points streak, earning a point or more in all 10 games this month. The Wild have outscored opponents 43 to 21 this month. Filip Gustavsson returns from injury to make his season debut, while Quinn Hughes is out with an undisclosed injury and Olli Maatta is dealing with an upper-body injury."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Karel Vejmelka",
+   "p_starter": 0.92,
+   "announced": 0.86,
+   "p_out": {
+    "Nick Schmaltz": 0.94,
+    "Nate Schmidt": 0.82,
+    "John Marino": 0.53,
+    "Michael Carcone": 0.93,
+    "Artem Duda": 0.71,
+    "Maveric Lamoureux": 0.93,
+    "Ben McCartney": 0.93,
+    "Gregor Biber": 0.94
+   }
+  },
+  "home": {
+   "starter": "Jesper Wallstedt",
+   "p_starter": 0.99,
+   "announced": 0.91,
+   "p_out": {
+    "Quinn Hughes": 0.97,
+    "Olli Maatta": 0.91,
+    "Nico Sturm": 0.96,
+    "Viking Gustafsson Nyberg": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.7,
+  "jev": 0.1
+ }
+}
