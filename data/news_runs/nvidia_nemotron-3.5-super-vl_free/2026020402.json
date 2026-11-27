@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020402,
+  "kickoff": "2026-11-27T18:00:00Z",
+  "away": "Utah Mammoth",
+  "home": "Nashville Predators",
+  "away_id": 68,
+  "home_id": 18,
+  "away_abbr": "UTA",
+  "home_abbr": "NSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T15:48:01.437524+00:00",
+ "articles": [
+  {
+   "title": "Mammoth at Predators projected lineups",
+   "published": "2026-11-26T14:27:47.287Z",
+   "lineups": true
+  },
+  {
+   "title": "Preds, Metro Nashville Police Continue Partnership to Deliver Thanksgiving Meals to Community",
+   "published": "2026-11-24T22:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Utah Faces Minnesota in Divisional Matchup",
+   "published": "2026-11-25T12:55:00Z",
+   "lineups": false
+  },
+  {
+   "title": "GAME DAY: Preds at Stars, November 25",
+   "published": "2026-11-25T13:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Predators at Stars projected lineups",
+   "published": "2026-11-25T18:11:47.629Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Wild projected lineups",
+   "published": "2026-11-25T18:53:45.066Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Sebastian Cossa",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nick Schmaltz",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Nate Schmidt",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "John Marino",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Michael Carcone",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Artem Duda",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Maveric Lamoureux",
+     "detail": "shoulder injury"
+    },
+    {
+     "player": "Ben McCartney",
+     "detail": "scratched"
+    },
+    {
+     "player": "Gregor Biber",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Utah (13-10-3) is on a four-game road trip and could use the same lineup from their 4-3 win at Minnesota on Wednesday. The team is dealing with several injuries on defense and up front, including Nick Schmaltz, Nate Schmidt, John Marino, Michael Carcone, Artem Duda, and Maveric Lamoureux."
+  },
+  "home": {
+   "starting_goalie": "Justus Annunen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "William Trudeau",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Daemon Hunt",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ilya Lyubushkin",
+     "detail": "scratched"
+    },
+    {
+     "player": "Vitali Pinchuk",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "Nashville (13-6-5) could go with the same lineup from their 3-1 win at Dallas on Wednesday. The Predators have won eight of their last 10 games and remain in the thick of the Central Division standings."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Sebastian Cossa",
+   "p_starter": 0.91,
+   "announced": 0.91,
+   "p_out": {
+    "Nick Schmaltz": 0.96,
+    "Nate Schmidt": 0.95,
+    "John Marino": 0.95,
+    "Michael Carcone": 0.96,
+    "Artem Duda": 0.96,
+    "Maveric Lamoureux": 0.96,
+    "Ben McCartney": 0.95,
+    "Gregor Biber": 0.95
+   }
+  },
+  "home": {
+   "starter": "Justus Annunen",
+   "p_starter": 0.82,
+   "announced": 0.96,
+   "p_out": {
+    "William Trudeau": 0.95,
+    "Daemon Hunt": 0.97,
+    "Ilya Lyubushkin": 0.97,
+    "Vitali Pinchuk": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.0,
+  "jev": 0.2
+ }
+}
