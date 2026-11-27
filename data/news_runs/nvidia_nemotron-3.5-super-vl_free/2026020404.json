@@ -1,0 +1,117 @@
+{
+ "game": {
+  "gameId": 2026020404,
+  "kickoff": "2026-11-27T20:00:00Z",
+  "away": "Ottawa Senators",
+  "home": "Tampa Bay Lightning",
+  "away_id": 9,
+  "home_id": 14,
+  "away_abbr": "OTT",
+  "home_abbr": "TBL"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T17:47:48.106675+00:00",
+ "articles": [
+  {
+   "title": "Senators at Lightning projected lineups",
+   "published": "2026-11-26T14:20:26.221Z",
+   "lineups": true
+  },
+  {
+   "title": "Nuts & Bolts: Clashing with the Canes",
+   "published": "2026-11-24T20:23:05.161Z",
+   "lineups": false
+  },
+  {
+   "title": "Senators at Panthers projected lineups",
+   "published": "2026-11-25T17:13:56.737Z",
+   "lineups": false
+  },
+  {
+   "title": "Hurricanes at Lightning projected lineups",
+   "published": "2026-11-25T17:47:58.245Z",
+   "lineups": false
+  },
+  {
+   "title": "Sens head to Florida for rematch with Panthers",
+   "published": "2026-11-25T19:00:04.775Z",
+   "lineups": false
+  },
+  {
+   "title": "Mishkin's Extra Shift: Hurricanes 3, Lightning 1",
+   "published": "2026-11-26T03:23:59.284Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Samuel Ersson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Warren Foegele",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "William Eklund",
+     "detail": "ankle injury"
+    },
+    {
+     "player": "Andre Burakovsky",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Hayden Hodgson",
+     "detail": "groin injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Senators (16-7-3) are riding a nine-game point streak (7-0-2) and head to Tampa for a road matchup. Travis Green confirmed the same lineup that beat Calgary on Monday will play, with Linus Ullmark in net for that game; however, the projected lineup for the Senators at Lightning lists Samuel Ersson as the first goalie after Ullmark made 27 saves in a 5-3 loss to Florida on Wednesday. Carter Yakemchuk and Tyler Boucher are scratched."
+  },
+  "home": {
+   "starting_goalie": "Dennis Hildeby",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Conor Geekie",
+     "detail": "shoulder surgery, out 4-5 months"
+    },
+    {
+     "player": "Pontus Holmberg",
+     "detail": "undisclosed injury, out indefinitely"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Lightning (15-7-2) are coming off a 3-1 loss to the Hurricanes and will look to end their losing skid against Ottawa. The projected lineup lists Dennis Hildeby as the first goalie ahead of Andrei Vasilevskiy. Max Crozier and Emil Lilleberg are scratched, while Conor Geekie and Pontus Holmberg are injured."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Samuel Ersson",
+   "p_starter": 0.93,
+   "announced": 0.97,
+   "p_out": {
+    "Warren Foegele": 0.98,
+    "William Eklund": 0.97,
+    "Andre Burakovsky": 0.98,
+    "Hayden Hodgson": 0.98
+   }
+  },
+  "home": {
+   "starter": "Dennis Hildeby",
+   "p_starter": 0.97,
+   "announced": 0.96,
+   "p_out": {
+    "Conor Geekie": 0.97,
+    "Pontus Holmberg": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.2
+ }
+}

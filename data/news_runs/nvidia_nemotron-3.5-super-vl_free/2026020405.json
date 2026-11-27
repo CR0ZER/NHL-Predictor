@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020405,
+  "kickoff": "2026-11-27T20:00:00Z",
+  "away": "Vancouver Canucks",
+  "home": "Philadelphia Flyers",
+  "away_id": 23,
+  "home_id": 4,
+  "away_abbr": "VAN",
+  "home_abbr": "PHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T17:47:53.577833+00:00",
+ "articles": [
+  {
+   "title": "Canucks at Flyers projected lineups",
+   "published": "2026-11-26T20:38:16.901Z",
+   "lineups": true
+  },
+  {
+   "title": "RAV4 Things: Flyers vs. Canucks",
+   "published": "2026-11-27T14:43:43.003Z",
+   "lineups": true
+  },
+  {
+   "title": "Canucks Begin Road Trip in Motor City to Face Red Wings on Wednesday Night",
+   "published": "2026-11-25T02:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Notes: Canucks at Red Wings",
+   "published": "2026-11-25T07:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "RAV4 Things: Flyers @ Capitals\n",
+   "published": "2026-11-25T15:10:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers at Capitals projected lineups",
+   "published": "2026-11-25T16:55:01.323Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Leevi Merilainen",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Elias Pettersson",
+     "detail": "upper body injury; returned to Vancouver for further evaluation and will miss at least the next two games"
+    },
+    {
+     "player": "Brendan Gallagher",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Thatcher Demko",
+     "detail": "hip injury"
+    },
+    {
+     "player": "Guillaume Brisebois",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Cameron Crotty",
+     "detail": "scratched"
+    },
+    {
+     "player": "Arshdeep Bains",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Canucks (6-20-1) have lost back-to-back games since their last win, opening a four-game road trip with a 5-1 loss in Detroit. They have been outscored 11-4 over their last two games, though Brock Boeser has eight points over the last five games. Vancouver is missing several key players, including Elias Pettersson, Brendan Gallagher, Thatcher Demko, and Guillaume Brisebois, while Cameron Crotty and Arshdeep Bains are scratched."
+  },
+  "home": {
+   "starting_goalie": "Dan Vladar",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Nikita Grebenkin",
+     "detail": "back injury"
+    },
+    {
+     "player": "David Jiricek",
+     "detail": "scratched"
+    },
+    {
+     "player": "Simon Benoit",
+     "detail": "scratched"
+    },
+    {
+     "player": "Michael Bunting",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Flyers (9-12-6) had their three-game winning streak snapped with a 7-3 loss in Washington on Wednesday. They are 5-3-2 over their last 10 games and rank 28th on the power play and 18th on the penalty kill. Travis Konecny has heated up with seven points over his last three games, while Rasmus Ristolainen has scored in each of his last two games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Kevin Lankinen",
+   "p_starter": 0.8,
+   "announced": 0.88,
+   "p_out": {
+    "Elias Pettersson": 0.98,
+    "Brendan Gallagher": 0.96,
+    "Thatcher Demko": 0.97,
+    "Guillaume Brisebois": 0.97,
+    "Cameron Crotty": 0.96,
+    "Arshdeep Bains": 0.95
+   }
+  },
+  "home": {
+   "starter": "Dan Vladar",
+   "p_starter": 0.96,
+   "announced": 0.96,
+   "p_out": {
+    "Nikita Grebenkin": 0.97,
+    "David Jiricek": 0.96,
+    "Simon Benoit": 0.96,
+    "Michael Bunting": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 5.1,
+  "jev": 0.1
+ }
+}

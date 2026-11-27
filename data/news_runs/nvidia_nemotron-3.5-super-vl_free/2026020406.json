@@ -1,0 +1,120 @@
+{
+ "game": {
+  "gameId": 2026020406,
+  "kickoff": "2026-11-27T20:00:00Z",
+  "away": "Florida Panthers",
+  "home": "Washington Capitals",
+  "away_id": 13,
+  "home_id": 15,
+  "away_abbr": "FLA",
+  "home_abbr": "WSH"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T17:47:58.684012+00:00",
+ "articles": [
+  {
+   "title": "Panthers at Capitals projected lineups",
+   "published": "2026-11-26T18:32:23.436Z",
+   "lineups": true
+  },
+  {
+   "title": "What’s Brewing: Barkov & Marchand nearing return; Turkey 5kate",
+   "published": "2026-11-24T21:25:56.626Z",
+   "lineups": false
+  },
+  {
+   "title": "Caps, Flyers Tangle Thanksgiving Eve",
+   "published": "2026-11-25T00:30:30.624Z",
+   "lineups": false
+  },
+  {
+   "title": "2027 Capitals Canine Calendar Now Available",
+   "published": "2026-11-25T15:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Flyers at Capitals projected lineups",
+   "published": "2026-11-25T16:55:01.323Z",
+   "lineups": false
+  },
+  {
+   "title": "PREVIEW: Barkov, Marchand return to action vs. Senators",
+   "published": "2026-11-25T17:06:28.418Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Jacob Markstrom",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Jonah Gadjovich",
+     "detail": "neck injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Panthers (14-8-3) are in a tight Atlantic Division race and have gone 4-1-1 in their last six games. Aleksander Barkov and Brad Marchand are listed in the projected lineup for this game after nearing returns from injuries, though their statuses were described as pending medical clearance in earlier articles. Jonah Gadjovich is out with a neck injury, while Uvis Balinskis and Bokondji Imama are scratched."
+  },
+  "home": {
+   "starting_goalie": "Logan Thompson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Rasmus Sandin",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Jordan Kyrou",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Ethen Frank",
+     "detail": "scratched"
+    },
+    {
+     "player": "Jack St. Ivany",
+     "detail": "scratched"
+    },
+    {
+     "player": "Clay Stevenson",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Vincent Desharnais",
+    "detail: activated from injured reserve and expected to return after missing 13 games with an appendectomy"
+   ],
+   "summary": "The Capitals (11-11-0) have struggled in November, going 2-7-0 and allowing five or more goals in each of their last eight losses. Vincent Desharnais is expected to return from an appendectomy and replace Jack St. Ivany in the lineup, while Jakob Chychrun did not practice Thursday for maintenance. Charlie Lindgren is listed as the backup goalie in the projected lineup."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Jacob Markstrom",
+   "p_starter": 0.98,
+   "announced": 0.98,
+   "p_out": {
+    "Jonah Gadjovich": 0.97
+   }
+  },
+  "home": {
+   "starter": "Logan Thompson",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Rasmus Sandin": 0.97,
+    "Jordan Kyrou": 0.97,
+    "Ethen Frank": 0.95,
+    "Jack St. Ivany": 0.95,
+    "Clay Stevenson": 0.89
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.7,
+  "jev": 0.1
+ }
+}
