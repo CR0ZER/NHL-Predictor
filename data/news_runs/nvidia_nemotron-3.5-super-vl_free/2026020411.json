@@ -1,0 +1,135 @@
+{
+ "game": {
+  "gameId": 2026020411,
+  "kickoff": "2026-11-27T22:30:00Z",
+  "away": "New York Rangers",
+  "home": "Chicago Blackhawks",
+  "away_id": 3,
+  "home_id": 16,
+  "away_abbr": "NYR",
+  "home_abbr": "CHI"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T19:47:45.273723+00:00",
+ "articles": [
+  {
+   "title": "Rangers at Blackhawks projected lineups",
+   "published": "2026-11-26T20:08:27.248Z",
+   "lineups": true
+  },
+  {
+   "title": "PREVIEW: Blackhawks Look to Cap Off Perfect Road Trip Against Kraken",
+   "published": "2026-11-25T00:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Sabres: Pregame Notes",
+   "published": "2026-11-25T13:35:30.705Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Sabres projected lineups",
+   "published": "2026-11-25T17:09:49.924Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks at Kraken projected lineups",
+   "published": "2026-11-25T19:17:47.33Z",
+   "lineups": false
+  },
+  {
+   "title": "Rangers at Sabres: Postgame Notes",
+   "published": "2026-11-26T03:17:17.868Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Dylan Garand",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Shesterkin",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Joseph Veleno",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Alberts Smits",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Pavel Dorofeyev",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Oliver Bjorkstrand",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Gabe Perrault",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Rangers (13-10-1) are without starting goaltender Igor Shesterkin due to a lower-body injury, with Dylan Garand projected to start after Joonas Korpisalo made 25 saves at Buffalo. The lineup features several changes, including Taylor Raddysh moving up to the fourth line and Matthew Robertson and Juuso Parssinen scratched. Pavel Dorofeyev practiced in Chicago and could draw into the lineup after missing two games."
+  },
+  "home": {
+   "starting_goalie": "Drew Commesso",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Connor Bedard",
+     "detail": "shoulder surgery"
+    },
+    {
+     "player": "Bowen Byram",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Patrick Kane",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [
+    "/player: Tyler Bertuzzi",
+    "detail: "
+   ],
+   "summary": "The Blackhawks (9-14-2) are missing Connor Bedard (shoulder surgery), Bowen Byram (upper body), and Patrick Kane (lower body, placed on IR after blocking a shot Wednesday). Tyler Bertuzzi could return to the lineup after missing the 3-1 victory at Seattle on Wednesday due to illness. Wyatt Kaiser serves the final game of his three-game suspension, and Drew Commesso is projected to start in goal."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Dylan Garand",
+   "p_starter": 0.85,
+   "announced": 0.97,
+   "p_out": {
+    "Igor Shesterkin": 0.98,
+    "Joseph Veleno": 0.98,
+    "Alberts Smits": 0.97,
+    "Pavel Dorofeyev": 0.58,
+    "Oliver Bjorkstrand": 0.97,
+    "Gabe Perrault": 0.98
+   }
+  },
+  "home": {
+   "starter": "Drew Commesso",
+   "p_starter": 0.97,
+   "announced": 0.97,
+   "p_out": {
+    "Connor Bedard": 0.98,
+    "Bowen Byram": 0.97,
+    "Patrick Kane": 0.96
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.3,
+  "jev": 0.2
+ }
+}
