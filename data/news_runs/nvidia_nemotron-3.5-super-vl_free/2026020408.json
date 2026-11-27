@@ -1,0 +1,137 @@
+{
+ "game": {
+  "gameId": 2026020408,
+  "kickoff": "2026-11-27T21:00:00Z",
+  "away": "Colorado Avalanche",
+  "home": "Minnesota Wild",
+  "away_id": 21,
+  "home_id": 30,
+  "away_abbr": "COL",
+  "home_abbr": "MIN"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T18:47:41.267720+00:00",
+ "articles": [
+  {
+   "title": "Avalanche at Wild projected lineups",
+   "published": "2026-11-26T14:23:43.359Z",
+   "lineups": true
+  },
+  {
+   "title": "Hosting the Habs",
+   "published": "2026-11-25T12:00:09.15Z",
+   "lineups": false
+  },
+  {
+   "title": "Game Preview: Wild vs Mammoth",
+   "published": "2026-11-25T18:16:07.139Z",
+   "lineups": false
+  },
+  {
+   "title": "Makar returning for Avalanche against Canadiens ",
+   "published": "2026-11-25T18:41:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Mammoth at Wild projected lineups",
+   "published": "2026-11-25T18:53:45.066Z",
+   "lineups": false
+  },
+  {
+   "title": "Canadiens at Avalanche projected lineups ",
+   "published": "2026-11-25T19:31:27.212Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Mackenzie Blackwood",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Gavin Brindley",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nathan MacKinnon",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Zachary L'Heureux",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Josh Manson",
+     "detail": "lower body injury"
+    },
+    {
+     "player": "Noah Juulsen",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Avalanche (14-7-3) are missing Nathan MacKinnon for 12 weeks with a lower-body injury, along with Gavin Brindley, Zachary L'Heureux, and Josh Manson. Cale Makar returned to the lineup against Montreal after missing three games with a lower-body injury. Mackenzie Blackwood is projected to start after a 28-save shutout against Montreal on Wednesday."
+  },
+  "home": {
+   "starting_goalie": "Filip Gustavsson",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Quinn Hughes",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Olli Maatta",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Nico Sturm",
+     "detail": "scratched"
+    },
+    {
+     "player": "Viking Gustafsson Nyberg",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Quinn Hughes",
+     "detail": "day to day, doubtful to play Friday"
+    }
+   ],
+   "returning": [],
+   "summary": "The Wild (18-4-5) are on a franchise-record 15-game point streak (12-0-3) and have scored first in 21 games this season, most in the NHL. Quinn Hughes is day to day and doubtful to play Friday with an undisclosed injury, while Olli Maatta is out with an upper-body injury. Filip Gustavsson could start after making 22 saves in his season debut Monday in San Jose; the Wild use a week-to-week goaltending plan with Gustavsson and Jesper Wallstedt."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Mackenzie Blackwood",
+   "p_starter": 0.98,
+   "announced": 0.97,
+   "p_out": {
+    "Gavin Brindley": 0.97,
+    "Nathan MacKinnon": 0.97,
+    "Zachary L'Heureux": 0.97,
+    "Josh Manson": 0.96,
+    "Noah Juulsen": 0.95
+   }
+  },
+  "home": {
+   "starter": "Filip Gustavsson",
+   "p_starter": 0.9,
+   "announced": 0.86,
+   "p_out": {
+    "Quinn Hughes": 0.62,
+    "Olli Maatta": 0.93,
+    "Nico Sturm": 0.92,
+    "Viking Gustafsson Nyberg": 0.95
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.9,
+  "jev": 0.2
+ }
+}

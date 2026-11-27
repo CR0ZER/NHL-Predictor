@@ -1,0 +1,107 @@
+{
+ "game": {
+  "gameId": 2026020410,
+  "kickoff": "2026-11-27T21:00:00Z",
+  "away": "Vegas Golden Knights",
+  "home": "San Jose Sharks",
+  "away_id": 54,
+  "home_id": 28,
+  "away_abbr": "VGK",
+  "home_abbr": "SJS"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T18:47:49.607482+00:00",
+ "articles": [
+  {
+   "title": "Golden Knights at Sharks projected lineups",
+   "published": "2026-11-26T21:12:23.581Z",
+   "lineups": true
+  },
+  {
+   "title": "Golden Knights topple Oilers in battle of best teams in Pacific Division",
+   "published": "2026-11-25T05:54:36.619Z",
+   "lineups": false
+  },
+  {
+   "title": "Vegas Golden Knights Foundation Announces Holiday Knights of Giving Initiatives",
+   "published": "2026-11-25T18:53:27.853Z",
+   "lineups": false
+  },
+  {
+   "title": "Sharks at Ducks projected lineups",
+   "published": "2026-11-25T20:12:12.309Z",
+   "lineups": false
+  },
+  {
+   "title": "Kessel’s love of playing in NHL led to U.S. Hockey Hall of Fame",
+   "published": "2026-11-27T05:00:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Morning Skate Report: Nov. 27, 2026",
+   "published": "2026-11-27T05:21:15.646Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Carter Hart",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Noah Hanifin",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Golden Knights (15-6-5) are coming off a 5-3 win over the Edmonton Oilers and have won two straight, going 6-1-4 in November. They practiced with the same lineup from that victory, though Noah Hanifin is injured. Carter Hart is listed first among the projected goaltenders."
+  },
+  "home": {
+   "starting_goalie": "Yaroslav Askarov",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Igor Chernyshov",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Kiefer Sherwood",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jacob Trouba",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Sharks (11-13-2) are coming off a 7-0 loss to the Anaheim Ducks and held an optional practice Thursday. Luca Cagnoni and Cam Lund were recalled from the AHL, but coach Ryan Warsofsky did not confirm if either will play; Brett Leason and Libor Hajek were reassigned. Yaroslav Askarov is listed first among the projected goaltenders."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Carter Hart",
+   "p_starter": 0.97,
+   "announced": 0.89,
+   "p_out": {
+    "Noah Hanifin": 0.94
+   }
+  },
+  "home": {
+   "starter": "Yaroslav Askarov",
+   "p_starter": 0.99,
+   "announced": 0.95,
+   "p_out": {
+    "Igor Chernyshov": 0.97,
+    "Kiefer Sherwood": 0.97,
+    "Jacob Trouba": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 2.9,
+  "jev": 0.1
+ }
+}

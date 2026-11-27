@@ -1,0 +1,147 @@
+{
+ "game": {
+  "gameId": 2026020409,
+  "kickoff": "2026-11-27T21:00:00Z",
+  "away": "Los Angeles Kings",
+  "home": "Anaheim Ducks",
+  "away_id": 26,
+  "home_id": 24,
+  "away_abbr": "LAK",
+  "home_abbr": "ANA"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T18:47:46.246608+00:00",
+ "articles": [
+  {
+   "title": "Kings at Ducks projected lineups",
+   "published": "2026-11-26T19:39:03.039Z",
+   "lineups": true
+  },
+  {
+   "title": "INSIDER: 5 Takeaways From A 3-1-0 Roadtrip",
+   "published": "2026-11-24T21:03:24.23Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Reassign Warren to San Diego",
+   "published": "2026-11-24T21:26:10.689Z",
+   "lineups": false
+  },
+  {
+   "title": "5 unforgettable rivalry moments between the Kings and Ducks",
+   "published": "2026-11-24T23:17:02.199Z",
+   "lineups": false
+  },
+  {
+   "title": "LA Kings Recall Defenseman Kirill Kirsanov from AHL-Ontario",
+   "published": "2026-11-25T18:51:00Z",
+   "lineups": false
+  },
+  {
+   "title": "Ducks Recall Brossoit from San Diego",
+   "published": "2026-11-25T19:22:18.412Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Darcy Kuemper",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Erik Gustafsson",
+     "detail": "broken hand"
+    },
+    {
+     "player": "Scott Laughton",
+     "detail": "scratched"
+    },
+    {
+     "player": "Samuel Helenius",
+     "detail": "scratched"
+    },
+    {
+     "player": "Kirill Kirsanov",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Kings (8-12-2) head to Anaheim after a 3-1-0 road trip, with Darcy Kuemper earning three wins and a shutout. Artemi Panarin and Trevor Moore returned for the Montreal finale and are projected back in the lineup. Erik Gustafsson is out with a broken hand, while Scott Laughton, Samuel Helenius, and Kirill Kirsanov are listed as scratched in the projected lineup."
+  },
+  "home": {
+   "starting_goalie": "Laurent Brossoit",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "A.J. Greer",
+     "detail": "upper body"
+    },
+    {
+     "player": "Ryan Poehling",
+     "detail": "MCL"
+    },
+    {
+     "player": "Beckett Sennecke",
+     "detail": "upper body"
+    },
+    {
+     "player": "Leo Carlsson",
+     "detail": "upper body"
+    },
+    {
+     "player": "Tyson Hinds",
+     "detail": "scratched"
+    },
+    {
+     "player": "Ville Husso",
+     "detail": "scratched"
+    },
+    {
+     "player": "Sam Colangelo",
+     "detail": "scratched"
+    }
+   ],
+   "doubtful": [
+    {
+     "player": "Beckett Sennecke",
+     "detail": "eligible to come off injured reserve Friday after missing three games; took line rushes and practiced with first power-play unit Thursday"
+    }
+   ],
+   "returning": [],
+   "summary": "The Ducks (12-13-1) host the Kings in the first of a home-and-home rivalry series. Laurent Brossoit was recalled from San Diego and is projected to start ahead of Lukas Dostal. Several forwards are injured, including A.J. Greer, Ryan Poehling, Leo Carlsson, and Beckett Sennecke, though Sennecke practiced Thursday and may be available."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Darcy Kuemper",
+   "p_starter": 1.0,
+   "announced": 0.99,
+   "p_out": {
+    "Erik Gustafsson": 0.97,
+    "Scott Laughton": 0.97,
+    "Samuel Helenius": 0.95,
+    "Kirill Kirsanov": 0.94
+   }
+  },
+  "home": {
+   "starter": "Laurent Brossoit",
+   "p_starter": 1.0,
+   "announced": 0.97,
+   "p_out": {
+    "A.J. Greer": 0.96,
+    "Ryan Poehling": 0.96,
+    "Beckett Sennecke": 0.58,
+    "Leo Carlsson": 0.96,
+    "Tyson Hinds": 0.95,
+    "Ville Husso": 0.96,
+    "Sam Colangelo": 0.94
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 4.6,
+  "jev": 0.1
+ }
+}
