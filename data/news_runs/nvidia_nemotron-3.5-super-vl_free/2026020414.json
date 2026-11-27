@@ -1,0 +1,127 @@
+{
+ "game": {
+  "gameId": 2026020414,
+  "kickoff": "2026-11-28T01:00:00Z",
+  "away": "Seattle Kraken",
+  "home": "Edmonton Oilers",
+  "away_id": 55,
+  "home_id": 22,
+  "away_abbr": "SEA",
+  "home_abbr": "EDM"
+ },
+ "llm": "nvidia/nemotron-3.5-super-vl:free",
+ "invalid_json": 0,
+ "run_at": "2026-11-27T22:47:54.197264+00:00",
+ "articles": [
+  {
+   "title": "Kraken at Oilers projected lineups",
+   "published": "2026-11-27T18:41:00Z",
+   "lineups": true
+  },
+  {
+   "title": "BLOG: Elks welcomed onto the ice at Rogers Place as Grey Cup champions",
+   "published": "2026-11-25T02:51:19.658Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks (8-14-2) vs Kraken (11-9-1) | 6:40 p.m.",
+   "published": "2026-11-25T05:17:08.049Z",
+   "lineups": false
+  },
+  {
+   "title": "Golden Knights topple Oilers in battle of best teams in Pacific Division",
+   "published": "2026-11-25T05:54:36.619Z",
+   "lineups": false
+  },
+  {
+   "title": "Blackhawks at Kraken projected lineups",
+   "published": "2026-11-25T19:17:47.33Z",
+   "lineups": false
+  },
+  {
+   "title": "Fox, Montour join forces to fight ALS",
+   "published": "2026-11-26T05:00:00Z",
+   "lineups": false
+  }
+ ],
+ "qwen": {
+  "away": {
+   "starting_goalie": "Philipp Grubauer",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Curtis Douglas",
+     "detail": "upper body injury"
+    },
+    {
+     "player": "Jared McCann",
+     "detail": "lower body injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Kraken (11-10-1) are projected to start Philipp Grubauer in net. Chandler Stephenson and Bobby McMann swap lines, while Cale Fleury and Ville Ottavainen are scratched."
+  },
+  "home": {
+   "starting_goalie": "Tristan Jarry",
+   "goalie_status": "projected",
+   "out": [
+    {
+     "player": "Frederik Andersen",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Zach Hyman",
+     "detail": "migraine"
+    },
+    {
+     "player": "Filip Hallander",
+     "detail": "knee injury"
+    },
+    {
+     "player": "Mattias Janmark",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Alec Regula",
+     "detail": "undisclosed injury"
+    },
+    {
+     "player": "Matthew Savoie",
+     "detail": "undisclosed injury"
+    }
+   ],
+   "doubtful": [],
+   "returning": [],
+   "summary": "The Oilers (17-6-4) have lost four straight games. Tristan Jarry is projected to start in goal, with Connor McDavid and Leon Draisaitl reuniting on the top line after being split for the previous three games."
+  }
+ },
+ "jev": {
+  "away": {
+   "starter": "Philipp Grubauer",
+   "p_starter": 0.99,
+   "announced": 0.97,
+   "p_out": {
+    "Curtis Douglas": 0.97,
+    "Jared McCann": 0.98
+   }
+  },
+  "home": {
+   "starter": "Tristan Jarry",
+   "p_starter": 0.99,
+   "announced": 0.98,
+   "p_out": {
+    "Frederik Andersen": 0.97,
+    "Zach Hyman": 0.96,
+    "Filip Hallander": 0.96,
+    "Mattias Janmark": 0.96,
+    "Alec Regula": 0.97,
+    "Matthew Savoie": 0.97
+   }
+  }
+ },
+ "seconds": {
+  "qwen": 3.5,
+  "jev": 0.1
+ }
+}
